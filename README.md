@@ -7,6 +7,22 @@ We are a group of like-minded individuals who believe in the power of coming tog
 
  <!-- <div align="center"> <img align="center" alt="dschackfest" src="https://user-images.githubusercontent.com/42115530/94295926-a5741880-ff7f-11ea-890b-39ad20ac0f21.png" height='150' width='350'></div> -->
 
+
+💈 Want to Contribute?
+We welcome contributions in our community.
+Before making a contribution, check the Contribution guide.
+
+✨ GSSoC '23
+Girlscript Summer of Code
+We are proud to be a part of GSSoC '23 (GirlScript Summer of Code)! Join us and be a part of this amazing programme.
+
+   
+
+
+
+
+ 
+
 ## Technology Stack used:
 
 <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><img src="https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
