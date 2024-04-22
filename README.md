@@ -8,20 +8,26 @@ We are a group of like-minded individuals who believe in the power of coming tog
  <!-- <div align="center"> <img align="center" alt="dschackfest" src="https://user-images.githubusercontent.com/42115530/94295926-a5741880-ff7f-11ea-890b-39ad20ac0f21.png" height='150' width='350'></div> -->
 
 
-💈 Want to Contribute?
-We welcome contributions in our community.
-Before making a contribution, check the Contribution guide.
+# Open Source Events
 
-✨ GSSoC '23
-Girlscript Summer of Code
-We are proud to be a part of GSSoC '23 (GirlScript Summer of Code)! Join us and be a part of this amazing programme.
-
-   
-
-
-
-
- 
+- <h4> GSSoC23 </h4>
+    <div align="center">
+      <picture>
+        <source 
+    	    media="(prefers-color-scheme: dark)" 
+    	    srcset="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
+        >
+        <source 
+    	    media="(prefers-color-scheme: light)" 
+    	    srcset="https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png"
+        >
+        <img 
+    	    alt="Girlscript Summer of Code" 
+    	    width=80% 
+    	    src="https://user-images.githubusercontent.com/63473496/213306279-338f7ce9-9a9f-4427-8c2a-3e344874498f.png"
+        >
+      </picture>
+  </div>
 
 ## Technology Stack used:
 
