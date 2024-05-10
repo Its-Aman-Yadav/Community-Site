@@ -5,7 +5,14 @@ Comila Template
 http://www.templatemo.com/tm-490-comila
 
 */
-
+.nav-link{
+  margin-right: 40px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
+  color: #f9f6f6;
+}
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
