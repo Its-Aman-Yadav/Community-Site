@@ -345,6 +345,10 @@ footer {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+.btn img{
+  width: 35px;
+  margin-right: 5px;
+}
 
 #home .btn:hover {
   background: #f1c11a;
