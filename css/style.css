@@ -70,7 +70,18 @@ strong {
   color: #f1c11a;
   font-weight: 700;
 }
+.card{
 
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+}
+
+.card:hover{
+
+  box-shadow: 3px 2px 2px #e9ecef;
+  transform: scale(2.0);
+}
 #about,
 #feature,
 #contact {
