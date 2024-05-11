@@ -5,7 +5,14 @@ Comila Template
 http://www.templatemo.com/tm-490-comila
 
 */
+body {
+  scrollbar-width: none; /* For Firefox Browser*/
+}
 
+/* For Webkit based browser */
+body::-webkit-scrollbar {
+  display: none;
+}
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
