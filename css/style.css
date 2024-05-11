@@ -7,20 +7,22 @@ http://www.templatemo.com/tm-490-comila
 */
 
 .ubuntu-light {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
+  /* font-family: "Ubuntu", sans-serif; */
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
 .ubuntu-regular {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Libre Caslon Text", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 *{
-  font-family: 'Ubuntu';
+  font-family: "Libre Caslon Text", serif;
   font-weight: 400;
+  font-style: normal;
 }
 
 body
