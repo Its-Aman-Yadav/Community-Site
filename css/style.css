@@ -93,6 +93,14 @@ strong {
 .symbol3{
   align-self: flex-end;
 }
+@media(max-width: 500px){
+  .three-symbols{
+    flex-direction: column;
+    height: 500px;
+    flex-wrap: nowrap;
+  }
+
+}
 #about,
 #feature,
 #contact {
