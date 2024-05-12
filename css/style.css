@@ -331,18 +331,19 @@ footer {
 }
 
 
-
 /* contact section  */
 .wow.fadeInUp.darken-text {
   color: #555; 
 }
+
+/* added background image */
 #contact {
   background-image: url('/images/getInTouch.png'); 
   background-size: cover; 
   background-position: center; 
   position: relative; 
 }
-
+/* added blurred effect to background image */
 #contact::before {
   content: '';
   position: absolute;
