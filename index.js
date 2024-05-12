@@ -1,22 +1,31 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const app = express();
+require('dotenv').config();
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
+const pathtoPublic=
+app.use(express.json())
+app.use(express.static(path.join(__dirname,'./public')))
+app.get('/', function(req, res) {
+    res.sendFile('./index.html');
+});
+
+const EMAIL=process.env.EMAIL
+const PASS=process.env.PASS
 
 // Routes
-app.post('/send-email', (req, res) => {
+app.post('/send-email',async (req, res) => {
     const { name, email, message } = req.body;
     console.log(req.body)
     // Create a transporter
-    const transporter = nodemailer.createTransport({
+    const transporter =await nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'email', // Your email address
-            pass: 'password' // Your email password or App Password
+            user: `${EMAIL}`, 
+            pass: `${PASS}` 
         }
     });
 
@@ -43,5 +52,5 @@ app.post('/send-email', (req, res) => {
 // Start server
 const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}: http://localhost:5500/`);
 });
