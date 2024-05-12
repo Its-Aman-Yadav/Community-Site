@@ -77,6 +77,22 @@ strong {
   box-shadow: 3px 2px 2px #e9ecef;
   transform: scale(2.0);
 }
+.three-symbols svg{
+  fill: white;
+  height: 150px;
+  width: 150px;
+}
+.three-symbols{
+  display: flex;
+  justify-content: space-around;
+  height: 300px;
+}
+.symbol2{
+  align-self: center;
+}
+.symbol3{
+  align-self: flex-end;
+}
 #about,
 #feature,
 #contact {
