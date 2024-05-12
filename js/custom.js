@@ -21,7 +21,7 @@ $(document).ready(function() {
         ],
         timer: false,
         transition: [ 'zoomOut', ],
-        delay: 5000,
+        delay:5000,
     });
   });
 
