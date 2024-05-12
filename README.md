@@ -70,15 +70,15 @@ $ cd Community-Site
 ```
 
 <!--
-- Open this folder in your favourite IDE. <br>
+- Open this folder in your favorite IDE. <br>
 - Run `npm install`.<br>
-- Run `git pull` command to sync with remote repo.<br>
+- Run the `git pull` command to sync with the remote repo.<br>
   <br> -->
-<!-- - Run `npm start` for starting server. -->
+<!-- - Run `npm start` to start the server. -->
 
-- Now to add your resource to website, add an object with keys same as listed in existing objects in the file.<br>
+- Now to add your resource to a website, add an object with keys the same as listed in existing objects in the file.<br>
 - Save and commit your code.<br>
-- Push to your fork of the repository , navigate to original repository and make a pull request.<br>
+- Push to your fork of the repository, navigate to the original repository, and make a pull request.<br>
 
 <!-- <strong>Backend</strong>
 
