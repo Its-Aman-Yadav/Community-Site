@@ -54,8 +54,8 @@
   <section id="home">
     <div class="container">
       <div class="row">
-
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
+     <img src="icons/moon.png"  class="moon" id="icon">
+       <div class="col-md-offset-2 col-md-8 col-sm-12">
           <div class="home-thumb">
             <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
             <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong> </h3>
@@ -66,16 +66,16 @@
               class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">JOIN NEWSLETTER</a>
           </div> -->
           </div>
-
         </div>
-      </div>
+        </div>
+    </div>
   </section>
 
   <!-- about section -->
   <section id="about">
     <div class="container">
       <div class="row">
-
+        <div class="row2">
         <div class="col-md-6 col-sm-12">
           <img src="images\fav.png" class="img-responsive wow fadeInUp" alt="About">
         </div>
@@ -95,8 +95,8 @@
             </div>
           </div>
         </div>
-
       </div>
+    </div>
     </div>
   </section>
 
@@ -251,7 +251,18 @@
       window.open(whatsappLink);
     }
   </script>
-
+<!-- dark theme-->
+<script>
+  var icon = document.getElementById("icon");
+  icon.onclick = function() {
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")) {
+      icon.src = "icons/sun.png";
+    } else {
+      icon.src = "icons/moon.png";
+    }
+  }
+</script>
 
   </script>
   <script src="js/jquery.js"></script>
