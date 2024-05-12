@@ -517,6 +517,10 @@ footer a:hover {
   color: #111112;
 }
 
+i {
+  height: 50%;
+}
+
 /* Mobile Responsive */
 @media (max-width: 980px) {
 
