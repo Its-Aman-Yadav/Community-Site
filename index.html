@@ -271,6 +271,31 @@
   <script src="js/wow.min.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script src="js/custom.js"></script>
+  
+  <!-- JavaScript for theme toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Check the saved theme preference, if any
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      if (currentTheme === 'dark') {
+        document.getElementById('themeToggle').checked = true;
+      }
+    }
+    document.getElementById('themeToggle').addEventListener('change', function () {
+      if (this.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); // Save theme preference to localStorage
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); // Save theme preference to localStorage
+      }
+    });
+  });
+</script>
+
 
 </body>
 
