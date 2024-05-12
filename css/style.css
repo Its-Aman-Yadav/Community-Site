@@ -147,27 +147,22 @@ color: #0078d4; /* Hover color in dark mode */
   }
 }
 
-.ubuntu-light {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
 
-.ubuntu-regular {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Forum&family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
+
+
+
+
 
 *{
-  font-family: 'Ubuntu';
+  font-family: 'Josefin Sans';
   font-weight: 400;
 }
 
 body
 	{
 		background: #ffffff;
-   font-family: 'Rajdhani', sans-serif;
+   font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
 	}
 
@@ -447,6 +442,18 @@ div.card {
 
 #about .about-thumb {
   padding-top: 10px;
+}
+.wow p{
+  font-size: large;
+}
+
+.media-body-p{
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.media-body-p1{
+  padding-bottom: 22px;
 }
 
 
