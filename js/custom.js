@@ -14,10 +14,14 @@ $(document).ready(function() {
     $('body').vegas({
         slides: [
             { src: 'images/Slide1.jpg' },
-            { src: 'images/Slide2.jpg' }
+            { src: 'images/Slide2.jpg' },
+            { src: 'images/Slide3.jpg' },
+            { src: 'images/Slide4.jpg' },
+            { src: 'images/Slide5.jpg' }
         ],
         timer: false,
-        transition: [ 'zoomOut', ]
+        transition: [ 'zoomOut', ],
+        delay: 5000,
     });
   });
 
