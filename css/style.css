@@ -333,6 +333,39 @@ footer {
 
 
 /* contact section  */
+.wow.fadeInUp.darken-text {
+  color: #555; 
+}
+#contact {
+  background-image: url('/images/getInTouch.png'); 
+  background-size: cover; 
+  background-position: center; 
+  position: relative; 
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(5px); 
+}
+
+#contact .container {
+  position: relative;
+  z-index: 1;
+}
+#contact .form-control::placeholder {
+  color: #3a3939; 
+}
+
+#contact .form-control {
+  color: black; 
+}
+
 #contact .form-control {
   background: transparent;
   border: 1px solid #f0f0f0;
@@ -344,7 +377,7 @@ footer {
 }
 
 #contact .form-control:hover {
-  border-color: #999;
+  border-color: #0a0404;
 }
 
 #contact input {height: 55px;}
