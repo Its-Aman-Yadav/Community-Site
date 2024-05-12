@@ -170,20 +170,28 @@
           </div>
           <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
 
+
+            <form onsubmit="sendEmail(); reset(); return false;">
+
             <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"  >
+
               <div class="col-md-6 col-sm-6">
                 <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
               <div id="mail" class="col-md-6 col-sm-6">
-                <input name="email" type="email" id="name" class="form-control" placeholder="Your Email" required>
+                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
               </div>
               <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12">
                 <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6"
                   required></textarea>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+
+                <button type="submit" class="btn">submit</button>
+
                 <input name="submit" type="submit" class="form-control submit" id="submit"
                   value="SEND MESSAGE">
+
               </div>
             </form>
           </div>
@@ -230,30 +238,29 @@
 
   <!-- javscript js -->
   <script>
-    function sendWhatsapp() {
+    function sendEmail (){
+      Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "yash.223234108@vcet.edu.in",
+    Password : "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+    To : 'itsamanyadav18@gmail.com',
+    From : document.getElementById('email').value,
+    Subject : "This is the subject",
+    Body : "Name:" + document.getElementById("name").value 
+    + "<br> Email:" + document.getElementById("email").value
+    + "<br> Message:" +document.getElementById("msg").value
 
-      var phoneNumber = "8527984813";
-
-      var name = document.getElementById("name").value;
-      var mail = document.getElementById("mail").value;
-      var message = document.getElementById("msg").value;
-
-      // Create the WhatsApp message with user input
-      var whatsappMessage = "Hi, this is " + name + " -" + mail + "-" + " My query " + message;
-
-      // URL encode the WhatsApp message
-      var encodedMessage = encodeURIComponent(whatsappMessage);
-
-      // Create the link that opens a WhatsApp chat with the specified phone number and pre-populates the message with the user's input
-      var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
-
-      // Open the WhatsApp chat in a new window
-      window.open(whatsappLink);
+  }).then(
+  message => alert("Message sent successsfully")
+);
     }
   </script>
+  
 
 
-  </script>
+  
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
