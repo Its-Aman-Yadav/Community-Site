@@ -62,6 +62,8 @@
             <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now </h3>
             <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
               data-wow-delay="1s">JOIN DISCORD</a>
+              <a href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+              data-wow-delay="1s">Follow us on LinkedIn</a>
             <!-- <a href="#" data-toggle="modal" data-target="#modal1"
               class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">JOIN NEWSLETTER</a>
           </div> -->
@@ -112,40 +114,31 @@
         </svg>
 
         <div class="col-md-4 col-sm-6">
-          <div class="media wow fadeInUp" data-wow-delay="0.4s">
-            <div class="media-object media-left">
-              <i class="icon icon-laptop"></i>
+          <div class="card media wow fadeInUp" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 15px 15px;" data-wow-delay="0.4s">
+            <div class="">
+              <i class="icon icon-laptop" style="color:black;"></i>
             </div>
-            <div class="media-body">
-              <h2 class="media-heading">Open Learning</h2>
-              <p>Our community promotes open learning, allowing members to share their knowledge and skills with others,
-                fostering a culture of continuous growth.</p>
+
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 col-sm-6">
-          <div class="media wow fadeInUp" data-wow-delay="0.8s">
-            <div class="media-object media-left">
-              <i class="icon icon-refresh"></i>
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+          <div class="card wow fadeInUp" data-wow-delay="0.8s"  style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;">
+            <div class="">
+              <i class="icon icon-refresh" style="color:black;"></i>
             </div>
-            <div class="media-body">
-              <h2 class="media-heading">Network</h2>
-              <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
-                unlocking opportunities for personal and professional growth.</p>
+
             </div>
           </div>
         </div>
 
         <div class="col-md-4 col-sm-8">
-          <div class="media wow fadeInUp" data-wow-delay="1.2s">
-            <div class="media-object media-left">
-              <i class="icon icon-chat"></i>
+          <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 30px 30px;">
+            <div class="">
+              <i class="icon icon-chat" style="color:black;"></i>
             </div>
-            <div class="media-body">
-              <h2 class="media-heading">Mentorship</h2>
-              <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal and
-                professional growth.</p>
+
             </div>
           </div>
         </div>
@@ -170,20 +163,28 @@
           </div>
           <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
 
+
+            <form onsubmit="sendEmail(); reset(); return false;">
+
             <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"  >
+
               <div class="col-md-6 col-sm-6">
                 <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
               <div id="mail" class="col-md-6 col-sm-6">
-                <input name="email" type="email" id="name" class="form-control" placeholder="Your Email" required>
+                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
               </div>
               <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12">
                 <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6"
                   required></textarea>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+
+                <button type="submit" class="btn">submit</button>
+
                 <input name="submit" type="submit" class="form-control submit" id="submit"
                   value="SEND MESSAGE">
+
               </div>
             </form>
           </div>
@@ -230,27 +231,24 @@
 
   <!-- javscript js -->
   <script>
-    function sendWhatsapp() {
+    function sendEmail (){
+      Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "yash.223234108@vcet.edu.in",
+    Password : "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+    To : 'itsamanyadav18@gmail.com',
+    From : document.getElementById('email').value,
+    Subject : "This is the subject",
+    Body : "Name:" + document.getElementById("name").value 
+    + "<br> Email:" + document.getElementById("email").value
+    + "<br> Message:" +document.getElementById("msg").value
 
-      var phoneNumber = "8527984813";
-
-      var name = document.getElementById("name").value;
-      var mail = document.getElementById("mail").value;
-      var message = document.getElementById("msg").value;
-
-      // Create the WhatsApp message with user input
-      var whatsappMessage = "Hi, this is " + name + " -" + mail + "-" + " My query " + message;
-
-      // URL encode the WhatsApp message
-      var encodedMessage = encodeURIComponent(whatsappMessage);
-
-      // Create the link that opens a WhatsApp chat with the specified phone number and pre-populates the message with the user's input
-      var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
-
-      // Open the WhatsApp chat in a new window
-      window.open(whatsappLink);
+  }).then(
+  message => alert("Message sent successsfully")
+);
     }
   </script>
+
 <!-- dark theme-->
 <script>
   var icon = document.getElementById("icon");
@@ -264,7 +262,8 @@
   }
 </script>
 
-  </script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
