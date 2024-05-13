@@ -5,6 +5,143 @@ Comila Template
 http://www.templatemo.com/tm-490-comila
 
 */
+.fab:hover {
+  color: yellow; /* Change this to the desired hover color */
+}
+a:hover .fab {
+  color: yellow; /* Change this to the desired hover color */
+}
+.footer {
+  padding: 50px 0px;
+  background: black;
+}
+.social_media:hover {
+  color: yellow;
+  cursor: pointer;
+}
+.footer_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+.footer_box {
+  width: 30%;
+}
+.abc {
+  padding-right: 50px;
+}
+.footer_box p {
+  color: var(--heading-color);
+  line-height: 28px;
+  margin-top: 20px;
+}
+.footer_title {
+  font-size: 1.2rem;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+.footer_links li {
+  line-height: 28px;
+  color: whitesmoke;
+}
+.footer_links li a {
+  color: var(--heading-color);
+}
+
+/* changes some css  */
+
+.footer_links li:hover {
+  color: yellow;
+  cursor: pointer;
+}
+.copyright {
+  margin-top: 30px;
+  text-align: center;
+  color: #777;
+  font-size: 1rem;
+}
+/* 
+------ */
+
+/* Dark mode styles */
+.dark-mode-app .footer {
+  background: #f0eded;
+  color: #0f0f0f; /* Text color in dark mode */
+}
+
+.dark-mode-app .footer_title {
+  color: #131212; /* Heading color in dark mode */
+}
+
+.dark-mode-app .footer_links li {
+  color: #0a0a0a; /* Link color in dark mode */
+}
+
+.dark-mode-app .footer_links li:hover {
+  color: #0078d4; /* Hover color in dark mode */
+}
+.dark-mode-app .social_media i:hover {
+  color: #0078d4; /* Hover color in dark mode */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer_wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer_box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer_title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.social_media {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.social_media i {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.social_media i:hover {
+  color: #0078d4;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .logo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer_title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Forum&family=Josefin+Sans:ital,wght@0,500;1,500&display=swap");
 
@@ -319,7 +456,7 @@ div.card {
 
 #home .btn:hover {
   background: #f1c11a;
-  color: #ffffff;
+  color: black;
   border-color: transparent;
 }
 
@@ -389,7 +526,7 @@ div.card {
 /* contact section  */
 #contact .form-control {
   background: transparent;
-  border: 1px solid #f0f0f0;
+  border: 2px solid #e0e0e0;
   border-radius: 0px;
   box-shadow: none;
   font-size: 16px;
@@ -398,7 +535,7 @@ div.card {
 }
 
 #contact .form-control:hover {
-  border-color: #999;
+  border: 2px solid #797979;
 }
 
 #contact input {
@@ -630,4 +767,59 @@ i {
     height: 25px;
     line-height: 25px;
   }
+}
+
+/* Testimonials section */
+#testimonials {
+  background-color: #f0eded;
+  padding: 100px 0;
+}
+
+#testimonials .section-title {
+  margin-bottom: 50px;
+  text-align: center;
+  color: #111112;
+  font-weight: 800;
+  font-size: 60px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #testimonials .section-title {
+    font-size: 40px;
+  }
+}
+
+.testimonial-box {
+  background-color: #ffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.testimonial-content {
+  margin-bottom: 10px;
+  font: bold;
+}
+
+.testimonial-author {
+  text-align: center;
+}
+
+.testimonial-author img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-author h4 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.testimonial-author p {
+  margin: 0;
+  color: black;
 }
