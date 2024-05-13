@@ -219,6 +219,30 @@ strong {
   transform: scale(2.0);
   border: 3px solid black;
 }
+.three-symbols svg{
+  fill: white;
+  height: 150px;
+  width: 150px;
+}
+.three-symbols{
+  display: flex;
+  justify-content: space-around;
+  height: 300px;
+}
+.symbol2{
+  align-self: center;
+}
+.symbol3{
+  align-self: flex-end;
+}
+@media(max-width: 500px){
+  .three-symbols{
+    flex-direction: column;
+    height: 500px;
+    flex-wrap: nowrap;
+  }
+
+}
 #about,
 #feature,
 #contact {
