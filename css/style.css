@@ -222,6 +222,7 @@ strong {
 
   box-shadow: 3px 2px 2px #e9ecef;
   transform: scale(2.0);
+  border: 3px solid black;
 }
 #about,
 #feature,
@@ -429,7 +430,7 @@ div.card {
 
 #home .btn:hover {
   background: #f1c11a;
-  color: #ffffff;
+  color: black;
   border-color: transparent;
 }
 
