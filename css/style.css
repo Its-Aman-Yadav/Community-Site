@@ -348,21 +348,10 @@ div.card {
 
 
 /* contact section  */
-#contact .form-control {
-  background: transparent;
-  border: 1px solid #f0f0f0;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: 16px;
-  margin-bottom: 16px;
-  transition: all 0.4s ease-in-out;
-}
 
-#contact .form-control:hover {
-  border-color: #999;
-}
 
-#contact input {height: 55px;}
+
+
 
 #contact input[type='submit'] {
   background: #242424;

@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
-
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -85,10 +85,10 @@
         <div class="col-md-6 col-sm-12">
           <div class="about-thumb">
             <div class="section-title">
-              <h1 class="wow fadeIn" data-wow-delay="0.2s">Our Mission</h1>
+              <h1 class="wow fadeIn text-center text-[20px] font-bold " data-wow-delay="0.2s">Our Mission</h1>
               <!-- <h3 class="wow fadeInUp" data-wow-delay="0.4s"></h3> -->
             </div>
-            <div class="wow fadeInUp" data-wow-delay="0.6s">
+            <div class="wow fadeInUp text-[25px] text-center p-5 " data-wow-delay="0.6s">
               <p>
                 Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
                 coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
@@ -113,13 +113,15 @@
           <path d="M0 0 L50 100 L100 0 Z"></path>
         </svg>
 
-        <div class="col-md-4 col-sm-6">
-          <div class="card media wow fadeInUp" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 15px 15px;" data-wow-delay="0.4s">
+        <div class="col-md-4 col-sm-6 items-center">
+          <div 
+          class="card media wow fadeInUp w-[800px] p-5 rounded-2xl border border-solid border-black ml-20 lg:w-[500px]" 
+           data-wow-delay="0.4s">
             <div class="">
               <i class="icon icon-laptop" style="color:black;"></i>
             </div>
             <div class="card-body">
-              <h2 class="media-heading text-center" style="color:black;">Open Learning</h2>
+              <h2 class="media-heading text-center " style="color:black;">Open Learning</h2>
               <p class="card-text">Our community promotes open learning, allowing members to share their knowledge and skills with others,
                 fostering a culture of continuous growth.</p>
             </div>
@@ -127,7 +129,8 @@
         </div>
 
         <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-          <div class="card wow fadeInUp" data-wow-delay="0.8s"  style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;">
+          <div class="card wow fadeInUp w-[800px] p-5 rounded-2xl border border-solid border-black ml-20 lg:w-[500px] "
+           data-wow-delay="0.8s"  >
             <div class="">
               <i class="icon icon-refresh" style="color:black;"></i>
             </div>
@@ -140,7 +143,9 @@
         </div>
 
         <div class="col-md-4 col-sm-8">
-          <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 30px 30px;">
+          <div class="card wow fadeInUp w-[800px] p-5 rounded-2xl border border-solid border-black ml-20 lg:w-[500px]" 
+          data-wow-delay="1.2s" 
+          >
             <div class="">
               <i class="icon icon-chat" style="color:black;"></i>
             </div>
@@ -167,31 +172,31 @@
 
         <div class="col-md-offset-2 col-md-8 col-sm-12">
           <div class="section-title">
-            <h1 class="wow fadeInUp" data-wow-delay="0.3s">Get in touch</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.6s">If you have any query or for collaboration</p>
+            <h1 class="wow fadeInUp text-center text-[20px] font-bold " data-wow-delay="0.3s">Get in touch</h1>
+            <p class="wow fadeInUp text-[12px]" data-wow-delay="0.6s">If you have any query or for collaboration</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+          <div class="contact-form wow fadeInUp flex flex-col   " data-wow-delay="1.0s">
 
 
             <form onsubmit="sendEmail(); reset(); return false;">
 
             <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"  >
 
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+              <div class="col-md-6 col-sm-6  ">
+                <input name="name" id="name" type="text" class="form-control bg-gray-300 w-full h-[50px]  rounded-full p-[15px]" placeholder="Your Name" required>
               </div>
-              <div id="mail" class="col-md-6 col-sm-6">
-                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
+              <div id="mail" class="col-md-6 col-sm-6 ">
+                <input name="email" type="email" id="email" class="form-control mt-3 bg-gray-300 w-full h-[50px]  rounded-full p-[15px]" placeholder="Your Email" required>
               </div>
-              <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6"
+              <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12 ">
+                <textarea name="message" class="form-control bg-gray-300 w-full h-[50px]  rounded-2xl mt-2 p-[15px]" id="msg" placeholder="Message" rows="6"
                   required></textarea>
               </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 ">
 
-                <button type="submit" class="btn">submit</button>
+                <button type="submit" class="btn bg-gray-300 ml-[10px] mt-3">submit</button>
 
-                <input name="submit" type="submit" class="form-control submit" id="submit"
+                <input name="submit" type="submit" class="form-control submit rounded-full" id="submit"
                   value="SEND MESSAGE">
 
               </div>
