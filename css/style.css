@@ -35,7 +35,7 @@ nav ul li{
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a{
+nav ul li a {
   color: rgb(252, 250, 250);
   font-size: 15px;
   padding: 7px 13px;
@@ -44,16 +44,15 @@ nav ul li a{
   text-transform: uppercase;
   transition: transform 0.3s ease;
 }
-a.active,a:hover{
-  background: none;
-  text-decoration: none;
-  transform: scale(1.1);
+
+nav ul li a:hover{
+  text-decoration: underline; 
+  text-decoration-color: white;
+  color: rgb(252, 250, 250); 
+  transform: scale(1.1);      
+  z-index: 1;          
 }
-a:hover{
-  transform: scale(1.1);
-  z-index: 1;
-}
-.navbar nav .checkbutn{
+.navbar nav .checkbut{
   font-size: 30px;
   color: white;
   float: right;
@@ -64,7 +63,7 @@ a:hover{
 }
 #check{
   display: none;
-}
+} 
 .navbar .fas{
   color: white;
 }
@@ -82,7 +81,7 @@ a:hover{
   }
 }
 @media (max-width: 858px){
-  .navbar nav .checkbutn{
+  .navbar nav .checkbut{
     display: block;
     color: white;
   }
@@ -570,17 +569,17 @@ div.card {
   transition: all 0.4s ease-in-out;
 }
 
-#home .btn:hover {
+/* #home .btn:hover {
   background: #f1c11a;
   color: black;
   border-color: transparent;
-}
-
+} */
+/* 
 #home .btn-success {
   background: #ffffff;
   color: #242424;
   border-color: transparent;
-}
+} */
 
 /* about section */
 #about h3 {
