@@ -436,8 +436,8 @@ div.card {
 #home .btn {
     background: transparent;
     border: 3px solid #ffffff;
-    border-radius: 0px;
-    color: #ffffff;
+    border-radius: 40px;
+    color: #000000;
     font-weight: 700;
     letter-spacing: 1px;
     padding: 14px 36px;
@@ -445,6 +445,7 @@ div.card {
     margin-right: 16px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    background-color: #ffffff;
 }
 
 #home .btn:hover {
