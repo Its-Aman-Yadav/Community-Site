@@ -333,13 +333,13 @@ strong {
 }
 
 #about,
-#feature,
+#services,
 #contact {
   background: #ffffff;
 }
 
 #about,
-#feature,
+#services,
 #contact,
 footer {
   padding-top: 100px;
@@ -603,22 +603,22 @@ div.card {
   padding-bottom: 22px;
 }
 
-/* feature section */
-#feature {
+/* services section */
+#services {
   background: #f1c11a;
 }
 
-#feature .icon {
+#services .icon {
   color: #ffffff;
   font-size: 42px;
   padding-right: 14px;
 }
 
-#feature p {
+#services p {
   color: #333;
 }
 
-#feature .btn {
+#services .btn {
   background: transparent;
   border: 3px solid #ffffff;
   border-radius: 0px;
@@ -633,7 +633,7 @@ div.card {
   transition: all 0.4s ease-in-out;
 }
 
-#feature .btn:hover {
+#services .btn:hover {
   background: #ffffff;
   color: #333;
   border-color: transparent;
@@ -841,7 +841,7 @@ i {
     padding-bottom: 12px;
   }
 
-  #feature .col-md-4 {
+  #services .col-md-4 {
     padding-bottom: 32px;
   }
 }
@@ -938,4 +938,16 @@ i {
 .testimonial-author p {
   margin: 0;
   color: black;
+}
+/* Fixed Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+body {
+  padding-top: 80px; /* Adjust according to your navbar height */
 }
