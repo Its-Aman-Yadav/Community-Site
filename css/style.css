@@ -535,6 +535,54 @@ footer a:hover {
 i {
   height: 50%;
 }
+
+#experience{
+  background-color: #ffffff;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0 20px 0 20px;
+
+ 
+}
+h3{
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.card1{
+  margin-bottom: 50px;
+  background-color: #f1c11a;
+  padding: 2px 6px 2px 6px;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+.col-md-4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7%;
+ 
+}
+
+.img-fluid{
+  border-radius: 50%;
+  border:5px solid rgb(23, 23, 23);
+  
+  
+}
+.card1:hover{
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.629);
+ 
+}
+#experience .card-text{
+  color: #262626;
+  font-weight:400;
+}
+.card-body svg{
+  color: #ffffff;
+}
 /* Mobile Responsive */
 @media (max-width: 980px) {
 
