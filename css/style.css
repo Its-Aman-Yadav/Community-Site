@@ -332,6 +332,11 @@ footer {
 
 
 /* contact section  */
+.wow.fadeInUp.darken-text {
+  color: #555; 
+}
+
+
 #contact .form-control {
   background: transparent;
   border: 1px solid #f0f0f0;
