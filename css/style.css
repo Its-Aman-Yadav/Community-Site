@@ -5,6 +5,122 @@ Comila Template
 http://www.templatemo.com/tm-490-comila
 
 */
+
+
+nav{
+  background: rgba(0, 0, 0, 0.7);
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 80px;
+  font-weight: bold;
+}
+label.logo img{
+  height: 68px;
+  width: 68px;
+  margin-top:-5px;
+  border-radius: 450px;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: rgb(252, 250, 250);
+  font-size: 15px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  padding-right: 50px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+a.active,a:hover{
+  background: none;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+a:hover{
+  transform: scale(1.1);
+  z-index: 1;
+}
+.navbar nav .checkbutn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.navbar .fas{
+  color: white;
+}
+@media (max-width: 952px){
+  label.logo img{
+    height: 0px;
+    width: 0px;
+  }
+  label.logo{
+    font-size: 15px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .navbar nav .checkbutn{
+    display: block;
+    color: white;
+  }
+  
+  .navbar ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 2;
+  }
+  .navbar nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .navbar nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+    
+  }
+}
+.navbar section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: 0px;
+}
+
 .fab:hover {
   color: yellow; /* Change this to the desired hover color */
 }
