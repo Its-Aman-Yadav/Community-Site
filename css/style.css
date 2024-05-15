@@ -270,7 +270,7 @@ body {
   background: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
-  cursor: none;
+  /* cursor: none; */
 }
 
 html,
@@ -919,6 +919,13 @@ i {
   margin-bottom: 10px;
   font: bold;
 }
+.col-md-4:hover{
+  transform: translate3D(0,-1px,0) scale(1.03);
+  transition: all .4s ease;
+  box-shadow:0 0 12px black;
+  border-radius: 6%;
+  padding:4.5px;
+}
 
 .testimonial-author {
   text-align: center;
@@ -940,7 +947,7 @@ i {
   margin: 0;
   color: black;
 }
-.circle {
+/* .circle {
   height: 24px;
   width: 24px;
   border-radius: 24px;
@@ -950,4 +957,5 @@ i {
   left: 0;
   pointer-events: none;
   z-index: 99999999;
-}
+  border-radius: 10%;
+} */
