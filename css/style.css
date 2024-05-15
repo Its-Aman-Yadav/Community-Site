@@ -899,6 +899,13 @@ i {
   font-weight: 800;
   font-size: 60px;
 }
+.col-md-4:hover{
+  transform: translate3D(0,-1px,0) scale(1.03);
+  transition: all .4s ease;
+  box-shadow:0 0 12px black;
+  border-radius: 6%;
+  padding:4.5px;
+}
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
