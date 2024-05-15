@@ -967,3 +967,16 @@ a:hover {
   color: #242424; /* Change text color on hover */
   border-color: transparent; /* Adjust border color on hover */
 }
+/* Hover effect for images */
+img:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+/* Hover effect for text */
+.text:hover {
+  color: #f1c11a; /* Change text color on hover */
+}
+/* Hover effect for font size change */
+.element:hover {
+  font-size: 20px; /* Increase font size on hover */
+}
+
