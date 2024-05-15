@@ -322,7 +322,12 @@ strong {
 
 .card:hover {
   box-shadow: 3px 2px 2px #e9ecef;
+  box-shadow: 5px 5px 14px #ffffff;
+
   transform: scale(2);
+
+  background: linear-gradient(to top left, #99ccff 0%, #00cc66 100%);
+
 }
 
 .card-heading {
@@ -640,6 +645,21 @@ div.card {
   background: #ffffff;
   color: #333;
   border-color: transparent;
+}
+.service-cards{
+  transition: all 0.3s ease;
+}
+.service-cards:hover{
+  transform:translateY(-6px);
+
+}
+.heading-hover{
+  font-size:20px;
+  color:#0082e6;
+}
+.service-cards:hover .heading-hover{
+  color:white;
+
 }
 
 /* contact section  */
