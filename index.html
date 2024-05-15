@@ -46,10 +46,42 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#feedback">Feedback</a></li>
+        <button id="subscribe" onclick="openPop()">Subscribe</button>
       </ul>
     </nav>
     <section></section>
   </div>
+
+  
+  <div class="popup" id="popup">
+    <div class="close-btn" onclick="closepop()">&times;</div>
+    <div class="form">
+      <h2>Subscribe</h2>
+      <p>Stay connected with the Community!</p>
+      <div class="form-element">
+        <label for="email">Email: </label>
+        <input type="text" id="email" placeholder="abc@yourmail.com">
+      </div>
+  
+      <div class="form-element"> 
+        <button onclick="sucss()">submit</button>
+  
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let popup=document.getElementById("popup");
+    function openPop(){
+      popup.classList.add("popup-active");
+    }
+
+    function closepop(){
+      popup.classList.remove("popup-active");
+    }
+
+  </script>
+
 
   <!-- preloader section -->
   <section class="preloader">
@@ -385,8 +417,9 @@ Join the Community now and become a Villager.
 );
     }
   </script>
-  
 
+
+  
 
   
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
