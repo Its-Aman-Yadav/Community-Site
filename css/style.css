@@ -315,20 +315,55 @@ strong {
   font-weight: 700;
 }
 
+.service-title{
+  color: #01080d;
+  font-size: 60px;
+  text-align: center;
+  padding-bottom: 75px;
+  font-weight: bolder;
+}
+
+.service-container{
+  padding-left: 40px;
+}
+
 .card {
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .card:hover {
-  box-shadow: 3px 2px 2px #e9ecef;
-  transform: scale(2);
+  box-shadow: 0px 0px 6px 6px #e9ecef;
+  background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
+  transform: translateY(20px);
 }
 
 .card-heading {
   padding-bottom: 5px;
   margin-bottom: 5px;
   color: #f1c11a;
+}
+
+.s-cards{
+  transition: all 0.3s ease;
+}
+
+.heading-hover{
+  font-size:20px;
+  color:#fad729;
+  font-weight: bolder;
+}
+
+.s-cards:hover .heading-hover{
+  color:white;
+}
+
+.col-md-4{
+  transition: all 0.3s ease;
+}
+
+.col-md-4:hover{
+  transform:scale(1.05);
 }
 
 #about,
