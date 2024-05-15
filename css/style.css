@@ -954,3 +954,16 @@ i {
 body {
   padding-top: 80px; /* Adjust according to your navbar height */
 }
+
+/* Hover effect for anchor tags */
+a:hover {
+  text-decoration: underline;
+  color: #f1c11a; /* Change color on hover */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  background: #f1c11a;
+  color: #242424; /* Change text color on hover */
+  border-color: transparent; /* Adjust border color on hover */
+}
