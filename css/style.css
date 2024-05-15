@@ -954,3 +954,16 @@ i {
 body {
   padding-top: 80px; /* Adjust according to your navbar height */
 }
+.col-md-4{
+  transition: all 0.3s ease;
+}
+.col-md-4>.testimonial-box{
+  transition: all 0.3s ease;
+}
+.col-md-4:hover{
+  transform:scale(1.02);
+}
+.col-md-4>.testimonial-box:hover{
+  box-shadow: 3px 3px 6px #5d5757;
+
+}
