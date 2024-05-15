@@ -316,13 +316,27 @@ strong {
 }
 
 .card {
+  width: 100px;
   transition: all 0.2s ease;
   cursor: pointer;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+#services>.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
   box-shadow: 3px 2px 2px #e9ecef;
-  transform: scale(2);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 .card-heading {
@@ -678,11 +692,19 @@ div.card {
 
 /* footer section  */
 footer {
+  text-align: center;
   background: #111112;
 }
 
 footer .copyright-text {
   padding-top: 10px;
+}
+ul{
+  text-align: center;
+}
+li{
+  list-style: none;
+  text-align: center;
 }
 
 footer a {
@@ -847,6 +869,13 @@ i {
   #services .col-md-4 {
     padding-bottom: 32px;
   }
+  ul{
+    text-align: center;
+  }
+  li{
+    list-style: none;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -861,6 +890,13 @@ i {
   h3 {
     font-size: 0.8rem;
     line-height: 1.3rem;
+  }
+  ul{
+    text-align: center;
+  }
+  li{
+    list-style: none;
+    text-align: center;
   }
 }
 
@@ -885,6 +921,13 @@ i {
     width: 25px;
     height: 25px;
     line-height: 25px;
+  }
+  ul{
+    text-align: center;
+  }
+  li{
+    list-style: none;
+    text-align: center;
   }
 }
 
