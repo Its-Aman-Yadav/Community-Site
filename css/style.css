@@ -542,7 +542,7 @@ i {
   display: flex;
   align-items: center;
   justify-content: left;
-  padding: 0 20px 0 20px;
+  padding: 50px 0px 0 0px;
 
  
 }
@@ -554,22 +554,29 @@ h3{
 .card1{
   margin-bottom: 50px;
   background-color: #f1c11a;
-  padding: 2px 6px 2px 6px;
+  padding: 2px 10px 2px 10px;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
+  margin: 0 10px 0 10px;
+  height:100%;
+  
 }
+
 .col-md-4{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   margin-top: 7%;
- 
+  
+  
 }
-
+.pic-col{
+  width:50%;
+}
 .img-fluid{
   border-radius: 50%;
   border:5px solid rgb(23, 23, 23);
-  
+ 
   
 }
 .card1:hover{
