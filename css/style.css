@@ -608,17 +608,18 @@ div.card {
 
 }
 
-/* #home .btn:hover {
+#home .btn:hover {
   background: #f1c11a;
   color: black;
   border-color: transparent;
-} */
-/* 
+  transition: 0.8s;
+} 
+
 #home .btn-success {
   background: #ffffff;
   color: #242424;
   border-color: transparent;
-} */
+}
 
 /* about section */
 #about h3 {
