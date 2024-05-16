@@ -830,6 +830,21 @@ div.card {
   color: #333;
   border-color: transparent;
 }
+.service-cards{
+  transition: all 0.3s ease;
+}
+.service-cards:hover{
+  transform:translateY(-6px);
+
+}
+.heading-hover{
+  font-size:20px;
+  color:#0082e6;
+}
+.service-cards:hover .heading-hover{
+  color:white;
+
+}
 
 /* contact section  */
 #contact .form-control {
@@ -1142,6 +1157,19 @@ i {
 
 body {
   padding-top: 80px; /* Adjust according to your navbar height */
+}
+.col-md-4{
+  transition: all 0.3s ease;
+}
+.col-md-4>.testimonial-box{
+  transition: all 0.3s ease;
+}
+.col-md-4:hover{
+  transform:scale(1.02);
+}
+.col-md-4>.testimonial-box:hover{
+  box-shadow: 3px 3px 6px #5d5757;
+
 }
 
 /* Hover effect for anchor tags */
