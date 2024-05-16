@@ -119,7 +119,161 @@ nav ul li a:hover{
   background-size: cover;
   height: 0px;
 }
+/* Styles for small screens */
+.containerr {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  background-color: #fff;
+}
 
+.faqq {
+  background-color: #f1c11a;
+  padding: 1rem;
+}
+
+h1 {
+  color: #0a0a0a;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+h2 {
+  color: #0a0a0a;
+  font-size: 1.2rem;
+}
+
+.accordion .accordion-item {
+  border-bottom: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 3px solid black;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: black;
+}
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+  color: black;
+}
+
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 2em 0;
+  color: black;
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .containerr {
+    width: 60rem;
+    padding: 2rem;
+  }
+
+  .faqq {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .accordion button {
+    font-size: 1.15rem;
+  }
+
+  .accordion button .accordion-title {
+    font-size: 1.3rem;
+  }
+
+  .accordion .accordion-content p {
+    font-size: 1.2rem;
+  }
+}
 .fab:hover {
   color: yellow; /* Change this to the desired hover color */
 }
@@ -623,17 +777,18 @@ div.card {
 
 }
 
-/* #home .btn:hover {
+#home .btn:hover {
   background: #f1c11a;
   color: black;
   border-color: transparent;
-} */
-/* 
+  transition: 0.8s;
+} 
+
 #home .btn-success {
   background: #ffffff;
   color: #242424;
   border-color: transparent;
-} */
+}
 
 /* about section */
 #about h3 {
@@ -690,6 +845,21 @@ div.card {
   background: #ffffff;
   color: #333;
   border-color: transparent;
+}
+.service-cards{
+  transition: all 0.3s ease;
+}
+.service-cards:hover{
+  transform:translateY(-6px);
+
+}
+.heading-hover{
+  font-size:20px;
+  color:#0082e6;
+}
+.service-cards:hover .heading-hover{
+  color:white;
+
 }
 
 /* contact section  */
@@ -1032,6 +1202,19 @@ i {
 
 body {
   padding-top: 80px; /* Adjust according to your navbar height */
+}
+.col-md-4{
+  transition: all 0.3s ease;
+}
+.col-md-4>.testimonial-box{
+  transition: all 0.3s ease;
+}
+.col-md-4:hover{
+  transform:scale(1.02);
+}
+.col-md-4>.testimonial-box:hover{
+  box-shadow: 3px 3px 6px #5d5757;
+
 }
 
 /* Hover effect for anchor tags */
