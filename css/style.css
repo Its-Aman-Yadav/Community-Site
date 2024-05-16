@@ -875,6 +875,7 @@ div.card {
   letter-spacing: 2px;
   transition: all 0.4s ease-in-out;
   margin-top: 10px;
+  border-radius: 10px;
 }
 
 #contact input[type="submit"]:hover {
