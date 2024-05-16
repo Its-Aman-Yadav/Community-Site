@@ -453,7 +453,7 @@ Join the Community now and become a Villager.
 
 
   <!-- Back top -->
-  <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+  <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
 
   <!-- javscript js -->
   <script>
@@ -474,8 +474,47 @@ Join the Community now and become a Villager.
 );
     }
   </script>
-  
 
+  <script>
+  window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.querySelector('.go-top').classList.add('show');
+        } else {
+            document.querySelector('.go-top').classList.remove('show');
+        }
+    }
+    document.querySelector('.go-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollToTop(1500); 
+    });
+
+    function scrollToTop(duration) {
+        const start = window.scrollY;
+        const startTime = performance.now();
+
+        function animateScroll(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const ease = easeInOutCubic(progress);
+
+            window.scrollTo(0, start * (1 - ease));
+
+            if (progress < 1) {
+                requestAnimationFrame(animateScroll);
+            }
+        }
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        requestAnimationFrame(animateScroll);
+    }
+</script>
 
   
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
