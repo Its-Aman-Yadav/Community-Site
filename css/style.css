@@ -6,6 +6,7 @@ http://www.templatemo.com/tm-490-comila
 
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Forum&family=Josefin+Sans:ital,wght@0,500;1,500&display=swap");
 
 nav{
   background: rgba(0, 0, 0, 0.7);
@@ -257,8 +258,6 @@ a:hover .fab {
     margin-bottom: 0.5rem;
   }
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Forum&family=Josefin+Sans:ital,wght@0,500;1,500&display=swap");
 
 * {
   font-family: "Josefin Sans";
