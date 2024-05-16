@@ -875,6 +875,8 @@ div.card {
   letter-spacing: 2px;
   transition: all 0.4s ease-in-out;
   margin-top: 10px;
+  border-radius: 1.1rem;
+  width:55%;
 }
 
 #contact input[type="submit"]:hover {
@@ -1197,4 +1199,6 @@ img:hover {
 .element:hover {
   font-size: 20px; /* Increase font size on hover */
 }
-
+.send-message-btn{
+  margin-left:36%;
+}
