@@ -27,7 +27,18 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size:x-large;
+}
+</style>
 </head>
 
 <body>
@@ -39,12 +50,15 @@
       <label for="check" class="checkbut">
         <i class="fas fa-bars"></i>
       </label>
-      <label class="logo"><img src="images/fav.png" alt="logo"></label>
+      <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
+        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+    </label>
       <ul>
         <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
         <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
         <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
       </ul>
     </nav>
@@ -68,7 +82,7 @@
     </div>
   </section> -->
 
-  <!-- home section -->
+<!-- home section -->
 <section id="home">
   <div class="container">
     <div class="row">
@@ -90,6 +104,7 @@
     </div>
   </div>
 </section>
+
 
   <!-- about section -->
 <section id="about">
@@ -325,35 +340,7 @@
 </section>
 
 
-  <!-- footer section -->
-  <!-- <footer>
-    <div class="container">
-      <div class="row">
-
-        <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
-          version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0 L50 100 L100 0 Z"></path>
-        </svg>
-
-        <div class="col-md-4 col-sm-6">
-          <h2>Open Source Village</h2>
-          <div class="wow fadeInUp" data-wow-delay="0.3s">
-            <p>Be a Villager now</p>
-             <p class="copyright-text">Copyright &copy; 2023 <br>
-               Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
-          <!-- </div>
-        </div>
-
-
-        <ul class="social-icon">
-          <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
-          <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
-        </ul>
-      </div>
-
-    </div>
-    </div>
-  </footer> -->
+  <!-- Footer Section-->
   <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
     <div class="container">
       <div class="footer_wrapper">
