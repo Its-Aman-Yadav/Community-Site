@@ -11,6 +11,7 @@ nav{
   background: rgba(0, 0, 0, 0.7);
   height: 80px;
   width: 100%;
+
 }
 label.logo{
   color: white;
@@ -58,7 +59,7 @@ nav ul li a:hover{
   float: right;
   line-height: 80px;
   margin-right: 40px;
-  cursor: pointer;
+  /* cursor: pointer; */
   display: none;
 }
 #check{
@@ -170,7 +171,7 @@ h2 {
 
 .accordion button:hover,
 .accordion button:focus {
-  cursor: pointer;
+  /* cursor: pointer; */
   color: black;
 }
 
@@ -286,7 +287,7 @@ a:hover .fab {
 }
 .social_media:hover {
   color: yellow;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .footer_wrapper {
   display: flex;
@@ -323,7 +324,7 @@ a:hover .fab {
 
 .footer_links li:hover {
   color: yellow;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .copyright {
   margin-top: 30px;
@@ -396,7 +397,7 @@ a:hover .fab {
 
 .social_media i:hover {
   color: #0078d4;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 /* Responsive Styles */
@@ -420,19 +421,25 @@ a:hover .fab {
 }
 
 body {
+ 
   background: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+  cursor:url('/CURSOR1.png'), auto;
+
+  
 }
 
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+  
 }
 
 html {
   font-size: 100%;
+ 
 }
 
 h1,
@@ -483,7 +490,7 @@ strong {
 
 .card {
   transition: all 0.2s ease;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .card:hover {
