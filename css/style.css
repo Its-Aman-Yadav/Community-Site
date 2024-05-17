@@ -5,6 +5,276 @@ Comila Template
 http://www.templatemo.com/tm-490-comila
 
 */
+
+
+nav{
+  background: rgba(0, 0, 0, 0.7);
+  height: 80px;
+  width: 100%;
+
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 80px;
+  font-weight: bold;
+}
+label.logo img{
+  height: 68px;
+  width: 68px;
+  margin-top:-5px;
+  border-radius: 450px;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: rgb(252, 250, 250);
+  font-size: 15px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  padding-right: 50px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover{
+  text-decoration: underline; 
+  text-decoration-color: white;
+  color: rgb(252, 250, 250); 
+  transform: scale(1.1);      
+  z-index: 1;          
+}
+.navbar nav .checkbut{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  /* cursor: pointer; */
+  display: none;
+}
+#check{
+  display: none;
+} 
+.navbar .fas{
+  color: white;
+}
+@media (max-width: 952px){
+  label.logo img{
+    height: 0px;
+    width: 0px;
+  }
+  label.logo{
+    font-size: 15px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .navbar nav .checkbut{
+    display: block;
+    color: white;
+  }
+  
+  .navbar ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 2;
+  }
+  .navbar nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .navbar nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+    
+  }
+}
+.navbar section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: 0px;
+}
+/* Styles for small screens */
+.containerr {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  background-color: #fff;
+}
+
+.faqq {
+  background-color: #f1c11a;
+  padding: 1rem;
+}
+
+h1 {
+  color: #0a0a0a;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+h2 {
+  color: #0a0a0a;
+  font-size: 1.2rem;
+}
+
+.accordion .accordion-item {
+  border-bottom: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 3px solid black;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  /* cursor: pointer; */
+  color: black;
+}
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+  color: black;
+}
+
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 2em 0;
+  color: black;
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .containerr {
+    width: 60rem;
+    padding: 2rem;
+  }
+
+  .faqq {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .accordion button {
+    font-size: 1.15rem;
+  }
+
+  .accordion button .accordion-title {
+    font-size: 1.3rem;
+  }
+
+  .accordion .accordion-content p {
+    font-size: 1.2rem;
+  }
+}
 .fab:hover {
   color: yellow; /* Change this to the desired hover color */
 }
@@ -17,7 +287,7 @@ a:hover .fab {
 }
 .social_media:hover {
   color: yellow;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .footer_wrapper {
   display: flex;
@@ -54,7 +324,7 @@ a:hover .fab {
 
 .footer_links li:hover {
   color: yellow;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .copyright {
   margin-top: 30px;
@@ -127,7 +397,7 @@ a:hover .fab {
 
 .social_media i:hover {
   color: #0078d4;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 /* Responsive Styles */
@@ -151,19 +421,25 @@ a:hover .fab {
 }
 
 body {
+ 
   background: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+  cursor:url('/CURSOR1.png'), auto;
+
+  
 }
 
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+  
 }
 
 html {
   font-size: 100%;
+ 
 }
 
 
@@ -261,14 +537,27 @@ strong {
   font-weight: 700;
 }
 
+.service-title{
+  color: #01080d;
+  font-size: 60px;
+  text-align: center;
+  padding-bottom: 75px;
+  font-weight: bolder;
+}
+
+.service-container{
+  padding-left: 40px;
+}
+
 .card {
   transition: all 0.2s ease;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .card:hover {
-  box-shadow: 3px 2px 2px #e9ecef;
-  transform: scale(2);
+  box-shadow: 0px 0px 6px 6px #e9ecef;
+  background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
+  transform: translateY(20px);
 }
 
 .card-heading {
@@ -277,8 +566,30 @@ strong {
   color: #f1c11a;
 }
 
+.s-cards{
+  transition: all 0.3s ease;
+}
+
+.heading-hover{
+  font-size:20px;
+  color:#fad729;
+  font-weight: bolder;
+}
+
+.s-cards:hover .heading-hover{
+  color:white;
+}
+
+.col-md-4{
+  transition: all 0.3s ease;
+}
+
+.col-md-4:hover{
+  transform:scale(1.05);
+}
+
 #about,
-#feature,
+#services,
 #contact {
   background: #ffffff;
  
@@ -286,7 +597,7 @@ strong {
 }
 
 #about,
-#feature,
+#services,
 #contact,
 footer {
   padding-top: 100px;
@@ -507,16 +818,24 @@ div.card {
 
     background: transparent;
     border: 3px solid #ffffff;
+
     border-radius: 0px;
     color: #ffffff;
    
     font-weight: 700;
     letter-spacing: 1px;
     padding: 14px 36px;
+
+    border-radius: 40px;
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 1px;
+ 
     margin-top: 42px;
     margin-right: 16px;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+
 
   background: transparent;
   border: 3px solid #ffffff;
@@ -530,6 +849,10 @@ div.card {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 
+    background-color: #ffffff;
+
+
+
 }
 
 #home .btn:hover {
@@ -540,7 +863,8 @@ div.card {
   color: black;
 
   border-color: transparent;
-}
+  transition: 0.8s;
+} 
 
 #home .btn-success {
   background: #ffffff;
@@ -572,22 +896,22 @@ div.card {
   padding-bottom: 22px;
 }
 
-/* feature section */
-#feature {
+/* services section */
+#services {
   background: #f1c11a;
 }
 
-#feature .icon {
+#services .icon {
   color: #ffffff;
   font-size: 42px;
   padding-right: 14px;
 }
 
-#feature p {
+#services p {
   color: #333;
 }
 
-#feature .btn {
+#services .btn {
   background: transparent;
   border: 3px solid #ffffff;
   border-radius: 0px;
@@ -602,10 +926,25 @@ div.card {
   transition: all 0.4s ease-in-out;
 }
 
-#feature .btn:hover {
+#services .btn:hover {
   background: #ffffff;
   color: #333;
   border-color: transparent;
+}
+.service-cards{
+  transition: all 0.3s ease;
+}
+.service-cards:hover{
+  transform:translateY(-6px);
+
+}
+.heading-hover{
+  font-size:20px;
+  color:#0082e6;
+}
+.service-cards:hover .heading-hover{
+  color:white;
+
 }
 
 /* contact section  */
@@ -810,7 +1149,7 @@ i {
     padding-bottom: 12px;
   }
 
-  #feature .col-md-4 {
+  #services .col-md-4 {
     padding-bottom: 32px;
   }
 }
@@ -908,3 +1247,54 @@ i {
   margin: 0;
   color: black;
 }
+/* Fixed Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+body {
+  padding-top: 80px; /* Adjust according to your navbar height */
+}
+.col-md-4{
+  transition: all 0.3s ease;
+}
+.col-md-4>.testimonial-box{
+  transition: all 0.3s ease;
+}
+.col-md-4:hover{
+  transform:scale(1.02);
+}
+.col-md-4>.testimonial-box:hover{
+  box-shadow: 3px 3px 6px #5d5757;
+
+}
+
+/* Hover effect for anchor tags */
+a:hover {
+  text-decoration: underline;
+  color: #f1c11a; /* Change color on hover */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  background: #f1c11a;
+  color: #242424; /* Change text color on hover */
+  border-color: transparent; /* Adjust border color on hover */
+}
+/* Hover effect for images */
+img:hover {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+/* Hover effect for text */
+.text:hover {
+  color: #f1c11a; /* Change text color on hover */
+}
+/* Hover effect for font size change */
+.element:hover {
+  font-size: 20px; /* Increase font size on hover */
+}
+

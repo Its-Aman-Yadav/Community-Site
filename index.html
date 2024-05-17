@@ -14,7 +14,7 @@
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="icon" href="images\fav.png">
+  <link rel="icon" href="fav.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +25,45 @@
 
   <link rel="stylesheet" href="css/vegas.min.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size:x-large;
+}
+</style>
 </head>
 
 <body>
+
+  <!--navbar-->
+  <div class="navbar">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbut">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
+        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+    </label>
+      <ul>
+        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+    <section></section>
+  </div>
 
   <!-- preloader section -->
   <section class="preloader">
@@ -61,9 +94,11 @@
             <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong> </h3>
             <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now </h3>
             <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-              data-wow-delay="1s">JOIN DISCORD</a>
-              <a href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-              data-wow-delay="1s">Follow us on LinkedIn</a>
+
+              data-wow-delay="1s">Join Discord<image src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s" style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px; border-radius: 5px;"></image></a>
+
+              <a style="font-size: 20 px;" href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+              data-wow-delay="1s"> Follow us on LinkedIn<image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px;"></image></a>
             <!-- <a href="#" data-toggle="modal" data-target="#modal1"
               class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">JOIN NEWSLETTER</a>
           </div> -->
@@ -79,7 +114,7 @@
       <div class="row">
         <div class="row2">
         <div class="col-md-6 col-sm-12">
-          <img src="images\fav.png" class="img-responsive wow fadeInUp" alt="About">
+          <img src="images/fav.png" class="img-responsive wow fadeInUp" alt="About">
         </div>
 
         <div class="col-md-6 col-sm-12">
@@ -103,16 +138,20 @@
   </section>
 
 
-  <!-- feature section -->
-  <section id="feature">
+  <!-- services section -->
+  <section id="services">
     <div class="container">
       <div class="row d-grid gap-3">
   
-        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        
+        <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
+        <div class="service-container">
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+
           <div class="card wow fadeInUp" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;" data-wow-delay="0.4s">
             <div class="wow fadeIn" data-wow-delay="0.2s"">
               <div class="card-heading">
-                <h3>Open learning</h3>
+                <h3 class="heading-hover">Open learning</h3>
               </div>
               <div class="card-context">
                 <p>Our community promotes open learning, allowing members to share their knowledge and skills with others, fostering a culture of continuous growth.</p>
@@ -120,31 +159,33 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+       
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
           <div class="card wow fadeInUp" data-wow-delay="0.8s" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;">
             <div class="wow fadeIn" data-wow-delay="0.2s"">
               <div class="card-heading">
-              <h3>Network</h3>
+              <h3 class="heading-hover">Network</h3>
             </div>
             <div class="card-context">
-              <p>Our community enables networking with smart and diverse individuals fostering collabaration and oppurtunities for personal and professsional growth.</p>
+              <p>Our community enables networking with smart and diverse individuals fostering collaboration and opportunities for personal and professional growth.</p>
             </div>
             </div>
           </div>
           </div>
-          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+          
+          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
             <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;">
               <div class="wow fadeIn" data-wow-delay="0.2s"">
                 <div class="card-heading">
-                  <h3>Mentorship</h3>
+                  <h3 class="heading-hover">Mentorship</h3>
                 </div>
                 <div class="card-context">
-                  <p>Our community offers mentorship,connecting members with experienced mentors to accelearte personal and professional growth.</p>
+                  <p>Our community offers mentorship,connecting members with experienced mentors to accelerate personal and professional growth.</p>
                 </div>
               </div>
             </div>
           </div>
-
+          </div>
         <!-- <div class="clearfix text-center col-md-12 col-sm-12">
           <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll">JOIN DISCORD</a>
         </div> -->
@@ -210,7 +251,75 @@
   </div>
 </section>
 
-  
+<section class="faqq">
+ 
+  <div class="containerr">
+   
+    <div class="accordion">
+      
+      <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
+      
+      <div class="accordion-item">
+      
+        <button id="accordion-button-1" aria-expanded="false">
+          
+          <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Contributing to the community's goals: There are many ways to contribute to our community! Whether you're a developer, designer, writer, or simply passionate about a particular cause, there's a place for you here. You can contribute code to open source projects, participate in discussions, share your expertise, or organize events that align with our mission.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-2" aria-expanded="false">
+          <span class="accordion-title">What benefits do members receive from participating in the community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Benefits of community membership: As a member of our community, you'll have the opportunity to connect with other passionate individuals, collaborate on projects that align with your interests and values, and make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events, and networking opportunities.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-3" aria-expanded="false">
+          <span class="accordion-title">How can I join the open source village community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Joining the open source village community: Joining our community is simple! Just navigate to our website and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration process. Once registered, you'll gain access to our forums, projects, events, and more.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-4" aria-expanded="false">
+          <span class="accordion-title">What is open source community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            An open source community is a group of individuals who collaborate on projects and initiatives that are developed and shared openly, meaning the source code and resources are freely available for anyone to view, use, modify, and distribute ideas.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false">
+          <span class="accordion-title">What is the purpose of the open source village community website?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Purpose of the open source village community website: Our website serves as a central hub for like-minded individuals who believe in the power of community-driven initiatives. It's a platform where members can connect, collaborate, and contribute to make a positive impact in the world.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  </section>
 
   <!-- contact section -->
   <section id="contact">
@@ -240,7 +349,6 @@
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
 
-                <button type="submit" class="btn">submit</button>
 
                 <input name="submit" type="submit" class="form-control submit" id="submit"
                   value="SEND MESSAGE">
@@ -302,13 +410,13 @@ Join the Community now and become a Villager.
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
           <ul class="footer_links">
-            <a href="/#">
+            <a >
               <li>Our Program</li>
             </a>
-            <a href="/#">
+            <a >
               <li>Our Plan</li>
             </a>
-            <a href="/#">
+            <a >
               <li>Become A Member</li>
             </a>
           </ul>
@@ -316,13 +424,13 @@ Join the Community now and become a Villager.
         <div class="footer_box">
           <h4 class="footer_title">Quick Links</h4>
           <ul class="footer_links">
-            <a href="/#">
+            <a >
               <li>About Us</li>
             </a>
-            <a href="/#">
+            <a >
               <li>Contact Us</li>
             </a>
-            <a href="/#">
+            <a >
               <li>Support</li>
             </a>
           </ul>
@@ -337,7 +445,7 @@ Join the Community now and become a Villager.
         
       </p>
       <p class="copyright">
-        Copyright &copy 2024 Developed by open source. All rights reserved.
+        Copyright &copy <script>document.write(new Date().getFullYear())</script> Developed by open source. All rights reserved.
       </p>
     </div>
   </footer>
@@ -367,6 +475,7 @@ Join the Community now and become a Villager.
     }
   </script>
 
+
 <!-- dark theme-->
 <script>
   var icon = document.getElementById("icon");
@@ -379,6 +488,7 @@ Join the Community now and become a Villager.
     }
   }
 </script>
+
 
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 
