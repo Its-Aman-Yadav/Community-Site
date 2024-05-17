@@ -132,15 +132,24 @@ nav ul li a:hover{
   padding: 1rem;
 }
 
-h1 {
-  color: #0a0a0a;
+/* h1 {
+  color: black;
   margin-top: 10px;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
+} */
+.custom-header {
+  /* font-family: 'Arial', sans-serif;  */
+  font-size: 4em; 
+  color: rgb(251, 235, 6);
+  font-weight: bold;
+  text-align: center; 
+  margin-top: -20%; 
 }
 
 h2 {
   color: #0a0a0a;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
+  font-family: 'Courier New', Courier, monospace; 
 }
 
 .accordion .accordion-item {
@@ -883,11 +892,12 @@ div.card {
 
 /* footer section  */
 footer {
-  background: #111112;
+  background: #272734;
 }
 
 footer .copyright-text {
   padding-top: 10px;
+  font-size: 20px;
 }
 
 footer a {
@@ -896,6 +906,7 @@ footer a {
 
 footer a:hover {
   color: #ff6;
+
 }
 
 /* svg */
