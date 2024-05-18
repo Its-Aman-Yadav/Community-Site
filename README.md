@@ -2,8 +2,8 @@
 We are a group of like-minded individuals who believe in the power of coming together to achieve shared goals. Our mission is to create a safe and inclusive space where members can connect, collaborate, and make a positive impact in the world. Join us and be a part of something bigger than yourself! 
 
 ## Join our Community
- * [Discord](https://discord.gg/mM9qFh2uZR)
-* [LinkedIn](https://www.linkedin.com/company/open-source-village/)
+<a href="https://discord.gg/mM9qFh2uZR" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/company/open-source-village/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="" height="30" width="40" /></a>
 
  <!-- <div align="center"> <img align="center" alt="dschackfest" src="https://user-images.githubusercontent.com/42115530/94295926-a5741880-ff7f-11ea-890b-39ad20ac0f21.png" height='150' width='350'></div> -->
 
