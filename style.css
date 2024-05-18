@@ -145,7 +145,7 @@ p {
 }
 
 strong {
-  color: #f1c11a;
+  color: #ffde59;
   font-weight: 700;
 }
 
@@ -430,7 +430,7 @@ footer {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #ffc800;
+  background-color: #ffde59;
 }
 .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
   font-size: 10px;
@@ -559,7 +559,7 @@ footer {
 }
 /* feature section */
 #feature {
-  background: #f1c11a;
+  background: #ffde59;
 }
 
 #feature .icon {
@@ -619,7 +619,7 @@ footer {
 .carousel .testimonial {
     color: #000000;
     position: relative;    
-    background: #ffdc12;
+    background: #ffde59;
 	padding: 15px;
 	margin: 0 0 20px 20px;
 }
@@ -633,19 +633,19 @@ footer {
 .carousel .testimonial::before {
     width: 20px;
     height: 20px;
-	background: #ffdc12;
+	background:#ffde59;
 	box-shadow: inset 12px 0 13px rgba(0,0,0,0.5);
 }
 .carousel .testimonial::after {
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-bottom-color: rgb(255, 255, 255);
-    border-left-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(17, 17, 18);
+    border-left-color: rgb(17, 17, 18);
 }
 .container-lg
 {
-  background-color: #ffffff;
+  background-color: rgb(17, 17, 18);
 
 }
 #mycarousel
@@ -669,7 +669,7 @@ footer {
     line-height: 21px;
 	margin: 0;
   font-size: 20px;
-  color: #000000;
+  color: #424242;
 }
 .carousel .testimonial p::before {
 	content: "\201D";
@@ -690,13 +690,14 @@ footer {
 }
 .carousel .overview b {
 	text-transform: uppercase;
-	color: #000000;
+	color: #9d9c9c;
 }
 .carousel-control-prev, .carousel-control-next {
-	width: 330px;
+	width: 150px;
 	height: 30px;
     background: #000000;
     text-shadow: none;
+    border-radius: 15px;
 	top: 4px;
 }
 .carousel-control-prev i, .carousel-control-next i {
@@ -722,11 +723,11 @@ footer {
   	box-sizing: border-box;
 }
 .carousel-indicators li {	
-    background: #ffffff;
-    border: 4px solid #fff;
+    background: rgb(17, 17, 18);
+    border: 4px solid rgb(17, 17, 18);
 }
 .carousel-indicators li.active {
-	color: #fff;
+	color: #ffde59;
     background-color: #000000;
     border: 5px double;    
 }
@@ -749,7 +750,7 @@ footer {
 }
 /* Set background color to cover full width and height */
 #myCarousel {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(17, 17, 18);
   width: 150vw;
   max-width: 100%;
 }
@@ -758,16 +759,14 @@ footer {
 {
   padding-right: 50px;
 }
-.testimonial {
-  height: 200px; /* Adjust the value as needed */
-}
 
 .testimonial-container {
   margin-right: 50px; /* Adjust the value to your preference */
 }
 
 .testimonial {
-  width: 70%; /* Adjust the width as needed */
+  width: 70%;
+  height: 300px; /* Adjust the width as needed */
   padding: 20px; /* Add some padding around the testimonials */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   display: inline-block; /* Display testimonials in a row */
@@ -776,8 +775,34 @@ footer {
   font-style: italic;
 }
 .testimonial-section {
-  background-color: #f9f9f9;
+  background-color: rgb(17, 17, 18);
   padding: 80px 0;
+  
+}
+/* Add this CSS to your existing stylesheet */
+.reviews {
+  height: 2800px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* svg */
+.svgcolor-light2 {
+  position: relative;
+  bottom: 104px;
+}
+
+.svgcolor-light2 > path {
+  fill: #ffde59; /* Change the fill color to #f1c11a */
+  stroke: #ffde59; /* Change the stroke color to #f1c11a if needed */
+  stroke-width: 0;
+}
+
+.testimonial-section
+{
+  height: 1200px;
 }
 
 /* contact section  */
@@ -809,7 +834,7 @@ footer {
 }
 
 #contact input[type='submit']:hover {
-  background: #f1c11a;
+  background: #ffde59;
 }
 
 #contact input[type='text'],
@@ -824,7 +849,7 @@ footer {
 }
 
 #contact input[type='submit'] {
-  background-color: #f1c11a;
+  background-color: #ffde59;
   color: white;
   padding: 14px 20px;
   border: none;
@@ -833,7 +858,7 @@ footer {
 }
 
 #contact input[type='submit']:hover {
-  background-color: #d4ad00;
+  background-color: #f1c11a;
 }
 
 /* Add card-like hover effect */
@@ -846,7 +871,7 @@ footer {
 #contact input[type='text']:focus,
 #contact input[type='email']:focus,
 #contact textarea:focus {
-  border-color: #f1c11a;
+  border-color: #ffde59;
   box-shadow: 0 0 10px rgba(241, 193, 26, 0.5);
 }
 #contact {
@@ -915,7 +940,7 @@ footer a:hover {
 }
 
 .modal-dialog .close {
-  color: #f1c11a;
+  color: #ffde59;
   font-size: 40px;
   font-weight: 300;
   text-shadow: none;
@@ -1115,13 +1140,6 @@ footer .social-icon li a:hover {
   color: #111112;
 }
 
-.discord
-{
-  border-radius: 45px;
-}
-.discord:hover{
-  box-shadow: 0 0 15px  #f1c40f;
-}
 
 /* Centering the social icons horizontally */
 .social-icon {
@@ -1147,7 +1165,7 @@ footer .social-icon li a:hover {
 
 footer .social-icon li.discord {
   border-radius: 100px;
-  color: #ffffff;
+  color: #111112;
   font-size: 18px;
   text-decoration: none;
   transition: all 0.4s ease-in-out;
@@ -1176,4 +1194,27 @@ footer .social-icon li.discord {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+.discord
+{
+  border-radius: 45px;
+  width: 45px;
+  height: 45px;
+}
+.discord:hover{
+  background-color: #000000;
+  color: #000;
+  box-shadow: 0 0 15px  #5f5e5e;
+}
+ .discord a{
+  color: #000000; /* Change color as needed */
+   /* Adjust font size as needed */
+ /* Smooth color transition on hover */
+  text-decoration: none;
+}
+footer .social-icon .discord a:hover {
+  background-color: #000000;
+  color: #606062;
+  border-radius: 45px;
+  width: 42px;
+  height: 42px;
+}
