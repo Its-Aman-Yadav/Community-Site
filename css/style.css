@@ -902,7 +902,7 @@ div.card {
   box-shadow: none;
   font-size: 16px;
   margin-bottom: 16px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #contact .form-control:hover {
@@ -1055,9 +1055,8 @@ footer a:hover {
   height: 50px;
   line-height: 50px;
   text-align: center;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
 .go-top:hover {
   background: #f1c11a;
   color: #ffffff;
