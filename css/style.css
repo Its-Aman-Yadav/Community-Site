@@ -134,7 +134,7 @@ nav ul li a:hover{
 }
 
 h1 {
-  color: #0a0a0a;
+  color: rgb(252, 250, 250);
   margin-top: 10px;
   font-size: 1.5rem;
 }
@@ -733,7 +733,26 @@ div.card {
 }
 
 /* home section */
+/* home section */
+
+
+
+.discord-icon, .linkedin-icon{
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+  margin-right: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  
+}
+#home .icon-wrapper {
+  display: inline-block;
+  
+}
+
 #home {
+  font-family: 'Montserrat', sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -752,35 +771,46 @@ div.card {
 }
 
 #home .btn {
-
-    background: transparent;
-    border: 3px solid #ffffff;
-    border-radius: 40px;
-    color: #000000;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 14px 16px;
-    margin-top: 42px;
-    margin-right: 16px;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    background-color: #ffffff;
-
-
+  background: transparent;
+  text-align: center;
+  border: 3px solid #e3c515;
+  border-radius: 30px;
+  color: #ffffff ; 
+  font-weight: bold; 
+  letter-spacing: 0.5px; 
+  padding: 16px 20px; 
+  margin-top: 25px;
+  margin-right: 16px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  display: inline-flex;
+  overflow: hidden;
+  align-items: center;
+white-space: nowrap;
+width: 120px; /* Initial width */
 }
 
+
 #home .btn:hover {
-  background: #f1c11a;
+  background: rgb(225, 222, 222);
   color: black;
-  border-color: transparent;
-  transition: 0.8s;
-} 
+  width: 160px;
+  border: 3px solid #ffffff;
+  /* Matched border color with hover background */
+  /* transition: 0.8s;
+  opacity: 1; */
+}
+#home .home-thumb a:hover .discord-icon,
+#home .home-thumb a:hover .linkedin-icon {
+  opacity: 1;
+}
 
 #home .btn-success {
   background: #ffffff;
   color: #242424;
   border-color: transparent;
 }
+
 
 /* about section */
 #about h3 {
