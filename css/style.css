@@ -7,6 +7,7 @@ http://www.templatemo.com/tm-490-comila
 */
 
 
+
 nav{
   background: rgba(0, 0, 0, 0.7);
   height: 80px;
@@ -116,6 +117,7 @@ nav ul li a:hover{
   }
 }
 .navbar section{
+  font-family: "Josefin Sans", sans-serif;
   background: url(bg1.jpg) no-repeat;
   background-size: cover;
   height: 0px;
@@ -179,6 +181,7 @@ h2 {
   padding: 1em 1.5em 1em 0;
   font-weight: 700;
   font-size: 1.1rem;
+
 }
 
 .accordion button .icon {
@@ -235,13 +238,16 @@ h2 {
   overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
+  font-size: 40px;
 }
 
 .accordion .accordion-content p {
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 2em 0;
+  font-size: 12px;
+  opacity: 70%;
+  line-height: 1.5;
   color: black;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* Styles for larger screens */
@@ -415,15 +421,13 @@ a:hover .fab {
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Forum&family=Josefin+Sans:ital,wght@0,500;1,500&display=swap");
 
-* {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 
 body {
  
   background: #ffffff;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   cursor:url('/CURSOR1.png'), auto;
 
@@ -536,8 +540,11 @@ strong {
 
 .col-md-4{
   transition: all 0.3s ease;
-}
 
+}
+.pic-col{
+  margin-left: 35%;
+}
 .col-md-4:hover{
   transform:scale(1.05);
 }
@@ -557,7 +564,8 @@ footer {
 }
 
 .section-title {
-  padding-bottom: 62px;
+  padding-bottom: 30px;
+
 }
 .section-title h1 {
   padding-bottom: 10px;
@@ -749,6 +757,7 @@ div.card {
 
 /* home section */
 #home {
+  font-family: "Josefin Sans", sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -767,14 +776,13 @@ div.card {
 }
 
 #home .btn {
-
-    background: transparent;
     border: 3px solid #ffffff;
     border-radius: 40px;
     color: #000000;
     font-weight: 700;
     letter-spacing: 1px;
-    padding: 14px 16px;
+    height: 55px;
+    width: fit-content;
     margin-top: 42px;
     margin-right: 16px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -804,6 +812,7 @@ div.card {
 
 #about .about-thumb {
   padding-top: 10px;
+  margin-top: 10%;
 }
 .wow p {
   font-size: large;
@@ -1211,6 +1220,7 @@ h3{
 #testimonials {
   background-color: #f0eded;
   padding: 100px 0;
+  text-align: center;
 }
 
 #testimonials .section-title {
@@ -1231,6 +1241,7 @@ h3{
 .testimonial-box {
   background-color: #ffff;
   padding: 20px;
+  height: 400px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
@@ -1239,6 +1250,7 @@ h3{
 .testimonial-content {
   margin-bottom: 10px;
   font: bold;
+  text-align: center;
 }
 
 .testimonial-author {
