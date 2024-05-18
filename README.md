@@ -2,7 +2,7 @@
 We are a group of like-minded individuals who believe in the power of coming together to achieve shared goals. Our mission is to create a safe and inclusive space where members can connect, collaborate, and make a positive impact in the world. Join us and be a part of something bigger than yourself! 
 
 ## Join our Community
- * [Discord](https://discord.gg/mM9qFh2uZR)
+ * [![image](https://github.com/Sibam-Paul/Community-Site/assets/158052549/c3ad729b-0e2b-44c6-a8d0-2132602428ec)](https://discord.gg/mM9qFh2uZR)
 * [LinkedIn](https://www.linkedin.com/company/open-source-village/)
 
  <!-- <div align="center"> <img align="center" alt="dschackfest" src="https://user-images.githubusercontent.com/42115530/94295926-a5741880-ff7f-11ea-890b-39ad20ac0f21.png" height='150' width='350'></div> -->
