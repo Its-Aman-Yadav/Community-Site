@@ -11,7 +11,9 @@ nav{
   background: rgba(0, 0, 0, 0.7);
   height: 80px;
   width: 100%;
+
   position: relative;
+
 }
 label.logo{
   color: white;
@@ -74,7 +76,7 @@ nav ul li  a:hover{
   float: right;
   line-height: 80px;
   margin-right: 40px;
-  cursor: pointer;
+  /* cursor: pointer; */
   display: none;
 }
 #check{
@@ -190,7 +192,7 @@ h2 {
 
 .accordion button:hover,
 .accordion button:focus {
-  cursor: pointer;
+  /* cursor: pointer; */
   color: black;
 }
 
@@ -306,7 +308,7 @@ a:hover .fab {
 }
 .social_media:hover {
   color: yellow;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .footer_wrapper {
   display: flex;
@@ -343,7 +345,7 @@ a:hover .fab {
 
 .footer_links li:hover {
   color: yellow;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .copyright {
   margin-top: 30px;
@@ -416,7 +418,7 @@ a:hover .fab {
 
 .social_media i:hover {
   color: #0078d4;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 /* Responsive Styles */
@@ -440,19 +442,25 @@ a:hover .fab {
 }
 
 body {
+ 
   background: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+  cursor:url('/CURSOR1.png'), auto;
+
+  
 }
 
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+  
 }
 
 html {
   font-size: 100%;
+ 
 }
 
 h1,
@@ -502,15 +510,30 @@ strong {
 }
 
 .card {
+  width: 100px;
   transition: all 0.2s ease;
   cursor: pointer;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+#services>.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
   box-shadow: 0px 0px 6px 6px #e9ecef;
+  transform: scale(1.2) translateY(20px);
+  -webkit-transform: scale(1.2) translateY(20px);
+  -moz-transform: scale(1.2) translateY(20px);
+  -ms-transform: scale(1.2) translateY(20px);
+  -o-transform: scale(1.2) translateY(20px);
   background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
-  transform: translateY(20px);
 }
+
 
 .card-heading {
   padding-bottom: 5px;
@@ -867,6 +890,10 @@ div.card {
 
 }
 
+
+
+
+
 /* contact section  */
 #contact .form-control {
   background: transparent;
@@ -879,7 +906,11 @@ div.card {
 }
 
 #contact .form-control:hover {
+
+  border-color:#999;
+
   border: 2px solid #797979;
+
 }
 
 #contact input {
@@ -895,6 +926,8 @@ div.card {
   letter-spacing: 2px;
   transition: all 0.4s ease-in-out;
   margin-top: 10px;
+
+  border-radius: 10px;
 }
 
 #contact input[type="submit"]:hover {
@@ -903,11 +936,19 @@ div.card {
 
 /* footer section  */
 footer {
+  text-align: center;
   background: #111112;
 }
 
 footer .copyright-text {
   padding-top: 10px;
+}
+ul{
+  text-align: center;
+}
+li{
+  list-style: none;
+  text-align: center;
 }
 
 footer a {
@@ -1055,6 +1096,61 @@ footer a:hover {
 i {
   height: 50%;
 }
+
+#experience{
+  background-color: #ffffff;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 50px 0px 0 0px;
+
+ 
+}
+h3{
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.card1{
+  margin-bottom: 50px;
+  background-color: #f1c11a;
+  padding: 2px 10px 2px 10px;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  margin: 0 10px 0 10px;
+  height:100%;
+  
+}
+
+.col-md-4{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 7%;
+  
+  
+}
+.pic-col{
+  width:50%;
+}
+.img-fluid{
+  border-radius: 50%;
+  border:5px solid rgb(23, 23, 23);
+ 
+  
+}
+.card1:hover{
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.629);
+ 
+}
+#experience .card-text{
+  color: #262626;
+  font-weight:400;
+}
+.card-body svg{
+  color: #ffffff;
+}
 /* Mobile Responsive */
 @media (max-width: 980px) {
   h1 {
@@ -1072,6 +1168,13 @@ i {
   #services .col-md-4 {
     padding-bottom: 32px;
   }
+  ul{
+    text-align: center;
+  }
+  li{
+    list-style: none;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1086,6 +1189,13 @@ i {
   h3 {
     font-size: 0.8rem;
     line-height: 1.3rem;
+  }
+  ul{
+    text-align: center;
+  }
+  li{
+    list-style: none;
+    text-align: center;
   }
 }
 
@@ -1110,6 +1220,13 @@ i {
     width: 25px;
     height: 25px;
     line-height: 25px;
+  }
+  ul{
+    text-align: center;
+  }
+  li{
+    list-style: none;
+    text-align: center;
   }
 }
 
@@ -1217,4 +1334,6 @@ img:hover {
 .element:hover {
   font-size: 20px; /* Increase font size on hover */
 }
-
+.send-message-btn{
+  margin-left:36%;
+}
