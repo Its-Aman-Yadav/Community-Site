@@ -854,6 +854,10 @@ div.card {
 
 }
 
+
+
+
+
 /* contact section  */
 #contact .form-control {
   background: transparent;
@@ -866,7 +870,11 @@ div.card {
 }
 
 #contact .form-control:hover {
+
+  border-color:#999;
+
   border: 2px solid #797979;
+
 }
 
 #contact input {
