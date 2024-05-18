@@ -3,8 +3,7 @@ We are a group of like-minded individuals who believe in the power of coming tog
 
 ## Join our Community
  [![image](https://github.com/Sibam-Paul/Community-Site/assets/158052549/c3ad729b-0e2b-44c6-a8d0-2132602428ec)](https://discord.gg/mM9qFh2uZR)
-[![image](https://github.com/Sibam-Paul/Community-Site/assets/158052549/5f426cb7-222b-47ae-a132-a325ace54244)
-](https://www.linkedin.com/company/open-source-village/)
+[![image](https://github.com/Sibam-Paul/Community-Site/assets/158052549/5f426cb7-222b-47ae-a132-a325ace54244)](https://www.linkedin.com/company/open-source-village/)
 
  <!-- <div align="center"> <img align="center" alt="dschackfest" src="https://user-images.githubusercontent.com/42115530/94295926-a5741880-ff7f-11ea-890b-39ad20ac0f21.png" height='150' width='350'></div> -->
 
