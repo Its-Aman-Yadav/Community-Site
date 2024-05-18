@@ -11,6 +11,7 @@ nav{
   background: rgba(0, 0, 0, 0.7);
   height: 80px;
   width: 100%;
+
 }
 label.logo{
   color: white;
@@ -58,7 +59,7 @@ nav ul li a:hover{
   float: right;
   line-height: 80px;
   margin-right: 40px;
-  cursor: pointer;
+  /* cursor: pointer; */
   display: none;
 }
 #check{
@@ -170,7 +171,7 @@ h2 {
 
 .accordion button:hover,
 .accordion button:focus {
-  cursor: pointer;
+  /* cursor: pointer; */
   color: black;
 }
 
@@ -286,7 +287,7 @@ a:hover .fab {
 }
 .social_media:hover {
   color: yellow;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .footer_wrapper {
   display: flex;
@@ -323,7 +324,7 @@ a:hover .fab {
 
 .footer_links li:hover {
   color: yellow;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .copyright {
   margin-top: 30px;
@@ -396,7 +397,7 @@ a:hover .fab {
 
 .social_media i:hover {
   color: #0078d4;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 /* Responsive Styles */
@@ -420,19 +421,25 @@ a:hover .fab {
 }
 
 body {
+ 
   background: #ffffff;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
+  cursor:url('/CURSOR1.png'), auto;
+
+  
 }
 
 html,
 body {
   width: 100%;
   overflow-x: hidden;
+  
 }
 
 html {
   font-size: 100%;
+ 
 }
 
 h1,
@@ -767,7 +774,7 @@ div.card {
     color: #000000;
     font-weight: 700;
     letter-spacing: 1px;
-    padding: 14px 36px;
+    padding: 14px 16px;
     margin-top: 42px;
     margin-right: 16px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -862,6 +869,10 @@ div.card {
 
 }
 
+
+
+
+
 /* contact section  */
 #contact .form-control {
   background: transparent;
@@ -874,7 +885,11 @@ div.card {
 }
 
 #contact .form-control:hover {
+
+  border-color:#999;
+
   border: 2px solid #797979;
+
 }
 
 #contact input {
@@ -1057,6 +1072,61 @@ footer a:hover {
 
 i {
   height: 50%;
+}
+
+#experience{
+  background-color: #ffffff;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 50px 0px 0 0px;
+
+ 
+}
+h3{
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.card1{
+  margin-bottom: 50px;
+  background-color: #f1c11a;
+  padding: 2px 10px 2px 10px;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  margin: 0 10px 0 10px;
+  height:100%;
+  
+}
+
+.col-md-4{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 7%;
+  
+  
+}
+.pic-col{
+  width:50%;
+}
+.img-fluid{
+  border-radius: 50%;
+  border:5px solid rgb(23, 23, 23);
+ 
+  
+}
+.card1:hover{
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.629);
+ 
+}
+#experience .card-text{
+  color: #262626;
+  font-weight:400;
+}
+.card-body svg{
+  color: #ffffff;
 }
 /* Mobile Responsive */
 @media (max-width: 980px) {
