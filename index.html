@@ -14,7 +14,7 @@
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="icon" href="images\fav.png">
+  <link rel="icon" href="fav.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,12 +25,45 @@
 
   <link rel="stylesheet" href="css/vegas.min.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size:x-large;
+}
+</style>
 </head>
 
 <body>
+
+  <!--navbar-->
+  <div class="navbar">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbut">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
+        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+    </label>
+      <ul>
+        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+    <section></section>
+  </div>
 
   <!-- preloader section -->
   <section class="preloader">
@@ -61,9 +94,11 @@
             <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong> </h3>
             <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now </h3>
             <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-              data-wow-delay="1s">JOIN DISCORD</a>
-              <a href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-              data-wow-delay="1s">Follow us on LinkedIn</a>
+
+              data-wow-delay="1s">Join Discord<image src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s" style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px; border-radius: 5px;"></image></a>
+
+              <a style="font-size: 20 px;" href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+              data-wow-delay="1s"> Follow us on LinkedIn<image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px;"></image></a>
             <!-- <a href="#" data-toggle="modal" data-target="#modal1"
               class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">JOIN NEWSLETTER</a>
           </div> -->
@@ -79,7 +114,7 @@
       <div class="row">
 
         <div class="col-md-6 col-sm-12">
-          <img src="images\fav.png" class="img-responsive wow fadeInUp" alt="About">
+          <img src="images/fav.png" class="img-responsive wow fadeInUp" alt="About">
         </div>
 
         <div class="col-md-6 col-sm-12">
@@ -103,33 +138,54 @@
   </section>
 
 
-  <!-- feature section -->
-  <section id="feature">
+  <!-- services section -->
+  <section id="services">
     <div class="container">
-      <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1"
-          xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-          <path d="M0 0 L50 100 L100 0 Z"></path>
-        </svg>
-        <div class="three-symbols">
-          <div class="symbol1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
-              <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-            </svg>
-          </div>
-          <div class="symbol2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-              <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
-              <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
-            </svg>
-          </div>
-          <div class="symbol3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
-              <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-              <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/>
-            </svg>
+      <div class="row d-grid gap-3">
+  
+        
+        <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
+        <div class="service-container">
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+
+          <div class="card wow fadeInUp" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;" data-wow-delay="0.4s">
+            <div class="wow fadeIn" data-wow-delay="0.2s"">
+              <div class="card-heading">
+                <h3 class="heading-hover">Open learning</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community promotes open learning, allowing members to share their knowledge and skills with others, fostering a culture of continuous growth.</p>
+              </div>    
+            </div>
           </div>
         </div>
-
+       
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp" data-wow-delay="0.8s" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s"">
+              <div class="card-heading">
+              <h3 class="heading-hover">Network</h3>
+            </div>
+            <div class="card-context">
+              <p>Our community enables networking with smart and diverse individuals fostering collaboration and opportunities for personal and professional growth.</p>
+            </div>
+            </div>
+          </div>
+          </div>
+          
+          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+            <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;">
+              <div class="wow fadeIn" data-wow-delay="0.2s"">
+                <div class="card-heading">
+                  <h3 class="heading-hover">Mentorship</h3>
+                </div>
+                <div class="card-context">
+                  <p>Our community offers mentorship,connecting members with experienced mentors to accelerate personal and professional growth.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
         <!-- <div class="clearfix text-center col-md-12 col-sm-12">
           <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll">JOIN DISCORD</a>
         </div> -->
@@ -157,11 +213,9 @@
           </div>
           <div class="testimonial-content">
             <p>"Being a part of this community has been truly transformative. The support and encouragement I've received here have helped me grow both personally and professionally. I'm immensely grateful to have found such an inspiring group of people!"
-
             </p>
-          </div>
-         
         </div>
+      </div>
       </div>
       <div class="col-md-4">
         <div class="testimonial-box wow fadeInUp" data-wow-delay="0.6s">
@@ -181,20 +235,189 @@
           <div class="testimonial-author">
             <img src="images/testi_3.jpeg" class="img-circle" alt="Testimonial Author">
             <h4>Emily Johnson</h4>
-
           </div>
-          <div class="testimonial-content">
-            <p>"I was initially hesitant to join, but I'm so glad I did. The connections I've made here have opened up numerous opportunities for collaboration and personal development. It's amazing to see how much we can achieve when we come together with a common purpose."</p>
-          </div>
+           <div class="testimonial-content">
+             <p>"I was initially hesitant to join, but I'm so glad I did. The connections I've made here have opened up numerous opportunities for collaboration and personal development. It's amazing to see how much we can achieve when we come together with a common purpose."</p>
+           </div>
+        </div>
+      </div>        
+  
         
+  
+        <!-- <div class="clearfix text-center col-md-12 col-sm-12">
+          <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll">JOIN DISCORD</a>
+        </div>
+      </div>-->
+  </div>
+</section>
+
+<section class="faqq">
+ 
+  <div class="containerr">
+   
+    <div class="accordion">
+      
+      <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
+      
+      <div class="accordion-item">
+      
+        <button id="accordion-button-1" aria-expanded="false">
+          
+          <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Contributing to the community's goals: There are many ways to contribute to our community! Whether you're a developer, designer, writer, or simply passionate about a particular cause, there's a place for you here. You can contribute code to open source projects, participate in discussions, share your expertise, or organize events that align with our mission.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-2" aria-expanded="false">
+          <span class="accordion-title">What benefits do members receive from participating in the community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Benefits of community membership: As a member of our community, you'll have the opportunity to connect with other passionate individuals, collaborate on projects that align with your interests and values, and make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events, and networking opportunities.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-3" aria-expanded="false">
+          <span class="accordion-title">How can I join the open source village community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Joining the open source village community: Joining our community is simple! Just navigate to our website and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration process. Once registered, you'll gain access to our forums, projects, events, and more.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-4" aria-expanded="false">
+          <span class="accordion-title">What is open source community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            An open source community is a group of individuals who collaborate on projects and initiatives that are developed and shared openly, meaning the source code and resources are freely available for anyone to view, use, modify, and distribute ideas.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false">
+          <span class="accordion-title">What is the purpose of the open source village community website?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>
+            Purpose of the open source village community website: Our website serves as a central hub for like-minded individuals who believe in the power of community-driven initiatives. It's a platform where members can connect, collaborate, and contribute to make a positive impact in the world.
+          </p>
         </div>
       </div>
     </div>
   </div>
-</section>
+    
+  </section>
+  <section id="experience">
+    <div class="container">
+      
+      <div class="row" style="display: flex;align-items: center;justify-content: space-between;flex-direction: row;">
 
+        
+        <div class="card1 mb-3" style="max-width: 540px;">
+          <div class="row g-0" style="height: 100%;">
+            <div class="col-md-4 pic-col">
+              <img src="images/profile1.jpg" class="img-fluid rounded-start" style="width: 80px;">
+            </div>
+            <div class="col-md-8" style="width: 100%;">
+              <div class="card-body" style="width: 100%;">
+                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">David L.</h5>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
+                  <path d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"/>
+                </svg>
+                <p class="card-text">"Joining this community has been one of the best decisions I've ever made. I've had the opportunity to contribute to meaningful projects that have an impact on society."</p>
+              
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="card1 mb-3" style="max-width: 540px;">
+          <div class="row g-0" style="height: 100%;">
+            <div class="col-md-4 pic-col">
+              <img src="images/profile2.jpg" class="img-fluid rounded-start" style="width: 80px;">
+            </div>
+            <div class="col-md-8" style="width: 100%;">
+              <div class="card-body" style="width: 100%;">
+                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Sarah J.</h5>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <p class="card-text">"Being a part of this community has been an incredible journey. I've found like-minded individuals who share my deep passion for making a difference in the society."</p>
+           
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="card1 mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4 pic-col">
+              <img src="images/profile3.jpg" class="img-fluid rounded-start" style="width: 80px;">
+            </div>
+            <div class="col-md-8" style="width: 100%;">
+              <div class="card-body" style="width: 100%;">
+                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Emily R.</h5>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <p class="card-text">"As someone who values inclusivity, finding a space where everyone's voice is heard and respected has been incredibly refreshing. It's empowering to collaborate here."</p>
+             
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </section>
   <!-- contact section -->
   <section id="contact">
     <div class="container">
@@ -223,7 +446,6 @@
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
 
-                <button type="submit" class="btn">submit</button>
 
                 <input name="submit" type="submit" class="form-control submit" id="submit"
                   value="SEND MESSAGE">
@@ -236,6 +458,9 @@
       </div>
     </div>
   </section>
+
+  
+
 
   <!-- footer section -->
   <!-- <footer>
@@ -285,6 +510,7 @@ Join the Community now and become a Villager.
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
           <ul class="footer_links">
+
             <a href="our program.html">
               <li>Our Program</li>
             </a>
@@ -292,6 +518,7 @@ Join the Community now and become a Villager.
               <li>Our Plan</li>
             </a>
             <a href="member.html">
+ 
               <li>Become A Member</li>
             </a>
           </ul>
@@ -299,6 +526,7 @@ Join the Community now and become a Villager.
         <div class="footer_box">
           <h4 class="footer_title">Quick Links</h4>
           <ul class="footer_links">
+
             <a href="about us.html">
               <li>About Us</li>
             </a>
@@ -306,6 +534,7 @@ Join the Community now and become a Villager.
               <li>Contact Us</li>
             </a>
             <a href="support.html">
+ 
               <li>Support</li>
             </a>
           </ul>
@@ -318,7 +547,7 @@ Join the Community now and become a Villager.
         
       </p>
       <p class="copyright">
-        Copyright - 2024 Developed by open source. All rights reserved.
+        Copyright &copy <script>document.write(new Date().getFullYear())</script> Developed by open source. All rights reserved.
       </p>
     </div>
   </footer>
@@ -347,9 +576,6 @@ Join the Community now and become a Villager.
 );
     }
   </script>
-  
-
-
   
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 
