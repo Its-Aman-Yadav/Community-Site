@@ -6,6 +6,18 @@ http://www.templatemo.com/tm-490-comila
 
 */
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+@color-primary:   #33bb63;
+@color-gray:      #808080;
+@color-lightgray: #BBBBBB;
+@color-white:     #FFFFFF;
+@color-bg:        #f5f5f5;
+@gutter:          30px;
+@form-width:      300px;
+@label-height:    20px;
+@input-margin:    @gutter / 4;
+
 
 nav{
   background: rgba(0, 0, 0, 0.7);
@@ -327,7 +339,7 @@ a:hover .fab {
   color: yellow; /* Change this to the desired hover color */
 }
 .footer {
-  padding: 50px 0px;
+  padding: 20px 0px;
   background: black;
 }
 .social_media:hover {
@@ -405,7 +417,7 @@ a:hover .fab {
 @media (max-width: 768px) {
   .footer_wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .footer_box {
@@ -1434,4 +1446,88 @@ h3{
 }
 .send-message-btn{
   margin-left:36%;
+}
+
+/*for subscribe form in footer*/
+
+/* 
+.single_footer{}
+@media only screen and (max-width:768px) { 
+.single_footer{margin-bottom:30px;}
+} */
+.single_footer h4 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    font-size: 18px;
+}
+.single_footer h4::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    font-size: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+.single_footer p{color:#fff;}
+
+.single_footer_address{
+  align-items: center;
+}
+.subscribe {
+  display: block;
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+}
+.subscribe__input {
+background-color: #fff;
+border: medium none;
+border-radius: 5px;
+color: #333;
+display: block;
+font-size: 15px;
+font-weight: 500;
+height: 50px;
+letter-spacing: 0.4px;
+margin: 0;
+padding: 0 50px 0 20px;
+text-align: center;
+text-transform: capitalize;
+width: 300px;
+}
+@media only screen and (max-width:768px) { 
+.subscribe__input{padding: 0 50px 0 20px;}
+}
+
+.subscribe__btn {
+background-color: transparent;
+border-radius: 0 25px 25px 0;
+color: #222222;
+cursor: pointer;
+display: block;
+font-size: 20px;
+height: 60px;
+position: absolute;
+right: 0;
+top: 0;
+width: 60px;
+}
+.subscribe__btn i{transition: all 0.3s ease 0s;}
+@media only screen and (max-width:768px) { 
+.subscribe__btn{right:0px;}
+}
+
+.subscribe__btn:hover i{
+  color:#c8ba00;
+}
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
