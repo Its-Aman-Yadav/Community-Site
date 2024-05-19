@@ -6,6 +6,18 @@ http://www.templatemo.com/tm-490-comila
 
 */
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+@color-primary:   #33bb63;
+@color-gray:      #808080;
+@color-lightgray: #BBBBBB;
+@color-white:     #FFFFFF;
+@color-bg:        #f5f5f5;
+@gutter:          30px;
+@form-width:      300px;
+@label-height:    20px;
+@input-margin:    @gutter / 4;
+
 
 
 nav{
@@ -80,6 +92,29 @@ nav ul li  a:hover{
   /* cursor: pointer; */
   display: none;
 }
+.navbar nav ul button{
+  border-radius: 5px;
+  font-family:'Josefin Sans', sans-serif;
+  background-color: transparent;
+  border: 2px solid wheat;
+  background: none;
+  color:white;
+  font-size: 15px;
+  padding: 7px 10px;
+  
+}
+
+.navbar nav ul button:hover{
+  border-radius: 5px;
+  font-family:'Josefin Sans', sans-serif;
+  background-color: transparent;
+  border: 2px solid red;
+  background: wheat;
+  color:red;
+  font-size: 15px;
+  padding: 7px 10px;
+}
+
 #check{
   display: none;
 } 
@@ -108,7 +143,7 @@ nav ul li  a:hover{
   }
   
   .navbar ul{
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     height: 100vh;
     background: #2c3e50;
@@ -119,7 +154,7 @@ nav ul li  a:hover{
     z-index: 2;
   }
   .navbar nav ul li{
-    display: block;
+    /* display: block; */
     margin: 50px 0;
     line-height: 30px;
     text-decoration: none;
@@ -128,6 +163,7 @@ nav ul li  a:hover{
     font-size: 20px;
     text-decoration: none;
   }
+
   a:hover,a.active{
     background: none;
     color: #0082e6;
@@ -309,7 +345,7 @@ a:hover .fab {
   color: yellow; /* Change this to the desired hover color */
 }
 .footer {
-  padding: 50px 0px;
+  padding: 20px 0px;
   background: black;
 }
 .social_media:hover {
@@ -387,7 +423,7 @@ a:hover .fab {
 @media (max-width: 768px) {
   .footer_wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .footer_box {
@@ -1042,7 +1078,8 @@ footer a:hover {
   stroke-width: 0;
 }
 
-/* modal */
+
+/* modal
 .modal-dialog .modal-content {
   background: url("../images/modal-bg.jpg") no-repeat;
   background-size: cover;
@@ -1112,7 +1149,7 @@ footer a:hover {
   background: #f1c11a;
   border-color: transparent;
   color: #ffffff;
-}
+} */
 
 /* Back top */
 .go-top {
@@ -1463,17 +1500,40 @@ h3{
   margin: 0;
   color: black;
 }
-/* Fixed Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+
+
+.popup{
+  position:absolute;
+  display: block;
+  top:-150%;
+  /* left:100%; */
+  right: 0;
+  opacity: 0;
+  align-items: center;
+  color:black;
+  display: flex;
+  background: rgb(255, 255, 255);
+  padding: 30px 40px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px gray;
+  transform: translate(-50%,-50%)scale(1.25);
+  width:380px;
+  transition: top 0ms ease-in-out 200ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 200ms ease-in-out 0ms;
+  
 }
 
-body {
-  padding-top: 80px; /* Adjust according to your navbar height */
+.popup-active{
+  top:18%;
+  right:0px;
+  left:auto;
+  opacity: 1;
+  transform: translate(-50%,-50%)scale(1);
+  transition: top 0ms ease-in-out 200ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 200ms ease-in-out 0ms;
+
 }
 .col-md-4{
   transition: all 0.3s ease;
@@ -1489,30 +1549,164 @@ body {
 
 }
 
-/* Hover effect for anchor tags */
-a:hover {
-  text-decoration: underline;
-  color: #f1c11a; /* Change color on hover */
+.popup .close-btn{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:15px;
+  color: red;
+  cursor: pointer;
+  height: 15px;
+  line-height: 15px;
 }
 
-/* Hover effect for buttons */
-.btn:hover {
-  background: #f1c11a;
-  color: #242424; /* Change text color on hover */
-  border-color: transparent; /* Adjust border color on hover */
+.popup .form h2{
+  text-align: center;
+  color:#0f0f0f;
+  margin: 10px 0px 0px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow:1px 1px #f1c11a;
+
 }
-/* Hover effect for images */
-img:hover {
-  opacity: 0.8; /* Reduce opacity on hover */
+
+.popup .form p{
+  text-align: center;
 }
-/* Hover effect for text */
-.text:hover {
-  color: #f1c11a; /* Change text color on hover */
+
+.popup .form .form-element{
+  margin: 15px;
+  
 }
-/* Hover effect for font size change */
-.element:hover {
-  font-size: 20px; /* Increase font size on hover */
+
+.popup .form .form-element label{
+  margin: 5px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#6d6d6d;
+	
+}
+
+.popup .form .form-element input[type="text"]{
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-top: none;
+  
+  border-right: none; 
+}
+
+.popup .form .form-element button{
+  align-items: center;
+  text-align: center;
+  width:100%;
+  background-color: #ffe06e;
+  color:#e3680a;
+  border:none;
+  height: 35px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px;
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup .form .form-element button:hover{
+  align-items: center;
+  text-align: center;
+  background-color: #f9d34a;
+  color:#e22d00;
+  border:none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px red;
+ 
+  cursor: pointer;
 }
 .send-message-btn{
   margin-left:36%;
+}
+
+/*for subscribe form in footer*/
+
+/* 
+.single_footer{}
+@media only screen and (max-width:768px) { 
+.single_footer{margin-bottom:30px;}
+} */
+.single_footer h4 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    /* text-transform: uppercase; */
+    font-size: 18px;
+}
+.single_footer h4::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    font-size: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+.single_footer p{color:#fff;}
+
+.single_footer_address{
+  align-items: center;
+}
+.subscribe {
+  display: block;
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+}
+.subscribe__input {
+background-color: #fff;
+border: medium none;
+border-radius: 5px;
+color: #333;
+display: block;
+font-size: 15px;
+font-weight: 500;
+height: 50px;
+letter-spacing: 0.4px;
+margin: 0;
+padding: 0 50px 0 20px;
+text-align: center;
+text-transform: capitalize;
+width: 300px;
+}
+@media only screen and (max-width:768px) { 
+.subscribe__input{padding: 0 50px 0 20px;}
+}
+
+.subscribe__btn {
+background-color: transparent;
+border-radius: 0 25px 25px 0;
+color: #222222;
+cursor: pointer;
+display: block;
+font-size: 20px;
+height: 60px;
+position: absolute;
+right: 0;
+top: 0;
+width: 60px;
+}
+.subscribe__btn i{transition: all 0.3s ease 0s;}
+@media only screen and (max-width:768px) { 
+.subscribe__btn{right:0px;}
+}
+
+.subscribe__btn:hover i{
+  color:#c8ba00;
+}
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
