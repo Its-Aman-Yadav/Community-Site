@@ -354,15 +354,30 @@ a:hover .fab {
 }
 .footer_wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   column-gap: 2rem;
 }
 .footer_box {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer_box ul {
+  margin: 0;
+  padding: 0;
+}
+.footer_box a li {
+  text-align: left;
 }
 .abc {
   padding-right: 50px;
+  font-size: 17px;
+}
+.footer_box h4 {
+  margin-top: 20px;
 }
 .footer_box p {
   color: var(--heading-color);
@@ -370,7 +385,7 @@ a:hover .fab {
   margin-top: 20px;
 }
 .footer_title {
-  font-size: 1.2rem;
+  font-size: 30px;
   color: var(--heading-color);
   margin-bottom: 20px;
   color: whitesmoke;
@@ -378,6 +393,7 @@ a:hover .fab {
 .footer_links li {
   line-height: 28px;
   color: whitesmoke;
+  font-size: 17px;
 }
 .footer_links li a {
   color: var(--heading-color);
@@ -439,11 +455,6 @@ a:hover .fab {
 
 .logo h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.footer_title {
-  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
