@@ -29,6 +29,13 @@
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="@sweetalert2/theme-material-ui/material-ui.css">
+
 <style>
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 .logo-text {
@@ -59,7 +66,7 @@
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
         <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#contact">Feedback</a></li>
       </ul>
     </nav>
     <section></section>
@@ -425,8 +432,8 @@
 
         <div class="col-md-offset-2 col-md-8 col-sm-12">
           <div class="section-title">
-            <h1 class="wow fadeInUp" data-wow-delay="0.3s">Get in touch</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.6s">If you have any query or for collaboration</p>
+            <h1>Get in touch</h1>
+            <p>If you have any query or for collaboration</p>
           </div>
           <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
 
@@ -570,9 +577,13 @@ Join the Community now and become a Villager.
     + "<br> Message:" +document.getElementById("msg").value
 
   }).then(
-  message => alert("Message sent successsfully")
+  message => Swal.fire({
+  title: "Thank You!",
+  text: "Your message sent successfully!",
+  icon: "success"
+})
 );
-    }
+}
   </script>
   
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -585,6 +596,8 @@ Join the Community now and become a Villager.
   <script src="js/wow.min.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script src="js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2/dist/sweetalert2.min.js"></script>
 
 </body>
 
