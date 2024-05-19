@@ -17,7 +17,7 @@ diverse, inclusive, and healthy community.
 <b>Examples of behavior that contributes to a positive environment for our
 community include:</b> <!--Bold text to highlight title-->
 
-* Demonstrating empathy and kindness toward other people
+* Demonstrating empathy and kindness towards other people
 * Being respectful of differing opinions, viewpoints, and experiences
 * Giving and gracefully accepting constructive feedback
 * Accepting responsibility and apologizing to those affected by our mistakes,
@@ -104,9 +104,7 @@ Violating these terms may lead to a permanent ban.
 
 ### 4. Permanent Ban
 
-* **Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior,  harassment of an
-individual, or aggression toward or disparagement of classes of individuals.
+* **Community Impact**: Demonstrating a pattern of violating community standards, including sustained inappropriate behavior, harassment of individuals, or aggression towards or disparagement of classes of individuals.
 
 * **Consequence**: A permanent ban from any sort of public interaction within
 the community.
