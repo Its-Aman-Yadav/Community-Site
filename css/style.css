@@ -1009,6 +1009,10 @@ div.card {
 
 
 /* contact section  */
+
+
+
+
 #contact .form-control {
   background: transparent;
   border: 2px solid #e0e0e0;
@@ -1720,4 +1724,7 @@ button {
   background-color: transparent;
   -webkit-border-radius: 0;
   border-radius: 0;
+}
+}
+}
 }
