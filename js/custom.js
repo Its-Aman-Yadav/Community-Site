@@ -4,24 +4,6 @@
 $(window).load(function(){
     $('.preloader').fadeOut(1000); // set duration in brackets    
 });
-const items = document.querySelectorAll('.accordion button');
-
-function toggleAccordion() {
-  const itemToggle = this.getAttribute('aria-expanded');
-
-  for (i = 0; i < items.length; i++) {
-    items[i].setAttribute('aria-expanded', 'false');
-  }
-
-  if (itemToggle == 'false') {
-    this.setAttribute('aria-expanded', 'true');
-  }
-}
-
-items.forEach((item) => item.addEventListener('click', toggleAccordion));
-
-
-
 
 
 $(document).ready(function() {
@@ -31,16 +13,11 @@ $(document).ready(function() {
   $(function() {
     $('body').vegas({
         slides: [
-            { src: 'images/Slide1.jpg' },
-            { src: 'images/Slide2.jpg' },
-            { src: 'images/Slide3.jpg' },
-            { src: 'images/Slide4.jpg' },
-            { src: 'images/Slide5.jpg' },
-            { src: 'images/Slide6.jpg' }
+            { src: 'images/slide-1.jpg' },
+            { src: 'images/slide-2.jpg' }
         ],
         timer: false,
-        transition: [ 'zoomOut', ],
-        delay: 5000,
+        transition: [ 'zoomOut', ]
     });
   });
 
