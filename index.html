@@ -112,64 +112,130 @@
       transform: translateY(-2px);
   }
 
+  body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+  width: 100%;
+  background: #333;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar nav ul {
+  margin: 0px;
+  display: flex;
+  height: inherit;
+  /* Removed align-self: flex-end; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.navbar nav {
+  justify-content: flex-end; /* Align links to the right */
+  align-items: flex-start; /* Vertically align to top */
+}
+
+.navbar nav ul a {
+  display: inline; /* Reset in case of accidental overrides */
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  
+  
+}
+
+nav ul li  a:hover{ 
+  color:#000000;
+  transform: scale(1.2);     
+   
+    background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
+    transform: translateY(20px);
+  
+       
+}
+
+.logo {
+  margin-right: auto; /* Optional: space between logo and right edge */
+}
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      padding-top: 80px; /* to avoid overlap with navbar */
+    }
+
+    .home .container {
+      max-width: 800px;
+    }
+
+    .home-thumb h1 {
+      font-size: 60px;
+      color: #d8aa03;
+    }
+
+    .home-thumb h3 {
+      margin: 20px 0;
+      font-size: 24px;
+      color: rgb(8, 8, 8);
+      
+    }
+
+    .home-thumb a.btn {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .home-thumb a.btn img {
+      height: 30px;
+      width: 30px;
+      margin-left: 15px;
+      border-radius: 5px;
+    }
+
+    .btn-default {
+      background-color: #0c0b0b;
+      border: none;
+    }
+
+    .btn-default:hover {
+      background-color: #4c4d4a;
+    }
+
+    .preloader {
+      display: none; /* Hide preloader by default */
+      /* Add preloader styles here if needed */
+    }
+
   
 </style>
 </head>
 
 <body>
-
-  <!--navbar-->
-  <div class="navbar">
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
-        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
-    </label>
-      <ul>
-        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
-      </ul>
-    </nav>
-
-  </div>
-
-  
-  <div class="popup" id="popup">
-    <div class="close-btn" onclick="closepop()">&times;</div>
-    <div class="form">
-      <h2>Subscribe</h2>
-      <p>Stay connected with the Community!</p>
-      <div class="form-element">
-        <label for="email">Email: </label>
-        <input type="text" id="email" placeholder="abc@yourmail.com">
-      </div>
-  
-      <div class="form-element"> 
-        <button onclick="sucss()">submit</button>
-  
-      </div>
-    </div>
-  </div>
-  
-  <script>
-    let popup=document.getElementById("popup");
-    function openPop(){
-      popup.classList.add("popup-active");
-    }
-
-    function closepop(){
-      popup.classList.remove("popup-active");
-    }
-
-  </script>
-
 
   <!-- preloader section -->
   <section class="preloader">
@@ -189,30 +255,57 @@
     </div>
   </section>
 
-  <!-- home section -->
-  <section id="home">
+  
+
+   <!-- Navbar -->
+   <div class="navbar">
+    <label class="logo">
+      <img src="images/fav.png" alt="logo">
+    </label>
+    
+    <nav style="height: 30px; padding: 0; margin: 0;">
+      <ul >
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
     <div class="container">
-      <div class="row">
-
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="home-thumb">
-            <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-            <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong> </h3>
-            <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now </h3>
-            <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-
-              data-wow-delay="1s">Join Discord<image src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s" style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px; border-radius: 5px;"></image></a>
-
-              <a style="font-size: 20 px;" href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-              data-wow-delay="1s"> Follow us on LinkedIn<image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px;"></image></a>
-            <!-- <a href="#" data-toggle="modal" data-target="#modal1"
-              class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">JOIN NEWSLETTER</a> -->
-          </div> 
-          </div>
-
-        </div>
+      <div class="home-thumb">
+        <h1>Open Source Village</h1>
+        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
+        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
+        <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
+        <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
+          Join Discord
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s" alt="Discord">
+        </a>
+        <a href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
+          Follow us on LinkedIn
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" alt="LinkedIn">
+        </a>
       </div>
-  </section> 
+    </div>
+  </section>
+
+  <script>
+    let popup = document.getElementById("popup");
+    function openPop(){
+      popup.classList.add("popup-active");
+    }
+
+    function closepop(){
+      popup.classList.remove("popup-active");
+    }
+  </script>
+
 
   <!-- about section -->
   <section id="about">
