@@ -55,7 +55,39 @@
         <li><a href="#faqq">FAQ</a></li>
       </ul>
     </nav>
+
   </div>
+  
+  <div class="popup" id="popup">
+    <div class="close-btn" onclick="closepop()">&times;</div>
+    <div class="form">
+      <h2>Subscribe</h2>
+      <p>Stay connected with the Community!</p>
+      <div class="form-element">
+        <label for="email">Email: </label>
+        <input type="text" id="email" placeholder="abc@yourmail.com">
+      </div>
+  
+      <div class="form-element"> 
+        <button onclick="sucss()">submit</button>
+  
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let popup=document.getElementById("popup");
+    function openPop(){
+      popup.classList.add("popup-active");
+    }
+
+    function closepop(){
+      popup.classList.remove("popup-active");
+    }
+
+  </script>
+
+
   <!-- preloader section -->
   <section class="preloader">
     <div class="sk-circle">
@@ -86,10 +118,7 @@
             <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now </h3>
             <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
 
-            
-
               data-wow-delay="1s">Join Discord<image src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s" style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px; border-radius: 5px;"></image></a>
-
 
               <a style="font-size: 20 px;" href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
               data-wow-delay="1s"> Follow us on LinkedIn<image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px;"></image></a>
@@ -106,18 +135,19 @@
   <section id="about">
     <div class="container">
       <div class="row">
-
+        <div class="col-md-6 col-sm-12 opensource">
+          <img src="images\fav.png" class="img-responsive wow fadeInUp" alt="About">
         <div class="col-md-6 col-sm-12">
           <img src="images/fav.png" class="img-responsive wow fadeInUp" alt="About">
         </div>
 
         <div class="col-md-6 col-sm-12">
           <div class="about-thumb">
-            <div class="section-title">
-              <h1 class="wow fadeIn" data-wow-delay="0.2s">Our Mission</h1>
+            <div class="section-title ourmission">
+              <div class="wow fadeIn our" data-wow-delay="0.2s">Our Mission</div>
               <!-- <h3 class="wow fadeInUp" data-wow-delay="0.4s"></h3> -->
             </div>
-            <div class="wow fadeInUp" data-wow-delay="0.6s">
+            <div class="wow fadeInUp ourmissionpara" data-wow-delay="0.6s">
               <p>
                 Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
                 coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
@@ -139,7 +169,7 @@
     <div class="service-container">
       <div class="row d-grid gap-3">
         <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-          <div class="card wow fadeInUp" style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+          <div class="card wow fadeInUp" style="width: 18rem;height: 300px; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
             <div class="wow fadeIn" data-wow-delay="0.2s">
               <div class="card-heading">
                 <h3 class="heading-hover">Open learning</h3>
@@ -151,7 +181,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-          <div class="card wow fadeInUp" data-wow-delay="0.8s" style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+          <div class="card wow fadeInUp" data-wow-delay="0.8s" style="width: 18rem;height: 300px; background-color:white; border-radius: 8px; padding: 20px;">
             <div class="wow fadeIn" data-wow-delay="0.2s">
               <div class="card-heading">
                 <h3 class="heading-hover">Network</h3>
@@ -163,7 +193,7 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-          <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+          <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem;height: 300px; background-color:white; border-radius: 8px; padding: 20px;">
             <div class="wow fadeIn" data-wow-delay="0.2s">
               <div class="card-heading">
                 <h3 class="heading-hover">Mentorship</h3>
@@ -349,6 +379,10 @@
             <div class="col-md-4 pic-col">
               <img src="images/profile2.jpg" class="img-fluid rounded-start" style="width: 80px;">
             </div>
+            <div class="media-body network">
+              <h2 class="media-heading ">Network</h2>
+              <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
+                unlocking opportunities for personal and professional growth.</p>
             <div class="col-md-8" style="width: 100%;">
               <div class="card-body" style="width: 100%;">
                 <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Sarah J.</h5>
@@ -432,7 +466,7 @@
               <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12">
                 <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6" style="resize: none;" required></textarea>
               </div>
-              <div class="send-message-btn col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
 
 
                 <input name="submit" type="submit" class="form-control submit" id="submit"
@@ -491,9 +525,20 @@
               <p>Open Source <strong>VILLAGER</strong> </p>
             </h2>
           </div>
-          <p class="abc" style="color: whitesmoke; ">
-Join the Community now and become a Villager.
-          </p>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="single_footer single_footer_address">
+                <h4>Join the Community now and become a Villager</h4>
+                <div class="signup_form">                           
+                    <form action="#" class="subscribe">
+                        <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                        <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+                                     
+        </div><!--- END COL -->  
+
+
         </div>
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
@@ -541,7 +586,7 @@ Join the Community now and become a Villager.
 
 
   <!-- Back top -->
-  <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+  <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
   <!-- javscript js -->
   <script>
@@ -562,92 +607,7 @@ Join the Community now and become a Villager.
 );
     }
   </script>
-  <script>
-    window.onscroll = function() {
-          scrollFunction();
-      };
   
-      function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              document.querySelector('.go-top').classList.add('show');
-          } else {
-              document.querySelector('.go-top').classList.remove('show');
-          }
-      }
-      document.querySelector('.go-top').addEventListener('click', function(e) {
-          e.preventDefault();
-          scrollToTop(1500); 
-      });
-  
-      function scrollToTop(duration) {
-          const start = window.scrollY;
-          const startTime = performance.now();
-  
-          function animateScroll(currentTime) {
-              const elapsed = currentTime - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              const ease = easeInOutCubic(progress);
-  
-              window.scrollTo(0, start * (1 - ease));
-  
-              if (progress < 1) {
-                  requestAnimationFrame(animateScroll);
-              }
-          }
-  
-          function easeInOutCubic(t) {
-              return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-          }
-  
-          requestAnimationFrame(animateScroll);
-      }
-  </script>
-
-
-  <script>
-  window.onscroll = function() {
-        scrollFunction();
-    };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.querySelector('.go-top').classList.add('show');
-        } else {
-            document.querySelector('.go-top').classList.remove('show');
-        }
-    }
-    document.querySelector('.go-top').addEventListener('click', function(e) {
-        e.preventDefault();
-        scrollToTop(1500); 
-    });
-
-    function scrollToTop(duration) {
-        const start = window.scrollY;
-        const startTime = performance.now();
-
-        function animateScroll(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const ease = easeInOutCubic(progress);
-
-            window.scrollTo(0, start * (1 - ease));
-
-            if (progress < 1) {
-                requestAnimationFrame(animateScroll);
-            }
-        }
-
-        function easeInOutCubic(t) {
-            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        }
-
-        requestAnimationFrame(animateScroll);
-    }
-</script>
-
-  
-
-
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script src="js/jquery.js"></script>
