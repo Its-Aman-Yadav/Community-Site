@@ -237,6 +237,59 @@ nav ul li  a:hover{
 
 <body>
 
+  <!--navbar-->
+  <div class="navbar">
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbut">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
+        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+    </label>
+      <ul>
+        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  
+  <div class="popup" id="popup">
+    <div class="close-btn" onclick="closepop()">&times;</div>
+    <div class="form">
+      <h2>Subscribe</h2>
+      <p>Stay connected with the Community!</p>
+      <div class="form-element">
+        <label for="email">Email: </label>
+        <input type="text" id="email" placeholder="abc@yourmail.com">
+      </div>
+  
+      <div class="form-element"> 
+        <button onclick="sucss()">submit</button>
+  
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let popup=document.getElementById("popup");
+    function openPop(){
+      popup.classList.add("popup-active");
+    }
+
+    function closepop(){
+      popup.classList.remove("popup-active");
+    }
+
+  </script>
+
+
   <!-- preloader section -->
   <section class="preloader">
     <div class="sk-circle">
