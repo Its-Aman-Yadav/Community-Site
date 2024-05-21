@@ -1415,6 +1415,19 @@ text-align: center;
 text-transform: capitalize;
 width: 300px;
 }
+.subscribe__input:focus::-webkit-input-placeholder {
+  visibility: hidden;
+}
+.subscribe__input:focus:-moz-placeholder { 
+  visibility: hidden;
+}
+.subscribe__input:focus::-moz-placeholder { 
+  visibility: hidden;
+}
+.subscribe__input:focus:-ms-input-placeholder { 
+  visibility: hidden;
+}
+
 @media only screen and (max-width:768px) { 
 .subscribe__input{padding: 0 50px 0 20px;}
 }
