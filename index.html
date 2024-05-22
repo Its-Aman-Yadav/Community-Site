@@ -38,10 +38,87 @@
   font-style: normal;
   font-size:x-large;
 }
-</style>
-</head>
 
-<body>
+
+
+  .formcontainer {
+      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: linear-gradient(180deg, #f5cb36 0%, #fae081 100%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+  }
+
+  .get{
+    color: black;
+  }
+
+  .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .section-title h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+  }
+
+  .section-title p {
+      font-size: 1.2em;
+      color: #666;
+  }
+
+  .contact-form {
+      padding: 20px;
+      /* background: #f9f9f9; */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-form .form-control {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+  }
+
+  .msg{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .contact-form .submit {
+    
+      padding: 12px 20px;
+      width: 200px;
+      margin-left: 295px;
+      background: #e9b808;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .contact-form .submit:hover {
+      background-color: #d8aa03;
+      transform: translateY(-2px);
+  }
+
+  body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
   <!--navbar-->
   <div class="navbar">
@@ -54,16 +131,133 @@
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
     </label>
       <ul>
-
         <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
         <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
         <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#faqq">FAQs</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
       </ul>
     </nav>
-  </div>
+
+
+    .navbar {
+  width: 100%;
+  background: #333;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar nav ul {
+  margin: 0px;
+  display: flex;
+  height: inherit;
+  /* Removed align-self: flex-end; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.navbar nav {
+  justify-content: flex-end; /* Align links to the right */
+  align-items: flex-start; /* Vertically align to top */
+}
+
+.navbar nav ul a {
+  display: inline; /* Reset in case of accidental overrides */
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  
+  
+}
+
+nav ul li  a:hover{ 
+  color:#000000;
+  transform: scale(1.2);     
+   
+    background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
+    transform: translateY(20px);
+  
+       
+}
+
+.logo {
+  margin-right: auto; /* Optional: space between logo and right edge */
+}
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      padding-top: 80px; /* to avoid overlap with navbar */
+    }
+
+    .home .container {
+      max-width: 800px;
+    }
+
+    .home-thumb h1 {
+      font-size: 60px;
+      color: #d8aa03;
+    }
+
+    .home-thumb h3 {
+      margin: 20px 0;
+      font-size: 24px;
+      color: rgb(8, 8, 8);
+      
+    }
+
+    .home-thumb a.btn {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .home-thumb a.btn img {
+      height: 30px;
+      width: 30px;
+      margin-left: 15px;
+      border-radius: 5px;
+    }
+
+    .btn-default {
+      background-color: #0c0b0b;
+      border: none;
+    }
+
+    .btn-default:hover {
+      background-color: #4c4d4a;
+    }
+
+    .preloader {
+      display: none; /* Hide preloader by default */
+      /* Add preloader styles here if needed */
+    }
+
+  
+</style>
+</head>
+
+<body>
 
   <!-- preloader section -->
   <section class="preloader">
@@ -83,33 +277,57 @@
     </div>
   </section>
 
-  <!-- home section -->
-  <section id="home">
+  
+
+   <!-- Navbar -->
+   <div class="navbar">
+    <label class="logo">
+      <img src="images/fav.png" alt="logo">
+    </label>
+    
+    <nav style="height: 30px; padding: 0; margin: 0;">
+      <ul >
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
     <div class="container">
-      <div class="row">
-
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="home-thumb">
-            <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-            <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong> </h3>
-            <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now </h3>
-            <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-
-            
-
-              data-wow-delay="1s">Join Discord<image src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s" style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px; border-radius: 5px;"></image></a>
-
-
-              <a style="font-size: 20 px;" href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-              data-wow-delay="1s"> Follow us on LinkedIn<image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"style="height: 40px; width: 40px;margin-left: 15px;margin-right: 20px;margin-top:0px; margin-bottom: 0px;"></image></a>
-            <!-- <a href="#" data-toggle="modal" data-target="#modal1"
-              class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">JOIN NEWSLETTER</a> -->
-          </div> 
-          </div>
-
-        </div>
+      <div class="home-thumb">
+        <h1>Open Source Village</h1>
+        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
+        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
+        <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
+        <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
+          Join Discord
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s" alt="Discord">
+        </a>
+        <a href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
+          Follow us on LinkedIn
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" alt="LinkedIn">
+        </a>
       </div>
-  </section> 
+    </div>
+  </section>
+
+  <script>
+    let popup = document.getElementById("popup");
+    function openPop(){
+      popup.classList.add("popup-active");
+    }
+
+    function closepop(){
+      popup.classList.remove("popup-active");
+    }
+  </script>
+
 
   <!-- about section -->
   <section id="about">
@@ -246,7 +464,7 @@
       </div>-->
   </div>
 </section>
-<section id="faqq"></section>
+
 <section class="faqq">
  
   <div class="containerr">
@@ -414,46 +632,53 @@
       </div>
     </div>
   </section>
+  
   <!-- contact section -->
-  <section id="contact">
-    <div class="container">
-      <div class="row">
 
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title">
-            <h1 class="wow fadeInUp" data-wow-delay="0.3s">Get in touch</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.6s">If you have any query or for collaboration</p>
-          </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+  <div class="formbody">
+    <main>
+        <section id="contact">
+            <div class="formcontainer">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="get">Get in Touch</h1>
+                    <p>If you have any query or for collaboration</p>
+                </div>
+                <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+                    <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendEmail(); reset(); return false;">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 rad">
+                                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 rad">
+                                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-12 msg rad">
+                                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6" required></textarea>
+                            </div>
+                            <!-- <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                                <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
+                            </div> -->
+                            <div>
+                              <button class="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <script>
+        function sendEmail() {
+            alert('Email sent successfully!');
+        }
+    </script>
+</div>
 
 
-            <form onsubmit="sendEmail(); reset(); return false;">
 
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"  >
-
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div id="mail" class="col-md-6 col-sm-6">
-                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6" style="resize: none;" required></textarea>
-              </div>
-              <div class="send-message-btn col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-
-
-                <input name="submit" type="submit" class="form-control submit" id="submit"
-                  value="SEND MESSAGE">
-
-              </div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   
 
@@ -499,9 +724,20 @@
               <p>Open Source <strong>VILLAGER</strong> </p>
             </h2>
           </div>
-          <p class="abc" style="color: whitesmoke; ">
-Join the Community now and become a Villager.
-          </p>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="single_footer single_footer_address">
+                <h4>Join the Community now and become a Villager</h4>
+                <div class="signup_form">                           
+                    <form action="#" class="subscribe">
+                        <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                        <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+                                     
+        </div><!--- END COL -->  
+
+
         </div>
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
@@ -520,13 +756,13 @@ Join the Community now and become a Villager.
         <div class="footer_box">
           <h4 class="footer_title">Quick Links</h4>
           <ul class="footer_links">
-            <a >
+            <a href="#about">
               <li>About Us</li>
             </a>
-            <a >
+            <a href="#contact">
               <li>Contact Us</li>
             </a>
-            <a >
+            <a href="https://discord.gg/mM9qFh2uZR">
               <li>Support</li>
             </a>
           </ul>
@@ -549,7 +785,7 @@ Join the Community now and become a Villager.
 
 
   <!-- Back top -->
-  <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+  <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
   <!-- javscript js -->
   <script>
@@ -570,92 +806,7 @@ Join the Community now and become a Villager.
 );
     }
   </script>
-  <script>
-    window.onscroll = function() {
-          scrollFunction();
-      };
   
-      function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-              document.querySelector('.go-top').classList.add('show');
-          } else {
-              document.querySelector('.go-top').classList.remove('show');
-          }
-      }
-      document.querySelector('.go-top').addEventListener('click', function(e) {
-          e.preventDefault();
-          scrollToTop(1500); 
-      });
-  
-      function scrollToTop(duration) {
-          const start = window.scrollY;
-          const startTime = performance.now();
-  
-          function animateScroll(currentTime) {
-              const elapsed = currentTime - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              const ease = easeInOutCubic(progress);
-  
-              window.scrollTo(0, start * (1 - ease));
-  
-              if (progress < 1) {
-                  requestAnimationFrame(animateScroll);
-              }
-          }
-  
-          function easeInOutCubic(t) {
-              return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-          }
-  
-          requestAnimationFrame(animateScroll);
-      }
-  </script>
-
-
-  <script>
-  window.onscroll = function() {
-        scrollFunction();
-    };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.querySelector('.go-top').classList.add('show');
-        } else {
-            document.querySelector('.go-top').classList.remove('show');
-        }
-    }
-    document.querySelector('.go-top').addEventListener('click', function(e) {
-        e.preventDefault();
-        scrollToTop(1500); 
-    });
-
-    function scrollToTop(duration) {
-        const start = window.scrollY;
-        const startTime = performance.now();
-
-        function animateScroll(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const ease = easeInOutCubic(progress);
-
-            window.scrollTo(0, start * (1 - ease));
-
-            if (progress < 1) {
-                requestAnimationFrame(animateScroll);
-            }
-        }
-
-        function easeInOutCubic(t) {
-            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        }
-
-        requestAnimationFrame(animateScroll);
-    }
-</script>
-
-  
-
-
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script src="js/jquery.js"></script>
