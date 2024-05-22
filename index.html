@@ -38,10 +38,87 @@
   font-style: normal;
   font-size:x-large;
 }
-</style>
-</head>
 
-<body>
+
+
+  .formcontainer {
+      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: linear-gradient(180deg, #f5cb36 0%, #fae081 100%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+  }
+
+  .get{
+    color: black;
+  }
+
+  .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+
+  .section-title h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+  }
+
+  .section-title p {
+      font-size: 1.2em;
+      color: #666;
+  }
+
+  .contact-form {
+      padding: 20px;
+      /* background: #f9f9f9; */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-form .form-control {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+  }
+
+  .msg{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .contact-form .submit {
+    
+      padding: 12px 20px;
+      width: 200px;
+      margin-left: 295px;
+      background: #e9b808;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .contact-form .submit:hover {
+      background-color: #d8aa03;
+      transform: translateY(-2px);
+  }
+
+  body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
   <!--navbar-->
   <div class="navbar">
@@ -59,42 +136,128 @@
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
         <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="feedback.html">Feedback</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
       </ul>
     </nav>
 
-  </div>
 
+    .navbar {
+  width: 100%;
+  background: #333;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar nav ul {
+  margin: 0px;
+  display: flex;
+  height: inherit;
+  /* Removed align-self: flex-end; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.navbar nav {
+  justify-content: flex-end; /* Align links to the right */
+  align-items: flex-start; /* Vertically align to top */
+}
+
+.navbar nav ul a {
+  display: inline; /* Reset in case of accidental overrides */
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 10px;
   
-  <div class="popup" id="popup">
-    <div class="close-btn" onclick="closepop()">&times;</div>
-    <div class="form">
-      <h2>Subscribe</h2>
-      <p>Stay connected with the Community!</p>
-      <div class="form-element">
-        <label for="email">Email: </label>
-        <input type="text" id="email" placeholder="abc@yourmail.com">
-      </div>
   
-      <div class="form-element"> 
-        <button onclick="sucss()">submit</button>
+}
+
+nav ul li  a:hover{ 
+  color:#000000;
+  transform: scale(1.2);     
+   
+    background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
+    transform: translateY(20px);
   
-      </div>
-    </div>
-  </div>
-  
-  <script>
-    let popup=document.getElementById("popup");
-    function openPop(){
-      popup.classList.add("popup-active");
+       
+}
+
+.logo {
+  margin-right: auto; /* Optional: space between logo and right edge */
+}
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      padding-top: 80px; /* to avoid overlap with navbar */
     }
 
-    function closepop(){
-      popup.classList.remove("popup-active");
+    .home .container {
+      max-width: 800px;
     }
 
-  </script>
+    .home-thumb h1 {
+      font-size: 60px;
+      color: #d8aa03;
+    }
 
+    .home-thumb h3 {
+      margin: 20px 0;
+      font-size: 24px;
+      color: rgb(8, 8, 8);
+      
+    }
+
+    .home-thumb a.btn {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .home-thumb a.btn img {
+      height: 30px;
+      width: 30px;
+      margin-left: 15px;
+      border-radius: 5px;
+    }
+
+    .btn-default {
+      background-color: #0c0b0b;
+      border: none;
+    }
+
+    .btn-default:hover {
+      background-color: #4c4d4a;
+    }
+
+    .preloader {
+      display: none; /* Hide preloader by default */
+      /* Add preloader styles here if needed */
+    }
+
+  
+</style>
+</head>
+
+<body>
 
   <!-- preloader section -->
   <section class="preloader">
@@ -114,9 +277,30 @@
     </div>
   </section>
 
-  <!-- home section -->
-  <section id="home">
+  
+
+   <!-- Navbar -->
+   <div class="navbar">
+    <label class="logo">
+      <img src="images/fav.png" alt="logo">
+    </label>
+    
+    <nav style="height: 30px; padding: 0; margin: 0;">
+      <ul >
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
     <div class="container">
+<<<<<<< HEAD
       <div class="row">
 
         <div class="col-md-offset-2 col-md-8 col-sm-12">
@@ -135,26 +319,53 @@
           </div>
 
         </div>
+=======
+      <div class="home-thumb">
+        <h1>Open Source Village</h1>
+        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
+        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
+        <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
+        <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
+          Join Discord
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s" alt="Discord">
+        </a>
+        <a href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
+          Follow us on LinkedIn
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" alt="LinkedIn">
+        </a>
+>>>>>>> 384f64a63e0e117723010dd132afaddcf701bedf
       </div>
-  </section> 
+    </div>
+  </section>
+
+  <script>
+    let popup = document.getElementById("popup");
+    function openPop(){
+      popup.classList.add("popup-active");
+    }
+
+    function closepop(){
+      popup.classList.remove("popup-active");
+    }
+  </script>
+
 
   <!-- about section -->
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-sm-12 opensource">
-          <img src="images\fav.png" class="img-responsive wow fadeInUp" alt="About">
+
         <div class="col-md-6 col-sm-12">
           <img src="images/fav.png" class="img-responsive wow fadeInUp" alt="About">
         </div>
 
         <div class="col-md-6 col-sm-12">
           <div class="about-thumb">
-            <div class="section-title ourmission">
-              <div class="wow fadeIn our" data-wow-delay="0.2s">Our Mission</div>
+            <div class="section-title">
+              <h1 class="wow fadeIn" data-wow-delay="0.2s">Our Mission</h1>
               <!-- <h3 class="wow fadeInUp" data-wow-delay="0.4s"></h3> -->
             </div>
-            <div class="wow fadeInUp ourmissionpara" data-wow-delay="0.6s">
+            <div class="wow fadeInUp" data-wow-delay="0.6s">
               <p>
                 Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
                 coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
@@ -176,7 +387,11 @@
     <div class="service-container">
       <div class="row d-grid gap-3">
         <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+<<<<<<< HEAD
           <div class="card wow fadeInUp" style="width: 18rem;height: 400px; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+=======
+          <div class="card wow fadeInUp" style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+>>>>>>> 384f64a63e0e117723010dd132afaddcf701bedf
             <div class="wow fadeIn" data-wow-delay="0.2s">
               <div class="card-heading">
                 <h3 class="heading-hover">Open learning</h3>
@@ -188,7 +403,11 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+<<<<<<< HEAD
           <div class="card wow fadeInUp" data-wow-delay="0.8s" style="width: 18rem;height: 400px; background-color:white; border-radius: 8px; padding: 20px;">
+=======
+          <div class="card wow fadeInUp" data-wow-delay="0.8s" style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+>>>>>>> 384f64a63e0e117723010dd132afaddcf701bedf
             <div class="wow fadeIn" data-wow-delay="0.2s">
               <div class="card-heading">
                 <h3 class="heading-hover">Network</h3>
@@ -200,7 +419,11 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+<<<<<<< HEAD
           <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem;height: 400px; background-color:white; border-radius: 8px; padding: 20px;">
+=======
+          <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+>>>>>>> 384f64a63e0e117723010dd132afaddcf701bedf
             <div class="wow fadeIn" data-wow-delay="0.2s">
               <div class="card-heading">
                 <h3 class="heading-hover">Mentorship</h3>
@@ -388,10 +611,6 @@
             <div class="col-md-4 pic-col">
               <img src="images/profile2.jpg" class="img-fluid rounded-start" style="width: 80px;">
             </div>
-            <div class="media-body network">
-              <h2 class="media-heading ">Network</h2>
-              <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
-                unlocking opportunities for personal and professional growth.</p>
             <div class="col-md-8" style="width: 100%;">
               <div class="card-body" style="width: 100%;">
                 <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Sarah J.</h5>
@@ -449,46 +668,53 @@
       </div>
     </div>
   </section>
+  
   <!-- contact section -->
-  <section id="contact">
-    <div class="container">
-      <div class="row">
 
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title">
-            <h1 class="wow fadeInUp" data-wow-delay="0.3s">Get in touch</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.6s">If you have any query or for collaboration</p>
-          </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+  <div class="formbody">
+    <main>
+        <section id="contact">
+            <div class="formcontainer">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="get">Get in Touch</h1>
+                    <p>If you have any query or for collaboration</p>
+                </div>
+                <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+                    <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendEmail(); reset(); return false;">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 rad">
+                                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 rad">
+                                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-12 msg rad">
+                                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6" required></textarea>
+                            </div>
+                            <!-- <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                                <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
+                            </div> -->
+                            <div>
+                              <button class="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <script>
+        function sendEmail() {
+            alert('Email sent successfully!');
+        }
+    </script>
+</div>
 
 
-            <form onsubmit="sendEmail(); reset(); return false;">
 
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"  >
-
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div id="mail" class="col-md-6 col-sm-6">
-                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6" style="resize: none;" required></textarea>
-              </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-
-
-                <input name="submit" type="submit" class="form-control submit" id="submit"
-                  value="SEND MESSAGE">
-
-              </div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   
 
