@@ -415,47 +415,40 @@
     </div>
   </section>
   <!-- contact section -->
-  <section id="contact">
-    <div class="container">
-      <div class="row">
+  <div class="formbody">
+    <main>
+        <section id="contact">
+            <div class="formcontainer">
+                <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="get">Get in Touch</h1>
+                    <p>If you have any query or for collaboration</p>
+                </div>
+                <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+                    <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendEmail(); reset(); return false;">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 rad">
+                                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 rad">
+                                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-12 msg rad">
+                                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6" required></textarea>
+                            </div>
+                            <!-- <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                                <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
+                            </div> -->
+                            <div>
+                              <button class="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title">
-            <h1 class="wow fadeInUp" data-wow-delay="0.3s">Get in touch</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.6s">If you have any query or for collaboration</p>
-          </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-
-
-            <form onsubmit="sendEmail(); reset(); return false;">
-
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"  >
-
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div id="mail" class="col-md-6 col-sm-6">
-                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6" style="resize: none;" required></textarea>
-              </div>
-              <div class="send-message-btn col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-
-
-                <input name="submit" type="submit" class="form-control submit" id="submit"
-                  value="SEND MESSAGE">
-
-              </div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  
+ 
 
 
   <!-- footer section -->
@@ -499,9 +492,20 @@
               <p>Open Source <strong>VILLAGER</strong> </p>
             </h2>
           </div>
-          <p class="abc" style="color: whitesmoke; ">
-Join the Community now and become a Villager.
-          </p>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="single_footer single_footer_address">
+                <h4>Join the Community now and become a Villager</h4>
+                <div class="signup_form">                           
+                    <form action="#" class="subscribe">
+                        <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                        <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+                                     
+        </div><!--- END COL -->  
+
+
         </div>
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
@@ -520,13 +524,13 @@ Join the Community now and become a Villager.
         <div class="footer_box">
           <h4 class="footer_title">Quick Links</h4>
           <ul class="footer_links">
-            <a >
+            <a href="#about">
               <li>About Us</li>
             </a>
-            <a >
+            <a href="#contact">
               <li>Contact Us</li>
             </a>
-            <a >
+            <a href="https://discord.gg/mM9qFh2uZR">
               <li>Support</li>
             </a>
           </ul>
@@ -545,8 +549,6 @@ Join the Community now and become a Villager.
       </p>
     </div>
   </footer>
- 
-
 
   <!-- Back top -->
   <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>

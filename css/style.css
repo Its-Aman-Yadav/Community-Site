@@ -7,6 +7,84 @@ http://www.templatemo.com/tm-490-comila
 */
 
 
+.formcontainer {
+  padding: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background: linear-gradient(180deg, #f5cb36 0%, #fae081 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.get{
+color: black;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.contact-form {
+  padding: 20px;
+  /* background: #f9f9f9; */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.msg{
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+/* border: 1px solid #ccc; */
+border-radius: 4px;
+font-size: 16px;
+}
+
+.contact-form .submit {
+
+  padding: 12px 20px;
+  width: 200px;
+  margin-left: 295px;
+  background: #e9b808;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form .submit:hover {
+  background-color: #d8aa03;
+  transform: translateY(-2px);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 nav{
   background: rgba(0, 0, 0, 0.7);
   height: 80px;
@@ -303,7 +381,7 @@ a:hover .fab {
   color: yellow; /* Change this to the desired hover color */
 }
 .footer {
-  padding: 50px 0px;
+  padding: 20px 0px;
   background: black;
 }
 .social_media:hover {
@@ -318,9 +396,24 @@ a:hover .fab {
 }
 .footer_box {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 .abc {
   padding-right: 50px;
+  font-size: large;
+}
+.footer_box ul {
+  margin: 0;
+  padding: 0;
+}
+.footer_box a li {
+  text-align: left;
+}
+.footer_box h4 {
+  margin-top: 20px;
 }
 .footer_box p {
   color: var(--heading-color);
@@ -400,10 +493,6 @@ a:hover .fab {
   margin-bottom: 1rem;
 }
 
-.footer_title {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
 
 .social_media {
   margin-top: 15px;
@@ -1336,4 +1425,107 @@ img:hover {
 }
 .send-message-btn{
   margin-left:36%;
+}
+/*for subscribe form in footer*/
+
+/* 
+.single_footer{}
+@media only screen and (max-width:768px) { 
+.single_footer{margin-bottom:30px;}
+} */
+.single_footer h4 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  font-size: 18px;
+}
+.single_footer h4::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  font-size: 20px;
+  background: #fff;
+  margin-top: 20px;
+}
+.single_footer p{color:#fff;}
+
+.single_footer_address{
+align-items: center;
+}
+.subscribe {
+display: block;
+position: relative;
+margin-top: 15px;
+width: 100%;
+}
+.subscribe__input {
+background-color: #fff;
+border: medium none;
+border-radius: 5px;
+color: #333;
+display: block;
+font-size: 15px;
+font-weight: 500;
+height: 50px;
+letter-spacing: 0.4px;
+margin: 0;
+padding: 0 50px 0 20px;
+text-align: center;
+text-transform: capitalize;
+width: 300px;
+}
+.subscribe__input:focus::-webkit-input-placeholder {
+visibility: hidden;
+}
+.subscribe__input:focus:-moz-placeholder { 
+visibility: hidden;
+}
+.subscribe__input:focus::-moz-placeholder { 
+visibility: hidden;
+}
+.subscribe__input:focus:-ms-input-placeholder { 
+visibility: hidden;
+}
+
+@media only screen and (max-width:768px) { 
+.subscribe__input{padding: 0 50px 0 20px;}
+}
+
+.subscribe__btn {
+background-color: transparent;
+border-radius: 0 25px 25px 0;
+color: #222222;
+cursor: pointer;
+display: block;
+font-size: 20px;
+height: 60px;
+position: absolute;
+right: 0;
+top: 0;
+width: 60px;
+}
+.subscribe__btn i{transition: all 0.3s ease 0s;}
+@media only screen and (max-width:768px) { 
+.subscribe__btn{right:0px;}
+}
+
+.subscribe__btn:hover i{
+color:#c8ba00;
+}
+button {
+padding: 0;
+border: none;
+background-color: transparent;
+-webkit-border-radius: 0;
+border-radius: 0;
+}
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size:x-large;
 }
