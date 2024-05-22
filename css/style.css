@@ -5,7 +5,6 @@ Comila Template
 http://www.templatemo.com/tm-490-comila
 
 */
-
 nav {
   background: rgba(0, 0, 0, 0.7);
   height: 80px;
@@ -148,6 +147,7 @@ nav ul li a:hover {
   background-size: cover;
   height: 0px;
 }
+
 
 /* Styles for small screens */
 .containerr {
