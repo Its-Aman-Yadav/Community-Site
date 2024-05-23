@@ -755,12 +755,6 @@ div.card {
 
 .home .home-thumb {
   text-align: center;
-  background-color: #2222227d;
-  border: 2px solid #2222227d;
-  box-shadow: 4px 4px 5px black;
-  border-radius: 15px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
 }
 
 .home .btn {
