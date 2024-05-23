@@ -441,12 +441,13 @@ strong {
   color: #01080d;
   font-size: 60px;
   text-align: center;
-  padding-bottom: 75px;
+  padding-bottom:20px;
   font-weight: bolder;
 }
 
 .service-container{
   padding-left: 40px;
+  height: 80vh;
 }
 
 .card {
@@ -465,7 +466,7 @@ strong {
 }
 
 .card:hover {
-  box-shadow: 0px 0px 6px 6px #e9ecef;
+  box-shadow: 0px 0px 6px 6px #fad729;
   transform: scale(1.2) translateY(20px);
   -webkit-transform: scale(1.2) translateY(20px);
   -moz-transform: scale(1.2) translateY(20px);
@@ -865,6 +866,7 @@ div.card {
   border-color:#999;
 
   border: 2px solid #797979;
+  columns: #fff;
 
 }
 
@@ -887,6 +889,7 @@ div.card {
 
 #contact input[type="submit"]:hover {
   background: #f1c11a;
+  color: #fff;
 }
 
 /* footer section  */
