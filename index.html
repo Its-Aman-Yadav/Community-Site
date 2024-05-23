@@ -29,8 +29,10 @@
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
 <style>
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 .logo-text {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -38,9 +40,6 @@
   font-style: normal;
   font-size:x-large;
 }
-
-
-
   .formcontainer {
       padding: 20px;
       max-width: 800px;
@@ -119,29 +118,7 @@
       box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
-
-  <!--navbar-->
-  <div class="navbar">
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
-        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
-    </label>
-      <ul>
-        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
-      </ul>
-    </nav>
-
-
-    .navbar {
+  .navbar {
   width: 100%;
   background: #333;
   display: flex;
@@ -253,7 +230,6 @@ nav ul li  a:hover{
       /* Add preloader styles here if needed */
     }
 
-  
 </style>
 </head>
 
@@ -277,20 +253,19 @@ nav ul li  a:hover{
     </div>
   </section>
 
-  
-
    <!-- Navbar -->
    <div class="navbar">
     <label class="logo">
       <img src="images/fav.png" alt="logo">
+      <span class="logo-text">Open Source Village</span>
     </label>
     
     <nav style="height: 30px; padding: 0; margin: 0;">
       <ul >
-        <li><a class="active" href="#home">Home</a></li>
+        <li><a class="active" href="#home"> Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#testimonials"> Reviews</a></li>
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#feedback">Feedback</a></li>
       </ul>
@@ -361,7 +336,6 @@ nav ul li  a:hover{
 
 <!-- services section -->
 <section id="services">
-  <div class="container">
     <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
     <div class="service-container">
       <div class="row d-grid gap-3">
@@ -402,7 +376,7 @@ nav ul li  a:hover{
           </div>
         </div>
       </div>
-      <div class="clearfix text-center col-md-12 col-sm-12">
+      <div class="clearfix text-center col-md-12 col-sm-12 mb-5">
         <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll">JOIN DISCORD</a>
       </div>
     </div>
@@ -626,9 +600,6 @@ nav ul li  a:hover{
             </div>
           </div>
         </div>
-
-        
-
       </div>
     </div>
   </section>
@@ -641,7 +612,7 @@ nav ul li  a:hover{
             <div class="formcontainer">
                 <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
                     <h1 class="get">Get in Touch</h1>
-                    <p>If you have any query or for collaboration</p>
+                    <p style="color: black;font-weight: 400;">If you have any query or for collaboration</p>
                 </div>
                 <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
                     <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendEmail(); reset(); return false;">
@@ -659,14 +630,61 @@ nav ul li  a:hover{
                                 <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
                             </div> -->
                             <div>
-                              <button class="submit">Submit</button>
+                              <button class="submit" style="font-weight: 600;">Submit</button>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
         </section>
     </main>
+
+
+    <!-- feedback form -->
+    <section class="faqq" id="feedback">
+      <form class="row g-3">
+        <h1 class="get" style="text-align: center;">Feedback Form</h1>
+        <div class="col-md-6">
+          <label for="inputtext" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="inputtext" required><br><r></r>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email"required><br><br>
+        </div>
+
+        <div class="form-check form-check-inline">
+         <h4>Please provide your Feedback on the quality of services.</h4>
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          <label class="form-check-label" for="inlineRadio1">Excellent</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Very Good</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+          <label class="form-check-label" for="inlineRadio3">Good</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+          <label class="form-check-label" for="inlineRadio3">Average</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+          <label class="form-check-label" for="inlineRadio3">Poor</label>
+        </div>
+
+        <div>
+          <label for="exampleFormControlTextarea1" class="form-label" style="margin: 20px 0 20px 0;font-size: 1rem;">Do you have any suggestion on what we can do to provide you with a better services</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+        </div>
+        <div class="col-12">
+          <button style="margin-top: 20px; font-size: 1rem;
+          height: 40px;border: 1px solid black;width:100px; border-radius: 5px ;">Submit</button>
+        </div>
+      </form>
+    </section>
+  
 
     
 
