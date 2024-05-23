@@ -823,31 +823,10 @@ div.card {
   background: black;
   color: white;
   border-color: transparent;
-  box-shadow: none;
 }
-.service-cards{
-  transition: all 0.3s ease;
-}
-.service-cards:hover{
-  transform:translateY(-6px);
-
-}
-.heading-hover{
-  font-size:20px;
-  color:#0082e6;
-}
-.service-cards:hover .heading-hover{
-  color:white;
-
-}
-
-
-
 
 
 /* contact section  */
-
-
 
 
 #contact .form-control {
@@ -861,11 +840,8 @@ div.card {
 }
 
 #contact .form-control:hover {
-
-  border-color:#999;
-
+  border-color: #999;
   border: 2px solid #797979;
-
 }
 
 #contact input {
@@ -1464,7 +1440,4 @@ button {
   background-color: transparent;
   -webkit-border-radius: 0;
   border-radius: 0;
-}
-}
-}
 }
