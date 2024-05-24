@@ -2,35 +2,284 @@
 <html lang="en">
 
 <head>
-
+  
   <meta charset="utf-8">
-
+  
   <title>Open Source Village</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="">
   <meta name="description" content="">
+<<<<<<< HEAD
 
+=======
+  
+  <!-- stylesheets css -->
+>>>>>>> 357e314dc7aebced2bedc3f3064656682c757d90
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="icon" href="images\fav.png">
-
+  <link rel="icon" href="fav.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
-
+  <link
+  href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+  rel="stylesheet">
+  
   <link rel="stylesheet" href="css/et-line-font.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-
+  
   <link rel="stylesheet" href="css/vegas.min.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+    
+    .formcontainer {
+      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: linear-gradient(180deg, #f5cb36 0%, #fae081 100%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    
+    .get {
+      color: black;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .section-title h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    
+    .section-title p {
+      font-size: 1.2em;
+      color: #666;
+    }
+    
+    .contact-form {
+      padding: 20px;
+      /* background: #f9f9f9; */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-form .form-control {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    .msg {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      /* border: 1px solid #ccc; */
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    .contact-form .submit {
+      
+      padding: 12px 20px;
+      width: 200px;
+      margin-left: 295px;
+      background: #e9b808;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .contact-form .submit:hover {
+      background-color: #d8aa03;
+      transform: translateY(-2px);
+    }
+    
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+      width: 100%;
+      background: #3333339c;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background-color: #2222227d;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+    
+    .navbar nav ul {
+      margin: 0px;
+      display: flex;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    
+    .navbar nav {
+      justify-content: flex-end;
+      /* Align links to the right */
+      align-items: flex-start;
+      /* Vertically align to top */
+    }
+    
+    .navbar nav ul a,
+    .sidebarMenu ul a {
+      display: inline;
+      /* Reset in case of accidental overrides */
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      margin-right: 10px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    
+    nav ul li a:hover,
+    .sidebarMenu ul li a:hover {
+      color: #000000;
+      transform: scale(1.2);
+      background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
+      transform: translateY(20px);
+    }
+    
+    #barBtn {
+      display: none;
+    }
+    
+    .sidebarMenu {
+      display: none;
+    }
+    
+    @media Screen and (max-width: 1000px) {
+      .navbar nav{
+        display: none;
+      }
+      
+      .navbar label {
+        cursor: url('/CURSOR1.png'), auto;
+        width: 100%;
+      }
+      
+      .navbar label img {
+        transform: translateX(60vw);
+      }
+      
+      .sidebarMenu {
+        position: fixed;
+        display: block;
+        z-index: 2000;
+        top: 15px;
+      }
+      
+      .is-active::before {
+        content: "";
+        z-index: 2;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+      }
+    }
+    
+    .logo {
+      margin-right: auto;
+      /* Optional: space between logo and right edge */
+    }
+    
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      padding-top: 80px;
+      /* to avoid overlap with navbar */
+    }
+    
+    .home .container {
+      max-width: 800px;
+    }
+    
+    .home-thumb h1 {
+      font-size: 60px;
+      color: #d8aa03;
+    }
+    
+    .home-thumb h3 {
+      margin: 20px 0;
+      font-size: 24px;
+      color: whitesmoke;
+      
+    }
+    
+    .home-thumb a.btn {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .home-thumb a.btn img {
+      height: 30px;
+      width: 30px;
+      margin-left: 15px;
+      border-radius: 5px;
+    }
+    
+    .btn-default {
+      background-color: #0c0b0b;
+      border: none;
+    }
+    
+    .btn-default:hover {
+      background-color: #4c4d4a;
+    }
+    
+    .preloader {
+      display: none;
+      /* Hide preloader by default */
+      /* Add preloader styles here if needed */
+    }
+  </style>
 </head>
 
 <body>
-
+  
   <!-- preloader section -->
   <section class="preloader">
     <div class="sk-circle">
@@ -48,229 +297,637 @@
       <div class="sk-circle12 sk-child"></div>
     </div>
   </section>
-
-  <!-- home section -->
-  <section id="home">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="home-thumb">
-            <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-            <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong> </h3>
-            <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now </h3>
-            <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-              data-wow-delay="1s">JOIN DISCORD</a>
-              <a href="https://www.linkedin.com/company/open-source-village/" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-              data-wow-delay="1s">Follow us on LinkedIn</a>
-            <!-- <a href="#" data-toggle="modal" data-target="#modal1"
-              class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s">JOIN NEWSLETTER</a>
-          </div> -->
+  
+  <!-- Navbar -->
+  <div class="navbar">
+    <input type="checkbox" id="barBtn">
+    
+    <label class="logo">
+      <a href="#home"><img src="images/fav.png" alt="logo"></a>
+    </label>
+    
+    <nav>
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <span class="sidebarMenu">
+    <div class="navbarBtn" id="navbarBtn">
+      <label for="barBtn" class="barBtnLabel">
+        <div class="hamburgerBars">
+          <div class="hamburgerBox--squeeze">
+            <div class="hamburgerBtn"></div>
           </div>
-
         </div>
+      </label>
+      
+      <div class="menu">
+        <ul class="menuOpt">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
       </div>
-  </section>
-
-  <!-- about section -->
-  <section id="about">
+    </div>
+  </span>
+  
+  <script>
+    const navbarBtn = document.getElementById("navbarBtn");
+    
+    const barBtn = document.getElementById("barBtn");
+    
+    barBtn.addEventListener('click', () => {
+      navbarBtn.classList.toggle("is-active")
+    });
+  </script>
+  
+  <!-- Home Section -->
+  <section class="home" id="home">
     <div class="container">
-      <div class="row">
+      <div class="home-thumb">
+        <h1>Open Source Village</h1>
+        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
+        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
+        <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
+        <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+        data-wow-delay="1s">
+        Join Discord
+        <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
+        alt="Discord">
+      </a>
+      <a href="https://www.linkedin.com/company/open-source-village/"
+      class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
+      Follow us on LinkedIn
+      <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
+      alt="LinkedIn">
+    </a>
+  </div>
+</div>
+</section>
 
-        <div class="col-md-6 col-sm-12">
-          <img src="images\fav.png" class="img-responsive wow fadeInUp" alt="About">
-        </div>
+<script>
+  let popup = document.getElementById("popup");
+  function openPop() {
+    popup.classList.add("popup-active");
+  }
+  
+  function closepop() {
+    popup.classList.remove("popup-active");
+  }
+</script>
 
-        <div class="col-md-6 col-sm-12">
-          <div class="about-thumb">
-            <div class="section-title">
-              <h1 class="wow fadeIn" data-wow-delay="0.2s">Our Mission</h1>
-              <!-- <h3 class="wow fadeInUp" data-wow-delay="0.4s"></h3> -->
-            </div>
-            <div class="wow fadeInUp" data-wow-delay="0.6s">
-              <p>
-                Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
-                coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
-                members can connect, collaborate, and make a positive impact in the world. Join us and be a part of
-                something bigger than yourself! </p>
+
+<!-- about section -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-6 col-sm-12">
+        <img src="images/fav.png" class="img-responsive wow fadeInUp" alt="About">
+      </div>
+      
+      <div class="col-md-6 col-sm-12">
+        <div class="about-thumb">
+          <div class="section-title">
+            <h1 class="wow fadeIn" data-wow-delay="0.2s">Our Mission</h1>
+            <!-- <h3 class="wow fadeInUp" data-wow-delay="0.4s"></h3> -->
+          </div>
+          <div class="wow fadeInUp" data-wow-delay="0.6s">
+            <p>
+              Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
+              coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
+              members can connect, collaborate, and make a positive impact in the world. Join us and be a part of
+              something bigger than yourself! </p>
             </div>
           </div>
         </div>
-
+        
       </div>
     </div>
   </section>
-
-
-  <!-- feature section -->
-  <section id="feature">
+  
+  
+  <!-- services section -->
+  <section id="services">
     <div class="container">
-      <div class="row">
-
-        <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1"
-          xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-          <path d="M0 0 L50 100 L100 0 Z"></path>
-        </svg>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="card media wow fadeInUp" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 15px 15px;" data-wow-delay="0.4s">
-            <div class="">
-              <i class="icon icon-laptop" style="color:black;"></i>
+      <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
+      <div class="service-container">
+        <div class="row d-grid gap-3">
+          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+            <div class="card wow fadeInUp"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Open learning</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community promotes open learning, allowing members to share their knowledge and skills with
+                  others, fostering a culture of continuous growth.</p>
+                </div>
+              </div>
             </div>
-            <div class="card-body">
-              <h2 class="media-heading text-center" style="color:black;">Open Learning</h2>
-              <p class="card-text">Our community promotes open learning, allowing members to share their knowledge and skills with others,
-                fostering a culture of continuous growth.</p>
+          </div>
+          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+            <div class="card wow fadeInUp" data-wow-delay="0.8s"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Network</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
+                  opportunities for personal and professional growth.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+            <div class="card wow fadeInUp" data-wow-delay="1.2s"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Mentorship</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal
+                  and professional growth.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-          <div class="card wow fadeInUp" data-wow-delay="0.8s"  style="width: 18rem; background-color:white ; border-radius: 8px; padding: 20px 20px;">
-            <div class="">
-              <i class="icon icon-refresh" style="color:black;"></i>
-            </div>
-            <div class="card-body">
-              <h2 class="media-heading text-center" style="color:black;">Network</h2>
-              <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
-                unlocking opportunities for personal and professional growth.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-8">
-          <div class="card wow fadeInUp" data-wow-delay="1.2s" style="width: 18rem; background-color:white ; border-radius: 8px; padding: 30px 30px;">
-            <div class="">
-              <i class="icon icon-chat" style="color:black;"></i>
-            </div>
-            <div class="card-body">
-              <h2 class="media-heading  text-center" style="color:black;">Mentorship</h2>
-              <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal and
-                professional growth.</p>
-            </div>
-          </div>
-        </div>
-
         <div class="clearfix text-center col-md-12 col-sm-12">
           <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll">JOIN DISCORD</a>
         </div>
-
       </div>
     </div>
   </section>
-
-  <!-- contact section -->
-  <section id="contact">
+  
+  
+  
+  <!-- Testimonials section -->
+  <section id="testimonials">
     <div class="container">
       <div class="row">
-
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title">
-            <h1 class="wow fadeInUp" data-wow-delay="0.3s">Get in touch</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.6s">If you have any query or for collaboration</p>
-          </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-
-
-            <form onsubmit="sendEmail(); reset(); return false;">
-
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"  >
-
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div id="mail" class="col-md-6 col-sm-6">
-                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div style="margin-left: 15px; margin-right: 15px;" class="msg" class="col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6"
-                  required></textarea>
-              </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-
-                <button type="submit" class="btn">submit</button>
-
-                <input name="submit" type="submit" class="form-control submit" id="submit"
-                  value="SEND MESSAGE">
-
-              </div>
-            </form>
+        <div class="col-md-12">
+          <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="testimonial-author">
+              <img src="images/testi_1.jpg" class="img-circle" alt="Testimonial Author">
+              <h4>Arden Stone</h4>
+              
+            </div>
+            <div class="testimonial-content">
+              <p>"Being a part of this community has been truly transformative. The support and encouragement I've
+                received here have helped me grow both personally and professionally. I'm immensely grateful to have
+                found such an inspiring group of people!"
+              </p>
+            </div>
           </div>
         </div>
-
+        <div class="col-md-4">
+          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.6s">
+            <div class="testimonial-author">
+              <img src="images/testi_2.jpeg" class="img-circle" alt="Testimonial Author">
+              <h4>John Smith</h4>
+              
+            </div>
+            <div class="testimonial-content">
+              <p> "I've been involved with many groups in the past, but none have been as warm and welcoming as this
+                one. The sense of belonging I feel here is unparalleled. It's incredible to be surrounded by individuals
+                who share my values and passion for making a difference."</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.8s">
+              <div class="testimonial-author">
+                <img src="images/testi_3.jpeg" class="img-circle" alt="Testimonial Author">
+                <h4>Emily Johnson</h4>
+              </div>
+              <div class="testimonial-content">
+                <p>"I was initially hesitant to join, but I'm so glad I did. The connections I've made here have opened up
+                  numerous opportunities for collaboration and personal development. It's amazing to see how much we can
+                  achieve when we come together with a common purpose."</p>
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <!-- <div class="clearfix text-center col-md-12 col-sm-12">
+              <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll">JOIN DISCORD</a>
+            </div>
+          </div>-->
+        </div>
+      </section>
+      
+      <section class="faqq">
+        
+        <div class="containerr">
+          
+          <div class="accordion">
+            
+            <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
+            
+            <div class="accordion-item">
+              
+              <button id="accordion-button-1" aria-expanded="false">
+                
+                <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
+                <span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Contributing to the community's goals: There are many ways to contribute to our community! Whether you're
+                  a developer, designer, writer, or simply passionate about a particular cause, there's a place for you
+                  here. You can contribute code to open source projects, participate in discussions, share your expertise,
+                  or organize events that align with our mission.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">What benefits do members receive from participating in the community?</span>
+                <span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Benefits of community membership: As a member of our community, you'll have the opportunity to connect
+                  with other passionate individuals, collaborate on projects that align with your interests and values, and
+                  make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events,
+                  and networking opportunities.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-3" aria-expanded="false">
+                <span class="accordion-title">How can I join the open source village community?</span>
+                <span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Joining the open source village community: Joining our community is simple! Just navigate to our website
+                  and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration
+                  process. Once registered, you'll gain access to our forums, projects, events, and more.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-4" aria-expanded="false">
+                <span class="accordion-title">What is open source community?</span>
+                <span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  An open source community is a group of individuals who collaborate on projects and initiatives that are
+                  developed and shared openly, meaning the source code and resources are freely available for anyone to
+                  view, use, modify, and distribute ideas.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-5" aria-expanded="false">
+                <span class="accordion-title">What is the purpose of the open source village community website?</span>
+                <span class="icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Purpose of the open source village community website: Our website serves as a central hub for like-minded
+                  individuals who believe in the power of community-driven initiatives. It's a platform where members can
+                  connect, collaborate, and contribute to make a positive impact in the world.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section id="experience">
+        <div class="container">
+          
+          <div class="row" style="display: flex;align-items: center;justify-content: space-between;flex-direction: row;">
+            
+            
+            <div class="card1 mb-3" style="max-width: 540px;">
+              <div class="row g-0" style="height: 100%;">
+                <div class="col-md-4 pic-col">
+                  <img src="images/profile1.jpg" class="img-fluid rounded-start" style="width: 80px;">
+                </div>
+                <div class="col-md-8" style="width: 100%;">
+                  <div class="card-body" style="width: 100%;">
+                    <h5 class="card-title" style="font-size: 28px;font-weight: bold;">David L.</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path
+                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-star-fill" viewBox="0 0 16 16">
+              <path
+              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-star-half" viewBox="0 0 16 16">
+            <path
+            d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z" />
+          </svg>
+          <p class="card-text">"Joining this community has been one of the best decisions I've ever made. I've had
+            the opportunity to contribute to meaningful projects that have an impact on society."</p>
+            
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- footer section -->
-  <footer>
-    <div class="container">
-      <div class="row">
-
-        <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
-          version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0 L50 100 L100 0 Z"></path>
+    
+    <div class="card1 mb-3" style="max-width: 540px;">
+      <div class="row g-0" style="height: 100%;">
+        <div class="col-md-4 pic-col">
+          <img src="images/profile2.jpg" class="img-fluid rounded-start" style="width: 80px;">
+        </div>
+        <div class="col-md-8" style="width: 100%;">
+          <div class="card-body" style="width: 100%;">
+            <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Sarah J.</h5>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path
+            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-star-fill" viewBox="0 0 16 16">
+          <path
+          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
         </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-star-fill" viewBox="0 0 16 16">
+        <path
+        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+      class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path
+      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+    class="bi bi-star-fill" viewBox="0 0 16 16">
+    <path
+    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+  </svg>
+  <p class="card-text">"Being a part of this community has been an incredible journey. I've found
+    like-minded individuals who share my deep passion for making a difference in the society."</p>
+    
+  </div>
+</div>
+</div>
+</div>
 
-        <div class="col-md-4 col-sm-6">
-          <h2>Open Source Village</h2>
-          <div class="wow fadeInUp" data-wow-delay="0.3s">
-            <p>Be a Villager now</p>
-            <p class="copyright-text">Copyright &copy; 2023 <br>
-              <!-- Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
-          </div>
-        </div>
-
-
-        <ul class="social-icon">
-          <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
-          <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
-        </ul>
-      </div>
-
+<div class="card1 mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4 pic-col">
+      <img src="images/profile3.jpg" class="img-fluid rounded-start" style="width: 80px;">
     </div>
+    <div class="col-md-8" style="width: 100%;">
+      <div class="card-body" style="width: 100%;">
+        <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Emily R.</h5>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-star-fill" viewBox="0 0 16 16">
+        <path
+        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+      class="bi bi-star-fill" viewBox="0 0 16 16">
+      <path
+      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+    class="bi bi-star-fill" viewBox="0 0 16 16">
+    <path
+    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+  class="bi bi-star-fill" viewBox="0 0 16 16">
+  <path
+  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+</svg>
+<p class="card-text">"As someone who values inclusivity, finding a space where everyone's voice is heard
+  and respected has been incredibly refreshing. It's empowering to collaborate here."</p>
+  
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</section>
+
+<!-- contact section -->
+
+<div class="formbody">
+  <main>
+    <section id="contact">
+      <div class="formcontainer">
+        <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
+          <h1 class="get">Get in Touch</h1>
+          <p>If you have any query or for collaboration</p>
+        </div>
+        <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+          <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"
+          onsubmit="sendEmail(); reset(); return false;">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 rad">
+              <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 col-sm-6 rad">
+              <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="col-12 msg rad">
+              <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6"
+              required></textarea>
+            </div>
+            <!-- <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+              <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
+            </div> -->
+            <div>
+              <button class="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  function sendEmail() {
+    alert('Email sent successfully!');
+  }
+</script>
+</div>
+
+<!-- footer section -->
+<!-- <footer>
+  <div class="container">
+    <div class="row">
+      
+      <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
+      version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0 L50 100 L100 0 Z"></path>
+    </svg>
+    
+    <div class="col-md-4 col-sm-6">
+      <h2>Open Source Village</h2>
+      <div class="wow fadeInUp" data-wow-delay="0.3s">
+        <p>Be a Villager now</p>
+        <p class="copyright-text">Copyright &copy; 2023 <br>
+          Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
+          <!-- </div>
+          </div>
+          
+          
+          <ul class="social-icon">
+            <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
+            <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </footer> -->
+  <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
+    <div class="container">
+      <div class="footer_wrapper">
+        <div class="footer_box">
+          <div class="logo">
+            <div class="logo_img">
+              
+            </div>
+            <h2 class="fitbody">
+              <p>Open Source <strong>VILLAGER</strong> </p>
+            </h2>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="single_footer single_footer_address">
+              <h4>Join the Community now and become a Villager</h4>
+              <div class="signup_form">
+                <form action="#" class="subscribe">
+                  <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                  <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div>
+            
+          </div><!--- END COL -->
+          
+          
+        </div>
+        <div class="footer_box">
+          <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
+          <ul class="footer_links">
+            <a>
+              <li>Our Program</li>
+            </a>
+            <a>
+              <li>Our Plan</li>
+            </a>
+            <a>
+              <li>Become A Member</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer_box">
+          <h4 class="footer_title">Quick Links</h4>
+          <ul class="footer_links">
+            <a >
+              <li>About Us</li>
+            </a>
+            <a >
+              <li>Contact Us</li>
+            </a>
+            <a >
+              <li>Support</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <p class="social_media">
+        <a><i class="fab fa-github"></i></a>
+        <a><i class="fab fa-linkedin"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-facebook"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        
+      </p>
+      <p class="copyright">
+        Copyright &copy
+        <script>document.write(new Date().getFullYear())</script> Developed by open source. All rights reserved.
+      </p>
     </div>
   </footer>
-
-
-
+  
+  
+  
   <!-- Back top -->
   <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
-
+  
   <!-- javscript js -->
   <script>
-    function sendEmail (){
+    function sendEmail() {
       Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "yash.223234108@vcet.edu.in",
-    Password : "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
-    To : 'itsamanyadav18@gmail.com',
-    From : document.getElementById('email').value,
-    Subject : "This is the subject",
-    Body : "Name:" + document.getElementById("name").value 
-    + "<br> Email:" + document.getElementById("email").value
-    + "<br> Message:" +document.getElementById("msg").value
-
-  }).then(
-  message => alert("Message sent successsfully")
-);
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+        + "<br> Email:" + document.getElementById("email").value
+        + "<br> Message:" + document.getElementById("msg").value
+        
+      }).then(
+      message => alert("Message sent successsfully")
+      );
     }
   </script>
   
-
-
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
-
+  
   <script src="js/vegas.min.js"></script>
-
+  
   <script src="js/wow.min.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script src="js/custom.js"></script>
-
+  
 </body>
 
 </html>
