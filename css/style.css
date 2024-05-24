@@ -448,8 +448,13 @@ strong {
   justify-content: center; */
 }
 
+
+
+
 #services>.container {
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
