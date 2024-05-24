@@ -736,6 +736,147 @@ div.card {
   backface-visibility: hidden;
 }
 
+/*navbar section*/
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000; 
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+label.logo img {
+  height: 68px;
+  width: 68px;
+  margin-top: -5px;
+  border-radius: 450px;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 20px;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(252, 250, 250);
+  font-size: 15px;
+  padding: 10px 28px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  text-decoration: none;
+}
+
+i {
+  font-size: larger;
+  font-weight: 200;
+  font-style: normal;
+}
+
+nav ul li a:hover {
+  color: #000000;
+  background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
+  transform: scale(1.2) translateY(10px);
+}
+
+.navbar nav .checkbut {
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.navbar .fas {
+  color: white;
+}
+
+@media (max-width: 952px) {
+  label.logo img {
+    height: 0px;
+    width: 0px;
+  }
+  
+  label.logo {
+    font-size: 15px;
+    padding-left: 50px;
+  }
+  
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .navbar nav .checkbut {
+    display: block;
+    color: white;
+  }
+  
+  .navbar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 2;
+  }
+  
+  .navbar nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  
+  .navbar nav ul li a {
+    font-size: 20px;
+  }
+  
+  a:hover, a.active {
+    background: none;
+    color: #0082e6;
+  }
+  
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+.navbar section {
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: 0px;
+}
+
+
 /* home section */
 .home {
   height: 100vh;
@@ -847,8 +988,8 @@ div.card {
   background: black;
   color: white;
   border-color: transparent;
-  box-shadow: none;
 }
+
 
 .service-cards {
   transition: all 0.3s ease;
@@ -870,12 +1011,7 @@ div.card {
 }
 
 
-
-
-
 /* contact section  */
-
-
 
 
 #contact .form-control {
@@ -889,11 +1025,8 @@ div.card {
 }
 
 #contact .form-control:hover {
-
   border-color: #999;
-
   border: 2px solid #797979;
-
 }
 
 #contact input {
@@ -1531,123 +1664,4 @@ button {
   background-color: transparent;
   -webkit-border-radius: 0;
   border-radius: 0;
-}
-
-/* For Hamburger button */
-.navbarBtn .barBtnLabel {
-  position: fixed;
-  z-index: 3;
-  left: 100px;
-}
-
-#barBtn {
-  display: block;
-}
-
-.hamburgerBars {
-  padding: 10px;
-  display: inline-block;
-  margin: 0;
-  border: 0;
-  background: transparent;
-  text-transform: none;
-  border: 0;
-  overflow: visible;
-  cursor: pointer;
-}
-
-.hamburgerBox--squeeze {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 24px;
-}
-
-.hamburgerBox--squeeze .hamburgerBtn,
-.hamburgerBox--squeeze .hamburgerBtn:before,
-.hamburgerBox--squeeze .hamburgerBtn:after {
-  position: absolute;
-  height: 4px;
-  width: 40px;
-  border-radius: 4px;
-  background-color: #fbdd53;
-  transition-duration: 75ms;
-  transition-timing-function: cubic-bezier(.55, .055, .675, .19);
-}
-
-.hamburgerBox--squeeze .hamburgerBtn {
-  display: block;
-  top: 50%;
-}
-
-.hamburgerBox--squeeze .hamburgerBtn::before,
-.hamburgerBox--squeeze .hamburgerBtn::after {
-  content: "";
-  display: block;
-}
-
-.hamburgerBox--squeeze .hamburgerBtn::before {
-  top: -10px;
-  transition: top 75ms ease 0.12s, opacity 75ms ease;
-}
-
-.hamburgerBox--squeeze .hamburgerBtn::after {
-  content: "";
-  top: 10px;
-  transition: top 75ms ease 0.12s, transform 75ms cubic-bezier(.55, .055, .675, .19);
-}
-
-.is-active .hamburgerBox--squeeze .hamburgerBtn {
-  transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(.215, .61, .355, 1);
-  transform: rotate(45deg);
-}
-
-.is-active .hamburgerBox--squeeze .hamburgerBtn::before {
-  top: 0;
-  transition: top 75ms ease, opacity 75ms ease 0.12s;
-  opacity: 0;
-}
-
-.is-active .hamburgerBox--squeeze .hamburgerBtn::after {
-  top: 0;
-  transition: top 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) 0.12s;
-  transform: rotate(-90deg);
-}
-
-.is-active .menu {
-  left: -50px;
-}
-
-.menu {
-  z-index: 2;
-  position: fixed;
-  left: 0;
-  left: -350px;
-  height: 80%;
-  width: 250px;
-  background-color: #2222229e;
-  border: 2px solid #2222227d;
-  border-radius: 10px 35px 35px 0px;
-  top: 100px;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu .menuOpt {
-  padding: 0%;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  height: 100%;
-  line-height: 80px;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.sidebarMenu *:hover, .navbar *:hover {
-  cursor: url('/CURSOR1.png'), auto;
-}
-
-.menu .menuOpt a:hover {
-  cursor: url('/CURSOR1.png'), auto;
 }
