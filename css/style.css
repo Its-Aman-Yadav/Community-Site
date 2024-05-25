@@ -742,107 +742,81 @@ div.card {
 }
 
 /*navbar section*/
-nav {
+.navbar {
+  background: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
-  height: 80px;
   width: 100%;
+  z-index: 1000;
+}
+
+.navbar nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000; 
+  height: 80px;
 }
 
-label.logo {
+.navbar .logo {
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 35px;
   line-height: 80px;
   padding: 0 20px;
   font-weight: bold;
-  display: flex;
-  align-items: center;
 }
 
-label.logo img {
+.navbar .logo img {
   height: 68px;
   width: 68px;
   margin-top: -5px;
   border-radius: 450px;
 }
 
-nav ul {
-  display: flex;
-  margin-right: 20px;
+.navbar ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
+.navbar ul li {
   display: inline-block;
-  font-family: 'Josefin Sans', sans-serif;
-  line-height: 80px;
   margin: 0 5px;
 }
 
-nav ul li a {
-  color: rgb(252, 250, 250);
+.navbar ul li a {
+  color: #fcfafa;
   font-size: 15px;
-  padding: 10px 28px;
+  padding: 10px 20px;
   border-radius: 3px;
   text-transform: uppercase;
-  transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
   text-decoration: none;
 }
 
-i {
-  font-size: larger;
-  font-weight: 200;
-  font-style: normal;
-}
-
-nav ul li a:hover {
-  color: #000000;
+.navbar ul li a:hover {
+  color: #fcf6f6;
   background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
   transform: scale(1.2) translateY(10px);
 }
 
-.navbar nav .checkbut {
-  font-size: 30px;
-  color: white;
+.navbar .checkbut {
   display: none;
-}
-
-#check {
-  display: none;
-}
-
-.navbar .fas {
-  color: white;
-}
-
-@media (max-width: 952px) {
-  label.logo img {
-    height: 0px;
-    width: 0px;
-  }
-  
-  label.logo {
-    font-size: 15px;
-    padding-left: 50px;
-  }
-  
-  nav ul li a {
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 858px) {
-  .navbar nav .checkbut {
-    display: block;
-    color: white;
+  .navbar .logo img {
+    display: none;
   }
   
+  .navbar .checkbut {
+    display: block;
+    font-size: 30px;
+    color: white;
+    margin-right: 20px;
+  }
+
   .navbar ul {
     position: fixed;
     width: 100%;
@@ -854,32 +828,27 @@ nav ul li a:hover {
     transition: all .5s;
     z-index: 2;
   }
-  
-  .navbar nav ul li {
+
+  .navbar ul li {
     display: block;
     margin: 50px 0;
     line-height: 30px;
   }
-  
-  .navbar nav ul li a {
+
+  .navbar ul li a {
     font-size: 20px;
   }
-  
-  a:hover, a.active {
+
+  .navbar ul li a:hover, .navbar ul li a.active {
     background: none;
     color: #0082e6;
   }
-  
+
   #check:checked ~ ul {
     left: 0;
   }
 }
 
-.navbar section {
-  background: url(bg1.jpg) no-repeat;
-  background-size: cover;
-  height: 0px;
-}
 
 
 /* home section */
