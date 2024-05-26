@@ -17,9 +17,6 @@ header {
   margin-right: 5px;
 }
 
-.navbar-nav {
-  margin-right: auto;
-}
 
 .navbar-nav .nav-link {
   padding-right: 20px;
@@ -39,7 +36,7 @@ header {
 }
 
 .navbar-nav li {
-  margin-right: 20px; /* Increase or decrease as needed */
+  margin-right: 50px; /* Increase or decrease as needed */
 }
 
 .navbar-nav li a {
@@ -373,193 +370,17 @@ footer {
 
 
 
-.timeline {
-  position: relative;
-  padding: 0;
-  list-style: none;
-}
-.timeline:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 40px;
-  width: 2px;
-  margin-left: -1.5px;
-  content: "";
-  background-color: #e9ecef;
-}
-.timeline > li {
-  position: relative;
-  min-height: 50px;
-  margin-bottom: 50px;
-}
-.timeline > li:after, .timeline > li:before {
-  display: table;
-  content: " ";
-}
-.timeline > li:after {
-  clear: both;
-}
-.timeline > li .timeline-panel {
-  position: relative;
-  float: right;
-  width: 100%;
-  padding: 0 20px 0 100px;
-  text-align: left;
-}
-.timeline > li .timeline-panel:before {
-  right: auto;
-  left: -15px;
-  border-right-width: 15px;
-  border-left-width: 0;
-}
-.timeline > li .timeline-panel:after {
-  right: auto;
-  left: -14px;
-  border-right-width: 14px;
-  border-left-width: 0;
-}
-.timeline > li .timeline-image {
-  position: absolute;
-  z-index: 100;
-  left: 0;
-  width: 80px;
-  height: 80px;
-  margin-left: 0;
-  text-align: center;
-  color: white;
-  border: 7px solid #e9ecef;
-  border-radius: 100%;
-  background-color: #ffde59;
-}
-.timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
-  font-size: 10px;
-  line-height: 14px;
-  margin-top: 12px;
-}
-.timeline > li.timeline-inverted > .timeline-panel {
-  float: right;
-  padding: 0 20px 0 100px;
-  text-align: left;
-}
-.timeline > li.timeline-inverted > .timeline-panel:before {
-  right: auto;
-  left: -15px;
-  border-right-width: 15px;
-  border-left-width: 0;
-}
-.timeline > li.timeline-inverted > .timeline-panel:after {
-  right: auto;
-  left: -14px;
-  border-right-width: 14px;
-  border-left-width: 0;
-}
-.timeline > li:last-child {
-  margin-bottom: 0;
-}
-.timeline .timeline-heading h4, .timeline .timeline-heading .h4 {
-  margin-top: 0;
-  color: inherit;
-}
-.timeline .timeline-heading h4.subheading, .timeline .timeline-heading .subheading.h4 {
-  text-transform: none;
-}
-.timeline .timeline-body > ul,
-.timeline .timeline-body > p {
-  margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  .timeline:before {
-    left: 50%;
-  }
-  .timeline > li {
-    min-height: 100px;
-    margin-bottom: 100px;
-  }
-  .timeline > li .timeline-panel {
-    float: left;
-    width: 41%;
-    padding: 0 20px 20px 30px;
-    text-align: right;
-  }
-  .timeline > li .timeline-image {
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    margin-left: -50px;
-  }
-  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
-    font-size: 13px;
-    line-height: 18px;
-    margin-top: 16px;
-  }
-  .timeline > li.timeline-inverted > .timeline-panel {
-    float: right;
-    padding: 0 30px 20px 20px;
-    text-align: left;
-  }
-}
-
-.timeline-image {
-  width: 100px; /* Set the width and height of the circular frame */
-  height: 100px;
-  border-radius: 50%; /* Make it a circle */
-  overflow: hidden; /* Hide any overflowing content */
-  border-color: #d4ad00;
-  box-shadow: 0 0 20px #d4ad00;
-}
-
-.timeline-image img {
-  width: 100%; /* Make the image fill the circular frame */
-  height: 100%;
-  object-fit: cover; /* Ensure the entire image is visible */
-}
-
-
-@media (min-width: 992px) {
-  .timeline > li {
-    min-height: 150px;
-  }
-  .timeline > li .timeline-panel {
-    padding: 0 20px 20px;
-  }
-  .timeline > li .timeline-image {
-    width: 150px;
-    height: 150px;
-    margin-left: -75px;
-  }
-  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
-    font-size: 18px;
-    line-height: 26px;
-    margin-top: 30px;
-  }
-  .timeline > li.timeline-inverted > .timeline-panel {
-    padding: 0 20px 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .timeline > li {
-    min-height: 170px;
-  }
-  .timeline > li .timeline-panel {
-    padding: 0 20px 20px 100px;
-  }
-  .timeline > li .timeline-image {
-    width: 170px;
-    height: 170px;
-    margin-left: -85px;
-  }
-  .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
-    margin-top: 40px;
-  }
-  .timeline > li.timeline-inverted > .timeline-panel {
-    padding: 0 100px 20px 20px;
-  }
-}
 /* feature section */
 #feature {
   background: #ffde59;
+  height: 800px;
+}
+
+@media (max-width: 980px) {
+  #feature  {
+    height: 1000px;
+  }
+
 }
 
 #feature .icon {
@@ -595,214 +416,154 @@ footer {
 
 /*testimonial section*/
 
+figure.snip1157 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 350px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+  padding-right: 50px;
+}
+figure.snip1157 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  
+  -webkit-transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+figure.snip1157 img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: 40px 0 0 10px;
+}
+figure.snip1157 blockquote {
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  padding: 25px 50px 30px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6em;
+  font-style: italic;
+}
+figure.snip1157 blockquote:before,
+figure.snip1157 blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+figure.snip1157 blockquote:before {
+  top: 25px;
+  left: 20px;
+}
+figure.snip1157 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 0;
+}
+figure.snip1157 .arrow {
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #fafafa;
+  margin: 0;
+  position: absolute;
+}
+figure.snip1157 .author {
+  position: absolute;
+  bottom: 45px;
+  padding: 0 10px 0 120px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+}
+figure.snip1157 .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+figure.snip1157 .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 5px;
+}
 
+.review-section {
+  /* Prevent wrapping to the next line */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  height: 1000px;
+  
+}
+.review-section {
+  background-color: rgb(17, 17, 18);
+  color: white; /* Text color for better readability */
+  padding-top: 0;
+  margin-bottom: 0;
+  position: relative;
+}
 
-.carousel .carousel-item {
-	color: #999;
-	overflow: hidden;
-    min-height: 120px;
-	font-size: 13px;
+.review-section .svgcolor-lightt {
+  display: block;
+  margin-top: -1px; /* To prevent a gap between the SVG and the content */
 }
-.carousel .media {
-	position: relative;
-	padding: 0 0 0 20px;
-	margin-left: 20px;
+
+.review-section .testimonials-title {
+ 
+  font-size: 2em;
+  margin: 20px 0;
 }
-.carousel .media img {
-	width: 75px;
-	height: 75px;
-	display: block;
-	border-radius: 50%;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    border: 2px solid #fff;
-}
-.carousel .testimonial {
-    color: #000000;
-    position: relative;    
-    background: #ffde59;
-	padding: 15px;
-	margin: 0 0 20px 20px;
-}
-.carousel .testimonial::before, .carousel .testimonial::after {
-	content: "";
-	display: inline-block;
-	position: absolute;
-	left: 0;
-	bottom: -20px;
-}
-.carousel .testimonial::before {
-    width: 20px;
-    height: 20px;
-	background:#ffde59;
-	box-shadow: inset 12px 0 13px rgba(0,0,0,0.5);
-}
-.carousel .testimonial::after {
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-bottom-color: rgb(17, 17, 18);
-    border-left-color: rgb(17, 17, 18);
+
+.svgcolor-lightt > path {
+  fill: #ffde59;
+  stroke: #ffde59;
+  stroke-width: 0;
 }
 .container-lg
 {
-  background-color: rgb(17, 17, 18);
-
+  margin-bottom: 200px;
 }
-#mycarousel
-{
-  width: 600px;
-}
-.testimonial
-{
-  width: 600px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.carousel .carousel-item .row > div:first-child .testimonial {
-	margin: 0 20px 20px 0;
-}
-.carousel .carousel-item .row > div:first-child .media {
-	margin-left: 0;
-}
-.carousel .testimonial p {
-	text-indent: 40px;
-    line-height: 21px;
-	margin: 0;
-  font-size: 20px;
-  color: #424242;
-}
-.carousel .testimonial p::before {
-	content: "\201D";
-  	font-family: Arial,sans-serif;
-    color: #424242;
-    font-weight: bold;
-    font-size: 68px;
-    line-height: 70px;
-    position: absolute;
-    left: -25px;
-    top: 0;
-}
-.carousel .overview {
-	padding: 3px 0 0 50px;
-}
-.carousel .overview .details {
-	padding: 5px 0 8px;
-}
-.carousel .overview b {
-	text-transform: uppercase;
-	color: #9d9c9c;
-}
-.carousel-control-prev, .carousel-control-next {
-	width: 150px;
-	height: 30px;
-    background: #000000;
-    text-shadow: none;
-    border-radius: 15px;
-	top: 4px;
-}
-.carousel-control-prev i, .carousel-control-next i {
-	font-size: 16px;
-}
-.carousel-control-prev {
-	left: auto;
-	right: 40px;
-  align-self: flex-end;
-}
-.carousel-control-next {
-	left: auto;
-  align-self: flex-end;
-}
-.carousel-indicators {
-	bottom: -80px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 17px;
-    height: 17px;
-	border-radius: 0;
-	margin: 1px 5px;
-  	box-sizing: border-box;
-}
-.carousel-indicators li {	
-    background: rgb(17, 17, 18);
-    border: 4px solid rgb(17, 17, 18);
-}
-.carousel-indicators li.active {
-	color: #ffde59;
-    background-color: #000000;
-    border: 5px double;    
-}
-.star-rating li {
-	padding: 0 2px;
-}
-.star-rating i {
-	font-size: 14px;
-	color: #ffdc12;
-}
-.carousel {
-	margin: 50px auto;
-  height: 500px;
-  width: 500px;
-}
-.col-sm-6
-{
-  height: 500px;
-  width: 1000px;
-}
-/* Set background color to cover full width and height */
-#myCarousel {
-  background-color: rgb(17, 17, 18);
-  width: 150vw;
-  max-width: 100%;
-}
-
-.col-sm-6
-{
-  padding-right: 50px;
-}
-
-.testimonial-container {
-  margin-right: 50px; /* Adjust the value to your preference */
-}
-
-.testimonial {
-  width: 70%;
-  height: 300px; /* Adjust the width as needed */
-  padding: 20px; /* Add some padding around the testimonials */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: inline-block; /* Display testimonials in a row */
-  vertical-align: top; /* Align testimonials to the top */
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-}
-.testimonial-section {
-  background-color: rgb(17, 17, 18);
-  padding: 80px 0;
-  
-}
-/* Add this CSS to your existing stylesheet */
-.reviews {
-  height: 2800px; /* Adjust the height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-/* svg */
-.svgcolor-light2 {
+.svgcolor-lightt {
+  /*position: absolute;
+  top: 0;
+  left: 0; */
   position: relative;
-  bottom: 104px;
+  bottom: 90px;
 }
-
-.svgcolor-light2 > path {
-  fill: #ffde59; /* Change the fill color to #f1c11a */
-  stroke: #ffde59; /* Change the stroke color to #f1c11a if needed */
-  stroke-width: 0;
-}
-
-.testimonial-section
-{
-  height: 1200px;
+@media (max-width: 980px) {
+  .svgcolor-lightt {
+    /*position: absolute;
+    top: 0;
+    left: 0; */
+    position: relative;
+    bottom: 50px;
+  }
+ .review-section .container-lg
+  {
+   margin-left: 175px;
+  }
 }
 
 /* contact section  */
@@ -879,6 +640,8 @@ footer {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 20px;
+ padding-top: 150px;
+ padding-bottom: 100px;
   transition: box-shadow 0.3s, border-color 0.3s;
 }
 
@@ -1187,7 +950,7 @@ footer .social-icon li.discord {
 
 .link-dark{
   position: absolute;
-  bottom: 100px;
+  bottom: 80px;
   right: 40px;
   color: #626262;
   font-size: medium;
