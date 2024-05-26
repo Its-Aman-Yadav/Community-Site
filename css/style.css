@@ -18,7 +18,6 @@ http://www.templatemo.com/tm-490-comila
 @label-height: 20px;
 @input-margin: @gutter / 4;
 
-
 label.logo {
   color: white;
   font-size: 35px;
@@ -66,7 +65,7 @@ h2 {
   font-weight: 700;
 }
 
-.accordion .accordion-item button[aria-expanded='true'] {
+.accordion .accordion-item button[aria-expanded="true"] {
   border-bottom: 3px solid black;
 }
 
@@ -94,7 +93,6 @@ h2 {
   padding: 1em 1.5em 1em 0;
   font-weight: 700;
   font-size: 1.1rem;
-
 }
 
 .accordion button .icon {
@@ -111,7 +109,7 @@ h2 {
 .accordion button .icon::before {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   top: 9px;
   left: 5px;
   width: 10px;
@@ -122,7 +120,7 @@ h2 {
 .accordion button .icon::after {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   top: 5px;
   left: 9px;
   width: 2px;
@@ -130,15 +128,15 @@ h2 {
   background: currentColor;
 }
 
-.accordion button[aria-expanded='true'] {
+.accordion button[aria-expanded="true"] {
   color: black;
 }
 
-.accordion button[aria-expanded='true'] .icon::after {
+.accordion button[aria-expanded="true"] .icon::after {
   width: 0;
 }
 
-.accordion button[aria-expanded='true']+.accordion-content {
+.accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
   max-height: 9em;
   transition: all 200ms linear;
@@ -261,13 +259,15 @@ a:hover .fab {
   color: whitesmoke;
 }
 
-.footer_links li {
+.footer_links {
   line-height: 28px;
   color: whitesmoke;
   font-size: 17px;
 }
 
-.footer_links li a {
+.footer_links a {
+  text-decoration: none;
+  font-size: 17px;
   color: var(--heading-color);
 }
 
@@ -367,29 +367,23 @@ a:hover .fab {
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Forum&family=Josefin+Sans:ital,wght@0,500;1,500&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 body {
-
   background: #ffffff;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
-  cursor: url('/CURSOR1.png'), auto;
-
-
+  cursor: url("/CURSOR1.png"), auto;
 }
 
 html,
 body {
   width: 100%;
   overflow-x: hidden;
-
 }
 
 html {
   font-size: 100%;
-
 }
 
 h1,
@@ -448,11 +442,7 @@ strong {
   justify-content: center; */
 }
 
-
-
-
-#services>.container {
-
+#services > .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -468,7 +458,6 @@ strong {
   -o-transform: scale(1.2) translateY(20px);
   background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
 }
-
 
 .card-heading {
   padding-bottom: 5px;
@@ -492,7 +481,6 @@ strong {
 
 .col-md-4 {
   transition: all 0.3s ease;
-
 }
 
 .pic-col {
@@ -519,7 +507,6 @@ footer {
 
 .section-title {
   padding-bottom: 30px;
-
 }
 
 .section-title h1 {
@@ -704,7 +691,6 @@ div.card {
 }
 
 @-webkit-keyframes sk-circleBounceDelay {
-
   0%,
   80%,
   100% {
@@ -719,7 +705,6 @@ div.card {
 }
 
 @keyframes sk-circleBounceDelay {
-
   0%,
   80%,
   100% {
@@ -809,7 +794,7 @@ div.card {
   .navbar .logo img {
     display: none;
   }
-  
+
   .navbar .checkbut {
     display: block;
     font-size: 30px;
@@ -825,7 +810,7 @@ div.card {
     top: 80px;
     left: -100%;
     text-align: center;
-    transition: all .5s;
+    transition: all 0.5s;
     z-index: 2;
   }
 
@@ -839,7 +824,8 @@ div.card {
     font-size: 20px;
   }
 
-  .navbar ul li a:hover, .navbar ul li a.active {
+  .navbar ul li a:hover,
+  .navbar ul li a.active {
     background: none;
     color: #0082e6;
   }
@@ -848,8 +834,6 @@ div.card {
     left: 0;
   }
 }
-
-
 
 /* home section */
 .home {
@@ -953,9 +937,9 @@ div.card {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   box-sizing: border-box;
-  box-shadow: 3px 6px 0px 0px rgba(0,0,0,0.74);
--webkit-box-shadow: 3px 6px 0px 0px rgba(0,0,0,0.74);
--moz-box-shadow: 3px 6px 0px 0px rgba(0,0,0,0.74);
+  box-shadow: 3px 6px 0px 0px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 3px 6px 0px 0px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 3px 6px 0px 0px rgba(0, 0, 0, 0.74);
 }
 
 #services .btn:hover {
@@ -964,14 +948,12 @@ div.card {
   border-color: transparent;
 }
 
-
 .service-cards {
   transition: all 0.3s ease;
 }
 
 .service-cards:hover {
   transform: translateY(-6px);
-
 }
 
 .heading-hover {
@@ -981,12 +963,9 @@ div.card {
 
 .service-cards:hover .heading-hover {
   color: white;
-
 }
 
-
 /* contact section  */
-
 
 #contact .form-control {
   background: transparent;
@@ -1060,12 +1039,11 @@ footer a:hover {
   bottom: 104px;
 }
 
-.svgcolor-light>path {
+.svgcolor-light > path {
   fill: white;
   stroke: white;
   stroke-width: 0;
 }
-
 
 /* modal
 .modal-dialog .modal-content {
@@ -1198,14 +1176,11 @@ i {
   align-items: center;
   justify-content: left;
   padding: 50px 0px 0 0px;
-
-
 }
 
 h3 {
   font-size: 30px;
   font-weight: bold;
-
 }
 
 .card1 {
@@ -1216,7 +1191,6 @@ h3 {
   transition: all 0.4s ease-in-out;
   margin: 0 10px 0 10px;
   height: 100%;
-
 }
 
 .col-md-4 {
@@ -1224,8 +1198,6 @@ h3 {
   align-items: center;
   justify-content: left;
   margin-top: 7%;
-
-
 }
 
 .pic-col {
@@ -1235,13 +1207,10 @@ h3 {
 .img-fluid {
   border-radius: 50%;
   border: 5px solid rgb(23, 23, 23);
-
-
 }
 
 .card1:hover {
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.629);
-
 }
 
 #experience .card-text {
@@ -1393,7 +1362,6 @@ h3 {
   color: black;
 }
 
-
 .popup {
   position: absolute;
   display: block;
@@ -1408,12 +1376,10 @@ h3 {
   padding: 30px 40px;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px gray;
-  transform: translate(-50%, -50%)scale(1.25);
+  transform: translate(-50%, -50%) scale(1.25);
   width: 380px;
-  transition: top 0ms ease-in-out 200ms,
-    opacity 200ms ease-in-out 0ms,
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
     transform 200ms ease-in-out 0ms;
-
 }
 
 .popup-active {
@@ -1421,18 +1387,16 @@ h3 {
   right: 0px;
   left: auto;
   opacity: 1;
-  transform: translate(-50%, -50%)scale(1);
-  transition: top 0ms ease-in-out 200ms,
-    opacity 200ms ease-in-out 0ms,
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms,
     transform 200ms ease-in-out 0ms;
-
 }
 
 .col-md-4 {
   transition: all 0.3s ease;
 }
 
-.col-md-4>.testimonial-box {
+.col-md-4 > .testimonial-box {
   transition: all 0.3s ease;
 }
 
@@ -1440,9 +1404,8 @@ h3 {
   transform: scale(1.02);
 }
 
-.col-md-4>.testimonial-box:hover {
+.col-md-4 > .testimonial-box:hover {
   box-shadow: 3px 3px 6px #5d5757;
-
 }
 
 .popup .close-btn {
@@ -1463,7 +1426,6 @@ h3 {
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 1px 1px #f1c11a;
-
 }
 
 .popup .form p {
@@ -1472,7 +1434,6 @@ h3 {
 
 .popup .form .form-element {
   margin: 15px;
-
 }
 
 .popup .form .form-element label {
@@ -1480,7 +1441,6 @@ h3 {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   color: #6d6d6d;
-
 }
 
 .popup .form .form-element input[type="text"] {
@@ -1598,7 +1558,7 @@ h3 {
   visibility: hidden;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   .subscribe__input {
     padding: 0 50px 0 20px;
   }
@@ -1622,7 +1582,7 @@ h3 {
   transition: all 0.3s ease 0s;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   .subscribe__btn {
     right: 0px;
   }
