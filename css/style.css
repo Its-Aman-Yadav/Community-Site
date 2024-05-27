@@ -1114,7 +1114,8 @@ footer a:hover {
 } */
 
 /* Back top */
-.go-top {
+/* Feature no longer in use as it gets in background of the chatbot button */
+/* .go-top {
   background-color: #eee;
   bottom: 2em;
   right: 2em;
@@ -1128,7 +1129,7 @@ footer a:hover {
   line-height: 50px;
   text-align: center;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 .go-top:hover {
   background: #f1c11a;
