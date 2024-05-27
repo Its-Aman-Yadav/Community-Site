@@ -228,24 +228,41 @@
 
 
    <!-- Navbar -->
-<div class="navbar">
-  <nav>
+<div class="navbar" id="navbar">
+  
     <label for="check" class="checkbut">
       <i class="fas fa-bars"></i>
     </label>
-    <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
-      <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+    <label class="logo" style="margin-left:7px;"><img src="images/fav.png" alt="logo">
+      <span class="logo-text" style="margin-left: 5px;"> Open Source Village</span>
   </label>
     <ul>
-      <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-      <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-      <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-      <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-      <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-      <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+      <li><i class="fa-solid fa-house" ></i><a class="active" href="#home">Home</a></li>
+      <li><i class="fa-solid fa-circle-info"></i><a href="#about">About</a></li>
+      <li><i class="fa-solid fa-list"></i><a href="#services">Services</a></li>
+      <li><i class="fa-solid fa-user"></i><a href="#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-at"></i><a href="#contact">Contact Us</a></li>
+      <li><i class="fa-solid fa-message"></i><a href="#feedback">Feedback</a></li>
     </ul>
-  </nav>
+ 
 </div>
+<script>
+  let scrollpos = window.scrollY
+  const header = document.querySelector(".navbar")
+  const header_height = header.offsetHeight
+
+  const add_class_on_scroll = () => header.classList.add("sticky")
+  const remove_class_on_scroll = () => header.classList.remove("sticky")
+
+  window.addEventListener('scroll', function() { 
+    scrollpos = window.scrollY;
+
+    if (scrollpos > 0) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+
+    console.log(scrollpos)
+  })
+</script>
 
 
   <!-- Home Section -->
