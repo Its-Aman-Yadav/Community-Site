@@ -57,6 +57,10 @@ h2 {
   color: #0a0a0a;
   font-size: 1.2rem;
 }
+h6 {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
 
 .accordion .accordion-item {
   border-bottom: 2px solid black;
@@ -493,13 +497,15 @@ strong {
 
 #about,
 #services,
-#contact {
+#contact,
+#feedback {
   background: #ffffff;
 }
 
 #about,
 #services,
 #contact,
+#feedback,
 footer {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -1599,4 +1605,29 @@ button {
   background-color: transparent;
   -webkit-border-radius: 0;
   border-radius: 0;
+}
+
+.rating {
+  justify-content: center;
+  display: flex;
+  flex-direction: row-reverse; /* Visually order the stars in reverse */
+}
+
+.rating input {
+  display: none; /* Hide radio buttons */
+}
+
+.rating label {
+  font-size: 2em;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.rating input:checked ~ label {
+  color: #ffca08; /* Highlight selected star and all previous stars */
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffca08; /* Highlight hovered star and all previous stars */
 }

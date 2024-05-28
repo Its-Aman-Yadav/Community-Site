@@ -45,9 +45,23 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
     }
+    .formcontainer2 {
+      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: #1b1b1b;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
 
     .get {
       color: black;
+    }
+    .get2 {
+      color: rgb(255, 254, 254);
+    }
+    .getn {
+      color: rgb(255, 254, 254);
     }
 
     .section-title {
@@ -702,7 +716,50 @@
       }
     </script>
   </div>
+  <hr>
+ <!-- Feedback Section -->
+ <section id="feedback">
+  <div class="formcontainer2">
+    <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
+      
+      <h1 class="get2">Feedback</h1>
+      <h6 class="getn" >We value your feedback. Please let us know your thoughts and suggestions. </h6>
 
+    </div>
+    <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+      <form id="feedback-form" action="http://127.0.0.1:5500/send-feedback" method="POST"
+        onsubmit="sendFeedback(); reset(); return false;">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 rad">
+            <input name="name" id="feedback-name" type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 col-sm-6 rad">
+            <input name="email" type="email" id="feedback-email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="col-12 msg rad">
+            <textarea name="feedback" class="form-control" id="feedback-msg" placeholder="Your Feedback" rows="6"
+              required></textarea>
+          </div>
+          <div class="col-12 rating rad">
+    <input type="radio" id="star5" name="rating" value="5">
+    <label for="star5"><i class="fas fa-star"></i></label>
+    <input type="radio" id="star4" name="rating" value="4">
+    <label for="star4"><i class="fas fa-star"></i></label>
+    <input type="radio" id="star3" name="rating" value="3">
+    <label for="star3"><i class="fas fa-star"></i></label>
+    <input type="radio" id="star2" name="rating" value="2">
+    <label for="star2"><i class="fas fa-star"></i></label>
+    <input type="radio" id="star1" name="rating" value="1">
+    <label for="star1"><i class="fas fa-star"></i></label>
+</div>
+<div class="flex justify-center col-md-offset-0">
+            <button class="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
   <!-- footer section -->
   <!-- <footer>
   <div class="container">
@@ -826,6 +883,9 @@
         message => alert("Message sent successsfully")
       );
     }
+    function sendFeedback() {
+        alert('Feedback submitted successfully!');
+      }
   </script>
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
