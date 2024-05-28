@@ -4,6 +4,25 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
+// subscribe-email-validation
+document.querySelector('.subscribe__btn').addEventListener('click', function(event) {
+    validateEmail();
+});
+
+function validateEmail() {
+    const emailInput = document.querySelector('.subscribe__input');
+    const emailError = document.getElementById('subscribe_email_error');
+    const emailValue = emailInput.value;
+
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
+
+    if (emailRegex.test(emailValue)) {
+        emailError.style.display = 'none';   
+    } else {
+        emailError.style.display = 'inline';
+    }
+}
+
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -45,4 +64,3 @@ const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-
