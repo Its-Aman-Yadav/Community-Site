@@ -204,6 +204,32 @@
       /* Hide preloader by default */
       /* Add preloader styles here if needed */
     }
+    /* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 120px;
+    right: 45px;
+    display: none; /* Hidden by default */
+    background-color: #3a63e4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    line-height: 10px;
+}
+
+.back-to-top:hover {
+    background-color: #484848;
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
   </style>
 </head>
 
@@ -862,10 +888,34 @@
     </div>
   </footer>
 
+  <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+
 
 
   <!-- javscript js -->
+<script>
+  // Get the button
+let backToTopBtn = document.getElementById("backToTopBtn");
 
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
   <script>
     function sendEmail() {
       Email.send({
