@@ -1539,8 +1539,13 @@ h3 {
   margin: 0;
   padding: 0 50px 0 20px;
   text-align: center;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   width: 300px;
+}
+
+#subscribe_email_error {
+  color: red;
+  display: none; 
 }
 
 .subscribe__input:focus::-webkit-input-placeholder {
