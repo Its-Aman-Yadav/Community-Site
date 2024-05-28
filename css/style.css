@@ -773,23 +773,25 @@ div.card {
 }
 
 .navbar ul li {
+  cursor: pointer;
   display: inline-block;
   margin: 0 5px;
+  padding: 10px 20px;
 }
 
 .navbar ul li a {
   color: #fcfafa;
   font-size: 15px;
-  padding: 10px 20px;
+  margin-left: 10px;
   border-radius: 3px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.navbar ul li a:hover {
+.navbar ul li:hover {
   color: #fcf6f6;
   background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
-  transform: scale(1.2) translateY(10px);
+  /* transform: scale(1.2) translateY(10px); */
 }
 
 .navbar .checkbut {
