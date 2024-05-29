@@ -1638,3 +1638,85 @@ button {
 .rating label:hover ~ label {
   color: #ffca08; /* Highlight hovered star and all previous stars */
 }
+.feed {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.head{
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+}
+input[type="text"], input[type="email"], textarea{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="text"]:focus{
+  outline: none;
+  border-color: rgba(255, 201, 8, 0.5);
+  box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
+}
+input[type="email"]:focus{
+  outline: none;
+  border-color: rgba(255, 201, 8, 0.5);
+  box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
+}
+textarea:focus{
+  outline: none;
+  border-color: rgba(255, 201, 8, 0.5);
+  box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
+}
+.feedback-label {
+  font-weight: bold;
+}
+.feedback-description {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.feedback-smileys {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+.message{
+  padding: 10px;
+}
+.smiley-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  outline: none;
+}
+.smiley-btn:focus {
+  outline: none;
+}
+.smiley-btn.active {
+  box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
+}
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+}
+.submit-btn:hover {
+  background-color: #45a049;
+}

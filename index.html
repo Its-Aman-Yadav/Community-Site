@@ -296,7 +296,7 @@
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
         <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feed-back">Feedback</a></li>
       </ul>
     </nav>
   </div>
@@ -744,47 +744,32 @@
   </div>
   <hr>
  <!-- Feedback Section -->
- <section id="feedback">
-  <div class="formcontainer2">
-    <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-      
-      <h1 class="get2">Feedback</h1>
-      <h6 class="getn" >We value your feedback. Please let us know your thoughts and suggestions. </h6>
-
+ <section id="feed-back">
+ <div class="feed">
+  <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
+  <h2 class="head">Feedback Form</h2>
+  <p class="feedback-description">We appreciate your feedback! Please provide the following information:</p></div>
+  <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+  <form id="feedbackForm">
+      <label for="name" class="feedback-label">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
+      <label for="email" class="feedback-label">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
+      <label for="description" class="feedback-label">Description:</label>
+      <textarea class="message" id="description" name="description" placeholder="Your Feedback" required></textarea>
+      <p class="feedback-label">How satisfied are you with our service?</p><br>
+      <div class="feedback-smileys">
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😊')">😊</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😄')">😄</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😐')">😐</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😞')">😞</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😢')">😢</button>
     </div>
-    <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-      <form id="feedback-form" action="http://127.0.0.1:5500/send-feedback" method="POST"
-        onsubmit="sendFeedback(); reset(); return false;">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 rad">
-            <input name="name" id="feedback-name" type="text" class="form-control" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6 col-sm-6 rad">
-            <input name="email" type="email" id="feedback-email" class="form-control" placeholder="Your Email" required>
-          </div>
-          <div class="col-12 msg rad">
-            <textarea name="feedback" class="form-control" id="feedback-msg" placeholder="Your Feedback" rows="6"
-              required></textarea>
-          </div>
-          <div class="col-12 rating rad">
-    <input type="radio" id="star5" name="rating" value="5">
-    <label for="star5"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star4" name="rating" value="4">
-    <label for="star4"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star3" name="rating" value="3">
-    <label for="star3"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star2" name="rating" value="2">
-    <label for="star2"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star1" name="rating" value="1">
-    <label for="star1"><i class="fas fa-star"></i></label>
-</div>
-<div class="flex justify-center col-md-offset-0">
-            <button class="submit">Submit</button>
-          </div>
-        </div>
-      </form>
-    </div>
+    <input type="hidden" id="selectedSmiley" name="selectedSmiley">
+      <button type="submit" class="submit-btn">Submit</button>
+  </form>
   </div>
+</div>
 </section>
   <!-- footer section -->
   <!-- <footer>
@@ -933,9 +918,23 @@ backToTopBtn.addEventListener("click", function(event) {
         message => alert("Message sent successsfully")
       );
     }
-    function sendFeedback() {
-        alert('Feedback submitted successfully!');
-      }
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      if (!document.querySelector('.smiley-btn.active')) {
+        event.preventDefault();
+        alert("Please select a smiley before submitting.");
+        return;
+    }
+            event.preventDefault();
+            alert('Thank you for your feedback!');
+        });
+      function selectSmiley(smiley) {
+        document.getElementById('selectedSmiley').value = smiley;
+        var smileyBtns = document.querySelectorAll('.smiley-btn');
+        smileyBtns.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
   </script>
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
