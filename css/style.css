@@ -976,7 +976,7 @@ div.card {
 /* contact section  */
 
 #contact .form-control {
-  background: transparent;
+  background: #ffffff ;
   border: 2px solid #e0e0e0;
   border-radius: 0px;
   box-shadow: none;
@@ -1005,6 +1005,12 @@ div.card {
   margin-top: 10px;
 
   border-radius: 10px;
+}
+
+.submit{
+  font-size: 100 px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 #contact input[type="submit"]:hover {
