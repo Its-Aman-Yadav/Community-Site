@@ -77,8 +77,8 @@
 .contact-form {
   background: #fffbe6;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 25px black;
 }
 
 .contact-form .row {
@@ -98,6 +98,7 @@
   border-radius: 4px;
   font-size: 16px;
   background: #fffaf0;
+  color: white;
 }
 
 .contact-form .form-control:focus {
@@ -106,17 +107,26 @@
 }
 
 .contact-form .submit {
-  background: #ffcc00;
-  color: #333;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
+  background: #ee4040;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 220px;
 }
 
 .contact-form .submit:hover {
   background: #e6b800;
+}
+
+.contact-form input::placeholder{
+  color: white;
+}
+
+.contact-form textarea::placeholder{
+  color: white;
 }
 
 
@@ -254,9 +264,6 @@
   <!-- Navbar -->
   <div class="navbar">
     <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
-        <i class="fas fa-bars"></i>
       </label>
       <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
@@ -677,10 +684,10 @@
       <section id="contact">
         <div class="formcontainer">
           <div class="section-title">
-            <h1 class="get">Get in Touch</h1>
+            <h1 class="get font-bold">Get in Touch</h1>
             <p>If you have any query or for collaboration</p>
           </div>
-          <div class="contact-form">
+          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
             <form
               id="contact-form"
               action="http://127.0.0.1:5500/send-email"
@@ -689,31 +696,34 @@
             >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
+                  <label for="name">Name</label>
                   <input
                     name="name"
                     id="name"
                     type="text"
                     class="form-control"
-                    placeholder="Your Name"
+                    placeholder="Enter Your Name"
                     required
                   />
                 </div>
                 <div class="col-md-6 col-sm-6 rad">
+                  <label for="email">Email</label>
                   <input
                     name="email"
                     type="email"
                     id="email"
                     class="form-control"
-                    placeholder="Your Email"
+                    placeholder="Enter Your Email"
                     required
                   />
                 </div>
-                <div class="col-12 msg rad">
+                <div class="col-md-8 msg rad ">
+                  <label for="message">Message</label>
                   <textarea
                     name="message"
                     class="form-control"
                     id="msg"
-                    placeholder="Message"
+                    placeholder="Enter Your Query Or Message"
                     rows="6"
                     required
                   ></textarea>
