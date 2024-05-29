@@ -35,7 +35,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <style>
     @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
-    
 
     body {
   font-family: Arial, sans-serif;
@@ -43,6 +42,34 @@
   padding: 0;
   background-color: #f4f4f4;
 }
+
+
+    .formcontainer {
+      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: #f5cb36;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .formcontainer2 {
+      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      background: #1b1b1b;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .get {
+      color: black;
+    }
+    .get2 {
+      color: rgb(255, 254, 254);
+    }
+    .getn {
+      color: rgb(255, 254, 254);
+    }
 
 
 /* Contact Us Style  */
@@ -211,6 +238,32 @@
       /* Hide preloader by default */
       /* Add preloader styles here if needed */
     }
+    /* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 120px;
+    right: 45px;
+    display: none; /* Hidden by default */
+    background-color: #3a63e4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    line-height: 10px;
+}
+
+.back-to-top:hover {
+    background-color: #484848;
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
   </style>
 </head>
 
@@ -264,8 +317,15 @@
   <!-- Navbar -->
   <div class="navbar">
     <nav>
+
       </label>
       <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
+
+      <!-- <input type="checkbox" id="check">
+      <label for="check" class="checkbut">
+        <i class="fas fa-bars"></i>
+      </label> -->
+      <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
       </label>
       <ul class="flex flex-col md:flex-row">
@@ -274,7 +334,7 @@
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
         <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feed-back">Feedback</a></li>
       </ul>
     </nav>
   </div>
@@ -455,7 +515,7 @@
       </div>
     </div>
   </section>
-  
+
 
   <section class="faqq">
 
@@ -538,6 +598,7 @@
     </div>
 
   </section>
+  <!--
   <section id="experience">
     <div class="container">
 
@@ -668,14 +729,15 @@
           </div>
         </div>
 
-       
-   
+
+
 
 
 
       </div>
     </div>
   </section>
+-->
 
   <!-- contact section -->
 
@@ -744,17 +806,45 @@
       }
     </script>
   </div>
-
+  <hr>
+ <!-- Feedback Section -->
+ <section id="feed-back">
+ <div class="feed">
+  <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
+  <h2 class="head">Feedback Form</h2>
+  <p class="feedback-description">We appreciate your feedback! Please provide the following information:</p></div>
+  <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+  <form id="feedbackForm">
+      <label for="name" class="feedback-label">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
+      <label for="email" class="feedback-label">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
+      <label for="description" class="feedback-label">Description:</label>
+      <textarea class="message" id="description" name="description" placeholder="Your Feedback" required></textarea>
+      <p class="feedback-label">How satisfied are you with our service?</p><br>
+      <div class="feedback-smileys">
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😊')">😊</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😄')">😄</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😐')">😐</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😞')">😞</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😢')">😢</button>
+    </div>
+    <input type="hidden" id="selectedSmiley" name="selectedSmiley">
+      <button type="submit" class="submit-btn">Submit</button>
+  </form>
+  </div>
+</div>
+</section>
   <!-- footer section -->
   <!-- <footer>
   <div class="container">
     <div class="row">
-      
+
       <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
       version="1.1" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0 L50 100 L100 0 Z"></path>
     </svg>
-    
+
     <div class="col-md-4 col-sm-6">
       <h2>Open Source Village</h2>
       <div class="wow fadeInUp" data-wow-delay="0.3s">
@@ -763,14 +853,14 @@
           Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
   <!-- </div>
           </div>
-          
-          
+
+
           <ul class="social-icon">
             <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
             <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
           </ul>
         </div>
-        
+
       </div>
     </div>
   </footer> -->
@@ -791,7 +881,7 @@
               <h4>Join the Community now and become a Villager</h4>
               <div class="signup_form">
                 <form action="#" class="subscribe">
-                  <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                  <input type="email" class="subscribe__input" autocapitalize="off" autocorrect="off" placeholder="Enter Email Address"><span id="subscribe_email_error" class="subscribe-error">Invalid email address.</span>
                   <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
                 </form>
               </div>
@@ -804,13 +894,13 @@
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
           <ul class="footer_links">
-            <a>
+            <a href="our program.html">
               <li>Our Program</li>
             </a>
-            <a>
+            <a href="our plan.html">
               <li>Our Plan</li>
             </a>
-            <a>
+            <a href="member.html">
               <li>Become A Member</li>
             </a>
           </ul>
@@ -819,10 +909,10 @@
           <h4 class="footer_title">Quick Links</h4>
           <ul class="footer_links">
 
-            <a>
+            <a href="#about">
               <li>About Us</li>
             </a>
-            <a>
+            <a href="#contact">
               <li>Contact Us</li>
             </a>
             <a>
@@ -847,10 +937,34 @@
     </div>
   </footer>
 
+  <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+
 
 
   <!-- javscript js -->
+<script>
+  // Get the button
+let backToTopBtn = document.getElementById("backToTopBtn");
 
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
   <script>
     function sendEmail() {
       Email.send({
@@ -867,6 +981,23 @@
       }).then(
         message => alert("Message sent successsfully")
       );
+    }
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      if (!document.querySelector('.smiley-btn.active')) {
+        event.preventDefault();
+        alert("Please select a smiley before submitting.");
+        return;
+    }
+            event.preventDefault();
+            alert('Thank you for your feedback!');
+        });
+      function selectSmiley(smiley) {
+        document.getElementById('selectedSmiley').value = smiley;
+        var smileyBtns = document.querySelectorAll('.smiley-btn');
+        smileyBtns.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
     }
   </script>
 
