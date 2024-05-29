@@ -377,7 +377,7 @@ body {
   background: #ffffff;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
-  cursor: url("/CURSOR1.png"), auto;
+  cursor: url("/cursor.png"), auto;
 }
 
 html,
