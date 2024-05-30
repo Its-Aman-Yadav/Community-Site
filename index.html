@@ -36,23 +36,21 @@
   <style>
     @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-    .formcontainer {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #f5cb36;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-    .formcontainer2 {
+    /* .formcontainer2 {
       padding: 20px;
       max-width: 800px;
       margin: 40px auto;
       background: #1b1b1b;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
-    }
+    } */
 
     .get {
       color: black;
@@ -73,64 +71,94 @@
       opacity: 1;
       transform: translateY(0);
     }
+ 
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
 
-    .section-title h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
 
-    .section-title p {
-      font-size: 1.2em;
-      color: #666;
-    }
+/* Contact Us Style  */
 
-    .contact-form {
-      padding: 20px;
-      /* background: #f9f9f9; */
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+#contact {
+  padding: 50px 0;
+  background: #fff;
+}
 
-    .contact-form .form-control {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
+.formcontainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 20px;
+}
 
-    .msg {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      /* border: 1px solid #ccc; */
-      border-radius: 4px;
-      font-size: 16px;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .contact-form .submit {
+.section-title .get {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
 
-      padding: 12px 20px;
-      width: 200px;
-      background: #ffffff;
-      color: black;
-      border: 5px;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+.section-title p {
+  font-size: 16px;
+  color: #555;
+}
 
-    .contact-form .submit:hover {
-      background-color: #ffffffea;
-      transform: translateY(-2px);
-    }
+.contact-form {
+  background: #fffbe6;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px black;
+}
+
+.contact-form .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-form .rad {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#contact-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #000000;
+  color: rgb(0, 0, 0);
+}
+
+.contact-form .form-control:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+.contact-form .submit {
+  background: #ee4040;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 220px;
+}
+
+.contact-form .submit:hover {
+  background: #e6b800;
+}
+
+.contact-form input::placeholder{
+  color: white;
+}
+
+.contact-form textarea::placeholder{
+  color: white;
+}
+
 
     body,
     html {
@@ -141,6 +169,13 @@
       scroll-behavior: smooth;
     }
 
+
+/* Navbar Style */
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
 
     .logo {
       margin-right: auto;
@@ -294,6 +329,7 @@
   <!-- Navbar -->
   <div class="navbar">
     <nav>
+
       <!-- <input type="checkbox" id="check">
       <label for="check" class="checkbut">
         <i class="fas fa-bars"></i>
@@ -718,29 +754,53 @@
     <main>
       <section id="contact">
         <div class="formcontainer">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-            <h1 class="get">Get in Touch</h1>
+          <div class="section-title">
+            <h1 class="get font-bold">Get in Touch</h1>
             <p>If you have any query or for collaboration</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"
-              onsubmit="sendEmail(); reset(); return false;">
+          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
+            <form
+              id="contact-form"
+              action="http://127.0.0.1:5500/send-email"
+              method="POST"
+              onsubmit="sendEmail(); reset(); return false;"
+            >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
-                  <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+                  <label for="name">Name</label>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    required
+                  />
                 </div>
                 <div class="col-md-6 col-sm-6 rad">
-                  <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
+                  <label for="email">Email</label>
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    required
+                  />
                 </div>
-                <div class="col-12 msg rad">
-                  <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6"
-                    required></textarea>
+                <div class="col-md-8 msg rad ">
+                  <label for="message">Message</label>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="msg"
+                    placeholder="Enter Your Query Or Message"
+                    rows="6"
+                    required
+                  ></textarea>
                 </div>
-                <!-- <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-              <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
-            </div> -->
-                <div class="flex justify-center col-md-offset-0 ">
-                  <button class="submit ">Submit</button>
+                <div class="flex justify-center col-md-offset-0">
+                  <button class="submit" type="submit">Submit</button>
                 </div>
               </div>
             </form>
