@@ -36,7 +36,6 @@
   <style>
     @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
-
     .formcontainer {
       padding: 20px;
       max-width: 800px;
@@ -45,23 +44,9 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
     }
-    .formcontainer2 {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #1b1b1b;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
 
     .get {
       color: black;
-    }
-    .get2 {
-      color: rgb(255, 254, 254);
-    }
-    .getn {
-      color: rgb(255, 254, 254);
     }
 
     .section-title {
@@ -252,31 +237,48 @@
     </div>
   </section>
 
+  <!-- Responsive Nav Bar -->
 
-
-  <!-- Navbar -->
-  <div class="navbar">
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
-        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
-      </label>
-      <ul class="flex flex-col md:flex-row">
-        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
-      </ul>
-    </nav>
-  </div>
+    </label>
+    <label class="logo">
+      <div class="logo-container">
+        <div class="logos-container">
+          <img style="height: 50px; width: 50px; border-radius: 40px; top: 50px; display: flex; padding: 5px;" src="images/fav.png" alt="logo">
+        </div>
+        <span class="logo-text">Open Source Village</span>
+      </div>
+    </label>
+    <ul>
+        <li id="link-a"><i class="fa-solid fa-house" style="filter:invert(1); padding: 5px;"></i><a class="active" href="#home">Home</a></li>
+        <li id="link-a"><i class="fa-solid fa-circle-info" style="filter:invert(1); padding: 5px;"></i><a href="#about">About</a></li>
+        <li id="link-a"><i class="fa-solid fa-list" style="filter:invert(1); padding: 5px;"></i><a href="#services">Services</a></li>
+        <li id="link-a"><i class="fa-solid fa-user" style="filter:invert(1); padding: 5px;"></i><a href="#testimonials">Reviews</a></li>
+        <li id="link-a"><i class="fa-solid fa-at" style="filter:invert(1); padding: 5px;"></i><a href="#contact">Contact Us</a></li>
+        <li id="link-a"><i class="fa-solid fa-message" style="filter:invert(1); padding: 5px;"></i><a href="#feedback">Feedback</a></li>
+    </ul>
+</nav>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
 
-
+<script>
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+</script>
   <!-- Home Section -->
   <section class="home" id="home">
     <div class="container">
@@ -451,7 +453,7 @@
       </div>
     </div>
   </section>
-
+  
 
   <section class="faqq">
 
@@ -538,8 +540,6 @@
     <div class="container">
 
       <div class="row" style="display: flex;align-items: center;justify-content: space-between;flex-direction: row;">
-
-
         <div class="card1 mb-3" style="max-width: 540px;">
           <div class="row g-0" style="height: 100%;">
             <div class="col-md-8 pic-col">
@@ -663,12 +663,6 @@
             </div>
           </div>
         </div>
-
-
-
-
-
-
       </div>
     </div>
   </section>
@@ -716,60 +710,17 @@
       }
     </script>
   </div>
-  <hr>
- <!-- Feedback Section -->
- <section id="feedback">
-  <div class="formcontainer2">
-    <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-      
-      <h1 class="get2">Feedback</h1>
-      <h6 class="getn" >We value your feedback. Please let us know your thoughts and suggestions. </h6>
 
-    </div>
-    <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-      <form id="feedback-form" action="http://127.0.0.1:5500/send-feedback" method="POST"
-        onsubmit="sendFeedback(); reset(); return false;">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 rad">
-            <input name="name" id="feedback-name" type="text" class="form-control" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6 col-sm-6 rad">
-            <input name="email" type="email" id="feedback-email" class="form-control" placeholder="Your Email" required>
-          </div>
-          <div class="col-12 msg rad">
-            <textarea name="feedback" class="form-control" id="feedback-msg" placeholder="Your Feedback" rows="6"
-              required></textarea>
-          </div>
-          <div class="col-12 rating rad">
-    <input type="radio" id="star5" name="rating" value="5">
-    <label for="star5"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star4" name="rating" value="4">
-    <label for="star4"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star3" name="rating" value="3">
-    <label for="star3"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star2" name="rating" value="2">
-    <label for="star2"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star1" name="rating" value="1">
-    <label for="star1"><i class="fas fa-star"></i></label>
-</div>
-<div class="flex justify-center col-md-offset-0">
-            <button class="submit">Submit</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
   <!-- footer section -->
   <!-- <footer>
   <div class="container">
     <div class="row">
-
+      
       <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
       version="1.1" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0 L50 100 L100 0 Z"></path>
     </svg>
-
+    
     <div class="col-md-4 col-sm-6">
       <h2>Open Source Village</h2>
       <div class="wow fadeInUp" data-wow-delay="0.3s">
@@ -778,14 +729,14 @@
           Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
   <!-- </div>
           </div>
-
-
+          
+          
           <ul class="social-icon">
             <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
             <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
           </ul>
         </div>
-
+        
       </div>
     </div>
   </footer> -->
@@ -806,7 +757,7 @@
               <h4>Join the Community now and become a Villager</h4>
               <div class="signup_form">
                 <form action="#" class="subscribe">
-                  <input type="email" class="subscribe__input" autocapitalize="off" autocorrect="off" placeholder="Enter Email Address"><span id="subscribe_email_error" class="subscribe-error">Invalid email address.</span>
+                  <input type="text" class="subscribe__input" placeholder="Enter Email Address">
                   <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
                 </form>
               </div>
@@ -819,13 +770,13 @@
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
           <ul class="footer_links">
-            <a href="our program.html">
+            <a>
               <li>Our Program</li>
             </a>
-            <a href="our plan.html">
+            <a>
               <li>Our Plan</li>
             </a>
-            <a href="member.html">
+            <a>
               <li>Become A Member</li>
             </a>
           </ul>
@@ -834,10 +785,10 @@
           <h4 class="footer_title">Quick Links</h4>
           <ul class="footer_links">
 
-            <a href="#about">
+            <a>
               <li>About Us</li>
             </a>
-            <a href="#contact">
+            <a>
               <li>Contact Us</li>
             </a>
             <a>
@@ -883,9 +834,6 @@
         message => alert("Message sent successsfully")
       );
     }
-    function sendFeedback() {
-        alert('Feedback submitted successfully!');
-      }
   </script>
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
