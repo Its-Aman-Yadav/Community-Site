@@ -36,85 +36,108 @@
   <style>
     @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
-    .formcontainer {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #f5cb36;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
 
-    .get {
-      color: black;
-    }
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
 
-    .section-title h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
 
-    .section-title p {
-      font-size: 1.2em;
-      color: #666;
-    }
+/* Contact Us Style  */
 
-    .contact-form {
-      padding: 20px;
-      /* background: #f9f9f9; */
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+#contact {
+  padding: 50px 0;
+  background: #fff;
+}
 
-    .contact-form .form-control {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
+.formcontainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 20px;
+}
 
-    .msg {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      /* border: 1px solid #ccc; */
-      border-radius: 4px;
-      font-size: 16px;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .contact-form .submit {
+.section-title .get {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
 
-      padding: 12px 20px;
-      width: 200px;
-      background: #ffffff;
-      color: black;
-      border: 5px;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+.section-title p {
+  font-size: 16px;
+  color: #555;
+}
 
-    .contact-form .submit:hover {
-      background-color: #ffffffea;
-      transform: translateY(-2px);
-    }
+.contact-form {
+  background: #fffbe6;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px black;
+}
 
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+.contact-form .row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.contact-form .rad {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#contact-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #000000;
+  color: rgb(0, 0, 0);
+}
+
+.contact-form .form-control:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+.contact-form .submit {
+  background: #ee4040;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 220px;
+}
+
+.contact-form .submit:hover {
+  background: #e6b800;
+}
+
+.contact-form input::placeholder{
+  color: white;
+}
+
+.contact-form textarea::placeholder{
+  color: white;
+}
+
+
+
+/* Navbar Style */
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
 
     .logo {
       margin-right: auto;
@@ -189,6 +212,32 @@
       /* Hide preloader by default */
       /* Add preloader styles here if needed */
     }
+    /* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 120px;
+    right: 45px;
+    display: none; /* Hidden by default */
+    background-color: #3a63e4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    line-height: 10px;
+}
+
+.back-to-top:hover {
+    background-color: #484848;
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
   </style>
 </head>
 
@@ -239,28 +288,6 @@
 
   <!-- Responsive Nav Bar -->
 
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-    </label>
-    <label class="logo">
-      <div class="logo-container">
-        <div class="logos-container">
-          <img style="height: 50px; width: 50px; border-radius: 40px; top: 50px; display: flex; padding: 5px;" src="images/fav.png" alt="logo">
-        </div>
-        <span class="logo-text">Open Source Village</span>
-      </div>
-    </label>
-    <ul>
-        <li id="link-a"><i class="fa-solid fa-house" style="filter:invert(1); padding: 5px;"></i><a class="active" href="#home">Home</a></li>
-        <li id="link-a"><i class="fa-solid fa-circle-info" style="filter:invert(1); padding: 5px;"></i><a href="#about">About</a></li>
-        <li id="link-a"><i class="fa-solid fa-list" style="filter:invert(1); padding: 5px;"></i><a href="#services">Services</a></li>
-        <li id="link-a"><i class="fa-solid fa-user" style="filter:invert(1); padding: 5px;"></i><a href="#testimonials">Reviews</a></li>
-        <li id="link-a"><i class="fa-solid fa-at" style="filter:invert(1); padding: 5px;"></i><a href="#contact">Contact Us</a></li>
-        <li id="link-a"><i class="fa-solid fa-message" style="filter:invert(1); padding: 5px;"></i><a href="#feedback">Feedback</a></li>
-    </ul>
-</nav>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
 
@@ -279,6 +306,30 @@ function topFunction() {
   document.documentElement.scrollTop = 0; 
 }
 </script>
+=======
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+
+      <!-- <input type="checkbox" id="check">
+      <label for="check" class="checkbut">
+        <i class="fas fa-bars"></i>
+      </label> -->
+      <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
+        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+      </label>
+      <ul class="flex flex-col md:flex-row">
+        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feed-back">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <!-- Home Section -->
   <section class="home" id="home">
     <div class="container">
@@ -536,6 +587,7 @@ function topFunction() {
     </div>
 
   </section>
+  <!--
   <section id="experience">
     <div class="container">
 
@@ -666,6 +718,7 @@ function topFunction() {
       </div>
     </div>
   </section>
+-->
 
   <!-- contact section -->
 
@@ -673,29 +726,53 @@ function topFunction() {
     <main>
       <section id="contact">
         <div class="formcontainer">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-            <h1 class="get">Get in Touch</h1>
+          <div class="section-title">
+            <h1 class="get font-bold">Get in Touch</h1>
             <p>If you have any query or for collaboration</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"
-              onsubmit="sendEmail(); reset(); return false;">
+          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
+            <form
+              id="contact-form"
+              action="http://127.0.0.1:5500/send-email"
+              method="POST"
+              onsubmit="sendEmail(); reset(); return false;"
+            >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
-                  <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+                  <label for="name">Name</label>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    required
+                  />
                 </div>
                 <div class="col-md-6 col-sm-6 rad">
-                  <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
+                  <label for="email">Email</label>
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    required
+                  />
                 </div>
-                <div class="col-12 msg rad">
-                  <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6"
-                    required></textarea>
+                <div class="col-md-8 msg rad ">
+                  <label for="message">Message</label>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="msg"
+                    placeholder="Enter Your Query Or Message"
+                    rows="6"
+                    required
+                  ></textarea>
                 </div>
-                <!-- <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-              <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
-            </div> -->
-                <div class="flex justify-center col-md-offset-0 ">
-                  <button class="submit ">Submit</button>
+                <div class="flex justify-center col-md-offset-0">
+                  <button class="submit" type="submit">Submit</button>
                 </div>
               </div>
             </form>
@@ -710,7 +787,6 @@ function topFunction() {
       }
     </script>
   </div>
-
   <!-- footer section -->
   <!-- <footer>
   <div class="container">
@@ -813,10 +889,34 @@ function topFunction() {
     </div>
   </footer>
 
+  <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+
 
 
   <!-- javscript js -->
+<script>
+  // Get the button
+let backToTopBtn = document.getElementById("backToTopBtn");
 
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
   <script>
     function sendEmail() {
       Email.send({
