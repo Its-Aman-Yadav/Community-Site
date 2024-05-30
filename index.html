@@ -36,25 +36,23 @@
   <style>
     @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-    .formcontainer {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #f5cb36;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-    .formcontainer2 {
+    /* .formcontainer2 {
       padding: 20px;
       max-width: 800px;
       margin: 40px auto;
       background: #1b1b1b;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
-    }
+    } */
 
-    .get {
+    /* .get {
       color: black;
     }
     .get2 {
@@ -62,74 +60,101 @@
     }
     .getn {
       color: rgb(255, 254, 254);
-    }
+    } */
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
 
-    .section-title h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
+/* Contact Us Style  */
 
-    .section-title p {
-      font-size: 1.2em;
-      color: #666;
-    }
+#contact {
+  padding: 50px 0;
+  background: #fff;
+}
 
-    .contact-form {
-      padding: 20px;
-      /* background: #f9f9f9; */
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+.formcontainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 20px;
+}
 
-    .contact-form .form-control {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .msg {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      /* border: 1px solid #ccc; */
-      border-radius: 4px;
-      font-size: 16px;
-    }
+.section-title .get {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
 
-    .contact-form .submit {
+.section-title p {
+  font-size: 16px;
+  color: #555;
+}
 
-      padding: 12px 20px;
-      width: 200px;
-      background: #ffffff;
-      color: black;
-      border: 5px;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
+.contact-form {
+  background: #fffbe6;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px black;
+}
 
-    .contact-form .submit:hover {
-      background-color: #ffffffea;
-      transform: translateY(-2px);
-    }
+.contact-form .row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+.contact-form .rad {
+  width: 100%;
+  margin-bottom: 15px;
+}
 
+#contact-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #000000;
+  color: rgb(0, 0, 0);
+}
+
+.contact-form .form-control:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+.contact-form .submit {
+  background: #ee4040;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 220px;
+}
+
+.contact-form .submit:hover {
+  background: #e6b800;
+}
+
+.contact-form input::placeholder{
+  color: white;
+}
+
+.contact-form textarea::placeholder{
+  color: white;
+}
+
+
+
+/* Navbar Style */
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
 
     .logo {
       margin-right: auto;
@@ -204,6 +229,32 @@
       /* Hide preloader by default */
       /* Add preloader styles here if needed */
     }
+    /* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 120px;
+    right: 45px;
+    display: none; /* Hidden by default */
+    background-color: #3a63e4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    line-height: 10px;
+}
+
+.back-to-top:hover {
+    background-color: #484848;
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
   </style>
 </head>
 
@@ -257,11 +308,12 @@
   <!-- Navbar -->
   <div class="navbar">
     <nav>
-      <input type="checkbox" id="check">
+
+      <!-- <input type="checkbox" id="check">
       <label for="check" class="checkbut">
         <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
+      </label> -->
+      <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
       </label>
       <ul class="flex flex-col md:flex-row">
@@ -270,7 +322,7 @@
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
         <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feed-back">Feedback</a></li>
       </ul>
     </nav>
   </div>
@@ -534,6 +586,7 @@
     </div>
 
   </section>
+  <!--
   <section id="experience">
     <div class="container">
 
@@ -672,6 +725,7 @@
       </div>
     </div>
   </section>
+-->
 
   <!-- contact section -->
 
@@ -679,29 +733,53 @@
     <main>
       <section id="contact">
         <div class="formcontainer">
-          <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-            <h1 class="get">Get in Touch</h1>
+          <div class="section-title">
+            <h1 class="get font-bold">Get in Touch</h1>
             <p>If you have any query or for collaboration</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST"
-              onsubmit="sendEmail(); reset(); return false;">
+          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
+            <form
+              id="contact-form"
+              action="http://127.0.0.1:5500/send-email"
+              method="POST"
+              onsubmit="sendEmail(); reset(); return false;"
+            >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
-                  <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+                  <label for="name">Name</label>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    required
+                  />
                 </div>
                 <div class="col-md-6 col-sm-6 rad">
-                  <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
+                  <label for="email">Email</label>
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    required
+                  />
                 </div>
-                <div class="col-12 msg rad">
-                  <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6"
-                    required></textarea>
+                <div class="col-md-8 msg rad ">
+                  <label for="message">Message</label>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="msg"
+                    placeholder="Enter Your Query Or Message"
+                    rows="6"
+                    required
+                  ></textarea>
                 </div>
-                <!-- <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-              <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
-            </div> -->
-                <div class="flex justify-center col-md-offset-0 ">
-                  <button class="submit ">Submit</button>
+                <div class="flex justify-center col-md-offset-0">
+                  <button class="submit" type="submit">Submit</button>
                 </div>
               </div>
             </form>
@@ -718,47 +796,32 @@
   </div>
   <hr>
  <!-- Feedback Section -->
- <section id="feedback">
-  <div class="formcontainer2">
-    <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-      
-      <h1 class="get2">Feedback</h1>
-      <h6 class="getn" >We value your feedback. Please let us know your thoughts and suggestions. </h6>
-
+ <section id="feed-back">
+ <div class="feed">
+  <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
+  <h2 class="head">Feedback Form</h2>
+  <p class="feedback-description">We appreciate your feedback! Please provide the following information:</p></div>
+  <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+  <form id="feedbackForm">
+      <label for="name" class="feedback-label">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
+      <label for="email" class="feedback-label">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
+      <label for="description" class="feedback-label">Description:</label>
+      <textarea class="message" id="description" name="description" placeholder="Your Feedback" required></textarea>
+      <p class="feedback-label">How satisfied are you with our service?</p><br>
+      <div class="feedback-smileys">
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😊')">😊</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😄')">😄</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😐')">😐</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😞')">😞</button>
+        <button type="button" class="smiley-btn" onclick="selectSmiley('😢')">😢</button>
     </div>
-    <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-      <form id="feedback-form" action="http://127.0.0.1:5500/send-feedback" method="POST"
-        onsubmit="sendFeedback(); reset(); return false;">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 rad">
-            <input name="name" id="feedback-name" type="text" class="form-control" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6 col-sm-6 rad">
-            <input name="email" type="email" id="feedback-email" class="form-control" placeholder="Your Email" required>
-          </div>
-          <div class="col-12 msg rad">
-            <textarea name="feedback" class="form-control" id="feedback-msg" placeholder="Your Feedback" rows="6"
-              required></textarea>
-          </div>
-          <div class="col-12 rating rad">
-    <input type="radio" id="star5" name="rating" value="5">
-    <label for="star5"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star4" name="rating" value="4">
-    <label for="star4"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star3" name="rating" value="3">
-    <label for="star3"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star2" name="rating" value="2">
-    <label for="star2"><i class="fas fa-star"></i></label>
-    <input type="radio" id="star1" name="rating" value="1">
-    <label for="star1"><i class="fas fa-star"></i></label>
-</div>
-<div class="flex justify-center col-md-offset-0">
-            <button class="submit">Submit</button>
-          </div>
-        </div>
-      </form>
-    </div>
+    <input type="hidden" id="selectedSmiley" name="selectedSmiley">
+      <button type="submit" class="submit-btn">Submit</button>
+  </form>
   </div>
+</div>
 </section>
   <!-- footer section -->
   <!-- <footer>
@@ -862,10 +925,34 @@
     </div>
   </footer>
 
+  <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+
 
 
   <!-- javscript js -->
+<script>
+  // Get the button
+let backToTopBtn = document.getElementById("backToTopBtn");
 
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
   <script>
     function sendEmail() {
       Email.send({
@@ -883,9 +970,23 @@
         message => alert("Message sent successsfully")
       );
     }
-    function sendFeedback() {
-        alert('Feedback submitted successfully!');
-      }
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      if (!document.querySelector('.smiley-btn.active')) {
+        event.preventDefault();
+        alert("Please select a smiley before submitting.");
+        return;
+    }
+            event.preventDefault();
+            alert('Thank you for your feedback!');
+        });
+      function selectSmiley(smiley) {
+        document.getElementById('selectedSmiley').value = smiley;
+        var smileyBtns = document.querySelectorAll('.smiley-btn');
+        smileyBtns.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
   </script>
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
