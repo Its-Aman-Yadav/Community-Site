@@ -307,25 +307,35 @@
 
   <!-- Navbar -->
   <div class="navbar">
-    <nav>
-
-      <!-- <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
+    <a href="#" class="logo">
+        <img src="images/fav.png" alt="logo">
+        <span>Open Source Village</span>
+    </a>
+    <div class="menu-toggle">
         <i class="fas fa-bars"></i>
-      </label> -->
-      <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
-        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
-      </label>
-      <ul class="flex flex-col md:flex-row">
-        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feed-back">Feedback</a></li>
-      </ul>
-    </nav>
-  </div>
+    </div>
+    <ul>
+        <li><a class="active" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li>
+            <a href="#services"><i class="fa-solid fa-list"></i> Services</a>
+            <ul>
+                <li><a href="#service1">Service 1</a></li>
+                <li><a href="#service2">Service 2</a></li>
+                <li><a href="#service3">Service 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#testimonials"><i class="fa-solid fa-user"></i> Reviews</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-at"></i> Contact Us</a></li>
+        <li><a href="#feed-back"><i class="fa-solid fa-message"></i> Feedback</a></li>
+    </ul>
+</div>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.navbar').classList.toggle('active');
+    });
+</script>
 
 
 
@@ -852,7 +862,7 @@
       </div>
     </div>
   </footer> -->
-  <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
+  <!-- <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
     <div class="container">
       <div class="footer_wrapper">
         <div class="footer_box">
@@ -875,10 +885,10 @@
               </div>
             </div>
 
-          </div><!--- END COL -->
+          </div>- END COL -->
 
 
-        </div>
+        <!-- </div>
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
           <ul class="footer_links">
@@ -923,7 +933,47 @@
         <script>document.write(new Date().getFullYear())</script> Developed by open source. All rights reserved.
       </p>
     </div>
-  </footer>
+  </footer> -->
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2>OPEN SOURCE VILLAGER</h2>
+            <p>Join the Community now and become a Villager</p>
+            <div class="email-subscription">
+                <input type="email" placeholder="Enter Email Address">
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <p class="social_media">
+              <a><i class="fab fa-github"></i></a>
+              <a><i class="fab fa-linkedin"></i></a>
+              <a><i class="fab fa-instagram"></i></a>
+              <a><i class="fab fa-facebook"></i></a>
+              <a><i class="fab fa-twitter"></i></a>
+      
+            </p>
+        </div>
+        <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">Our Program</a></li>
+                <li><a href="#">Our Plan</a></li>
+                <li><a href="#">Become A Member</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright ©  <script>document.write(new Date().getFullYear())</script>  Developed by open source. All rights reserved.</p>
+    </div>
+</footer>
 
   <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
 
