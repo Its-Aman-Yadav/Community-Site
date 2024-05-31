@@ -1072,7 +1072,28 @@ border: 2px solid #797979;
 #contact input {
 height: 55px;
 }
+.icon{
+  position: absolute;
+  top:calc(42%);
+  color:white;
+  left:4.20%;
+  font-size: 30px; 
+}
+.icon1{
+  position: absolute;
+  top:calc(42%);
+  left:4.20%;
+  font-size: 30px; 
+  color:white;
+}
+.icon2{
+  position: absolute;
+  top:calc(21%);
+  left:4.20%;
+  font-size: 30px; 
+  color:white;
 
+}
 #contact input[type="submit"] {
 background: #242424;
 border: none;

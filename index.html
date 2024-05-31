@@ -14,7 +14,7 @@
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="icon" href="fav.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -770,7 +770,7 @@ function topFunction() {
             <h1 class="get font-bold">Get in Touch</h1>
             <p>If you have any query or for collaboration</p>
           </div>
-          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
+          <div class="contact-form bg-gradient-to-r from-orange-400 to-yellow-300">
             <form
               id="contact-form"
               action="http://127.0.0.1:5500/send-email"
@@ -778,36 +778,42 @@ function topFunction() {
               onsubmit="sendEmail(); reset(); return false;"
             >
               <div class="row">
-                <div class="col-md-6 col-sm-6 rad">
-                  <label for="name">Name</label>
+                <div class=" col-md-6 col-sm-6 rad" style="position:relative;">
+                  <label for="name">Name<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon bx bxs-user'></i>
                   <input
                     name="name"
                     id="name"
                     type="text"
                     class="form-control"
                     placeholder="Enter Your Name"
+                    style="padding-left:10%;color:white;border:2px solid white;"
                     required
                   />
                 </div>
-                <div class="col-md-6 col-sm-6 rad">
-                  <label for="email">Email</label>
+                <div class="col-md-6 col-sm-6 rad" style="position:relative;">
+                  <label for="email">Email<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon1 bx bxl-gmail'></i>
                   <input
                     name="email"
                     type="email"
                     id="email"
                     class="form-control"
                     placeholder="Enter Your Email"
+                    style="padding-left:10%;color:white;border:2px solid white;"
                     required
                   />
                 </div>
-                <div class="col-md-8 msg rad ">
-                  <label for="message">Message</label>
+                <div class="col-md-8 msg rad " style="position:relative;">
+                  <label for="message">Message<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon2 bx bx-message'></i>
                   <textarea
                     name="message"
                     class="form-control"
                     id="msg"
                     placeholder="Enter Your Query Or Message"
                     rows="6"
+                    style="padding-left:10%;color:white;border:2px solid white;"
                     required
                   ></textarea>
                 </div>
