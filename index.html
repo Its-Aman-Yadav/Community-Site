@@ -775,7 +775,7 @@ function topFunction() {
               id="contact-form"
               action="http://127.0.0.1:5500/send-email"
               method="POST"
-              onsubmit="sendEmail(); reset(); return false;"
+              onsubmit="reset(); return false;"
             >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
@@ -825,6 +825,22 @@ function topFunction() {
       function sendEmail() {
         alert('Email sent successfully!');
       }
+
+// Message length greater than 50 characters
+    document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const messageInput = document.getElementById('msg');
+
+    contactForm.addEventListener('submit', function(event) {
+        if (messageInput.value.length < 50) {
+            event.preventDefault();
+            alert('Your message must be at least 50 characters long.');
+        } else {
+            alert('Email sent successfully!');
+            contactForm.reset();
+        }
+    });
+});
     </script>
   </div>
   <!-- footer section -->
