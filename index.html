@@ -48,14 +48,6 @@
         background-color: #f4f4f4;
       }
 
-      /* .formcontainer2 {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #1b1b1b;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    } */
 
       .get {
         color: black;
@@ -162,14 +154,48 @@
 }
 
 
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-        scroll-behavior: smooth;
-      }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+
+/* Navbar Style */
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+    .logo {
+      margin-right: auto;
+      /* Optional: space between logo and right edge */
+    }
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      padding-top: 80px;
+    }
+
+    .home .container {
+      max-width: 800px;
+    }
+
+    .home-thumb h1 {
+      font-size: 60px;
+      color: #d8aa03;
+    }
+
 
       /* Navbar Style */
 
@@ -219,12 +245,27 @@
         align-items: center;
       }
 
-      .home-thumb a.btn img {
-        height: 30px;
-        width: 30px;
-        margin-left: 15px;
-        border-radius: 5px;
-      }
+
+    .preloader {
+      display: none;
+    }
+
+.back-to-top {
+    position: fixed;
+    bottom: 120px;
+    right: 45px;
+    display: none; /* Hidden by default */
+    background-color: #3a63e4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    line-height: 10px;
+}
 
       .btn-default {
         background-color: #0c0b0b;
@@ -346,15 +387,7 @@
         document.documentElement.scrollTop = 0;
       }
     </script>
-    =======
 
-    <!-- Navbar -->
-    <div class="navbar">
-      <nav>
-        <!-- <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
-        <i class="fas fa-bars"></i>
-      </label> -->
       <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
       </label>
