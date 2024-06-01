@@ -14,7 +14,7 @@
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="icon" href="fav.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -98,7 +98,7 @@
 .section-title .get {
   font-size: 32px;
   margin-bottom: 10px;
-  color: #ffcc00;
+  color: #040303;
 }
 
 .section-title p {
@@ -129,18 +129,18 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   font-size: 16px;
-  background: #000000;
+  background: #f1eded;
   color: rgb(0, 0, 0);
 }
 
 .contact-form .form-control:focus {
-  border-color: #ffcc00;
-  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+  border-color: #f5d244;
+  box-shadow: 0 0 5px rgba(126, 230, 128, 0.5);
 }
 
 .contact-form .submit {
-  background: #ee4040;
-    color: white;
+  background: #e18b09;
+    color: rgb(9, 9, 9);
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -150,15 +150,15 @@
 }
 
 .contact-form .submit:hover {
-  background: #e6b800;
+  background: #f4e5a9;
 }
 
 .contact-form input::placeholder{
-  color: white;
+  color: rgb(88, 86, 86);
 }
 
 .contact-form textarea::placeholder{
-  color: white;
+  color: rgb(88, 86, 86);
 }
 
 
@@ -365,7 +365,7 @@ function topFunction() {
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
         <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feed-back">Feedback</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
       </ul>
     </nav>
   </div>
@@ -420,15 +420,15 @@ function topFunction() {
         <div class="col-md-6 col-sm-12">
           <div class="about-thumb">
             <div class="section-title">
-              <h1 class="wow fadeIn" data-wow-delay="0.2s">Our Mission</h1>
+              <h1 class="get font-bold" data-wow-delay="0.2s"><b>Our Mission</b></h1>
               <!-- <h3 class="wow fadeInUp" data-wow-delay="0.4s"></h3> -->
             </div>
             <div class="wow fadeInUp" data-wow-delay="0.6s">
               <p>
-                Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
+                <b>Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
                 coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
                 members can connect, collaborate, and make a positive impact in the world. Join us and be a part of
-                something bigger than yourself! </p>
+                something bigger than yourself!</b> </p>
             </div>
           </div>
         </div>
@@ -438,66 +438,66 @@ function topFunction() {
   </section>
 
 
-  <!-- services section -->
-  <section id="services">
-    <div class="container">
-      <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
-      <div class="service-container">
-        <div class="row d-grid gap-3">
-          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card wow fadeInUp"
-              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
-              <div class="wow fadeIn" data-wow-delay="0.2s">
-                <div class="card-heading">
-                  <h3 class="heading-hover">Open learning</h3>
-                </div>
-                <div class="card-context">
-                  <p>Our community promotes open learning, allowing members to share their knowledge and skills with
-                    others, fostering a culture of continuous growth.</p>
-                </div>
+<!-- services section -->
+<section id="services">
+  <div class="container">
+    <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
+    <div class="service-container">
+      <div class="row d-grid gap-3">
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Open learning</h3>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card wow fadeInUp" data-wow-delay="0.8s"
-              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
-              <div class="wow fadeIn" data-wow-delay="0.2s">
-                <div class="card-heading">
-                  <h3 class="heading-hover">Network</h3>
-                </div>
-                <div class="card-context">
-                  <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
-                    opportunities for personal and professional growth.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card wow fadeInUp" data-wow-delay="1.2s"
-              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
-              <div class="wow fadeIn" data-wow-delay="0.2s">
-                <div class="card-heading">
-                  <h3 class="heading-hover">Mentorship</h3>
-                </div>
-                <div class="card-context">
-                  <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal
-                    and professional growth.</p>
-                </div>
+              <div class="card-context">
+                <p>Our community promotes open learning, allowing members to share their knowledge and skills with
+                  others, fostering a culture of continuous growth.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="clearfix text-center col-md-12 col-sm-12 ">
-          <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll d-flex ">
-            JOIN DISCORD
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-            alt="Discord" style="height: 40px; border-radius: 50px;">
-          </a>
-
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp" data-wow-delay="0.8s"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Network</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
+                  opportunities for personal and professional growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp" data-wow-delay="1.2s"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Mentorship</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal
+                  and professional growth.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="d-flex justify-content-center">
+        <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll d-flex align-items-center">
+          JOIN DISCORD
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
+          alt="Discord" style="height: 40px; border-radius: 50px; margin-left: 10px;">
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
 
 
@@ -623,10 +623,24 @@ function topFunction() {
             </p>
           </div>
         </div>
+        <div class="accordion-item">
+          <button id="accordion-button-6" aria-expanded="false">
+            <span class="accordion-title"></span>How can we provide the feedback?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Down of this FAQ section we provide you a feedback section you fill the following details and provide your valuable feedback.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    
 
   </section>
+
+  
   <!--
   <section id="experience">
     <div class="container">
@@ -767,15 +781,83 @@ function topFunction() {
       <section id="contact">
         <div class="formcontainer">
           <div class="section-title">
-            <h1 class="get font-bold">Get in Touch</h1>
+            <h1 class="get font-bold"><b>Contact Us</b></h1>
             <p>If you have any query or for collaboration</p>
+          </div>
+
+          <div class="contact-form bg-gradient-to-r from-orange-400 to-yellow-300">
+
+            <form
+              id="contact-form"
+              action="http://127.0.0.1:5500/send-email"
+              method="POST"
+              onsubmit="reset(); return false;"
+            >
+              <div class="row">
+                <div class=" col-md-6 col-sm-6 rad" style="position:relative;">
+                  <label for="name">Name<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon bx bxs-user'></i>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 col-sm-6 rad" style="position:relative;">
+                  <label for="email">Email<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon1 bx bxl-gmail'></i>
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  />
+                </div>
+                <div class="col-md-8 msg rad " style="position:relative;">
+                  <label for="message">Message<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon2 bx bx-message'></i>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="msg"
+                    placeholder="Enter Your Query Or Message"
+                    rows="6"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  ></textarea>
+                </div>
+                <div class="flex justify-center col-md-offset-0">
+                  <button class="submit" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section id="feedback">
+        <div class="formcontainer">
+          <div class="section-title">
+            <br>
+            
+            <br>
+            <h1 class="get font-bold">Feedback</h1>
+            <p>We value your feedback. Please let us know your thoughts and suggestions. </p>
+      
           </div>
           <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
             <form
               id="contact-form"
               action="http://127.0.0.1:5500/send-email"
               method="POST"
-              onsubmit="reset(); return false;"
+              onsubmit="sendEmail(); reset(); return false;"
             >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
@@ -811,13 +893,27 @@ function topFunction() {
                     required
                   ></textarea>
                 </div>
-                <div class="flex justify-center col-md-offset-0">
-                  <button class="submit" type="submit">Submit</button>
-                </div>
-              </div>
+                
+              <div class="col-12 rating rad">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1"><i class="fas fa-star"></i></label>
+            </div>
+            <div class="flex justify-center col-md-offset-0">
+              <button class="submit" type="submit">Submit</button>
+            </div>
+          </div>
             </form>
           </div>
-        </div>
+          <br>
+          <br>
       </section>
     </main>
 
