@@ -36,12 +36,14 @@
   <style>
     @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
+
     body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
 }
+
 
     /* .formcontainer2 {
       padding: 20px;
@@ -52,7 +54,7 @@
       border-radius: 8px;
     } */
 
-    /* .get {
+    .get {
       color: black;
     }
     .get2 {
@@ -60,7 +62,19 @@
     }
     .getn {
       color: rgb(255, 254, 254);
-    } */
+    }
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+ 
+
 
 
 /* Contact Us Style  */
@@ -147,6 +161,15 @@
   color: white;
 }
 
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
 
 
 /* Navbar Style */
@@ -303,7 +326,27 @@
     </div>
   </section>
 
+  <!-- Responsive Nav Bar -->
 
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
+
+<script>
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+</script>
+=======
 
   <!-- Navbar -->
   <div class="navbar">
@@ -336,8 +379,6 @@
         document.querySelector('.navbar').classList.toggle('active');
     });
 </script>
-
-
 
   <!-- Home Section -->
   <section class="home" id="home">
@@ -513,7 +554,7 @@
       </div>
     </div>
   </section>
-
+  
 
   <section class="faqq">
 
@@ -601,8 +642,6 @@
     <div class="container">
 
       <div class="row" style="display: flex;align-items: center;justify-content: space-between;flex-direction: row;">
-
-
         <div class="card1 mb-3" style="max-width: 540px;">
           <div class="row g-0" style="height: 100%;">
             <div class="col-md-8 pic-col">
@@ -726,12 +765,6 @@
             </div>
           </div>
         </div>
-
-
-
-
-
-
       </div>
     </div>
   </section>
@@ -752,7 +785,7 @@
               id="contact-form"
               action="http://127.0.0.1:5500/send-email"
               method="POST"
-              onsubmit="sendEmail(); reset(); return false;"
+              onsubmit="reset(); return false;"
             >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
@@ -802,47 +835,34 @@
       function sendEmail() {
         alert('Email sent successfully!');
       }
+
+// Message length greater than 50 characters
+    document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const messageInput = document.getElementById('msg');
+
+    contactForm.addEventListener('submit', function(event) {
+        if (messageInput.value.length < 50) {
+            event.preventDefault();
+            alert('Your message must be at least 50 characters long.');
+        } else {
+            alert('Email sent successfully!');
+            contactForm.reset();
+        }
+    });
+});
     </script>
   </div>
-  <hr>
- <!-- Feedback Section -->
- <section id="feed-back">
- <div class="feed">
-  <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-  <h2 class="head">Feedback Form</h2>
-  <p class="feedback-description">We appreciate your feedback! Please provide the following information:</p></div>
-  <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-  <form id="feedbackForm">
-      <label for="name" class="feedback-label">Your Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
-      <label for="email" class="feedback-label">Your Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
-      <label for="description" class="feedback-label">Description:</label>
-      <textarea class="message" id="description" name="description" placeholder="Your Feedback" required></textarea>
-      <p class="feedback-label">How satisfied are you with our service?</p><br>
-      <div class="feedback-smileys">
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😊')">😊</button>
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😄')">😄</button>
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😐')">😐</button>
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😞')">😞</button>
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😢')">😢</button>
-    </div>
-    <input type="hidden" id="selectedSmiley" name="selectedSmiley">
-      <button type="submit" class="submit-btn">Submit</button>
-  </form>
-  </div>
-</div>
-</section>
   <!-- footer section -->
   <!-- <footer>
   <div class="container">
     <div class="row">
-
+      
       <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
       version="1.1" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0 L50 100 L100 0 Z"></path>
     </svg>
-
+    
     <div class="col-md-4 col-sm-6">
       <h2>Open Source Village</h2>
       <div class="wow fadeInUp" data-wow-delay="0.3s">
@@ -851,14 +871,14 @@
           Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
   <!-- </div>
           </div>
-
-
+          
+          
           <ul class="social-icon">
             <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
             <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
           </ul>
         </div>
-
+        
       </div>
     </div>
   </footer> -->
@@ -879,7 +899,7 @@
               <h4>Join the Community now and become a Villager</h4>
               <div class="signup_form">
                 <form action="#" class="subscribe">
-                  <input type="email" class="subscribe__input" autocapitalize="off" autocorrect="off" placeholder="Enter Email Address"><span id="subscribe_email_error" class="subscribe-error">Invalid email address.</span>
+                  <input type="text" class="subscribe__input" placeholder="Enter Email Address">
                   <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
                 </form>
               </div>
@@ -892,13 +912,13 @@
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
           <ul class="footer_links">
-            <a href="our program.html">
+            <a>
               <li>Our Program</li>
             </a>
-            <a href="our plan.html">
+            <a>
               <li>Our Plan</li>
             </a>
-            <a href="member.html">
+            <a>
               <li>Become A Member</li>
             </a>
           </ul>
@@ -907,10 +927,10 @@
           <h4 class="footer_title">Quick Links</h4>
           <ul class="footer_links">
 
-            <a href="#about">
+            <a>
               <li>About Us</li>
             </a>
-            <a href="#contact">
+            <a>
               <li>Contact Us</li>
             </a>
             <a>
@@ -1003,6 +1023,32 @@ backToTopBtn.addEventListener("click", function(event) {
     window.scrollTo({top: 0, behavior: 'smooth'});
 });
 </script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
   <script>
     function sendEmail() {
       Email.send({
@@ -1019,23 +1065,6 @@ backToTopBtn.addEventListener("click", function(event) {
       }).then(
         message => alert("Message sent successsfully")
       );
-    }
-    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-      if (!document.querySelector('.smiley-btn.active')) {
-        event.preventDefault();
-        alert("Please select a smiley before submitting.");
-        return;
-    }
-            event.preventDefault();
-            alert('Thank you for your feedback!');
-        });
-      function selectSmiley(smiley) {
-        document.getElementById('selectedSmiley').value = smiley;
-        var smileyBtns = document.querySelectorAll('.smiley-btn');
-        smileyBtns.forEach(function(btn) {
-            btn.classList.remove('active');
-        });
-        event.target.classList.add('active');
     }
   </script>
 
