@@ -9,22 +9,18 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
 
-    <!-- stylesheets css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="icon" href="fav.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+  <!-- stylesheets css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="icon" href="fav.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet">
 
     <link rel="stylesheet" href="css/et-line-font.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -99,11 +95,11 @@
         margin-bottom: 40px;
       }
 
-      .section-title .get {
-        font-size: 32px;
-        margin-bottom: 10px;
-        color: #ffcc00;
-      }
+.section-title .get {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #040303;
+}
 
       .section-title p {
         font-size: 16px;
@@ -127,43 +123,44 @@
         margin-bottom: 15px;
       }
 
-      #contact-form .form-control {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        font-size: 16px;
-        background: #000000;
-        color: rgb(0, 0, 0);
-      }
+#contact-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #f1eded;
+  color: rgb(0, 0, 0);
+}
 
-      .contact-form .form-control:focus {
-        border-color: #ffcc00;
-        box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
-      }
+.contact-form .form-control:focus {
+  border-color: #f5d244;
+  box-shadow: 0 0 5px rgba(126, 230, 128, 0.5);
+}
 
-      .contact-form .submit {
-        background: #ee4040;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 18px;
-        margin-left: 220px;
-      }
+.contact-form .submit {
+  background: #e18b09;
+    color: rgb(9, 9, 9);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 220px;
+}
 
-      .contact-form .submit:hover {
-        background: #e6b800;
-      }
+.contact-form .submit:hover {
+  background: #f4e5a9;
+}
 
-      .contact-form input::placeholder {
-        color: white;
-      }
+.contact-form input::placeholder{
+  color: rgb(88, 86, 86);
+}
 
-      .contact-form textarea::placeholder {
-        color: white;
-      }
+.contact-form textarea::placeholder{
+  color: rgb(88, 86, 86);
+}
+
 
       body,
       html {
@@ -358,44 +355,19 @@
       <label for="check" class="checkbut">
         <i class="fas fa-bars"></i>
       </label> -->
-        <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem"
-          ><img
-            src="images/fav.png"
-            alt="logo"
-            style="height: 50px; width: 50px"
-          />
-          <span class="logo-text" style="margin-left: 0"
-            >Open Source Village</span
-          >
-        </label>
-        <ul class="flex flex-col md:flex-row">
-          <li>
-            <i class="fa-solid fa-house" style="filter: invert(1)"></i
-            ><a class="active" href="#home">Home</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-circle-info" style="filter: invert(1)"></i
-            ><a href="#about">About</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-list" style="filter: invert(1)"></i
-            ><a href="#services">Services</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-user" style="filter: invert(1)"></i
-            ><a href="#testimonials">Reviews</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-at" style="filter: invert(1)"></i
-            ><a href="#contact">Contact Us</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-message" style="filter: invert(1)"></i
-            ><a href="#feed-back">Feedback</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
+        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+      </label>
+      <ul class="flex flex-col md:flex-row">
+        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
 
     <!-- Home Section -->
     <section class="home" id="home">
@@ -441,10 +413,11 @@
         popup.classList.add("popup-active");
       }
 
-      function closepop() {
-        popup.classList.remove("popup-active");
-      }
-    </script>
+    function closepop() {
+      popup.classList.remove("popup-active");
+    }
+  </script>
+
 
     <!-- about section -->
     <section id="about">
@@ -474,113 +447,68 @@
       </div>
     </section>
 
-    <!-- services section -->
-    <section id="services">
-      <div class="container">
-        <div class="service-title wow fadeInUp" data-wow-delay="0.3s">
-          SERVICES
-        </div>
-        <div class="service-container">
-          <div class="row d-grid gap-3">
-            <div
-              class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards"
-            >
-              <div
-                class="card wow fadeInUp"
-                style="
-                  width: 18rem;
-                  background-color: white;
-                  border-radius: 8px;
-                  padding: 20px;
-                "
-                data-wow-delay="0.4s"
-              >
-                <div class="wow fadeIn" data-wow-delay="0.2s">
-                  <div class="card-heading">
-                    <h3 class="heading-hover">Open learning</h3>
-                  </div>
-                  <div class="card-context">
-                    <p>
-                      Our community promotes open learning, allowing members to
-                      share their knowledge and skills with others, fostering a
-                      culture of continuous growth.
-                    </p>
-                  </div>
-                </div>
+<!-- services section -->
+<section id="services">
+  <div class="container">
+    <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
+    <div class="service-container">
+      <div class="row d-grid gap-3">
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Open learning</h3>
               </div>
-            </div>
-            <div
-              class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards"
-            >
-              <div
-                class="card wow fadeInUp"
-                data-wow-delay="0.8s"
-                style="
-                  width: 18rem;
-                  background-color: white;
-                  border-radius: 8px;
-                  padding: 20px;
-                "
-              >
-                <div class="wow fadeIn" data-wow-delay="0.2s">
-                  <div class="card-heading">
-                    <h3 class="heading-hover">Network</h3>
-                  </div>
-                  <div class="card-context">
-                    <p>
-                      Our community enables networking with smart and diverse
-                      individuals, fostering collaboration and opportunities for
-                      personal and professional growth.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards"
-            >
-              <div
-                class="card wow fadeInUp"
-                data-wow-delay="1.2s"
-                style="
-                  width: 18rem;
-                  background-color: white;
-                  border-radius: 8px;
-                  padding: 20px;
-                "
-              >
-                <div class="wow fadeIn" data-wow-delay="0.2s">
-                  <div class="card-heading">
-                    <h3 class="heading-hover">Mentorship</h3>
-                  </div>
-                  <div class="card-context">
-                    <p>
-                      Our community offers mentorship, connecting members with
-                      experienced mentors to accelerate personal and
-                      professional growth.
-                    </p>
-                  </div>
-                </div>
+              <div class="card-context">
+                <p>Our community promotes open learning, allowing members to share their knowledge and skills with
+                  others, fostering a culture of continuous growth.</p>
               </div>
             </div>
           </div>
-          <div class="clearfix text-center col-md-12 col-sm-12">
-            <a
-              href="https://discord.gg/mM9qFh2uZR"
-              target="_blank"
-              class="btn btn-default smoothScroll d-flex"
-            >
-              JOIN DISCORD
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-                alt="Discord"
-                style="height: 40px; border-radius: 50px"
-              />
-            </a>
+        </div>
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp" data-wow-delay="0.8s"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Network</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
+                  opportunities for personal and professional growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp" data-wow-delay="1.2s"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Mentorship</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal
+                  and professional growth.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+      <div class="d-flex justify-content-center">
+        <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll d-flex align-items-center">
+          JOIN DISCORD
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
+          alt="Discord" style="height: 40px; border-radius: 50px; margin-left: 10px;">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- Testimonials section -->
     <section id="testimonials">
@@ -667,99 +595,94 @@
             FAQ
           </h1>
 
-          <div class="accordion-item">
-            <button id="accordion-button-1" aria-expanded="false">
-              <span class="accordion-title"
-                >How can I contribute to the community's goals and
-                projects?</span
-              >
-              <span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                Contributing to the community's goals: There are many ways to
-                contribute to our community! Whether you're a developer,
-                designer, writer, or simply passionate about a particular cause,
-                there's a place for you here. You can contribute code to open
-                source projects, participate in discussions, share your
-                expertise, or organize events that align with our mission.
-              </p>
-            </div>
+        <div class="accordion-item">
+
+          <button id="accordion-button-1" aria-expanded="false">
+
+            <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Contributing to the community's goals: There are many ways to contribute to our community! Whether you're
+              a developer, designer, writer, or simply passionate about a particular cause, there's a place for you
+              here. You can contribute code to open source projects, participate in discussions, share your expertise,
+              or organize events that align with our mission.
+            </p>
           </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title"
-                >What benefits do members receive from participating in the
-                community?</span
-              >
-              <span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                Benefits of community membership: As a member of our community,
-                you'll have the opportunity to connect with other passionate
-                individuals, collaborate on projects that align with your
-                interests and values, and make a tangible difference in the
-                world. Additionally, you'll gain access to exclusive resources,
-                events, and networking opportunities.
-              </p>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-2" aria-expanded="false">
+            <span class="accordion-title">What benefits do members receive from participating in the community?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Benefits of community membership: As a member of our community, you'll have the opportunity to connect
+              with other passionate individuals, collaborate on projects that align with your interests and values, and
+              make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events,
+              and networking opportunities.
+            </p>
           </div>
-          <div class="accordion-item">
-            <button id="accordion-button-3" aria-expanded="false">
-              <span class="accordion-title"
-                >How can I join the open source village community?</span
-              >
-              <span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                Joining the open source village community: Joining our community
-                is simple! Just navigate to our website and look for the "Join
-                Us" or "Sign Up" button. From there, you'll be guided through
-                the registration process. Once registered, you'll gain access to
-                our forums, projects, events, and more.
-              </p>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-3" aria-expanded="false">
+            <span class="accordion-title">How can I join the open source village community?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Joining the open source village community: Joining our community is simple! Just navigate to our website
+              and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration
+              process. Once registered, you'll gain access to our forums, projects, events, and more.
+            </p>
           </div>
-          <div class="accordion-item">
-            <button id="accordion-button-4" aria-expanded="false">
-              <span class="accordion-title"
-                >What is open source community?</span
-              >
-              <span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                An open source community is a group of individuals who
-                collaborate on projects and initiatives that are developed and
-                shared openly, meaning the source code and resources are freely
-                available for anyone to view, use, modify, and distribute ideas.
-              </p>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-4" aria-expanded="false">
+            <span class="accordion-title">What is open source community?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              An open source community is a group of individuals who collaborate on projects and initiatives that are
+              developed and shared openly, meaning the source code and resources are freely available for anyone to
+              view, use, modify, and distribute ideas.
+            </p>
           </div>
-          <div class="accordion-item">
-            <button id="accordion-button-5" aria-expanded="false">
-              <span class="accordion-title"
-                >What is the purpose of the open source village community
-                website?</span
-              >
-              <span class="icon" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                Purpose of the open source village community website: Our
-                website serves as a central hub for like-minded individuals who
-                believe in the power of community-driven initiatives. It's a
-                platform where members can connect, collaborate, and contribute
-                to make a positive impact in the world.
-              </p>
-            </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is the purpose of the open source village community website?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Purpose of the open source village community website: Our website serves as a central hub for like-minded
+              individuals who believe in the power of community-driven initiatives. It's a platform where members can
+              connect, collaborate, and contribute to make a positive impact in the world.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-6" aria-expanded="false">
+            <span class="accordion-title"></span>How can we provide the feedback?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Down of this FAQ section we provide you a feedback section you fill the following details and provide your valuable feedback.
+            </p>
           </div>
         </div>
       </div>
-    </section>
-    <!--
+    </div>
+    
+
+  </section>
+
+  
+  <!--
   <section id="experience">
     <div class="container">
 
@@ -894,80 +817,88 @@
 
     <!-- contact section -->
 
-    <div class="formbody">
-      <main>
-        <section id="contact">
-          <div class="formcontainer">
-            <div class="section-title">
-              <h1 class="get font-bold">Get in Touch</h1>
-              <p>If you have any query or for collaboration</p>
-            </div>
-            <div
-              class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300"
-            >
-              <form
-                id="contact-form"
-                action="http://127.0.0.1:5500/send-email"
-                method="POST"
-                onsubmit="sendEmail(); reset(); return false;"
-              >
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 rad">
-                    <label for="name">Name</label>
-                    <input
-                      name="name"
-                      id="name"
-                      type="text"
-                      class="form-control"
-                      placeholder="Enter Your Name"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6 col-sm-6 rad">
-                    <label for="email">Email</label>
-                    <input
-                      name="email"
-                      type="email"
-                      id="email"
-                      class="form-control"
-                      placeholder="Enter Your Email"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-8 msg rad">
-                    <label for="message">Message</label>
-                    <textarea
-                      name="message"
-                      class="form-control"
-                      id="msg"
-                      placeholder="Enter Your Query Or Message"
-                      rows="6"
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="flex justify-center col-md-offset-0">
-                    <button class="submit" type="submit">Submit</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
-      </main>
   <div class="formbody ">
     <main>
       <section id="contact">
         <div class="formcontainer">
           <div class="section-title">
-            <h1 class="get font-bold">Get in Touch</h1>
+            <h1 class="get font-bold"><b>Contact Us</b></h1>
             <p>If you have any query or for collaboration</p>
+          </div>
+
+          <div class="contact-form bg-gradient-to-r from-orange-400 to-yellow-300">
+
+            <form
+              id="contact-form"
+              action="http://127.0.0.1:5500/send-email"
+              method="POST"
+              onsubmit="reset(); return false;"
+            >
+              <div class="row">
+                <div class=" col-md-6 col-sm-6 rad" style="position:relative;">
+                  <label for="name">Name<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon bx bxs-user'></i>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 col-sm-6 rad" style="position:relative;">
+                  <label for="email">Email<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon1 bx bxl-gmail'></i>
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  />
+                </div>
+                <div class="col-md-8 msg rad " style="position:relative;">
+                  <label for="message">Message<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon2 bx bx-message'></i>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="msg"
+                    placeholder="Enter Your Query Or Message"
+                    rows="6"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  ></textarea>
+                </div>
+                <div class="flex justify-center col-md-offset-0">
+                  <button class="submit" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section id="feedback">
+        <div class="formcontainer">
+          <div class="section-title">
+            <br>
+            
+            <br>
+            <h1 class="get font-bold">Feedback</h1>
+            <p>We value your feedback. Please let us know your thoughts and suggestions. </p>
+      
           </div>
           <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
             <form
               id="contact-form"
               action="http://127.0.0.1:5500/send-email"
               method="POST"
-              onsubmit="reset(); return false;"
+              onsubmit="sendEmail(); reset(); return false;"
             >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
@@ -1003,13 +934,27 @@
                     required
                   ></textarea>
                 </div>
-                <div class="flex justify-center col-md-offset-0">
-                  <button class="submit" type="submit">Submit</button>
-                </div>
-              </div>
+                
+              <div class="col-12 rating rad">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1"><i class="fas fa-star"></i></label>
+            </div>
+            <div class="flex justify-center col-md-offset-0">
+              <button class="submit" type="submit">Submit</button>
+            </div>
+          </div>
             </form>
           </div>
-        </div>
+          <br>
+          <br>
       </section>
     </main>
 

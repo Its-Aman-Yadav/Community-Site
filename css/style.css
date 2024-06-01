@@ -616,6 +616,7 @@ justify-content: center; */
 #about,
 #services,
 #contact {
+  background: #ffffff;
 }
 
 #about,
@@ -632,6 +633,10 @@ footer {
 
 .section-title h1 {
   padding-bottom: 10px;
+}
+
+.section-title {
+  font-size: 36px;
 }
 
 #about .section-title {
@@ -847,7 +852,7 @@ div.card {
   backface-visibility: hidden;
 }
 
-/*navbar section*/
+/* Navbar section */
 .navbar {
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -1178,7 +1183,27 @@ section,
 #contact input {
   height: 55px;
 }
-
+.icon {
+  position: absolute;
+  top: calc(42%);
+  color: white;
+  left: 4.2%;
+  font-size: 30px;
+}
+.icon1 {
+  position: absolute;
+  top: calc(42%);
+  left: 4.2%;
+  font-size: 30px;
+  color: white;
+}
+.icon2 {
+  position: absolute;
+  top: calc(21%);
+  left: 4.2%;
+  font-size: 30px;
+  color: white;
+}
 #contact input[type="submit"] {
   background: #242424;
   border: none;
@@ -1792,4 +1817,28 @@ textarea {
 }
 .submit-btn:hover {
   background-color: #45a049;
+}
+.rating {
+  justify-content: center;
+  display: flex;
+  flex-direction: row-reverse; /* Visually order the stars in reverse */
+}
+
+.rating input {
+  display: none; /* Hide radio buttons */
+}
+
+.rating label {
+  font-size: 2em;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.rating input:checked ~ label {
+  color: #ffca08; /* Highlight selected star and all previous stars */
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffca08; /* Highlight hovered star and all previous stars */
 }
