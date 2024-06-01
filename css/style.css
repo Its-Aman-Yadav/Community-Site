@@ -612,7 +612,8 @@ transform: scale(1.05);
 
 #about,
 #services,
-#contact {
+#contact,
+#feedback {
 background: #ffffff;
 }
 
@@ -630,6 +631,10 @@ padding-bottom: 30px;
 
 .section-title h1 {
 padding-bottom: 10px;
+}
+
+.section-title {
+  font-size: 36px;
 }
 
 #about .section-title {
@@ -845,93 +850,136 @@ width: 100vw;
 backface-visibility: hidden;
 }
 
-/*navbar section*/
+/* Navbar section */
 .navbar {
-background: rgba(0, 0, 0, 0.7);
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar nav {
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
 }
 
 .navbar .logo {
-display: flex;
-align-items: center;
-color: white;
-font-size: 35px;
-line-height: 80px;
-padding: 0 20px;
-font-weight: bold;
-}
-
-.navbar .logo img {
-height: 68px;
-width: 68px;
-margin-top: -5px;
-border-radius: 450px;
-}
-
-.navbar ul {
-list-style: none;
-margin: 0;
-padding: 0;
-}
-
-.navbar .checkbut {
-display: none;
-}
-
-@media (max-width: 858px) {
-.navbar .logo img {
-  display: none;
-}
-
-.navbar .checkbut {
-  display: block;
-  font-size: 30px;
+  display: flex;
+  align-items: center;
   color: white;
-  margin-right: 20px;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.navbar .logo img {
+  height: 50px;
+  width: 50px;
+  margin-top: -5px;
+  border-radius: 50%;
 }
 
 .navbar ul {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #2c3e50;
-  top: 80px;
-  left: -100%;
-  text-align: center;
-  transition: all 0.5s;
-  z-index: 2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .navbar ul li {
-  display: block;
-  margin: 50px 0;
-  line-height: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
 }
 
 .navbar ul li a {
-  font-size: 20px;
+  color: white;
+  font-size: 18px;
+  padding: 8px 16px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s, background 0.3s;
 }
 
-.navbar ul li a:hover,
-.navbar ul li a.active {
-  background: none;
-  color: #0082e6;
-}
-
-#check:checked ~ ul {
+.navbar ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
   left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  transition: width 0.3s;
+  z-index: -1;
 }
+
+.navbar ul li a:hover::before {
+  width: 100%;
+}
+
+.navbar ul li a:hover {
+  color: white;
+}
+
+.navbar ul li i {
+  margin-right: 8px; /* Add spacing between icon and text */
+  color: rgb(0, 0, 0); /* Set icon color to white */
+}
+
+.navbar .checkbut {
+  display: none;
+}
+
+@media (max-width: 858px) {
+  .navbar .logo img {
+    display: none;
+  }
+
+  .navbar .checkbut {
+    display: block;
+    font-size: 30px;
+    color: white;
+    margin-right: 20px;
+  }
+
+  .navbar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 2;
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  .navbar ul li a {
+    font-size: 20px;
+  }
+
+  .navbar ul li a:hover,
+  .navbar ul li a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
 
 /* home section */
@@ -1063,6 +1111,7 @@ color: #0082e6;
 .service-cards:hover .heading-hover {
 color: white;
 }
+
 
 #contact .form-control:hover {
 border-color: #999;
@@ -1705,4 +1754,28 @@ textarea {
 }
 .submit-btn:hover {
   background-color: #45a049;
+}
+.rating {
+  justify-content: center;
+  display: flex;
+  flex-direction: row-reverse; /* Visually order the stars in reverse */
+}
+
+.rating input {
+  display: none; /* Hide radio buttons */
+}
+
+.rating label {
+  font-size: 2em;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.rating input:checked ~ label {
+  color: #ffca08; /* Highlight selected star and all previous stars */
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffca08; /* Highlight hovered star and all previous stars */
 }
