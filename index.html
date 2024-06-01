@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-
-  <meta charset="utf-8">
-
-  <title>Open Source Village</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+    <title>Open Source Village</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
 
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -44,15 +42,6 @@
       background-color: #f4f4f4;
     }
 
-
-    /* .formcontainer2 {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #1b1b1b;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    } */
 
     .get {
       color: black;
@@ -163,6 +152,137 @@
     .contact-form textarea::placeholder {
       color: rgb(88, 86, 86);
     }
+    <link rel="stylesheet" href="css/et-line-font.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/vegas.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+
+      .get {
+        color: black;
+      }
+      .get2 {
+        color: rgb(255, 254, 254);
+      }
+      .getn {
+        color: rgb(255, 254, 254);
+      }
+      section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Contact Us Style  */
+
+      #contact {
+        padding: 50px 0;
+        background: #fff;
+      }
+
+      .formcontainer {
+        max-width: 600px;
+        margin: auto;
+        padding: 0 20px;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+.section-title .get {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #040303;
+}
+
+      .section-title p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .contact-form {
+        background: #fffbe6;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px black;
+      }
+
+      .contact-form .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .contact-form .rad {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+#contact-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #f1eded;
+  color: rgb(0, 0, 0);
+}
+
+.contact-form .form-control:focus {
+  border-color: #f5d244;
+  box-shadow: 0 0 5px rgba(126, 230, 128, 0.5);
+}
+
+.contact-form .submit {
+  background: #e18b09;
+    color: rgb(9, 9, 9);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 220px;
+}
+
+.contact-form .submit:hover {
+  background: #f4e5a9;
+}
+
+.contact-form input::placeholder{
+  color: rgb(88, 86, 86);
+}
+
+.contact-form textarea::placeholder{
+  color: rgb(88, 86, 86);
+}
+
 
 
     body,
@@ -195,7 +315,6 @@
       height: 100vh;
       background: url('images/background.jpg') no-repeat center center/cover;
       padding-top: 80px;
-      /* to avoid overlap with navbar */
     }
 
     .home .container {
@@ -207,39 +326,34 @@
       color: #d8aa03;
     }
 
-    .home-thumb h3 {
-      margin: 20px 0;
-      font-size: 24px;
-      color: whitesmoke;
 
-    }
+      /* Navbar Style */
 
-    .home-thumb a.btn {
-      text-decoration: none;
-      color: black;
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 5px;
-      display: inline-flex;
-      align-items: center;
+      .flex {
+        display: flex;
+        justify-content: center;
+      }
 
-    }
+      .logo {
+        margin-right: auto;
+        /* Optional: space between logo and right edge */
+      }
 
-    .home-thumb a.btn img {
-      height: 30px;
-      width: 30px;
-      margin-left: 15px;
-      border-radius: 5px;
-    }
+      .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        background: url("images/background.jpg") no-repeat center center/cover;
+        padding-top: 80px;
+        /* to avoid overlap with navbar */
+      }
 
-    .btn-default {
-      background-color: #0c0b0b;
-      border: none;
-      display: flex;
-      justify-items: center;
-      width: fit-content;
-      border: 2px solid red
-    }
+      .home .container {
+        max-width: 800px;
+      }
+
 
     .btn-default:hover {
       background-color: #4c4d4a;
@@ -249,13 +363,10 @@
       display: block;
       margin: 0 auto;
     }
-
-
     .preloader {
       display: none;
-      /* Hide preloader by default */
-      /* Add preloader styles here if needed */
     }
+
 
     /* Back to Top Button */
     .back-to-top {
@@ -312,26 +423,60 @@
     });
   </script>
 
-  <!-- preloader section -->
-  <section class="preloader">
-    <div class="sk-circle">
-      <div class="sk-circle1 sk-child"></div>
-      <div class="sk-circle2 sk-child"></div>
-      <div class="sk-circle3 sk-child"></div>
-      <div class="sk-circle4 sk-child"></div>
-      <div class="sk-circle5 sk-child"></div>
-      <div class="sk-circle6 sk-child"></div>
-      <div class="sk-circle7 sk-child"></div>
-      <div class="sk-circle8 sk-child"></div>
-      <div class="sk-circle9 sk-child"></div>
-      <div class="sk-circle10 sk-child"></div>
-      <div class="sk-circle11 sk-child"></div>
-      <div class="sk-circle12 sk-child"></div>
-    </div>
-  </section>
 
-  <!-- Responsive Nav Bar -->
+      .back-to-top:hover {
+        background-color: #484848;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
 
+  <body>
+    <!-- Chatbot integration section -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+        composerPlaceholder: "Open Source Village",
+        botConversationDescription: "Ask me anything!",
+        botId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        webhookId: "a909bd46-1d71-484d-8551-58afe6d64c1e",
+        lazySocket: true,
+        themeName: "prism",
+        botName: "Open Source Village",
+        avatarUrl:
+          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+        stylesheet:
+          "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+        frontendVersion: "v1",
+        showPoweredBy: true,
+        theme: "prism",
+        themeColor: "#2563eb",
+        allowedOrigins: [],
+        enableConversationDeletion: true,
+      });
+    </script>
+
+    <!-- preloader section -->
+    <section class="preloader">
+      <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+      </div>
+    </section>
 
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
 
@@ -350,62 +495,88 @@
       document.documentElement.scrollTop = 0;
     }
   </script>
-  =======
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <nav>
 
-      <!-- <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
-        <i class="fas fa-bars"></i>
-      </label> -->
+
+    <script>
+      let mybutton = document.getElementById("myBtn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
       <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo"
           style="height: 50px; width: 50px;">
+
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
       </label>
       <ul class="flex flex-col md:flex-row">
-        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+        <li><i class="fa-solid fa-house" ></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-circle-info"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-list"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-user" ></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" ></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message"></i><a href="#feed-back">Feedback</a></li>
       </ul>
     </nav>
   </div>
 
-  <!-- Home Section -->
-  <section class="home" id="home">
-    <div class="container">
-      <div class="home-thumb">
-        <h1>Open Source Village</h1>
-        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
-        <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
-        <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-          data-wow-delay="1s">
-          Join Discord
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-            alt="Discord">
-        </a>
-        <a href="https://www.linkedin.com/company/open-source-village/"
-          class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
-          Follow us on LinkedIn
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
-            alt="LinkedIn">
-        </a>
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="container">
+        <div class="home-thumb">
+          <h1>Open Source Village</h1>
+          <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
+          <h3 class="wow fadeInUp" data-wow-delay="0.6s">
+            We are <strong>Open Source Village</strong>
+          </h3>
+          <h3 class="wow fadeInUp" data-wow-delay="0.8s">
+            <strong>Join </strong>our community now
+          </h3>
+          <a
+            href="https://discord.gg/mM9qFh2uZR"
+            class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+            data-wow-delay="1s"
+          >
+            Join Discord
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
+              alt="Discord"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/open-source-village/"
+            class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+            data-wow-delay="1s"
+          >
+            Follow us on LinkedIn
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
+              alt="LinkedIn"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    let popup = document.getElementById("popup");
-    function openPop() {
-      popup.classList.add("popup-active");
-    }
+    <script>
+      let popup = document.getElementById("popup");
+      function openPop() {
+        popup.classList.add("popup-active");
+      }
 
     function closepop() {
       popup.classList.remove("popup-active");
@@ -431,19 +602,38 @@
             <div class="wow fadeInUp" data-wow-delay="0.6s">
               <p>
                 <b>Welcome to our community startup! We are a group of like-minded individuals who believe in the power
-                  of
-                  coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
+                  of coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
                   members can connect, collaborate, and make a positive impact in the world. Join us and be a part of
                   something bigger than yourself!</b>
               </p>
             </div>
+    <!-- about section -->
+    <section id="about">
+      <div class="main-img">
+        <img src="fav.png" alt="" />
+      </div>
+      <div class="text">
+        <br>
+        <br>
+        <br>
+        <h4>About</h4>
+        <h2>Open Source Village</h2>
+  
+        <p>
+          Welcome to our community startup! We are a group of like-minded
+          individuals who believe in the power of coming together to achieve
+          shared goals. Our mission is to create a safe and inclusive space
+          where members can connect, collaborate, and make a positive impact in
+          the world. Join us and be a part of something bigger than yourself!
+        </p>
+        <div class="last-text">
+          <div class="text1">
+            <h3>1000+</h3>
+            <h5>MEMBERS</h5>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
-
+    </section>
 
   <!-- services section -->
   <section id="services">
@@ -510,6 +700,7 @@
 
 
 
+
   <!-- Testimonials section -->
   <section id="testimonials">
     <div class="container">
@@ -540,19 +731,79 @@
               <p>"I've been involved with many groups in the past, but none have been as warm and welcoming as this one.
                 The sense of belonging I feel here is unparalleled. It's incredible to be surrounded by individuals who
                 share my values and passion for making a difference."</p>
+    <!-- Testimonials section -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">
+              Testimonials
+            </h2>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.4s">
+              <div class="testimonial-author">
+                <img
+                  src="images/testi_1.jpg"
+                  class="img-circle mb-2"
+                  alt="Testimonial Author"
+                />
+                <h4 class="mt-5">Arden Stone</h4>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "Being a part of this community has been truly transformative.
+                  The support and encouragement I've received here have helped
+                  me grow both personally and professionally. I'm immensely
+                  grateful to have found such an inspiring group of people!"
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.8s">
-            <div class="testimonial-author">
-              <img src="images/testi_3.jpeg" class="img-circle" alt="Testimonial Author">
-              <h4 class="mt-5">Emily Johnson</h4>
+          <div class="col-md-4">
+            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.6s">
+              <div class="testimonial-author">
+                <img
+                  src="images/testi_2.jpeg"
+                  class="img-circle"
+                  alt="Testimonial Author"
+                />
+                <h4 class="mt-5">John Smith</h4>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "I've been involved with many groups in the past, but none
+                  have been as warm and welcoming as this one. The sense of
+                  belonging I feel here is unparalleled. It's incredible to be
+                  surrounded by individuals who share my values and passion for
+                  making a difference."
+                </p>
+              </div>
             </div>
             <div class="testimonial-content">
               <p>"I was initially hesitant to join, but I'm so glad I did. The connections I've made here have opened up
                 numerous opportunities for collaboration and personal development. It's amazing to see how much we can
                 achieve when we come together with a common purpose."</p>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.8s">
+              <div class="testimonial-author">
+                <img
+                  src="images/testi_3.jpeg"
+                  class="img-circle"
+                  alt="Testimonial Author"
+                />
+                <h4 class="mt-5">Emily Johnson</h4>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "I was initially hesitant to join, but I'm so glad I did. The
+                  connections I've made here have opened up numerous
+                  opportunities for collaboration and personal development. It's
+                  amazing to see how much we can achieve when we come together
+                  with a common purpose."
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -568,6 +819,17 @@
       <div class="accordion">
 
         <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
+    </section>
+
+    <section class="faqq">
+      <div class="containerr">
+        <div class="accordion">
+          <h1
+            class="section-title wow fadeInUp text-center"
+            data-wow-delay="0.3s"
+          >
+            FAQ
+          </h1>
 
         <div class="accordion-item">
 
@@ -655,143 +917,6 @@
 
 
   </section>
-
-
-  <!--
-  <section id="experience">
-    <div class="container">
-
-      <div class="row" style="display: flex;align-items: center;justify-content: space-between;flex-direction: row;">
-        <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="height: 100%;">
-            <div class="col-md-8 pic-col">
-              <img src="images/profile1.jpg" class="img-fluid rounded-start" style="width: 80px;">
-            </div>
-            <div class="col-md-4 flex flex-row" style="width: 100%;">
-              <div class="card-body " style="width: 100%;">
-                <h5 class="card-title " style="font-size: 28px;font-weight: bold;">David L.</h5>
-                <div class="flex mt-2 mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-half" viewBox="0 0 16 16">
-                  <path
-                    d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z" />
-                </svg>
-                </div>
-                <p class="card-text">"Joining this community has been one of the best decisions I've ever made. I've had
-                  the opportunity to contribute to meaningful projects that have an impact on society."</p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="height: 100%;">
-            <div class="col-md-8 pic-col ">
-              <img src="images/profile2.jpg" class="img-fluid rounded-start" style="width: 80px;">
-            </div>
-            <div class="col-md-4 " style="width: 100%;">
-              <div class="card-body" style="width: 100%;">
-                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Sarah J.</h5>
-                <div class="flex mt-2 mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                </div>
-                <p class="card-text">"Being a part of this community has been an incredible journey. I've found
-                  like-minded individuals who share my deep passion for making a difference in the society."</p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="height: 100%;">
-            <div class="col-md-8 pic-col">
-              <img src="images/profile3.jpg" class="img-fluid rounded-start" style="width: 80px;">
-            </div>
-            <div class="col-md-4" style="width: 100%;">
-              <div class="card-body" style="width: 100%;">
-                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Emily R.</h5>
-                <div class="flex mt-2 mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-              </div>
-                <p class="card-text">"As someone who values inclusivity, finding a space where everyone's voice is heard
-                  and respected has been incredibly refreshing. It's empowering to collaborate here."</p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
--->
-
-  <!-- contact section -->
-
   <div class="formbody ">
     <main>
       <section id="contact">
@@ -886,129 +1011,12 @@
       </section>
     </main>
 
-    <script>
-      function sendEmail() {
-        alert('Email sent successfully!');
-      }
-
-      // Message length greater than 50 characters
-      document.addEventListener('DOMContentLoaded', function () {
-        const contactForm = document.getElementById('contact-form');
-        const messageInput = document.getElementById('msg');
-
-        contactForm.addEventListener('submit', function (event) {
-          if (messageInput.value.length < 50) {
-            event.preventDefault();
-            alert('Your message must be at least 50 characters long.');
-          } else {
-            alert('Email sent successfully!');
-            contactForm.reset();
-          }
-        });
-      });
-    </script>
-  </div>
-  <!-- footer section -->
-  <!-- <footer>
-  <div class="container">
-    <div class="row">
-      
-      <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
-      version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0 L50 100 L100 0 Z"></path>
-    </svg>
-    
-    <div class="col-md-4 col-sm-6">
-      <h2>Open Source Village</h2>
-      <div class="wow fadeInUp" data-wow-delay="0.3s">
-        <p>Be a Villager now</p>
-        <p class="copyright-text">Copyright &copy; 2023 <br>
-          Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
-  <!-- </div>
-          </div>
-          
-          
-          <ul class="social-icon">
-            <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
-            <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
-          </ul>
-        </div>
-        
-      </div>
+      <script>
+        function sendEmail() {
+          alert("Email sent successfully!");
+        }
+      </script>
     </div>
-  </footer> -->
-  <!-- <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
-    <div class="container">
-      <div class="footer_wrapper">
-        <div class="footer_box">
-          <div class="logo">
-            <div class="logo_img">
-
-            </div>
-            <h2 class="fitbody">
-              <p>Open Source <strong>VILLAGER</strong> </p>
-            </h2>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="single_footer single_footer_address">
-              <h4>Join the Community now and become a Villager</h4>
-              <div class="signup_form">
-                <form action="#" class="subscribe">
-                  <input type="text" class="subscribe__input" placeholder="Enter Email Address">
-                  <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
-                </form>
-              </div>
-            </div>
-
-          </div><- END COL -->
-
-
-  <!-- </div>
-        <div class="footer_box">
-          <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
-          <ul class="footer_links">
-            <a>
-              <li>Our Program</li>
-            </a>
-            <a>
-              <li>Our Plan</li>
-            </a>
-            <a>
-              <li>Become A Member</li>
-            </a>
-          </ul>
-        </div>
-        <div class="footer_box">
-          <h4 class="footer_title">Quick Links</h4>
-          <ul class="footer_links">
-
-            <a>
-              <li>About Us</li>
-            </a>
-            <a>
-              <li>Contact Us</li>
-            </a>
-            <a>
-              <li>Support</li>
-            </a>
-
-          </ul>
-        </div>
-      </div>
-      <p class="social_media">
-        <a><i class="fab fa-github"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-facebook"></i></a>
-        <a><i class="fab fa-twitter"></i></a>
-
-      </p>
-      <p class="copyright">
-        Copyright &copy
-        <script>document.write(new Date().getFullYear())</script> Developed by open source. All rights reserved.
-      </p>
-    </div>
-  </footer> -->
 
   <!-- NEW Footer -->
   <footer>
@@ -1080,8 +1088,60 @@
 
 </footer>
   <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+    </footer>
 
+    <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+    <!-- javscript js -->
+    <script>
+      // Get the button
+      let backToTopBtn = document.getElementById("backToTopBtn");
 
+      // When the user scrolls down 100px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      backToTopBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+      const sections = document.querySelectorAll("section");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
 
   <!-- javscript js -->
   <script>
@@ -1185,4 +1245,68 @@
   </script>
 </body>
 
+</html>
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "yash.223234108@vcet.edu.in",
+          Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+          To: "itsamanyadav18@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "This is the subject",
+          Body:
+            "Name:" +
+            document.getElementById("name").value +
+            "<br> Email:" +
+            document.getElementById("email").value +
+            "<br> Message:" +
+            document.getElementById("msg").value,
+        }).then((message) => alert("Message sent successsfully"));
+      }
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/vegas.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+        composerPlaceholder: "Open Source Village",
+        botConversationDescription: "This chatbot is for the community",
+        botId: "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+        webhookId: "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+        lazySocket: true,
+        themeName: "prism",
+        frontendVersion: "v1",
+        showPoweredBy: true,
+        theme: "prism",
+        themeColor: "#2563eb",
+        allowedOrigins: [],
+      });
+    </script>
+
+<script type="text/javascript">
+  window.addEventListener("scroll", function(){
+    var header= document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY >10)
+  })
+</script>
+  </body>
 </html>
