@@ -951,6 +951,64 @@
           </div>
         </section>
       </main>
+  <div class="formbody ">
+    <main>
+      <section id="contact">
+        <div class="formcontainer">
+          <div class="section-title">
+            <h1 class="get font-bold">Get in Touch</h1>
+            <p>If you have any query or for collaboration</p>
+          </div>
+          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
+            <form
+              id="contact-form"
+              action="http://127.0.0.1:5500/send-email"
+              method="POST"
+              onsubmit="reset(); return false;"
+            >
+              <div class="row">
+                <div class="col-md-6 col-sm-6 rad">
+                  <label for="name">Name</label>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 col-sm-6 rad">
+                  <label for="email">Email</label>
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    required
+                  />
+                </div>
+                <div class="col-md-8 msg rad ">
+                  <label for="message">Message</label>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="msg"
+                    placeholder="Enter Your Query Or Message"
+                    rows="6"
+                    required
+                  ></textarea>
+                </div>
+                <div class="flex justify-center col-md-offset-0">
+                  <button class="submit" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
       <script>
         function sendEmail() {
@@ -960,6 +1018,30 @@
     </div>
     <!-- footer section -->
     <!-- <footer>
+    <script>
+      function sendEmail() {
+        alert('Email sent successfully!');
+      }
+
+// Message length greater than 50 characters
+    document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const messageInput = document.getElementById('msg');
+
+    contactForm.addEventListener('submit', function(event) {
+        if (messageInput.value.length < 50) {
+            event.preventDefault();
+            alert('Your message must be at least 50 characters long.');
+        } else {
+            alert('Email sent successfully!');
+            contactForm.reset();
+        }
+    });
+});
+    </script>
+  </div>
+  <!-- footer section -->
+  <!-- <footer>
   <div class="container">
     <div class="row">
       
