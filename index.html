@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-
-  <meta charset="utf-8">
-
-  <title>Open Source Village</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+    <title>Open Source Village</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
 
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="icon" href="fav.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -24,91 +22,98 @@
     href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="css/et-line-font.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/et-line-font.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
 
-  <link rel="stylesheet" href="css/vegas.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-  <style>
-    @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+    <link rel="stylesheet" href="css/vegas.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-    /* .formcontainer2 {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #1b1b1b;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    } */
-
-    /* .get {
-      color: black;
-    }
-    .get2 {
-      color: rgb(255, 254, 254);
-    }
-    .getn {
-      color: rgb(255, 254, 254);
-    } */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
 
 
-/* Contact Us Style  */
+      .get {
+        color: black;
+      }
+      .get2 {
+        color: rgb(255, 254, 254);
+      }
+      .getn {
+        color: rgb(255, 254, 254);
+      }
+      section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
 
-#contact {
-  padding: 50px 0;
-  background: #fff;
-}
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-.formcontainer {
-  max-width: 600px;
-  margin: auto;
-  padding: 0 20px;
-}
+      /* Contact Us Style  */
 
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
+      #contact {
+        padding: 50px 0;
+        background: #fff;
+      }
+
+      .formcontainer {
+        max-width: 600px;
+        margin: auto;
+        padding: 0 20px;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
 
 .section-title .get {
   font-size: 32px;
   margin-bottom: 10px;
-  color: #ffcc00;
+  color: #040303;
 }
 
-.section-title p {
-  font-size: 16px;
-  color: #555;
-}
+      .section-title p {
+        font-size: 16px;
+        color: #555;
+      }
 
-.contact-form {
-  background: #fffbe6;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 25px black;
-}
+      .contact-form {
+        background: #fffbe6;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px black;
+      }
 
-.contact-form .row {
-  display: flex;
-  flex-wrap: wrap;
-}
+      .contact-form .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
-.contact-form .rad {
-  width: 100%;
-  margin-bottom: 15px;
-}
+      .contact-form .rad {
+        width: 100%;
+        margin-bottom: 15px;
+      }
 
 #contact-form .form-control {
   width: 100%;
@@ -116,18 +121,18 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   font-size: 16px;
-  background: #000000;
+  background: #f1eded;
   color: rgb(0, 0, 0);
 }
 
 .contact-form .form-control:focus {
-  border-color: #ffcc00;
-  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+  border-color: #f5d244;
+  box-shadow: 0 0 5px rgba(126, 230, 128, 0.5);
 }
 
 .contact-form .submit {
-  background: #ee4040;
-    color: white;
+  background: #e18b09;
+    color: rgb(9, 9, 9);
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -137,17 +142,27 @@
 }
 
 .contact-form .submit:hover {
-  background: #e6b800;
+  background: #f4e5a9;
 }
 
 .contact-form input::placeholder{
-  color: white;
+  color: rgb(88, 86, 86);
 }
 
 .contact-form textarea::placeholder{
-  color: white;
+  color: rgb(88, 86, 86);
 }
 
+
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
 
 
 /* Navbar Style */
@@ -170,7 +185,6 @@
       height: 100vh;
       background: url('images/background.jpg') no-repeat center center/cover;
       padding-top: 80px;
-      /* to avoid overlap with navbar */
     }
 
     .home .container {
@@ -182,55 +196,60 @@
       color: #d8aa03;
     }
 
-    .home-thumb h3 {
-      margin: 20px 0;
-      font-size: 24px;
-      color: whitesmoke;
 
-    }
+      /* Navbar Style */
 
-    .home-thumb a.btn {
-      text-decoration: none;
-      color: black;
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 5px;
-      display: inline-flex;
-      align-items: center;
+      .flex {
+        display: flex;
+        justify-content: center;
+      }
 
-    }
+      .logo {
+        margin-right: auto;
+        /* Optional: space between logo and right edge */
+      }
 
-    .home-thumb a.btn img {
-      height: 30px;
-      width: 30px;
-      margin-left: 15px;
-      border-radius: 5px;
-    }
+      .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        background: url("images/background.jpg") no-repeat center center/cover;
+        padding-top: 80px;
+        /* to avoid overlap with navbar */
+      }
 
-    .btn-default {
-      background-color: #0c0b0b;
-      border: none;
-      display: flex;
-      justify-items: center;
-      width: fit-content;
-      border: 2px solid red
-    }
+      .home .container {
+        max-width: 800px;
+      }
 
-    .btn-default:hover {
-      background-color: #4c4d4a;
-    }
-    .testimonial-author img {
-    display: block;
-    margin: 0 auto ;
-}
+      .home-thumb h1 {
+        font-size: 60px;
+        color: #d8aa03;
+      }
+
+      .home-thumb h3 {
+        margin: 20px 0;
+        font-size: 24px;
+        color: whitesmoke;
+      }
+
+      .home-thumb a.btn {
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 5px;
+        display: inline-flex;
+        align-items: center;
+      }
 
 
     .preloader {
       display: none;
-      /* Hide preloader by default */
-      /* Add preloader styles here if needed */
     }
-    /* Back to Top Button */
+
 .back-to-top {
     position: fixed;
     bottom: 120px;
@@ -248,119 +267,184 @@
     line-height: 10px;
 }
 
-.back-to-top:hover {
-    background-color: #484848;
-    color: #ffffff;
-    text-decoration: none;
-    
-}
+      .btn-default {
+        background-color: #0c0b0b;
+        border: none;
+        display: flex;
+        justify-items: center;
+        width: fit-content;
+        border: 2px solid red;
+      }
 
+      .btn-default:hover {
+        background-color: #4c4d4a;
+      }
+      .testimonial-author img {
+        display: block;
+        margin: 0 auto;
+      }
 
-  </style>
-</head>
+      .preloader {
+        display: none;
+        /* Hide preloader by default */
+        /* Add preloader styles here if needed */
+      }
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 120px;
+        right: 45px;
+        display: none; /* Hidden by default */
+        background-color: #3a63e4;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        border-radius: 50%;
+        font-size: 18px;
+        text-decoration: none;
+        z-index: 1000;
+        transition: opacity 0.3s ease;
+        line-height: 10px;
+      }
 
-<body>
+      .back-to-top:hover {
+        background-color: #484848;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
 
-  <!-- Chatbot integration section -->
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-      "composerPlaceholder": "Open Source Village",
-      "botConversationDescription": "Ask me anything!",
-      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
-      "lazySocket": true,
-      "themeName": "prism",
-      "botName": "Open Source Village",
-      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
-      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
-      "frontendVersion": "v1",
-      "showPoweredBy": true,
-      "theme": "prism",
-      "themeColor": "#2563eb",
-      "allowedOrigins": [],
-      "enableConversationDeletion": true
-    });
-  </script>
+  <body>
+    <!-- Chatbot integration section -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+        composerPlaceholder: "Open Source Village",
+        botConversationDescription: "Ask me anything!",
+        botId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        webhookId: "a909bd46-1d71-484d-8551-58afe6d64c1e",
+        lazySocket: true,
+        themeName: "prism",
+        botName: "Open Source Village",
+        avatarUrl:
+          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+        stylesheet:
+          "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+        frontendVersion: "v1",
+        showPoweredBy: true,
+        theme: "prism",
+        themeColor: "#2563eb",
+        allowedOrigins: [],
+        enableConversationDeletion: true,
+      });
+    </script>
 
-  <!-- preloader section -->
-  <section class="preloader">
-    <div class="sk-circle">
-      <div class="sk-circle1 sk-child"></div>
-      <div class="sk-circle2 sk-child"></div>
-      <div class="sk-circle3 sk-child"></div>
-      <div class="sk-circle4 sk-child"></div>
-      <div class="sk-circle5 sk-child"></div>
-      <div class="sk-circle6 sk-child"></div>
-      <div class="sk-circle7 sk-child"></div>
-      <div class="sk-circle8 sk-child"></div>
-      <div class="sk-circle9 sk-child"></div>
-      <div class="sk-circle10 sk-child"></div>
-      <div class="sk-circle11 sk-child"></div>
-      <div class="sk-circle12 sk-child"></div>
-    </div>
-  </section>
+    <!-- preloader section -->
+    <section class="preloader">
+      <div class="sk-circle">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+      </div>
+    </section>
 
+    <!-- Responsive Nav Bar -->
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fa-solid fa-circle-up"></i>
+    </button>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <nav>
+    <script>
+      let mybutton = document.getElementById("myBtn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
 
-      <!-- <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
-        <i class="fas fa-bars"></i>
-      </label> -->
       <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
       </label>
       <ul class="flex flex-col md:flex-row">
-        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feed-back">Feedback</a></li>
+        <li><i class="fa-solid fa-house" ></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-circle-info"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-list"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-user" ></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" ></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message"></i><a href="#feed-back">Feedback</a></li>
       </ul>
     </nav>
   </div>
 
-
-
-  <!-- Home Section -->
-  <section class="home" id="home">
-    <div class="container">
-      <div class="home-thumb">
-        <h1>Open Source Village</h1>
-        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
-        <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
-        <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-          data-wow-delay="1s">
-          Join Discord
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-            alt="Discord">
-        </a>
-        <a href="https://www.linkedin.com/company/open-source-village/"
-          class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
-          Follow us on LinkedIn
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
-            alt="LinkedIn">
-        </a>
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="container">
+        <div class="home-thumb">
+          <h1>Open Source Village</h1>
+          <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
+          <h3 class="wow fadeInUp" data-wow-delay="0.6s">
+            We are <strong>Open Source Village</strong>
+          </h3>
+          <h3 class="wow fadeInUp" data-wow-delay="0.8s">
+            <strong>Join </strong>our community now
+          </h3>
+          <a
+            href="https://discord.gg/mM9qFh2uZR"
+            class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+            data-wow-delay="1s"
+          >
+            Join Discord
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
+              alt="Discord"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/open-source-village/"
+            class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+            data-wow-delay="1s"
+          >
+            Follow us on LinkedIn
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
+              alt="LinkedIn"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    let popup = document.getElementById("popup");
-    function openPop() {
-      popup.classList.add("popup-active");
-    }
+    <script>
+      let popup = document.getElementById("popup");
+      function openPop() {
+        popup.classList.add("popup-active");
+      }
 
     function closepop() {
       popup.classList.remove("popup-active");
@@ -368,148 +452,181 @@
   </script>
 
 
-  <!-- about section -->
-  <section id="about">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-sm-12">
-          <img src="images/fav.png" class="img-responsive wow fadeInUp" alt="About">
-        </div>
-
-        <div class="col-md-6 col-sm-12">
-          <div class="about-thumb">
-            <div class="section-title">
-              <h1 class="wow fadeIn" data-wow-delay="0.2s">Our Mission</h1>
-              <!-- <h3 class="wow fadeInUp" data-wow-delay="0.4s"></h3> -->
-            </div>
-            <div class="wow fadeInUp" data-wow-delay="0.6s">
-              <p>
-                Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
-                coming together to achieve shared goals. Our mission is to create a safe and inclusive space where
-                members can connect, collaborate, and make a positive impact in the world. Join us and be a part of
-                something bigger than yourself! </p>
-            </div>
-          </div>
-        </div>
-
+    <!-- about section -->
+    <section id="about">
+      <div class="main-img">
+        <img src="fav.png" alt="" />
       </div>
-    </div>
-  </section>
-
-
-  <!-- services section -->
-  <section id="services">
-    <div class="container">
-      <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
-      <div class="service-container">
-        <div class="row d-grid gap-3">
-          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card wow fadeInUp"
-              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
-              <div class="wow fadeIn" data-wow-delay="0.2s">
-                <div class="card-heading">
-                  <h3 class="heading-hover">Open learning</h3>
-                </div>
-                <div class="card-context">
-                  <p>Our community promotes open learning, allowing members to share their knowledge and skills with
-                    others, fostering a culture of continuous growth.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card wow fadeInUp" data-wow-delay="0.8s"
-              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
-              <div class="wow fadeIn" data-wow-delay="0.2s">
-                <div class="card-heading">
-                  <h3 class="heading-hover">Network</h3>
-                </div>
-                <div class="card-context">
-                  <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
-                    opportunities for personal and professional growth.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card wow fadeInUp" data-wow-delay="1.2s"
-              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
-              <div class="wow fadeIn" data-wow-delay="0.2s">
-                <div class="card-heading">
-                  <h3 class="heading-hover">Mentorship</h3>
-                </div>
-                <div class="card-context">
-                  <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal
-                    and professional growth.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix text-center col-md-12 col-sm-12 ">
-          <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll d-flex ">
-            JOIN DISCORD
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-            alt="Discord" style="height: 40px; border-radius: 50px;">
-          </a>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="testimonials">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.4s">
-            <div class="testimonial-author">
-              <img src="images/testi_1.jpg" class="img-circle mb-2" alt="Testimonial Author">
-              <h4 class="mt-5">Arden Stone</h4>
-            </div>
-            <div class="testimonial-content">
-              <p>"Being a part of this community has been truly transformative. The support and encouragement I've received here have helped me grow both personally and professionally. I'm immensely grateful to have found such an inspiring group of people!"</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.6s">
-            <div class="testimonial-author">
-              <img src="images/testi_2.jpeg" class="img-circle" alt="Testimonial Author">
-              <h4 class="mt-5">John Smith</h4>
-            </div>
-            <div class="testimonial-content">
-              <p>"I've been involved with many groups in the past, but none have been as warm and welcoming as this one. The sense of belonging I feel here is unparalleled. It's incredible to be surrounded by individuals who share my values and passion for making a difference."</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.8s">
-            <div class="testimonial-author">
-              <img src="images/testi_3.jpeg" class="img-circle" alt="Testimonial Author">
-              <h4 class="mt-5">Emily Johnson</h4>
-            </div>
-            <div class="testimonial-content">
-              <p>"I was initially hesitant to join, but I'm so glad I did. The connections I've made here have opened up numerous opportunities for collaboration and personal development. It's amazing to see how much we can achieve when we come together with a common purpose."</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="text">
+        <br>
+        <br>
+        <br>
+        <h4>About</h4>
+        <h2>Open Source Village</h2>
   
+        <p>
+          Welcome to our community startup! We are a group of like-minded
+          individuals who believe in the power of coming together to achieve
+          shared goals. Our mission is to create a safe and inclusive space
+          where members can connect, collaborate, and make a positive impact in
+          the world. Join us and be a part of something bigger than yourself!
+        </p>
+        <div class="last-text">
+          <div class="text1">
+            <h3>1000+</h3>
+            <h5>MEMBERS</h5>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="faqq">
+<!-- services section -->
+<section id="services">
+  <div class="container">
+    <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
+    <div class="service-container">
+      <div class="row d-grid gap-3">
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Open learning</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community promotes open learning, allowing members to share their knowledge and skills with
+                  others, fostering a culture of continuous growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp" data-wow-delay="0.8s"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Network</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
+                  opportunities for personal and professional growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+          <div class="card wow fadeInUp" data-wow-delay="1.2s"
+            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="card-heading">
+                <h3 class="heading-hover">Mentorship</h3>
+              </div>
+              <div class="card-context">
+                <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal
+                  and professional growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll d-flex align-items-center">
+          JOIN DISCORD
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
+          alt="Discord" style="height: 40px; border-radius: 50px; margin-left: 10px;">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="containerr">
 
-      <div class="accordion">
 
-        <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
+
+    <!-- Testimonials section -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">
+              Testimonials
+            </h2>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.4s">
+              <div class="testimonial-author">
+                <img
+                  src="images/testi_1.jpg"
+                  class="img-circle mb-2"
+                  alt="Testimonial Author"
+                />
+                <h4 class="mt-5">Arden Stone</h4>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "Being a part of this community has been truly transformative.
+                  The support and encouragement I've received here have helped
+                  me grow both personally and professionally. I'm immensely
+                  grateful to have found such an inspiring group of people!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.6s">
+              <div class="testimonial-author">
+                <img
+                  src="images/testi_2.jpeg"
+                  class="img-circle"
+                  alt="Testimonial Author"
+                />
+                <h4 class="mt-5">John Smith</h4>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "I've been involved with many groups in the past, but none
+                  have been as warm and welcoming as this one. The sense of
+                  belonging I feel here is unparalleled. It's incredible to be
+                  surrounded by individuals who share my values and passion for
+                  making a difference."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.8s">
+              <div class="testimonial-author">
+                <img
+                  src="images/testi_3.jpeg"
+                  class="img-circle"
+                  alt="Testimonial Author"
+                />
+                <h4 class="mt-5">Emily Johnson</h4>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "I was initially hesitant to join, but I'm so glad I did. The
+                  connections I've made here have opened up numerous
+                  opportunities for collaboration and personal development. It's
+                  amazing to see how much we can achieve when we come together
+                  with a common purpose."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faqq">
+      <div class="containerr">
+        <div class="accordion">
+          <h1
+            class="section-title wow fadeInUp text-center"
+            data-wow-delay="0.3s"
+          >
+            FAQ
+          </h1>
 
         <div class="accordion-item">
 
@@ -580,17 +697,29 @@
             </p>
           </div>
         </div>
+        <div class="accordion-item">
+          <button id="accordion-button-6" aria-expanded="false">
+            <span class="accordion-title"></span>How can we provide the feedback?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Down of this FAQ section we provide you a feedback section you fill the following details and provide your valuable feedback.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    
 
   </section>
+
+  
   <!--
   <section id="experience">
     <div class="container">
 
       <div class="row" style="display: flex;align-items: center;justify-content: space-between;flex-direction: row;">
-
-
         <div class="card1 mb-3" style="max-width: 540px;">
           <div class="row g-0" style="height: 100%;">
             <div class="col-md-8 pic-col">
@@ -714,26 +843,88 @@
             </div>
           </div>
         </div>
-
-
-
-
-
-
       </div>
     </div>
   </section>
 -->
 
-  <!-- contact section -->
+    <!-- contact section -->
 
   <div class="formbody ">
     <main>
       <section id="contact">
         <div class="formcontainer">
           <div class="section-title">
-            <h1 class="get font-bold">Get in Touch</h1>
+            <h1 class="get font-bold"><b>Contact Us</b></h1>
             <p>If you have any query or for collaboration</p>
+          </div>
+
+          <div class="contact-form bg-gradient-to-r from-orange-400 to-yellow-300">
+
+            <form
+              id="contact-form"
+              action="http://127.0.0.1:5500/send-email"
+              method="POST"
+              onsubmit="reset(); return false;"
+            >
+              <div class="row">
+                <div class=" col-md-6 col-sm-6 rad" style="position:relative;">
+                  <label for="name">Name<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon bx bxs-user'></i>
+                  <input
+                    name="name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Your Name"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 col-sm-6 rad" style="position:relative;">
+                  <label for="email">Email<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon1 bx bxl-gmail'></i>
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter Your Email"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  />
+                </div>
+                <div class="col-md-8 msg rad " style="position:relative;">
+                  <label for="message">Message<span style="padding-left:1px;color:red;">*</span></label>
+                  <i class='icon2 bx bx-message'></i>
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="msg"
+                    placeholder="Enter Your Query Or Message"
+                    rows="6"
+                    style="padding-left:10%;color:white;border:2px solid white;"
+                    required
+                  ></textarea>
+                </div>
+                <div class="flex justify-center col-md-offset-0">
+                  <button class="submit" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section id="feedback">
+        <div class="formcontainer">
+          <div class="section-title">
+            <br>
+            
+            <br>
+            <h1 class="get font-bold">Feedback</h1>
+            <p>We value your feedback. Please let us know your thoughts and suggestions. </p>
+      
           </div>
           <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
             <form
@@ -776,248 +967,279 @@
                     required
                   ></textarea>
                 </div>
-                <div class="flex justify-center col-md-offset-0">
-                  <button class="submit" type="submit">Submit</button>
-                </div>
-              </div>
+                
+              <div class="col-12 rating rad">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1"><i class="fas fa-star"></i></label>
+            </div>
+            <div class="flex justify-center col-md-offset-0">
+              <button class="submit" type="submit">Submit</button>
+            </div>
+          </div>
             </form>
           </div>
-        </div>
+          <br>
+          <br>
       </section>
     </main>
 
+      <script>
+        function sendEmail() {
+          alert("Email sent successfully!");
+        }
+      </script>
+    </div>
+    <!-- footer section -->
+    <!-- <footer>
     <script>
       function sendEmail() {
         alert('Email sent successfully!');
       }
+
+// Message length greater than 50 characters
+    document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const messageInput = document.getElementById('msg');
+
+    contactForm.addEventListener('submit', function(event) {
+        if (messageInput.value.length < 50) {
+            event.preventDefault();
+            alert('Your message must be at least 50 characters long.');
+        } else {
+            alert('Email sent successfully!');
+            contactForm.reset();
+        }
+    });
+});
     </script>
   </div>
-  <hr>
- <!-- Feedback Section -->
- <section id="feed-back">
- <div class="feed">
-  <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-  <h2 class="head">Feedback Form</h2>
-  <p class="feedback-description">We appreciate your feedback! Please provide the following information:</p></div>
-  <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-  <form id="feedbackForm">
-      <label for="name" class="feedback-label">Your Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your Full Name" required>
-      <label for="email" class="feedback-label">Your Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your E-mail" required>
-      <label for="description" class="feedback-label">Description:</label>
-      <textarea class="message" id="description" name="description" placeholder="Your Feedback" required></textarea>
-      <p class="feedback-label">How satisfied are you with our service?</p><br>
-      <div class="feedback-smileys">
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😊')">😊</button>
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😄')">😄</button>
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😐')">😐</button>
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😞')">😞</button>
-        <button type="button" class="smiley-btn" onclick="selectSmiley('😢')">😢</button>
-    </div>
-    <input type="hidden" id="selectedSmiley" name="selectedSmiley">
-      <button type="submit" class="submit-btn">Submit</button>
-  </form>
-  </div>
-</div>
-</section>
   <!-- footer section -->
   <!-- <footer>
   <div class="container">
     <div class="row">
-
+      
       <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
       version="1.1" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0 L50 100 L100 0 Z"></path>
     </svg>
-
+    
     <div class="col-md-4 col-sm-6">
       <h2>Open Source Village</h2>
       <div class="wow fadeInUp" data-wow-delay="0.3s">
         <p>Be a Villager now</p>
         <p class="copyright-text">Copyright &copy; 2023 <br>
           Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
-  <!-- </div>
+    <!-- </div>
           </div>
-
-
+          
+          
           <ul class="social-icon">
             <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
             <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
           </ul>
         </div>
-
+        
       </div>
     </div>
   </footer> -->
-  <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
-    <div class="container">
-      <div class="footer_wrapper">
-        <div class="footer_box">
-          <div class="logo">
-            <div class="logo_img">
-
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
+      <div class="container">
+        <div class="footer_wrapper">
+          <div class="footer_box">
+            <div class="logo">
+              <div class="logo_img"></div>
+              <h2 class="fitbody">
+                <p>Open Source <strong>VILLAGER</strong></p>
+              </h2>
             </div>
-            <h2 class="fitbody">
-              <p>Open Source <strong>VILLAGER</strong> </p>
-            </h2>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="single_footer single_footer_address">
-              <h4>Join the Community now and become a Villager</h4>
-              <div class="signup_form">
-                <form action="#" class="subscribe">
-                  <input type="email" class="subscribe__input" autocapitalize="off" autocorrect="off" placeholder="Enter Email Address"><span id="subscribe_email_error" class="subscribe-error">Invalid email address.</span>
-                  <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
-                </form>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="single_footer single_footer_address">
+                <h4>Join the Community now and become a Villager</h4>
+                <div class="signup_form">
+                  <form action="#" class="subscribe">
+                    <input
+                      type="text"
+                      class="subscribe__input"
+                      placeholder="Enter Email Address"
+                    />
+                    <button type="button" class="subscribe__btn">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
-
-          </div><!--- END COL -->
-
-
+            <!--- END COL -->
+          </div>
+          <div class="footer_box">
+            <h4 class="footer_title" style="color: whitesmoke">Company</h4>
+            <ul class="footer_links">
+              <a>
+                <li>Our Program</li>
+              </a>
+              <a>
+                <li>Our Plan</li>
+              </a>
+              <a>
+                <li>Become A Member</li>
+              </a>
+            </ul>
+          </div>
+          <div class="footer_box">
+            <h4 class="footer_title">Quick Links</h4>
+            <ul class="footer_links">
+              <a>
+                <li>About Us</li>
+              </a>
+              <a>
+                <li>Contact Us</li>
+              </a>
+              <a>
+                <li>Support</li>
+              </a>
+            </ul>
+          </div>
         </div>
-        <div class="footer_box">
-          <h4 class="footer_title" style="color: whitesmoke;">Company</h4>
-          <ul class="footer_links">
-            <a href="our program.html">
-              <li>Our Program</li>
-            </a>
-            <a href="our plan.html">
-              <li>Our Plan</li>
-            </a>
-            <a href="member.html">
-              <li>Become A Member</li>
-            </a>
-          </ul>
-        </div>
-        <div class="footer_box">
-          <h4 class="footer_title">Quick Links</h4>
-          <ul class="footer_links">
-
-            <a href="#about">
-              <li>About Us</li>
-            </a>
-            <a href="#contact">
-              <li>Contact Us</li>
-            </a>
-            <a>
-              <li>Support</li>
-            </a>
-
-          </ul>
-        </div>
+        <p class="social_media">
+          <a><i class="fab fa-github"></i></a>
+          <a><i class="fab fa-linkedin"></i></a>
+          <a><i class="fab fa-instagram"></i></a>
+          <a><i class="fab fa-facebook"></i></a>
+          <a><i class="fab fa-twitter"></i></a>
+        </p>
+        <p class="copyright">
+          Copyright &copy
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Developed by open source. All rights reserved.
+        </p>
       </div>
-      <p class="social_media">
-        <a><i class="fab fa-github"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-facebook"></i></a>
-        <a><i class="fab fa-twitter"></i></a>
+    </footer>
 
-      </p>
-      <p class="copyright">
-        Copyright &copy
-        <script>document.write(new Date().getFullYear())</script> Developed by open source. All rights reserved.
-      </p>
-    </div>
-  </footer>
+    <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
 
-  <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+    <!-- javscript js -->
+    <script>
+      // Get the button
+      let backToTopBtn = document.getElementById("backToTopBtn");
 
+      // When the user scrolls down 100px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      }
 
-  <!-- javscript js -->
-<script>
-  // Get the button
-let backToTopBtn = document.getElementById("backToTopBtn");
-
-// When the user scrolls down 100px from the top of the document, show the button
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-backToTopBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    window.scrollTo({top: 0, behavior: 'smooth'});
-});
-</script>
-  <script>
-    function sendEmail() {
-      Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "yash.223234108@vcet.edu.in",
-        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
-        To: 'itsamanyadav18@gmail.com',
-        From: document.getElementById('email').value,
-        Subject: "This is the subject",
-        Body: "Name:" + document.getElementById("name").value
-          + "<br> Email:" + document.getElementById("email").value
-          + "<br> Message:" + document.getElementById("msg").value
-
-      }).then(
-        message => alert("Message sent successsfully")
-      );
-    }
-    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-      if (!document.querySelector('.smiley-btn.active')) {
+      // When the user clicks on the button, scroll to the top of the document
+      backToTopBtn.addEventListener("click", function (event) {
         event.preventDefault();
-        alert("Please select a smiley before submitting.");
-        return;
-    }
-            event.preventDefault();
-            alert('Thank you for your feedback!');
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
         });
-      function selectSmiley(smiley) {
-        document.getElementById('selectedSmiley').value = smiley;
-        var smileyBtns = document.querySelectorAll('.smiley-btn');
-        smileyBtns.forEach(function(btn) {
-            btn.classList.remove('active');
-        });
-        event.target.classList.add('active');
-    }
-  </script>
+      });
+      const sections = document.querySelectorAll("section");
 
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "yash.223234108@vcet.edu.in",
+          Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+          To: "itsamanyadav18@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "This is the subject",
+          Body:
+            "Name:" +
+            document.getElementById("name").value +
+            "<br> Email:" +
+            document.getElementById("email").value +
+            "<br> Message:" +
+            document.getElementById("msg").value,
+        }).then((message) => alert("Message sent successsfully"));
+      }
+    </script>
 
-  <script src="js/vegas.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-  <script src="js/wow.min.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-      "composerPlaceholder": "Open Source Village",
-      "botConversationDescription": "This chatbot is for the community",
-      "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-      "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
-      "lazySocket": true,
-      "themeName": "prism",
-      "frontendVersion": "v1",
-      "showPoweredBy": true,
-      "theme": "prism",
-      "themeColor": "#2563eb",
-      "allowedOrigins": []
-    });
-  </script>
-</body>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
+    <script src="js/vegas.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+        composerPlaceholder: "Open Source Village",
+        botConversationDescription: "This chatbot is for the community",
+        botId: "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+        webhookId: "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+        lazySocket: true,
+        themeName: "prism",
+        frontendVersion: "v1",
+        showPoweredBy: true,
+        theme: "prism",
+        themeColor: "#2563eb",
+        allowedOrigins: [],
+      });
+    </script>
+
+<script type="text/javascript">
+  window.addEventListener("scroll", function(){
+    var header= document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY >10)
+  })
+</script>
+  </body>
 </html>
