@@ -14,14 +14,14 @@ http://www.templatemo.com/tm-490-comila
   box-sizing: border-box;
 }
 
-nav {
-  background-color: rgba(0, 0, 0, 0.2);
+/* nav {
+  background-color: rgba(0,0,0,0.2);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-}
+} */
 
 .logo-container {
   display: inline-flex;
@@ -853,7 +853,7 @@ div.card {
 
 /* Navbar section */
 .navbar {
-  background: rgba(0, 0, 0, 0.7);
+  /* background: rgba(0, 0, 0, 0.7); */
   position: fixed;
   top: 0;
   left: 0;
@@ -862,18 +862,42 @@ div.card {
 }
 
 .navbar nav {
+  position:fixed;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 90px;
+  top: 0;
+  left: 0;
+  width:100%;
+  padding: 20px 0px;
+  border:none;
+  transition: all 0.6s;
 }
-
+.navbar nav.sticky{
+  height:80px;
+  background: linear-gradient(rgb(183, 123, 27),rgba(249, 177, 43, 0.818));
+  color:white !important;
+  /* border-bottom: 1.5px solid rgb(0, 0, 0); */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 2px 2px rgb(78, 38, 17, 0.8);
+  padding: 10px 0px;
+}
+.navbar nav ul li i{
+  filter:invert(1);
+}
+.navbar nav.sticky ul li i{
+  filter:invert(0);
+}
 .navbar .logo {
   display: flex;
   align-items: center;
   color: white;
   font-size: 35px;
-  line-height: 80px;
+  line-height: 60px;
   padding: 0 20px;
   font-weight: bold;
 }
@@ -889,6 +913,26 @@ div.card {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.navbar ul li a {
+  color: #fcfafa;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  color: #fcf6f6;
+  background: linear-gradient(to top left, #edfc4890 30%, #f4d01e 20%);
+  transform: scale(1.2) translateY(10px);
 }
 
 .navbar .checkbut {
