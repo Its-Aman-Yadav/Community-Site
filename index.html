@@ -312,6 +312,7 @@
         color: #ffffff;
         text-decoration: none;
       }
+   
     </style>
   </head>
 
@@ -540,11 +541,146 @@
   </div>
 </section>
 
-
-
-
     <!-- Testimonials section -->
     <section id="testimonials">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="containeerr">
+              
+              <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <ul class="carousell">
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-1.jpg" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Being a part of this community has been truly transformative.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-2.jpg" alt="img" draggable="false"></div>
+                    <h2>Joenas Brauers</h2>
+                    <span> It's incredible to have such a supportive community around me.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-3.jpg" alt="img" draggable="false"></div>
+                    <h2>Lariach French</h2>
+                    <span>It's amazing to be among such driven people.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-4.jpg" alt="img" draggable="false"></div>
+                    <h2>James Khosravi</h2>
+                    <span>I've found endless support and inspiration.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-5.jpg" alt="img" draggable="false"></div>
+                    <h2>Kristina Zasiadko</h2>
+                    <span>The connections I've made are invaluable.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-6.jpg" alt="img" draggable="false"></div>
+                    <h2>Donald Horton</h2>
+                    <span>This community has changed my life.</span>
+                  </li>
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+const carousell = document.querySelector(".carousell");
+const firstCardWidth = carousell.querySelector(".cardd").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousell.children];
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+// Get the number of cards that can fit in the carousel at once
+let cardPerView = Math.round(carousell.offsetWidth / firstCardWidth);
+
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+carouselChildrens.slice(-cardPerView).reverse().forEach(cardd => {
+    carousell.insertAdjacentHTML("afterbegin", cardd.outerHTML);
+});
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+carouselChildrens.slice(0, cardPerView).forEach(cardd => {
+    carousell.insertAdjacentHTML("beforeend", cardd.outerHTML);
+});
+
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+carousell.classList.add("no-transition");
+carousell.scrollLeft = carousell.offsetWidth;
+carousell.classList.remove("no-transition");
+
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousell.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+    });
+});
+
+const dragStart = (e) => {
+    isDragging = true;
+    carousell.classList.add("dragging");
+    // Records the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = carousell.scrollLeft;
+}
+
+const dragging = (e) => {
+    if(!isDragging) return; // if isDragging is false return from here
+    // Updates the scroll position of the carousel based on the cursor movement
+    carousell.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+    isDragging = false;
+    carousell.classList.remove("dragging");
+}
+
+const infiniteScroll = () => {
+    // If the carousel is at the beginning, scroll to the end
+    if(carousell.scrollLeft === 0) {
+        carousell.classList.add("no-transition");
+        carousell.scrollLeft = carousell.scrollWidth - (2 * carousell.offsetWidth);
+        carousell.classList.remove("no-transition");
+    }
+    // If the carousel is at the end, scroll to the beginning
+    else if(Math.ceil(carousell.scrollLeft) === carousell.scrollWidth - carousell.offsetWidth) {
+        carousell.classList.add("no-transition");
+        carousell.scrollLeft = carousell.offsetWidth;
+        carousell.classList.remove("no-transition");
+    }
+
+    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+    clearTimeout(timeoutId);
+    if(!wrapper.matches(":hover")) autoPlay();
+}
+
+const autoPlay = () => {
+    if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+    // Autoplay the carousel after every 2500 ms
+    timeoutId = setTimeout(() => carousell.scrollLeft += firstCardWidth, 2500);
+}
+autoPlay();
+
+carousell.addEventListener("mousedown", dragStart);
+carousell.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousell.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
+
+    </script>
+
+    <!-- <section id="testimonials">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -616,7 +752,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="faqq">
       <div class="containerr">
