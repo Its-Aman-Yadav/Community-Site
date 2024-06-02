@@ -1,18 +1,20 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
 
-    <title>Open Source Village</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Open Source Village</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
 
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="icon" href="fav.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -22,113 +24,62 @@
     href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
     rel="stylesheet">
 
-    <link rel="stylesheet" href="css/et-line-font.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/et-line-font.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/vegas.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <style>
-      @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+  <link rel="stylesheet" href="css/vegas.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
 
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
+<body>
 
+  <!-- Chatbot integration section -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "Ask me anything!",
+      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Open Source Village",
+      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": [],
+      "enableConversationDeletion": true
+    });
+  </script>
 
-      .get {
-        color: black;
-      }
-      .get2 {
-        color: rgb(255, 254, 254);
-      }
-      .getn {
-        color: rgb(255, 254, 254);
-      }
-      section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      }
+  <!-- preloader section -->
+  <section class="preloader">
+    <div class="sk-circle">
+      <div class="sk-circle1 sk-child"></div>
+      <div class="sk-circle2 sk-child"></div>
+      <div class="sk-circle3 sk-child"></div>
+      <div class="sk-circle4 sk-child"></div>
+      <div class="sk-circle5 sk-child"></div>
+      <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+      <div class="sk-circle8 sk-child"></div>
+      <div class="sk-circle9 sk-child"></div>
+      <div class="sk-circle10 sk-child"></div>
+      <div class="sk-circle11 sk-child"></div>
+      <div class="sk-circle12 sk-child"></div>
+    </div>
+  </section>
 
-      section.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Contact Us Style  */
-
-      #contact {
-        padding: 50px 0;
-        background: #fff;
-      }
-
-      .formcontainer {
-        max-width: 600px;
-        margin: auto;
-        padding: 0 20px;
-      }
-
-      .section-title {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-
-.section-title .get {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #040303;
-}
-
-      .section-title p {
-        font-size: 16px;
-        color: #555;
-      }
-
-      .contact-form {
-        background: #fffbe6;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 0 25px black;
-      }
-
-      .contact-form .row {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .contact-form .rad {
-        width: 100%;
-        margin-bottom: 15px;
-      }
-
-#contact-form .form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 16px;
-  background: #f1eded;
-  color: rgb(0, 0, 0);
-}
-
-.contact-form .form-control:focus {
-  border-color: #f5d244;
-  box-shadow: 0 0 5px rgba(126, 230, 128, 0.5);
-}
 
 .contact-form .submit {
   background: #e18b09;
@@ -147,306 +98,76 @@
   color: white;
 }
 
-.contact-form input::placeholder{
-  color: rgb(88, 86, 86);
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
+
+<script>
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
-
-.contact-form textarea::placeholder{
-  color: rgb(88, 86, 86);
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
 }
+</script>
 
-
-
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
-
-
-/* Navbar Style */
-
-.flex {
-  display: flex;
-  justify-content: center;
-}
-
-    .logo {
-      margin-right: auto;
-      /* Optional: space between logo and right edge */
-    }
-
-    .home {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 100vh;
-      background: url('images/background.jpg') no-repeat center center/cover;
-      padding-top: 80px;
-    }
-
-    .home .container {
-      max-width: 800px;
-    }
-
-    .home-thumb h1 {
-      font-size: 60px;
-      color: #d8aa03;
-    }
-
-
-      /* Navbar Style */
-
-      .flex {
-        display: flex;
-        justify-content: center;
-      }
-
-      .logo {
-        margin-right: auto;
-        /* Optional: space between logo and right edge */
-      }
-
-      .home {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100vh;
-        background: url("images/background.jpg") no-repeat center center/cover;
-        padding-top: 80px;
-        /* to avoid overlap with navbar */
-      }
-
-      .home .container {
-        max-width: 800px;
-      }
-
-      .home-thumb h1 {
-        font-size: 60px;
-        color: #d8aa03;
-      }
-
-      .home-thumb h3 {
-        margin: 20px 0;
-        font-size: 24px;
-        color: whitesmoke;
-      }
-
-      .home-thumb a.btn {
-        text-decoration: none;
-        color: black;
-        padding: 10px 20px;
-        margin: 10px;
-        border-radius: 5px;
-        display: inline-flex;
-        align-items: center;
-      }
-
-
-    .preloader {
-      display: none;
-    }
-
-.back-to-top {
-    position: fixed;
-    bottom: 120px;
-    right: 45px;
-    display: none; /* Hidden by default */
-    background-color: #3a63e4;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    border-radius: 50%;
-    font-size: 18px;
-    text-decoration: none;
-    z-index: 1000;
-    transition: opacity 0.3s ease;
-    line-height: 10px;
-}
-
-      .btn-default {
-        background-color: #0c0b0b;
-        border: none;
-        display: flex;
-        justify-items: center;
-        width: fit-content;
-        border: 2px solid red;
-      }
-
-      .btn-default:hover {
-        background-color: #4c4d4a;
-      }
-      .testimonial-author img {
-        display: block;
-        margin: 0 auto;
-      }
-
-      .preloader {
-        display: none;
-        /* Hide preloader by default */
-        /* Add preloader styles here if needed */
-      }
-      /* Back to Top Button */
-      .back-to-top {
-        position: fixed;
-        bottom: 120px;
-        right: 45px;
-        display: none; /* Hidden by default */
-        background-color: #3a63e4;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        border-radius: 50%;
-        font-size: 18px;
-        text-decoration: none;
-        z-index: 1000;
-        transition: opacity 0.3s ease;
-        line-height: 10px;
-      }
-
-      .back-to-top:hover {
-        background-color: #484848;
-        color: #ffffff;
-        text-decoration: none;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Chatbot integration section -->
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
-      window.botpressWebChat.init({
-        composerPlaceholder: "Open Source Village",
-        botConversationDescription: "Ask me anything!",
-        botId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
-        messagingUrl: "https://messaging.botpress.cloud",
-        clientId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-        webhookId: "a909bd46-1d71-484d-8551-58afe6d64c1e",
-        lazySocket: true,
-        themeName: "prism",
-        botName: "Open Source Village",
-        avatarUrl:
-          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
-        stylesheet:
-          "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
-        frontendVersion: "v1",
-        showPoweredBy: true,
-        theme: "prism",
-        themeColor: "#2563eb",
-        allowedOrigins: [],
-        enableConversationDeletion: true,
-      });
-    </script>
-
-    <!-- preloader section -->
-    <section class="preloader">
-      <div class="sk-circle">
-        <div class="sk-circle1 sk-child"></div>
-        <div class="sk-circle2 sk-child"></div>
-        <div class="sk-circle3 sk-child"></div>
-        <div class="sk-circle4 sk-child"></div>
-        <div class="sk-circle5 sk-child"></div>
-        <div class="sk-circle6 sk-child"></div>
-        <div class="sk-circle7 sk-child"></div>
-        <div class="sk-circle8 sk-child"></div>
-        <div class="sk-circle9 sk-child"></div>
-        <div class="sk-circle10 sk-child"></div>
-        <div class="sk-circle11 sk-child"></div>
-        <div class="sk-circle12 sk-child"></div>
-      </div>
-    </section>
-
-    <!-- Responsive Nav Bar -->
-
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
-      <i class="fa-solid fa-circle-up"></i>
-    </button>
-
-    <script>
-      let mybutton = document.getElementById("myBtn");
-      window.onscroll = function () {
-        scrollFunction();
-      };
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
-
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <!-- <input type="checkbox" id="check">
+      <label for="check" class="checkbut">
+        <i class="fas fa-bars"></i>
+      </label> -->
       <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
       </label>
       <ul class="flex flex-col md:flex-row">
-        <li><i class="fa-solid fa-house" ></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user" ></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" ></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message"></i><a href="#feed-back">Feedback</a></li>
+        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
       </ul>
     </nav>
   </div>
 
-    <!-- Home Section -->
-    <section class="home" id="home">
-      <div class="container">
-        <div class="home-thumb">
-          <h1>Open Source Village</h1>
-          <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-          <h3 class="wow fadeInUp" data-wow-delay="0.6s">
-            We are <strong>Open Source Village</strong>
-          </h3>
-          <h3 class="wow fadeInUp" data-wow-delay="0.8s">
-            <strong>Join </strong>our community now
-          </h3>
-          <a
-            href="https://discord.gg/mM9qFh2uZR"
-            class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-            data-wow-delay="1s"
-          >
-            Join Discord
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-              alt="Discord"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/open-source-village/"
-            class="btn btn-lg btn-default smoothScroll wow fadeInUp"
-            data-wow-delay="1s"
-          >
-            Follow us on LinkedIn
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
-              alt="LinkedIn"
-            />
-          </a>
-        </div>
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="container">
+      <div class="home-thumb">
+        <h1>Open Source Village</h1>
+        <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
+        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
+        <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
+        <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
+          data-wow-delay="1s">
+          Join Discord
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
+            alt="Discord">
+        </a>
+        <a href="https://www.linkedin.com/company/open-source-village/"
+          class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">
+          Follow us on LinkedIn
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
+            alt="LinkedIn">
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script>
-      let popup = document.getElementById("popup");
-      function openPop() {
-        popup.classList.add("popup-active");
-      }
+  <script>
+    let popup = document.getElementById("popup");
+    function openPop() {
+      popup.classList.add("popup-active");
+    }
 
     function closepop() {
       popup.classList.remove("popup-active");
@@ -481,6 +202,7 @@
         </div>
       </div>
     </section>
+
 
 <!-- services section -->
 <section id="services">
@@ -542,93 +264,118 @@
   </div>
 </section>
 
-
-
-
     <!-- Testimonials section -->
     <section id="testimonials">
       <div class="container">
+        <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
         <div class="row">
           <div class="col-md-12">
-            <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">
-              Testimonials
-            </h2>
-          </div>
-          <div class="col-md-4">
-            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.4s">
-              <div class="testimonial-author">
-                <img
-                  src="images/testi_1.jpg"
-                  class="img-circle mb-2"
-                  alt="Testimonial Author"
-                />
-                <h4 class="mt-5">Arden Stone</h4>
-              </div>
-              <div class="testimonial-content">
-                <p>
-                  "Being a part of this community has been truly transformative.
-                  The support and encouragement I've received here have helped
-                  me grow both personally and professionally. I'm immensely
-                  grateful to have found such an inspiring group of people!"
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.6s">
-              <div class="testimonial-author">
-                <img
-                  src="images/testi_2.jpeg"
-                  class="img-circle"
-                  alt="Testimonial Author"
-                />
-                <h4 class="mt-5">John Smith</h4>
-              </div>
-              <div class="testimonial-content">
-                <p>
-                  "I've been involved with many groups in the past, but none
-                  have been as warm and welcoming as this one. The sense of
-                  belonging I feel here is unparalleled. It's incredible to be
-                  surrounded by individuals who share my values and passion for
-                  making a difference."
-                </p>
+            <div class="containeerr">
+              
+              <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <ul class="carousell">
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-1.jpg" alt="img" draggable="false"></div>
+                    <h2>Blanche Pearson</h2>
+                    <span>Being a part of this community has been truly transformative.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-2.jpg" alt="img" draggable="false"></div>
+                    <h2>Joenas Brauers</h2>
+                    <span> It's incredible to have such a supportive community around me.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-3.jpg" alt="img" draggable="false"></div>
+                    <h2>Lariach French</h2>
+                    <span>It's amazing to be among such driven people.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-4.jpg" alt="img" draggable="false"></div>
+                    <h2>James Khosravi</h2>
+                    <span>I've found endless support and inspiration.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-5.jpg" alt="img" draggable="false"></div>
+                    <h2>Kristina Zasiadko</h2>
+                    <span>The connections I've made are invaluable.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="/Community-Site/images/img-6.jpg" alt="img" draggable="false"></div>
+                    <h2>Donald Horton</h2>
+                    <span>This community has changed my life.</span>
+                  </li>
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right"></i>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="testimonial-box wow fadeInUp" data-wow-delay="0.8s">
-              <div class="testimonial-author">
-                <img
-                  src="images/testi_3.jpeg"
-                  class="img-circle"
-                  alt="Testimonial Author"
-                />
-                <h4 class="mt-5">Emily Johnson</h4>
-              </div>
-              <div class="testimonial-content">
-                <p>
-                  "I was initially hesitant to join, but I'm so glad I did. The
-                  connections I've made here have opened up numerous
-                  opportunities for collaboration and personal development. It's
-                  amazing to see how much we can achieve when we come together
-                  with a common purpose."
-                </p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
     </section>
 
-    <section class="faqq">
-      <div class="containerr">
-        <div class="accordion">
-          <h1
-            class="section-title wow fadeInUp text-center"
-            data-wow-delay="0.3s"
-          >
-            FAQ
-          </h1>
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+const carousell = document.querySelector(".carousell");
+const firstCardWidth = carousell.querySelector(".cardd").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousell.children];
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+  <!-- Testimonials section -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.4s">
+            <div class="testimonial-author">
+              <img src="images/testi_1.jpg" class="img-circle mb-2" alt="Testimonial Author">
+              <h4 class="mt-5">Arden Stone</h4>
+            </div>
+            <div class="testimonial-content">
+              <p>"Being a part of this community has been truly transformative. The support and encouragement I've received here have helped me grow both personally and professionally. I'm immensely grateful to have found such an inspiring group of people!"</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.6s">
+            <div class="testimonial-author">
+              <img src="images/testi_2.jpeg" class="img-circle" alt="Testimonial Author">
+              <h4 class="mt-5">John Smith</h4>
+            </div>
+            <div class="testimonial-content">
+              <p>"I've been involved with many groups in the past, but none have been as warm and welcoming as this one. The sense of belonging I feel here is unparalleled. It's incredible to be surrounded by individuals who share my values and passion for making a difference."</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.8s">
+            <div class="testimonial-author">
+              <img src="images/testi_3.jpeg" class="img-circle" alt="Testimonial Author">
+              <h4 class="mt-5">Emily Johnson</h4>
+            </div>
+            <div class="testimonial-content">
+              <p>"I was initially hesitant to join, but I'm so glad I did. The connections I've made here have opened up numerous opportunities for collaboration and personal development. It's amazing to see how much we can achieve when we come together with a common purpose."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="faqq">
+
+    <div class="containerr">
+
+      <div class="accordion">
+
+        <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
 
         <div class="accordion-item">
 
@@ -699,20 +446,8 @@
             </p>
           </div>
         </div>
-        <div class="accordion-item">
-          <button id="accordion-button-6" aria-expanded="false">
-            <span class="accordion-title"></span>How can we provide the feedback?
-            <span class="icon" aria-hidden="true"></span>
-          </button>
-          <div class="accordion-content">
-            <p>
-              Down of this FAQ section we provide you a feedback section you fill the following details and provide your valuable feedback.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
-    
 
   </section>
 
@@ -850,62 +585,54 @@
   </section>
 -->
 
-    <!-- contact section -->
+  <!-- contact section -->
 
   <div class="formbody ">
     <main>
       <section id="contact">
         <div class="formcontainer">
           <div class="section-title">
-            <h1 class="get font-bold"><b>Contact Us</b></h1>
+            <h1 class="get font-bold">Get in Touch</h1>
             <p>If you have any query or for collaboration</p>
           </div>
-
-          <div class="contact-form bg-gradient-to-r from-orange-400 to-yellow-300">
-
+          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
             <form
               id="contact-form"
               action="http://127.0.0.1:5500/send-email"
               method="POST"
-              onsubmit="reset(); return false;"
+              onsubmit="sendEmail(); reset(); return false;"
             >
               <div class="row">
-                <div class=" col-md-6 col-sm-6 rad" style="position:relative;">
-                  <label for="name">Name<span style="padding-left:1px;color:red;">*</span></label>
-                  <i class='icon bx bxs-user'></i>
+                <div class="col-md-6 col-sm-6 rad">
+                  <label for="name">Name</label>
                   <input
                     name="name"
                     id="name"
                     type="text"
                     class="form-control"
                     placeholder="Enter Your Name"
-                    style="padding-left:10%;color:white;border:2px solid white;"
                     required
                   />
                 </div>
-                <div class="col-md-6 col-sm-6 rad" style="position:relative;">
-                  <label for="email">Email<span style="padding-left:1px;color:red;">*</span></label>
-                  <i class='icon1 bx bxl-gmail'></i>
+                <div class="col-md-6 col-sm-6 rad">
+                  <label for="email">Email</label>
                   <input
                     name="email"
                     type="email"
                     id="email"
                     class="form-control"
                     placeholder="Enter Your Email"
-                    style="padding-left:10%;color:white;border:2px solid white;"
                     required
                   />
                 </div>
-                <div class="col-md-8 msg rad " style="position:relative;">
-                  <label for="message">Message<span style="padding-left:1px;color:red;">*</span></label>
-                  <i class='icon2 bx bx-message'></i>
+                <div class="col-md-8 msg rad ">
+                  <label for="message">Message</label>
                   <textarea
                     name="message"
                     class="form-control"
                     id="msg"
                     placeholder="Enter Your Query Or Message"
                     rows="6"
-                    style="padding-left:10%;color:white;border:2px solid white;"
                     required
                   ></textarea>
                 </div>
@@ -933,7 +660,7 @@
               id="contact-form"
               action="http://127.0.0.1:5500/send-email"
               method="POST"
-              onsubmit="sendEmail(); reset(); return false;"
+              onsubmit="sendFeed(); reset(); return false;"
             >
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
@@ -993,34 +720,10 @@
       </section>
     </main>
 
-      <script>
-        function sendEmail() {
-          alert("Email sent successfully!");
-        }
-      </script>
-    </div>
-    <!-- footer section -->
-    <!-- <footer>
     <script>
-      function sendEmail() {
+      function sendFeed() {
         alert('Email sent successfully!');
       }
-
-// Message length greater than 50 characters
-    document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    const messageInput = document.getElementById('msg');
-
-    contactForm.addEventListener('submit', function(event) {
-        if (messageInput.value.length < 50) {
-            event.preventDefault();
-            alert('Your message must be at least 50 characters long.');
-        } else {
-            alert('Email sent successfully!');
-            contactForm.reset();
-        }
-    });
-});
     </script>
   </div>
   <!-- footer section -->
@@ -1039,7 +742,7 @@
         <p>Be a Villager now</p>
         <p class="copyright-text">Copyright &copy; 2023 <br>
           Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
-    <!-- </div>
+  <!-- </div>
           </div>
           
           
@@ -1052,196 +755,202 @@
       </div>
     </div>
   </footer> -->
-    <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
-      <div class="container">
-        <div class="footer_wrapper">
-          <div class="footer_box">
-            <div class="logo">
-              <div class="logo_img"></div>
-              <h2 class="fitbody">
-                <p>Open Source <strong>VILLAGER</strong></p>
-              </h2>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="single_footer single_footer_address">
-                <h4>Join the Community now and become a Villager</h4>
-                <div class="signup_form">
-                  <form action="#" class="subscribe">
-                    <input
-                      type="text"
-                      class="subscribe__input"
-                      placeholder="Enter Email Address"
-                    />
-                    <button type="button" class="subscribe__btn">
-                      <i class="fas fa-paper-plane"></i>
-                    </button>
-                  </form>
-                </div>
+  <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
+    <div class="container">
+      <div class="footer_wrapper">
+        <div class="footer_box">
+          <div class="logo">
+            <div class="logo_img"></div>
+            <h2 class="fitbody">
+              <p>Open Source <strong>VILLAGER</strong></p>
+            </h2>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="single_footer single_footer_address">
+              <h4>Join the Community now and become a Villager</h4>
+              <div class="signup_form">
+                <form action="#" class="subscribe">
+                  <input
+                    type="text"
+                    class="subscribe__input"
+                    placeholder="Enter Email Address"
+                  />
+                  <button type="button" class="subscribe__btn">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </form>
               </div>
             </div>
-            <!--- END COL -->
           </div>
-          <div class="footer_box">
-            <h4 class="footer_title" style="color: whitesmoke">Company</h4>
-            <ul class="footer_links">
-              <a>
-                <li>Our Program</li>
-              </a>
-              <a>
-                <li>Our Plan</li>
-              </a>
-              <a>
-                <li>Become A Member</li>
-              </a>
-            </ul>
-          </div>
-          <div class="footer_box">
-            <h4 class="footer_title">Quick Links</h4>
-            <ul class="footer_links">
-              <a>
-                <li>About Us</li>
-              </a>
-              <a>
-                <li>Contact Us</li>
-              </a>
-              <a>
-                <li>Support</li>
-              </a>
-            </ul>
-          </div>
+          <!--- END COL -->
         </div>
-        <p class="social_media">
-          <a><i class="fab fa-github"></i></a>
-          <a><i class="fab fa-linkedin"></i></a>
-          <a><i class="fab fa-instagram"></i></a>
-          <a><i class="fab fa-facebook"></i></a>
-          <a><i class="fab fa-twitter"></i></a>
-        </p>
-        <p class="copyright">
-          Copyright &copy
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          Developed by open source. All rights reserved.
-        </p>
+        <div class="footer_box">
+          <h4 class="footer_title" style="color: whitesmoke">Company</h4>
+          <ul class="footer_links">
+            <a>
+              <li>Our Program</li>
+            </a>
+            <a>
+              <li>Our Plan</li>
+            </a>
+            <a>
+              <li>Become A Member</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer_box">
+          <h4 class="footer_title">Quick Links</h4>
+          <ul class="footer_links">
+            <a>
+              <li>About Us</li>
+            </a>
+            <a>
+              <li>Contact Us</li>
+            </a>
+            <a>
+              <li>Support</li>
+            </a>
+          </ul>
+        </div>
       </div>
-    </footer>
+      <p class="social_media">
+        <a><i class="fab fa-github"></i></a>
+        <a><i class="fab fa-linkedin"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-facebook"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+      </p>
+      <p class="copyright">
+        Copyright &copy
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Developed by open source. All rights reserved.
+      </p>
+    </div>
+  </footer>
 
-    <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
 
-    <!-- javscript js -->
-    <script>
-      // Get the button
-      let backToTopBtn = document.getElementById("backToTopBtn");
+  <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
 
-      // When the user scrolls down 100px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
 
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          backToTopBtn.style.display = "block";
-        } else {
-          backToTopBtn.style.display = "none";
-        }
-      }
 
-      // When the user clicks on the button, scroll to the top of the document
-      backToTopBtn.addEventListener("click", function (event) {
-        event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    </script>
-    <script>
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
+  <!-- javscript js -->
+<script>
+  // Get the button
+let backToTopBtn = document.getElementById("backToTopBtn");
 
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
-      const sections = document.querySelectorAll("section");
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        {
-          threshold: 0.1,
-        }
-      );
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
 
-      sections.forEach((section) => {
-        observer.observe(section);
-      });
-    </script>
-    <script>
-      function sendEmail() {
-        Email.send({
-          Host: "smtp.elasticemail.com",
-          Username: "yash.223234108@vcet.edu.in",
-          Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
-          To: "itsamanyadav18@gmail.com",
-          From: document.getElementById("email").value,
-          Subject: "This is the subject",
-          Body:
-            "Name:" +
-            document.getElementById("name").value +
-            "<br> Email:" +
-            document.getElementById("email").value +
-            "<br> Message:" +
-            document.getElementById("msg").value,
-        }).then((message) => alert("Message sent successsfully"));
-      }
-    </script>
-
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="js/vegas.min.js"></script>
-
-    <script src="js/wow.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
-      window.botpressWebChat.init({
-        composerPlaceholder: "Open Source Village",
-        botConversationDescription: "This chatbot is for the community",
-        botId: "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
-        messagingUrl: "https://messaging.botpress.cloud",
-        clientId: "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-        webhookId: "156ea257-2b52-4e1c-92b1-ffeb42198f56",
-        lazySocket: true,
-        themeName: "prism",
-        frontendVersion: "v1",
-        showPoweredBy: true,
-        theme: "prism",
-        themeColor: "#2563eb",
-        allowedOrigins: [],
-      });
-    </script>
-
-<script type="text/javascript">
-  window.addEventListener("scroll", function(){
-    var header= document.querySelector("nav");
-    header.classList.toggle("sticky", window.scrollY >10)
-  })
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
 </script>
-  </body>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Message sent successsfully")
+      );
+    }
+    function sendFeed() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Feedback sent successsfully")
+      );
+    }
+  </script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/vegas.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "This chatbot is for the community",
+      "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+    });
+  </script>
+</body>
+
 </html>
