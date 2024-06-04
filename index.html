@@ -32,6 +32,12 @@
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+ <!-- remixicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
+
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
   <style>
     .contact-form .submit {
         background: #e18b09;
@@ -51,6 +57,9 @@
       }
   </style>
 </head>
+
+
+
 
 <body>
 
@@ -265,68 +274,100 @@ function topFunction() {
 </section>
 
     <!-- Testimonials section -->
-    <section id="testimonials">
-      <div class="container">
-        <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="containeerr">
-              
-              <div class="wrapper">
-                <i id="left" class="fa-solid fa-angle-left"></i>
-                <ul class="carousell">
-                  <li class="cardd">
-                    <div class="img"><img src="images/testi_1.jpg" alt="img" draggable="false"></div>
-                    <h2>Arden Stone</h2>
-                    <span>I'm immensely grateful to have found such an inspiring group of people in this community!</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img"><img src="images/testi_2.jpeg" alt="img" draggable="false"></div>
-                    <h2>John Smith</h2>
-                    <span>I've been involved with many groups in the past, but none have been as warm and welcoming as this one.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img"><img src="images/testi_3.jpeg" alt="img" draggable="false"></div>
-                    <h2>Emily Johnson</h2>
-                    <span>The connections I've made here have opened up numerous opportunities for collaboration and personal development.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-1.jpg" alt="img" draggable="false"></div>
-                    <h2>Blanche Pearson</h2>
-                    <span>Being a part of this community has been truly transformative.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-2.jpg" alt="img" draggable="false"></div>
-                    <h2>Joenas Brauers</h2>
-                    <span> It's incredible to have such a supportive community around me.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-3.jpg" alt="img" draggable="false"></div>
-                    <h2>Lariach French</h2>
-                    <span>It's amazing to be among such driven people.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-4.jpg" alt="img" draggable="false"></div>
-                    <h2>James Khosravi</h2>
-                    <span>I've found endless support and inspiration.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-5.jpg" alt="img" draggable="false"></div>
-                    <h2>Kristina Zasiadko</h2>
-                    <span>The connections I've made are invaluable.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-6.jpg" alt="img" draggable="false"></div>
-                    <h2>Donald Horton</h2>
-                    <span>This community has changed my life.</span>
-                  </li>
-                </ul>
-                <i id="right" class="fa-solid fa-angle-right"></i>
-              </div>
+    <h1 class="Testimonials">Testimonials</h1>
+    <section  id="testimonials"  class="container">
+      <div class="card__container swiper">
+         <div class="card__content">
+            <div class="swiper-wrapper">
+               <article class="card__article swiper-slide">
+                  <div class="card__image">
+                     <img src="images/profile1.jpg" alt="image" class="card__img">
+                     <div class="card__shadow"></div>
+                  </div>
+   
+                  <div class="card__data">
+                     <h3 class="card__name">Arden</h3>
+                     <p class="card__description">
+                      The connections I've made here have opened up numerous opportunities for collaboration and personal development.
+                     </p>
+   
+                
+                  </div>
+               </article>
+   
+               <article class="card__article swiper-slide">
+                  <div class="card__image">
+                     <img src="images/profile2.jpg" alt="image" class="card__img">
+                     <div class="card__shadow"></div>
+                  </div>
+   
+                  <div class="card__data">
+                     <h3 class="card__name">Fox</h3>
+                     <p class="card__description">
+                      Being a part of this community has been truly transformative.
+                     </p>
+   
+                 
+                  </div>
+               </article>
+   
+               <article class="card__article swiper-slide">
+                  <div class="card__image">
+                     <img src="images/profile3.jpg" alt="image" class="card__img">
+                     <div class="card__shadow"></div>
+                  </div>
+   
+                  <div class="card__data">
+                     <h3 class="card__name">KIA</h3>
+                     <p class="card__description">
+                      I'm immensely grateful to have found such an inspiring group of people in this community!
+                     </p>
+   
+                  </div>
+               </article>
+   
+               <article class="card__article swiper-slide">
+                  <div class="card__image">
+                     <img src="images/profile1.jpg" alt="image" class="card__img">
+                     <div class="card__shadow"></div>
+                  </div>
+   
+                  <div class="card__data">
+                     <h3 class="card__name">Klien</h3>
+                     <p class="card__description">
+                      I've been involved with many groups in the past, but none have been as warm and welcoming as this one.
+                     </p>
+   
+                 
+                  </div>
+               </article>
+
+               <article class="card__article swiper-slide">
+                  <div class="card__image">
+                     <img src="images/profile2.jpg" alt="image" class="card__img">
+                     <div class="card__shadow"></div>
+                  </div>
+   
+                  <div class="card__data">
+                     <h3 class="card__name">Hailey</h3>
+                     <p class="card__description">
+                      The connections I've made here have opened up numerous opportunities for collaboration and personal development.
+                     </p>
+   
+                  </div>
+               </article>
             </div>
-            
-          </div>
-        </div>
+         </div>
+
+         <!-- Navigation buttons -->
+         <div class="swiper-button-next">
+         </div>
+         
+         <div class="swiper-button-prev">
+         </div>
+
+         <!-- Pagination -->
+         <div class="swiper-pagination"></div>
       </div>
     </section>
    <script>
@@ -334,52 +375,6 @@ function topFunction() {
 
 
 
-
-let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-
-  <section id="testimonials">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.4s">
-            <div class="testimonial-author">
-              <img src="images/testi_1.jpg" class="img-circle mb-2" alt="Testimonial Author">
-              <h4 class="mt-5">Arden Stone</h4>
-            </div>
-            <div class="testimonial-content">
-              <p>"Being a part of this community has been truly transformative. The support and encouragement I've received here have helped me grow both personally and professionally. I'm immensely grateful to have found such an inspiring group of people!"</p>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.6s">
-            <div class="testimonial-author">
-              <img src="images/testi_2.jpeg" class="img-circle" alt="Testimonial Author">
-              <h4 class="mt-5">John Smith</h4>
-            </div>
-            <div class="testimonial-content">
-              <p>"I've been involved with many groups in the past, but none have been as warm and welcoming as this one. The sense of belonging I feel here is unparalleled. It's incredible to be surrounded by individuals who share my values and passion for making a difference."</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="testimonial-box wow fadeInUp" data-wow-delay="0.8s">
-            <div class="testimonial-author">
-              <img src="images/testi_3.jpeg" class="img-circle" alt="Testimonial Author">
-              <h4 class="mt-5">Emily Johnson</h4>
-            </div>
-            <div class="testimonial-content">
-              <p>"I was initially hesitant to join, but I'm so glad I did. The connections I've made here have opened up numerous opportunities for collaboration and personal development. It's amazing to see how much we can achieve when we come together with a common purpose."</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   
   <section class="faqq">
 
@@ -1051,6 +1046,40 @@ sections.forEach(section => {
       "allowedOrigins": []
     });
   </script>
-</body>
+<!-- swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+  <script>
+    
+/*=============== SWIPER JS ===============*/
+let swiperCards = new Swiper(".card__content", {
+  loop: true,
+  spaceBetween: 52,
+  grabCursor: true,
 
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints:{
+    600: {
+      slidesPerView: 2,
+    },
+    968: {
+      slidesPerView: 3,
+    },
+  },
+});
+  </script>
+
+
+
+</body>
+ <script src="index.js"></script>
 </html>
