@@ -82,13 +82,12 @@ http://www.templatemo.com/tm-490-comila
 
 /* Improve readability and organization */
 .contact-form {
-  background: #fffbe6;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 25px black;
-  border: 2px solid black; /* Added black border */
+  box-shadow: 0 0 30px black;
+  border: 1px solid black; /* Added black border */
+  background: #ffcc00f1;;
 }
-
 
 .contact-form .row {
   display: flex;
@@ -110,13 +109,31 @@ http://www.templatemo.com/tm-490-comila
   color: #000; /* Changed from rgb(0, 0, 0) to hex for consistency */
 }
 
-.contact-form .form-control:focus {
+/* .contact-form .form-control:focus {
   border-color: #ffcc00;
   box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+} */
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container i {
+  position: absolute;
+  left: 10px; /* Adjust this value as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888; /* Adjust the color as needed */
+  font-size: 1.5rem;
+}
+
+.input-container input {
+  padding-left: 30px; /* Adjust this value to make space for the icon */
+  width: 100%;
 }
 
 .contact-form .submit {
-  background: #ee4040;
+  background: #2c18df;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -127,7 +144,7 @@ http://www.templatemo.com/tm-490-comila
 }
 
 .contact-form .submit:hover {
-  background: #e6b800;
+  background: #003ae6;
 }
 
 

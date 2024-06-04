@@ -316,9 +316,9 @@ function topFunction() {
 
 
 
+
 let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-</script>
-  <!-- Testimonials section -->
+
   <section id="testimonials">
     <div class="container">
       <div class="row">
@@ -445,8 +445,7 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
 
   </section>
 
-  
-  <!--
+<!-- contact section   -->
   <section id="experience">
     <div class="container">
 
@@ -600,10 +599,11 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
                 <div class="col-md-6 col-sm-6 rad">
                   <label for="name">Name</label>
                   <input
+                    style="border: 0.8px solid blue;"
                     name="name"
                     id="name"
                     type="text"
-                    class="form-control"
+                    class="input-focus"
                     placeholder="Enter Your Name"
                     required
                   />
@@ -611,10 +611,11 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
                 <div class="col-md-6 col-sm-6 rad">
                   <label for="email">Email</label>
                   <input
+                    style="border: 0.8px solid blue;"
                     name="email"
                     type="email"
                     id="email"
-                    class="form-control"
+                    class="input-focus"
                     placeholder="Enter Your Email"
                     required
                   />
@@ -622,8 +623,9 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
                 <div class="col-md-8 msg rad ">
                   <label for="message">Message</label>
                   <textarea
+                    style="border: 0.8px solid blue;"
                     name="message"
-                    class="form-control"
+                    class="input-focus"
                     id="msg"
                     placeholder="Enter Your Query Or Message"
                     rows="6"
@@ -631,7 +633,7 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
                   ></textarea>
                 </div>
                 <div class="flex justify-center col-md-offset-0">
-                  <button class="submit" type="submit">Submit</button>
+                  <button class="submit" type="submit" id="contact-submit">Submit</button>
                 </div>
               </div>
             </form>
@@ -665,7 +667,7 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
                     name="name"
                     id="name"
                     type="text"
-                    class="form-control"
+                    class="input-focus"
                     placeholder="Enter Your Name"
                     required
                   />
@@ -676,7 +678,7 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
                     name="email"
                     type="email"
                     id="email"
-                    class="form-control"
+                    class="input-focus"
                     placeholder="Enter Your Email"
                     required
                   />
@@ -685,7 +687,7 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
                   <label for="message">Message</label>
                   <textarea
                     name="message"
-                    class="form-control"
+                    class="input-focus"
                     id="msg"
                     placeholder="Enter Your Query Or Message"
                     rows="6"
@@ -909,10 +911,15 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
 <!--   <a href="#" class="back-to-top" id="backToTopBtn">↑</a> -->
 
 
-
-  <!-- javscript js -->
 <script>
-  // Get the button
+  const wrapper = document.querySelector(".wrapper");
+  const carousell = document.querySelector(".carousell");
+  const firstCardWidth = carousell.querySelector(".cardd").offsetWidth;
+  const arrowBtns = document.querySelectorAll(".wrapper i");
+  const carouselChildrens = [...carousell.children];
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
 let backToTopBtn = document.getElementById("backToTopBtn");
 
 // When the user scrolls down 100px from the top of the document, show the button
@@ -974,7 +981,7 @@ sections.forEach(section => {
           + "<br> Message:" + document.getElementById("msg").value
 
       }).then(
-        message => alert("Message sent successsfully")
+        message => alert("Message sent successsfully. We will get back to you soon.")
       );
     }
     function sendFeed() {
