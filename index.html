@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,6 @@
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="icon" href="fav.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -80,23 +79,6 @@
     </div>
   </section>
 
-
-.contact-form .submit {
-  background: #e18b09;
-    color: rgb(9, 9, 9);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-left: 220px;
-}
-
-.contact-form .submit:hover {
-  background: #f5d244;
-  font-size: 20px;
-  color: white;
-}
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
 
@@ -276,6 +258,21 @@ function topFunction() {
                 <i id="left" class="fa-solid fa-angle-left"></i>
                 <ul class="carousell">
                   <li class="cardd">
+                    <div class="img"><img src="images/testi_1.jpg" alt="img" draggable="false"></div>
+                    <h2>Arden Stone</h2>
+                    <span>I'm immensely grateful to have found such an inspiring group of people in this community!</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="images/testi_2.jpeg" alt="img" draggable="false"></div>
+                    <h2>John Smith</h2>
+                    <span>I've been involved with many groups in the past, but none have been as warm and welcoming as this one.</span>
+                  </li>
+                  <li class="cardd">
+                    <div class="img"><img src="images/testi_3.jpeg" alt="img" draggable="false"></div>
+                    <h2>Emily Johnson</h2>
+                    <span>The connections I've made here have opened up numerous opportunities for collaboration and personal development.</span>
+                  </li>
+                  <li class="cardd">
                     <div class="img"><img src="/Community-Site/images/img-1.jpg" alt="img" draggable="false"></div>
                     <h2>Blanche Pearson</h2>
                     <span>Being a part of this community has been truly transformative.</span>
@@ -314,8 +311,14 @@ function topFunction() {
         </div>
       </div>
     </section>
+   <script>
+  </script>
 
-    
+
+
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
   <section id="testimonials">
     <div class="container">
       <div class="row">
@@ -637,6 +640,8 @@ function topFunction() {
           </div>
         </div>
       </section>
+    </main>
+  </div>
       <hr>
       <section id="feedback">
         <div class="formcontainer">
@@ -713,6 +718,83 @@ function topFunction() {
       </section>
     </main>
 
+      <script>
+        function sendEmail() {
+          alert("Email sent successfully!");
+        }
+      </script>
+    </div>
+    <!-- footer section -->
+    <footer>
+      <div class="container">
+        <div class="row1">
+          <div class="col1" id="Company">
+            <h1>Open Source Village</h1>
+            <p>
+              Join the Community and become the villager now
+            </p>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="col1" id="Serv">
+            <h3>Services</h3>
+            <div class="links">
+               <a href="#">Open Learning</a>
+               <a href="#">Mentorship</a>
+               <a href="#">Network</a>
+               <a href="#">Card Design</a>
+            </div>
+         </div>
+  
+         <div class="col1" id="useful-links">
+            <h3>Links</h3>
+            <div class="links">
+               <a href="#">About</a>
+               <a href="#">Services</a>
+               <a href="#">Our Policy</a>
+               <a href="#">Help</a>
+            </div>
+         </div>
+  
+         <div class="col1" id="cont">
+             <h3>Contact</h3>
+             <div class="contact-details">
+                <i class="fa fa-message"></i>
+                <p>xyz@gmail.com <br></p>
+             </div>
+             <div class="contact-details">
+                <i class="fa fa-phone"></i>
+                <p>+1-9876543210</p>
+             </div>
+         </div>
+        </div>
+   </div>
+  
+   <div class="row2">
+         <div class="form">
+           <form action="">
+               <input type="text" placeholder="Email here...">
+               <button><i class="fa fa-paper-plane"></i></button>
+           </form>
+         </div>
+   </div>
+    <p class="copyright">
+      Copyright ©
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      Developed by Open source Contributors. All rights reserved.
+  </p>
+  </div>
+  
+  </footer>
+    <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+      </footer>
     <script>
       function sendFeed() {
         alert('Email sent successfully!');
@@ -748,8 +830,8 @@ function topFunction() {
       </div>
     </div>
   </footer> -->
-  <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
-    <div class="container">
+<!--   <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
+<!--     <div class="container">
       <div class="footer_wrapper">
         <div class="footer_box">
           <div class="logo">
@@ -760,8 +842,8 @@ function topFunction() {
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="single_footer single_footer_address">
-              <h4>Join the Community now and become a Villager</h4>
-              <div class="signup_form">
+              <h4>Join the Community now and become a Villager</h4> -->
+<!--               <div class="signup_form">
                 <form action="#" class="subscribe">
                   <input
                     type="text"
@@ -774,19 +856,19 @@ function topFunction() {
                 </form>
               </div>
             </div>
-          </div>
+          </div> -->
           <!--- END COL -->
-        </div>
+<!--         </div>
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke">Company</h4>
           <ul class="footer_links">
-            <a>
+            <a href="our program.html">
               <li>Our Program</li>
             </a>
-            <a>
+            <a href="our plan.html">
               <li>Our Plan</li>
             </a>
-            <a>
+            <a href="member.html">
               <li>Become A Member</li>
             </a>
           </ul>
@@ -794,25 +876,27 @@ function topFunction() {
         <div class="footer_box">
           <h4 class="footer_title">Quick Links</h4>
           <ul class="footer_links">
-            <a>
+            <a href="about us.html">
               <li>About Us</li>
             </a>
-            <a>
+            <a href="contact us.html">
               <li>Contact Us</li>
             </a>
-            <a>
+            <a href="support.html">
               <li>Support</li>
             </a>
+            
           </ul>
         </div>
       </div>
       <p class="social_media">
-        <a><i class="fab fa-github"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-facebook"></i></a>
-        <a><i class="fab fa-twitter"></i></a>
-      </p>
+        <a href="https://github.com/Its-Aman-Yadav" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/itsamanyadav18/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/community-site/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/community-site" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/its_aman_yadav" target="_blank"><i class="fab fa-twitter"></i></a>
+    </p>
+    
       <p class="copyright">
         Copyright &copy
         <script>
@@ -821,10 +905,10 @@ function topFunction() {
         Developed by open source. All rights reserved.
       </p>
     </div>
-  </footer>
+  </footer> --> 
 
 
-  <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+<!--   <a href="#" class="back-to-top" id="backToTopBtn">↑</a> -->
 
 
 <script>
