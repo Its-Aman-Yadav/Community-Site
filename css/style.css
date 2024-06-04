@@ -183,6 +183,7 @@ http://www.templatemo.com/tm-490-comila
       text-align: center;
       height: 100vh;
       background: url('images/background.jpg') no-repeat center center/cover;
+      backdrop-filter: blur(4px);
       padding-top: 80px;
       /* to avoid overlap with navbar */
     }
@@ -732,9 +733,9 @@ color: yellow;
     margin-bottom: 20px;
   }
   }
-padding: 20px 0px;
-background: black;
-}
+/* padding: 20px 0px;
+background: black; */
+/* } */
 
 .social_media:hover {
 color: yellow;
