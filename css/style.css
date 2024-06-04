@@ -222,7 +222,7 @@ html {
 }
 
 .btn-default:hover {
-  background-color: #4c4d4a;
+  background-color: transparent;
 }
 .testimonial-author img {
   display: block;
