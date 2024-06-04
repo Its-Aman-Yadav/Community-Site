@@ -329,13 +329,49 @@ function topFunction() {
         </div>
       </div>
     </section>
-   <script>
-  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+     document.addEventListener('DOMContentLoaded', function () {
+    const carousell = document.querySelector('.carousell');
+    const cardWidth = document.querySelector('.cardd').offsetWidth;
+    const cardMarginRight = parseInt(getComputedStyle(document.querySelector('.cardd')).marginRight);
+    const cardsInView = 3;
+
+    document.getElementById('right').addEventListener('click', function () {
+      carousell.scrollBy({
+        left: cardWidth + cardMarginRight,
+        behavior: 'smooth'
+      });
+    });
+
+    document.getElementById('left').addEventListener('click', function () {
+      carousell.scrollBy({
+        left: -(cardWidth + cardMarginRight),
+        behavior: 'smooth'
+      });
+    });
+
+    carousell.addEventListener('scroll', function () {
+      if (carousell.scrollLeft === 0) {
+        carousell.scrollTo({
+          left: carousell.scrollWidth - (cardWidth + cardMarginRight) * cardsInView,
+          behavior: 'auto'
+        });
+      } else if (carousell.scrollLeft >= carousell.scrollWidth - carousell.clientWidth) {
+        carousell.scrollTo({
+          left: (cardWidth + cardMarginRight) * cardsInView,
+          behavior: 'auto'
+        });
+      }
+    });
+  });
+    </script>
+    
 
 
 
 
-let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+<!-- let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
 
   <section id="testimonials">
     <div class="container">
@@ -380,7 +416,7 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
       </div>
     </div>
   </section>
-  
+   -->
   <section class="faqq">
 
     <div class="containerr">
@@ -594,7 +630,6 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
       </div>
     </div>
   </section>
--->
 
   <!-- contact section -->
 
@@ -772,23 +807,25 @@ let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
          <div class="col1" id="useful-links">
             <h3>Links</h3>
             <div class="links">
-               <a href="#">About</a>
-               <a href="#">Services</a>
-               <a href="#">Our Policy</a>
-               <a href="#">Help</a>
+               <a href="about us.html">About</a>
+               <a href="our plan.html">Services</a>
+               <a href="our program.html">Our Policy</a>
+               <a href="support.html">Help</a>
             </div>
          </div>
   
          <div class="col1" id="cont">
              <h3>Contact</h3>
              <div class="contact-details">
-                <i class="fa fa-message"></i>
-                <p>xyz@gmail.com <br></p>
+              <div class="links">
+                
+                <a href="contact us.html"><i class="fa fa-message"></i>Contact Us</a>
              </div>
-             <div class="contact-details">
+         </div>
+             <!-- <div class="contact-details">
                 <i class="fa fa-phone"></i>
                 <p>+1-9876543210</p>
-             </div>
+             </div> -->
          </div>
         </div>
    </div>

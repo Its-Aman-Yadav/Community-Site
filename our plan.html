@@ -10,11 +10,11 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f8ff;
         }
 
         header {
-            background: #333;
+            background: linear-gradient(90deg, #0073e6, #0099cc);
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -27,6 +27,7 @@
         nav ul {
             padding: 0;
             list-style: none;
+            text-align: center;
         }
 
         nav ul li {
@@ -37,6 +38,14 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #fff;
+            color: #0073e6;
+            border-radius: 5px;
         }
 
         main {
@@ -45,16 +54,21 @@
             margin: 20px auto;
             background: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         section {
             margin-bottom: 20px;
         }
 
+        section h2 {
+            color: #0073e6;
+        }
+
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #333;
+            background: #0073e6;
             color: #fff;
             position: fixed;
             width: 100%;
@@ -64,21 +78,31 @@
         form label {
             display: block;
             margin-top: 10px;
+            color: #0073e6;
         }
 
         form input, form textarea {
-            width: 100%;
+            width: calc(100% - 20px);
             padding: 10px;
             margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
 
         form button {
             padding: 10px 20px;
-            background: #333;
+            background: #0073e6;
             color: #fff;
             border: none;
             margin-top: 10px;
             cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background: #005bb5;
         }
     </style>
 </head>

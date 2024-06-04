@@ -6,18 +6,23 @@
     <title>Become a Member - Open Source Community</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
-            background: #333;
+            background: #4CAF50;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
@@ -28,6 +33,7 @@
             padding: 0;
             list-style: none;
             text-align: center;
+            margin: 0;
         }
 
         nav ul li {
@@ -38,18 +44,37 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, background-color 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+            background-color: #fff;
         }
 
         main {
+            flex: 1;
             padding: 20px;
             max-width: 800px;
             margin: 20px auto;
             background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         section {
             margin-bottom: 20px;
+        }
+
+        section h2 {
+            color: #4CAF50;
+        }
+
+        ul, ol {
+            margin-left: 20px;
         }
 
         footer {
@@ -57,29 +82,41 @@
             padding: 10px 0;
             background: #333;
             color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
 
         form label {
             display: block;
             margin-top: 10px;
+            font-weight: bold;
         }
 
         form input, form textarea {
-            width: 100%;
+            width: calc(100% - 20px);
             padding: 10px;
             margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
         }
 
         form button {
             padding: 10px 20px;
-            background: #333;
+            background: #4CAF50;
             color: #fff;
             border: none;
+            border-radius: 5px;
             margin-top: 10px;
             cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #45a049;
         }
     </style>
 </head>
