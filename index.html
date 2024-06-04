@@ -38,6 +38,24 @@
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
+  <style>
+    .contact-form .submit {
+        background: #e18b09;
+          color: rgb(9, 9, 9);
+          padding: 10px 20px;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size: 18px;
+          margin-left: 220px;
+      }
+
+      .contact-form .submit:hover {
+        background: #f5d244;
+        font-size: 20px;
+        color: white;
+      }
+  </style>
 </head>
 
 
@@ -87,7 +105,6 @@
       <div class="sk-circle12 sk-child"></div>
     </div>
   </section>
-
 
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
@@ -352,9 +369,9 @@ function topFunction() {
          <!-- Pagination -->
          <div class="swiper-pagination"></div>
       </div>
-   </section>
-   
-
+    </section>
+   <script>
+  </script>
 
 
 
@@ -441,8 +458,7 @@ function topFunction() {
 
   </section>
 
-  
-  <!--
+<!-- contact section   -->
   <section id="experience">
     <div class="container">
 
@@ -596,10 +612,11 @@ function topFunction() {
                 <div class="col-md-6 col-sm-6 rad">
                   <label for="name">Name</label>
                   <input
+                    style="border: 0.8px solid blue;"
                     name="name"
                     id="name"
                     type="text"
-                    class="form-control"
+                    class="input-focus"
                     placeholder="Enter Your Name"
                     required
                   />
@@ -607,10 +624,11 @@ function topFunction() {
                 <div class="col-md-6 col-sm-6 rad">
                   <label for="email">Email</label>
                   <input
+                    style="border: 0.8px solid blue;"
                     name="email"
                     type="email"
                     id="email"
-                    class="form-control"
+                    class="input-focus"
                     placeholder="Enter Your Email"
                     required
                   />
@@ -618,8 +636,9 @@ function topFunction() {
                 <div class="col-md-8 msg rad ">
                   <label for="message">Message</label>
                   <textarea
+                    style="border: 0.8px solid blue;"
                     name="message"
-                    class="form-control"
+                    class="input-focus"
                     id="msg"
                     placeholder="Enter Your Query Or Message"
                     rows="6"
@@ -627,7 +646,7 @@ function topFunction() {
                   ></textarea>
                 </div>
                 <div class="flex justify-center col-md-offset-0">
-                  <button class="submit" type="submit">Submit</button>
+                  <button class="submit" type="submit" id="contact-submit">Submit</button>
                 </div>
               </div>
             </form>
@@ -661,7 +680,7 @@ function topFunction() {
                     name="name"
                     id="name"
                     type="text"
-                    class="form-control"
+                    class="input-focus"
                     placeholder="Enter Your Name"
                     required
                   />
@@ -672,7 +691,7 @@ function topFunction() {
                     name="email"
                     type="email"
                     id="email"
-                    class="form-control"
+                    class="input-focus"
                     placeholder="Enter Your Email"
                     required
                   />
@@ -681,7 +700,7 @@ function topFunction() {
                   <label for="message">Message</label>
                   <textarea
                     name="message"
-                    class="form-control"
+                    class="input-focus"
                     id="msg"
                     placeholder="Enter Your Query Or Message"
                     rows="6"
@@ -712,6 +731,83 @@ function topFunction() {
       </section>
     </main>
 
+      <script>
+        function sendEmail() {
+          alert("Email sent successfully!");
+        }
+      </script>
+    </div>
+    <!-- footer section -->
+    <footer>
+      <div class="container">
+        <div class="row1">
+          <div class="col1" id="Company">
+            <h1>Open Source Village</h1>
+            <p>
+              Join the Community and become the villager now
+            </p>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="col1" id="Serv">
+            <h3>Services</h3>
+            <div class="links">
+               <a href="#">Open Learning</a>
+               <a href="#">Mentorship</a>
+               <a href="#">Network</a>
+               <a href="#">Card Design</a>
+            </div>
+         </div>
+  
+         <div class="col1" id="useful-links">
+            <h3>Links</h3>
+            <div class="links">
+               <a href="#">About</a>
+               <a href="#">Services</a>
+               <a href="#">Our Policy</a>
+               <a href="#">Help</a>
+            </div>
+         </div>
+  
+         <div class="col1" id="cont">
+             <h3>Contact</h3>
+             <div class="contact-details">
+                <i class="fa fa-message"></i>
+                <p>xyz@gmail.com <br></p>
+             </div>
+             <div class="contact-details">
+                <i class="fa fa-phone"></i>
+                <p>+1-9876543210</p>
+             </div>
+         </div>
+        </div>
+   </div>
+  
+   <div class="row2">
+         <div class="form">
+           <form action="">
+               <input type="text" placeholder="Email here...">
+               <button><i class="fa fa-paper-plane"></i></button>
+           </form>
+         </div>
+   </div>
+    <p class="copyright">
+      Copyright ©
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      Developed by Open source Contributors. All rights reserved.
+  </p>
+  </div>
+  
+  </footer>
+    <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+      </footer>
     <script>
       function sendFeed() {
         alert('Email sent successfully!');
@@ -747,8 +843,8 @@ function topFunction() {
       </div>
     </div>
   </footer> -->
-  <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
-    <div class="container">
+<!--   <footer class="footer" data-aos="fade-up" data-aos-duration="1500">
+<!--     <div class="container">
       <div class="footer_wrapper">
         <div class="footer_box">
           <div class="logo">
@@ -759,8 +855,8 @@ function topFunction() {
           </div>
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="single_footer single_footer_address">
-              <h4>Join the Community now and become a Villager</h4>
-              <div class="signup_form">
+              <h4>Join the Community now and become a Villager</h4> -->
+<!--               <div class="signup_form">
                 <form action="#" class="subscribe">
                   <input
                     type="text"
@@ -773,9 +869,9 @@ function topFunction() {
                 </form>
               </div>
             </div>
-          </div>
+          </div> -->
           <!--- END COL -->
-        </div>
+<!--         </div>
         <div class="footer_box">
           <h4 class="footer_title" style="color: whitesmoke">Company</h4>
           <ul class="footer_links">
@@ -822,16 +918,21 @@ function topFunction() {
         Developed by open source. All rights reserved.
       </p>
     </div>
-  </footer>
+  </footer> --> 
 
 
-  <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+<!--   <a href="#" class="back-to-top" id="backToTopBtn">↑</a> -->
 
 
-
-  <!-- javscript js -->
 <script>
-  // Get the button
+  const wrapper = document.querySelector(".wrapper");
+  const carousell = document.querySelector(".carousell");
+  const firstCardWidth = carousell.querySelector(".cardd").offsetWidth;
+  const arrowBtns = document.querySelectorAll(".wrapper i");
+  const carouselChildrens = [...carousell.children];
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
 let backToTopBtn = document.getElementById("backToTopBtn");
 
 // When the user scrolls down 100px from the top of the document, show the button
@@ -893,7 +994,7 @@ sections.forEach(section => {
           + "<br> Message:" + document.getElementById("msg").value
 
       }).then(
-        message => alert("Message sent successsfully")
+        message => alert("Message sent successsfully. We will get back to you soon.")
       );
     }
     function sendFeed() {
