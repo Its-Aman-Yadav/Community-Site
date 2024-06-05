@@ -4,58 +4,41 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 
-// subscribe-email-validation
-document
-  .querySelector(".subscribe__btn")
-  .addEventListener("click", function (event) {
-    validateEmail();
-  });
-
-function validateEmail() {
-  const emailInput = document.querySelector(".subscribe__input");
-  const emailError = document.getElementById("subscribe_email_error");
-  const emailValue = emailInput.value;
+// Subscribe email validation
+app.post("/validate-email", (req, res) => {
+  const { email } = req.body;
 
   const emailRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
 
-  if (emailRegex.test(emailValue)) {
-    emailError.style.display = "none";
+  if (emailRegex.test(email)) {
+    res.status(200).json({ valid: true });
   } else {
-    emailError.style.display = "inline";
-  }
-}
-
-//nav sticky
-window.addEventListener("scroll", function () {
-  var navbar = document.querySelector("nav");
-  if (window.scrollY > 0) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
+    res.status(400).json({ valid: false, message: "Invalid email format" });
   }
 });
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Routes
 app.post("/send-email", (req, res) => {
   const { name, email, message } = req.body;
-  console.log(req.body);
+
   // Create a transporter
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "email", // Your email address
-      pass: "password", // Your email password or App Password
+      user: "your_email@gmail.com", // Your email address
+      pass: "your_password", // Your email password or App Password
     },
   });
 
   // Email options
   const mailOptions = {
-    from: "email",
-    to: "itsamanyadav18@gmail.com", // Recipient's email address
+    from: "your_email@gmail.com",
+    to: "recipient_email@gmail.com", // Recipient's email address
     subject: "Contact Form Submission",
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
@@ -64,10 +47,10 @@ app.post("/send-email", (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error(error);
-      res.send("Error: Something went wrong. Please try again later.");
+      res.status(500).json({ success: false, message: "Something went wrong. Please try again later." });
     } else {
       console.log("Email sent: " + info.response);
-      res.send("Email sent successfully!");
+      res.status(200).json({ success: true, message: "Email sent successfully!" });
     }
   });
 });
