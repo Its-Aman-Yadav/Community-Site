@@ -169,6 +169,19 @@ html {
   /* Optional: space between logo and right edge */
 }
 
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: url('images/background.jpg') no-repeat center center/cover;
+      backdrop-filter: blur(4px);
+      padding-top: 80px;
+      /* to avoid overlap with navbar */
+    }
+=======
 .home {
   display: flex;
   align-items: center;
@@ -179,6 +192,7 @@ html {
   padding-top: 80px;
   /* to avoid overlap with navbar */
 }
+
 
 .home .container {
   max-width: 800px;
@@ -222,7 +236,7 @@ html {
 }
 
 .btn-default:hover {
-  background-color: #4c4d4a;
+  background-color: transparent;
 }
 .testimonial-author img {
   display: block;
@@ -730,9 +744,9 @@ a:hover .fab {
     margin-bottom: 20px;
   }
   }
-padding: 20px 0px;
-background: black;
-}
+/* padding: 20px 0px;
+background: black; */
+/* } */
 
 .social_media:hover {
   color: yellow;
