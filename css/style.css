@@ -16,6 +16,38 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
+.navbar{
+  cursor: pointer;
+  background-color: red;
+  background-image:-webkit-image-set();
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar,li{
+  cursor: pointer;
+  background-color: red;
+  background-image:-webkit-image-set();
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar,li:hover{
+  cursor: pointer;
+  background-color: rgb(30, 28, 28);
+}
+
+.navbar,ul{
+  cursor: pointer;
+  background-color: rgb(237, 226, 226);
+  background-image:-webkit-image-set();
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
 /* .formcontainer2 {
       padding: 20px;
