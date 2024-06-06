@@ -113,8 +113,8 @@
     </div>
   </section>
 
-
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
+<button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+<!-- <button ><i class="fa-solid fa-circle-up"></i></button> -->
 
 <script>
 let mybutton = document.getElementById("myBtn");
@@ -154,7 +154,7 @@ function topFunction() {
         <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
         <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+        <li><i  class="fa-solid fa-user" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
       </ul>
     </nav>
   </div>
@@ -665,7 +665,8 @@ function topFunction() {
       </div>
     </div>
   </section>
--->
+
+<!-- feedback popup -->
 
   <!-- contact section -->
 
@@ -735,78 +736,58 @@ function topFunction() {
       <section id="feedback">
         <div class="formcontainer">
           <div class="section-title">
-            <br>
-            
-            <br>
             <h1 class="get font-bold">Feedback</h1>
-            <p>We value your feedback. Please let us know your thoughts and suggestions. </p>
-      
+            <p>We value your feedback. Please let us know your thoughts and suggestions.</p>
           </div>
           <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
-            <form
-              id="contact-form"
-              action="http://127.0.0.1:5500/send-email"
-              method="POST"
-              onsubmit="sendFeed(); reset(); return false;"
-            >
+            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendFeed(); reset(); return false;">
               <div class="row">
                 <div class="col-md-6 col-sm-6 rad">
                   <label for="name">Name</label>
-                  <input
-                    name="name"
-                    id="name"
-                    type="text"
-                    class="input-focus"
-                    placeholder="Enter Your Name"
-                    required
-                  />
+                  <input name="name" id="name" type="text" class="input-focus" placeholder="Enter Your Name" required>
                 </div>
                 <div class="col-md-6 col-sm-6 rad">
                   <label for="email">Email</label>
-                  <input
-                    name="email"
-                    type="email"
-                    id="email"
-                    class="input-focus"
-                    placeholder="Enter Your Email"
-                    required
-                  />
+                  <input name="email" type="email" id="email" class="input-focus" placeholder="Enter Your Email" required>
                 </div>
-                <div class="col-md-8 msg rad ">
+                <div class="col-md-8 msg rad">
                   <label for="message">Message</label>
-                  <textarea
-                    name="message"
-                    class="input-focus"
-                    id="msg"
-                    placeholder="Enter Your Query Or Message"
-                    rows="6"
-                    required
-                  ></textarea>
+                  <textarea name="message" class="input-focus" id="msg" placeholder="Enter Your Query Or Message" rows="6" required></textarea>
                 </div>
-                
-              <div class="col-12 rating rad">
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1"><i class="fas fa-star"></i></label>
-            </div>
-            <div class="flex justify-center col-md-offset-0">
-              <button class="submit" type="submit">Submit</button>
-            </div>
-          </div>
+                <div class="col-12 rating rad">
+                  <input type="radio" id="star5" name="rating" value="5">
+                  <label for="star5"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star4" name="rating" value="4">
+                  <label for="star4"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star3" name="rating" value="3">
+                  <label for="star3"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star2" name="rating" value="2">
+                  <label for="star2"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star1" name="rating" value="1">
+                  <label for="star1"><i class="fas fa-star"></i></label>
+                </div>
+                <div class="flex justify-center col-md-offset-0">
+                  <button class="submit" type="submit">Submit</button>
+                </div>
+              </div>
             </form>
           </div>
-          <br>
-          <br>
+        </div>
       </section>
+      
     </main>
-
+    <script>
+      const stars = document.querySelectorAll('.rating input[type="radio"]');
+      stars.forEach(star => {
+        star.addEventListener('click', () => {
+          stars.forEach(s => {
+            if (s !== star) {
+              s.checked = false;
+            }
+          });
+        });
+      });
+    </script>
       <script>
         function sendEmail() {
           alert("Email sent successfully!");
@@ -999,7 +980,34 @@ function topFunction() {
 
 
 <!--   <a href="#" class="back-to-top" id="backToTopBtn">↑</a> -->
+<script>
+  // Get the button
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
+// Function to scroll to the top of the page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Show or hide the button based on the scroll position
+function handleScroll() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+// Add click event listener
+scrollToTopBtn.addEventListener('click', scrollToTop);
+
+</script>
 
 <script>
   const wrapper = document.querySelector(".wrapper");
