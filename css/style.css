@@ -1272,7 +1272,7 @@ div.card {
 
 /* Navbar section */
 .navbar {
-  background: rgba(0, 0, 0, 0.7);
+  /* background: rgba(0, 0, 0, 0.7); */
   position: fixed;
   top: 0;
   left: 0;
@@ -1280,11 +1280,37 @@ div.card {
   z-index: 1000;
 }
 
+
 .navbar nav {
+  position:fixed;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 90px;
+  top: 0;
+  left: 0;
+  width:100%;
+  padding: 20px 0px;
+  border:none;
+  transition: all 0.6s;
+}
+.navbar nav.sticky{
+  height:80px;
+  background: linear-gradient(rgb(183, 123, 27),rgba(249, 177, 43, 0.818));
+  color:white !important;
+  /* border-bottom: 1.5px solid rgb(0, 0, 0); */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 2px 2px rgb(78, 38, 17, 0.8);
+  padding: 10px 0px;
+}
+.navbar nav ul li i{
+  filter:invert(1);
+}
+.navbar nav.sticky ul li i{
+  filter:invert(0);
 }
 
 .navbar .logo {
