@@ -1070,7 +1070,6 @@ div.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
-
 /* preloader section  */
 .preloader {
   position: fixed;
@@ -1849,6 +1848,107 @@ h3 {
   color: #ffffff;
 }
 
+  /* Basic styles for feedbackform */
+ 
+  /* Basic styles for form */
+  .formcontainer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .contact-form {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form:hover {
+    background-color: #f5f5f5;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Text color */
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    background-color: #e0e0e0;
+  }
+
+  ::placeholder {
+    color: #666; /* Placeholder color */
+  }
+
+  /* Styles for rating stars */
+  .rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    font-size: 30px; /* Reduced label size */
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  label:hover {
+    color: green;
+  }
+
+  input[type="radio"]:checked + label {
+    color: green;
+  }
+
+  .submit {
+    background-color: #007BFF;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .submit:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
 /* Mobile Responsive */
 @media (max-width: 980px) {
   h1 {
