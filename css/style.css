@@ -35,16 +35,6 @@ body {
 .getn {
   color: rgb(255, 254, 254);
 }
-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 * Contact Us Style */ #contact {
   padding: 50px 0;
@@ -734,71 +724,11 @@ background: black; */
   /* cursor: pointer; */
 }
 
-/* .footer_wrapper {
-display: flex;
-align-items: flex-start;
-justify-content: space-between;
-column-gap: 2rem;
-}
-
-.footer_box {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.footer_box ul {
-  margin: 0;
-  padding: 0;
-}
-
-.footer_box a li {
-  text-align: left;
-}
-
-.abc {
-  padding-right: 50px;
-  font-size: 17px;
-}
-
-.footer_box h4 {
-  margin-top: 20px;
-}
-
-.footer_box p {
-  color: var(--heading-color);
-  line-height: 28px;
-  margin-top: 20px;
-}
-
-.footer_title {
-  font-size: 30px;
-  color: var(--heading-color);
-  margin-bottom: 20px;
-  color: whitesmoke;
-}
-
-.footer_links {
-  line-height: 28px;
-  color: whitesmoke;
-  font-size: 17px;
-}
-
-.footer_links a {
-  text-decoration: none;
-  font-size: 17px;
-  color: var(--heading-color);
-}
-
-/* changes some css  */
-
 .footer_links li:hover {
   color: yellow;
   /* cursor: pointer; */
 }
-*/ .copyright {
+.copyright {
   margin-top: 30px;
   margin-left: 90px;
   text-align: center;
@@ -1485,7 +1415,6 @@ div.card {
 
 /* about section */
 
-section,
 #about {
   padding: 4% 10%;
   display: flex;
@@ -1573,7 +1502,6 @@ section,
 
 /* responsive design */
 @media (max-width: 1385px) {
-  section,
   #about {
     padding: 4% 10%;
     transition: 0.3s;
@@ -2558,4 +2486,3 @@ textarea {
 body {
   user-select: none;
 }
-

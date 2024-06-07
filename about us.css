@@ -1,17 +1,146 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
-
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
-.aboutusbody {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f8ff;
-  background-image: url(images/Slide2.jpg);
-  background-size: cover;
-  background-position: center;
+
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+
+/* Body Styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #ffffff;
+  /* background-image: url(images/Slide1.jpg); 
   background-attachment: fixed;
+  background-size: cover;  */
+}
+section {
+  padding: 6% 10%;
+}
+/* section introduction */
+.intro {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.abtcontent {
+  width: 100%; /* Ensure the content takes full available width */
+}
+
+/* Heading Styles */
+.abtcontent h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #cbcb46;
+  font-weight: 600;
+}
+
+.abtcontent h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.abtcontent h2 br {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .abtcontent h2 br {
+    display: inline; /* Displays the line break on larger screens */
+  }
+}
+
+/* Paragraph Styling */
+.abtcontent p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Button Styling */
+.abtbtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  background-image: linear-gradient(#041960, #0056b3);
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.abtbtn:hover {
+  background-image: linear-gradient(#c8d211, #7d9207);
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .abtcontent h1 {
+    font-size: 2em;
+  }
+
+  .abtcontent h2 {
+    font-size: 1.5em;
+  }
+
+  .abtcontent p {
+    font-size: 1em;
+  }
+}
+
+.introimg {
+  position: absolute;
+  width: 500px;
+  bottom: 0;
+  left: 60%;
+  top: 0;
+}
+
+/* section mission */
+.Mission {
+}
+.Mission h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #cbcb46;
+  font-weight: 600;
+}
+
+.Mission h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.Mission h2 br {
+  display: none;
+}
+
+/* Paragraph Styling */
+.Mission p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #000000;
+  font-weight: 500;
 }
