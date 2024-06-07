@@ -424,13 +424,11 @@ h2 {
 }
 
 /* Accordion Container */
-/* Styling the .accordion container */
-/* Styling the .accordion container */
 .containerr {
   background-image: linear-gradient(to right, #f3f1f2 0%, #fee140 100%);
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-  overflow: hidden; /* Ensure content doesn't overflow */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .accordion-content,.accordion button{
   background-image: linear-gradient(to right, #f3f1f2 0%, #fee140 100%);
