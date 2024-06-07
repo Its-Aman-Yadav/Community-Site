@@ -415,17 +415,32 @@ h2 {
   font-size: 1.2rem;
 }
 
+/* Accordion Container */
+.containerr {
+  background-image: linear-gradient(to right, #f3f1f2 0%, #fee140 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.accordion-content,.accordion button{
+  background-image: linear-gradient(to right, #f3f1f2 0%, #fee140 100%);
+}
+
 .accordion .accordion-item {
   border-bottom: 2px solid black;
   margin-top: 10px;
   margin-bottom: 30px;
   font-weight: 700;
+  transition: border-bottom 0.3s ease;
 }
 
+/* Active Accordion Item */
 .accordion .accordion-item button[aria-expanded="true"] {
   border-bottom: 3px solid black;
+  background-image: linear-gradient(to right, #f3f1f2 0%, #fee140 100%);
 }
 
+/* Accordion Button */
 .accordion button {
   position: relative;
   display: block;
@@ -438,64 +453,75 @@ h2 {
   border: none;
   background: none;
   outline: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+/* Hover and Focus States */
 .accordion button:hover,
 .accordion button:focus {
-  /* cursor: pointer; */
-  color: black;
+  color: #007BFF;
+  background-image: linear-gradient(to right, #f3f1f2 0%, #efe18f 100%);
+  cursor: pointer;
 }
 
+/* Accordion Title */
 .accordion button .accordion-title {
   padding: 1em 1.5em 1em 0;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
+/* Icon Styling */
 .accordion button .icon {
   display: inline-block;
   position: absolute;
-  top: 18px;
-  right: 0;
+  top: 50%;
+  left: 95%;
   width: 22px;
   height: 22px;
   border: 1px solid;
-  border-radius: 22px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
 }
 
+/* Icon Before (Horizontal Line) */
 .accordion button .icon::before {
   display: block;
   position: absolute;
   content: "";
-  top: 9px;
-  left: 5px;
+  top: 50%;
+  left: 50%;
   width: 10px;
   height: 2px;
   background: currentColor;
+  transform: translate(-50%, -50%);
 }
 
+/* Icon After (Vertical Line) */
 .accordion button .icon::after {
   display: block;
   position: absolute;
   content: "";
-  top: 5px;
-  left: 9px;
+  top: 50%;
+  left: 50%;
   width: 2px;
   height: 10px;
   background: currentColor;
+  transform: translate(-50%, -50%);
 }
 
-.accordion button[aria-expanded="true"] {
-  color: black;
+.accordion button[aria-expanded="true"] .icon {
+  transform: translateY(-50%) rotate(180deg);
+  
 }
-
 .accordion button[aria-expanded="true"] .icon::after {
   width: 0;
 }
 
 .accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
-  max-height: 9em;
+  max-height: 20em;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
@@ -506,17 +532,36 @@ h2 {
   overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
-  font-size: 40px;
+  background-color: #f9f9f9;
+  padding: 0 1.5em;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .accordion .accordion-content p {
-  font-size: 12px;
-  opacity: 70%;
+  font-size: 14px;
+  opacity: 0.8;
   line-height: 1.5;
   color: black;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
+
+.accordion button .icon::before,
+.accordion button .icon::after {
+  transition: background 0.3s ease;
+}
+
+.accordion button:hover .icon::before,
+.accordion button:hover .icon::after {
+  background: #007BFF;
+}
+
+.accordion button:focus .icon::before,
+.accordion button:focus .icon::after {
+  background: #0056b3;
+}
+
 
 /* Styles for larger screens */
 @media (min-width: 768px) {
@@ -1650,13 +1695,7 @@ div.card {
 
   border-radius: 10px;
 }
-.icon {
-  position: absolute;
-  top: calc(42%);
-  color: white;
-  left: 4.2%;
-  font-size: 30px;
-}
+
 .icon1 {
   position: absolute;
   top: calc(42%);
