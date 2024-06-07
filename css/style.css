@@ -2552,3 +2552,10 @@ textarea {
 .rating label:hover ~ label {
   color: #ffca08; /* Highlight hovered star and all previous stars */
 }
+.no-select {
+  user-select: none;
+}
+body {
+  user-select: none;
+}
+
