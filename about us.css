@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
 .aboutusbody {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,38 +14,4 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-
-main {
-  max-width: 800px;
-  margin: 100px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: black;
-}
-section {
-  margin-bottom: 20px;
-}
-h2 {
-  color: #3b5998;
-  border-bottom: 2px solid #3b5998;
-  padding-bottom: 5px;
-}
-ul {
-  padding-left: 20px;
-}
-ul li {
-  margin-bottom: 10px;
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul li {
-    margin-bottom: 10px;
-  }
 }
