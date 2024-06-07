@@ -4,28 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="about us.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+
     <title>About Us - Open Source Community</title>
   </head>
-  <body>
-    <header>
-      <div class="logo-container">
+  <body class="aboutusbody">
+    <div class="navbar">
+      <nav>
         <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem"
           ><img
             src="images/fav.png"
             alt="logo"
-            style="height: 50px; width: 50px; border-radius: 50%"
+            style="height: 50px; width: 50px"
           />
           <span class="logo-text" style="margin-left: 0"
-            >About Our Community</span
+            >Open Source Village</span
           >
         </label>
-      </div>
-
-      <nav>
         <ul class="flex flex-col md:flex-row">
           <li><i></i><a href="#introduction">Introduction</a></li>
           <li><i></i><a href="#mission">Mission</a></li>
@@ -34,7 +40,7 @@
           <li><i></i><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
 
     <main>
       <section id="introduction">
@@ -131,9 +137,7 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2024 Open Source Community. All rights reserved.</p>
-    </footer>
+    <special-footer></special-footer>
 
     <script>
       document
@@ -144,5 +148,6 @@
           document.getElementById("contact-form").reset();
         });
     </script>
+    <script src="footer/footer.js"></script>
   </body>
 </html>
