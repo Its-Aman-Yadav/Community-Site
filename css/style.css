@@ -25,7 +25,9 @@ body {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
     } */
-
+.form1{
+  background:linear-gradient(rgb(255, 206, 10), rgb(255, 128, 1));
+}
 .get {
   color: black;
 }
@@ -48,7 +50,7 @@ section.visible {
 
 * Contact Us Style */ #contact {
   padding: 50px 0;
-  background: #fff;
+  /* background: #fff; */
 }
 
 .formcontainer {
@@ -1043,7 +1045,7 @@ justify-content: center; */
 #services,
 #contact,
 #feedback {
-  background: #ffffff;
+  /* background: #ffffff; */
 }
 
 #about,
@@ -1934,11 +1936,11 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  background-color: #e0e0e0;
+  background-color: #ababab;
 }
 
 ::placeholder {
-  color: #666; /* Placeholder color */
+  color: #6e6e6e !important; /* Placeholder color */
 }
 
 /* Styles for rating stars */
@@ -1954,7 +1956,7 @@ input[type="radio"] {
 
 label {
   font-size: 30px; /* Reduced label size */
-  color: #888;
+  color: #575757;
   cursor: pointer;
   transition: color 0.3s ease;
 }
