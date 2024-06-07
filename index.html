@@ -147,12 +147,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0; 
 }
 </script>
-<script type="text/javascript">
-  window.addEventListener("scroll", function(){
-    var header= document.querySelector("nav");
-    header.classList.toggle("sticky", window.scrollY >50)
-  })
-</script>
 
   <!-- Navbar -->
   <div class="navbar">
@@ -328,32 +322,32 @@ function topFunction() {
                     <span>The connections I've made here have opened up numerous opportunities for collaboration and personal development.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="images/img-1.jpg" alt="img" draggable="false"></div>
+                    <div class="img"><img src="/Community-Site/images/img-1.jpg" alt="img" draggable="false"></div>
                     <h2>Blanche Pearson</h2>
                     <span>Being a part of this community has been truly transformative.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+                    <div class="img"><img src="/Community-Site/images/img-2.jpg" alt="img" draggable="false"></div>
                     <h2>Joenas Brauers</h2>
                     <span> It's incredible to have such a supportive community around me.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="images/img-3.jpg" alt="img" draggable="false"></div>
+                    <div class="img"><img src="/Community-Site/images/img-3.jpg" alt="img" draggable="false"></div>
                     <h2>Lariach French</h2>
                     <span>It's amazing to be among such driven people.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="images/img-4.jpg" alt="img" draggable="false"></div>
+                    <div class="img"><img src="/Community-Site/images/img-4.jpg" alt="img" draggable="false"></div>
                     <h2>James Khosravi</h2>
                     <span>I've found endless support and inspiration.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="images/img-5.jpg" alt="img" draggable="false"></div>
+                    <div class="img"><img src="/Community-Site/images/img-5.jpg" alt="img" draggable="false"></div>
                     <h2>Kristina Zasiadko</h2>
                     <span>The connections I've made are invaluable.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
+                    <div class="img"><img src="/Community-Site/images/img-6.jpg" alt="img" draggable="false"></div>
                     <h2>Donald Horton</h2>
                     <span>This community has changed my life.</span>
                   </li>
@@ -678,6 +672,7 @@ function topFunction() {
               </div>
                 <p class="card-text">"As someone who values inclusivity, finding a space where everyone's voice is heard
                   and respected has been incredibly refreshing. It's empowering to collaborate here."</p>
+
               </div>
             </div>
           </div>
@@ -690,7 +685,7 @@ function topFunction() {
 
   <!-- contact section -->
 
-<div class="formbody ">
+  <div class="formbody ">
     <main>
       <section id="contact">
         <div class="formcontainer">
@@ -709,7 +704,7 @@ function topFunction() {
                 <div class="col-md-6 col-sm-6 rad">
                   <label for="name">Name</label>
                   <input
-                    style="border: 0.8px solid blue;"
+                    style="border: 0.8px solid blue; font-size: 18px;"
                     name="name"
                     id="name"
                     type="text"
@@ -721,7 +716,7 @@ function topFunction() {
                 <div class="col-md-6 col-sm-6 rad">
                   <label for="email">Email</label>
                   <input
-                    style="border: 0.8px solid blue;"
+                    style="border: 0.8px solid blue; font-size: 18px;"
                     name="email"
                     type="email"
                     id="email"
@@ -733,7 +728,7 @@ function topFunction() {
                 <div class="col-md-8 msg rad ">
                   <label for="message">Message</label>
                   <textarea
-                    style="border: 0.8px solid blue;"
+                    style="border: 0.8px solid blue; padding-left: 11px; padding-top: 15px; font-size: 18px;"
                     name="message"
                     class="input-focus"
                     id="msg"
