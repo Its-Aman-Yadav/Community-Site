@@ -860,16 +860,14 @@ function topFunction() {
       
     </main>
     <script>
-      const stars = document.querySelectorAll('.rating input[type="radio"]');
-      stars.forEach(star => {
-        star.addEventListener('click', () => {
-          stars.forEach(s => {
-            if (s !== star) {
-              s.checked = false;
-            }
-          });
+      const labels = document.querySelectorAll('.rating label');
+
+      labels.forEach(label => {
+        label.addEventListener('click', () => {
+          labels.forEach(l => l.classList.remove('selected'));
+          label.classList.add('selected');
         });
-      });
+      });      
     </script>
       <script>
         function sendEmail() {

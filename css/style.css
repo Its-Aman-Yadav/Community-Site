@@ -1923,17 +1923,15 @@ input[type="radio"] {
 }
 
 label {
-  font-size: 30px; /* Reduced label size */
+  font-size: 30px;
   color: #575757;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-label:hover {
-  color: green;
-}
-
-input[type="radio"]:checked + label {
+label:hover i,
+input[type="radio"]:checked + label i,
+label.selected i {
   color: green;
 }
 
