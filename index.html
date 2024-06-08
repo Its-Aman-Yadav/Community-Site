@@ -217,8 +217,8 @@
     </div>
   </section>
 
-<button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
-<!-- <button ><i class="fa-solid fa-circle-up"></i></button> -->
+<!-- <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+ <button ><i class="fa-solid fa-circle-up"></i></button> 
 
 <script>
 let mybutton = document.getElementById("myBtn");
@@ -241,7 +241,7 @@ function topFunction() {
     var header= document.querySelector("nav");
     header.classList.toggle("sticky", window.scrollY >50)
   })
-</script>
+</script> -->
 
   <!-- Navbar -->
   <div class="navbar">
@@ -880,7 +880,10 @@ function topFunction() {
     <!-- footer section -->
      <special-footer></special-footer>
    
-    <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+     <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+     <svg class="progress-ring" width="60" height="60">
+       <circle class="progress-ring__circle" stroke="blue" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"/>
+     </svg>
       </footer>
     <script>
       function sendFeed() {
@@ -888,66 +891,44 @@ function topFunction() {
       }
     </script>
   </div>
-
-<script>
-  // Get the button
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-// Function to scroll to the top of the page
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-
-// Show or hide the button based on the scroll position
-function handleScroll() {
-  if (window.pageYOffset > 300) {
-    scrollToTopBtn.classList.add('show');
-  } else {
-    scrollToTopBtn.classList.remove('show');
-  }
-}
-
-// Add scroll event listener
-window.addEventListener('scroll', handleScroll);
-
-// Add click event listener
-scrollToTopBtn.addEventListener('click', scrollToTop);
-
-</script>
-
-<script>
-  const wrapper = document.querySelector(".wrapper");
-  const carousell = document.querySelector(".carousell");
-  const firstCardWidth = carousell.querySelector(".cardd").offsetWidth;
-  const arrowBtns = document.querySelectorAll(".wrapper i");
-  const carouselChildrens = [...carousell.children];
-
-let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-
-let backToTopBtn = document.getElementById("backToTopBtn");
-
-// When the user scrolls down 100px from the top of the document, show the button
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+    
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+    
+    window.onscroll = function() {
+      scrollFunction();
+      updateProgress();
+    };
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
     }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-backToTopBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    window.scrollTo({top: 0, behavior: 'smooth'});
-});
-</script>
+    
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+    
+    scrollToTopBtn.addEventListener("click", function(event) {
+      event.preventDefault();
+      topFunction();
+    });
+    </script>  
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
