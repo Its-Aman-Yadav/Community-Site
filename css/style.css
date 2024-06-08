@@ -617,20 +617,35 @@ a:hover .fab {
   color: yellow;
 }
 .container {
-  max-width: 1140px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 200px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 0 2rem;
+  
+}
+.company h1{
+  font-size: 14px;
 }
 .social {
+  display: flex;
+  gap: 20px;
   font-size: x-large;
 }
 .row1 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .col1 {
@@ -638,6 +653,9 @@ a:hover .fab {
   color: #f2f2f2f2;
   font-family: poppins;
   padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 .col1 .logo {
   width: 100px;
@@ -645,7 +663,7 @@ a:hover .fab {
 }
 .col1 h3 {
   color: yellow;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   position: relative;
   cursor: pointer;
 }
@@ -659,6 +677,7 @@ a:hover .fab {
   left: 0;
   transition: 0.3s ease;
 }
+
 .logo {
   display: flex;
   flex-direction: row;
@@ -671,7 +690,7 @@ a:hover .fab {
   margin-left: 25px;
 }
 .col1 h3:hover::after {
-  width: 30px;
+  width: 100%;
 }
 .col1 .social a i {
   color: rgb(255, 255, 255);
@@ -682,6 +701,9 @@ a:hover .fab {
 .col1 .social a i:hover {
   transform: scale(1.5);
   color: yellow;
+}
+.col1 .links {
+  text-align: start;
 }
 .col1 .links a {
   display: block;
@@ -714,31 +736,36 @@ a:hover .fab {
   justify-content: space-between;
 }
 .col1 .contact-details i {
-  margin: 10px;
+  margin-right: 10px;
 }
 .row2 .form {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem ;
+}
+.row2 .form form {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .row2 .form input {
   background-color: #1a1c20ff;
   color: white;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   border: 0;
   outline: none;
-  padding: 14px 10px;
+  /* padding: 14px 10px; */
   border-radius: 6px;
   cursor: pointer;
 }
 .form button {
-  margin-top: 5px;
-  margin-left: 10px;
-  padding: 14px 20px;
-  border: 0;
-  border-radius: 6px;
-  background-color: rgb(251, 255, 0);
+    padding: 5px 20px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: rgb(251, 255, 0);
 }
 
 /********** Responsive Design ********/
@@ -760,6 +787,22 @@ a:hover .fab {
     width: 100%;
     text-align: left;
     margin-bottom: 20px;
+  }
+  .row1{
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .row1 .col1{
+    align-items: center;
+  }
+  .col1 .links {
+    text-align: center;
+  }
+  .row2 .form form {
+    flex-direction: column;
+    width: 100%;
   }
 }
 /* padding: 20px 0px;
