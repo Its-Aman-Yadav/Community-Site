@@ -27,6 +27,7 @@ body {
     } */
 .form1{
   background:linear-gradient(rgb(255, 206, 10), rgb(255, 128, 1));
+  padding: 50px;
 }
 .get {
   color: black;
@@ -1881,7 +1882,7 @@ h3 {
 }
 
 .contact-form:hover {
-  background-color: #f5f5f5;
+  background-color: #e62727;
 }
 
 input[type="text"],
@@ -1903,7 +1904,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  background-color: #ababab;
+  background-color: #ddd9d9;
 }
 
 ::placeholder {
