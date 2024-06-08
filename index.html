@@ -608,9 +608,7 @@ function topFunction() {
 </section>
 
 
-<!-- contact section   -->
 
-  <section id="experience">
     <div class="container">
 
       <div class="row" style="display: flex;align-items: center;justify-content: space-between;flex-direction: row;">
@@ -746,117 +744,85 @@ function topFunction() {
     </div>
   </section>
 
-<!-- feedback popup -->
+  <!-- contact -->
 
-  <!-- contact section -->
-
-  <div class="formbody ">
-    <main>
-      <section id="contact">
-        <div class="formcontainer">
-          <div class="section-title">
-            <h1 class="get font-bold">Get in Touch</h1>
-            <p>If you have any query or for collaboration</p>
+  <section id="contact" class="form-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-sm-12">
+          <div class="section-title" style="margin-top: 100px;">
+            <h1>Get in Touch</h1>
+            <p style="color: white;">If you have any questions or inquiries, feel free to contact us!</p>
           </div>
-          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
-            <form
-              id="contact-form"
-              action="http://127.0.0.1:5500/send-email"
-              method="POST"
-              onsubmit="sendEmail(); reset(); return false;"
-            >
-              <div class="row">
-                <div class="col-md-6 col-sm-6 rad">
-                  <label for="name">Name</label>
-                  <input
-                    style="border: 0.8px solid blue; font-size: 18px;"
-                    name="name"
-                    id="name"
-                    type="text"
-                    class="input-focus"
-                    placeholder="Enter Your Name"
-                    required
-                  />
-                </div>
-                <div class="col-md-6 col-sm-6 rad">
-                  <label for="email">Email</label>
-                  <input
-                    style="border: 0.8px solid blue; font-size: 18px;"
-                    name="email"
-                    type="email"
-                    id="email"
-                    class="input-focus"
-                    placeholder="Enter Your Email"
-                    required
-                  />
-                </div>
-                <div class="col-md-8 msg rad ">
-                  <label for="message">Message</label>
-                  <textarea
-                    style="border: 0.8px solid blue; padding-left: 11px; padding-top: 15px; font-size: 18px;"
-                    name="message"
-                    class="input-focus"
-                    id="msg"
-                    placeholder="Enter Your Query Or Message"
-                    rows="6"
-                    required
-                  ></textarea>
-                </div>
-                <div class="flex justify-center col-md-offset-0">
-                  <button class="submit" type="submit" id="contact-submit">Submit</button>
-                </div>
+          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+            <form id="contact-form" action="" method="POST">
+              <div class="col-md-6 col-sm-6">
+                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
+              <div class="col-md-6 col-sm-6">
+                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div style="margin-left: 2px; margin-right: 35px;" class="msg col-md-12 col-sm-12">
+                <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
+              </div>
+              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
+                <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
+              <div id="message"></div>
+            </div>
             </form>
           </div>
         </div>
-      </section>
-    </main>
-  </div>
-      <hr>
-      <div class="form1">
-      <section id="feedback">
-        <div class="formcontainer">
-          <div class="section-title">
-            <h1 class="get font-bold">Feedback</h1>
-            <p>We value your feedback. Please let us know your thoughts and suggestions.</p>
-          </div>
-          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendFeed(); reset(); return false;">
-              <div class="row">
-                <div class="col-md-6 col-sm-6 rad">
-                  <label for="name">Name</label>
-                  <input name="name" id="name" type="text" class="input-focus" placeholder="Enter Your Name" required>
-                </div>
-                <div class="col-md-6 col-sm-6 rad">
-                  <label for="email">Email</label>
-                  <input name="email" type="email" id="email" class="input-focus" placeholder="Enter Your Email" required>
-                </div>
-                <div class="col-md-8 msg rad">
-                  <label for="message">Message</label>
-                  <textarea style="padding-left: 11px; padding-top: 15px; font-size: 17px;"
-                  name="message" class="input-focus" id="msg" placeholder="Enter Your Query Or Message" rows="6" required></textarea>
-                </div>
-                <div class="col-12 rating rad">
-                  <input type="radio" id="star5" name="rating" value="5">
-                  <label for="star5"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star4" name="rating" value="4">
-                  <label for="star4"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star3" name="rating" value="3">
-                  <label for="star3"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star2" name="rating" value="2">
-                  <label for="star2"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star1" name="rating" value="1">
-                  <label for="star1"><i class="fas fa-star"></i></label>
-                </div>
-                <div class="flex justify-center col-md-offset-0">
-                  <button class="submit" type="submit">Submit</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
+  </section>
+  
+
+
+<!-- feedback -->
+<section id="feedback" class="form-container" style="margin-top: 100px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-sm-12">
+        <div class="section-title">
+          <h1>Give us your Feedback</h1>
+          <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
+        </div>
+        <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+          <form id="feedback-form" action="" method="POST">
+            <div class="col-md-6 col-sm-6">
+              <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
+              <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <p style="color: white;">Rate your experience:</p>
+              <div class="col-12 rating rad">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1"><i class="fas fa-star"></i></label>
+              </div>
+            </div>
+            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
+              <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
+              <div id="message1"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       
     </main>
     <script>
@@ -867,8 +833,31 @@ function topFunction() {
           labels.forEach(l => l.classList.remove('selected'));
           label.classList.add('selected');
         });
+      });          
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementsByName("message")[0].value = "";
+        });
       });      
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("feedback-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          document.getElementById("message1").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your feedback submitted successfully!</span>";
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementsByName("message1")[0].value = "";
+        });
+      });      
+    </script>
+    
       <script>
         function sendEmail() {
           alert("Email sent successfully!");

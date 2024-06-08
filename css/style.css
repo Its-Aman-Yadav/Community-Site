@@ -39,104 +39,113 @@ body {
   color: rgb(255, 254, 254);
 }
 
-* Contact Us Style */ #contact {
-  padding: 50px 0;
-  /* background: #fff; */
-}
-
-.formcontainer {
-  max-width: 600px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-.section-title {
+/* Contact Us Style */ 
+#contact .section-title {
   text-align: center;
-  margin-bottom: 40px;
 }
 
-.section-title .get {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #ffcc00;
-}
-
-.section-title p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Improve readability and organization */
-.contact-form {
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 30px black;
-  border: 1px solid black; /* Added black border */
-  background: #ffcc00f1;
-}
-
-.contact-form .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.contact-form .rad {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.contact-form .form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 16px;
-  background: #ffffff;
-  color: #000; /* Changed from rgb(0, 0, 0) to hex for consistency */
-}
-
-/* .contact-form .form-control:focus {
-  border-color: #ffcc00;
-  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
-} */
-.input-container {
-  position: relative;
-  width: 100%;
-}
-
-.input-container i {
-  position: absolute;
-  left: 10px; /* Adjust this value as needed */
-  top: 50%;
-  transform: translateY(-50%);
-  color: #888; /* Adjust the color as needed */
-  font-size: 1.5rem;
-}
-
-.input-container input {
-  padding-left: 30px; /* Adjust this value to make space for the icon */
-  width: 100%;
-}
-
-/* .contact-form .submit {
-  background: #2c18df;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
+#contact .form-control {
+  background-color: cornsilk;
+  border: 2px solid #e0e0e0;
+  border-radius: 18px;
   font-size: 18px;
-  margin-left: 220px;
+  margin-bottom: 16px;
+  transition: all 0.4s ease-in-out;
 }
 
-.contact-form .submit:hover {
-  background: #003ae6;
-} */
+#contact .form-control:hover {
+  border: 2px solid #797979;
+}
 
-/* Updated placeholder text color for consistency */
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #fff;
+#contact .form-control:active {
+  box-shadow: 1px 0px 5px black;
+}
+
+#contact input {
+  height: 55px;
+}
+
+#contact input[type="submit"] {
+  border: none;
+  background: #242424;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.4s ease-in-out;
+  margin-top: 10px;
+}
+
+#contact input[type="submit"]:hover {
+  font-size: 22px;
+  transition: font-size 0.3s linear 0.1s;
+}
+
+.input-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contact-form {
+  margin: 0 auto;
+  text-align: center;
+}
+/*feedback*/
+#feedback .section-title {
+  text-align: center;
+}
+
+#feedback .form-control {
+  background-color: cornsilk;
+  border: 2px solid #e0e0e0;
+  border-radius: 18px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  transition: all 0.4s ease-in-out;
+}
+
+#feedback .form-control:hover {
+  border: 2px solid #797979;
+}
+
+#feedback .form-control:active {
+  box-shadow: 1px 0px 5px black;
+}
+
+#feedback input {
+  height: 55px;
+}
+
+#feedback input[type="submit"] {
+  border: none;
+  background: #242424;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.4s ease-in-out;
+  margin-top: 10px;
+}
+
+#feedback input[type="submit"]:hover {
+  font-size: 22px;
+  transition: font-size 0.3s linear 0.1s;
+}
+
+#feedback .input-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#feedback #feedback-form {
+  margin: 0 auto;
+  text-align: center;
+}
+.form-container {
+  max-width: 1100px; /* Adjust the width as needed */
+  margin: 0 auto;
 }
 
 body,
@@ -710,13 +719,6 @@ a:hover .fab {
   transform: translateX(-8px);
   color: yellow;
 }
-.col1 .contact-details {
-  display: inline-flex;
-  justify-content: space-between;
-}
-.col1 .contact-details i {
-  margin: 10px;
-}
 .row2 .form {
   display: flex;
   justify-content: center;
@@ -1019,14 +1021,12 @@ justify-content: center; */
   transform: scale(1.05);
 }
 #services,
-#contact,
 #feedback {
   /* background: #ffffff; */
 }
 
 #about,
 #services,
-#contact,
 footer {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1048,9 +1048,7 @@ footer {
   padding-bottom: 22px;
 }
 
-#contact .section-title {
-  text-align: center;
-}
+
 
 div.card {
   width: 250px;
@@ -1675,28 +1673,6 @@ div.card {
 .service-cards:hover .heading-hover {
   color: white;
 }
-
-#contact .form-control:hover {
-  border-color: #999;
-  border: 2px solid #797979;
-}
-
-#contact input {
-  height: 55px;
-}
-#contact input[type="submit"] {
-  background: #242424;
-  border: none;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  transition: all 0.4s ease-in-out;
-  margin-top: 10px;
-
-  border-radius: 10px;
-}
-
 .icon1 {
   position: absolute;
   top: calc(42%);
@@ -1718,9 +1694,6 @@ div.card {
   letter-spacing: 2px;
 }
 
-#contact input[type="submit"]:hover {
-  background: #f1c11a;
-}
 
 /* footer section  */
 footer {
@@ -1872,19 +1845,6 @@ h3 {
   font-weight: bold;
   color: #333;
 }
-
-.contact-form {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-.contact-form:hover {
-  background-color: #e62727;
-}
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -1929,11 +1889,11 @@ label {
   transition: color 0.3s ease;
 }
 
-label:hover i,
+/* label:hover i,
 input[type="radio"]:checked + label i,
 label.selected i {
   color: green;
-}
+} */
 
 .submit {
   background-color: #007bff;
