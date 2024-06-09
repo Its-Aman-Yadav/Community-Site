@@ -253,6 +253,7 @@ html {
   right: 43px;
   display: none; /* Hidden by default */
   z-index: 1000;
+  margin-bottom: 10px;
 }
 
 .scrollToTopBtn:hover {
@@ -265,6 +266,7 @@ html {
   right: 38px;
   transform: rotate(-90deg);
   z-index: 999; /* Just below the button */
+  margin-bottom: 10px;
 }
 
 .progress-ring__circle {
