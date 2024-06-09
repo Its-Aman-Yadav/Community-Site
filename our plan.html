@@ -25,41 +25,6 @@
         background-color: #f0f8ff;
       }
 
-      header {
-        background: linear-gradient(90deg, #0073e6, #0099cc);
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-      }
-
-      header h1 {
-        margin: 0;
-      }
-
-      nav ul {
-        padding: 0;
-        list-style: none;
-        text-align: center;
-      }
-
-      nav ul li {
-        display: inline;
-        margin: 0 10px;
-      }
-
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        padding: 5px 10px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-      nav ul li a:hover {
-        background-color: #fff;
-        color: #0073e6;
-        border-radius: 5px;
-      }
-
       main {
         padding: 20px;
         max-width: 800px;
@@ -110,18 +75,28 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>Open Source Community Plan</h1>
+    <div class="navbar">
       <nav>
-        <ul>
+        <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem"
+          ><img
+            src="images/fav.png"
+            alt="logo"
+            style="height: 50px; width: 50px"
+          />
+          <span class="logo-text" style="margin-left: 0"
+            >Open Source Village</span
+          >
+        </label>
+        <ul class="flex flex-col md:flex-row">
           <li><a href="#introduction">Introduction</a></li>
           <li><a href="#goals">Goals</a></li>
           <li><a href="#guidelines">Community Guidelines</a></li>
           <li><a href="#contributions">Project Contributions</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="login.html">Login/Register</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
 
     <main>
       <section id="introduction">
