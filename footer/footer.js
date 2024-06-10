@@ -52,6 +52,7 @@ class SpecialFooter extends HTMLElement {
             </form>
           </div>
         </div>
+        <hr></hr>
         <p class="copyright">
           Copyright ©
           <script>document.write(new Date().getFullYear());</script>

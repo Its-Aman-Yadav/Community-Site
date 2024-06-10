@@ -769,7 +769,7 @@ a:hover .fab {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem ;
+  /* padding: 2rem ; */
 }
 .row2 .form form {
   width: 30%;
@@ -847,11 +847,17 @@ background: black; */
   /* cursor: pointer; */
 }
 .copyright {
-  margin-top: 30px;
-  margin-left: 90px;
+  margin-top: 10px;
+  /* margin-left: 90px; */
   text-align: center;
   color: #777;
   font-size: 1rem;
+}
+footer hr{
+  width: 80% !important;
+  border: 1px solid rgb(68, 67, 67);
+  margin: auto;
+  margin-top: 10px;
 }
 
 /* Dark mode styles */
@@ -994,12 +1000,13 @@ strong {
   color: #01080d;
   font-size: 60px;
   text-align: center;
-  padding-bottom: 75px;
+  padding-bottom: 25px;
   font-weight: bolder;
 }
 
 .service-container {
   padding-left: 40px;
+  padding-top: 10px;
 }
 
 .card {
@@ -1083,7 +1090,7 @@ justify-content: center; */
 
 .pic-col {
   margin-left: 35%;
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 .col-md-4:hover {
@@ -1098,7 +1105,7 @@ justify-content: center; */
 #services,
 footer {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .section-title {
@@ -1705,7 +1712,8 @@ div.card {
   font-weight: 700;
   letter-spacing: 1px;
   padding: 14px 36px;
-  margin-top: 62px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   margin-right: 16px;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -1866,7 +1874,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-top: 7%;
+  /* margin-top: 7%; */
 }
 
 .pic-col {
