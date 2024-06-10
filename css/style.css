@@ -263,6 +263,7 @@ html {
 .progress-ring {
   position: fixed;
   bottom: 101px;
+  margin-bottom: 10px;
   right: 38px;
   transform: rotate(-90deg);
   z-index: 999; /* Just below the button */
@@ -798,6 +799,7 @@ a:hover .fab {
 @media (max-width: 900px) {
   .row {
     flex-direction: column;
+    padding: 15px;
   }
   .col {
     width: 100%;
@@ -1081,6 +1083,7 @@ justify-content: center; */
 
 .pic-col {
   margin-left: 35%;
+  margin-top: 20px;
 }
 
 .col-md-4:hover {
@@ -2559,4 +2562,12 @@ textarea {
 }
 body {
   user-select: none;
+}
+
+.reviews{
+  display: grid;
+  grid-auto-flow: column;
+  padding: 20px 10px;
+  margin: 30px;
+  gap: 30px;
 }
