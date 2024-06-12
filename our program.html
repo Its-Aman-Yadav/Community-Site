@@ -1,98 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Startup</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
 
-        header {
-            background: #007BFF;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
+      header {
+        background: linear-gradient(90deg, #007bff, #0099cc);
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
 
-        header h1 {
-            margin-bottom: 10px;
-        }
+      header h1 {
+        margin-bottom: 10px;
+      }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
 
-        .mission, .join-us {
-            padding: 20px 0;
-            text-align: center;
-        }
+      .mission,
+      .join-us {
+        padding: 20px 0;
+        text-align: center;
+      }
 
-        .mission h2, .join-us h2 {
-            margin-bottom: 10px;
-            color: #007BFF;
-        }
+      .mission h2,
+      .join-us h2 {
+        margin-bottom: 10px;
+        color: #007bff;
+      }
 
-        .join-us .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
+      .join-us .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: linear-gradient(90deg, #007bff, #0099cc);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+      }
 
-        .join-us .btn:hover {
-            background: #0056b3;
-        }
+      .join-us .btn:hover {
+        background: linear-gradient(90deg, #0056b3, #0072b3);
+      }
 
-        footer {
-            background: #f4f4f4;
-            color: #555;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
+     .changes{
+      color: azure;
+     }
+
+
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <h1>Welcome to Our Community Startup</h1>
-            <p>We are a group of like-minded individuals who believe in the power of coming together to achieve shared goals.</p>
-        </div>
+      <div class="container">
+        <h1>Welcome to Our Community Startup</h1>
+        <p class="changes">
+          We are a group of like-minded individuals who believe in the power of
+          coming together to achieve shared goals.
+        </p>
+      </div>
     </header>
     <section class="mission">
-        <div class="container">
-            <h2>Our Mission</h2>
-            <p>Our mission is to create a safe and inclusive space where members can connect, collaborate, and make a positive impact in the world.</p>
-        </div>
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to create a safe and inclusive space where members can
+          connect, collaborate, and make a positive impact in the world.
+        </p>
+      </div>
     </section>
     <section class="join-us">
-        <div class="container">
-            <h2>Join Us</h2>
-            <p>Be a part of something bigger than yourself. Join us and help make a difference!</p>
-            <a href="https://discord.gg/mM9qFh2uZR" class="btn">Get Started</a>
-        </div>
+      <div class="container">
+        <h2>Join Us</h2>
+        <p>
+          Be a part of something bigger than yourself. Join us and help make a
+          difference!
+        </p>
+        <a href="https://discord.gg/mM9qFh2uZR" class="btn">Get Started</a>
+      </div>
     </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Community Startup. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
+    <special-footer></special-footer>
+    <script src="footer/footer.js"></script>
+  </body>
 </html>
-
- 
