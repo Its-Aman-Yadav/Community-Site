@@ -1,6 +1,12 @@
 class SpecialFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+      <style>
+        /* Adding style for black text color */
+        .form input[type="text"] {
+          color: black;
+        }
+      </style>
       <footer>
         <div class="container">
           <div class="row1">
@@ -46,9 +52,9 @@ class SpecialFooter extends HTMLElement {
         </div>
         <div class="row2">
           <div class="form">
-            <form action="">
-              <input type="text" placeholder="Email here...">
-              <button><i class="fa fa-paper-plane"></i></button>
+            <form id="emailForm">
+              <input type="text" id="emailInput" placeholder="Email here...">
+              <button type="submit"><i class="fa fa-paper-plane"></i></button>
             </form>
           </div>
         </div>
@@ -59,6 +65,19 @@ class SpecialFooter extends HTMLElement {
           Developed by Open source Contributors. All rights reserved.
         </p>
       </footer>`;
+
+    const emailForm = this.querySelector('#emailForm');
+
+    emailForm.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      
+      const emailInput = document.querySelector('#emailInput').value;
+      
+    
+      alert("Thank you! We will connect soon.");
+      
+      emailForm.reset();
+    });
   }
 }
 
