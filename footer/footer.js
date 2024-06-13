@@ -66,18 +66,35 @@ class SpecialFooter extends HTMLElement {
         </p>
       </footer>`;
 
-    const emailForm = this.querySelector('#emailForm');
-
-    emailForm.addEventListener('submit', function(event) {
-      event.preventDefault(); 
       
-      const emailInput = document.querySelector('#emailInput').value;
-      
+     
+    document.addEventListener('DOMContentLoaded', function() {
+      const emailForm = document.querySelector('#emailForm');
     
-      alert("Thank you! We will connect soon.");
+      emailForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        const emailInput = document.querySelector('#emailInput').value;
+    
+        if (!validateEmail(emailInput)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+        
+        alert("Thank you! We will connect soon.");
+        
+        emailForm.reset();
+      });
       
-      emailForm.reset();
+
+       /* Function for checking if email is valid or not */
+
+      function validateEmail(email) {                         
+        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return re.test(String(email).toLowerCase());
+      }
     });
+    
   }
 }
 
