@@ -1400,13 +1400,21 @@ div.card {
   margin-left: 20px;
 }
 
+/* Assuming the icon class is `.icon` */
+.navbar ul li a:hover .icon {
+  color: white;
+}
+
+
 .navbar ul li a {
   color: white;
   font-size: 18px;
   padding: 8px 16px;
   text-decoration: none;
   position: relative;
-  transition: color 0.3s, background 0.3s;
+  transition: color 0.0s, background 0.0s;
+  display: flex;
+
 }
 
 .navbar ul li a::before {
@@ -1416,7 +1424,6 @@ div.card {
   left: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
   transition: width 0.3s;
   z-index: -1;
 }
@@ -1427,6 +1434,12 @@ div.card {
 
 .navbar ul li a:hover {
   color: white;
+  background-color: #e8701f; /* Change this to your desired hover color */
+  transition: color 0.0s, background-color 0.0s;
+  border-radius: 20px;
+  background: rgb(239,188,0);
+background: linear-gradient(90deg, rgba(239,188,0,1) 47%, rgba(204,133,110,1) 100%);
+  
 }
 
 .navbar ul li i {
