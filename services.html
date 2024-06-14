@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Open Source Village</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+  
+    <!-- stylesheets css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/et-line-font.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="services.css">
+  
+  
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     
+   <!-- remixicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
+  
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+<body>
+    
+  <!-- Chatbot integration section -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "Ask me anything!",
+      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Open Source Village",
+      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": [],
+      "enableConversationDeletion": true
+    });
+  </script>
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var header= document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY >50)
+    })
+  </script> 
+  
+    <!-- Navbar -->
+    <div class="navbar">
+      <nav>
+        <a class="logo-link" href="#home"> <label class="logo" style="margin-left:10px;">
+          
+          <img src="images/fav.png" alt="logo">
+          <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+        </label></a>
+        <ul>
+          <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+          <li><i class="fa-solid fa-address-card" style="filter:invert(1)"></i><a href="#about">About</a></li>
+          <li><i class="fa-solid fa-screwdriver-wrench" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+          <li><i class="fa-solid fa-pen-to-square" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+          <li><i class="fa-solid fa-address-book" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+          <li><i class="fa-solid fa-right-to-bracket" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round" id="toggle"></div>
+        </label>
+        <img id="image" onclick="ProfileClicked()" />
+        </ul>
+      </nav>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButton = document.getElementById('checkbox');
+      toggleButton.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode');
+      });
+    });
+    </script>
+  
+    
+   <!-- main section -->
+   <section class="min-h-screen background1 text-center py-20 px-8 xl:px-0 flex flex-col justify-center">
+    <span class="text-gray-400 text-lg max-w-lg mx-auto mb-2 capitalize flex items-center mt-20">what we're offering <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-indigo-600 ml-3 w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+      </svg>
+    </span>
+    <h1 class="text-white text-4xl md:text-6xl xl:text-5xl font-semibold max-w-3xl mx-auto mb-16 leading-snug">Services Specifically for you</h1>
+    <div class="grid-offer text-left grid sm:grid-cols-2 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+      <div class="cardx background2 p-10 relative tl">
+        <div class="circle">
+        </div>
+        <div class="relative lg:pr-52">
+          <h2 class="capitalize text-gray-400 mb-4 text-2xl xl:text-3xl">OPEN LEARNING<br /> </h2>
+          <p class="text-gray-400">Our community promotes open learning, allowing members to share their knowledge and skills with
+            others, fostering a culture of continuous growth.</p>
+        </div>
+        <div class="icon"></div>
+      </div>
+      <div class="cardx background2 p-10 relative tr">
+        <div class="circle">
+        </div>
+        <div class="relative lg:pl-48">
+          <h2 class="capitalize text-gray-400 mb-4 text-2xl xl:text-3xl">MENTORSHIP <br /></h2>
+          <p class="text-gray-400">Our community offers mentorship, connecting members with experienced mentors to accelerate personal
+            and professional growth.</p>
+        </p>
+        </div>
+      </div>
+      <div class="cardx background2 p-10 relative bl">
+        <div class="circle">
+        </div>
+        <div class="relative lg:pr-44">
+          <h2 class="capitalize text-gray-00 mb-4 text-2xl xl:text-3xl">NETWORK<br /></h2>
+          <p class="text-gray-400">Our community enables networking with smart and diverse individuals, fostering collaboration and
+            opportunities for personal and professional growth.</p>
+        </div>
+      </div>
+      <div class="cardx background2 p-10 relative br">
+        <div class="circle">
+        </div>
+        <div class="relative lg:pl-48">
+          <h2 class="capitalize text-gray-400 mb-4 text-2xl xl:text-3xl">CARD DESIGN<br /></h2>
+          <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.</p>
+        </div>
+      </div>
+    </div>
+
+    </section>
+    <special-footer></special-footer>
+    <script src="footer/footer.js"></script>
+  
+</body>
+</html>

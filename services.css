@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap");
+
+@mixin mQ($rem) {
+  @media screen and (min-width: $rem) {
+    @content;
+  }
+}
+
+.background1{
+    /* background: linear-gradient(rgb(253, 202, 1), rgb(255, 255, 255)); */
+    background-color: #f1c11a;
+}
+
+.background2{
+    background-color: #fff;
+}
+
+
+
+h2 {
+  letter-spacing: 0px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cardx {
+  position: relative;
+ 
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    z-index: 0;
+    /* background-color: rgb(255, 128, 1); */
+    background: linear-gradient(rgb(255,128,1), #f1c11a);
+}
+
+  &:hover {
+    box-shadow: 0.063rem 0.063rem 1.25rem 0.375rem rgb(0 0 0 / 53%);
+  }
+
+  &:nth-child(1)::before {
+    bottom: 0;
+    right: 0;
+    clip-path: circle(calc(4rem + 5vw) at 100% 100%);
+    background: linear-gradient( #ffd12a, rgb(255,128,1));
+  }
+
+  &:nth-child(2)::before {
+    bottom: 0;
+    left: 0;
+    clip-path: circle(calc(4rem + 5vw) at 0% 100%);
+    background: linear-gradient( #ffd12a, rgb(255,128,1));
+  }
+
+  &:nth-child(3)::before {
+    top: 0;
+    right: 0;
+    clip-path: circle(calc(4rem + 5vw) at 100% 0%);
+    background: linear-gradient(rgb(255,128,1), #ffd12a);
+  }
+
+  &:nth-child(4)::before {
+    top: 0;
+    left: 0;
+    clip-path: circle(calc(4rem + 5vw) at 0% 0%);
+    background: linear-gradient(rgb(255,128,1),#ffd12a);
+  }
+
+  p {
+    transition: 0.8s;
+  }
+}
+
+.cardx:hover::before {
+  clip-path: circle(110vw at 100% 100%);
+}
+.cardx h2{
+    color: #0056b3;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+.cardx:hover h2 {
+    color: #fff;
+  }
+.cardx:hover p {
+  color: #fff;
+}
+
+.circle {
+  @include mQ(62.5rem) {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 0;
+  }
+}
+
+.cardx:nth-child(1) .circle {
+   
+  background: url("images/openlearning.jpg");
+  bottom: 0;
+  right: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+}
+
+.cardx:nth-child(2) .circle {
+  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat 50% 50% / cover;
+  bottom: 0;
+  left: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+}
+.cardx:nth-child(3) .circle {
+  background: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat 50% 50% / cover;
+  top: 0;
+  right: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+}
+
+.cardx:nth-child(4) .circle {
+  background: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat 50% 50% / cover;
+  top: 0;
+  left: 0;
+  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+}
+
+
+.tl{
+    border-top-left-radius: 10px ;
+}
+
+
+.tr{
+    border-top-right-radius: 10px;
+}
+.bl{
+    border-bottom-left-radius: 10px;
+}
+.br{
+    border-bottom-right-radius: 10px;
+}
