@@ -972,7 +972,6 @@ h3 {
 h1 {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #f1c11a;
 }
 
 h2 {
@@ -1925,13 +1924,58 @@ h3 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.section-title {
+.section-title1 {
   margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 10px;
   font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
+  font-size: 35px;
+  font-weight:1000;
+  color: rgb(248, 196, 8);
+  background-color: rgba(230, 61, 23, 0.995);
+  top:20px;
+  height:80%;
+  width:100%;
+  border-radius: 20px;
+  opacity: 0.5;
+  transition: all 0.2s ease; 
+  text-shadow:4px 2px 24px rgba(250, 247, 47, 1); 
+ }
+
+.section-title1:hover {
+  text-shadow:4px 2px 6px rgba(238, 226, 240, 0.88);
+  color: rgba(3, 3, 3, 1)
+
 }
+
+.section-title2{
+  font-family: "roboto",sans-serif;
+  font-size: 20px;
+  color: #000000;
+  padding: 5px 10px;
+  margin-bottom: 0; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px; 
+  /* background-color: #ea2424; Line color (adjust based on theme) */
+  margin-top: 10px; 
+
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -2567,7 +2611,10 @@ textarea {
   margin: 0 auto;
 }
 .submit-btn:hover {
-  background-color: #45a049;
+  background-color:rgba(230, 61, 23, 0.995);
+  opacity: 0.5;
+  color: #000000;
+  font-weight: bold;
 }
 .rating {
   justify-content: center;
