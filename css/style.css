@@ -559,7 +559,8 @@ body.dark-mode .card1{
   background: linear-gradient(to right,#535353,#396a92);
 }
 body.dark-mode .navbar nav.sticky {
-  background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.979));
+  background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
+  backdrop-filter: blur(6px);
 }
 body.dark-mode .card1 .card-text{
   color: #fff;
