@@ -296,7 +296,6 @@ nav {
 .logo-text {
   display: flex;
   font-size: 20px;
-  margin-top: 10px;
 }
 
 ul {
@@ -411,7 +410,7 @@ ul li a:hover {
   display: inline-block;
   width: 34px;
   height: 20px;
-  margin-left: 10px;
+  margin-right: 30px;
   position: relative;
 }
 
@@ -1506,18 +1505,20 @@ div.card {
   top: 0;
   left: 0;
   width: 100%;
+  backdrop-filter: blur(4px);
   padding: 20px 0px;
   border: none;
   transition: all 0.6s;
 }
 .navbar nav.sticky {
   height: 80px;
-  background: linear-gradient(rgb(183, 123, 27), rgba(249, 177, 43, 0.818));
+  background: linear-gradient(rgb(183, 123, 27), rgba(249, 177, 43, 0.7));
   color: white !important;
   /* border-bottom: 1.5px solid rgb(0, 0, 0); */
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 0 0 2px 2px rgb(78, 38, 17, 0.8);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  /* box-shadow: 0 0 2px 2px rgb(78, 38, 17, 0.8); */
+  backdrop-filter: blur(3px);
   padding: 10px 0px;
 }
 .navbar nav ul li i {
@@ -1589,6 +1590,7 @@ div.card {
 }
 
 .navbar ul li a:hover {
+  padding: 3px 16px;
   color: white;
   background-color: #e8701f; /* Change this to your desired hover color */
   transition: color 0s, background-color 0s;
