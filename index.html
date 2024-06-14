@@ -40,7 +40,7 @@
 
   <style>
     .contact-form .submit {
-        background: #e18b09;
+        background: #e15509;
           color: rgb(9, 9, 9);
           padding: 10px 20px;
           border: none;
@@ -62,6 +62,144 @@
       .home-thumb .btn:hover{
         box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5) , 0 0 25px rgb(255, 255, 255) , 0 0 50px rgb(255, 255, 255) , 0 0 200px rgb(255, 255, 255);
       }
+
+      .card1 {
+        overflow: hidden;
+      }
+
+      .card-body {
+        transition: transform 0.3s ease;
+        padding: 10px;
+      }
+
+      .card-text {
+        overflow-wrap: break-word; /* Ensures long words break and stay within the card */
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+        gap: 1rem;
+      }
+    
+      .logo img {
+        height: 50px;
+        width: 50px;
+      }
+    
+      .logo-text {
+        font-size: 1.4rem; /* Adjusted font size */
+      }
+    
+      ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    
+      ul li {
+        margin: 0 10px; /* Adjust margin to fit items */
+        font-size: 0.9rem; /* Reduced font size */
+      }
+    
+      ul li a {
+        text-decoration: none;
+        color: white; /* Adjust color as needed */
+      }
+    
+      ul li i {
+        margin-right: 5px; /* Adjust space between icon and text */
+      }
+      .wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .carousell {
+        display: flex;
+        padding: 0;
+        transition: transform 0.5s ease;
+    }
+    
+    .cardd {
+        list-style: none;
+        margin: 0 10px;
+        flex: 0 0 auto;
+        width: 200px; /* Adjust as needed */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        padding: 10px; /* Added padding to ensure text doesn't touch edges */
+    }
+    
+    .cardd .img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .cardd img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .cardd h2 {
+        font-size: 1.2em; /* Reduced font size */
+        margin: 10px 0;
+    }
+    
+    .cardd span {
+        font-size: 0.9em; /* Reduced font size */
+        padding: 0 10px;
+        display: block;
+        margin-bottom: 10px;
+    }  
+    
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #f1c11a;
+      background-image: -webkit-linear-gradient(45deg,
+                                                rgba(255, 255, 255, .2) 25%,
+                                                transparent 25%,
+                                                transparent 50%,
+                                                rgba(255, 255, 255, .2) 50%,
+                                                rgba(255, 255, 255, .2) 75%,
+                                                transparent 75%,
+                                                transparent);
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #d1a10a;
+    }
+    
+    
+
+
+    
   </style>
 </head>
 
@@ -113,8 +251,8 @@
     </div>
   </section>
 
-
-<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
+<!-- <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+ <button ><i class="fa-solid fa-circle-up"></i></button> 
 
 <script>
 let mybutton = document.getElementById("myBtn");
@@ -131,28 +269,47 @@ function topFunction() {
   document.documentElement.scrollTop = 0; 
 }
 </script>
+</script>-->
+<script type="text/javascript">
+  window.addEventListener("scroll", function(){
+    var header= document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY >50)
+  })
+</script> 
 
   <!-- Navbar -->
   <div class="navbar">
     <nav>
-      <!-- <input type="checkbox" id="check">
-      <label for="check" class="checkbut">
-        <i class="fas fa-bars"></i>
-      </label> -->
-      <label class="logo" style="margin-left:5px; display: flex; gap: 1rem;"><img src="images/fav.png" alt="logo" style="height: 50px; width: 50px;">
+      <a class="logo-link" href="#home"> <label class="logo" style="margin-left:10px;">
+        
+        <img src="images/fav.png" alt="logo">
         <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
-      </label>
-      <ul class="flex flex-col md:flex-row">
+      </label></a>
+      <ul>
         <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#feedback">Feedback</a></li>
+        <li><i class="fa-solid fa-address-card" style="filter:invert(1)"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+        <li><i class="fa-solid fa-right-to-bracket" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round" id="toggle"></div>
+      </label>
+      <img id="image" onclick="ProfileClicked()" />
       </ul>
     </nav>
   </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('checkbox');
+    toggleButton.addEventListener('change', function() {
+      document.body.classList.toggle('dark-mode');
+    });
+  });
+  </script>
 
+  
   <!-- Home Section -->
   <section class="home" id="home">
     <div class="container">
@@ -286,52 +443,69 @@ function topFunction() {
         <div class="row">
           <div class="col-md-12">
             <div class="containeerr">
-              
               <div class="wrapper">
                 <i id="left" class="fa-solid fa-angle-left"></i>
                 <ul class="carousell">
                   <li class="cardd">
-                    <div class="img"><img src="images/testi_1.jpg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/testi_1.jpg" alt="images/img-6.jpg" draggable="false">
+                    </div>
                     <h2>Arden Stone</h2>
                     <span>I'm immensely grateful to have found such an inspiring group of people in this community!</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="images/testi_2.jpeg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/testi_2.jpeg" alt="images/img-5.jpg" draggable="false">
+                    </div>
                     <h2>John Smith</h2>
                     <span>I've been involved with many groups in the past, but none have been as warm and welcoming as this one.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="images/testi_3.jpeg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/testi_3.jpeg" alt="images/img-4.jpg" draggable="false">
+                    </div>
                     <h2>Emily Johnson</h2>
-                    <span>The connections I've made here have opened up numerous opportunities for collaboration and personal development.</span>
+                    <span>It has opened up numerous opportunities for collaboration and personal development.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-1.jpg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/img-1.jpg" alt="images/img-3.jpg" draggable="false">
+                    </div>
                     <h2>Blanche Pearson</h2>
                     <span>Being a part of this community has been truly transformative.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-2.jpg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/img-2.jpg" alt="images/img-2.jpg" draggable="false">
+                    </div>
                     <h2>Joenas Brauers</h2>
-                    <span> It's incredible to have such a supportive community around me.</span>
+                    <span>It's incredible to have such a supportive community around me.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-3.jpg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/img-3.jpg" alt="images/img-1.jpg" draggable="false">
+                    </div>
                     <h2>Lariach French</h2>
                     <span>It's amazing to be among such driven people.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-4.jpg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/img-4.jpg" alt="images/testi_1.jpg" draggable="false">
+                    </div>
                     <h2>James Khosravi</h2>
                     <span>I've found endless support and inspiration.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-5.jpg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/img-5.jpg" alt="images/testi_2.jpg" draggable="false">
+                    </div>
                     <h2>Kristina Zasiadko</h2>
                     <span>The connections I've made are invaluable.</span>
                   </li>
                   <li class="cardd">
-                    <div class="img"><img src="/Community-Site/images/img-6.jpg" alt="img" draggable="false"></div>
+                    <div class="img">
+                      <img src="images/img-6.jpg" alt="images/testi_3.jpg" draggable="false">
+                    </div>
                     <h2>Donald Horton</h2>
                     <span>This community has changed my life.</span>
                   </li>
@@ -339,11 +513,11 @@ function topFunction() {
                 <i id="right" class="fa-solid fa-angle-right"></i>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
     </section>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
      document.addEventListener('DOMContentLoaded', function () {
@@ -388,110 +562,107 @@ function topFunction() {
   <div class="containerr">
     <div class="accordion">
       <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
-  <div class="accordion-item">
-    <button id="accordion-button-1" aria-expanded="false">
-      <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>Contributing to the community's goals: There are many ways to contribute to our community! Whether you're a developer, designer, writer, or simply passionate about a particular cause, there's a place for you here. You can contribute code to open source projects, participate in discussions, share your expertise, or organize events that align with our mission.</p>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button id="accordion-button-1" aria-expanded="false">
+          <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>Contributing to the community's goals: There are many ways to contribute to our community! Whether you're a developer, designer, writer, or simply passionate about a particular cause, there's a place for you here. You can contribute code to open source projects, participate in discussions, share your expertise, or organize events that align with our mission.</p>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <button id="accordion-button-2" aria-expanded="false">
-      <span class="accordion-title">What benefits do members receive from participating in the community?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>Benefits of community membership: As a member of our community, you'll have the opportunity to connect with other passionate individuals, collaborate on projects that align with your interests and values, and make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events, and networking opportunities.</p>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button id="accordion-button-2" aria-expanded="false">
+          <span class="accordion-title">What benefits do members receive from participating in the community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>Benefits of community membership: As a member of our community, you'll have the opportunity to connect with other passionate individuals, collaborate on projects that align with your interests and values, and make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events, and networking opportunities.</p>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <button id="accordion-button-3" aria-expanded="false">
-      <span class="accordion-title">How can I join the open source village community?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>Joining the open source village community: Joining our community is simple! Just navigate to our website and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration process. Once registered, you'll gain access to our forums, projects, events, and more.</p>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button id="accordion-button-3" aria-expanded="false">
+          <span class="accordion-title">How can I join the open source village community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>Joining the open source village community: Joining our community is simple! Just navigate to our website and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration process. Once registered, you'll gain access to our forums, projects, events, and more.</p>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <button id="accordion-button-4" aria-expanded="false">
-      <span class="accordion-title">What is open source community?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>An open source community is a group of individuals who collaborate on projects and initiatives that are developed and shared openly, meaning the source code and resources are freely available for anyone to view, use, modify, and distribute ideas.</p>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button id="accordion-button-4" aria-expanded="false">
+          <span class="accordion-title">What is open source community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>An open source community is a group of individuals who collaborate on projects and initiatives that are developed and shared openly, meaning the source code and resources are freely available for anyone to view, use, modify, and distribute ideas.</p>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <button id="accordion-button-5" aria-expanded="false">
-      <span class="accordion-title">What is the purpose of the open source village community website?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>Purpose of the open source village community website: Our website serves as a central hub for like-minded individuals who believe in the power of community-driven initiatives. It's a platform where members can connect, collaborate, and contribute to make a positive impact in the world.</p>
-    </div>
-  </div>
-  
-  <div class="accordion-item">
-    <button id="accordion-button-6" aria-expanded="false">
-      <span class="accordion-title">Are there any eligibility criteria to join the community?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>The only criteria is your passion for open source.</p>
-    </div>
-  </div>
-  
-  <div class="accordion-item">
-    <button id="accordion-button-7" aria-expanded="false">
-      <span class="accordion-title">How can I find and join specific projects within the community?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>To find and join specific projects, visit our project directory on the website. You can browse through ongoing projects, read their descriptions, and join the ones that interest you by following the participation guidelines provided.</p>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false">
+          <span class="accordion-title">What is the purpose of the open source village community website?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>Purpose of the open source village community website: Our website serves as a central hub for like-minded individuals who believe in the power of community-driven initiatives. It's a platform where members can connect, collaborate, and contribute to make a positive impact in the world.</p>
+        </div>
+      </div>
 
-  
+      <div class="accordion-item">
+        <button id="accordion-button-6" aria-expanded="false">
+          <span class="accordion-title">Are there any eligibility criteria to join the community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>The only criteria is your passion for open source.</p>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <button id="accordion-button-9" aria-expanded="false">
-      <span class="accordion-title">How can I stay updated with the community's latest news and events?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>You can stay updated by  following our social media channels, and regularly checking  our website for new events and information.</p>
+
+      <div class="accordion-item">
+        <button id="accordion-button-7" aria-expanded="false">
+          <span class="accordion-title">How can I find and join specific projects within the community?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>To find and join specific projects, visit our project directory on the website. You can browse through ongoing projects, read their descriptions, and join the ones that interest you by following the participation guidelines provided.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button id="accordion-button-9" aria-expanded="false">
+          <span class="accordion-title">How can I stay updated with the community's latest news and events?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>You can stay updated by following our social media channels, and regularly checking our website for new events and information.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button id="accordion-button-10" aria-expanded="false">
+          <span class="accordion-title">Who can I contact if I have more questions or need support?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>If you have more questions or need support, feel free to contact our support team via the "Contact Us" page on our website. Our team is always ready to help you with any inquiries or issues you may have.</p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="accordion-item">
-    <button id="accordion-button-10" aria-expanded="false">
-      <span class="accordion-title">Who can I contact if I have more questions or need support?</span>
-      <span class="icon" aria-hidden="true"></span>
-    </button>
-    <div class="accordion-content">
-      <p>If you have more questions or need support, feel free to contact our support team via the "Contact Us" page on our website. Our team is always ready to help you with any inquiries or issues you may have.</p>
-    </div>
-  </div>
-  
-</div>
- </div>
 </section>
-        
-<!-- contact section   -->
 
-  <section id="experience">
-    <div class="container">
 
-      <div class="row" style="display: flex;align-items: center;justify-content: space-between;flex-direction: row;">
+
+    <div class="container" style="margin-top: 10px;">
+
+      <div class="row reviews" style="margin-top: 40px;">
         <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="height: 100%;">
+          <div class="row g-0" style="padding: 15px !important; height: 100%; cursor: pointer;">
             <div class="col-md-8 pic-col">
               <img src="images/profile1.jpg" class="img-fluid rounded-start" style="width: 80px;">
             </div>
@@ -534,7 +705,7 @@ function topFunction() {
         </div>
 
         <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="height: 100%;">
+          <div class="row g-0" style="height: 100%; cursor: pointer;">
             <div class="col-md-8 pic-col ">
               <img src="images/profile2.jpg" class="img-fluid rounded-start" style="width: 80px;">
             </div>
@@ -577,7 +748,7 @@ function topFunction() {
         </div>
 
         <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="height: 100%;">
+          <div class="row g-0" style="height: 100%; cursor: pointer;" >
             <div class="col-md-8 pic-col">
               <img src="images/profile3.jpg" class="img-fluid rounded-start" style="width: 80px;">
             </div>
@@ -585,6 +756,11 @@ function topFunction() {
               <div class="card-body" style="width: 100%;">
                 <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Emily R.</h5>
                 <div class="flex mt-2 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-star-fill" viewBox="0 0 16 16">
                   <path
@@ -616,9 +792,8 @@ function topFunction() {
       </div>
     </div>
   </section>
--->
 
-  <!-- contact section -->
+  <!-- contact -->
 
   <div class="formbody ">
     <main>
@@ -627,58 +802,30 @@ function topFunction() {
           <div class="section-title">
             <h1 class="get font-bold">Get in Touch</h1>
             <p style="color: white;">If you have any query or for collaboration</p>
+
           </div>
-          <div class="contact-form bg-gradient-to-r from-orange-500 to-yellow-300">
-            <form
-              id="contact-form"
-              action="http://127.0.0.1:5500/send-email"
-              method="POST"
-              onsubmit="sendEmail(); reset(); return false;"
-            >
-              <div class="row">
-                <div class="col-md-6 col-sm-6 rad">
-                  <label for="name">Name</label>
-                  <input
-                    style="border: 0.8px solid blue;"
-                    name="name"
-                    id="name"
-                    type="text"
-                    class="input-focus"
-                    placeholder="Enter Your Name"
-                    required
-                  />
-                </div>
-                <div class="col-md-6 col-sm-6 rad">
-                  <label for="email">Email</label>
-                  <input
-                    style="border: 0.8px solid blue;"
-                    name="email"
-                    type="email"
-                    id="email"
-                    class="input-focus"
-                    placeholder="Enter Your Email"
-                    required
-                  />
-                </div>
-                <div class="col-md-8 msg rad ">
-                  <label for="message">Message</label>
-                  <textarea
-                    style="border: 0.8px solid blue;"
-                    name="message"
-                    class="input-focus"
-                    id="msg"
-                    placeholder="Enter Your Query Or Message"
-                    rows="6"
-                    required
-                  ></textarea>
-                </div>
-                <div class="flex justify-center col-md-offset-0">
-                  <button class="submit" type="submit" id="contact-submit">Submit</button>
-                </div>
+          <div class="section-title2">
+            <p style="color: white;">If you have any questions or inquiries, feel free to contact us!</p>
+          </div>
+          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+            <form id="contact-form" action="" method="POST">
+              <div class="col-md-6 col-sm-6">
+                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
+              <div class="col-md-6 col-sm-6">
+                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div style="margin-left: 2px; margin-right: 35px;" class="msg col-md-12 col-sm-12">
+                <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
+              </div>
+              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
+                <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
+              <div id="message"></div>
+            </div>
             </form>
           </div>
         </div>
+
       </section>
     </main>
   </div>
@@ -735,6 +882,38 @@ function topFunction() {
                   ></textarea>
                 </div>
                 
+
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- feedback -->
+<section id="feedback" class="form-container" style="margin-top: 100px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-sm-12">
+        <div class="section-title1">
+          <h1>Give us your Feedback</h1>
+        </div>
+        <div class="section-title2 ">
+          <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
+        </div>
+        <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+          <form id="feedback-form" action="" method="POST">
+            <div class="col-md-6 col-sm-6">
+              <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
+              <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <p style="color: white;">Rate your experience:</p>
+
               <div class="col-12 rating rad">
                 <input type="radio" id="star5" name="rating" value="5">
                 <label for="star5"><i class="fas fa-star"></i></label>
@@ -746,18 +925,53 @@ function topFunction() {
                 <label for="star2"><i class="fas fa-star"></i></label>
                 <input type="radio" id="star1" name="rating" value="1">
                 <label for="star1"><i class="fas fa-star"></i></label>
+              </div>
             </div>
-            <div class="flex justify-center col-md-offset-0">
-              <button class="submit" type="submit">Submit</button>
+            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
+              <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
+              <div id="message1"></div>
             </div>
-          </div>
-            </form>
-          </div>
-          <br>
-          <br>
-      </section>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
     </main>
+    <script>
+      const labels = document.querySelectorAll('.rating label');
 
+      labels.forEach(label => {
+        label.addEventListener('click', () => {
+          labels.forEach(l => l.classList.remove('selected'));
+          label.classList.add('selected');
+        });
+      });          
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementsByName("message")[0].value = "";
+        });
+      });      
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("feedback-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+          document.getElementById("message1").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your feedback submitted successfully!</span>";
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementsByName("message1")[0].value = "";
+        });
+      });      
+    </script>
+    
       <script>
         function sendEmail() {
           alert("Email sent successfully!");
@@ -765,77 +979,12 @@ function topFunction() {
       </script>
     </div>
     <!-- footer section -->
-    <footer>
-      <div class="container">
-        <div class="row1">
-          <div class="col1" id="Company">
-            <h1>Open Source Village</h1>
-            <p>
-              Join the Community and become the villager now
-            </p>
-            <div class="social">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <div class="col1" id="Serv">
-            <h3>Services</h3>
-            <div class="links">
-               <a href="#">Open Learning</a>
-               <a href="#">Mentorship</a>
-               <a href="#">Network</a>
-               <a href="#">Card Design</a>
-            </div>
-         </div>
-  
-         <div class="col1" id="useful-links">
-            <h3>Links</h3>
-            <div class="links">
-               <a href="about us.html">About</a>
-               <a href="our plan.html">Services</a>
-               <a href="our program.html">Our Policy</a>
-               <a href="support.html">Help</a>
-            </div>
-         </div>
-  
-         <div class="col1" id="cont">
-             <h3>Contact</h3>
-             <div class="contact-details">
-              <div class="links">
-                
-                <a href="contact us.html"><i class="fa fa-message"></i>Contact Us</a>
-             </div>
-         </div>
-             <!-- <div class="contact-details">
-                <i class="fa fa-phone"></i>
-                <p>+1-9876543210</p>
-             </div> -->
-         </div>
-        </div>
-   </div>
-  
-   <div class="row2">
-         <div class="form">
-           <form action="">
-               <input type="text" placeholder="Email here...">
-               <button><i class="fa fa-paper-plane"></i></button>
-           </form>
-         </div>
-   </div>
-    <p class="copyright">
-      Copyright ©
-      <script>
-        document.write(new Date().getFullYear());
-      </script>
-      Developed by Open source Contributors. All rights reserved.
-  </p>
-  </div>
-  
-  </footer>
-    <a href="#" class="back-to-top" id="backToTopBtn">↑</a>
+     <special-footer></special-footer>
+   
+     <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+     <svg class="progress-ring" width="60" height="60">
+       <circle class="progress-ring__circle" stroke="blue" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"/>
+     </svg>
       </footer>
     <script>
       function sendFeed() {
@@ -843,145 +992,44 @@ function topFunction() {
       }
     </script>
   </div>
-  <!-- footer section -->
-  <!-- <footer>
-  <div class="container">
-    <div class="row">
-      
-      <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%"
-      version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0 L50 100 L100 0 Z"></path>
-    </svg>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
     
-    <div class="col-md-4 col-sm-6">
-      <h2>Open Source Village</h2>
-      <div class="wow fadeInUp" data-wow-delay="0.3s">
-        <p>Be a Villager now</p>
-        <p class="copyright-text">Copyright &copy; 2023 <br>
-          Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p> -->
-  <!-- </div>
-          </div>
-          
-          
-          <ul class="social-icon">
-            <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="0.9s"></a></li>
-            <li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="1.2s"></a></li>
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </footer> -->
-<!--   <footer class="footer" data-aos="fade-up" data-aos-duration="1500">    <div class="container">
-      <div class="footer_wrapper">
-        <div class="footer_box">
-          <div class="logo">
-            <div class="logo_img"></div>
-            <h2 class="fitbody">
-              <p>Open Source <strong>VILLAGER</strong></p>
-            </h2>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="single_footer single_footer_address">
-              <h4>Join the Community now and become a Villager</h4> -->
-<!--               <div class="signup_form">
-                <form action="#" class="subscribe">
-                  <input
-                    type="text"
-                    class="subscribe__input"
-                    placeholder="Enter Email Address"
-                  />
-                  <button type="button" class="subscribe__btn">
-                    <i class="fas fa-paper-plane"></i>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div> -->
-          <!--- END COL -->
-<!--         </div>
-        <div class="footer_box">
-          <h4 class="footer_title" style="color: whitesmoke">Company</h4>
-          <ul class="footer_links">
-            <a href="our program.html">
-              <li>Our Program</li>
-            </a>
-            <a href="our plan.html">
-              <li>Our Plan</li>
-            </a>
-            <a href="member.html">
-              <li>Become A Member</li>
-            </a>
-          </ul>
-        </div>
-        <div class="footer_box">
-          <h4 class="footer_title">Quick Links</h4>
-          <ul class="footer_links">
-            <a href="about us.html">
-              <li>About Us</li>
-            </a>
-            <a href="contact us.html">
-              <li>Contact Us</li>
-            </a>
-            <a href="support.html">
-              <li>Support</li>
-            </a>
-            
-          </ul>
-        </div>
-      </div>
-      <p class="social_media">
-        <a href="https://github.com/Its-Aman-Yadav" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/itsamanyadav18/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/community-site/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/community-site" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://x.com/its_aman_yadav" target="_blank"><i class="fab fa-twitter"></i></a>
-    </p>
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
     
-      <p class="copyright">
-        Copyright &copy
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        Developed by open source. All rights reserved.
-      </p>
-    </div>
-  </footer> --> 
-
-
-<!--   <a href="#" class="back-to-top" id="backToTopBtn">↑</a> -->
-
-
-<script>
-  const wrapper = document.querySelector(".wrapper");
-  const carousell = document.querySelector(".carousell");
-  const firstCardWidth = carousell.querySelector(".cardd").offsetWidth;
-  const arrowBtns = document.querySelectorAll(".wrapper i");
-  const carouselChildrens = [...carousell.children];
-
-let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
-
-let backToTopBtn = document.getElementById("backToTopBtn");
-
-// When the user scrolls down 100px from the top of the document, show the button
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
+    window.onscroll = function() {
+      scrollFunction();
+      updateProgress();
+    };
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
     }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-backToTopBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    window.scrollTo({top: 0, behavior: 'smooth'});
-});
-</script>
+    
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+    
+    scrollToTopBtn.addEventListener("click", function(event) {
+      event.preventDefault();
+      topFunction();
+    });
+    </script>  
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -1107,7 +1155,8 @@ let swiperCards = new Swiper(".card__content", {
   </script>
 
 
-
+<script src="./footer/footer.js"></script>
 </body>
  <script src="index.js"></script>
+ 
 </html>
