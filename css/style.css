@@ -73,7 +73,7 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   transition: all 0.4s ease-in-out;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 #contact input[type="submit"]:hover {
