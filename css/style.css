@@ -1280,10 +1280,7 @@ justify-content: center; */
 .col-md-4:hover {
   transform: scale(1.05);
 }
-#services,
-#feedback {
-  /* background: #ffffff; */
-}
+
 
 #about,
 #services,
