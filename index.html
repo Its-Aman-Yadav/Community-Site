@@ -285,10 +285,24 @@ function topFunction() {
         <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
         <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
         <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round" id="toggle"></div>
+      </label>
+      <img id="image" onclick="ProfileClicked()" />
       </ul>
     </nav>
   </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('checkbox');
+    toggleButton.addEventListener('change', function() {
+      document.body.classList.toggle('dark-mode');
+    });
+  });
+  </script>
 
+  
   <!-- Home Section -->
   <section class="home" id="home">
     <div class="container">

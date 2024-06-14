@@ -406,6 +406,166 @@ ul li a:hover {
   color: black;
 }
 
+/* For dark mode toggle button */
+.theme-switch {
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  ul.show {
+    display: flex;
+  }
+
+  .checkbtn {
+    display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.checkbtn {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ ul {
+  display: flex;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #000; 
+  color: #fff; 
+}
+
+body.dark-mode #services {
+  /* background: #333;  */
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+
+body.dark-mode #testimonials {
+  background-color: #222; 
+}
+
+body.dark-mode .testimonial-box {
+  background-color: #333; 
+}
+body.dark-mode .wrapper i:first-child {
+  left: -10px;
+  color: #000;
+}
+
+body.dark-mode .wrapper i:last-child {
+  right: -22px;
+  color: #000;
+}
+
+body.dark-mode .service-title {
+  color: #fff; 
+}
+body.dark-mode .containerr {
+  background-image: linear-gradient(to left, #acaaaa 10%, #fffcfc 90%);
+}
+
+body.dark-mode .card:hover {
+background: linear-gradient(to right, #bddfcf, #946c8b);
+}
+body.dark-mode #testimonials .section-title {
+  color: #fff; 
+}
+body.dark-mode .carousell .cardd .img{
+  background: #000;
+}
+body.dark-mode .cardd:hover{
+  border:  solid rgb(13, 14, 13);
+}
+body.dark-mode .cardd:hover span {
+  color: #000; 
+}
+body.dark-mode .containeerr{
+background:linear-gradient(to right, #9bc5c3, #616161);  
+}
+body.dark-mode .faqq {
+  /* background-color: #444;  */
+  background: linear-gradient(rgba(74, 74, 87, 0.979), rgb(22, 22, 24));
+}
+
+body.dark-mode .accordion button:hover,
+body.dark-mode .accordion button:focus {
+  color: #063f6d;
+  background-image: linear-gradient(to right, #bebcbc 0%, #f5f2f2 100%); 
+}
+
+body.dark-mode .accordion-content{
+  background: #003973; 
+background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  
+background: linear-gradient(to right, #E5E5BE, #003973); 
+}
+body.dark-mode .card1{
+  background: linear-gradient(to right,#535353,#396a92);
+}
+body.dark-mode .navbar nav.sticky {
+  background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.979));
+}
+body.dark-mode .card1 .card-text{
+  color: #fff;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 /* @color-primary: #33bb63;
