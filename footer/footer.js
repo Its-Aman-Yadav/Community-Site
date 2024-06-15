@@ -8,11 +8,13 @@ class SpecialFooter extends HTMLElement {
               <h1>Open Source Village</h1>
               <p>Join the Community and become the villager now</p>
               <div class="social">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="col1" id="Serv">
