@@ -187,7 +187,10 @@ html {
 
 .home-thumb h1 {
   font-size: 60px;
-  color: #d8aa03;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff793b, #fffb07 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 .home-thumb h3 {
@@ -201,7 +204,7 @@ html {
   color: black;
   padding: 10px 20px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 30px;
   display: inline-flex;
   align-items: center;
 }
