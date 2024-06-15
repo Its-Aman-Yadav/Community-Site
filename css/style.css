@@ -954,6 +954,96 @@ a:hover .fab {
 }
 
 /********** Responsive Design ********/
+/* Small screens */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .col-md-offset-2,
+  .col-md-8,
+  .col-sm-12,
+  .col-md-6,
+  .col-sm-6,
+  .col-md-12,
+  .col-sm-12 {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .col-md-offset-3,
+  .col-sm-offset-2 {
+    margin: 0;
+  }
+
+  .section-title h1 {
+    font-size: 22px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+  }
+
+  .rating label {
+    font-size: 24px;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 577px) and (max-width: 768px) {
+  .form-container {
+    padding: 25px;
+  }
+
+  .col-md-offset-2,
+  .col-md-8,
+  .col-sm-12 {
+    padding: 0 10px;
+  }
+
+  .col-md-offset-3,
+  .col-sm-offset-2 {
+    margin: 0;
+  }
+
+  .section-title h1 {
+    font-size: 23px;
+  }
+
+  .section-title p {
+    font-size: 15px;
+  }
+
+  .rating label {
+    font-size: 28px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 769px) {
+  .form-container {
+    padding: 30px;
+  }
+
+  .col-md-offset-2,
+  .col-md-8,
+  .col-sm-12 {
+    padding: 0 15px;
+  }
+
+  .section-title h1 {
+    font-size: 24px;
+  }
+
+  .section-title p {
+    font-size: 16px;
+  }
+
+  .rating label {
+    font-size: 30px;
+  }
+}
 @media (max-width: 900px) {
   .row {
     flex-direction: column;
