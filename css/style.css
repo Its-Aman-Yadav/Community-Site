@@ -2278,9 +2278,9 @@ label.selected i {
 } */
 
 .submit {
-  background-color: #007bff;
-  color: white;
-  padding: 14px 24px;
+  background-color: #0e0f0f;
+  color: rgb(233, 236, 40);
+  padding: 14px 14px 14px 14px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -2778,8 +2778,9 @@ button {
   border: none;
   background-color: transparent;
   -webkit-border-radius: 0;
-  border-radius: 0;
-}
+  border-radius: 0;}
+
+
 .feed {
   max-width: 800px;
   margin: 50px auto;
