@@ -240,7 +240,8 @@ html {
 }
 /* Back to Top Button */
 .scrollToTopBtn {
-  background-color: #3a63e4;
+  /* background-color: #FFE70F; */
+  background-image: radial-gradient(#f3bf8c,#ee7f10);
   color: #fff;
   text-align: center;
   width: 50px;
@@ -823,6 +824,7 @@ a:hover .fab {
   padding: 0 2rem;
 }
 .company h1 {
+  color: #fff;
   font-size: 14px;
 }
 .social {
