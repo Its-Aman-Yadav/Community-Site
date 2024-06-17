@@ -650,8 +650,9 @@ h2 {
 /* Hover and Focus States */
 .accordion button:hover,
 .accordion button:focus {
-  color: #007bff;
-  background-image: linear-gradient(to right, #f3f1f2 0%, #efe18f 100%);
+  color: blue;
+  background-image: linear-gradient(to right, #f5bf40a9 0%,#f2d79acd 80%,#f5be40cd 100%);
+  border-radius: 12px;
   cursor: pointer;
 }
 
@@ -724,8 +725,6 @@ h2 {
   will-change: opacity, max-height;
   background-color: #f9f9f9;
   padding: 0 1.5em;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
   border-bottom: 2px solid black;
 }
 
@@ -780,7 +779,7 @@ h2 {
   }
 
   .accordion .accordion-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
