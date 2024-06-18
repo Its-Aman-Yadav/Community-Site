@@ -21,79 +21,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-
-      header {
-        background: #4caf50;
-        color: #000000;
-        padding: 15px 0;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      header h1 {
-        margin: 0;
-      }
-
-      nav ul {
-        padding: 0;
-        list-style: none;
-        text-align: center;
-        margin: 0;
-      }
-
-      nav ul li {
-        display: inline;
-        margin: 0 10px;
-      }
-
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s, background-color 0.3s;
-        padding: 5px 10px;
-        border-radius: 5px;
-      }
-
-      nav ul li a:hover {
-        color: #4caf50;
-        background-color: #fff;
-      }
-
-      main {
-        flex: 1;
-        padding: 20px;
-        max-width: 800px;
-        margin: 20px auto;
-        background: #fff;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-      }
-
-      .submit{
-        width: 110px;
-        height: 55px;
-        color: #cdda17;
-        text-align: center;
-        padding-right: 10px;
-        margin-top: 8px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/member.css"/>
   </head>
   <body>
-    <header>
+    <!-- <header>
       <h1>Become a Member</h1>
       <nav>
         <ul>
@@ -103,10 +34,49 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header= document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY >50)
+      })
+    </script> 
+    
+      <!-- Navbar -->
+      <div class="navbar">
+        <nav>
+          <a class="logo-link" href="#home"> <label class="logo" style="margin-left:10px;">
+            
+            <img src="images/fav.png" alt="logo">
+            <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+          </label></a>
+          <ul>
+            <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+            
+            <li><i class="fa-solid fa-address-card" style="filter:invert(1)"></i><a href="#about">About</a></li>
+            <li><i class="fa-solid fa-screwdriver-wrench" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+            <li><i class="fa-solid fa-pen-to-square" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+            <li><i class="fa-solid fa-address-book" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+            <li><i class="fa-solid fa-right-to-bracket" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round" id="toggle"></div>
+          </label>
+          <img id="image" onclick="ProfileClicked()" />
+          </ul>
+        </nav>
+      </div>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('checkbox');
+        toggleButton.addEventListener('change', function() {
+          document.body.classList.toggle('dark-mode');
+        });
+      });
+      </script>
 
     <main>
-      <section id="introduction">
+      <section class="introduction" id="introduction">
         <h2>Introduction</h2>
         <p>
           Welcome! We are excited that you're interested in becoming a member of
@@ -115,7 +85,7 @@
         </p>
       </section>
 
-      <section id="benefits">
+      <section class="benefits" id="benefits">
         <h2>Benefits of Membership</h2>
         <ul>
           <li>Access to exclusive projects and resources</li>
@@ -126,37 +96,67 @@
         </ul>
       </section>
 
-      <section id="steps">
+      <section class="steps" id="steps">
         <h2>Steps to Join</h2>
-        <ol>
-          <li>Fill out the membership application form below.</li>
+        <!-- <ol>
+          <li></li>
+          <li >Fill out the membership application form below.</li>
           <li>Submit your form and wait for a confirmation email.</li>
           <li>
             Follow the instructions in the email to complete your membership
             registration.
           </li>
           <li>Start participating in our projects and community events.</li>
-        </ol>
+        </ol> -->
+        <div class="steplist">
+          <div class="line"></div>
+          <div class="step-item">
+            <img src="images/contact-form.png">
+           <p> Fill out the membership application form below.</p>
+          </div>
+          <div class="step-item">
+            <img src="images/stopwatch.png">
+            <p>Submit your form and wait for a confirmation email.</p>
+          </div>
+          <div class="step-item">
+            <img src="images/registration.png">
+            <p>Follow the instructions in the email to complete your membership
+            registration.  </p>   
+          </div>
+          <div class="step-item">
+            <img src="images/team.png">
+           <p> Start participating in our projects and community events.</p>
+          </div>
+          
+
+        </div>
       </section>
 
-      <section id="contact">
+      <section class="contact" id="contact">
+        <div class=" contactform">
+          <div class="contacttext">
         <h2>Contact Us</h2>
         <p>
           If you have any questions or need further assistance, please reach out
           to us using the form below:
-        </p>
-        <form id="contact-form">
+        </p></div>
+        <form class= "contact-form" id="contact-form">
+          <div class="roww">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required />
-
+        </div>
+        <div class="roww">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required />
-
+        </div>
+        <div class="roww">
           <label for="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
+        </div>
 
           <button type="submit" class="submit">Submit</button>
         </form>
+      </div>
       </section>
     </main>
     <special-footer></special-footer>
