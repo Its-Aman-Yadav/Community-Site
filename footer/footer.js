@@ -11,7 +11,7 @@ class SpecialFooter extends HTMLElement {
         <div class="container">
           <div class="row1">
             <div class="company" id="Company">
-              <h1>Open Source Village</h1>
+              <h1 style="color: yellow;">Open Source Village</h1>
               <p>Join the Community and become the villager now</p>
               <div class="social">
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
