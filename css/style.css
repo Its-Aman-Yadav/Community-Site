@@ -2638,7 +2638,8 @@ label.selected i {
   border-radius: 8px;
 }
 .carousell {
-  margin-left: 6rem;
+  margin-left: 5rem;
+  margin-right: 2rem;
 }
 .cardd {
   list-style: none;
@@ -2665,7 +2666,7 @@ label.selected i {
   box-shadow: 10px 10px 4px 8px rgba(0, 0, 0, 0.1);
   /* padding: 19px; */
   /* margin: 20px; */
-  border: 2px solid rgb(84, 208, 36);
+  border: 2px solid #fff453;
 }
 
 .cardd .img img {
