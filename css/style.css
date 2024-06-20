@@ -1377,6 +1377,116 @@ div.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
+/* discord Button Styling */
+.btn-custom 
+{
+  background: linear-gradient(135deg, #7289da, #5865f2);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Icon Styling */
+.btn-custom .discord-icon 
+{
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effects */
+.btn-custom:hover 
+{
+  background: black;
+  color: yellow;
+  border-color: yellow;
+  box-shadow: 0 8px 20px rgba(255, 255, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.btn-custom:hover .discord-icon 
+{
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Active State */
+.btn-custom:active 
+{
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Adding Pulsing Animation */
+@keyframes pulse 
+{
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0);
+  }
+}
+
+.btn-custom:hover 
+{
+  animation: pulse 1.5s infinite;
+}
+
+/* Additional Hover Effect: Background Animation */
+.btn-custom::before 
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.5), rgba(0, 0, 0, 0));
+  transition: all 0.75s;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.btn-custom:hover::before 
+{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Text Shadow for Extra Glow */
+.btn-custom:hover 
+{
+  text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+}
+
+/* Fine-Tuning for Responsiveness */
+@media (max-width: 768px) 
+{
+  .btn-custom {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .btn-custom .discord-icon {
+    height: 35px;
+  }
+}
 /* preloader section  */
 .preloader {
   position: fixed;
