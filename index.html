@@ -43,58 +43,69 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
   <style>
- .navbar {
+ /* Navbar styles */
+/* Navbar styles */
+/* Navbar styles */
+.navbar {
   background-color: #333; /* Background color for navbar */
-  padding: 5px 20px; /* Reduced padding for navbar */
+  padding: 0; /* Remove padding for the navbar */
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10px; /* Adjust height of the navbar */
+  height: 50px; /* Adjusted height of the navbar */
+  padding: 5px 20px; /* Padding inside the nav element */
 }
+
 .carousell {
-        display: flex;
-        padding: 0;
-        transition: transform 0.5s ease;
-    }
-    ::-webkit-scrollbar {
-      width: 10px;
-      background-color: #F5F5F5;
-    }
-    
-    ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      background-color: #F5F5F5;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background-color: #f1c11a;
-      background-image: -webkit-linear-gradient(45deg,
-                                                rgba(255, 255, 255, .2) 25%,
-                                                transparent 25%,
-                                                transparent 50%,
-                                                rgba(255, 255, 255, .2) 50%,
-                                                rgba(255, 255, 255, .2) 75%,
-                                                transparent 75%,
-                                                transparent);
-      border-radius: 10px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: #d1a10a;
-    }  .wrapper {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }  .home-thumb .btn{
-        background-color: transparent;
-      }
-      
-      .home-thumb .btn:hover{
-        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5) , 0 0 2px rgb(255, 255, 255) , 0 0 3px rgb(255, 255, 255) , 0 0 200px rgb(255, 255, 255);
-      }
+  display: flex;
+  padding: 0;
+  transition: transform 0.5s ease;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f1c11a;
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                                            transparent 25%,
+                                            transparent 50%,
+                                            rgba(255, 255, 255, .2) 50%,
+                                            rgba(255, 255, 255, .2) 75%,
+                                            transparent 75%,
+                                            transparent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d1a10a;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-thumb .btn {
+  background-color: transparent;
+}
+
+.home-thumb .btn:hover {
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+}
+
 .logo-link {
   display: flex;
   align-items: center;
@@ -108,13 +119,13 @@ nav {
 }
 
 .logo img {
-  height: 40px; /* Reduced height of the logo */
-  width: 40px; /* Reduced width of the logo */
+  height: 40px; /* Height of the logo */
+  width: 40px; /* Width of the logo */
 }
 
 .logo-text {
-  font-size: 1.2rem; /* Adjusted font size */
-  color: white; /* Logo text color */
+  font-size: 1.2rem; /* Font size */
+  color: white; /* Text color */
 }
 
 ul {
@@ -125,44 +136,43 @@ ul {
 }
 
 ul li {
-  margin: 0 0px; /* Reduced margin to decrease space between items */
-  font-size: 1rem; /* Adjust font size */
+  margin: 0 10px; /* Space between items */
+  font-size: 1rem; /* Font size */
 }
 
 ul li a {
   text-decoration: none;
-  color: white; /* Nav item text color */
+  color: white; /* Text color */
   transition: color 0.3s;
   display: flex;
   align-items: center;
-  padding: 5px 0; /* Reduced padding for nav items */
+  padding: 5px 10px; /* Padding for nav items */
 }
 
 ul li a:hover {
-  color: #f1c11a; /* Hover color for nav items */
+  color: #f1c11a; /* Hover color */
 }
 
 ul li i {
-  margin-right: 10px; /* Adjust space between icon and text */
+  margin-right: 10px; /* Space between icon and text */
 }
 
 .theme-switch {
   margin-left: 10px;
-  width:120px; /* Space between toggle and nav items */
+  width: 120px; /* Space between toggle and nav items */
 }
 
 #image {
-  height: 30px; /* Reduced height of the profile image */
-  width: 30px; /* Reduced width of the profile image */
+  height: 30px; /* Profile image height */
+  width: 30px; /* Profile image width */
   border-radius: 50%;
   margin-left: 10px;
   cursor: pointer;
 }
 
-/* Additional styles for the navbar to make it more attractive */
 nav {
-  background-color: #444; /* Darker background color */
-  padding: 5px 20px; /* Reduced padding */
+  background-color: #444; /* Navbar background color */
+  padding: 5px 20px; /* Padding */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -170,19 +180,21 @@ nav {
 ul li {
   position: relative;
 }
-slider {
-  width: 60px; /* Increased width of the slider */
-  height: 34px; /* Increased height of the slider */
+
+.slider {
+  width: 60px; /* Slider width */
+  height: 34px; /* Slider height */
   background-color: #ccc;
   position: relative;
   border-radius: 34px;
   transition: 0.4s;
 }
-slider:before {
+
+.slider:before {
   content: "";
   position: absolute;
-  width: 26px; /* Adjust width of the toggle knob */
-  height: 26px; /* Adjust height of the toggle knob */
+  width: 26px; /* Toggle knob width */
+  height: 26px; /* Toggle knob height */
   border-radius: 50%;
   background-color: white;
   transition: 0.4s;
@@ -191,41 +203,58 @@ slider:before {
 }
 
 ul li a {
-  padding: 5px; /* Reduced padding */
+  padding: 5px 10px; /* Padding */
   border-radius: 5px;
   transition: background 0.3s;
 }
 
 ul li a:hover {
-  background: rgba(255, 255, 255, 0.1); /* Background on hover */
+  background: rgba(255, 255, 255, 0.1); /* Hover background */
 }
 
-/* Adjust the profile image positioning */
 #image {
-  margin-left: 10px; /* Adjust spacing between profile image and nav items */
+  margin-left: 10px; /* Profile image margin */
 }
+
 .contact-form .submit {
-        background: #e15509;
-          color: rgb(9, 9, 9);
-          padding: 10px 20px;
-          border: none;
-          border-radius: 10px;
-          cursor: pointer;
-          font-size: 18px;
-          margin-left: 220px;
-      }
+  background: #e15509;
+  color: rgb(9, 9, 9);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 220px;
+}
 
-      .contact-form .submit:hover {
-        background: #f5d244;
-        font-size: 20px;
-        color: white;
-      }
+.contact-form .submit:hover {
+  background: #f5d244;
+  font-size: 20px;
+  color: white;
+}
 
-/* Style for the theme switcher */
 .theme-switch {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.rating input[type="radio"] {
+  display: none; /* Hide radio buttons */
+}
+
+.rating label {
+  font-size: 2rem; /* Emoji size */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.rating label:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+.rating label:active {
+  transform: scale(1.1); /* Reduce size on active */
 }
 
   </style>
@@ -346,7 +375,6 @@ function topFunction() {
   <section class="home" id="home">
     <div class="container">
       <div class="home-thumb">
-        <br><br><br>
         <h1>Open Source Village</h1>
         <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
         <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
@@ -861,51 +889,92 @@ function topFunction() {
 
 
 <!-- feedback -->
-<section id="feedback" class="form-container" style="margin-top: 100px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 col-sm-12">
-        <div class="section-title">
-          <h1 style="color: yellow;">Give us your Feedback</h1>
-          <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
-        </div>
-        <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-          <form id="feedback-form" action="" method="POST">
-            <div class="col-md-6 col-sm-6">
-              <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
-              <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
-            </div>
-            <div class="col-md-12 col-sm-12">
-              <p style="color: white;">Rate your experience:</p>
-              <div class="col-12 rating rad">
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1"><i class="fas fa-star"></i></label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section id="feedback" class="form-container" style="margin-top: 100px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-sm-12">
+          <div class="section-title">
+            <h1 style="color: yellow;">Give us your Feedback</h1>
+            <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
+          </div>
+          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+            <form id="feedback-form" action="" method="POST">
+              <div class="col-md-6 col-sm-6">
+                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
-            </div>
-            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-              <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
-              <div id="message1"></div>
-            </div>
-          </form>
+              <div class="col-md-6 col-sm-6">
+                <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
+                <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <p style="color: white;">Rate your experience:</p>
+                <div class="col-12 rating rad">
+                  <input type="radio" id="emoji5" name="rating" value="5">
+                  <label for="emoji5">&#128513;</label> <!-- Grinning Face -->
+                  <input type="radio" id="emoji4" name="rating" value="4">
+                  <label for="emoji4">&#128578;</label> <!-- Smiling Face with Smiling Eyes -->
+                  <input type="radio" id="emoji3" name="rating" value="3">
+                  <label for="emoji3">&#128528;</label> <!-- Neutral Face -->
+                  <input type="radio" id="emoji2" name="rating" value="2">
+                  <label for="emoji2">&#128577;</label> <!-- Slightly Frowning Face -->
+                  <input type="radio" id="emoji1" name="rating" value="1">
+                  <label for="emoji1">&#128545;</label> <!-- Angry Face -->
+                </div>
+              </div>
+              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
+                <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
+                <div id="message1"></div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section> 
+  </section>
+  
+  <script>
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+      // Prevent default form submission
+      event.preventDefault();
+  
+      // Check if an emoji (rating) is selected
+      const rating = document.querySelector('input[name="rating"]:checked');
+      const messageDiv = document.getElementById('message1');
       
+      if (!rating) {
+        messageDiv.textContent = 'Please select an emoji to rate your experience.';
+        messageDiv.style.color = 'red';
+      } else {
+        messageDiv.textContent = 'Feedback submitted successfully!';
+        messageDiv.style.color = 'green';
+  
+        // Optionally, you can submit the form here if you're not using AJAX
+        // this.submit();
+      }
+    });
+  </script>
+  
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="scripts.js"></script>
+</body>
+</html>
+
     </main>
     <script>
       const labels = document.querySelectorAll('.rating label');
