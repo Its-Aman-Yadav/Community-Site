@@ -43,38 +43,32 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
   <style>
-    .contact-form .submit {
-        background: #e15509;
-          color: rgb(9, 9, 9);
-          padding: 10px 20px;
-          border: none;
-          border-radius: 10px;
-          cursor: pointer;
-          font-size: 18px;
-          margin-left: 220px;
-      }
+ /* Navbar styles */
+/* Navbar styles */
+/* Navbar styles */
+.navbar {
+  background-color: #333; /* Background color for navbar */
+  padding: 0; /* Remove padding for the navbar */
+}
 
-      .contact-form .submit:hover {
-        background: #f5d244;
-        font-size: 20px;
-        color: white;
-      }
-      .home-thumb .btn{
-        background-color: transparent;
-      }
-      
-      .home-thumb .btn:hover{
-        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5) , 0 0 2px rgb(255, 255, 255) , 0 0 3px rgb(255, 255, 255) , 0 0 200px rgb(255, 255, 255);
-      }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px; /* Adjusted height of the navbar */
+  padding: 5px 20px; /* Padding inside the nav element */
+}
 
-      .card1 {
-        overflow: hidden;
-      }
+.carousell {
+  display: flex;
+  padding: 0;
+  transition: transform 0.5s ease;
+}
 
-      .card-body {
-        transition: transform 0.3s ease;
-        padding: 10px;
-      }
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
 
       .card-text {
         overflow-wrap: break-word; /* Ensures long words break and stay within the card */
@@ -243,9 +237,177 @@
 }
 
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d1a10a;
+}
 
-    
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-thumb .btn {
+  background-color: transparent;
+}
+
+.home-thumb .btn:hover {
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 40px; /* Height of the logo */
+  width: 40px; /* Width of the logo */
+}
+
+.logo-text {
+  font-size: 1.2rem; /* Font size */
+  color: white; /* Text color */
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0 10px; /* Space between items */
+  font-size: 1rem; /* Font size */
+}
+
+ul li a {
+  text-decoration: none;
+  color: white; /* Text color */
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px; /* Padding for nav items */
+}
+
+ul li a:hover {
+  color: #f1c11a; /* Hover color */
+}
+
+ul li i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.theme-switch {
+  margin-left: 10px;
+  width: 120px; /* Space between toggle and nav items */
+}
+
+#image {
+  height: 30px; /* Profile image height */
+  width: 30px; /* Profile image width */
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+nav {
+  background-color: #444; /* Navbar background color */
+  padding: 5px 20px; /* Padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+  position: relative;
+}
+
+.slider {
+  width: 60px; /* Slider width */
+  height: 34px; /* Slider height */
+  background-color: #ccc;
+  position: relative;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  width: 26px; /* Toggle knob width */
+  height: 26px; /* Toggle knob height */
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.4s;
+  left: 4px;
+  bottom: 4px;
+}
+
+ul li a {
+  padding: 5px 10px; /* Padding */
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.1); /* Hover background */
+}
+
+#image {
+  margin-left: 10px; /* Profile image margin */
+}
+
+.contact-form .submit {
+  background: #e15509;
+  color: rgb(9, 9, 9);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 220px;
+}
+
+.contact-form .submit:hover {
+  background: #f5d244;
+  font-size: 20px;
+  color: white;
+}
+
+.theme-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rating input[type="radio"] {
+  display: none; /* Hide radio buttons */
+}
+
+.rating label {
+  font-size: 2rem; /* Emoji size */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.rating label:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+.rating label:active {
+  transform: scale(1.1); /* Reduce size on active */
+}
+
   </style>
+  
 </head>
 
 
@@ -335,21 +497,21 @@ function topFunction() {
         </label>
       </a>
       <ul>
-        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        
-        <li><i class="fa-solid fa-address-card" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-screwdriver-wrench" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-pen-to-square" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-address-book" style="filter:invert(1)"></i><a href="#contactus">Contact Us</a></li>
-        <li><i class="fa-solid fa-right-to-bracket" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
-        <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round" id="toggle"></div>
-      </label>
-      <img id="image" onclick="ProfileClicked()" />
+        <li><i class="fa-solid fa-house"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
       </ul>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round" id="toggle"></div>
+      </label>
+      <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile">
     </nav>
   </div>
+  
   <script>
   document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('checkbox');
@@ -477,12 +639,12 @@ function topFunction() {
         </div>
       </div>
       <div class="d-flex justify-content-center">
-        <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll d-flex align-items-center">
+        <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-custom smoothScroll d-flex align-items-center">
           JOIN DISCORD
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-          alt="Discord" style="height: 40px; border-radius: 50px; margin-left: 10px;">
+               alt="Discord" class="discord-icon">
         </a>
-      </div>
+      </div>          
     </div>
   </div>
 </section>
@@ -909,7 +1071,7 @@ function topFunction() {
                 <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
               <div class="col-md-6 col-sm-6">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+                <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
               </div>
               <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
                 <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
@@ -917,16 +1079,16 @@ function topFunction() {
               <div class="col-md-12 col-sm-12">
                 <p style="color: white;">Rate your experience:</p>
                 <div class="col-12 rating rad">
-                  <input type="radio" id="star5" name="rating" value="5">
-                  <label for="star5"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star4" name="rating" value="4">
-                  <label for="star4"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star3" name="rating" value="3">
-                  <label for="star3"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star2" name="rating" value="2">
-                  <label for="star2"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star1" name="rating" value="1">
-                  <label for="star1"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="emoji5" name="rating" value="5">
+                  <label for="emoji5">&#128513;</label> <!-- Grinning Face -->
+                  <input type="radio" id="emoji4" name="rating" value="4">
+                  <label for="emoji4">&#128578;</label> <!-- Smiling Face with Smiling Eyes -->
+                  <input type="radio" id="emoji3" name="rating" value="3">
+                  <label for="emoji3">&#128528;</label> <!-- Neutral Face -->
+                  <input type="radio" id="emoji2" name="rating" value="2">
+                  <label for="emoji2">&#128577;</label> <!-- Slightly Frowning Face -->
+                  <input type="radio" id="emoji1" name="rating" value="1">
+                  <label for="emoji1">&#128545;</label> <!-- Angry Face -->
                 </div>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
@@ -939,7 +1101,38 @@ function topFunction() {
       </div>
     </div>
   </section>
+  
+  <script>
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+      // Prevent default form submission
+      event.preventDefault();
+  
+      // Check if an emoji (rating) is selected
+      const rating = document.querySelector('input[name="rating"]:checked');
+      const messageDiv = document.getElementById('message1');
       
+      if (!rating) {
+        messageDiv.textContent = 'Please select an emoji to rate your experience.';
+        messageDiv.style.color = 'red';
+      } else {
+        messageDiv.textContent = 'Feedback submitted successfully!';
+        messageDiv.style.color = 'green';
+  
+        // Optionally, you can submit the form here if you're not using AJAX
+        // this.submit();
+      }
+    });
+  </script>
+  
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="scripts.js"></script>
+</body>
+</html>
+
     </main>
     <script>
       const labels = document.querySelectorAll('.rating label');
@@ -985,7 +1178,7 @@ function topFunction() {
    
      <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
      <svg class="progress-ring" width="60" height="60">
-       <circle class="progress-ring__circle" stroke="blue" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"/>
+       <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"/>
      </svg>
       </footer>
     <script>
