@@ -42,6 +42,9 @@
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <style>
  /* Navbar styles */
 /* Navbar styles */
@@ -255,6 +258,19 @@ ul li a:hover {
 
 .rating label:active {
   transform: scale(1.1); /* Reduce size on active */
+}
+
+.toastify.toastify-top {
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 5px 5px 5px rgb(200, 255, 0,0.8);
+  }
+  100% {
+    box-shadow: 5px 5px 5px rgb(200, 255, 0,0.8);
+  }
 }
 
   </style>
@@ -876,7 +892,7 @@ function topFunction() {
                 <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
+                <button type="submit" class="submit-btn" style="margin-bottom:10px;" id="toast-btn" onclick="showToast()">SEND MESSAGE</button>
               <div id="message"></div>
             </div>
             </form>
@@ -885,8 +901,26 @@ function topFunction() {
       </div>
     </div>
   </section>
-  
 
+  </div>
+
+  <script>
+  document.getElementById("toast-btn").addEventListener("click", function(event) {
+      event.preventDefault(); 
+
+      Toastify({
+        text: "Message Sent Successfully!",
+        duration: 4000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "rgba(0, 128, 0, 0.8)",
+        close: true,
+        stopOnFocus: true,
+
+      }).showToast();
+    });
+    </script>
+    
 
 <!-- feedback -->
 <!DOCTYPE html>
@@ -934,7 +968,7 @@ function topFunction() {
                 </div>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
+                <button type="submit" class="submit-btn" style="margin-bottom: 10px;" id="toast-btn1" onclick="showToast()">SUBMIT FEEDBACK</button>
                 <div id="message1"></div>
               </div>
             </form>
@@ -945,7 +979,7 @@ function topFunction() {
   </section>
   
   <script>
-    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+    /*document.getElementById('feedback-form').addEventListener('submit', function(event) {
       // Prevent default form submission
       event.preventDefault();
   
@@ -963,6 +997,21 @@ function topFunction() {
         // Optionally, you can submit the form here if you're not using AJAX
         // this.submit();
       }
+    });*/
+
+    document.getElementById("toast-btn1").addEventListener("click", function(event) {
+      event.preventDefault(); 
+
+      Toastify({
+        text: "Thanks For Your Feedback!",
+        duration: 4000,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "rgba(0, 128, 0, 0.8)",
+        close: true,
+        stopOnFocus: true,
+
+      }).showToast();
     });
   </script>
   
@@ -976,7 +1025,7 @@ function topFunction() {
 </html>
 
     </main>
-    <script>
+    <!--<script>
       const labels = document.querySelectorAll('.rating label');
 
       labels.forEach(label => {
@@ -1007,7 +1056,7 @@ function topFunction() {
           document.getElementsByName("message1")[0].value = "";
         });
       });      
-    </script>
+    </script>-->
     
       <script>
         function sendEmail() {
@@ -1193,6 +1242,8 @@ let swiperCards = new Swiper(".card__content", {
 
 
 <script src="./footer/footer.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </body>
  <script src="index.js"></script>
  
