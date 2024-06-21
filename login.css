@@ -114,26 +114,26 @@ button.ghost {
   color: #fff;
 }
 
-button.ghost i{
+button.ghost i {
   position: absolute;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
 
-button.ghost i.register{
+button.ghost i.register {
   right: 70px;
 }
 
-button.ghost i.login{
+button.ghost i.login {
   left: 70px;
 }
 
-button.ghost:hover i.register{
+button.ghost:hover i.register {
   right: 40px;
   opacity: 1;
 }
 
-button.ghost:hover i.login{
+button.ghost:hover i.login {
   left: 40px;
   opacity: 1;
 }
@@ -180,6 +180,23 @@ input {
   left: 0;
   width: 50%;
   z-index: 2;
+}
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container input {
+  width: 100%;
+  padding-right: 30px;
+}
+
+.input-container i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
 }
 
 .container.right-panel-active .login-container {
@@ -230,7 +247,7 @@ input {
 }
 
 .overlay {
-  background-image: url('image.gif');
+  background-image: url("image.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
