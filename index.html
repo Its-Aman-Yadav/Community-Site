@@ -10,7 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="">
   <meta name="description" content="">
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -256,6 +258,7 @@ ul li a:hover {
 .rating label:active {
   transform: scale(1.1); /* Reduce size on active */
 }
+
   </style>
   
 </head>
@@ -899,16 +902,16 @@ function topFunction() {
 </head>
 <body>
 
-  <section id="feedback" class="form-container" style="margin-top: 100px;">
+  <section id="feedback" class="form-container">
     <div class="container">
       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-sm-12">
           <div class="section-title">
-            <h1 style="color: yellow;">Give us your Feedback</h1>
-            <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
+            <h1>Give us your Feedback</h1>
+            <p>We value your opinion. Please share your feedback with us!</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="feedback-form" action="" method="POST">
+          <div class="contact-form">
+            <form id="feedback-form" action="" method="POST" onsubmit="handleFeedbackSubmit(event)">
               <div class="col-md-6 col-sm-6">
                 <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
@@ -916,21 +919,21 @@ function topFunction() {
                 <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
               </div>
               <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
-                <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
+                <textarea name="message" id="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
               </div>
               <div class="col-md-12 col-sm-12">
                 <p style="color: white;">Rate your experience:</p>
                 <div class="col-12 rating rad">
                   <input type="radio" id="emoji5" name="rating" value="5">
-                  <label for="emoji5">&#128513;</label> <!-- Grinning Face -->
+                  <label for="emoji5">&#128513;</label>
                   <input type="radio" id="emoji4" name="rating" value="4">
-                  <label for="emoji4">&#128578;</label> <!-- Smiling Face with Smiling Eyes -->
+                  <label for="emoji4">&#128578;</label>
                   <input type="radio" id="emoji3" name="rating" value="3">
-                  <label for="emoji3">&#128528;</label> <!-- Neutral Face -->
+                  <label for="emoji3">&#128528;</label>
                   <input type="radio" id="emoji2" name="rating" value="2">
-                  <label for="emoji2">&#128577;</label> <!-- Slightly Frowning Face -->
+                  <label for="emoji2">&#128577;</label>
                   <input type="radio" id="emoji1" name="rating" value="1">
-                  <label for="emoji1">&#128545;</label> <!-- Angry Face -->
+                  <label for="emoji1">&#128545;</label>
                 </div>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
@@ -943,28 +946,46 @@ function topFunction() {
       </div>
     </div>
   </section>
-  
+
   <script>
-    document.getElementById('feedback-form').addEventListener('submit', function(event) {
-      // Prevent default form submission
-      event.preventDefault();
-  
-      // Check if an emoji (rating) is selected
-      const rating = document.querySelector('input[name="rating"]:checked');
-      const messageDiv = document.getElementById('message1');
-      
-      if (!rating) {
-        messageDiv.textContent = 'Please select an emoji to rate your experience.';
-        messageDiv.style.color = 'red';
+    function handleFeedbackSubmit(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get form values
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      var ratingChecked = document.querySelector('input[name="rating"]:checked');
+
+      // Check if all fields are filled
+      if (name === "" || email === "" || message === "" || !ratingChecked) {
+        Toastify({
+          text: "Thanks For Your Feedback :)",
+          duration: 3000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+          stopOnFocus: true // Prevents dismissing of toast on hover
+        }).showToast();
       } else {
-        messageDiv.textContent = 'Feedback submitted successfully!';
-        messageDiv.style.color = 'green';
-  
-        // Optionally, you can submit the form here if you're not using AJAX
-        // this.submit();
+        // Display the Toastify message
+        Toastify({
+          text: "Thanks For Your Feedback :)",
+          duration: 3000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+          stopOnFocus: true // Prevents dismissing of toast on hover
+        }).showToast();
+
+        // Optionally, you can reset the form
+        document.getElementById("feedback-form").reset();
       }
-    });
+    }
   </script>
+  
   
       </div>
     </div>
