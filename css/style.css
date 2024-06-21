@@ -1909,48 +1909,54 @@ div.card {
 }
 
 /* about section */
-
 #about {
   padding: 4% 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#about {
   width: 100%;
   height: 100vh;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
 }
+
 .main-img img {
   max-width: 100%;
   width: 500px;
   height: auto;
   border-radius: 50%;
+  display: block;
+  margin: 0 auto; 
 }
+
 .text {
   position: relative;
   width: 100%;
   height: fit-content;
   background: transparent;
 }
+
 .text:before {
   content: " ";
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 4%;
-  width: 100%;
-  height: 100%;
   background: rgba(255, 242, 0, 0.2);
   border-radius: 20px;
+  z-index: 0;
 }
+
 .text > * {
   position: relative;
   z-index: 1;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .text h4 {
   color: #ffffff;
   font-size: 20px;
@@ -1958,6 +1964,7 @@ div.card {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+
 .text h2 {
   color: #f1c11a;
   font-size: 36px;
@@ -1976,17 +1983,21 @@ div.card {
   margin-bottom: 60px;
   text-align: justify;
 }
+
 .last-text {
   display: flex;
 }
+
 .text1 {
   margin-right: 60px;
 }
+
 .last-text h3 {
   color: #c8ba00;
   font-size: 60px;
   font-weight: 700;
 }
+
 .last-text h5 {
   color: #ffffff;
   font-size: 18px;
@@ -1995,18 +2006,18 @@ div.card {
   padding: 20px;
 }
 
-/* responsive design */
+/* Responsive design */
 @media (max-width: 1385px) {
   #about {
     padding: 4% 10%;
     transition: 0.3s;
   }
-  .main-img {
-    width: 500px;
-    height: auto;
+  .main-img img {
+    width: 100%;
     transition: 0.3s;
   }
 }
+
 @media (max-width: 1240px) {
   .text h2 {
     font-size: 30px;
@@ -2017,10 +2028,76 @@ div.card {
 @media (max-width: 1040px) {
   #about {
     grid-template-columns: 1fr;
-    height: 100%;
+    height: auto;
   }
   .main-img img {
     padding-top: 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-img img {
+    max-width: 300px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .text {
+    width: 100%;
+    padding: 10px;
+  }
+  .text h2 {
+    font-size: 28px;
+  }
+  .text p {
+    font-size: 14px;
+  }
+  .last-text h3 {
+    font-size: 50px;
+  }
+  .last-text h5 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-img img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .text {
+    padding: 10px;
+  }
+  .text:before {
+    padding: 2%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 242, 0, 0.1); 
+  }
+  .text h2 {
+    font-size: 24px;
+  }
+  .text p {
+    font-size: 12px;
+  }
+  .last-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text1 {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .last-text h3 {
+    font-size: 40px;
+  }
+  .last-text h5 {
+    font-size: 14px;
   }
 }
 
@@ -2033,7 +2110,6 @@ div.card {
 .media-body-p1 {
   padding-bottom: 22px;
 }
-
 /* services section */
 #services {
   background: #f1c11a;
