@@ -2264,12 +2264,15 @@ h3 {
 
 .card1 {
   margin-bottom: 50px;
-  background-color: #f1c11a;
+  background:linear-gradient(#ff6,rgb(248, 196, 8));
   padding: 2px 10px 2px 10px;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
   margin: 0 10px 0 10px;
   height: 100%;
+
+  border-width: 5px;
+  border-color: #000;
 }
 
 .col-md-4 {
