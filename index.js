@@ -63,3 +63,29 @@ app.listen(PORT, () => {
 document.onselectstart = function() {
   return false;
 };
+
+
+
+document.querySelectorAll('.accordion button').forEach(button => {
+  button.addEventListener('click', () => {
+    const accordionItem = button.parentElement;
+    const content = button.nextElementSibling;
+    const expanded = accordionItem.getAttribute('aria-expanded') === 'true';
+
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      item.setAttribute('aria-expanded', 'false');
+      item.querySelector('.icon').textContent = '+';
+      item.querySelector('.accordion-content').style.maxHeight = '0';
+    });
+
+    if (!expanded) {
+      accordionItem.setAttribute('aria-expanded', 'true');
+      button.querySelector('.icon').textContent = '-';
+      content.style.maxHeight = content.scrollHeight + 'px';
+    } else {
+      accordionItem.setAttribute('aria-expanded', 'false');
+      button.querySelector('.icon').textContent = '+';
+      content.style.maxHeight = '0';
+    }
+  });
+});
