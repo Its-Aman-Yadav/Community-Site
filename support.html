@@ -17,45 +17,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-
-      header {
-        background: #ff7d7d;
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-      }
-
-      header h1 {
-        margin: 0;
-      }
-
-      nav ul {
-        padding: 0;
-        list-style: none;
-        text-align: center;
-      }
-
-      nav ul li {
-        display: inline;
-        margin: 0 10px;
-      }
-
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-      }
-
       main {
         padding: 20px;
         max-width: 800px;
@@ -100,7 +65,37 @@
     </style>
   </head>
   <body>
-    <header>
+    <div class="navbar">
+      <nav>
+        <label
+          for="logo"
+          style="margin-left: 5px; display: flex; gap: 1rem; cursor: auto"
+        >
+          <img
+            src="fav.png"
+            alt="logo"
+            style="height: 50px; width: 50px; border-radius: 50%"
+          />
+          <span
+            style="
+              margin-top: 15px;
+              font-size: medium;
+              color: #fff;
+              cursor: auto;
+            "
+            >Open Source Village</span
+          >
+        </label>
+        <ul class="flex flex-col md:flex-row">
+          <li><i></i><a href="index.html">Home</a></li>
+          <li><i></i><a href="#general-info">General info</a></li>
+          <li><i></i><a href="#fav.png">FAQs</a></li>
+          <li><i></i><a href="#conatct">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- <header>
       <h1>Support</h1>
       <nav>
         <ul>
@@ -109,7 +104,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <main>
       <section id="general-info">
