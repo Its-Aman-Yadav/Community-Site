@@ -10,7 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="">
   <meta name="description" content="">
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -70,172 +72,23 @@ nav {
   background-color: #F5F5F5;
 }
 
-      .card-text {
-        overflow-wrap: break-word; /* Ensures long words break and stay within the card */
-        word-wrap: break-word;
-        word-break: break-word;
-        hyphens: auto;
-      }
-      .navbar {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-left: 10px;
-        }
-        .logo img {
-            margin-right: 10px;
-            width: 40px; /* Adjust the size of the logo as needed */
-            height: auto;
-        }
-        .logo-text {
-            right: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            line-height: 1.2; /* Adjust line height for better spacing */
-        }
-        .logo-text .line1 {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        .logo-text .line2 {
-            font-size: 1.2 em;
-            font-weight: bold;
-        }
-    
-      ul {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    
-      ul li {
-        margin: 0 10px; /* Adjust margin to fit items */
-        font-size: 0.9rem; /* Reduced font size */
-      }
-    
-      ul li a {
-        text-decoration: none;
-        color: white; /* Adjust color as needed */
-      }
-    
-      ul li i {
-        margin-right: 5px; /* Adjust space between icon and text */
-      }
-      .wrapper {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    .carousell {
-        display: flex;
-        padding: 0;
-        transition: transform 0.5s ease;
-    }
-    
-    .cardd {
-        list-style: none;
-        margin: 0 10px;
-        flex: 0 0 auto;
-        width: 200px; /* Adjust as needed */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        text-align: center;
-        padding: 10px; /* Added padding to ensure text doesn't touch edges */
-    }
-    
-    .cardd .img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .cardd img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .cardd h2 {
-        font-size: 1.2em; /* Reduced font size */
-        margin: 10px 0;
-    }
-    
-    .cardd span {
-        font-size: 0.9em; /* Reduced font size */
-        padding: 0 10px;
-        display: block;
-        margin-bottom: 10px;
-    }  
-    
-    ::-webkit-scrollbar {
-      width: 10px;
-      background-color: #F5F5F5;
-    }
-    
-    ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      background-color: #F5F5F5;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background-color: #f1c11a;
-      background-image: -webkit-linear-gradient(45deg,
-                                                rgba(255, 255, 255, .2) 25%,
-                                                transparent 25%,
-                                                transparent 50%,
-                                                rgba(255, 255, 255, .2) 50%,
-                                                rgba(255, 255, 255, .2) 75%,
-                                                transparent 75%,
-                                                transparent);
-      border-radius: 10px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: #d1a10a;
-    }
-
-
-/* Basic styling for buttons */
-.button-container button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  width: 150px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 50px;
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
 }
 
-.button-container button:hover {
-  background-color: #fcf408;
+::-webkit-scrollbar-thumb {
+  background-color: #f1c11a;
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                                            transparent 25%,
+                                            transparent 50%,
+                                            rgba(255, 255, 255, .2) 50%,
+                                            rgba(255, 255, 255, .2) 75%,
+                                            transparent 75%,
+                                            transparent);
+  border-radius: 10px;
 }
-
-.form-container {
-  display: none;
-}
-
-.form-container.active {
-  display: block;
-}
-
-/* Styling for the header */
-.header-title {
-  text-align: center;
-  font-size: 24px; /* Medium font size */
-  font-weight: bold;
-  color: yellow;
-  margin-top: 20px;
-}
-
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #d1a10a;
@@ -486,14 +339,12 @@ function topFunction() {
   <!-- Navbar -->
   <div class="navbar">
     <nav>
-      <a class="logo-link" href="#home"> 
-        <label class="logo" >
+      <a class="logo-link" href="#home">
+        <label class="logo">
           <img src="images/fav.png" alt="logo">
-            <div class="logo-text">
-                <span class="line1">Open Source</span>
-                <span class="line2">Village</span>
-            </div>
-        </label>
+          <div>
+            <span class="logo-subtext">Source</span>
+          </div>
       </a>
       <ul>
         <li><i class="fa-solid fa-house"></i><a class="active" href="#home">Home</a></li>
@@ -639,12 +490,12 @@ function topFunction() {
         </div>
       </div>
       <div class="d-flex justify-content-center">
-        <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-custom smoothScroll d-flex align-items-center">
+        <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll d-flex align-items-center">
           JOIN DISCORD
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-               alt="Discord" class="discord-icon">
+          alt="Discord" style="height: 40px; border-radius: 50px; margin-left: 10px;">
         </a>
-      </div>          
+      </div>
     </div>
   </div>
 </section>
@@ -769,101 +620,101 @@ function topFunction() {
     </script>
 
 
+
 <section class="faqq">
   <div class="containerr">
     <div class="accordion">
       <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
-
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>How can I contribute to the community's goals and projects?</span>
-          <span class="icon">+</span>
+      <div class="accordion-item">
+        <button id="accordion-button-1" aria-expanded="false">
+          <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>Contributing to the community's goals: There are many ways to contribute to our community! Whether you're a developer, designer, writer, or simply passionate about a particular cause, there's a place for you here. You can contribute code to open source projects, participate in discussions, share your expertise, or organize events that align with our mission.</p>
         </div>
       </div>
 
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>What benefits do members receive from participating in the community?</span>
-          <span class="icon">+</span>
+      <div class="accordion-item">
+        <button id="accordion-button-2" aria-expanded="false">
+          <span class="accordion-title">What benefits do members receive from participating in the community?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>Benefits of community membership: As a member of our community, you'll have the opportunity to connect with other passionate individuals, collaborate on projects that align with your interests and values, and make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events, and networking opportunities.</p>
         </div>
       </div>
 
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>How can I join the open source village community?</span>
-          <span class="icon">+</span>
+      <div class="accordion-item">
+        <button id="accordion-button-3" aria-expanded="false">
+          <span class="accordion-title">How can I join the open source village community?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>Joining the open source village community: Joining our community is simple! Just navigate to our website and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration process. Once registered, you'll gain access to our forums, projects, events, and more.</p>
         </div>
       </div>
 
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>What is open source community?</span>
-          <span class="icon">+</span>
+      <div class="accordion-item">
+        <button id="accordion-button-4" aria-expanded="false">
+          <span class="accordion-title">What is open source community?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>An open source community is a group of individuals who collaborate on projects and initiatives that are developed and shared openly, meaning the source code and resources are freely available for anyone to view, use, modify, and distribute ideas.</p>
         </div>
       </div>
 
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>What is the purpose of the open source village community website?</span>
-          <span class="icon">+</span>
+      <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false">
+          <span class="accordion-title">What is the purpose of the open source village community website?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>Purpose of the open source village community website: Our website serves as a central hub for like-minded individuals who believe in the power of community-driven initiatives. It's a platform where members can connect, collaborate, and contribute to make a positive impact in the world.</p>
         </div>
       </div>
 
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>Are there any eligibility criteria to join the community?</span>
-          <span class="icon">+</span>
+      <div class="accordion-item">
+        <button id="accordion-button-6" aria-expanded="false">
+          <span class="accordion-title">Are there any eligibility criteria to join the community?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>The only criteria is your passion for open source.</p>
         </div>
       </div>
 
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>How can I find and join specific projects within the community?</span>
-          <span class="icon">+</span>
+
+      <div class="accordion-item">
+        <button id="accordion-button-7" aria-expanded="false">
+          <span class="accordion-title">How can I find and join specific projects within the community?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>To find and join specific projects, visit our project directory on the website. You can browse through ongoing projects, read their descriptions, and join the ones that interest you by following the participation guidelines provided.</p>
         </div>
       </div>
 
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>How can I stay updated with the community's latest news and events?</span>
-          <span class="icon">+</span>
+      <div class="accordion-item">
+        <button id="accordion-button-9" aria-expanded="false">
+          <span class="accordion-title">How can I stay updated with the community's latest news and events?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>You can stay updated by following our social media channels, and regularly checking our website for new events and information.</p>
         </div>
       </div>
 
-      <div class="accordion-item" aria-expanded="false">
-        <button>
-          <span>Who can I contact if I have more questions or need support?</span>
-          <span class="icon">+</span>
+      <div class="accordion-item">
+        <button id="accordion-button-10" aria-expanded="false">
+          <span class="accordion-title">Who can I contact if I have more questions or need support?</span>
+          <span class="icon" aria-hidden="true"></span>
         </button>
         <div class="accordion-content">
           <p>If you have more questions or need support, feel free to contact our support team via the "Contact Us" page on our website. Our team is always ready to help you with any inquiries or issues you may have.</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -1005,27 +856,8 @@ function topFunction() {
     </div>
   </section>
 
-  <!-- Buttons to toggle sections -->
-  <div class="button-container" id="contactus" style="text-align: center; margin-top: 50px;">
-    <h1 class="header-title">Connect With Us!</h1>
-    <button onclick="showSection('contact')">Contact Us</button>
-    <button onclick="showSection('feedback')">Feedback</button>
-  </div>
-  <br>
+  <!-- contact -->
 
-  <script>
-    function showSection(sectionId) {
-  document.querySelectorAll('.form-container').forEach(section => {
-    section.classList.remove('active');
-  });
-  document.getElementById(sectionId).classList.add('active');
-}
-
-// No need to show any section by default
-
-  </script>
-
-  <!-- Contact Section -->
   <section id="contact" class="form-container">
     <div class="container">
       <div class="row">
@@ -1047,26 +879,38 @@ function topFunction() {
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
                 <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
-                <div id="message"></div>
-              </div>
+              <div id="message"></div>
+            </div>
             </form>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
 
-  <!-- Feedback Section -->
+
+<!-- feedback -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
   <section id="feedback" class="form-container">
     <div class="container">
       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title" style="margin-top: 100px;">
-            <h1 style="color: yellow;">Give us your Feedback</h1>
-            <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
+          <div class="section-title">
+            <h1>Give us your Feedback</h1>
+            <p>We value your opinion. Please share your feedback with us!</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="feedback-form" action="" method="POST">
+          <div class="contact-form">
+            <form id="feedback-form" action="" method="POST" onsubmit="handleFeedbackSubmit(event)">
               <div class="col-md-6 col-sm-6">
                 <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
@@ -1074,21 +918,21 @@ function topFunction() {
                 <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
               </div>
               <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
-                <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
+                <textarea name="message" id="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
               </div>
               <div class="col-md-12 col-sm-12">
                 <p style="color: white;">Rate your experience:</p>
                 <div class="col-12 rating rad">
                   <input type="radio" id="emoji5" name="rating" value="5">
-                  <label for="emoji5">&#128513;</label> <!-- Grinning Face -->
+                  <label for="emoji5">&#128513;</label>
                   <input type="radio" id="emoji4" name="rating" value="4">
-                  <label for="emoji4">&#128578;</label> <!-- Smiling Face with Smiling Eyes -->
+                  <label for="emoji4">&#128578;</label>
                   <input type="radio" id="emoji3" name="rating" value="3">
-                  <label for="emoji3">&#128528;</label> <!-- Neutral Face -->
+                  <label for="emoji3">&#128528;</label>
                   <input type="radio" id="emoji2" name="rating" value="2">
-                  <label for="emoji2">&#128577;</label> <!-- Slightly Frowning Face -->
+                  <label for="emoji2">&#128577;</label>
                   <input type="radio" id="emoji1" name="rating" value="1">
-                  <label for="emoji1">&#128545;</label> <!-- Angry Face -->
+                  <label for="emoji1">&#128545;</label>
                 </div>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
@@ -1101,28 +945,46 @@ function topFunction() {
       </div>
     </div>
   </section>
-  
+
   <script>
-    document.getElementById('feedback-form').addEventListener('submit', function(event) {
-      // Prevent default form submission
-      event.preventDefault();
-  
-      // Check if an emoji (rating) is selected
-      const rating = document.querySelector('input[name="rating"]:checked');
-      const messageDiv = document.getElementById('message1');
-      
-      if (!rating) {
-        messageDiv.textContent = 'Please select an emoji to rate your experience.';
-        messageDiv.style.color = 'red';
+    function handleFeedbackSubmit(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get form values
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      var ratingChecked = document.querySelector('input[name="rating"]:checked');
+
+      // Check if all fields are filled
+      if (name === "" || email === "" || message === "" || !ratingChecked) {
+        Toastify({
+          text: "Thanks For Your Feedback :)",
+          duration: 3000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+          stopOnFocus: true // Prevents dismissing of toast on hover
+        }).showToast();
       } else {
-        messageDiv.textContent = 'Feedback submitted successfully!';
-        messageDiv.style.color = 'green';
-  
-        // Optionally, you can submit the form here if you're not using AJAX
-        // this.submit();
+        // Display the Toastify message
+        Toastify({
+          text: "Thanks For Your Feedback :)",
+          duration: 3000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+          stopOnFocus: true // Prevents dismissing of toast on hover
+        }).showToast();
+
+        // Optionally, you can reset the form
+        document.getElementById("feedback-form").reset();
       }
-    });
+    }
   </script>
+  
   
       </div>
     </div>
