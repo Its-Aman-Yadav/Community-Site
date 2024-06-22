@@ -414,7 +414,7 @@ ul li a:hover {
   display: inline-block;
   width: 34px;
   height: 20px;
-  margin-right: 30px;
+  margin-right: 5px;
   position: relative;
 }
 
@@ -696,12 +696,7 @@ h2 {
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
   padding: 0 1.5em;
-<<<<<<< HEAD
-  margin: 10px 0;
-  border-radius: 10px;
-=======
   border-bottom: 2px solid black;
->>>>>>> f7ad5e177cebb1da0a2605ce3ba5bc533f65cf54
 }
 
 .accordion .accordion-content p {
@@ -1665,7 +1660,7 @@ div.card {
 }
 .navbar nav.sticky {
   height: 80px;
-  background: linear-gradient(rgb(183, 123, 27), rgba(249, 177, 43, 0.7));
+  background: linear-gradient(rgba(247, 113, 3, 0.7), rgba(249, 177, 43, 0.7));
   color: white !important;
   /* border-bottom: 1.5px solid rgb(0, 0, 0); */
   border-bottom-left-radius: 16px;
@@ -2264,12 +2259,15 @@ h3 {
 
 .card1 {
   margin-bottom: 50px;
-  background-color: #f1c11a;
+  background:linear-gradient(#ff6,rgb(248, 196, 8));
   padding: 2px 10px 2px 10px;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
   margin: 0 10px 0 10px;
   height: 100%;
+
+  border-width: 5px;
+  border-color: #000;
 }
 
 .col-md-4 {
