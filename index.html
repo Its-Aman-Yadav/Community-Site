@@ -49,7 +49,7 @@
 /* Navbar styles */
 /* Navbar styles */
 .navbar {
-  background-color: #333; /* Background color for navbar */
+  /* background-color: #333; Background color for navbar */
   padding: 0; /* Remove padding for the navbar */
 }
 
@@ -172,10 +172,16 @@ ul li i {
   cursor: pointer;
 }
 
+.theme-switch img{
+  margin-right: 20px !important;
+}
+
 nav {
-  background-color: #444; /* Navbar background color */
+  background-color: #444; /*Navbar background color*/
   padding: 5px 20px; /* Padding */
   border-radius: 8px;
+  display: grid;
+  grid-auto-flow: column;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -184,12 +190,13 @@ ul li {
 }
 
 .slider {
-  width: 60px; /* Slider width */
+  width: 50px;
   height: 34px; /* Slider height */
   background-color: #ccc;
   position: relative;
   border-radius: 34px;
   transition: 0.4s;
+  margin-right: 0px !important;
 }
 
 .slider:before {
@@ -358,7 +365,7 @@ function topFunction() {
         <input type="checkbox" id="checkbox" />
         <div class="slider round" id="toggle"></div>
       </label>
-      <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile">
+      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
     </nav>
   </div>
   
