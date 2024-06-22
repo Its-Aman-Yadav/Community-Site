@@ -154,6 +154,7 @@
 
         function validateForm(formType) {
           let email, password, name;
+          const spcharRegex = /[<>"/]/; // added password Regex validation to prevent special symbols and to disallow client side attacks  <, >, ", /
           if (formType === "register") {
             name = document.getElementById("registerName").value;
             email = document.getElementById("registerEmail").value;
@@ -164,6 +165,11 @@
             }
             if (!validateEmail(email)) {
               alert("Please enter a valid email address");
+              return;
+            }
+            if(spcharRegex.test(name) || spcharRegex.test(password))
+            {
+              alert("Name Or Password Cannot Contain <,>,\", or /");
               return;
             }
             document.getElementById("registerMessage").style.display = "block";
@@ -179,6 +185,11 @@
             }
             if (!validateEmail(email)) {
               alert("Please enter a valid email address");
+              return;
+            }
+            if(spcharRegex.test(password))
+            {
+              alert("Passowrd cannot contain <,>,\", or /");
               return;
             }
             alert("Logged in successfully");
