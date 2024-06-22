@@ -37,144 +37,105 @@
 />
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   
- <!-- remixicon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
+<!-- Preconnect and fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="@sweetalert2/theme-material-ui/material-ui.css">
 
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+<!-- Remixicon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
 
-  <style>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
 
- .navbar {
-  background-color: #333; /* Background color for navbar */
-  padding: 5px 20px; /* Reduced padding for navbar */
+<!-- Custom styles -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
- /* Navbar styles */
-/* Navbar styles */
-/* Navbar styles */
-.navbar {
-  /* background-color: #333; Background color for navbar */
-  padding: 0; /* Remove padding for the navbar */
+  .navbar {
+    background-color: #333; /* Background color for navbar */
+    padding: 5px 20px; /* Reduced padding for navbar */
+  }
 
-}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px; /* Adjust height of the navbar */
+  }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10px; /* Adjust height of the navbar */
-}
-.carousell {
+  .carousell {
+    display: flex;
+    padding: 0;
+    transition: transform 0.5s ease;
+  }
 
-        display: flex;
-        padding: 0;
-        transition: transform 0.5s ease;
-    }
-    ::-webkit-scrollbar {
-      width: 10px;
-      background-color: #F5F5F5;
-    }
-    
-    ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      background-color: #F5F5F5;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background-color: #f1c11a;
-      background-image: -webkit-linear-gradient(45deg,
-                                                rgba(255, 255, 255, .2) 25%,
-                                                transparent 25%,
-                                                transparent 50%,
-                                                rgba(255, 255, 255, .2) 50%,
-                                                rgba(255, 255, 255, .2) 75%,
-                                                transparent 75%,
-                                                transparent);
-      border-radius: 10px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: #d1a10a;
-    }  .wrapper {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }  .home-thumb .btn{
-        background-color: transparent;
-      }
-      
-      .home-thumb .btn:hover{
-        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5) , 0 0 2px rgb(255, 255, 255) , 0 0 3px rgb(255, 255, 255) , 0 0 200px rgb(255, 255, 255);
-      }
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
 
-  display: flex;
-  padding: 0;
-  transition: transform 0.5s ease;
-}
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
 
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: #F5F5F5;
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: #f1c11a;
+    background-image: -webkit-linear-gradient(45deg,
+                                              rgba(255, 255, 255, .2) 25%,
+                                              transparent 25%,
+                                              transparent 50%,
+                                              rgba(255, 255, 255, .2) 50%,
+                                              rgba(255, 255, 255, .2) 75%,
+                                              transparent 75%,
+                                              transparent);
+    border-radius: 10px;
+  }
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #F5F5F5;
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #d1a10a;
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: #f1c11a;
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
-                                            transparent 25%,
-                                            transparent 50%,
-                                            rgba(255, 255, 255, .2) 50%,
-                                            rgba(255, 255, 255, .2) 75%,
-                                            transparent 75%,
-                                            transparent);
-  border-radius: 10px;
-}
+  .wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #d1a10a;
-}
+  .home-thumb .btn {
+    background-color: transparent;
+  }
 
-.wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
+  .home-thumb .btn:hover {
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 
+                0 0 2px rgb(255, 255, 255), 
+                0 0 3px rgb(255, 255, 255), 
+                0 0 200px rgb(255, 255, 255);
+  }
 
-.home-thumb .btn {
-  background-color: transparent;
-}
+  .logo-link {
+    display: flex;
+    align-items: center;
+  }
 
-.home-thumb .btn:hover {
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
-}
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-.logo-link {
-  display: flex;
-  align-items: center;
-}
+  .logo img {
+    height: 40px; /* Reduced height of the logo */
+    width: 40px; /* Reduced width of the logo */
+  }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.logo img {
-  height: 40px; /* Reduced height of the logo */
-  width: 40px; /* Reduced width of the logo */
-}
-
-.logo-text {
-  font-size: 1.2rem; /* Adjusted font size */
-  color: white; /* Logo text color */
-}
+  .logo-text {
+    font-size: 1.2rem; /* Adjusted font size */
+    color: white; /* Logo text color */
+  }
 
 ul {
   display: flex;
@@ -334,30 +295,53 @@ ul li a:hover {
 
 <body>
 
-  <!-- Chatbot integration section -->
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-      "composerPlaceholder": "Open Source Village",
-      "botConversationDescription": "Ask me anything!",
-      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
-      "lazySocket": true,
-      "themeName": "prism",
-      "botName": "Open Source Village",
-      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
-      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
-      "frontendVersion": "v1",
-      "showPoweredBy": true,
-      "theme": "prism",
-      "themeColor": "#2563eb",
-      "allowedOrigins": [],
-      "enableConversationDeletion": true
-    });
-  </script>
+<!--navbar-->
+<div class="navbar">
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbut">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo" style="margin-left:5px;"><img src="images/fav.png" alt="logo">
+      <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+    </label>
+    <ul>
+      <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
+      <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
+      <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+      <li><i class="fa-solid fa-user"style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+      <li><i class="fa-solid fa-message" style="filter:invert(1)"></i><a href="#contact">Feedback</a></li>
+    </ul>
+  </nav>
+  <section></section>
+</div>
+
+<!-- Chatbot integration section -->
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+    "composerPlaceholder": "Open Source Village",
+    "botConversationDescription": "Ask me anything!",
+    "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+    "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+    "messagingUrl": "https://messaging.botpress.cloud",
+    "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+    "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+    "lazySocket": true,
+    "themeName": "prism",
+    "botName": "Open Source Village",
+    "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+    "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+    "frontendVersion": "v1",
+    "showPoweredBy": true,
+    "theme": "prism",
+    "themeColor": "#2563eb",
+    "allowedOrigins": [],
+    "enableConversationDeletion": true
+  });
+</script>
+
 
   <!-- preloader section -->
   <section class="preloader">
@@ -945,6 +929,8 @@ function topFunction() {
             <h1 style="color: yellow;">Get in Touch</h1>
             <p style="color: white;">If you have any questions or inquiries, feel free to contact us!</p>
           </div>
+
+          </div>
           <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
             <form id="contact-form" action="" method="POST">
               <div class="col-md-6 col-sm-6">
@@ -1231,7 +1217,7 @@ sections.forEach(section => {
   observer.observe(section);
 });
 </script>
-  <script>
+ <script>
     function sendEmail() {
       Email.send({
         Host: "smtp.elasticemail.com",
@@ -1240,14 +1226,18 @@ sections.forEach(section => {
         To: 'itsamanyadav18@gmail.com',
         From: document.getElementById('email').value,
         Subject: "This is the subject",
-        Body: "Name:" + document.getElementById("name").value
+        Body: "Name:" + document.getElementById("name").value 
           + "<br> Email:" + document.getElementById("email").value
           + "<br> Message:" + document.getElementById("msg").value
-
       }).then(
-        message => alert("Message sent successsfully. We will get back to you soon.")
+        message => Swal.fire({
+          title: "Thank You!",
+          text: "Your message sent successfully!",
+          icon: "success"
+        })
       );
     }
+
     function sendFeed() {
       Email.send({
         Host: "smtp.elasticemail.com",
@@ -1259,75 +1249,79 @@ sections.forEach(section => {
         Body: "Name:" + document.getElementById("name").value
           + "<br> Email:" + document.getElementById("email").value
           + "<br> Message:" + document.getElementById("msg").value
-
       }).then(
-        message => alert("Feedback sent successsfully")
+        message => alert("Feedback sent successfully")
       );
     }
-  </script>
+</script>
+
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
-  <script src="js/vegas.min.js"></script>
+<script src="js/vegas.min.js"></script>
 
-  <script src="js/wow.min.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-      "composerPlaceholder": "Open Source Village",
-      "botConversationDescription": "This chatbot is for the community",
-      "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-      "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
-      "lazySocket": true,
-      "themeName": "prism",
-      "frontendVersion": "v1",
-      "showPoweredBy": true,
-      "theme": "prism",
-      "themeColor": "#2563eb",
-      "allowedOrigins": []
-    });
-  </script>
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2/dist/sweetalert2.min.js"></script>
+
+<!-- Botpress WebChat -->
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+    "composerPlaceholder": "Open Source Village",
+    "botConversationDescription": "This chatbot is for the community",
+    "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+    "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+    "messagingUrl": "https://messaging.botpress.cloud",
+    "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+    "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+    "lazySocket": true,
+    "themeName": "prism",
+    "frontendVersion": "v1",
+    "showPoweredBy": true,
+    "theme": "prism",
+    "themeColor": "#2563eb",
+    "allowedOrigins": []
+  });
+</script>
+
 <!-- swiper JS -->
 <script src="js/swiper-bundle.min.js"></script>
-  <script>
-    
-/*=============== SWIPER JS ===============*/
-let swiperCards = new Swiper(".card__content", {
-  loop: true,
-  spaceBetween: 52,
-  grabCursor: true,
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
+<script>
+  /*=============== SWIPER JS ===============*/
+  let swiperCards = new Swiper(".card__content", {
+    loop: true,
+    spaceBetween: 52,
+    grabCursor: true,
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  breakpoints:{
-    600: {
-      slidesPerView: 2,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
     },
-    968: {
-      slidesPerView: 3,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-  },
-});
-  </script>
+
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+      },
+      968: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
 
 
 <script src="./footer/footer.js"></script>
