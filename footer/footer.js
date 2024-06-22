@@ -6,6 +6,16 @@ class SpecialFooter extends HTMLElement {
         .form input[type="text"] {
           color: black;
         }
+        /* Setting all social media icons to yellow */
+        .fab.fa-whatsapp,
+        .fab.fa-facebook,
+        .fab.fa-instagram,
+        .fab.fa-linkedin,
+        .fab.fa-x-twitter,
+        .fab.fa-github,
+        .fa-solid.fa-envelope {
+          color: yellow;
+        }
       </style>
       <footer>
         <div class="container">
@@ -68,8 +78,6 @@ class SpecialFooter extends HTMLElement {
         </p>
       </footer>`;
 
-      
-     
     document.addEventListener('DOMContentLoaded', function() {
       const emailForm = document.querySelector('#emailForm');
     
@@ -88,15 +96,12 @@ class SpecialFooter extends HTMLElement {
         emailForm.reset();
       });
       
-
-       /* Function for checking if email is valid or not */
-
+      /* Function for checking if email is valid or not */
       function validateEmail(email) {                         
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(String(email).toLowerCase());
       }
     });
-    
   }
 }
 
