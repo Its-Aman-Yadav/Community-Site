@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f1c11a, #fae69f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .formcontainer {
+        width: 100%;
+        max-width: 600px;
+        padding: 40px;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        border: 2px solid #f1c11a;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .section-title p {
+        font-size: 1.2em;
+        color: #666;
+    }
+
+    .contact-form {
+        margin-top: 20px;
+    }
+
+    .input-focus {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    .input-focus:focus {
+        border-color: #f1c11a;
+        outline: none;
+    }
+
+    .submit {
+        padding: 12px 20px;
+        background: #f1c11a;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .submit:hover {
+        background-color: #d8aa03;
+        transform: translateY(-2px);
+    }
+</style>
+</head>
+<body>
+    <div class="formcontainer">
+        <div class="section-title">
+            <h1>Get in Touch</h1>
+            <p>If you have any query or for collaboration</p>
+        </div>
+        <div class="contact-form">
+            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendEmail(); resetForm(); return false;">
+                <div>
+                    <input name="name" id="name" type="text" class="input-focus" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <input name="email" type="email" id="email" class="input-focus" placeholder="Your Email" required>
+                </div>
+                <div>
+                    <textarea name="message" class="input-focus" id="msg" placeholder="Message" rows="6" required></textarea>
+                </div>
+                <div>
+                    <input name="submit" type="submit" class="submit" id="contact-submit" value="SEND MESSAGE">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function sendEmail() {
+            alert('Message sent successfully!');
+        }
+    
+        function resetForm() {
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+    </body>
+    </html>
