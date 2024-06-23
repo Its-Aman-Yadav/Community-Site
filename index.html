@@ -389,26 +389,6 @@ ul li a:hover {
       <div class="sk-circle12 sk-child"></div>
     </div>
   </section>
-
-<!-- <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
- <button ><i class="fa-solid fa-circle-up"></i></button> 
-
-<script>
-let mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-}
-</script>
-</script>-->
 <script type="text/javascript">
   window.addEventListener("scroll", function(){
     var header= document.querySelector("nav");
@@ -1111,14 +1091,34 @@ function topFunction() {
       if (!rating) {
         messageDiv.textContent = 'Please select an emoji to rate your experience.';
         messageDiv.style.color = 'red';
+    function handleFeedbackSubmit(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get form values
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      var ratingChecked = document.querySelector('input[name="rating"]:checked');
+
+      // Check if all fields are filled
+      if (name === "" || email === "" || message === "" || !ratingChecked) {
+        Toastify({
+          text: "Thanks For Your Feedback :)",
+          duration: 3000,
+          close: true,
+          gravity: "center", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
+          backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+          stopOnFocus: true // Prevents dismissing of toast on hover
+        }).showToast();
       } else {
         // Display the Toastify message
         Toastify({
           text: "Thanks For Your Feedback :)",
           duration: 3000,
           close: true,
-          gravity: "top", // `top` or `bottom`
-          position: "right", // `left`, `center` or `right`
+          gravity: "center", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
           backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
           stopOnFocus: true // Prevents dismissing of toast on hover
         }).showToast();

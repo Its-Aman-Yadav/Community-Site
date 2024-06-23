@@ -434,6 +434,10 @@ ul li a:hover {
   border-radius: 34px;
 }
 
+#toggle{
+  width: 50px;
+}
+
 .slider:before {
   position: absolute;
   content: "";
@@ -451,7 +455,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(14px);
+  transform: translateX(29px);
 }
 
 /* Responsive Design */
