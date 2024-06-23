@@ -222,6 +222,7 @@ ul li i {
 nav {
   background-color: #444; /* Darker background color */
   padding: 5px 20px; /* Reduced padding */
+}
 
 .theme-switch img{
   margin-right: 20px !important;
@@ -244,7 +245,7 @@ ul li {
 slider {
   width: 60px; /* Increased width of the slider */
   height: 34px; /* Increased height of the slider */
-
+}
 
 .slider {
   width: 50px;
@@ -324,6 +325,76 @@ ul li a:hover {
 .rating label:active {
   transform: scale(1.1); /* Reduce size on active */
 }
+
+.toast {
+      font-weight: 200;
+      color: white;
+      border: 2px solid rgb(0, 91, 5);
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      margin-top: 75px;
+    }
+
+    .toast i{
+        color: yellow;
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .toast-close{
+        color: white;
+        margin-left: 10px;
+      
+    }
+
+    .toast-close:hover{
+        background-color: #3a3a3acf;
+        border-radius: 5px;
+    }
+
+    .errortoast {
+      font-weight: 200;
+      color: white;
+      border:2px solid rgb(65, 11, 0);
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      margin-top: 75px;
+    }
+
+    .errortoast i{
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .errortoast-close{
+        color: white;
+        margin-left: 10px;
+      
+    }
+
+    .errortoast-close:hover{
+        background-color: #3a3a3acf;
+        border-radius: 5px;
+    }
+
+    .toastify.toastify-top {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 20px rgb(255, 225, 0);
+  }
+  100% {
+    box-shadow: 0px 0px 20px rgba(255, 225, 0);
+  }
+}
+
 
   </style>
   
@@ -984,8 +1055,8 @@ ul li a:hover {
                 <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
-              <div id="message"></div>
+                <button type="submit" class="submit-btn" style="margin-bottom:10px;" id="toast-btn">SEND MESSAGE</button>
+               <div id="message"></div>
             </div>
             </form>
           </div>
@@ -993,6 +1064,50 @@ ul li a:hover {
       </div>
     </div>
   </section>
+
+  <script>
+    document.getElementById("toast-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+
+        let name = document.querySelector("input[name='name']").value.trim();
+        let email = document.querySelector("input[name='email']").value.trim();
+        let message = document.querySelector("textarea[name='message']").value.trim();
+
+        if (!name || !email || !message) {
+            let error = '<i class="fa-solid fa-circle-exclamation"></i> Please provide all details.';
+            Toastify({
+                text: error,
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "rgba(174, 28, 28, 0.7)",
+                close: true,
+                stopOnFocus: true,
+                className: "errortoast",
+                escapeMarkup: false
+            }).showToast();
+        } else {
+            let text = '<i class="fa-solid fa-circle-check"></i> Thank you! We will get in touch soon.';
+            Toastify({
+                text: text,
+                duration: 4000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "rgba(68, 112, 70, 0.9)",
+                close: true,
+                stopOnFocus: true,
+                className: "toast",
+                escapeMarkup: false
+            }).showToast();
+
+            setTimeout(function() {
+            document.querySelector("input[name='name']").value = "";
+            document.querySelector("input[name='email']").value = "";
+            document.querySelector("textarea[name='message']").value = "";
+        }, 3000);
+    }
+});
+</script>
   
 
 <!-- feedback -->
@@ -1152,7 +1267,7 @@ ul li a:hover {
       });          
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      /*document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("contact-form").addEventListener("submit", function(event) {
           event.preventDefault();
           document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
@@ -1160,7 +1275,7 @@ ul li a:hover {
           document.getElementById("email").value = "";
           document.getElementsByName("message")[0].value = "";
         });
-      });      
+      }); */
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
