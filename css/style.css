@@ -2114,9 +2114,17 @@ div.card {
   font-weight: 700;
   letter-spacing: 1px;
   padding: 14px 36px;
+
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   margin-top: 40px;
   margin-bottom: 40px;
   margin-right: 16px;
+
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   box-sizing: border-box;
@@ -2134,7 +2142,7 @@ div.card {
 }
 
 .service-cards {
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 .service-cards:hover {
@@ -2144,6 +2152,7 @@ div.card {
 .heading-hover {
   font-size: 20px;
   color: #0082e6;
+  transition: all 0.3s ease;
 }
 
 .service-cards:hover .heading-hover {
