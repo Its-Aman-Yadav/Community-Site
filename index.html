@@ -43,7 +43,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
   <style>
 
@@ -223,6 +222,7 @@ ul li i {
 nav {
   background-color: #444; /* Darker background color */
   padding: 5px 20px; /* Reduced padding */
+}
 
 .theme-switch img{
   margin-right: 20px !important;
@@ -245,7 +245,7 @@ ul li {
 slider {
   width: 60px; /* Increased width of the slider */
   height: 34px; /* Increased height of the slider */
-
+}
 
 .slider {
   width: 50px;
@@ -326,18 +326,76 @@ ul li a:hover {
   transform: scale(1.1); /* Reduce size on active */
 }
 
-.toastify.toastify-top {
-  animation: glow 3s infinite alternate;
+.toast {
+      font-weight: 200;
+      color: white;
+      border: 2px solid rgb(0, 91, 5);
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      margin-top: 75px;
+    }
+
+    .toast i{
+        color: yellow;
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .toast-close{
+        color: white;
+        margin-left: 10px;
+      
+    }
+
+    .toast-close:hover{
+        background-color: #3a3a3acf;
+        border-radius: 5px;
+    }
+
+    .errortoast {
+      font-weight: 200;
+      color: white;
+      border:2px solid rgb(65, 11, 0);
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      margin-top: 75px;
+    }
+
+    .errortoast i{
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .errortoast-close{
+        color: white;
+        margin-left: 10px;
+      
+    }
+
+    .errortoast-close:hover{
+        background-color: #3a3a3acf;
+        border-radius: 5px;
+    }
+
+    .toastify.toastify-top {
+  animation: glow 2s infinite alternate;
 }
 
 @keyframes glow {
   0% {
-    box-shadow: 5px 5px 5px rgb(200, 255, 0,0.8);
+    box-shadow: 0px 0px 20px rgb(255, 225, 0);
   }
   100% {
-    box-shadow: 5px 5px 5px rgb(200, 255, 0,0.8);
+    box-shadow: 0px 0px 20px rgba(255, 225, 0);
   }
 }
+
+
   </style>
   
 </head>
@@ -950,15 +1008,59 @@ ul li a:hover {
                 <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom:10px;" id="toast-btn" onclick="showToast()">SEND MESSAGE</button>
-                <div id="message"></div>
-              </div>
+                <button type="submit" class="submit-btn" style="margin-bottom:10px;" id="toast-btn">SEND MESSAGE</button>
+               <div id="message"></div>
+            </div>
             </form>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    document.getElementById("toast-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+
+        let name = document.querySelector("input[name='name']").value.trim();
+        let email = document.querySelector("input[name='email']").value.trim();
+        let message = document.querySelector("textarea[name='message']").value.trim();
+
+        if (!name || !email || !message) {
+            let error = '<i class="fa-solid fa-circle-exclamation"></i> Please provide all details.';
+            Toastify({
+                text: error,
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "rgba(174, 28, 28, 0.7)",
+                close: true,
+                stopOnFocus: true,
+                className: "errortoast",
+                escapeMarkup: false
+            }).showToast();
+        } else {
+            let text = '<i class="fa-solid fa-circle-check"></i> Thank you! We will get in touch soon.';
+            Toastify({
+                text: text,
+                duration: 4000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "rgba(68, 112, 70, 0.9)",
+                close: true,
+                stopOnFocus: true,
+                className: "toast",
+                escapeMarkup: false
+            }).showToast();
+
+            setTimeout(function() {
+            document.querySelector("input[name='name']").value = "";
+            document.querySelector("input[name='email']").value = "";
+            document.querySelector("textarea[name='message']").value = "";
+        }, 3000);
+    }
+});
+</script>
   
 
 <!-- feedback -->
@@ -1008,25 +1110,6 @@ ul li a:hover {
 </head>
 <body>
 
-  <script>
-    document.getElementById("toast-btn").addEventListener("click", function(event) {
-        event.preventDefault(); 
-  
-        Toastify({
-          text: "Message Sent Successfully!",
-          duration: 4000,
-          gravity: "top",
-          position: "right",
-          backgroundColor: "rgba(0, 128, 0, 0.8)",
-          close: true,
-          stopOnFocus: true,
-  
-        }).showToast();
-      });
-      </script>
-      
-
-  <!-- Feedback Section -->
   <section id="feedback" class="form-container">
     <div class="container">
       <div class="row">
@@ -1062,7 +1145,7 @@ ul li a:hover {
                 </div>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom: 10px;" id="toast-btn1" onclick="showToast()">SUBMIT FEEDBACK</button>
+                <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
                 <div id="message1"></div>
 
               </div>
@@ -1080,17 +1163,6 @@ ul li a:hover {
   </section>
 
   <script>
-    /*document.getElementById('feedback-form').addEventListener('submit', function(event) {
-      // Prevent default form submission
-      event.preventDefault();
-  
-      // Check if an emoji (rating) is selected
-      const rating = document.querySelector('input[name="rating"]:checked');
-      const messageDiv = document.getElementById('message1');
-      
-      if (!rating) {
-        messageDiv.textContent = 'Please select an emoji to rate your experience.';
-        messageDiv.style.color = 'red';
     function handleFeedbackSubmit(event) {
       event.preventDefault(); // Prevent the default form submission
 
@@ -1126,23 +1198,8 @@ ul li a:hover {
         // Optionally, you can reset the form
         document.getElementById("feedback-form").reset();
       }
-    });*/
-    document.getElementById("toast-btn1").addEventListener("click", function(event) {
-      event.preventDefault(); 
-
-      Toastify({
-        text: "Thanks For Your Feedback!",
-        duration: 4000,
-        gravity: "top",
-        position: "right",
-        backgroundColor: "rgba(0, 128, 0, 0.8)",
-        close: true,
-        stopOnFocus: true,
-
-      }).showToast();
-    });
+    }
   </script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   
   
       </div>
@@ -1163,7 +1220,7 @@ ul li a:hover {
       });          
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      /*document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("contact-form").addEventListener("submit", function(event) {
           event.preventDefault();
           document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
@@ -1171,7 +1228,7 @@ ul li a:hover {
           document.getElementById("email").value = "";
           document.getElementsByName("message")[0].value = "";
         });
-      });      
+      }); */
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
