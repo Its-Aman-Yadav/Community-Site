@@ -1,98 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community Startup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
+
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/et-line-font.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/vegas.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="ourprogram.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: #007BFF;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin-bottom: 10px;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-
-        .mission, .join-us {
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .mission h2, .join-us h2 {
-            margin-bottom: 10px;
-            color: #007BFF;
-        }
-
-        .join-us .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .join-us .btn:hover {
-            background: #0056b3;
-        }
-
-        footer {
-            background: #f4f4f4;
-            color: #555;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
+     
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header= document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY >50)
+      })
+    </script> 
+    
+      <!-- Navbar -->
+      <div class="navbar">
+        <nav>
+          <a class="logo-link" href="#home"> <label class="logo" style="margin-left:10px;">
+            
+            <img src="images/fav.png" alt="logo">
+            <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
+          </label></a>
+          <ul>
+            <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="index.html">Home</a></li>
+            <li><i class="fa-solid fa-address-card" style="filter:invert(1)"></i><a href="about us.html">About</a></li>
+            <li><i class="fa-solid fa-screwdriver-wrench" style="filter:invert(1)"></i><a href="#services">Services</a></li>
+            <li><i class="fa-solid fa-pen-to-square" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
+            <li><i class="fa-solid fa-address-book" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
+            <li><i class="fa-solid fa-right-to-bracket" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round" id="toggle"></div>
+          </label>
+          <img id="image" onclick="ProfileClicked()" />
+          </ul>
+        </nav>
+      </div>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('checkbox');
+        toggleButton.addEventListener('change', function() {
+          document.body.classList.toggle('dark-mode');
+        });
+      });
+      </script>
+    
     <header>
-        <div class="container">
-            <h1>Welcome to Our Community Startup</h1>
-            <p>We are a group of like-minded individuals who believe in the power of coming together to achieve shared goals.</p>
-        </div>
+
+      <div class="container">
+        <h1>Welcome to Our Community Startup</h1>
+        <p class="changes">
+          We are a group of like-minded individuals who believe in the power of
+          coming together to achieve shared goals.
+        </p>
+      </div>
     </header>
     <section class="mission">
-        <div class="container">
-            <h2>Our Mission</h2>
-            <p>Our mission is to create a safe and inclusive space where members can connect, collaborate, and make a positive impact in the world.</p>
-        </div>
+      <div class="container borderbox">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to create a safe and inclusive space where members can
+          connect, collaborate, and make a positive impact in the world.
+        </p>
+      </div>
     </section>
     <section class="join-us">
-        <div class="container">
-            <h2>Join Us</h2>
-            <p>Be a part of something bigger than yourself. Join us and help make a difference!</p>
-            <a href="https://discord.gg/mM9qFh2uZR" class="btn">Get Started</a>
-        </div>
+      <div class="container grids">
+        <img src="fav.png">
+        <div class="left-sec">
+          
+        <h2>Join Us</h2>
+        
+        <p>
+          Be a part of something bigger than yourself.<br> Join us and help make a
+          difference!
+        </p>
+      </div>
+        <a href="https://discord.gg/mM9qFh2uZR" class="btn">Get Started</a>
+      </div>
     </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Community Startup. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
+    <special-footer></special-footer>
+    <script src="footer/footer.js"></script>
+  </body>
 </html>
-
- 

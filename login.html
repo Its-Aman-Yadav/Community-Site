@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Signup</title>
+    <link rel="icon" type="image/x-icon" href="log/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container register-container">
+        <form id="registerForm">
+          <h1>Open Source Village</h1>
+          <input type="text" placeholder="Name" id="registerName" />
+          <input type="email" placeholder="Email" id="registerEmail" />
+          <div class="input-container">
+            <input
+              type="password"
+              placeholder="Password"
+              id="registerPassword"
+            />
+            <i
+              class="far fa-eye-slash"
+              id="toggleRegisterPassword"
+              style="cursor: pointer"
+            ></i>
+          </div>
+          <button type="submit">Register</button>
+          <span id="registerMessage" style="display: none"
+            >Account created successfully</span
+          >
+          <div class="social-container">
+            <a href="https://www.facebook.com" class="social"
+              ><i class="lni lni-facebook-fill"></i
+            ></a>
+            <a href="https://www.google.com" class="social"
+              ><i class="lni lni-google"></i
+            ></a>
+            <a href="https://www.linkedin.com" class="social"
+              ><i class="lni lni-linkedin-original"></i
+            ></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-container login-container">
+        <form id="loginForm">
+          <h1>Open Source Village</h1>
+          <input type="email" placeholder="Email" id="loginEmail" />
+          <div class="input-container">
+            <input type="password" placeholder="Password" id="loginPassword" />
+            <i
+              class="far fa-eye-slash"
+              id="togglePassword"
+              style="cursor: pointer"
+            ></i>
+          </div>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              <label>Remember me</label>
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+          <button type="submit">Login</button>
+          <span>or use your account</span>
+          <div class="social-container">
+            <a href="https://www.facebook.com" class="social"
+              ><i class="lni lni-facebook-fill"></i
+            ></a>
+            <a href="https://www.google.com" class="social"
+              ><i class="lni lni-google"></i
+            ></a>
+            <a href="https://www.linkedin.com" class="social"
+              ><i class="lni lni-linkedin-original"></i
+            ></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title"><br /></h1>
+            <p>If you have an account already, login here.</p>
+            <button class="ghost" id="login">
+              Login
+              <i class="lni lni-arrow-left login"></i>
+            </button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">
+              Start your <br />
+              journey now
+            </h1>
+            <p>
+              If you don't have an account yet, register and start your journey.
+            </p>
+            <button class="ghost" id="register">
+              Register
+              <i class="lni lni-arrow-right register"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="log/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const registerButton = document.getElementById("register");
+        const loginButton = document.getElementById("login");
+        const container = document.getElementById("container");
+
+        registerButton.addEventListener("click", (event) => {
+          event.preventDefault(); // Prevent the default behavior of the anchor tag
+          container.classList.add("right-panel-active");
+          document
+            .getElementById("registerForm")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+        loginButton.addEventListener("click", (event) => {
+          event.preventDefault(); // Prevent the default behavior of the anchor tag
+          container.classList.remove("right-panel-active");
+          document
+            .getElementById("loginForm")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+        // Form validation and submission
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            validateForm("register");
+          });
+
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            validateForm("login");
+          });
+
+        function validateForm(formType) {
+          let email, password, name;
+          const spcharRegex = /[<>"/]/; // added password Regex validation to prevent special symbols and to disallow client side attacks  <, >, ", /
+          if (formType === "register") {
+            name = document.getElementById("registerName").value;
+            email = document.getElementById("registerEmail").value;
+            password = document.getElementById("registerPassword").value;
+            if (name === "" || email === "" || password === "") {
+              alert("Please fill in all fields");
+              return;
+            }
+            if (!validateEmail(email)) {
+              alert("Please enter a valid email address");
+              return;
+            }
+            if(spcharRegex.test(name) || spcharRegex.test(password))
+            {
+              alert("Name Or Password Cannot Contain <,>,\", or /");
+              return;
+            }
+            document.getElementById("registerMessage").style.display = "block";
+            setTimeout(() => {
+              document.getElementById("registerMessage").style.display = "none";
+            }, 3000);
+          } else {
+            email = document.getElementById("loginEmail").value;
+            password = document.getElementById("loginPassword").value;
+            if (email === "" || password === "") {
+              alert("Please fill in all fields");
+              return;
+            }
+            if (!validateEmail(email)) {
+              alert("Please enter a valid email address");
+              return;
+            }
+            if(spcharRegex.test(password))
+            {
+              alert("Passowrd cannot contain <,>,\", or /");
+              return;
+            }
+            alert("Logged in successfully");
+          }
+        }
+
+        function validateEmail(email) {
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(email);
+        }
+        // Password toggle visibility for login
+        const togglePassword = document.getElementById("togglePassword");
+        const passwordInput = document.getElementById("loginPassword");
+
+        togglePassword.addEventListener("click", function () {
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+
+          // Toggle the eye icon
+          this.classList.toggle("fa-eye");
+          this.classList.toggle("fa-eye-slash");
+        });
+
+        // Password toggle visibility for register
+        const toggleRegisterPassword = document.getElementById(
+          "toggleRegisterPassword"
+        );
+        const passwordRegisterInput =
+          document.getElementById("registerPassword");
+
+        toggleRegisterPassword.addEventListener("click", function () {
+          const type =
+            passwordRegisterInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordRegisterInput.setAttribute("type", type);
+
+          // Toggle the eye icon
+          this.classList.toggle("fa-eye");
+          this.classList.toggle("fa-eye-slash");
+        });
+      });
+    </script>
+  </body>
+</html>

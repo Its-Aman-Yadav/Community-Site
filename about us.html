@@ -1,163 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="about us.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <title>About Us - Open Source Community</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  </head>
+  <body class="aboutusbody">
+    <div class="navbar">
+      <nav>
+        <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem"
+          ><img
+            src="images/fav.png"
+            alt="logo"
+            style="height: 50px; width: 50px"
+          />
+          <span style="margin-left: 0; font-size: medium"
+            >Open Source Village</span
+          >
+        </label>
+        <ul class="flex flex-col md:flex-row">
+          <li><i></i><a href="index.html">Home</a></li>
+          <li><i></i><a href="#introduction">Introduction</a></li>
+          <li><i></i><a href="#mission">Mission</a></li>
+          <li><i></i><a href="#values">Values</a></li>
+          <li><i></i><a href="#projects">Projects</a></li>
+          <li><i></i><a href="#login.html">Login/Register</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- main secction -->
 
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
+    <div class="about">
+      <div class="content">
+        <h1 class="about-title">About Us</h1>
+        <div class="img">
+          <img style="width: 600px" src="images/about-img (2).png" alt="" />
+        </div>
+      </div>
+    </div>
 
-        header h1 {
-            margin: 0;
-        }
+    <h1 class="about-title" style="text-align: center; color: black">
+      WHO ARE WE?
+    </h1>
+    <div class="intro-container">
+      <div class="box">
+        <h1>INTRODUCTION</h1>
+        <div class="intro-content">
+          <p>
+            Welcome to our open-source community! <br />
+            We are a diverse group of individuals passionate about
+            collaboration, innovation, and sharing knowledge through open-source
+            projects.Our community thrives on the contributions and enthusiasm
+            of its members.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <h1>MISSION</h1>
+        <div class="intro-content">
+          <p>
+            Our mission is to promote open-source software development, foster a
+            collaborative environment, and provide opportunities for learning
+            and growth. We aim to create software that benefits the wider
+            community and drives technological progress.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <section>
+      <div class="intro" id="#introduction">
+        <div class="abtcontent">
+          <h1>open-source-village</h1>
+          <h2>Make New Friends</h2>
+          <p>
+            Welcome to our open-source community! <br />We are a diverse group
+            of individuals passionate about collaboration, innovation,<br />
+            and sharing knowledge through open-source projects. <br />Our
+            community thrives on the contributions and enthusiasm of its
+            members.
+          </p>
+          <a
+            style="text-decoration: none"
+            class="abtbtn"
+            href="https://discord.gg/mM9qFh2uZR"
+            >Join Discord</a
+          >
 
-        nav ul {
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
+          <img src="images/community.png" alt="" class="introimg" />
+        </div>
+      </div>
+    </section>
 
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
+    <section class="Mission" id="mission">
+      <div class="">
+        <h1>Mission</h1>
+        <h2>Happy Community</h2>
+        <p>
+          Our mission is to promote open-source software development, foster a
+          collaborative environment, and provide opportunities for learning and
+          growth. We aim to create software that benefits the wider community
+          and drives technological progress.
+        </p>
+      </div>
+    </section> -->
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
+    <!-- <main>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          Welcome to our open-source community! We are a diverse group of
+          individuals passionate about collaboration, innovation, and sharing
+          knowledge through open-source projects. Our community thrives on the
+          contributions and enthusiasm of its members.
+        </p>
+      </section>
 
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      <section id="mission">
+        <h2>Mission</h2>
+        <p>
+          Our mission is to promote open-source software development, foster a
+          collaborative environment, and provide opportunities for learning and
+          growth. We aim to create software that benefits the wider community
+          and drives technological progress.
+        </p>
+      </section>
 
-        section {
-            margin-bottom: 20px;
-        }
+      <section id="values">
+        <h2>Values</h2>
+        <ul>
+          <li>
+            <strong>Collaboration:</strong> We believe in the power of working
+            together to achieve great things.
+          </li>
+          <li>
+            <strong>Inclusivity:</strong> We welcome contributions from people
+            of all backgrounds and skill levels.
+          </li>
+          <li>
+            <strong>Transparency:</strong> We maintain open and honest
+            communication within our community.
+          </li>
+          <li>
+            <strong>Innovation:</strong> We strive to push the boundaries of
+            technology through creative problem-solving.
+          </li>
+          <li>
+            <strong>Respect:</strong> We treat each other with respect and
+            kindness, fostering a supportive environment.
+          </li>
+        </ul>
+      </section>
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>
+          Our community is involved in a variety of projects spanning different
+          domains, including web development, data science, machine learning,
+          and more. Here are some of our ongoing projects:
+        </p>
+        <ul>
+          <li>
+            <strong>Project Alpha:</strong> An open-source web application
+            framework.
+          </li>
+          <li>
+            <strong>Data Insights:</strong> A collaborative platform for data
+            analysis and visualization.
+          </li>
+          <li>
+            <strong>AI Toolkit:</strong> A suite of tools and libraries for
+            machine learning enthusiasts.
+          </li>
+          <li>
+            <strong>Community Hub:</strong> An online portal for community
+            events, discussions, and resources.
+          </li>
+        </ul>
+      </section>
 
-        form label {
-            display: block;
-            margin-top: 10px;
-        }
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or would like to get involved, please reach
+          out to us using the form below:
+        </p>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-        }
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
 
-        form button {
-            padding: 10px 20px;
-            background: #333;
-            color: #fff;
-            border: none;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>About Our Open Source Community</h1>
-        <nav>
-            <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#values">Values</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
 
-    <main>
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Welcome to our open-source community! We are a diverse group of individuals passionate about collaboration, innovation, and sharing knowledge through open-source projects. Our community thrives on the contributions and enthusiasm of its members.</p>
-        </section>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main> -->
 
-        <section id="mission">
-            <h2>Mission</h2>
-            <p>Our mission is to promote open-source software development, foster a collaborative environment, and provide opportunities for learning and growth. We aim to create software that benefits the wider community and drives technological progress.</p>
-        </section>
-
-        <section id="values">
-            <h2>Values</h2>
-            <ul>
-                <li><strong>Collaboration:</strong> We believe in the power of working together to achieve great things.</li>
-                <li><strong>Inclusivity:</strong> We welcome contributions from people of all backgrounds and skill levels.</li>
-                <li><strong>Transparency:</strong> We maintain open and honest communication within our community.</li>
-                <li><strong>Innovation:</strong> We strive to push the boundaries of technology through creative problem-solving.</li>
-                <li><strong>Respect:</strong> We treat each other with respect and kindness, fostering a supportive environment.</li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Our community is involved in a variety of projects spanning different domains, including web development, data science, machine learning, and more. Here are some of our ongoing projects:</p>
-            <ul>
-                <li><strong>Project Alpha:</strong> An open-source web application framework.</li>
-                <li><strong>Data Insights:</strong> A collaborative platform for data analysis and visualization.</li>
-                <li><strong>AI Toolkit:</strong> A suite of tools and libraries for machine learning enthusiasts.</li>
-                <li><strong>Community Hub:</strong> An online portal for community events, discussions, and resources.</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to get involved, please reach out to us using the form below:</p>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Open Source Community. All rights reserved.</p>
-    </footer>
+    <special-footer></special-footer>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Thank you for your message. We will get back to you soon.');
-            document.getElementById('contact-form').reset();
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Thank you for your message. We will get back to you soon.");
+          document.getElementById("contact-form").reset();
         });
     </script>
-</body>
+    <script src="footer/footer.js"></script>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,229 +7,109 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #f1c11a, #fae69f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+        .formcontainer {
+        width: 100%;
+        max-width: 600px;
+        padding: 40px;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        border: 2px solid #f1c11a;
+    }
 
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
+    .section-title {
+        margin-bottom: 30px;
+    }
 
-        header h1 {
-            margin: 0;
-        }
+    .section-title h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: #333;
+    }
 
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    .section-title p {
+        font-size: 1.2em;
+        color: #666;
+    }
 
-        section {
-            margin-bottom: 20px;
-        }
+    .contact-form {
+        margin-top: 20px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+    .input-focus {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
 
-        form label {
-            display: block;
-            margin-top: 10px;
-        }
+    .input-focus:focus {
+        border-color: #f1c11a;
+        outline: none;
+    }
 
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-        }
+    .submit {
+        padding: 12px 20px;
+        background: #f1c11a;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        display: inline-block;
+        margin-top: 10px;
+    }
 
-        form button {
-            padding: 10px 20px;
-            background: #333;
-            color: #fff;
-            border: none;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        .contact-info {
-            margin-bottom: 20px;
-        }
-
-        .contact-info h2, .contact-info p {
-            margin: 5px 0;
-        }
-    </style>
+    .submit:hover {
+        background-color: #d8aa03;
+        transform: translateY(-2px);
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-    </header>
-
-    <main>
-        <section class="contact-info">
-            <h2>Contact Information</h2>
-            <p><strong>Address:</strong> Noida, Uttar Pradesh</p>
-            <p><strong>Community:</strong><a href="https://discord.gg/mM9qFh2uZR" class="btn"> Connect with everyone through discord</a></p>
-            <p><strong>Phone:</strong> +91 8527984813</p>
-        </section>
-
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <p>If you have any questions or would like to reach out, please fill out the form below:</p>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Submit</button>
+    <div class="formcontainer">
+        <div class="section-title">
+            <h1>Get in Touch</h1>
+            <p>If you have any query or for collaboration</p>
+        </div>
+        <div class="contact-form">
+            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendEmail(); resetForm(); return false;">
+                <div>
+                    <input name="name" id="name" type="text" class="input-focus" placeholder="Your Name" required>
+                </div>
+                <div>
+                    <input name="email" type="email" id="email" class="input-focus" placeholder="Your Email" required>
+                </div>
+                <div>
+                    <textarea name="message" class="input-focus" id="msg" placeholder="Message" rows="6" required></textarea>
+                </div>
+                <div>
+                    <input name="submit" type="submit" class="submit" id="contact-submit" value="SEND MESSAGE">
+                </div>
             </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Open Source Community. All rights reserved.</p>
-    </footer>
-
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Thank you for your message. We will get back to you soon.');
-            document.getElementById('contact-form').reset();
-        });
-    </script>
-</body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        .formbody {
-            
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(0deg, #fae69f 0%, #f1c11a 100%);
-        }
-
-        .formcontainer {
-            padding: 20px;
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .section-title h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            font-size: 1.2em;
-            color: #666;
-        }
-
-        .contact-form {
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form .form-control {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        .contact-form .submit {
-            padding: 12px 20px;
-            background: #f1c11a;
-            color: black;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .contact-form .submit:hover {
-            background-color: #d8aa03;
-            transform: translateY(-2px);
-        }
-
-        
-    </style>
-</head>
-<div class="formbody">
-    <main>
-        <section id="contact">
-            <div class="formcontainer">
-                <div class="section-title wow fadeInUp" data-wow-delay="0.3s">
-                    <h1>Get in Touch</h1>
-                    <p>If you have any query or for collaboration</p>
-                </div>
-                <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-                    <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendEmail(); reset(); return false;">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <input name="email" type="email" id="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                            <div class="col-12">
-                                <textarea name="message" class="form-control" id="msg" placeholder="Message" rows="6" required></textarea>
-                            </div>
-                            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-                                <input name="submit" type="submit" class="form-control submit" id="submit" value="SEND MESSAGE">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    
-
+        </div>
+    </div>
     <script>
         function sendEmail() {
-            alert('Email sent successfully!');
+            alert('Message sent successfully!');
+        }
+    
+        function resetForm() {
+            document.getElementById('contact-form').reset();
         }
     </script>
-</div>
-</html>
+    </body>
+    </html>
