@@ -51,7 +51,7 @@
 
   <style>
     .navbar {
-      background-color: #333;
+      /* background-color: #333; */
       /* Background color for navbar */
       padding: 5px 20px;
       /* Reduced padding for navbar */
@@ -70,7 +70,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 10px;
+        /* height: 10px; */
         /* Adjust height of the navbar */
       }
 
@@ -246,11 +246,7 @@
     }
 
     /* Additional styles for the navbar to make it more attractive */
-    nav {
-      background-color: #444;
-      /* Darker background color */
-      padding: 5px 20px;
-      /* Reduced padding */
+    
 
       .theme-switch img {
         margin-right: 20px !important;
@@ -262,7 +258,9 @@
         padding: 5px 20px;
         /* Padding */
 
-        border-radius: 8px;
+        /* border-radius: 8px; */
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
         display: grid;
         grid-auto-flow: column;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -272,16 +270,12 @@
         position: relative;
       }
 
-      slider {
-        width: 60px;
-        /* Increased width of the slider */
-        height: 34px;
-        /* Increased height of the slider */
+     
 
 
         .slider {
           width: 50px;
-          height: 34px;
+          height: 20px;
           /* Slider height */
 
           background-color: #ccc;
@@ -437,9 +431,9 @@
           <span class="logo-text">Open Source Village</span>
         </label>
 
-        <div>
+        <!-- <div>
           <span class="logo-subtext">Source</span>
-        </div>
+        </div> -->
 
       </a>
       <ul>
@@ -1331,5 +1325,4 @@
   <script src="./footer/footer.js"></script>
 </body>
 <script src="index.js"></script>
-
 </html>
