@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ourplan.css" />
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
       rel="stylesheet"
@@ -20,91 +22,64 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f8ff;
-      }
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 50)
+    })
+  </script>
 
-      main {
-        padding: 20px;
-        max-width: 800px;
-        margin: 20px auto;
-        background: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-      }
-
-      section {
-        margin-bottom: 20px;
-      }
-
-      section h2 {
-        color: #0073e6;
-      }
-
-      form label {
-        display: block;
-        margin-top: 10px;
-        color: #0073e6;
-      }
-
-      form input,
-      form textarea {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-      }
-
-      form button {
-        padding: 10px 20px;
-        background: #0073e6;
-        color: #fff;
-        border: none;
-        margin-top: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-
-      form button:hover {
-        background: #005bb5;
-      }
-    </style>
   </head>
   <body>
-    <div class="navbar">
-      <nav>
-        <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem"
-          ><img
-            src="images/fav.png"
-            alt="logo"
-            style="height: 50px; width: 50px"
-          />
-          <span class="logo-text" style="margin-left: 0"
-            >Open Source Village</span
-          >
+    
+    <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <a class="logo-link" href="#home">
+        <label class="logo">
+          <img src="images/fav.png" alt="logo">
+
+          <span class="logo-text">Open Source Village</span>
         </label>
-        <ul class="flex flex-col md:flex-row">
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#goals">Goals</a></li>
-          <li><a href="#guidelines">Community Guidelines</a></li>
-          <li><a href="#contributions">Project Contributions</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="login.html">Login/Register</a></li>
-        </ul>
-      </nav>
-    </div>
+
+        <div>
+          <span class="logo-subtext">Source</span>
+        </div>
+
+      </a>
+      <ul>
+        <li><i class="fa-solid fa-house"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+      </ul>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round" id="toggle"></div>
+      </label>
+
+      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+
+    </nav>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('checkbox');
+      toggleButton.addEventListener('change', function () {
+        document.body.classList.toggle('dark-mode');
+      });
+    });
+  </script>
+
 
     <main>
-      <section id="introduction">
-        <h2>Introduction</h2>
+      <section class="introduction" id="introduction">
+        <!-- <h2>Introduction</h2> -->
         <p>
           Welcome to our open source community! We are dedicated to fostering
           collaboration, learning, and innovation through open source projects.
@@ -112,17 +87,17 @@
         </p>
       </section>
 
-      <section id="goals">
+      <section class="goal" id="goals">
         <h2>Goals</h2>
-        <ul>
-          <li>Promote open source collaboration</li>
-          <li>Encourage learning and skill development</li>
-          <li>Build innovative solutions to real-world problems</li>
-          <li>Foster an inclusive and supportive community</li>
+        <ul class="goals">
+          <li class="ribbon">Promote open source collaboration</li>
+          <li class="ribbon">Encourage learning and skill development</li>
+          <li class="ribbon">Build innovative solutions to real-world problems</li>
+          <li class="ribbon">Foster an inclusive and supportive community</li>
         </ul>
       </section>
 
-      <section id="guidelines">
+      <section class="guidelines" id="guidelines">
         <h2>Community Guidelines</h2>
         <p>
           Our community guidelines are designed to create a welcoming and
@@ -137,39 +112,47 @@
         </ul>
       </section>
 
-      <section id="contributions">
+      <section class="contributions" id="contributions">
         <h2>Project Contributions</h2>
         <p>
           We welcome contributions from everyone. Here’s how you can get
           involved:
         </p>
         <ul>
-          <li>Find a project that interests you</li>
-          <li>Read the contribution guidelines</li>
-          <li>Fork the repository and make your changes</li>
-          <li>Submit a pull request</li>
-          <li>Join our community discussions</li>
+          <li><p>Find a project that interests you</p></li>
+          <li><i class="fa-solid fa-arrow-right"></i><p>Read the contribution guidelines</p></li>
+          <li><i class="fa-solid fa-arrow-right"></i><p>Fork the repository and make your changes</p></li>
+          <li><i class="fa-solid fa-arrow-right"></i><p>Submit a pull request</p></li>
+          <li><i class="fa-solid fa-arrow-right"></i><p>Join our community discussions</p></li>
         </ul>
       </section>
 
-      <section id="contact">
+      <section class="contact" id="contact">
+        <div style="padding-right: 0px; margin-right: 0px;"> 
         <h2>Contact</h2>
         <p>
           If you have any questions or need support, feel free to reach out to
           us:
         </p>
-        <form id="contact-form">
+      </div>
+
+      <div>
+        <form class="contact-form" id="contact-form">
+          <div style="display: flex; gap:5px">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required />
-
+        </div>
+        <div style="display: flex; gap:5px">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required />
-
+          </div>
+          <div style="display: flex; gap:5px">
           <label for="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
-
+      </div>
           <button type="submit">Submit</button>
         </form>
+      </div>
       </section>
     </main>
 
