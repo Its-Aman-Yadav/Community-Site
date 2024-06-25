@@ -167,9 +167,8 @@
               alert("Please enter a valid email address");
               return;
             }
-            if(spcharRegex.test(name) || spcharRegex.test(password))
-            {
-              alert("Name Or Password Cannot Contain <,>,\", or /");
+            if (spcharRegex.test(name) || spcharRegex.test(password)) {
+              alert('Name Or Password Cannot Contain <,>,", or /');
               return;
             }
             document.getElementById("registerMessage").style.display = "block";
@@ -187,9 +186,8 @@
               alert("Please enter a valid email address");
               return;
             }
-            if(spcharRegex.test(password))
-            {
-              alert("Passowrd cannot contain <,>,\", or /");
+            if (spcharRegex.test(password)) {
+              alert('Passowrd cannot contain <,>,", or /');
               return;
             }
             alert("Logged in successfully");
@@ -237,4 +235,15 @@
       });
     </script>
   </body>
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+  <!-- Firebase Authentication -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+  <!-- Firebase Realtime Database -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+  <!-- Our script must be loaded after firebase references -->
+  <script src="index.js"></script>
 </html>
