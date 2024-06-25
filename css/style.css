@@ -1666,7 +1666,7 @@ div.card {
 }
 .navbar nav.sticky {
   height: 80px;
-  background: linear-gradient(rgba(247, 113, 3, 0.7), rgba(249, 177, 43, 0.7));
+  background: linear-gradient(rgb(247, 113, 3), rgba(249, 177, 43, 0.7));
   color: white !important;
   /* border-bottom: 1.5px solid rgb(0, 0, 0); */
   border-bottom-left-radius: 16px;
