@@ -633,17 +633,25 @@ h2 {
 .accordion {
   width: 100%;
 }
-
+.accordion-title{
+  font-weight: 600;
+}
 .accordion .accordion-item {
   margin: 10px 0;
-  font-weight: 700;
+  color:rgb(75, 75, 75);
   transition: border-bottom 0.3s ease;
   border-radius: 10px;
 }
 
 .accordion-item span{
   border-radius: 10px;
+  display: flex;
+  padding: 0px 15px;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+
 
 /* Accordion Button */
 .accordion button {
@@ -664,7 +672,7 @@ h2 {
 /* Hover and Focus States */
 .accordion button:hover,
 .accordion button:focus {
-  color: blue;
+  color: rgb(165, 36, 0);
   background-image: linear-gradient(to right, #f5bf40a9 0%,#f2d79acd 80%,#f5be40cd 100%);
   border-radius: 12px;
   cursor: pointer;
@@ -679,6 +687,12 @@ h2 {
   transform: translateY(-50%);
   font-size: 1.5rem;
   transition: transform 0.3s ease;
+}
+
+.accordion-item span i:active{
+  rotate: 180deg;
+  cursor: pointer;
+
 }
 
 /* Expanded State */
