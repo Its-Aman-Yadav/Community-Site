@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <scrip src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="about us.css" />
@@ -85,6 +85,29 @@
         </div>
       </div>
     </div>
+
+    <div class="counters">
+      <div>
+        <div class="counter">
+          <h1><span data-count="1000">0</span></h1>
+          <h3>Visitors</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="200">0</span></h1>
+          <h3>Members</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="100">0</span>+</h1>
+          <h3>Followers</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="70">0</span>+</h1>
+          <h3>Countries</h3>
+        </div>
+        </div>
+      </div>
+    </div>
+
     <!-- <section>
       <div class="intro" id="#introduction">
         <div class="abtcontent">
@@ -219,6 +242,47 @@
 
     <special-footer></special-footer>
 
+  <!--  counter js -->
+    
+          <script>
+            const counters = document.querySelectorAll(".counters span");
+const container = document.querySelector(".counters");
+
+let activated = false;
+window.addEventListener("scroll", () => {
+  const containerOffsetTop = container.offsetTop;
+  const containerOffsetHeight = container.offsetHeight;
+
+  if (window.pageYOffset > containerOffsetTop - window.innerHeight + 200 && !activated) {
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      let count = 0;
+
+      function updateCount() {
+        const target = parseInt(counter.getAttribute('data-count'));
+
+        if (count < target) {
+          count++;
+          counter.innerText = count;
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target;
+        }
+      }
+      updateCount();
+    });
+    activated = true;
+
+  } else if (window.pageYOffset < containerOffsetTop - window.innerHeight + 500 && activated) {
+    counters.forEach(counter => {
+      counter.innerText = '0';
+    });
+    activated = false;
+  }
+});
+
+          </script>
+
     <script>
       document
         .getElementById("contact-form")
@@ -228,6 +292,7 @@
           document.getElementById("contact-form").reset();
         });
     </script>
+    <script src="index.js"></script>
     <script src="footer/footer.js"></script>
   </body>
 </html>

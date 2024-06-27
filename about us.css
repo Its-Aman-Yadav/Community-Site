@@ -136,3 +136,71 @@ body {
   font-weight: 400;
   line-height: 1.6;
 }
+
+/* counter */
+.counters {
+  padding: 3em 2em;
+  color: #ffffff;
+  text-align: center;
+  background-image: url(images/Slide4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.counters > div {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4em 2em;
+}
+
+.counter {
+  position: relative;
+}
+.counter h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+.counter h3 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.counter:not(:last-child)::before {
+  content: "";
+  background: #ffffff;
+  position: absolute;
+  width: 2px;
+  height: 3em;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1em;
+}
+
+/* responsive design for counter */
+
+/* @media screen and (max-width: 900px) and (min-width: 501px) {
+  .counters > div {
+    grid-template-columns: 1fr 1fr;
+  }
+  .counter:nth-child(2)::before {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .counters > div {
+    grid-template-columns: 1fr;
+    row-gap: 5em;
+  }
+  .counter:not(:last-child)::before {
+    width: 90%;
+    height: 2px;
+    top: initial;
+    bottom: -3em;
+    left: 50%;
+    transform: translateY(-50%);
+  }
+} */
