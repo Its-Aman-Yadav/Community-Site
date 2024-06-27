@@ -97,11 +97,12 @@ body {
 }
 
 #feedback .form-control {
-  background-color: rgba(255, 248, 220, 0.578);
-  border: 2px solid #e0e0e0;
-  border-radius: 18px;
+  background-color: rgba(254, 232, 147, 0.578);
+  border: 2px solid #ff9d00;
+  border-radius: 10px;
   font-size: 18px;
   margin-bottom: 16px;
+  width: 100%;
   transition: all 0.4s ease-in-out;
 }
 
@@ -146,6 +147,17 @@ body {
 .form-container {
   max-width: 1100px; /* Adjust the width as needed */
   margin: 0 auto;
+}
+
+.feedback-container{
+  scale:0.85;
+  background: linear-gradient(#fad729, #ff6600c6);
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 10px;
 }
 
 body,
@@ -2408,7 +2420,9 @@ textarea:focus {
 /* Styles for rating stars */
 .rating {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  gap:10px;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -3007,7 +3021,7 @@ textarea {
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
 }
 .submit-btn {
-  background-color: #4caf50;
+  background-color: #0056b3;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -3018,7 +3032,7 @@ textarea {
   margin: 0 auto;
 }
 .submit-btn:hover {
-  background-color:rgba(206, 238, 0, 0.995);
+  background-color:#fee140;
   opacity: 0.6;
   color: #000000;
   font-weight: bold;
