@@ -18,6 +18,7 @@
   <meta property="og:title" content="Open Source Village">
   <meta name="og:description" content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
   
+  <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
@@ -458,10 +459,35 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+
       const toggleButton = document.getElementById('checkbox');
+
+      const currentMode = localStorage.getItem('dark-mode');
+
+      if (currentMode === 'enabled') {
+
+        document.body.classList.add('dark-mode');
+
+        toggleButton.checked = true;
+
+      }
+
       toggleButton.addEventListener('change', function () {
+
         document.body.classList.toggle('dark-mode');
+
+        if (document.body.classList.contains('dark-mode')) {
+
+          localStorage.setItem('dark-mode', 'enabled');
+
+        } 
+        else {
+
+          localStorage.setItem('dark-mode', 'disabled');
+
+        }
       });
+
     });
   </script>
 
@@ -719,10 +745,11 @@
   <section class="faqq">
     <div class="containerr">
       <div class="accordion">
-        <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
+        <div class="service-title wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">FAQ</div>
         <div class="accordion-item">
           <button id="accordion-button-1" aria-expanded="false">
-            <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
+            <span class="accordion-title">How can I contribute to the community's goals and projects?<i class="fa-solid fa-chevron-down"></i></span>
+            
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -735,7 +762,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-2" aria-expanded="false">
-            <span class="accordion-title">What benefits do members receive from participating in the community?</span>
+            <span class="accordion-title">What benefits do members receive from participating in the community?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -748,7 +775,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-3" aria-expanded="false">
-            <span class="accordion-title">How can I join the open source village community?</span>
+            <span class="accordion-title">How can I join the open source village community?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -760,7 +787,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false">
-            <span class="accordion-title">What is open source community?</span>
+            <span class="accordion-title">What is open source community?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -772,7 +799,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-5" aria-expanded="false">
-            <span class="accordion-title">What is the purpose of the open source village community website?</span>
+            <span class="accordion-title">What is the purpose of the open source village community website?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -784,7 +811,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-6" aria-expanded="false">
-            <span class="accordion-title">Are there any eligibility criteria to join the community?</span>
+            <span class="accordion-title">Are there any eligibility criteria to join the community?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -795,7 +822,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-7" aria-expanded="false">
-            <span class="accordion-title">How can I find and join specific projects within the community?</span>
+            <span class="accordion-title">How can I find and join specific projects within the community?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -807,7 +834,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-9" aria-expanded="false">
-            <span class="accordion-title">How can I stay updated with the community's latest news and events?</span>
+            <span class="accordion-title">How can I stay updated with the community's latest news and events?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -818,7 +845,7 @@
 
         <div class="accordion-item">
           <button id="accordion-button-10" aria-expanded="false">
-            <span class="accordion-title">Who can I contact if I have more questions or need support?</span>
+            <span class="accordion-title">Who can I contact if I have more questions or need support?<i class="fa-solid fa-chevron-down"></i></span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -978,29 +1005,46 @@
 
   <!-- contact -->
 
-  <section id="contact" class="form-container">
+  <section id="contact" class="form-container" style="padding: 50px 0;">
     <div class="container">
       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title" style="margin-top: 100px;">
-            <h1 style="color: yellow;">Get in Touch</h1>
-            <p style="color: white;">If you have any questions or inquiries, feel free to contact us!</p>
+          <div class="section-title text-center" style="margin-top: 100px;">
+            <h1 class="animate__animated animate__fadeInDown" style="color: yellow;">Get in Touch</h1>
+            <p class="animate__animated animate__fadeInUp" style="color: white;">If you have any questions or inquiries, feel free to contact us! We are here to assist you 24/7.</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="contact-form" action="" method="POST">
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div style="margin-left: 2px; margin-right: 35px;" class="msg col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;"
-                  required></textarea>
-              </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
-                <div id="message"></div>
+          <div class="contact-details text-center animate__animated animate__fadeInUp" data-wow-delay="1.2s" style="color: white; margin-bottom: 30px;">
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> support@example.com</p>
+            <p><strong>Address:</strong> 123 Street Name, City, Country</p>
+          </div>
+          <div class="contact-form wow fadeInUp" data-wow-delay="1.5s">
+            <form id="contact-form">
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input name="subject" id="subject" type="text" class="form-control" placeholder="Subject" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea name="message" id="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
+                  </div>
+                </div>
+                <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 text-center">
+                  <button type="button" id="submitForm" class="submit-btn btn btn-primary btn-block" style="margin-bottom: 10px;">SEND MESSAGE</button>
+                  <div id="formStatus" style="color: yellow;"></div>
+                </div>
               </div>
             </form>
           </div>
@@ -1008,16 +1052,55 @@
       </div>
     </div>
   </section>
-
+  
+  <script>
+  $(document).ready(function() {
+    $("#submitForm").on("click", function() {
+      // Fetch form data
+      var name = $("#name").val().trim();
+      var email = $("#email").val().trim();
+      var subject = $("#subject").val().trim();
+      var message = $("#message").val().trim();
+      
+      if (name === "" || email === "" || subject === "" || message === "") {
+        $("#formStatus").text("Please fill out all fields.");
+        return;
+      }
+      // On successful submission
+      $("#formStatus").text("Sending message...");
+      var endpoint = "https://example.com/your-endpoint"; // Replace with your endpoint
+  
+      // Simulate form submission (for demonstration)
+      $.ajax({
+        type: "POST",
+        url: endpoint,
+        data: {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message
+        },
+        success: function(response) {
+          $("#formStatus").text("Message sent successfully. We will get back to you soon!");
+          $("#contact-form")[0].reset(); // Reset form after successful submission
+        },
+        error: function() {
+          $("#formStatus").text("Error submitting form. Please try again.");
+        }
+      });
+    });
+  });
+  </script>
+  
 
   <!-- feedback -->
-  <section id="feedback" class="form-container" style="margin-top: 100px;">
+  <section id="feedback" class="feedback-container" style="margin-top: 100px;">
     <div class="container">
       <div class="row">
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
+        <div class="col-sm-12">
           <div class="section-title">
-            <h1 style="color: yellow;">Give us your Feedback</h1>
-            <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
+            <h1 style="color: rgb(255, 81, 0);">Give us your Feedback</h1>
+            <p style="color: white; width: 100%;">We value your opinion. Please share your feedback with us!</p>
           </div>
           <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
             <form id="feedback-form" action="" method="POST">
@@ -1033,7 +1116,7 @@
               </div>
               <div class="col-md-12 col-sm-12">
                 <p style="color: white;">Rate your experience:</p>
-                <div class="col-12 rating rad">
+                <div class="col-12 rating rad" >
                   <input type="radio" id="star5" name="rating" value="5">
                   <label for="star5"><i class="fas fa-star"></i></label>
                   <input type="radio" id="star4" name="rating" value="4">
