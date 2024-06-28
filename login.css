@@ -184,6 +184,7 @@ input {
   width: 50%;
   z-index: 2;
 }
+
 .input-container {
   position: relative;
   width: 100%;
@@ -221,6 +222,7 @@ input {
 }
 
 @keyframes show {
+
   0%,
   49.99% {
     opacity: 0;
@@ -270,11 +272,9 @@ input {
   right: 0;
   top: 0;
   bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(46, 94, 109, 0.4) 40%,
-    rgba(46, 94, 109, 0)
-  );
+  background: linear-gradient(to top,
+      rgba(46, 94, 109, 0.4) 40%,
+      rgba(46, 94, 109, 0));
 }
 
 .container.right-panel-active .overlay {
