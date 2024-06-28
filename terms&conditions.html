@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms and Conditions - Open Source Village</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ourplan.css" />
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("nav");
+            header.classList.toggle("sticky", window.scrollY > 50)
+        })
+    </script>
+    <style>
+        #terms-conditions-container {
+            width: 55%;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            margin-top: 100px;
+            text-align: center;
+            background-color: #FFD700;
+            font-size: large;
+        }
+
+        .title {
+            font-size: 2em;
+            color: #000000;
+        }
+
+        .main-content {
+            padding: 20px;
+            margin: 15px auto;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #000000;
+            padding-bottom: 0px;
+        }
+
+        .section-content {
+            font-size: 1em;
+            color: #000000;
+        }
+
+        .section-list {
+            list-style: none;
+            color: #000000;
+            padding: 0;
+        }
+
+        .list-item {
+            margin-bottom: 10px;
+            color: #000000;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <nav>
+            <a class="logo-link" href="#home">
+                <label class="logo">
+                    <img src="images/fav.png" alt="logo">
+
+                    <span class="logo-text">Open Source Village</span>
+                </label>
+
+        
+
+            </a>
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a class="active" href="index.html">Home</a></li>
+                <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
+                <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
+                <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
+                <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+            </ul>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round" id="toggle"></div>
+            </label>
+
+            <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+            <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()"
+                alt="Profile">
+
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('checkbox');
+            toggleButton.addEventListener('change', function () {
+                document.body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+
+    <div class="container" id="terms-conditions-container">
+        <header class="header">
+            <h1 class="title" id="terms-conditions-title">Terms and Conditions</h1>
+        </header>
+        <main class="main-content" id="terms-conditions-main">
+            <section class="section">
+                <h2 class="section-title">Introduction</h2>
+                <p class="section-content">These terms and conditions outline the rules and regulations for the use of
+                    Open Source Village Website. By accessing this website we assume you accept these terms and
+                    conditions. Do not continue to use Open Source Village if you do not agree to take all of the terms
+                    and conditions stated on this page.</p>
+            </section>
+
+            <section class="section" id="terms-conditions-privacy">
+                <h2 class="section-title">Privacy</h2>
+                <p class="section-content">We are committed to protecting your privacy. Please refer to our Privacy
+                    Policy for information on how we collect, use, and disclose your personal information.</p>
+            </section>
+
+            <section class="section" id="terms-conditions-license">
+                <h2 class="section-title">License</h2>
+                <p class="section-content">Unless otherwise stated, Open Source Village and/or its licensors own the
+                    intellectual property rights for all material on Open Source Village. All intellectual property
+                    rights are reserved. You may access this from Open Source Village for your own personal use
+                    subjected to restrictions set in these terms and conditions.</p>
+            </section>
+
+            <section class="section" id="terms-conditions-conduct">
+                <h2 class="section-title">User Conduct</h2>
+                <div class="section-list">
+                    <p class="list-item">You must not use this website in any way that causes, or may cause, damage to
+                        the website or impairment of the availability or accessibility of the website.</p><br>
+                    <p class="list-item">You must not use this website in any way which is unlawful, illegal,
+                        fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful
+                        purpose or activity.</p><br>
+                    <p class="list-item">You must not use this website to copy, store, host, transmit, send, use,
+                        publish or distribute any material which consists of (or is linked to) any spyware, computer
+                        virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.</p>
+                    </div>
+            </section>
+
+            <section class="section" id="terms-conditions-changes">
+                <h2 class="section-title">Changes to These Terms</h2>
+                <p class="section-content">We may update our Terms and Conditions from time to time. We will notify you
+                    of any changes by posting the new Terms and Conditions on this page. You are advised to review this
+                    Terms and Conditions periodically for any changes. Changes to this Terms and Conditions are
+                    effective when they are posted on this page.</p>
+            </section>
+
+            <section class="section" id="terms-conditions-contact">
+                <h2 class="section-title">Contact Information</h2>
+                <p class="section-content">If you have any questions about these Terms and Conditions, please contact us
+                    at opensourcevillage@mail.com.</p>
+            </section>
+        </main>
+    </div>
+    <special-footer></special-footer>
+
+    <script src="footer/footer.js"></script>
+</body>
+
+</html>
