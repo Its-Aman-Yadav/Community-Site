@@ -91,6 +91,7 @@ document.querySelectorAll(".accordion button").forEach((button) => {
       content.style.maxHeight = "0";
     }
   });
+  s;
 });
 
 // Your web app's Firebase configuration
