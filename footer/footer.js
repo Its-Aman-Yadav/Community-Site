@@ -52,6 +52,14 @@ class SpecialFooter extends HTMLElement {
                 <a href="support.html">Support</a>
               </div>
             </div>
+            <div class="col1" id="legal">
+              <h3>Legal</h3>
+              <div class="links">
+                <a href="terms&conditions.html">Terms and Conditions</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+              </div>
+            </div>
+
             <div class="col1" id="cont">
               <h3>Contact</h3>
               <div class="contact-details">
@@ -78,26 +86,26 @@ class SpecialFooter extends HTMLElement {
         </p>
       </footer>`;
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const emailForm = document.querySelector('#emailForm');
-    
-      emailForm.addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        
+
+      emailForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
         const emailInput = document.querySelector('#emailInput').value;
-    
+
         if (!validateEmail(emailInput)) {
           alert("Please enter a valid email address.");
           return;
         }
-        
+
         alert("Thank you! We will connect soon.");
-        
+
         emailForm.reset();
       });
-      
+
       /* Function for checking if email is valid or not */
-      function validateEmail(email) {                         
+      function validateEmail(email) {
         const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return re.test(String(email).toLowerCase());
       }
