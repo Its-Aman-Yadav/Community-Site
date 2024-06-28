@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
       rel="stylesheet"
@@ -20,80 +21,63 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <style>
-      main {
-        padding: 20px;
-        max-width: 800px;
-        margin: 20px auto;
-        background: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
+    <link rel="stylesheet" href="support.css"/>
 
-      section {
-        margin-bottom: 20px;
-      }
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY > 50)
+      })
+    </script>
 
-      form label {
-        display: block;
-        margin-top: 10px;
-      }
-
-      form input,
-      form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-      }
-
-      form button {
-        padding: 10px 20px;
-        background: #ff7d7d;
-        color: #fff;
-        border: none;
-        margin-top: 10px;
-        cursor: pointer;
-      }
-
-      .faq {
-        margin-bottom: 20px;
-      }
-
-      .faq h2,
-      .faq p {
-        margin: 5px 0;
-      }
-    </style>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const faqq = document.querySelectorAll(".faqs");
+      faqq.forEach((faqs) => {
+          faqs.addEventListener("click", () => {
+              faqs.classList.toggle("active");
+          });
+      });
+  });
+</script>
+    
   </head>
   <body>
-    <div class="navbar">
-      <nav>
-        <label
-          for="logo"
-          style="margin-left: 5px; display: flex; gap: 1rem; cursor: auto"
-        >
-          <img
-            src="fav.png"
-            alt="logo"
-            style="height: 50px; width: 50px; border-radius: 50%"
-          />
-          <span
-            style="
-              margin-top: 15px;
-              font-size: medium;
-              color: #fff;
-              cursor: auto;
-            "
-            >Open Source Village</span
-          >
+      
+    <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <a class="logo-link" href="#home">
+        <label class="logo">
+          <img src="images/fav.png" alt="logo">
+
+          <span class="logo-text">Open Source Village</span>
         </label>
-        <ul class="flex flex-col md:flex-row">
-          <li><i></i><a href="index.html">Home</a></li>
-          <li><i></i><a href="#general-info">General info</a></li>
-          <li><i></i><a href="#fav.png">FAQs</a></li>
-          <li><i></i><a href="#conatct">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+
+        <div>
+          <span class="logo-subtext">Source</span>
+        </div>
+
+      </a>
+      <ul>
+        <li><i class="fa-solid fa-house"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+      </ul>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round" id="toggle"></div>
+      </label>
+
+      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+
+    </nav>
+  </div>
 
     <!-- <header>
       <h1>Support</h1>
@@ -107,7 +91,7 @@
     </header> -->
 
     <main>
-      <section id="general-info">
+      <section class="general" id="general-info">
         <h2>General Information</h2>
         <p>
           Welcome to the support page of our open-source community. Here you
@@ -117,44 +101,73 @@
         </p>
       </section>
 
-      <section id="faqs" class="faq">
+      <section id="faq" class="faq">
         <h2>Frequently Asked Questions</h2>
+      <div class="faqs">
+        <div class="question">
         <h3>How do I join the community?</h3>
+        <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="answer">
         <p>
           You can join our community by visiting the 'Become a Member' page and
           filling out the membership application form.
         </p>
+        </div>
+      </div>
+
+      <div class="faqs">
+        <div class="question">
+          
         <h3>What projects can I contribute to?</h3>
+        <i class="fa-solid fa-chevron-down"></i>
+       </div>
+       <div class="answer">
         <p>
           We have a variety of projects in different domains such as web
           development, data science, and machine learning in the world of open
           source.
-        </p>
+        </p></div>
+      </div>
+
+        <div class="faqs">
+        <div class="question">
         <h3>How can I get help with a project?</h3>
+        <i class="fa-solid fa-chevron-down"></i>
+        </div>
+          <div class="answer">
         <p>
           If you need help with a project, you can contact our support team
           using the form below or participate in our community forums.
-        </p>
+        </p></div>
+      </div>
       </section>
-
-      <section id="contact">
-        <h2>Contact Support</h2>
+      <section class="contact" id="contact">
+        <div style="padding-right: 0px; margin-right: 0px;"> 
+        <h2>Contact</h2>
         <p>
-          If you need further assistance, please fill out the form below and our
-          support team will get back to you as soon as possible:
+          If you have any questions or need support, feel free to reach out to
+          us:
         </p>
-        <form id="support-form">
+      </div>
+
+      <div>
+        <form class="contact-form" id="contact-form">
+          <div style="display: flex; gap:5px">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required />
-
+        </div>
+        <div style="display: flex; gap:5px">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required />
-
-          <label for="issue">Issue:</label>
-          <textarea id="issue" name="issue" required></textarea>
-
+          </div>
+          <div style="display: flex; gap:5px">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+      </div>
           <button type="submit">Submit</button>
         </form>
+      </div>
       </section>
     </main>
 
