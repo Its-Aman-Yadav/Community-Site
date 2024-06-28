@@ -1022,53 +1022,80 @@
 
   <!-- contact -->
 
-  <section id="contact" class="form-container" style="padding: 50px 0;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title text-center" style="margin-top: 100px;">
-            <h1 class="animate__animated animate__fadeInDown" style="color: yellow;">Get in Touch</h1>
-            <p class="animate__animated animate__fadeInUp" style="color: white;">If you have any questions or inquiries, feel free to contact us! We are here to assist you 24/7.</p>
+
+  <div class="contact">
+    <img src="img/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Let's get in touch</h3>
+        <br>
+
+        <div class="info">
+          <div class="information">
+            <i class="fas fa-map-marker-alt"></i> &nbsp &nbsp
+
+            <p>92 Cherry Drive Uniondale, NY 11553</p>
           </div>
-          <div class="contact-details text-center animate__animated animate__fadeInUp" data-wow-delay="1.2s" style="color: white; margin-bottom: 30px;">
-            <p><strong>Phone:</strong> +123 456 7890</p>
-            <p><strong>Email:</strong> support@example.com</p>
-            <p><strong>Address:</strong> 123 Street Name, City, Country</p>
+          <div class="information">
+            <i class="fas fa-envelope"></i> &nbsp &nbsp
+            <p>lorem@ipsum.com</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.5s">
-            <form id="contact-form">
-              <div class="row">
-                <div class="col-md-6 col-sm-6">
-                  <div class="form-group">
-                    <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <div class="form-group">
-                    <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input name="subject" id="subject" type="text" class="form-control" placeholder="Subject" required>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea name="message" id="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
-                  </div>
-                </div>
-                <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 text-center">
-                  <button type="button" id="submitForm" class="submit-btn btn btn-primary btn-block" style="margin-bottom: 10px;">SEND MESSAGE</button>
-                  <div id="formStatus" style="color: yellow;"></div>
-                </div>
-              </div>
-            </form>
+          <div class="information">
+            <i class="fas fa-phone"></i>&nbsp&nbsp
+            <p>123-456-789</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
       </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form action="index.html" autocomplete="off">
+          <h3 class="title">Contact us</h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" />
+            <label for="">Username</label>
+            <span>Username</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for="">youremail@email.com</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" />
+            <label for="">Phone</label>
+            <span>Phone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input"></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+          </div>
+          <input type="submit" value="Send" class="btn" />
+        </form>
+      </div>
     </div>
-  </section>
+  </div>
   
   <script>
   $(document).ready(function() {
