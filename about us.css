@@ -31,6 +31,7 @@ body {
 
 .about {
   padding: 100px;
+  background: linear-gradient(#fad729,white);
   margin-bottom: 5%;
 }
 .content {
