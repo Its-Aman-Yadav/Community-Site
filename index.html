@@ -980,29 +980,46 @@
 
   <!-- contact -->
 
-  <section id="contact" class="form-container">
+  <section id="contact" class="form-container" style="padding: 50px 0;">
     <div class="container">
       <div class="row">
         <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title" style="margin-top: 100px;">
-            <h1 style="color: yellow;">Get in Touch</h1>
-            <p style="color: white;">If you have any questions or inquiries, feel free to contact us!</p>
+          <div class="section-title text-center" style="margin-top: 100px;">
+            <h1 class="animate__animated animate__fadeInDown" style="color: yellow;">Get in Touch</h1>
+            <p class="animate__animated animate__fadeInUp" style="color: white;">If you have any questions or inquiries, feel free to contact us! We are here to assist you 24/7.</p>
           </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="contact-form" action="" method="POST">
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div style="margin-left: 2px; margin-right: 35px;" class="msg col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;"
-                  required></textarea>
-              </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
-                <div id="message"></div>
+          <div class="contact-details text-center animate__animated animate__fadeInUp" data-wow-delay="1.2s" style="color: white; margin-bottom: 30px;">
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> support@example.com</p>
+            <p><strong>Address:</strong> 123 Street Name, City, Country</p>
+          </div>
+          <div class="contact-form wow fadeInUp" data-wow-delay="1.5s">
+            <form id="contact-form">
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input name="subject" id="subject" type="text" class="form-control" placeholder="Subject" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea name="message" id="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
+                  </div>
+                </div>
+                <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 text-center">
+                  <button type="button" id="submitForm" class="submit-btn btn btn-primary btn-block" style="margin-bottom: 10px;">SEND MESSAGE</button>
+                  <div id="formStatus" style="color: yellow;"></div>
+                </div>
               </div>
             </form>
           </div>
@@ -1010,7 +1027,46 @@
       </div>
     </div>
   </section>
-
+  
+  <script>
+  $(document).ready(function() {
+    $("#submitForm").on("click", function() {
+      // Fetch form data
+      var name = $("#name").val().trim();
+      var email = $("#email").val().trim();
+      var subject = $("#subject").val().trim();
+      var message = $("#message").val().trim();
+      
+      if (name === "" || email === "" || subject === "" || message === "") {
+        $("#formStatus").text("Please fill out all fields.");
+        return;
+      }
+      // On successful submission
+      $("#formStatus").text("Sending message...");
+      var endpoint = "https://example.com/your-endpoint"; // Replace with your endpoint
+  
+      // Simulate form submission (for demonstration)
+      $.ajax({
+        type: "POST",
+        url: endpoint,
+        data: {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message
+        },
+        success: function(response) {
+          $("#formStatus").text("Message sent successfully. We will get back to you soon!");
+          $("#contact-form")[0].reset(); // Reset form after successful submission
+        },
+        error: function() {
+          $("#formStatus").text("Error submitting form. Please try again.");
+        }
+      });
+    });
+  });
+  </script>
+  
 
   <!-- feedback -->
   <section id="feedback" class="feedback-container" style="margin-top: 100px;">
