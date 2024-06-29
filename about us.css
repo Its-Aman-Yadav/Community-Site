@@ -11,8 +11,7 @@
 /* Body Styles */
 body {
   font-family: "Montserrat", sans-serif;
-  line-height: 1.6;
-  background-color: #ffffff;
+
   /* background-image: url(images/Slide1.jpg); 
   background-attachment: fixed;
   background-size: cover;  */
@@ -29,9 +28,16 @@ body {
   }
 }
 
+section {
+  margin: 0;
+  padding: 0;
+}
+
 .about {
   padding: 100px;
   margin-bottom: 5%;
+  animation: fadeIn 4s;
+  background-color: #ffca0c;
 }
 .content {
   display: flex;
@@ -44,15 +50,14 @@ body {
   justify-content: center;
   font-size: 60px;
   font-weight: 600;
-  color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  color: #0082e6;
 }
 
 .about-title::after {
   content: "";
   height: 4px;
   width: 0%;
-  background-color: #ffcc00f1;
+  background-color: #0082e6;
   display: block;
   transition: 0.5s ease-in-out;
 }
@@ -60,7 +65,7 @@ body {
   content: "";
   height: 4px;
   width: 80%;
-  background-color: #ffcc00f1;
+  background-color: #0082e6;
   display: block;
 }
 
@@ -94,13 +99,13 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  margin-top: 100px;
-  background-color: #ffcc00f1;
+  animation: fadeIn 4s;
 }
 .box {
   width: 525px;
   height: 220px;
   margin: 10%;
+  margin-right: 150px;
   background-color: #fffffff1;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
@@ -204,3 +209,157 @@ body {
     transform: translateY(-50%);
   }
 } */
+
+/* how to join us */
+.timeline-for-join {
+  background-color: #ffca0c;
+  padding-bottom: 50px;
+}
+.timeline-for-join h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 4em;
+  color: #0082e6;
+  text-align: center;
+  font-weight: 600;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+.tcontainer {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.tcontainer:nth-child(1) {
+  animation-delay: 0s;
+}
+.tcontainer:nth-child(2) {
+  animation-delay: 1s;
+}
+.tcontainer:nth-child(3) {
+  animation-delay: 2s;
+}
+.tcontainer:nth-child(4) {
+  animation-delay: 3s;
+}
+.tcontainer:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.text-box {
+  padding: 20px 30px;
+  background: #ffffff;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.text-box h2 {
+  color: #0082e6;
+  font-weight: 600;
+}
+.text-box p {
+  color: #000000;
+  font-weight: 400;
+}
+
+.left-container {
+  left: 0;
+}
+.right-container {
+  left: 50%;
+}
+.tcontent {
+  border-radius: 50%;
+  position: absolute;
+  top: 32px;
+  content: "";
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  right: -20px;
+}
+
+.right-container .tcontent {
+  content: "";
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  left: -20px;
+}
+.tcontainer a {
+  position: absolute;
+  width: 40px;
+  right: -35px;
+  top: 32px;
+  z-index: 10;
+}
+.tcontainer a i {
+  color: #000000;
+  padding-top: 10px;
+}
+
+.right-container a {
+  left: -6px;
+}
+
+.timeline::after {
+  content: " ";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #ffffff;
+  right: -15px;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #ffffff;
+  left: -15px;
+}
