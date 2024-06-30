@@ -74,11 +74,11 @@ section {
   font-size: 50px;
   font-weight: 600;
   color: #0082e6;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .intro-container {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 25px;
   animation: fadeIn 4s;
