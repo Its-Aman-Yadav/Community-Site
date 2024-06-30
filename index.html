@@ -1014,120 +1014,166 @@
   </section>
 
   <!-- contact -->
+  <style>
+    .contact-form .input {
+        color: black;
+    }
 
+    .input-container {
+        position: relative;
+        margin-bottom: 20px;
+    }
 
-  <div class="contact">
+    .input {
+        width: 100%;
+        padding: 15px;
+        background: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        color: black;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .input:focus {
+        background-color: #fff;
+        border-color: #333;
+        outline: none;
+    }
+
+    .textarea .input {
+        height: 100px;
+        resize: none;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #555;
+    }
+
+    .input::placeholder {
+        color: #999;
+    }
+
+    .thank-you-message, .error-message {
+        display: none;
+        font-size: 16px;
+        margin-top: 0px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    .thank-you-message {
+        color: green;
+        font-size: 20px;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 20px;
+    }
+</style>
+<div class="contact">
     <img src="img/shape.png" class="square" alt="" />
     <div class="form">
-      <div class="contact-info">
-        <h3 class="title">Let's get in touch</h3>
-        <br>
-
-        <div class="info">
-          <div class="information">
-            <i class="fas fa-map-marker-alt"></i> &nbsp &nbsp
-
-            <p>92 Cherry Drive Uniondale, NY 11553</p>
-          </div>
-          <div class="information">
-            <i class="fas fa-envelope"></i> &nbsp &nbsp
-            <p>lorem@ipsum.com</p>
-          </div>
-          <div class="information">
-            <i class="fas fa-phone"></i>&nbsp&nbsp
-            <p>123-456-789</p>
-          </div>
+        <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <br>
+            <div class="info">
+                <div class="information">
+                    <i class="fas fa-map-marker-alt"></i> &nbsp &nbsp
+                    <p>92 Cherry Drive Uniondale, NY 11553</p>
+                </div>
+                <div class="information">
+                    <i class="fas fa-envelope"></i> &nbsp &nbsp
+                    <p>lorem@ipsum.com</p>
+                </div>
+                <div class="information">
+                    <i class="fas fa-phone"></i>&nbsp&nbsp
+                    <p>123-456-789</p>
+                </div>
+            </div>
+            <div class="social-media">
+                <p>Connect with us :</p>
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="social-media">
-          <p>Connect with us :</p>
-          <div class="social-icons">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
+        <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+            <form id="contactForm" autocomplete="off">
+                <h3 class="title">Contact us</h3>
+                <div class="input-container">
+                    <input type="text" name="name" class="input" placeholder="Username" required />
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" class="input" placeholder="Email" required />
+                </div>
+                <div class="input-container">
+                    <input type="tel" name="phone" class="input" placeholder="Phone" required />
+                </div>
+                <div class="input-container textarea">
+                    <textarea name="message" class="input" placeholder="Message" required></textarea>
+                </div>
+                <input type="submit" value="Send" class="btn" />
+            </form>
+            <div class="thank-you-message" id="thankYouMessage">Thank you, we will connect soon.</div>
+            <div class="error-message" id="errorMessage">Please fill all the details.</div>
         </div>
-      </div>
-
-      <div class="contact-form">
-        <span class="circle one"></span>
-        <span class="circle two"></span>
-
-        <form action="index.html" autocomplete="off">
-          <h3 class="title">Contact us</h3>
-          <div class="input-container">
-            <input type="text" name="name" class="input" />
-            <label for="">Username</label>
-            <span>Username</span>
-          </div>
-          <div class="input-container">
-            <input type="email" name="email" class="input" />
-            <label for="">youremail@email.com</label>
-            <span>Email</span>
-          </div>
-          <div class="input-container">
-            <input type="tel" name="phone" class="input" />
-            <label for="">Phone</label>
-            <span>Phone</span>
-          </div>
-          <div class="input-container textarea">
-            <textarea name="message" class="input"></textarea>
-            <label for="">Message</label>
-            <span>Message</span>
-          </div>
-          <input type="submit" value="Send" class="btn" />
-        </form>
-      </div>
     </div>
-  </div>
-  
-  <script>
-  $(document).ready(function() {
-    $("#submitForm").on("click", function() {
-      // Fetch form data
-      var name = $("#name").val().trim();
-      var email = $("#email").val().trim();
-      var subject = $("#subject").val().trim();
-      var message = $("#message").val().trim();
-      
-      if (name === "" || email === "" || subject === "" || message === "") {
-        $("#formStatus").text("Please fill out all fields.");
-        return;
-      }
-      // On successful submission
-      $("#formStatus").text("Sending message...");
-      var endpoint = "https://example.com/your-endpoint"; // Replace with your endpoint
-  
-      // Simulate form submission (for demonstration)
-      $.ajax({
-        type: "POST",
-        url: endpoint,
-        data: {
-          name: name,
-          email: email,
-          subject: subject,
-          message: message
-        },
-        success: function(response) {
-          $("#formStatus").text("Message sent successfully. We will get back to you soon!");
-          $("#contact-form")[0].reset(); // Reset form after successful submission
-        },
-        error: function() {
-          $("#formStatus").text("Error submitting form. Please try again.");
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        const thankYouMessage = document.getElementById('thankYouMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+    
+        const name = document.querySelector('input[name="name"]').value.trim();
+        const email = document.querySelector('input[name="email"]').value.trim();
+        const phone = document.querySelector('input[name="phone"]').value.trim();
+        const message = document.querySelector('textarea[name="message"]').value.trim();
+
+    
+        if (name === "" || email === "" || phone === "" || message === "") {
+            errorMessage.style.display = 'block';
+            thankYouMessage.style.display = 'none';
+        } else {
+            errorMessage.style.display = 'none';
+            thankYouMessage.style.display = 'block';
+
+           
+            setTimeout(function() {
+                thankYouMessage.style.display = 'none';
+                document.getElementById('contactForm').reset();
+            }, 3000);
         }
-      });
     });
-  });
-  </script>
+</script>
+
   
 
   <!-- feedback -->
@@ -1251,7 +1297,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("feedback-form").addEventListener("submit", function (event) {
         event.preventDefault();
-        document.getElementById("message1").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your feedback submitted successfully!</span>";
+        document.getElementById("message1").innerHTML = "<span style='font-size: 20px; display: inline-block; width: auto; font-weight: bold; color: green; white-space: nowrap;'>Your feedback submitted successfully!</span>";
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
         document.getElementsByName("message1")[0].value = "";
