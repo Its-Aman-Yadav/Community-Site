@@ -70,34 +70,16 @@ section {
 }
 
 .about-title1 {
-  margin-top: 50px;
-  justify-content: center;
-  font-size: 60px;
+  text-align: center;
+  font-size: 50px;
   font-weight: 600;
-  color: #ffffff;
+  color: #0082e6;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.about-title1::after {
-  content: "";
-  height: 4px;
-  width: 0%;
-  background-color: #fffffff1;
-  display: block;
-  transition: 0.5s ease-in-out;
-}
-.about-title1:hover::after {
-  content: "";
-  height: 4px;
-  width: 80%;
-  background-color: #fffffff1;
-  display: block;
 }
 
 .intro-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 25px;
   animation: fadeIn 4s;
 }
@@ -367,7 +349,7 @@ section {
 /* project section */
 
 .project {
-  height: 1100px;
+  height: 1000px;
   width: 100%;
   background-color: #f2f2f2;
   text-align: center;
@@ -375,22 +357,22 @@ section {
 .project h1 {
   margin: 0;
   padding: 20px;
-  font-size: 4em;
+  font-size: 40px;
   color: #0082e6;
   text-align: center;
   font-weight: 600;
 }
 .pcontainer {
-  padding: 5% 10%;
+  padding: 10px 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 .pcard {
-  height: 290px;
-  width: 350px;
+  height: 280px;
+  width: 340px;
   margin: 0 20px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   background: white;
