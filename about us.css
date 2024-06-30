@@ -11,7 +11,7 @@
 /* Body Styles */
 body {
   font-family: "Montserrat", sans-serif;
-
+  animation: fadeIn 2s;
   /* background-image: url(images/Slide1.jpg); 
   background-attachment: fixed;
   background-size: cover;  */
@@ -362,4 +362,100 @@ section {
   border-bottom: 15px solid transparent;
   border-right: 15px solid #ffffff;
   left: -15px;
+}
+
+/* project section */
+
+.project {
+  height: 1100px;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.project h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 4em;
+  color: #0082e6;
+  text-align: center;
+  font-weight: 600;
+}
+.pcontainer {
+  padding: 5% 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.pcard {
+  height: 290px;
+  width: 350px;
+  margin: 0 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background: white;
+  transition: 0.4s;
+}
+.pcard:hover {
+  height: 370px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
+}
+
+.pcard .pimg {
+  height: 200px;
+  width: 100%;
+}
+
+.pcard .pimg img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.pcard .ptop-text {
+  padding: 5px;
+}
+
+.pcard .ptop-text .name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0082e6;
+  line-height: 20px;
+}
+
+.pcard .pbottom-text {
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.pcard:hover .pbottom-text {
+  opacity: 1;
+  visibility: visible;
+}
+.pcard .pbottom-text .ptext p {
+  text-align: justify;
+  color: #000000;
+  font-weight: 500;
+}
+
+.pcard .ptop-text .pbtn {
+  margin-top: 10px;
+}
+
+.pcard .ptop-text .pbtn a {
+  text-decoration: none;
+  background-color: #0082e6;
+  color: #f2f2f2;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2s;
+}
+
+.pcard .ptop-text .pbtn a:hover {
+  transform: scale(0.9);
 }
