@@ -23,6 +23,14 @@
     <title>About Us - Open Source Community</title>
   </head>
   <body class="aboutusbody">
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY > 50);
+      });
+    </script>
+
+    <!-- Navbar -->
     <div class="navbar">
       <nav>
         <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem">
@@ -43,6 +51,8 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#login.html">Login/Register</a></li>
         </ul>
+
+        <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
       </nav>
     </div>
     <!-- main section -->
