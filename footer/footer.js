@@ -6,15 +6,54 @@ class SpecialFooter extends HTMLElement {
         .form input[type="text"] {
           color: black;
         }
-        /* Setting all social media icons to yellow */
+        /* Setting all social media icons to yellow by default */
         .fab.fa-whatsapp,
         .fab.fa-facebook,
         .fab.fa-instagram,
         .fab.fa-linkedin,
         .fab.fa-x-twitter,
         .fab.fa-github,
-        .fa-solid.fa-envelope {
+        .fa-solid.fa-envelope 
+        {
           color: yellow;
+          transition: color 0.3s, background 0.3s;
+        }
+
+        /* Hover effects for social media icons */
+        /* WhatsApp green */
+        .fab.fa-whatsapp:hover 
+        {
+          color: #25D366; 
+        }
+        /* Facebook blue */
+        .fab.fa-facebook:hover 
+        {
+          color: #1877F2; 
+        }
+        /* Insta darkPink */
+        .fab.fa-instagram:hover 
+        {
+         color: #dc2743;
+        }
+         /* LinkedIn blue */
+        .fab.fa-linkedin:hover 
+        {
+          color: #0A66C2; 
+        }
+        /* Twitter light black*/
+        .fab.fa-x-twitter:hover 
+        {
+          color: #333; 
+        }
+        /* GitHub light black */
+        .fab.fa-github:hover 
+        {
+          color: #333; 
+        }
+        /* Red for email */
+        .fa-solid.fa-envelope:hover 
+        {
+          color: #D44638; 
         }
       </style>
       <footer>
