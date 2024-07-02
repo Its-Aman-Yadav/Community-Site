@@ -1,3 +1,51 @@
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        // Function to remove active class from all links
+        const removeActiveClass = () => {
+            navLinks.forEach(link => {
+                link.classList.remove('active1');
+            });
+        };
+
+        // Function to add active class to the current link
+        const addActiveClass = (id) => {
+            const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active1');
+            }
+        };
+
+        // Intersection Observer to detect when sections are in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    removeActiveClass();
+                    addActiveClass(entry.target.id);
+                }
+            });
+        }, { threshold: 0.5 }); // Adjust threshold to your needs
+
+        // Observe each section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scrolling for links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+
+
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
