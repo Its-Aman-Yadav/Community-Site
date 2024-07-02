@@ -1129,155 +1129,109 @@
   });
   </script>
   
-
-  <!-- feedback -->
-  <section id="feedback" class="feedback-container" style="margin-top: 100px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="section-title">
-            <h1 style="color: rgb(255, 81, 0);">Give us your Feedback</h1>
-            <p style="color: white; width: 100%;">We value your opinion. Please share your feedback with us!</p>
-          </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="feedback-form" action="" method="POST">
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+<!-- feedback -->
+<section id="feedback" class="feedback-container" style="margin-top: 100px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="section-title">
+          <h1 style="color: rgb(255, 81, 0);">Give us your Feedback</h1>
+          <p style="color: white; width: 100%;">We value your opinion. Please share your feedback with us!</p>
+        </div>
+        <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
+          <form id="feedback-form" action="" method="POST" onsubmit="handleFeedbackSubmit(event)">
+            <div class="col-md-6 col-sm-6">
+              <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
+              <textarea name="message" id="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
+            </div>
+            <div class="col-md-12 col-sm-12">
+              <p style="color: white;">Rate your experience:</p>
+              <div class="col-12 rating rad">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1"><i class="fas fa-star"></i></label>
               </div>
-              <div class="col-md-6 col-sm-6">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
-                <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;"
-                  required></textarea>
-              </div>
-              <div class="col-md-12 col-sm-12">
-                <p style="color: white;">Rate your experience:</p>
-                <div class="col-12 rating rad" >
-                  <input type="radio" id="star5" name="rating" value="5">
-                  <label for="star5"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star4" name="rating" value="4">
-                  <label for="star4"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star3" name="rating" value="3">
-                  <label for="star3"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star2" name="rating" value="2">
-                  <label for="star2"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star1" name="rating" value="1">
-                  <label for="star1"><i class="fas fa-star"></i></label>
-
-
-                  <!-- feedback -->
-                  <!DOCTYPE html>
-                  <html lang="en">
-
-                  <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Feedback Form</title>
-                    <link rel="stylesheet" href="styles.css">
-                  </head>
-
-                  <body>
-                    <script>
-                      function handleFeedbackSubmit(event) {
-                        event.preventDefault(); // Prevent the default form submission
-
-                        // Get form values
-                        var name = document.getElementById("name").value;
-                        var email = document.getElementById("email").value;
-                        var message = document.getElementById("message").value;
-                        var ratingChecked = document.querySelector('input[name="rating"]:checked');
-
-                        // Check if all fields are filled
-                        if (name === "" || email === "" || message === "" || !ratingChecked) {
-                          Toastify({
-                            text: "Thanks For Your Feedback :)",
-                            duration: 3000,
-                            close: true,
-                            gravity: "center", // `top` or `bottom`
-                            position: "center", // `left`, `center` or `right`
-                            backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
-                            stopOnFocus: true // Prevents dismissing of toast on hover
-                          }).showToast();
-                        } else {
-                          // Display the Toastify message
-                          Toastify({
-                            text: "Thanks For Your Feedback :)",
-                            duration: 3000,
-                            close: true,
-                            gravity: "center", // `top` or `bottom`
-                            position: "center", // `left`, `center` or `right`
-                            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                            stopOnFocus: true // Prevents dismissing of toast on hover
-                          }).showToast();
-
-                          // Optionally, you can reset the form
-                          document.getElementById("feedback-form").reset();
-                        }
-                      }
-                    </script>
-                </div>
-              </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
-                <div id="message1"></div>
-              </div>
-          </div>
-  </section>
-
-  </main>
-  <script>
-    const labels = document.querySelectorAll('.rating label');
-
-    labels.forEach(label => {
-      label.addEventListener('click', () => {
-        labels.forEach(l => l.classList.remove('selected'));
-        label.classList.add('selected');
-      });
-    });          
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementsByName("message")[0].value = "";
-      });
-    });      
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("feedback-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        document.getElementById("message1").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your feedback submitted successfully!</span>";
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementsByName("message1")[0].value = "";
-      });
-    });      
-  </script>
-
-  <script>
-    function sendEmail() {
-      alert("Email sent successfully!");
-    }
-  </script>
+            </div>
+            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
+              <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
+              <div id="message1"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- footer section -->
-  <special-footer></special-footer>
+</section>
 
-  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
-  <svg class="progress-ring" width="60" height="60">
-    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
-  </svg>
-  </footer>
-  <script>
-    function sendFeed() {
-      alert('Email sent successfully!');
+<script>
+  function handleFeedbackSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var ratingChecked = document.querySelector('input[name="rating"]:checked');
+
+    // Check if all fields are filled
+    if (name === "" || email === "" || message === "" || !ratingChecked) {
+      Toastify({
+        text: "Please fill out all fields.",
+        duration: 3000,
+        close: true,
+        gravity: "center", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+        stopOnFocus: true // Prevents dismissing of toast on hover
+      }).showToast();
+    } else {
+      // Display the Toastify message
+      Toastify({
+        text: "Thanks For Your Feedback :)",
+        duration: 3000,
+        close: true,
+        gravity: "center", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        stopOnFocus: true // Prevents dismissing of toast on hover
+      }).showToast();
+
+      // Reset the form
+      document.getElementById("feedback-form").reset();
     }
-  </script>
+  }
+</script>
+
+<script>
+  const labels = document.querySelectorAll('.rating label');
+
+  labels.forEach(label => {
+    label.addEventListener('click', () => {
+      labels.forEach(l => l.classList.remove('selected'));
+      label.classList.add('selected');
+    });
+  });
+</script>
+
+<script>
+  function sendEmail() {
+    alert("Email sent successfully!");
+  }
+</script>
+
+ 
   </div>
   <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
     let circle = document.querySelector(".progress-ring__circle");
