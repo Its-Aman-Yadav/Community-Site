@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/ourplan.css" />
+    <!-- <link rel="stylesheet" href="css/ourplan.css" /> -->
     <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
@@ -24,23 +24,33 @@
     </script>
     <style>
         #terms-conditions-container {
-            width: 55%;
-            margin: auto;
+            width: 70%;
+            margin: 150px auto;
+            border-radius: 10px;
+            background:linear-gradient(white, #f5d244);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .header {
-            margin-top: 100px;
+            margin-top: 50px;
             text-align: center;
-            background-color: #FFD700;
+            width: 100%;
+            letter-spacing: 5px;
             font-size: large;
         }
 
         .title {
             font-size: 2em;
+            font-weight: 600;
             color: #000000;
         }
-
+        .hr-line{
+            border: 0;
+            height: 1px;
+            margin: 10px 20px;
+            background: #333;
+            background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        }
         .main-content {
             padding: 20px;
             margin: 15px auto;
@@ -52,7 +62,8 @@
 
         .section-title {
             font-size: 22px;
-            color: #000000;
+            color: #2b2b2b;
+            font-weight: 600;
             padding-bottom: 0px;
         }
 
@@ -72,6 +83,33 @@
             color: #000000;
             font-size: 1.1em;
         }
+        .home{
+            margin: 100px;
+        }
+        #image {
+    height: 30px;
+    /* Reduced height of the profile image */
+    width: 30px;
+    /* Reduced width of the profile image */
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .usercon{
+    display: block;
+    text-align: left;
+ 
+    
+  }
+  .usercon li{
+    list-style-type: square;
+  }
+
+  .usercon p{
+
+    text-align: left;
+  }
     </style>
 </head>
 
@@ -123,8 +161,11 @@
     <div class="container" id="terms-conditions-container">
         <header class="header">
             <h1 class="title" id="terms-conditions-title">Terms and Conditions</h1>
+            <div class="hr-line"></div>
         </header>
+       
         <main class="main-content" id="terms-conditions-main">
+            
             <section class="section">
                 <h2 class="section-title">Introduction</h2>
                 <p class="section-content">These terms and conditions outline the rules and regulations for the use of
@@ -150,14 +191,16 @@
             <section class="section" id="terms-conditions-conduct">
                 <h2 class="section-title">User Conduct</h2>
                 <div class="section-list">
-                    <p class="list-item">You must not use this website in any way that causes, or may cause, damage to
-                        the website or impairment of the availability or accessibility of the website.</p><br>
-                    <p class="list-item">You must not use this website in any way which is unlawful, illegal,
+                    <ul class="usercon">
+                    <li><p class="list-item">You must not use this website in any way that causes, or may cause, damage to
+                        the website or impairment of the availability or accessibility of the website.</p></li>
+                    <li><p class="list-item">You must not use this website in any way which is unlawful, illegal,
                         fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful
-                        purpose or activity.</p><br>
-                    <p class="list-item">You must not use this website to copy, store, host, transmit, send, use,
+                        purpose or activity.</p></li>
+                   <li><p class="list-item">You must not use this website to copy, store, host, transmit, send, use,
                         publish or distribute any material which consists of (or is linked to) any spyware, computer
-                        virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.</p>
+                        virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.</p></li>
+                    </ul>
                     </div>
             </section>
 
@@ -176,9 +219,186 @@
             </section>
         </main>
     </div>
-    <special-footer></special-footer>
+    <!-- <special-footer></special-footer> -->
 
-    <script src="footer/footer.js"></script>
+    <!-- footer section -->
+  <special-footer></special-footer>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+  <script>
+    function sendFeed() {
+      alert('Email sent successfully!');
+    }
+  </script>
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Message sent successsfully. We will get back to you soon.")
+      );
+    }
+    function sendFeed() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Feedback sent successsfully")
+      );
+    }
+  </script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/vegas.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "This chatbot is for the community",
+      "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+    });
+  </script>
+  <!-- swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script>
+
+    /*=============== SWIPER JS ===============*/
+    let swiperCards = new Swiper(".card__content", {
+      loop: true,
+      spaceBetween: 52,
+      grabCursor: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+        },
+        968: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+
+
+  <script src="./footer/footer.js"></script>
 </body>
 
 </html>
