@@ -1077,70 +1077,117 @@
     .error-message {
         color: red;
         font-size: 20px;
-    }
+    }  
+    @media (max-width: 767px) {
+      .form 
+      {
+          flex-direction: column;
+      }
+      
+      .contact-info, .contact-form 
+      {
+          padding: 5px;
+      }
+      
+      .input-container 
+      {
+          width: 95%;
+          margin: 0 auto;
+      }
+  
+      .contact-info .title 
+      {
+          font-size: 16px;
+          margin-top: 35px;
+      }
+
+      .contact-form .title
+      {
+        font-size: 16px;
+      }
+
+      .btn 
+      {
+          padding: 5px 10px;
+          width: 100px;
+          margin: 0 auto;
+          display: block;
+      }
+
+      .thank-you-message 
+      {
+        font-size: 15px;
+      }
+
+    .error-message 
+     {
+        font-size: 10px;
+     }  
+  }
 </style>
 <div class="contact">
-    <img src="img/shape.png" class="square" alt="" />
-    <div class="form">
-        <div class="contact-info">
-            <h3 class="title">Let's get in touch</h3>
-            <br>
-            <div class="info">
-                <div class="information">
-                    <i class="fas fa-map-marker-alt"></i> &nbsp &nbsp
-                    <p>92 Cherry Drive Uniondale, NY 11553</p>
-                </div>
-                <div class="information">
-                    <i class="fas fa-envelope"></i> &nbsp &nbsp
-                    <p>lorem@ipsum.com</p>
-                </div>
-                <div class="information">
-                    <i class="fas fa-phone"></i>&nbsp&nbsp
-                    <p>123-456-789</p>
-                </div>
-            </div>
-            <div class="social-media">
-                <p>Connect with us :</p>
-                <div class="social-icons">
-                    <a href="#">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="contact-form">
-            <span class="circle one"></span>
-            <span class="circle two"></span>
-            <form id="contactForm" autocomplete="off">
-                <h3 class="title">Contact us</h3>
-                <div class="input-container">
-                    <input type="text" name="name" class="input" placeholder="Username" required />
-                </div>
-                <div class="input-container">
-                    <input type="email" name="email" class="input" placeholder="Email" required />
-                </div>
-                <div class="input-container">
-                    <input type="tel" name="phone" class="input" placeholder="Phone" required />
-                </div>
-                <div class="input-container textarea">
-                    <textarea name="message" class="input" placeholder="Message" required></textarea>
-                </div>
-                <input type="submit" value="Send" class="btn" />
-            </form>
-            <div class="thank-you-message" id="thankYouMessage">Thank you, we will connect soon.</div>
-            <div class="error-message" id="errorMessage">Please fill all the details.</div>
-        </div>
-    </div>
+  <img src="img/shape.png" class="square" alt="" />
+  <div class="form">
+      <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <br>
+          <div class="info">
+              <div class="information">
+                  <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;
+                  <p>92 Cherry Drive Uniondale, NY 11553</p>
+              </div>
+              <div class="information">
+                  <i class="fas fa-envelope"></i>&nbsp;&nbsp;
+                  <p>lorem@ipsum.com</p>
+              </div>
+              <div class="information">
+                  <i class="fas fa-phone"></i>&nbsp;&nbsp;
+                  <p>123-456-789</p>
+              </div>
+          </div>
+          <div class="social-media">
+              <p class="connect-us">Connect with us :</p>
+              <div class="social-icons">
+                  <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+          <form id="contactForm" autocomplete="off">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                  <input type="text" name="name" class="input" placeholder="Username" required />
+              </div>
+              <div class="input-container">
+                  <input type="email" name="email" class="input" placeholder="Email" required />
+              </div>
+              <div class="input-container">
+                  <input type="tel" name="phone" class="input" placeholder="Phone" required />
+              </div>
+              <div class="input-container textarea">
+                  <textarea name="message" class="input" placeholder="Message" required></textarea>
+              </div>
+              <input type="submit" value="Send" class="btn" />
+          </form>
+          <div class="thank-you-message" id="thankYouMessage">Thank you, we will connect soon.</div>
+          <div class="error-message" id="errorMessage">Please fill all the details.</div>
+      </div>
+  </div>
 </div>
+
 
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -1174,6 +1221,43 @@
   
 
   <!-- feedback -->
+  <style>
+    @media (max-width: 767px) 
+    {
+      .feedback-container
+      {
+        padding: 10px 10px;
+        width: 95%;
+      }
+    
+      .section-title h1.feedback-title 
+      {
+        font-size: 15px;
+      }
+    
+      .section-title p.feedback-description 
+      {
+        font-size: 14px;
+      }
+    
+      .rating 
+      {
+        flex-direction: row;
+        align-items: center;
+      }
+    
+      .rating label 
+      {
+        font-size: 20px;
+      }
+    
+      .submit-btn 
+      {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  </style>
   <section id="feedback" class="feedback-container" style="margin-top: 100px;">
     <div class="container">
       <div class="row">
