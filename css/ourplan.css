@@ -59,7 +59,7 @@ body {
   form label {
     display: block;
     margin-top: 10px;
-    color: #0073e6;
+    /* color: #0073e6; */
   }
 
   form input,
@@ -453,34 +453,48 @@ body {
   background-color: #F5F5F5;
   border-radius: 10px;
   margin: 0px 10px;
-  color:#e15509;
+  color:#ffc5a5;
   font-weight: 700;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
-.contact{
+.contact1{
   display: grid;
   grid-auto-flow: column;
   border-radius: 5px;
-  background-color: #F5F5F5;
+ 
+  background-color: #ffffff;
   padding: 20px;
-  gap: 10px;
+  /* gap: 10px; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form{
+.contact-form1{
   margin-left: 0px;
-  margin-right: 50px;
+  /* margin-right: 150px; */
   padding-right: 70px;
+  background-color: none !important;
 }
 
 
-.contact-form label{
+.contact-form1 label{
   font-size: 16px;
+  color: grey;
+  font-weight: 100;
+  padding:0px  5px;
+  cursor:text;
+  top:0;
+  left:0;
+  position:absolute;
 }
 
 
-.contact-form input{
-  height: 20px !important;
+.contact-form1 input{
+  width:100%;
+  height: 25px !important;
+}
+
+.contact-form1 textarea{
+  width: 100%;
 }
