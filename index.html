@@ -1217,13 +1217,37 @@
 <script>
   const labels = document.querySelectorAll('.rating label');
 
-  labels.forEach(label => {
-    label.addEventListener('click', () => {
-      labels.forEach(l => l.classList.remove('selected'));
-      label.classList.add('selected');
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Code for label clicks
+    const labels = document.querySelectorAll('.label'); // Assuming labels have class 'label'
+    labels.forEach(label => {
+      label.addEventListener('click', () => {
+        labels.forEach(l => l.classList.remove('selected'));
+        label.classList.add('selected');
+      });
+    });
+
+    // Code for contact form submission
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementsByName("message")[0].value = "";
+    });
+
+    // Code for feedback form submission
+    document.getElementById("feedback-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("message1").innerHTML = "<span style='font-size: 20px; display: inline-block; width: auto; font-weight: bold; color: green; white-space: nowrap;'>Your feedback submitted successfully!</span>";
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementsByName("message1")[0].value = "";
     });
   });
 </script>
+
 
 <script>
   function sendEmail() {
