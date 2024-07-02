@@ -15,8 +15,22 @@ body {
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   height: 100vh;
+  position: relative;
 }
-
+.homeButton{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  top:0;
+}
+.homeButton img{
+  height: 100px;
+  width: 100px;;
+  border-radius: 50%;
+}
 h1 {
   font-weight: 700;
   letter-spacing: -1.5px;
