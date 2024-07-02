@@ -326,7 +326,6 @@ ul li {
 }
 
 ul li a {
-  color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -355,7 +354,6 @@ ul li a:hover {
 
   nav {
     background-color: rgba(0, 0, 0, 0.8);
-    color: white;
     display: block;
     position: relative;
     justify-content: center;
@@ -1751,7 +1749,6 @@ div.card {
 }
 
 .navbar ul li a {
-  color: white;
   font-size: 18px;
   padding: 8px 16px;
   text-decoration: none;
@@ -1776,7 +1773,6 @@ div.card {
 }
 
 .navbar ul li a:hover {
-  padding: 3px 16px;
   color: white;
   background-color: #e8701f; /* Change this to your desired hover color */
   transition: color 0s, background-color 0s;
