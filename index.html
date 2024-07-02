@@ -1200,8 +1200,7 @@
                   <input type="radio" id="star5" name="rating" value="5">
                   <label for="star5"><i class="fas fa-star"></i></label>
                   <input type="radio" id="star4" name="rating" value="4">
-                  <label for="star4"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star3" name="rating" value="3">
+                <input type="radio" id="star3" name="rating" value="3">
                   <label for="star3"><i class="fas fa-star"></i></label>
                   <input type="radio" id="star2" name="rating" value="2">
                   <label for="star2"><i class="fas fa-star"></i></label>
@@ -1279,8 +1278,19 @@
       });
     });          
   </script>
+  
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // Code for label clicks
+      const labels = document.querySelectorAll('.label'); // Assuming labels have class 'label'
+      labels.forEach(label => {
+        label.addEventListener('click', () => {
+          labels.forEach(l => l.classList.remove('selected'));
+          label.classList.add('selected');
+        });
+      });
+  
+      // Code for contact form submission
       document.getElementById("contact-form").addEventListener("submit", function (event) {
         event.preventDefault();
         document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
@@ -1288,10 +1298,8 @@
         document.getElementById("email").value = "";
         document.getElementsByName("message")[0].value = "";
       });
-    });      
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
+  
+      // Code for feedback form submission
       document.getElementById("feedback-form").addEventListener("submit", function (event) {
         event.preventDefault();
         document.getElementById("message1").innerHTML = "<span style='font-size: 20px; display: inline-block; width: auto; font-weight: bold; color: green; white-space: nowrap;'>Your feedback submitted successfully!</span>";
@@ -1299,14 +1307,16 @@
         document.getElementById("email").value = "";
         document.getElementsByName("message1")[0].value = "";
       });
-    });      
+    });
   </script>
+  
 
   <script>
     function sendEmail() {
       alert("Email sent successfully!");
     }
-  </script>
+  </script>               <label for="star4"><i class="fas fa-star"></i></label>
+     
   </div>
   <!-- footer section -->
   <special-footer></special-footer>
