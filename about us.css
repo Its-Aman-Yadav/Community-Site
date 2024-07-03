@@ -369,12 +369,13 @@ section {
 .project {
   height: 1100px;
   width: 100%;
-  background-color: #f2f2f2;
+  background: linear-gradient(#ffca0c, white);
   text-align: center;
 }
 .project h1 {
   margin: 0;
-  padding: 20px;
+  padding-top: 20px;
+ 
   font-size: 4em;
   color: #0082e6;
   text-align: center;
@@ -386,15 +387,16 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 .pcard {
-  height: 290px;
+  height: 300px;
   width: 350px;
   margin: 0 20px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   background: white;
   transition: 0.4s;
+  border-radius: 20px;
 }
 .pcard:hover {
   height: 370px;
@@ -405,15 +407,19 @@ section {
 .pcard .pimg {
   height: 200px;
   width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .pcard .pimg img {
   height: 200px;
-  width: 100%;
+  width: 100%;  
+  border-radius: 10px;
   object-fit: cover;
 }
 .pcard .ptop-text {
   padding: 5px;
+
 }
 
 .pcard .ptop-text .name {
@@ -421,6 +427,7 @@ section {
   font-weight: 600;
   color: #0082e6;
   line-height: 20px;
+  padding: 10px;
 }
 
 .pcard .pbottom-text {
@@ -430,6 +437,8 @@ section {
   opacity: 0;
   visibility: hidden;
   transition: 0.1s;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .pcard:hover .pbottom-text {
