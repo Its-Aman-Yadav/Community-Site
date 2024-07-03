@@ -371,7 +371,22 @@
           background: rgb(239, 188, 0);
           background: linear-gradient(90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100%);
         }
-        
+          /*small screen theme toggle and image logo*/
+        @media (max-width: 767px) 
+        {
+          .theme-switch,
+          #checkbox 
+          {
+            opacity: 0;
+            pointer-events: none; 
+          }
+          
+          #image 
+          {
+            opacity: 0;
+            pointer-events: none; 
+          }
+      }
         
         </style>
 
@@ -1405,11 +1420,7 @@
     <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
   </svg>
   </footer>
-  <script>
-    function sendFeed() {
-      alert('Email sent successfully!');
-    }
-  </script>
+
   </div>
   <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
     let circle = document.querySelector(".progress-ring__circle");
@@ -1475,6 +1486,11 @@
       observer.observe(section);
     });
   </script>
+    <script>
+      function sendFeed() {
+        alert('Email sent successfully!');
+      }
+    </script>
   <script>
     function sendEmail() {
       Email.send({

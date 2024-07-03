@@ -346,3 +346,21 @@ input {
 .social-container a:hover {
   border: 1px solid #f1c11a;
 }
+
+
+
+.back-to-home {
+  align-items: left;
+  justify-content: left;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(186, 170, 0);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.back-to-home svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}

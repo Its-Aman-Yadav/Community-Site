@@ -75,9 +75,9 @@ class SpecialFooter extends HTMLElement {
             <div class="col1" id="Serv">
               <h3>Services</h3>
               <div class="links">
-                <a href="#">Open Learning</a>
-                <a href="#">Mentorship</a>
-                <a href="#">Network</a>
+                <a href="open-learning.html">Open Learning</a>
+                <a href="mentorship.html">Mentorship</a>
+                <a href="network.html">Network</a>
                 <a href="#">Card Design</a>
               </div>
             </div>

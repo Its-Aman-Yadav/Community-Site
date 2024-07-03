@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms and Conditions - Open Source Village</title>
+    <title>Open Learning - Open Source Village</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/ourplan.css" /> -->
+    <link rel="stylesheet" href="css/ourplan.css" />
     <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
@@ -22,16 +22,19 @@
             header.classList.toggle("sticky", window.scrollY > 50)
         })
     </script>
-    <style>
-        #terms-conditions-container {
-            width: 70%;
-            margin: 150px auto;
-            border-radius: 10px;
-            background:linear-gradient(white, #f5d244);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
 
-        .header {
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(to bottom, #FFD700, #FFFFFF);  */
+        color: black;
+    }
+
+    
+
+    .header {
             margin-top: 50px;
             text-align: center;
             width: 100%;
@@ -39,129 +42,60 @@
             font-size: large;
         }
 
-        .title {
+    .main-content {
+        max-width: 70%;
+        margin: 120px auto 20px;
+        padding: 20px;
+        background: linear-gradient(to top, #ffd900d1, #FFFFFF); 
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    .main-content h1 {
+        font-size: 2.5em;
+            font-weight: 600;
+            color: #000000;
+    }
+
+    .main-content p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #000000;
+    }
+
+    .main-content h2 {
+        color: #ffa600;
+        margin-top: 30px;
+        border-bottom: 1px solid #FFA500;
+        padding-bottom: 5px;
+        font-weight:500;
+    }
+
+    .main-content h3 {
+        color: #FFA500;
+        margin-top: 20px;
+    }
+    
+    /* .title {
             font-size: 2em;
             font-weight: 600;
             color: #000000;
-        }
-        .hr-line{
+    } */
+
+    .hr-line{
             border: 0;
             height: 1px;
-            margin: 10px 20px;
+            margin: 10px 0px;
             background: #333;
             background-image: linear-gradient(to right, #ccc, #333, #ccc);
         }
-        .main-content {
-            padding: 20px;
-            margin: 15px auto;
-        }
-
-        .section {
-            margin-bottom: 20px;
-        }
-
-        .section-title {
-            font-size: 22px;
-            color: #2b2b2b;
-            font-weight: 600;
-            padding-bottom: 0px;
-        }
-
-        .section-content {
-            font-size: 1em;
-            color: #000000;
-        }
-
-        .section-list {
-            list-style: none;
-            color: #000000;
-            padding: 0;
-        }
-
-        .list-item {
-            margin-bottom: 10px;
-            color: #000000;
-            font-size: 1.1em;
-        }
-        .home{
-            margin: 100px;
-        }
-        #image {
-    height: 30px;
-    /* Reduced height of the profile image */
-    width: 30px;
-    /* Reduced width of the profile image */
-    border-radius: 50%;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-
-  .usercon{
-    display: block;
-    text-align: left;
- 
     
-  }
-  .usercon li{
-    list-style-type: square;
-  }
-
-  .usercon p{
-
-    text-align: left;
-  }
-
-      /* Back to Top Button */
-      .scrollToTopBtn {
-      /* background-color: #FFE70F; */
-      background-image: radial-gradient(#f3bf8c, #ee7f10);
-      color: #fff;
-      text-align: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      font-size: 18px;
-      text-decoration: none;
-      border: none;
-      line-height: 50px;
-      /* Center text vertically */
-      transition: background-color 0.3s ease;
-      position: fixed;
-      bottom: 106px;
-      right: 43px;
-      display: none;
-      /* Hidden by default */
-      z-index: 1000;
-      margin-bottom: 10px;
-    }
-
-    .scrollToTopBtn:hover {
-      background-color: #484848;
-    }
-
-    .progress-ring {
-      position: fixed;
-      bottom: 101px;
-      margin-bottom: 10px;
-      right: 38px;
-      transform: rotate(-90deg);
-      z-index: 999;
-      /* Just below the button */
-      margin-bottom: 10px;
-    }
-
-    .progress-ring__circle {
-      transition: 0.35s stroke-dasharray;
-      transform: rotate(-90deg);
-      transform-origin: 50% 50%;
-    }
-    </style>
+</style>
 </head>
 
 <body>
-
-  
-
     <!-- Navbar -->
     <div class="navbar">
         <nav>
@@ -172,7 +106,7 @@
                     <span class="logo-text">Open Source Village</span>
                 </label>
 
-        
+
 
             </a>
             <ul>
@@ -205,68 +139,46 @@
         });
     </script>
 
-    <div class="container" id="terms-conditions-container">
+    <div class="main-content">
         <header class="header">
-            <h1 class="title" id="terms-conditions-title">Terms and Conditions</h1>
+            <h1 class="title">Open Learning</h1>
             <div class="hr-line"></div>
         </header>
-       
-        <main class="main-content" id="terms-conditions-main">
+        <section class="open-learning">
+            <p>Our community promotes open learning, allowing members to share their knowledge and skills with others,
+                fostering a culture of continuous growth.</p>
+            <p>We provide a variety of resources including tutorials, articles, and webinars on diverse topics such as
+                programming, design, marketing, and more. Our platform encourages members to both learn and teach,
+                creating a dynamic environment where knowledge flows freely.</p>
             
-            <section class="section">
-                <h2 class="section-title">Introduction</h2>
-                <p class="section-content">These terms and conditions outline the rules and regulations for the use of
-                    Open Source Village Website. By accessing this website we assume you accept these terms and
-                    conditions. Do not continue to use Open Source Village if you do not agree to take all of the terms
-                    and conditions stated on this page.</p>
-            </section>
+            <h2>Benefits of Open Learning</h2>
+            <p>Access to a wide range of educational materials.</p>
+            <p>Opportunities to learn at your own pace and convenience.</p>
+            <p>Ability to collaborate with peers on projects and assignments.</p>
+            <p>Support from a community of like-minded learners and educators.</p>
 
-            <section class="section" id="terms-conditions-privacy">
-                <h2 class="section-title">Privacy</h2>
-                <p class="section-content">We are committed to protecting your privacy. Please refer to our Privacy
-                    Policy for information on how we collect, use, and disclose your personal information.</p>
-            </section>
+            <h2>Our Learning Resources</h2>
+            <p>Explore our comprehensive library of learning resources, including:</p>
+            <p>Interactive coding exercises and challenges.</p>
+            <p>Video tutorials covering advanced topics in technology.</p>
+            <p>Expert-led webinars on industry trends and best practices.</p>
+            <p>Case studies and real-world projects to apply your skills.</p>
 
-            <section class="section" id="terms-conditions-license">
-                <h2 class="section-title">License</h2>
-                <p class="section-content">Unless otherwise stated, Open Source Village and/or its licensors own the
-                    intellectual property rights for all material on Open Source Village. All intellectual property
-                    rights are reserved. You may access this from Open Source Village for your own personal use
-                    subjected to restrictions set in these terms and conditions.</p>
-            </section>
+            <h2>Community Participation</h2>
+            <p>Engage with our vibrant community through:</p>
+            <p>Discussion forums and chat groups for real-time interaction.</p>
+            <p>Collaborative projects and hackathons to solve real-world problems.</p>
+            <p>Peer-reviewed code reviews and constructive feedback.</p>
+            <p>Online events and workshops hosted by industry leaders.</p>
 
-            <section class="section" id="terms-conditions-conduct">
-                <h2 class="section-title">User Conduct</h2>
-                <div class="section-list">
-                    <ul class="usercon">
-                    <li><p class="list-item">You must not use this website in any way that causes, or may cause, damage to
-                        the website or impairment of the availability or accessibility of the website.</p></li>
-                    <li><p class="list-item">You must not use this website in any way which is unlawful, illegal,
-                        fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful
-                        purpose or activity.</p></li>
-                   <li><p class="list-item">You must not use this website to copy, store, host, transmit, send, use,
-                        publish or distribute any material which consists of (or is linked to) any spyware, computer
-                        virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.</p></li>
-                    </ul>
-                    </div>
-            </section>
-
-            <section class="section" id="terms-conditions-changes">
-                <h2 class="section-title">Changes to These Terms</h2>
-                <p class="section-content">We may update our Terms and Conditions from time to time. We will notify you
-                    of any changes by posting the new Terms and Conditions on this page. You are advised to review this
-                    Terms and Conditions periodically for any changes. Changes to this Terms and Conditions are
-                    effective when they are posted on this page.</p>
-            </section>
-
-            <section class="section" id="terms-conditions-contact">
-                <h2 class="section-title">Contact Information</h2>
-                <p class="section-content">If you have any questions about these Terms and Conditions, please contact us
-                    at opensourcevillage@mail.com.</p>
-            </section>
-        </main>
+            <h2>Continuous Improvement</h2>
+            <p>At Open Source Village, we believe in continuous improvement:</p>
+            <p>Regular updates and additions to our learning resources.</p>
+            <p>Feedback mechanisms to enhance user experience and content relevance.</p>
+            <p>Ongoing research and development in emerging technologies.</p>
+            <p>Recognition and rewards for active contributors and mentors.</p>
+        </section>
     </div>
-    <!-- <special-footer></special-footer> -->
 
     <!-- footer section -->
   <special-footer></special-footer>
