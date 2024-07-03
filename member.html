@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact-sec.css"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
       rel="stylesheet"
@@ -45,25 +46,35 @@
       <!-- Navbar -->
       <div class="navbar">
         <nav>
-          <a class="logo-link" href="#home"> <label class="logo" style="margin-left:10px;">
-            
-            <img src="images/fav.png" alt="logo">
-            <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
-          </label></a>
+          <a class="logo-link" href="#home">
+            <label class="logo">
+              <img src="images/fav.png" alt="logo">
+    
+              <span class="logo-text">Open Source Village</span>
+            </label>
+    
+            <!-- <div>
+              <span class="logo-subtext">Source</span>
+            </div> -->
+    
+          </a>
           <ul>
-            <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-            
-            <li><i class="fa-solid fa-address-card" style="filter:invert(1)"></i><a href="#about">About</a></li>
-            <li><i class="fa-solid fa-screwdriver-wrench" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-            <li><i class="fa-solid fa-pen-to-square" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-            <li><i class="fa-solid fa-address-book" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-            <li><i class="fa-solid fa-right-to-bracket" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
-            <label class="theme-switch" for="checkbox">
-              <input type="checkbox" id="checkbox" />
-              <div class="slider round" id="toggle"></div>
-          </label>
-          <img id="image" onclick="ProfileClicked()" />
+            <li><i class="fa-solid fa-house"></i><a class="active" href="#home">Home</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
+            <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
+            <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
+            <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
+            <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
           </ul>
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round" id="toggle"></div>
+          </label>
+    
+          <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+    
+          <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+    
         </nav>
       </div>
       <script>
@@ -132,7 +143,7 @@
         </div>
       </section>
 
-      <section class="contact" id="contact">
+      <!-- <section class="contact" id="contact">
         <div class=" contactform">
           <div class="contacttext">
         <h2>Contact Us</h2>
@@ -155,6 +166,36 @@
         </div>
 
           <button type="submit" class="submit">Submit</button>
+        </form>
+      </div>
+      </section> -->
+
+      <section class="contact1" id="contact">
+        <div style="padding-right: 0px; margin-right: 0px; margin-left: 50px;"> 
+        <h2>Contact</h2>
+        <p>
+          If you have any questions or need support, feel free to reach out to
+          us:
+        </p>
+      </div>
+
+      <div>
+        <form class="contact-form1" id="contact-form">
+          <div style="display: flex; gap:5px; position: relative;">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div style="display: flex; gap:5px;position: relative;">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          </div>
+          <div style="display: flex; gap:5px; position: relative;">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+       </div>
+        <div style="display: flex; gap:5px; position: relative;"></div>
+          <button type="submit" style="width: 100%; margin-right: 50px;">Submit</button>
+        </div>
         </form>
       </div>
       </section>
