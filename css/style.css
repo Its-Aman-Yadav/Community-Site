@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  overflow: hidden;
 }
 
 /* .formcontainer2 {
@@ -167,6 +168,18 @@ html {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
+}
+
+/* Cursor Trail Effect */
+
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 /* Navbar Style */
@@ -3496,3 +3509,6 @@ body {
     padding: 0.45rem 0.8rem;
   }
 }
+
+
+
