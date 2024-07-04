@@ -1,102 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Support - Open Source Community</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
 
-      header {
-        background: #ff7d7d;
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - Open Source Community</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="support.css" />
 
-      header h1 {
-        margin: 0;
-      }
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 50)
+    })
+  </script>
 
-      nav ul {
-        padding: 0;
-        list-style: none;
-        text-align: center;
-      }
+  <style>
+    /* Back to Top Button */
+    .scrollToTopBtn {
+      /* background-color: #FFE70F; */
+      background-image: radial-gradient(#f3bf8c, #ee7f10);
+      color: #fff;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-decoration: none;
+      border: none;
+      line-height: 50px;
+      /* Center text vertically */
+      transition: background-color 0.3s ease;
+      position: fixed;
+      bottom: 106px;
+      right: 43px;
+      display: none;
+      /* Hidden by default */
+      z-index: 1000;
+      margin-bottom: 10px;
+    }
 
-      nav ul li {
-        display: inline;
-        margin: 0 10px;
-      }
+    .scrollToTopBtn:hover {
+      background-color: #484848;
+    }
 
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-      }
+    .progress-ring {
+      position: fixed;
+      bottom: 101px;
+      margin-bottom: 10px;
+      right: 38px;
+      transform: rotate(-90deg);
+      z-index: 999;
+      /* Just below the button */
+      margin-bottom: 10px;
+    }
 
-      main {
-        padding: 20px;
-        max-width: 800px;
-        margin: 20px auto;
-        background: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
+    .progress-ring__circle {
+      transition: 0.35s stroke-dasharray;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+  </style>
 
-      section {
-        margin-bottom: 20px;
-      }
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
 
-      form label {
-        display: block;
-        margin-top: 10px;
-      }
+      const faqq = document.querySelectorAll(".faqs");
+      faqq.forEach((faqs) => {
+        faqs.addEventListener("click", () => {
+          faqs.classList.toggle("active");
+        });
+      });
+    });
+  </script>
 
-      form input,
-      form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-      }
+</head>
 
-      form button {
-        padding: 10px 20px;
-        background: #ff7d7d;
-        color: #fff;
-        border: none;
-        margin-top: 10px;
-        cursor: pointer;
-      }
+<body>
 
-      .faq {
-        margin-bottom: 20px;
-      }
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
 
-      .faq h2,
-      .faq p {
-        margin: 5px 0;
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
       }
-    </style>
-  </head>
-  <body>
-    <header>
+    }
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <a class="logo-link" href="#home">
+        <label class="logo">
+          <img src="images/fav.png" alt="logo">
+
+          <span class="logo-text">Open Source Village</span>
+        </label>
+
+        <div>
+          <span class="logo-subtext">Source</span>
+        </div>
+
+      </a>
+      <ul>
+        <li><i class="fa-solid fa-house"></i><a class="active" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+      </ul>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round" id="toggle"></div>
+      </label>
+
+      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+
+    </nav>
+  </div>
+
+  <!-- <header>
       <h1>Support</h1>
       <nav>
         <ul>
@@ -105,73 +177,108 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
-    <main>
-      <section id="general-info">
-        <h2>General Information</h2>
+  <main>
+    <section class="general" id="general-info">
+      <h2>General Information</h2>
+      <p>
+        Welcome to the support page of our open-source community. Here you
+        will find resources and contact information to help you with any
+        questions or issues you may encounter. Our support team is dedicated
+        to providing you with the assistance you need.
+      </p>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faqs">
+        <div class="question">
+          <h3>How do I join the community?</h3>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="answer">
+          <p>
+            You can join our community by visiting the 'Become a Member' page and
+            filling out the membership application form.
+          </p>
+        </div>
+      </div>
+
+      <div class="faqs">
+        <div class="question">
+
+          <h3>What projects can I contribute to?</h3>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="answer">
+          <p>
+            We have a variety of projects in different domains such as web
+            development, data science, and machine learning in the world of open
+            source.
+          </p>
+        </div>
+      </div>
+
+      <div class="faqs">
+        <div class="question">
+          <h3>How can I get help with a project?</h3>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="answer">
+          <p>
+            If you need help with a project, you can contact our support team
+            using the form below or participate in our community forums.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div style="padding-right: 0px; margin-right: 0px;">
+
+        <h2>Contact</h2>
         <p>
-          Welcome to the support page of our open-source community. Here you
-          will find resources and contact information to help you with any
-          questions or issues you may encounter. Our support team is dedicated
-          to providing you with the assistance you need.
+          If you have any questions or need support, feel free to reach out to
+          us:
         </p>
-      </section>
+      </div>
 
-      <section id="faqs" class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <h3>How do I join the community?</h3>
-        <p>
-          You can join our community by visiting the 'Become a Member' page and
-          filling out the membership application form.
-        </p>
-        <h3>What projects can I contribute to?</h3>
-        <p>
-          We have a variety of projects in different domains such as web
-          development, data science, and machine learning in the world of open
-          source.
-        </p>
-        <h3>How can I get help with a project?</h3>
-        <p>
-          If you need help with a project, you can contact our support team
-          using the form below or participate in our community forums.
-        </p>
-      </section>
+      <div>
 
-      <section id="contact">
-        <h2>Contact Support</h2>
-        <p>
-          If you need further assistance, please fill out the form below and our
-          support team will get back to you as soon as possible:
-        </p>
-        <form id="support-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="issue">Issue:</label>
-          <textarea id="issue" name="issue" required></textarea>
-
+        <form class="contact-form" id="contact-form">
+          <div style="display: flex; gap:5px">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div style="display: flex; gap:5px">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div style="display: flex; gap:5px">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
           <button type="submit">Submit</button>
+
         </form>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <special-footer></special-footer>
+  <special-footer></special-footer>
 
-    <script>
-      document
-        .getElementById("support-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          alert(
-            "Thank you for reaching out. Our support team will get back to you soon."
-          );
-          document.getElementById("support-form").reset();
-        });
-    </script>
-    <script src="footer/footer.js"></script>
-  </body>
+  <script>
+    document
+      .getElementById("support-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert(
+          "Thank you for reaching out. Our support team will get back to you soon."
+        );
+        document.getElementById("support-form").reset();
+      });
+  </script>
+  <script src="footer/footer.js"></script>
+</body>
+
 </html>

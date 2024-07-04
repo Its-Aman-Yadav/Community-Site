@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="login.css" />
-    <!-- font-awesome link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <title>Login/Register</title>
-  </head>
-  <body>
-    <div class="container">
-      <input type="checkbox" id="flip" />
-      <div class="cover">
-        <div class="front">
-          <div class="text">
-            <img src="images/Slide1.jpg" alt="" />
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Signup</title>
+  <link rel="icon" type="image/x-icon" href="log/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+
+  <a href="index.html" class="back-to-home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+      <path
+        d="M 25 1.0507812 C 24.7825 1.0507812 24.565859 1.1197656 24.380859 1.2597656 L 1.3808594 19.210938 C 0.95085938 19.550938 0.8709375 20.179141 1.2109375 20.619141 C 1.5509375 21.049141 2.1791406 21.129062 2.6191406 20.789062 L 4 19.710938 L 4 46 C 4 46.55 4.45 47 5 47 L 19 47 L 19 29 L 31 29 L 31 47 L 45 47 C 45.55 47 46 46.55 46 46 L 46 19.710938 L 47.380859 20.789062 C 47.570859 20.929063 47.78 21 48 21 C 48.3 21 48.589063 20.869141 48.789062 20.619141 C 49.129063 20.179141 49.049141 19.550938 48.619141 19.210938 L 25.619141 1.2597656 C 25.434141 1.1197656 25.2175 1.0507812 25 1.0507812 z M 35 5 L 35 6.0507812 L 41 10.730469 L 41 5 L 35 5 z">
+      </path>
+    </svg>
+  </a>
+
+  <div class="container" id="container">
+    <div class="form-container register-container">
+      <form id="registerForm">
+        <h1>Open Source Village</h1>
+        <input type="text" placeholder="Name" id="registerName" />
+        <input type="email" placeholder="Email" id="registerEmail" />
+        <div class="input-container">
+          <input type="password" placeholder="Password" id="registerPassword" />
+          <i class="far fa-eye-slash" id="toggleRegisterPassword" style="cursor: pointer"></i>
         </div>
+
       </div>
       <form action="#">
         <div class="form-content">
@@ -46,37 +59,203 @@
                 Don't have an account? <label for="flip">Signup now</label>
               </div>
             </div>
-          </div>
-          <div class="signup-form">
-            <div class="title">Signup</div>
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text " placeholder="Enter your Name" required />
-              </div>
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text " placeholder="Enter your Email" required />
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input
-                  type="password"
-                  placeholder="Enter your Password"
-                  required
-                />
-              </div>
 
-              <div class="button input-box">
-                <input type="submit" value="Submit" />
-              </div>
-              <div class="text sign-up-text">
-                Already have an account? <label for="flip">Login now</label>
-              </div>
-            </div>
-          </div>
+        <button type="submit">Register</button>
+        <span id="registerMessage" style="display: none">Account created successfully</span>
+        <div class="social-container">
+          <a href="https://www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
+          <a href="https://www.google.com" class="social"><i class="lni lni-google"></i></a>
+          <a href="https://www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
         </div>
       </form>
     </div>
-  </body>
+
+    <div class="form-container login-container">
+      <form id="loginForm">
+        <h1>Open Source Village</h1>
+        <input type="email" placeholder="Email" id="loginEmail" />
+        <div class="input-container">
+          <input type="password" placeholder="Password" id="loginPassword" />
+          <i class="far fa-eye-slash" id="togglePassword" style="cursor: pointer"></i>
+        </div>
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <label>Remember me</label>
+
+          </div>
+          <div class="pass-link">
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+        <button type="submit">Login</button>
+        <span>or use your account</span>
+        <div class="social-container">
+          <a href="https://www.facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
+          <a href="https://www.google.com" class="social"><i class="lni lni-google"></i></a>
+          <a href="https://www.linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1 class="title"><br /></h1>
+          <p>If you have an account already, login here.</p>
+          <button class="ghost" id="login">
+            Login
+            <i class="lni lni-arrow-left login"></i>
+          </button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1 class="title">
+            Start your <br />
+            journey now
+          </h1>
+          <p>
+            If you don't have an account yet, register and start your journey.
+          </p>
+          <button class="ghost" id="register">
+            Register
+            <i class="lni lni-arrow-right register"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="log/script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const registerButton = document.getElementById("register");
+      const loginButton = document.getElementById("login");
+      const container = document.getElementById("container");
+
+      registerButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent the default behavior of the anchor tag
+        container.classList.add("right-panel-active");
+        document
+          .getElementById("registerForm")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      loginButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent the default behavior of the anchor tag
+        container.classList.remove("right-panel-active");
+        document
+          .getElementById("loginForm")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      // Form validation and submission
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          validateForm("register");
+        });
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          validateForm("login");
+        });
+
+      function validateForm(formType) {
+        let email, password, name;
+        const spcharRegex = /[<>"/]/; // added password Regex validation to prevent special symbols and to disallow client side attacks  <, >, ", /
+        if (formType === "register") {
+          name = document.getElementById("registerName").value;
+          email = document.getElementById("registerEmail").value;
+          password = document.getElementById("registerPassword").value;
+          if (name === "" || email === "" || password === "") {
+            alert("Please fill in all fields");
+            return;
+          }
+          if (!validateEmail(email)) {
+            alert("Please enter a valid email address");
+            return;
+          }
+          if (spcharRegex.test(name) || spcharRegex.test(password)) {
+            alert('Name Or Password Cannot Contain <,>,", or /');
+            return;
+          }
+          document.getElementById("registerMessage").style.display = "block";
+          setTimeout(() => {
+            document.getElementById("registerMessage").style.display = "none";
+          }, 3000);
+        } else {
+          email = document.getElementById("loginEmail").value;
+          password = document.getElementById("loginPassword").value;
+          if (email === "" || password === "") {
+            alert("Please fill in all fields");
+            return;
+          }
+          if (!validateEmail(email)) {
+            alert("Please enter a valid email address");
+            return;
+          }
+          if (spcharRegex.test(password)) {
+            alert('Passowrd cannot contain <,>,", or /');
+            return;
+          }
+          alert("Logged in successfully");
+        }
+      }
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+      // Password toggle visibility for login
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("loginPassword");
+
+      togglePassword.addEventListener("click", function () {
+        const type =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", type);
+
+        // Toggle the eye icon
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+      });
+
+      // Password toggle visibility for register
+      const toggleRegisterPassword = document.getElementById(
+        "toggleRegisterPassword"
+      );
+      const passwordRegisterInput =
+        document.getElementById("registerPassword");
+
+      toggleRegisterPassword.addEventListener("click", function () {
+        const type =
+          passwordRegisterInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordRegisterInput.setAttribute("type", type);
+
+        // Toggle the eye icon
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+      });
+    });
+  </script>
+</body>
+<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+<!-- Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+<!-- Firebase Realtime Database -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+<!-- Our script must be loaded after firebase references -->
+<script src="index.js"></script>
+
 </html>

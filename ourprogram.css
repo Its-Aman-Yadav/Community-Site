@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient( rgb(255, 128, 1), rgb(255, 206, 10));
+    color: #fff;
+    padding: 20px 0;
+    height:350px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+  header h1 {
+    top:30%;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    text-align: center;
+
+    
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .borderbox{
+    border-width: 3px;
+    border-radius: 10px;
+    border-style: inset;
+    margin-top: 30px;
+    border-color: rgb(255, 206, 10);
+    margin-left: auto;
+    margin-right:auto;
+    width: 80% !important;
+  }
+  .mission,
+  .join-us {
+    padding: 20px 0;
+    text-align: center;
+  }
+  .mission{
+    background: none;
+  }
+
+  .join-us{
+    background: linear-gradient( white, rgb(247, 210, 62));
+    margin-top: 30px;
+  }
+
+  .grids{
+    width: 70%;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+  }
+
+  .grids img{
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 200px;
+    border-width: 3px;
+    box-shadow: 0 2px 2px 2px rgb(153, 148, 142);
+    border-color: white;
+  }
+
+  .mission h2,
+  .join-us h2 {
+    color: #323232;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .mission p,
+  .join-us p {
+    margin-top:0px;
+
+  }
+
+  .join-us .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff9c3e, #ffa806);
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: rgb(255, 132, 0);
+    margin-top: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+
+  .join-us .btn:hover {
+    background: none;
+    border-width: 3px;
+    border-color:rgb(255, 128, 1);
+    color: rgb(255, 128, 1);
+    
+  }
+
+ .changes{
+  color: rgb(39, 38, 36);
+  font-size: 16px;
+ }
+
+ .left-sec{
+    text-align: left;
+    padding-right: 300px;
+ }
+

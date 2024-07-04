@@ -6,10 +6,21 @@
   <meta charset="utf-8">
 
   <title>Open Source Village</title>
+  <!-- Meta tags-->
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+  <meta name="author" content="Aman Yadav" />
+  <meta name="keywords" content=", village community, collaboration, resource sharing, communication, transparency, collective decision-making, local projects, digital tools.">
+  <meta name="description" content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+  <meta name="language" content="English">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://community-site-theta.vercel.app/" />
+  <meta property="og:title" content="Open Source Village">
+  <meta name="og:description" content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+  
+  <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -29,18 +40,283 @@
   <link rel="stylesheet" href="css/vegas.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   
- <!-- remixicon -->
+
+  <!-- remixicon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
   <style>
-    .contact-form .submit {
-        background: #e15509;
+    .navbar {
+      /* background-color: #333; */
+      /* Background color for navbar */
+      padding: 5px 20px;
+      /* Reduced padding for navbar */}
+
+      /* Navbar styles */
+      /* Navbar styles */
+      /* Navbar styles */
+      .navbar {
+        /* background-color: #333; Background color for navbar */
+        padding: 0;
+        /* Remove padding for the navbar */
+
+      }
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* height: 10px; */
+        /* Adjust height of the navbar */
+      }
+
+      .carousell {
+
+        display: flex;
+        padding: 0;
+        transition: transform 0.5s ease;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+      }
+
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #f1c11a;
+        background-image: -webkit-linear-gradient(45deg,
+            rgba(255, 255, 255, .2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .2) 50%,
+            rgba(255, 255, 255, .2) 75%,
+            transparent 75%,
+            transparent);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #d1a10a;
+      }
+      
+      .wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      .home-thumb .btn {
+        background-color: transparent;
+      }
+      
+      .home-thumb .btn:hover {
+        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+      }
+      
+      
+      
+      ::-webkit-scrollbar {
+      width: 10px;
+      background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #f1c11a;
+      background-image: -webkit-linear-gradient(45deg,
+          rgba(255, 255, 255, .2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, .2) 50%,
+          rgba(255, 255, 255, .2) 75%,
+          transparent 75%,
+          transparent);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #d1a10a;
+    }
+
+    .wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .home-thumb .btn {
+      background-color: transparent;
+    }
+
+    .home-thumb .btn:hover {
+      box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .logo img {
+      height: 40px;
+      /* Reduced height of the logo */
+      width: 40px;
+      /* Reduced width of the logo */
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      /* Adjusted font size */
+      color: white;
+      /* Logo text color */
+    }
+    
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 0 0px;
+      /* Reduced margin to decrease space between items */
+      font-size: 1rem;
+      /* Adjust font size */
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: white;
+      /* Nav item text color */
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+      /* Reduced padding for nav items */
+    }
+
+    ul li a:hover {
+      color: #f1c11a;
+      /* Hover color for nav items */
+    }
+
+    ul li i {
+      margin-right: 10px;
+      /* Adjust space between icon and text */
+    }
+
+    .theme-switch {
+      margin-left: 10px;
+      width: 120px;
+      /* Space between toggle and nav items */
+    }
+
+    #image {
+      height: 30px;
+      /* Reduced height of the profile image */
+      width: 30px;
+      /* Reduced width of the profile image */
+      border-radius: 50%;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    /* Additional styles for the navbar to make it more attractive */
+    
+
+      .theme-switch img {
+        margin-right: 20px !important;
+      }
+
+      nav {
+        background-color: #444;
+        /*Navbar background color*/
+        padding: 5px 20px;
+        /* Padding */
+        
+        /* border-radius: 8px; */
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        display: grid;
+        grid-auto-flow: column;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      ul li {
+        position: relative;
+      }
+
+      
+
+
+      .slider {
+        width: 50px;
+          height: 20px;
+          /* Slider height */
+
+          background-color: #ccc;
+          position: relative;
+          border-radius: 34px;
+          transition: 0.4s;
+          margin-right: 0px !important;
+        }
+        
+        slider:before {
+          content: "";
+          position: absolute;
+          width: 26px;
+          /* Adjust width of the toggle knob */
+          height: 26px;
+          /* Adjust height of the toggle knob */
+          border-radius: 50%;
+          background-color: white;
+          transition: 0.4s;
+          left: 4px;
+          bottom: 4px;
+        }
+
+        ul li a {
+          padding: 5px;
+          /* Reduced padding */
+          border-radius: 5px;
+          transition: background 0.3s;
+        }
+
+        ul li a:hover {
+          background: rgba(255, 255, 255, 0.1);
+          /* Background on hover */
+        }
+
+        /* Adjust the profile image positioning */
+        #image {
+          margin-left: 10px;
+          /* Adjust spacing between profile image and nav items */
+        }
+
+        .contact-form .submit {
+          background: #e15509;
           color: rgb(9, 9, 9);
           padding: 10px 20px;
           border: none;
@@ -48,125 +324,86 @@
           cursor: pointer;
           font-size: 18px;
           margin-left: 220px;
-      }
+        }
 
-      .contact-form .submit:hover {
-        background: #f5d244;
-        font-size: 20px;
-        color: white;
-      }
-      .home-thumb .btn{
-        background-color: transparent;
-      }
-      
-      .home-thumb .btn:hover{
-        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5) , 0 0 25px rgb(255, 255, 255) , 0 0 50px rgb(255, 255, 255) , 0 0 200px rgb(255, 255, 255);
-      }
+        .contact-form .submit:hover {
+          background: #f5d244;
+          font-size: 20px;
+          color: white;
+        }
 
-      .card1 {
-        overflow: hidden;
-      }
+        /* Style for the theme switcher */
+        .theme-switch {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
 
-      .card-body {
-        transition: transform 0.3s ease;
-        padding: 10px;
-      }
 
-      .card-text {
-        overflow-wrap: break-word; /* Ensures long words break and stay within the card */
-        word-wrap: break-word;
-        word-break: break-word;
-        hyphens: auto;
-      }
+        .rating input[type="radio"] {
+          display: none;
+          /* Hide radio buttons */
+        }
 
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        .rating label {
+          font-size: 2rem;
+          /* Emoji size */
+          cursor: pointer;
+          transition: transform 0.2s;
+        }
+
+        .rating label:hover {
+          transform: scale(1.2);
+          /* Enlarge on hover */
+        }
+
+        .rating label:active {
+          transform: scale(1.1);
+          /* Reduce size on active */
+        }
+        
+        /*small screen text fix*/
+        @media (max-width: 768px) {
+          .home-thumb h1 {
+            font-size: 2rem; 
+          }
+        
+          .home-thumb h3 {
+            font-size: 1rem; 
+          }
+          
+          .btn-lg {
+            font-size: 0.9rem; 
+          }
+        }
+        
+        .active1{
+          color: black;
+          background-color: #e8701f;
+          transition: color 0s, background-color 0s;
+          border-radius: 20px;
+          background: rgb(239, 188, 0);
+          background: linear-gradient(90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100%);
+        }
+          /*small screen theme toggle and image logo*/
+        @media (max-width: 767px) 
+        {
+          .theme-switch,
+          #checkbox 
+          {
+            opacity: 0;
+            pointer-events: none; 
+          }
+          
+          #image 
+          {
+            opacity: 0;
+            pointer-events: none; 
+          }
       }
-      
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-    
-      .logo img {
-        height: 50px;
-        width: 50px;
-      }
-    
-      .logo-text {
-        font-size: 1.2rem; /* Adjusted font size */
-      }
-    
-      ul {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    
-      ul li {
-        margin: 0 10px; /* Adjust margin to fit items */
-        font-size: 0.9rem; /* Reduced font size */
-      }
-    
-      ul li a {
-        text-decoration: none;
-        color: white; /* Adjust color as needed */
-      }
-    
-      ul li i {
-        margin-right: 5px; /* Adjust space between icon and text */
-      }
-      .wrapper {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    .carousell {
-        display: flex;
-        padding: 0;
-        transition: transform 0.5s ease;
-    }
-    
-    .cardd {
-        list-style: none;
-        margin: 0 10px;
-        flex: 0 0 auto;
-        width: 200px; /* Adjust as needed */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        text-align: center;
-        padding: 10px; /* Added padding to ensure text doesn't touch edges */
-    }
-    
-    .cardd .img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .cardd img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .cardd h2 {
-        font-size: 1.2em; /* Reduced font size */
-        margin: 10px 0;
-    }
-    
-    .cardd span {
-        font-size: 0.9em; /* Reduced font size */
-        padding: 0 10px;
-        display: block;
-        margin-bottom: 10px;
-    }       
-  </style>
+        
+        </style>
+
 </head>
 
 
@@ -216,55 +453,88 @@
       <div class="sk-circle12 sk-child"></div>
     </div>
   </section>
-
-<!-- <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
- <button ><i class="fa-solid fa-circle-up"></i></button> 
-
-<script>
-let mybutton = document.getElementById("myBtn");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-}
-</script>
-</script>-->
-<script type="text/javascript">
-  window.addEventListener("scroll", function(){
-    var header= document.querySelector("nav");
-    header.classList.toggle("sticky", window.scrollY >50)
-  })
-</script> 
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 50)
+    })
+  </script>
 
   <!-- Navbar -->
   <div class="navbar">
     <nav>
-      <label class="logo" style="margin-left:5px;">
-        <img src="images/fav.png" alt="logo">
-        <span class="logo-text" style="margin-left: 0;">Open Source Village</span>
-      </label>
+      <a class="logo-link" href="#home">
+        <label class="logo">
+          <img src="images/fav.png" alt="logo">
+
+          <span class="logo-text">Open Source Village</span>
+        </label>
+
+        <!-- <div>
+          <span class="logo-subtext">Source</span>
+        </div> -->
+
+      </a>
       <ul>
-        <li><i class="fa-solid fa-house" style="filter:invert(1)"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-circle-info" style="filter:invert(1)"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-list" style="filter:invert(1)"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-at" style="filter:invert(1)"></i><a href="#contact">Contact Us</a></li>
-        <li><i class="fa-solid fa-user" style="filter:invert(1)"></i><a href="login.html">Login/Register</a></li>
+        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a class="nav-link"  href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link"  href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link"  href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
       </ul>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round" id="toggle"></div>
+      </label>
+
+      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+
     </nav>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const toggleButton = document.getElementById('checkbox');
+
+      const currentMode = localStorage.getItem('dark-mode');
+
+      if (currentMode === 'enabled') {
+
+        document.body.classList.add('dark-mode');
+
+        toggleButton.checked = true;
+
+      }
+
+      toggleButton.addEventListener('change', function () {
+
+        document.body.classList.toggle('dark-mode');
+
+        if (document.body.classList.contains('dark-mode')) {
+
+          localStorage.setItem('dark-mode', 'enabled');
+
+        } 
+        else {
+
+          localStorage.setItem('dark-mode', 'disabled');
+
+        }
+      });
+
+    });
+  </script>
+
+
   <!-- Home Section -->
-  <section class="home" id="home">
+  <section class="section home" id="home">
     <div class="container">
       <div class="home-thumb">
+        <br><br><br>
         <h1>Open Source Village</h1>
         <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
         <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
@@ -299,442 +569,80 @@ function topFunction() {
   </script>
 
 
-    <!-- about section -->
-    <section id="about">
-      <div class="main-img">
-        <img src="fav.png" alt="" />
-      </div>
-      <div class="text">
-        <br>
-        <br>
-        <br>
-        <h4>About</h4>
-        <h2>Open Source Village</h2>
-  
-        <p>
-          Welcome to our community startup! We are a group of like-minded
-          individuals who believe in the power of coming together to achieve
-          shared goals. Our mission is to create a safe and inclusive space
-          where members can connect, collaborate, and make a positive impact in
-          the world. Join us and be a part of something bigger than yourself!
-        </p>
-        <div class="last-text">
-          <div class="text1">
-            <h3>1000+</h3>
-            <h5>MEMBERS</h5>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-<!-- services section -->
-<section id="services">
-  <div class="container">
-    <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
-    <div class="service-container">
-      <div class="row d-grid gap-3">
-        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-          <div class="card wow fadeInUp"
-            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
-            <div class="wow fadeIn" data-wow-delay="0.2s">
-              <div class="card-heading">
-                <h3 class="heading-hover">Open learning</h3>
-              </div>
-              <div class="card-context">
-                <p>Our community promotes open learning, allowing members to share their knowledge and skills with
-                  others, fostering a culture of continuous growth.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-          <div class="card wow fadeInUp" data-wow-delay="0.8s"
-            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
-            <div class="wow fadeIn" data-wow-delay="0.2s">
-              <div class="card-heading">
-                <h3 class="heading-hover">Network</h3>
-              </div>
-              <div class="card-context">
-                <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
-                  opportunities for personal and professional growth.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-          <div class="card wow fadeInUp" data-wow-delay="1.2s"
-            style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
-            <div class="wow fadeIn" data-wow-delay="0.2s">
-              <div class="card-heading">
-                <h3 class="heading-hover">Mentorship</h3>
-              </div>
-              <div class="card-context">
-                <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal
-                  and professional growth.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <a href="https://discord.gg/mM9qFh2uZR" target="_blank" class="btn btn-default smoothScroll d-flex align-items-center">
-          JOIN DISCORD
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSzDzOJpiBR0fBAJIOjXtUqpW9H_G9jhuQNTohtYu7sA&s"
-          alt="Discord" style="height: 40px; border-radius: 50px; margin-left: 10px;">
-        </a>
-      </div>
+  <!-- about section -->
+  <section class="section" id="about">
+    <div class="main-img">
+      <img src="fav.png" alt="" />
     </div>
-  </div>
-</section>
-    <!-- Testimonials section -->
-    <section id="testimonials">
-      <div class="container">
-        <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="containeerr">
-              <div class="wrapper">
-                <i id="left" class="fa-solid fa-angle-left"></i>
-                <ul class="carousell">
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/testi_1.jpg" alt="images/img-6.jpg" draggable="false">
-                    </div>
-                    <h2>Arden Stone</h2>
-                    <span>I'm immensely grateful to have found such an inspiring group of people in this community!</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/testi_2.jpeg" alt="images/img-5.jpg" draggable="false">
-                    </div>
-                    <h2>John Smith</h2>
-                    <span>I've been involved with many groups in the past, but none have been as warm and welcoming as this one.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/testi_3.jpeg" alt="images/img-4.jpg" draggable="false">
-                    </div>
-                    <h2>Emily Johnson</h2>
-                    <span>It has opened up numerous opportunities for collaboration and personal development.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/img-1.jpg" alt="images/img-3.jpg" draggable="false">
-                    </div>
-                    <h2>Blanche Pearson</h2>
-                    <span>Being a part of this community has been truly transformative.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/img-2.jpg" alt="images/img-2.jpg" draggable="false">
-                    </div>
-                    <h2>Joenas Brauers</h2>
-                    <span>It's incredible to have such a supportive community around me.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/img-3.jpg" alt="images/img-1.jpg" draggable="false">
-                    </div>
-                    <h2>Lariach French</h2>
-                    <span>It's amazing to be among such driven people.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/img-4.jpg" alt="images/testi_1.jpg" draggable="false">
-                    </div>
-                    <h2>James Khosravi</h2>
-                    <span>I've found endless support and inspiration.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/img-5.jpg" alt="images/testi_2.jpg" draggable="false">
-                    </div>
-                    <h2>Kristina Zasiadko</h2>
-                    <span>The connections I've made are invaluable.</span>
-                  </li>
-                  <li class="cardd">
-                    <div class="img">
-                      <img src="images/img-6.jpg" alt="images/testi_3.jpg" draggable="false">
-                    </div>
-                    <h2>Donald Horton</h2>
-                    <span>This community has changed my life.</span>
-                  </li>
-                </ul>
-                <i id="right" class="fa-solid fa-angle-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-     document.addEventListener('DOMContentLoaded', function () {
-    const carousell = document.querySelector('.carousell');
-    const cardWidth = document.querySelector('.cardd').offsetWidth;
-    const cardMarginRight = parseInt(getComputedStyle(document.querySelector('.cardd')).marginRight);
-    const cardsInView = 3;
+    <div class="text">
+      <br>
+      <br>
+      <br>
+      <h4>About</h4>
+      <h2>Open Source Village</h2>
 
-    document.getElementById('right').addEventListener('click', function () {
-      carousell.scrollBy({
-        left: cardWidth + cardMarginRight,
-        behavior: 'smooth'
-      });
-    });
-
-    document.getElementById('left').addEventListener('click', function () {
-      carousell.scrollBy({
-        left: -(cardWidth + cardMarginRight),
-        behavior: 'smooth'
-      });
-    });
-
-    carousell.addEventListener('scroll', function () {
-      if (carousell.scrollLeft === 0) {
-        carousell.scrollTo({
-          left: carousell.scrollWidth - (cardWidth + cardMarginRight) * cardsInView,
-          behavior: 'auto'
-        });
-      } else if (carousell.scrollLeft >= carousell.scrollWidth - carousell.clientWidth) {
-        carousell.scrollTo({
-          left: (cardWidth + cardMarginRight) * cardsInView,
-          behavior: 'auto'
-        });
-      }
-    });
-  });
-    </script>
-
-
-
-<section class="faqq">
-  <div class="containerr">
-    <div class="accordion">
-      <h1 class="section-title wow fadeInUp text-center" data-wow-delay="0.3s">FAQ</h1>
-      <div class="accordion-item">
-        <button id="accordion-button-1" aria-expanded="false">
-          <span class="accordion-title">How can I contribute to the community's goals and projects?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>Contributing to the community's goals: There are many ways to contribute to our community! Whether you're a developer, designer, writer, or simply passionate about a particular cause, there's a place for you here. You can contribute code to open source projects, participate in discussions, share your expertise, or organize events that align with our mission.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button id="accordion-button-2" aria-expanded="false">
-          <span class="accordion-title">What benefits do members receive from participating in the community?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>Benefits of community membership: As a member of our community, you'll have the opportunity to connect with other passionate individuals, collaborate on projects that align with your interests and values, and make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events, and networking opportunities.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button id="accordion-button-3" aria-expanded="false">
-          <span class="accordion-title">How can I join the open source village community?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>Joining the open source village community: Joining our community is simple! Just navigate to our website and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration process. Once registered, you'll gain access to our forums, projects, events, and more.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button id="accordion-button-4" aria-expanded="false">
-          <span class="accordion-title">What is open source community?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>An open source community is a group of individuals who collaborate on projects and initiatives that are developed and shared openly, meaning the source code and resources are freely available for anyone to view, use, modify, and distribute ideas.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button id="accordion-button-5" aria-expanded="false">
-          <span class="accordion-title">What is the purpose of the open source village community website?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>Purpose of the open source village community website: Our website serves as a central hub for like-minded individuals who believe in the power of community-driven initiatives. It's a platform where members can connect, collaborate, and contribute to make a positive impact in the world.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button id="accordion-button-6" aria-expanded="false">
-          <span class="accordion-title">Are there any eligibility criteria to join the community?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>The only criteria is your passion for open source.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button id="accordion-button-7" aria-expanded="false">
-          <span class="accordion-title">How can I find and join specific projects within the community?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>To find and join specific projects, visit our project directory on the website. You can browse through ongoing projects, read their descriptions, and join the ones that interest you by following the participation guidelines provided.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button id="accordion-button-9" aria-expanded="false">
-          <span class="accordion-title">How can I stay updated with the community's latest news and events?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>You can stay updated by following our social media channels, and regularly checking our website for new events and information.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button id="accordion-button-10" aria-expanded="false">
-          <span class="accordion-title">Who can I contact if I have more questions or need support?</span>
-          <span class="icon" aria-hidden="true"></span>
-        </button>
-        <div class="accordion-content">
-          <p>If you have more questions or need support, feel free to contact our support team via the "Contact Us" page on our website. Our team is always ready to help you with any inquiries or issues you may have.</p>
+      <p>
+        Welcome to our community startup! We are a group of like-minded
+        individuals who believe in the power of coming together to achieve
+        shared goals. Our mission is to create a safe and inclusive space
+        where members can connect, collaborate, and make a positive impact in
+        the world. Join us and be a part of something bigger than yourself!
+      </p>
+      <div class="last-text">
+        <div class="text1">
+          <h3>1000+</h3>
+          <h5>MEMBERS</h5>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-
-    <div class="container" style="margin-top: 10px;">
-
-      <div class="row reviews" style="margin-top: 40px;">
-        <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="padding: 15px !important; height: 100%;">
-            <div class="col-md-8 pic-col">
-              <img src="images/profile1.jpg" class="img-fluid rounded-start" style="width: 80px;">
-            </div>
-            <div class="col-md-4 flex flex-row" style="width: 100%;">
-              <div class="card-body " style="width: 100%;">
-                <h5 class="card-title " style="font-size: 28px;font-weight: bold;">David L.</h5>
-                <div class="flex mt-2 mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-half" viewBox="0 0 16 16">
-                  <path
-                    d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z" />
-                </svg>
+  <!-- services section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="service-title wow fadeInUp" data-wow-delay="0.3s">SERVICES</div>
+      <div class="service-container">
+        <div class="row d-grid gap-3">
+          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+            <div class="card wow fadeInUp"
+              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+              <div class="wow fadeIn" data-wow-delay="0.2s">
+                <div class="card-heading">
+                  <h3 class="heading-hover">Open learning</h3>
                 </div>
-                <p class="card-text">"Joining this community has been one of the best decisions I've ever made. I've had
-                  the opportunity to contribute to meaningful projects that have an impact on society."</p>
-
+                <div class="card-context">
+                  <p>Our community promotes open learning, allowing members to share their knowledge and skills with
+                    others, fostering a culture of continuous growth.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="height: 100%;">
-            <div class="col-md-8 pic-col ">
-              <img src="images/profile2.jpg" class="img-fluid rounded-start" style="width: 80px;">
-            </div>
-            <div class="col-md-4 " style="width: 100%;">
-              <div class="card-body" style="width: 100%;">
-                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Sarah J.</h5>
-                <div class="flex mt-2 mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
+          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+            <div class="card wow fadeInUp" data-wow-delay="0.8s"
+              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+              <div class="wow fadeIn" data-wow-delay="0.2s">
+                <div class="card-heading">
+                  <h3 class="heading-hover">Network</h3>
                 </div>
-                <p class="card-text">"Being a part of this community has been an incredible journey. I've found
-                  like-minded individuals who share my deep passion for making a difference in the society."</p>
-
+                <div class="card-context">
+                  <p>Our community enables networking with smart and diverse individuals, fostering collaboration and
+                    opportunities for personal and professional growth.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="card1 mb-3" style="max-width: 540px;">
-          <div class="row g-0" style="height: 100%;">
-            <div class="col-md-8 pic-col">
-              <img src="images/profile3.jpg" class="img-fluid rounded-start" style="width: 80px;">
-            </div>
-            <div class="col-md-4" style="width: 100%;">
-              <div class="card-body" style="width: 100%;">
-                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Emily R.</h5>
-                <div class="flex mt-2 mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-              </div>
-                <p class="card-text">"As someone who values inclusivity, finding a space where everyone's voice is heard
-                  and respected has been incredibly refreshing. It's empowering to collaborate here."</p>
-
+          <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
+            <div class="card wow fadeInUp" data-wow-delay="1.2s"
+              style="width: 18rem; background-color:white; border-radius: 8px; padding: 20px;">
+              <div class="wow fadeIn" data-wow-delay="0.2s">
+                <div class="card-heading">
+                  <h3 class="heading-hover">Mentorship</h3>
+                </div>
+                <div class="card-context">
+                  <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal
+                    and professional growth.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -742,154 +650,805 @@ function topFunction() {
       </div>
     </div>
   </section>
+  <!-- Testimonials section -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="containeerr">
+            <div class="wrapper">
+              <i id="left" class="fa-solid fa-angle-left"></i>
+              <ul class="carousell">
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/testi_1.jpg" alt="images/img-6.jpg" draggable="false">
+                  </div>
+                  <h2>Arden Stone</h2>
+                  <span>I'm immensely grateful to have found such an inspiring group of people in this community!</span>
+                </li>
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/testi_2.jpeg" alt="images/img-5.jpg" draggable="false">
+                  </div>
+                  <h2>John Smith</h2>
+                  <span>I've been involved with many groups in the past, but none have been as warm and welcoming as
+                    this one.</span>
+                </li>
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/testi_3.jpeg" alt="images/img-4.jpg" draggable="false">
+                  </div>
+                  <h2>Emily Johnson</h2>
+                  <span>It has opened up numerous opportunities for collaboration and personal development.</span>
+                </li>
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/img-1.jpg" alt="images/img-3.jpg" draggable="false">
+                  </div>
+                  <h2>Blanche Pearson</h2>
+                  <span>Being a part of this community has been truly transformative.</span>
+                </li>
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/img-2.jpg" alt="images/img-2.jpg" draggable="false">
+                  </div>
+                  <h2>Joenas Brauers</h2>
+                  <span>It's incredible to have such a supportive community around me.</span>
+                </li>
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/img-3.jpg" alt="images/img-1.jpg" draggable="false">
+                  </div>
+                  <h2>Lariach French</h2>
+                  <span>It's amazing to be among such driven people.</span>
+                </li>
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/img-4.jpg" alt="images/testi_1.jpg" draggable="false">
+                  </div>
+                  <h2>James Khosravi</h2>
+                  <span>I've found endless support and inspiration.</span>
+                </li>
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/img-5.jpg" alt="images/testi_2.jpg" draggable="false">
+                  </div>
+                  <h2>Kristina Zasiadko</h2>
+                  <span>The connections I've made are invaluable.</span>
+                </li>
+                <li class="cardd">
+                  <div class="img">
+                    <img src="images/img-6.jpg" alt="images/testi_3.jpg" draggable="false">
+                  </div>
+                  <h2>Donald Horton</h2>
+                  <span>This community has changed my life.</span>
+                </li>
+              </ul>
+              <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousell = document.querySelector('.carousell');
+      const cardWidth = document.querySelector('.cardd').offsetWidth;
+      const cardMarginRight = parseInt(getComputedStyle(document.querySelector('.cardd')).marginRight);
+      const cardsInView = 3;
+
+      document.getElementById('right').addEventListener('click', function () {
+        carousell.scrollBy({
+          left: cardWidth + cardMarginRight,
+          behavior: 'smooth'
+        });
+      });
+
+      document.getElementById('left').addEventListener('click', function () {
+        carousell.scrollBy({
+          left: -(cardWidth + cardMarginRight),
+          behavior: 'smooth'
+        });
+      });
+
+      carousell.addEventListener('scroll', function () {
+        if (carousell.scrollLeft === 0) {
+          carousell.scrollTo({
+            left: carousell.scrollWidth - (cardWidth + cardMarginRight) * cardsInView,
+            behavior: 'auto'
+          });
+        } else if (carousell.scrollLeft >= carousell.scrollWidth - carousell.clientWidth) {
+          carousell.scrollTo({
+            left: (cardWidth + cardMarginRight) * cardsInView,
+            behavior: 'auto'
+          });
+        }
+      });
+    });
+  </script>
+
+
+
+  <section class="faqq section ">
+    <div class="containerr">
+      <div class="accordion">
+        <div class="service-title wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">FAQ</div>
+        <div class="accordion-item">
+          <button id="accordion-button-1" aria-expanded="false">
+            <span class="accordion-title">How can I contribute to the community's goals and projects?<i class="fa-solid fa-chevron-down"></i></span>
+            
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>Contributing to the community's goals: There are many ways to contribute to our community! Whether you're
+              a developer, designer, writer, or simply passionate about a particular cause, there's a place for you
+              here. You can contribute code to open source projects, participate in discussions, share your expertise,
+              or organize events that align with our mission.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-2" aria-expanded="false">
+            <span class="accordion-title">What benefits do members receive from participating in the community?<i class="fa-solid fa-chevron-down"></i></span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>Benefits of community membership: As a member of our community, you'll have the opportunity to connect
+              with other passionate individuals, collaborate on projects that align with your interests and values, and
+              make a tangible difference in the world. Additionally, you'll gain access to exclusive resources, events,
+              and networking opportunities.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-3" aria-expanded="false">
+            <span class="accordion-title">How can I join the open source village community?<i class="fa-solid fa-chevron-down"></i></span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>Joining the open source village community: Joining our community is simple! Just navigate to our website
+              and look for the "Join Us" or "Sign Up" button. From there, you'll be guided through the registration
+              process. Once registered, you'll gain access to our forums, projects, events, and more.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-4" aria-expanded="false">
+            <span class="accordion-title">What is open source community?<i class="fa-solid fa-chevron-down"></i></span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>An open source community is a group of individuals who collaborate on projects and initiatives that are
+              developed and shared openly, meaning the source code and resources are freely available for anyone to
+              view, use, modify, and distribute ideas.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is the purpose of the open source village community website?<i class="fa-solid fa-chevron-down"></i></span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>Purpose of the open source village community website: Our website serves as a central hub for like-minded
+              individuals who believe in the power of community-driven initiatives. It's a platform where members can
+              connect, collaborate, and contribute to make a positive impact in the world.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-6" aria-expanded="false">
+            <span class="accordion-title">Are there any eligibility criteria to join the community?<i class="fa-solid fa-chevron-down"></i></span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>The only criteria is your passion for open source.</p>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+          <button id="accordion-button-7" aria-expanded="false">
+            <span class="accordion-title">How can I find and join specific projects within the community?<i class="fa-solid fa-chevron-down"></i></span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>To find and join specific projects, visit our project directory on the website. You can browse through
+              ongoing projects, read their descriptions, and join the ones that interest you by following the
+              participation guidelines provided.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-9" aria-expanded="false">
+            <span class="accordion-title">How can I stay updated with the community's latest news and events?<i class="fa-solid fa-chevron-down"></i></span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>You can stay updated by following our social media channels, and regularly checking our website for new
+              events and information.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-10" aria-expanded="false">
+            <span class="accordion-title">Who can I contact if I have more questions or need support?<i class="fa-solid fa-chevron-down"></i></span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>If you have more questions or need support, feel free to contact our support team via the "Contact Us"
+              page on our website. Our team is always ready to help you with any inquiries or issues you may have.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="container section" style="margin-top: 10px;">
+
+    <div class="row reviews" style="margin-top: 40px;">
+      <div class="card1 mb-3" style="max-width: 540px;">
+        <div class="row g-0" style="height: 100%; cursor: pointer;">
+          <div class="col-md-8 pic-col">
+            <img src="images/profile1.jpg" class="img-fluid rounded-start"
+              style="width: 100px; position: relative; top: -55px;">
+          </div>
+          <div class="col-md-4 flex flex-row" style="width: 100%;">
+            <div class="card-body " style="width: 100%; padding: 10px;">
+              <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px;">
+                <h5 class="card-title " style="font-size: 28px;font-weight: bold;">David L.</h5>
+                <div class="flex mt-2 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-half" viewBox="0 0 16 16">
+                    <path
+                      d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text">"Joining this community has been one of the best decisions I've ever made. I've had
+                the opportunity to contribute to meaningful projects that have an impact on society."</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1 mb-3" style="max-width: 540px;">
+        <div class="row g-0" style="height: 100%; cursor: pointer;">
+          <div class="col-md-8 pic-col ">
+            <img src="images/profile2.jpg" class="img-fluid rounded-start"
+              style="width: 100px; position: relative; top: -55px;">
+          </div>
+          <div class="col-md-4 " style="width: 100%;">
+            <div class="card-body" style="width: 100%;  padding: 10px;">
+              <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px;">
+                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Sarah J.</h5>
+                <div class="flex mt-2 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text">"Being a part of this community has been an incredible journey. I've found
+                like-minded individuals who share my deep passion for making a difference in the society."</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1 mb-3" style="max-width: 540px; ">
+        <div class="row g-0" style="height: 100%; cursor: pointer;">
+          <div class="col-md-8 pic-col">
+            <img src="images/profile3.jpg" class="img-fluid rounded-start"
+              style="width: 100px; position: relative; top: -55px;">
+          </div>
+          <div class="col-md-4" style="width: 100%;">
+            <div class="card-body" style="width: 100%;padding: 10px;">
+              <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 10px;">
+                <h5 class="card-title" style="font-size: 28px;font-weight: bold;">Emily R.</h5>
+                <div class="flex mt-2 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text">"As someone who values inclusivity, finding a space where everyone's voice is heard
+                and respected has been incredibly refreshing. It's empowering to collaborate here."</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
 
   <!-- contact -->
+  <style>
+    .contact-form .input {
+        color: black;
+    }
 
-  <section id="contact" class="form-container">
+    .input-container {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .input {
+        width: 100%;
+        padding: 15px;
+        background: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        color: black;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .input:focus {
+        background-color: #fff;
+        border-color: #333;
+        outline: none;
+    }
+
+    .textarea .input {
+        height: 100px;
+        resize: none;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #555;
+    }
+
+    .input::placeholder {
+        color: #999;
+    }
+
+    .thank-you-message, .error-message {
+        display: none;
+        font-size: 16px;
+        margin-top: 0px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+    }
+
+    .thank-you-message {
+        color: green;
+        font-size: 20px;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 20px;
+    }  
+    @media (max-width: 767px) {
+      .form 
+      {
+          flex-direction: column;
+      }
+      
+      .contact-info, .contact-form 
+      {
+          padding: 5px;
+      }
+      
+      .input-container 
+      {
+          width: 95%;
+          margin: 0 auto;
+      }
+  
+      .contact-info .title 
+      {
+          font-size: 16px;
+          margin-top: 35px;
+      }
+
+      .contact-form .title
+      {
+        font-size: 16px;
+      }
+
+      .btn 
+      {
+          padding: 5px 10px;
+          width: 100px;
+          margin: 0 auto;
+          display: block;
+      }
+
+      .thank-you-message 
+      {
+        font-size: 15px;
+      }
+
+    .error-message 
+     {
+        font-size: 10px;
+     }  
+  }
+</style>
+<div class="contact section" id="contact">
+  <img src="img/shape.png" class="square" alt="" />
+  <div class="form">
+      <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <br>
+          <div class="info">
+              <div class="information">
+                  <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;
+                  <p>92 Cherry Drive Uniondale, NY 11553</p>
+              </div>
+              <div class="information">
+                  <i class="fas fa-envelope"></i>&nbsp;&nbsp;
+                  <p>lorem@ipsum.com</p>
+              </div>
+              <div class="information">
+                  <i class="fas fa-phone"></i>&nbsp;&nbsp;
+                  <p>123-456-789</p>
+              </div>
+          </div>
+          <div class="social-media">
+              <p class="connect-us">Connect with us :</p>
+              <div class="social-icons">
+                  <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+          <form id="contactForm" autocomplete="off">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                  <input type="text" name="name" class="input" placeholder="Username" required />
+              </div>
+              <div class="input-container">
+                  <input type="email" name="email" class="input" placeholder="Email" required />
+              </div>
+              <div class="input-container">
+                  <input type="tel" name="phone" class="input" placeholder="Phone" required />
+              </div>
+              <div class="input-container textarea">
+                  <textarea name="message" class="input" placeholder="Message" required></textarea>
+              </div>
+              <input type="submit" value="Send" class="btn" />
+          </form>
+          <div class="thank-you-message" id="thankYouMessage">Thank you, we will connect soon.</div>
+          <div class="error-message" id="errorMessage">Please fill all the details.</div>
+      </div>
+  </div>
+</div>
+
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        const thankYouMessage = document.getElementById('thankYouMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+    
+        const name = document.querySelector('input[name="name"]').value.trim();
+        const email = document.querySelector('input[name="email"]').value.trim();
+        const phone = document.querySelector('input[name="phone"]').value.trim();
+        const message = document.querySelector('textarea[name="message"]').value.trim();
+
+    
+        if (name === "" || email === "" || phone === "" || message === "") {
+            errorMessage.style.display = 'block';
+            thankYouMessage.style.display = 'none';
+        } else {
+            errorMessage.style.display = 'none';
+            thankYouMessage.style.display = 'block';
+
+           
+            setTimeout(function() {
+                thankYouMessage.style.display = 'none';
+                document.getElementById('contactForm').reset();
+            }, 3000);
+        }
+    });
+</script>
+
+  
+
+  <!-- feedback -->
+  <style>
+    @media (max-width: 767px) 
+    {
+      .feedback-container
+      {
+        padding: 10px 10px;
+        width: 95%;
+      }
+    
+      .section-title h1.feedback-title 
+      {
+        font-size: 15px;
+      }
+    
+      .section-title p.feedback-description 
+      {
+        font-size: 14px;
+      }
+    
+      .rating 
+      {
+        flex-direction: row;
+        align-items: center;
+      }
+    
+      .rating label 
+      {
+        font-size: 20px;
+      }
+    
+      .submit-btn 
+      {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  </style>
+  <section id="feedback" class="feedback-container" style="margin-top: 100px;">
     <div class="container">
       <div class="row">
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <div class="section-title" style="margin-top: 100px;">
-            <h1>Get in Touch</h1>
-            <p style="color: white;">If you have any questions or inquiries, feel free to contact us!</p>
+        <div class="col-sm-12">
+          <div class="section-title">
+            <h1 style="color: rgb(255, 81, 0);">Give us your Feedback</h1>
+            <p style="color: white; width: 100%;">We value your opinion. Please share your feedback with us!</p>
           </div>
           <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="contact-form" action="" method="POST">
+            <form id="feedback-form" action="" method="POST">
               <div class="col-md-6 col-sm-6">
                 <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
               </div>
               <div class="col-md-6 col-sm-6">
                 <input name="email" type="email" class="form-control" placeholder="Your Email" required>
               </div>
-              <div style="margin-left: 2px; margin-right: 35px;" class="msg col-md-12 col-sm-12">
-                <textarea name="message" class="form-control" placeholder="Message" rows="6" style="resize: none;" required></textarea>
+              <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
+                <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;"
+                  required></textarea>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                <p style="color: white;">Rate your experience:</p>
+                <div class="col-12 rating rad" >
+                  <input type="radio" id="star5" name="rating" value="5">
+                  <label for="star5"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star4" name="rating" value="4">
+                <input type="radio" id="star3" name="rating" value="3">
+                  <label for="star3"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star2" name="rating" value="2">
+                  <label for="star2"><i class="fas fa-star"></i></label>
+                  <input type="radio" id="star1" name="rating" value="1">
+                  <label for="star1"><i class="fas fa-star"></i></label>
+
+
+                  <!-- feedback -->
+                  <!DOCTYPE html>
+                  <html lang="en">
+
+                  <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Feedback Form</title>
+                    <link rel="stylesheet" href="styles.css">
+                  </head>
+
+                  <body>
+                    <script>
+                      function handleFeedbackSubmit(event) {
+                        event.preventDefault(); // Prevent the default form submission
+
+                        // Get form values
+                        var name = document.getElementById("name").value;
+                        var email = document.getElementById("email").value;
+                        var message = document.getElementById("message").value;
+                        var ratingChecked = document.querySelector('input[name="rating"]:checked');
+
+                        // Check if all fields are filled
+                        if (name === "" || email === "" || message === "" || !ratingChecked) {
+                          Toastify({
+                            text: "Thanks For Your Feedback :)",
+                            duration: 3000,
+                            close: true,
+                            gravity: "center", // `top` or `bottom`
+                            position: "center", // `left`, `center` or `right`
+                            backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+                            stopOnFocus: true // Prevents dismissing of toast on hover
+                          }).showToast();
+                        } else {
+                          // Display the Toastify message
+                          Toastify({
+                            text: "Thanks For Your Feedback :)",
+                            duration: 3000,
+                            close: true,
+                            gravity: "center", // `top` or `bottom`
+                            position: "center", // `left`, `center` or `right`
+                            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                            stopOnFocus: true // Prevents dismissing of toast on hover
+                          }).showToast();
+
+                          // Optionally, you can reset the form
+                          document.getElementById("feedback-form").reset();
+                        }
+                      }
+                    </script>
+                </div>
               </div>
               <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom:10px;">SEND MESSAGE</button>
-              <div id="message"></div>
-            </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-
-<!-- feedback -->
-<section id="feedback" class="form-container" style="margin-top: 100px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 col-sm-12">
-        <div class="section-title">
-          <h1>Give us your Feedback</h1>
-          <p style="color: white;">We value your opinion. Please share your feedback with us!</p>
-        </div>
-        <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-          <form id="feedback-form" action="" method="POST">
-            <div class="col-md-6 col-sm-6">
-              <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
-              <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;" required></textarea>
-            </div>
-            <div class="col-md-12 col-sm-12">
-              <p style="color: white;">Rate your experience:</p>
-              <div class="col-12 rating rad">
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2"><i class="fas fa-star"></i></label>
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1"><i class="fas fa-star"></i></label>
+                <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
+                <div id="message1"></div>
               </div>
-            </div>
-            <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-              <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
-              <div id="message1"></div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-      
-    </main>
-    <script>
-      const labels = document.querySelectorAll('.rating label');
+          </div>
+  </section>
 
+  </main>
+  <script>
+    const labels = document.querySelectorAll('.rating label');
+
+    labels.forEach(label => {
+      label.addEventListener('click', () => {
+        labels.forEach(l => l.classList.remove('selected'));
+        label.classList.add('selected');
+      });
+    });          
+  </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Code for label clicks
+      const labels = document.querySelectorAll('.label'); // Assuming labels have class 'label'
       labels.forEach(label => {
         label.addEventListener('click', () => {
           labels.forEach(l => l.classList.remove('selected'));
           label.classList.add('selected');
         });
-      });          
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-          event.preventDefault();
-          document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
-          document.getElementById("name").value = "";
-          document.getElementById("email").value = "";
-          document.getElementsByName("message")[0].value = "";
-        });
-      });      
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("feedback-form").addEventListener("submit", function(event) {
-          event.preventDefault();
-          document.getElementById("message1").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your feedback submitted successfully!</span>";
-          document.getElementById("name").value = "";
-          document.getElementById("email").value = "";
-          document.getElementsByName("message1")[0].value = "";
-        });
-      });      
-    </script>
-    
-      <script>
-        function sendEmail() {
-          alert("Email sent successfully!");
-        }
-      </script>
-    </div>
-    <!-- footer section -->
-     <special-footer></special-footer>
-   
-     <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
-     <svg class="progress-ring" width="60" height="60">
-       <circle class="progress-ring__circle" stroke="blue" stroke-width="4" fill="transparent" r="28" cx="30" cy="30"/>
-     </svg>
-      </footer>
-    <script>
-      function sendFeed() {
-        alert('Email sent successfully!');
-      }
-    </script>
+      });
+  
+      // Code for contact form submission
+      document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementsByName("message")[0].value = "";
+      });
+  
+      // Code for feedback form submission
+      document.getElementById("feedback-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("message1").innerHTML = "<span style='font-size: 20px; display: inline-block; width: auto; font-weight: bold; color: green; white-space: nowrap;'>Your feedback submitted successfully!</span>";
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementsByName("message1")[0].value = "";
+      });
+    });
+  </script>
+  
+
+  <script>
+    function sendEmail() {
+      alert("Email sent successfully!");
+    }
+  </script>               <label for="star4"><i class="fas fa-star"></i></label>
+     
+  </div>
+  <!-- footer section -->
+  <special-footer></special-footer>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+
   </div>
   <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
     let circle = document.querySelector(".progress-ring__circle");
     let radius = circle.r.baseVal.value;
     let circumference = 2 * Math.PI * radius;
-    
+
     circle.style.strokeDasharray = `${circumference} ${circumference}`;
     circle.style.strokeDashoffset = circumference;
-    
-    window.onscroll = function() {
+
+    window.onscroll = function () {
       scrollFunction();
       updateProgress();
     };
-    
+
     function scrollFunction() {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         scrollToTopBtn.style.display = "block";
@@ -897,11 +1456,11 @@ function topFunction() {
         scrollToTopBtn.style.display = "none";
       }
     }
-    
+
     function topFunction() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    
+
     function updateProgress() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -909,38 +1468,43 @@ function topFunction() {
       let offset = circumference - (scrollPercent * circumference);
       circle.style.strokeDashoffset = offset;
     }
-    
-    scrollToTopBtn.addEventListener("click", function(event) {
+
+    scrollToTopBtn.addEventListener("click", function (event) {
       event.preventDefault();
       topFunction();
     });
-    </script>  
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
     });
-  });
-  const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, {
-  threshold: 0.1
-});
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
 
-sections.forEach(section => {
-  observer.observe(section);
-});
-</script>
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+    <script>
+      function sendFeed() {
+        alert('Email sent successfully!');
+      }
+    </script>
   <script>
     function sendEmail() {
       Email.send({
@@ -1007,41 +1571,40 @@ sections.forEach(section => {
       "allowedOrigins": []
     });
   </script>
-<!-- swiper JS -->
-<script src="js/swiper-bundle.min.js"></script>
+  <!-- swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
   <script>
-    
-/*=============== SWIPER JS ===============*/
-let swiperCards = new Swiper(".card__content", {
-  loop: true,
-  spaceBetween: 52,
-  grabCursor: true,
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
+    /*=============== SWIPER JS ===============*/
+    let swiperCards = new Swiper(".card__content", {
+      loop: true,
+      spaceBetween: 52,
+      grabCursor: true,
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
 
-  breakpoints:{
-    600: {
-      slidesPerView: 2,
-    },
-    968: {
-      slidesPerView: 3,
-    },
-  },
-});
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+        },
+        968: {
+          slidesPerView: 3,
+        },
+      },
+    });
   </script>
 
 
-<script src="./footer/footer.js"></script>
+  <script src="./footer/footer.js"></script>
 </body>
- <script src="index.js"></script>
- 
+<script src="index.js"></script>
 </html>

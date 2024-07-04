@@ -1,193 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="about us.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="about us.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/fb940be696.js" crossorigin="anonymous"></script>
+  <title>About Us - Open Source Community</title>
+  <style>
+    /* Back to Top Button */
+    .scrollToTopBtn {
+      /* background-color: #FFE70F; */
+      background-image: radial-gradient(#f3bf8c, #ee7f10);
+      color: #fff;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-decoration: none;
+      border: none;
+      line-height: 50px;
+      /* Center text vertically */
+      transition: background-color 0.3s ease;
+      position: fixed;
+      bottom: 106px;
+      right: 43px;
+      display: none;
+      /* Hidden by default */
+      z-index: 1000;
+      margin-bottom: 10px;
+    }
 
-    <title>About Us - Open Source Community</title>
-  </head>
-  <body class="aboutusbody">
-    <div class="navbar">
-      <nav>
-        <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem"
-          ><img
-            src="images/fav.png"
-            alt="logo"
-            style="height: 50px; width: 50px"
-          />
-          <span class="logo-text" style="margin-left: 0"
-            >Open Source Village</span
-          >
-        </label>
-        <ul class="flex flex-col md:flex-row">
-          <li><i></i><a href="index.html">Home</a></li>
-          <li><i></i><a href="#introduction">Introduction</a></li>
-          <li><i></i><a href="#mission">Mission</a></li>
-          <li><i></i><a href="#values">Values</a></li>
-          <li><i></i><a href="#projects">Projects</a></li>
-          <li><i></i><a href="#contact">Contact</a></li>
-          <li><i></i><a href="#login.html">Login/Register</a></li>
-        </ul>
-      </nav>
+    .scrollToTopBtn:hover {
+      background-color: #484848;
+    }
+
+    .progress-ring {
+      position: fixed;
+      bottom: 101px;
+      margin-bottom: 10px;
+      right: 38px;
+      transform: rotate(-90deg);
+      z-index: 999;
+      /* Just below the button */
+      margin-bottom: 10px;
+    }
+
+    .progress-ring__circle {
+      transition: 0.35s stroke-dasharray;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+  </style>
+</head>
+
+<body class="aboutusbody">
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 50);
+    });
+  </script>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem">
+        <img src="images/fav.png" alt="logo" style="height: 50px; width: 50px" />
+        <span style="margin-left: 0; font-size: medium">Open Source Village</span>
+      </label>
+      <ul class="flex flex-col md:flex-row">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#Timeline">Join US</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="login.html">Login/Register</a></li>
+      </ul>
+
+      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+    </nav>
+  </div>
+  <!-- main section -->
+  <div class="about">
+    <div class="content">
+      <h1 class="about-title">About Us</h1>
+      <div class="img">
+        <img style="width: 600px" src="images/about-img (2).png" alt="" />
+      </div>
     </div>
-    <!-- main secction -->
-    <section>
-      <div class="intro" id="#introduction">
-        <div class="abtcontent">
-          <h1>open-source-village</h1>
-          <h2>Make New Friends</h2>
+  </div>
+  <div class="intro-container" id="introduction">
+    <div class="vertical">
+      <h1 class="about-title" style="margin-right: 150px">WHO ARE WE?</h1>
+      <img src="images/who.png.png" alt="" />
+    </div>
+    <div class="vertical">
+      <div class="box">
+        <h1>INTRODUCTION</h1>
+        <div class="intro-content">
           <p>
-            Welcome to our open-source community! <br />We are a diverse group
-            of individuals passionate about collaboration, innovation,<br />
-            and sharing knowledge through open-source projects. <br />Our
-            community thrives on the contributions and enthusiasm of its
-            members.
+            Welcome to our open-source community! <br />
+            We are a diverse group of individuals passionate about
+            collaboration, innovation, and sharing knowledge through
+            open-source projects.Our community thrives on the contributions
+            and enthusiasm of its members.
           </p>
-          <a
-            style="text-decoration: none"
-            class="abtbtn"
-            href="https://discord.gg/mM9qFh2uZR"
-            >Join Discord</a
-          >
-
-          <img src="images/community.png" alt="" class="introimg" />
         </div>
       </div>
-    </section>
-
-    <section class="Mission" id="mission">
-      <div class="">
-        <h1>Mission</h1>
-        <h2>Happy Community</h2>
-        <p>
-          Our mission is to promote open-source software development, foster a
-          collaborative environment, and provide opportunities for learning and
-          growth. We aim to create software that benefits the wider community
-          and drives technological progress.
-        </p>
+      <div class="box" id="mission">
+        <h1>MISSION</h1>
+        <div class="intro-content">
+          <p>
+            Our mission is to promote open-source software development, foster
+            a collaborative environment, and provide opportunities for
+            learning and growth. We aim to create software that benefits the
+            wider community and drives technological progress.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+  <section>
+    <div class="counters">
+      <div>
+        <div class="counter">
+          <h1><span data-count="1000">0</span></h1>
+          <h3>Visitors</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="200">0</span></h1>
+          <h3>Members</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="100">0</span>+</h1>
+          <h3>Followers</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="70">0</span>+</h1>
+          <h3>Countries</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="timeline-for-join" id="Timeline">
+    <h1>How To Join US?</h1>
+    <div class="timeline">
+      <div class="tcontainer left-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Join Discord</h2>
+          <p>
+            Join our Discord server to connect with other developers, share
+            ideas, and collaborate on
+          </p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+      <div class="tcontainer right-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Register</h2>
+          <p>Register on our website and create a profile.</p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+      <div class="tcontainer left-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Contribute</h2>
+          <p>Contribute to our projects and make a difference.</p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+      <div class="tcontainer right-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Participate</h2>
+          <p>Participate in our events and meet like-minded individuals.</p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+      <div class="tcontainer left-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Learn</h2>
+          <p>
+            Learn new skills and stay up-to-date with the latest technologies.
+          </p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="project" id="projects">
+    <h1>OUR PROJECTS</h1>
+    <div class="pcontainer">
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-1.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Project Alpha</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              An open-source web application framework that simplifies
+              development with modular architecture and built-in features.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-2.jpeg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Data Insights</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              A collaborative platform for data analysis and visualization. It
+              provides powerful tools for data manipulation and statistical
+              analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-3.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">AI Toolkit</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              A suite of tools and libraries for machine learning enthusiasts.
+              It offers resources for developing and deploying machine
+              learning models.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-4.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Community Hub</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              An online portal for community events, discussions, and
+              resources. It aims to connect members and facilitate
+              collaboration within the community.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-5.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Code Learn</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              An interactive platform for learning programming languages
+              through hands-on exercises and real-time feedback. It offers
+              courses, challenges, and a supportive community to enhance
+              coding skills.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-6.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Opne Health</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              An open-source platform for healthcare data management and
+              analysis. It aims to improve healthcare outcomes by providing
+              tools for data integration, visualization, and research
+              collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <special-footer></special-footer>
+  <script src="index.js"></script>
+  <script src="footer/footer.js"></script>
 
-    <!-- <main>
-      <section id="introduction">
-        <h2>Introduction</h2>
-        <p>
-          Welcome to our open-source community! We are a diverse group of
-          individuals passionate about collaboration, innovation, and sharing
-          knowledge through open-source projects. Our community thrives on the
-          contributions and enthusiasm of its members.
-        </p>
-      </section>
+  <!--  counter js -->
 
-      <section id="mission">
-        <h2>Mission</h2>
-        <p>
-          Our mission is to promote open-source software development, foster a
-          collaborative environment, and provide opportunities for learning and
-          growth. We aim to create software that benefits the wider community
-          and drives technological progress.
-        </p>
-      </section>
+  <script>
+    const counters = document.querySelectorAll(".counters span");
+    const container = document.querySelector(".counters");
 
-      <section id="values">
-        <h2>Values</h2>
-        <ul>
-          <li>
-            <strong>Collaboration:</strong> We believe in the power of working
-            together to achieve great things.
-          </li>
-          <li>
-            <strong>Inclusivity:</strong> We welcome contributions from people
-            of all backgrounds and skill levels.
-          </li>
-          <li>
-            <strong>Transparency:</strong> We maintain open and honest
-            communication within our community.
-          </li>
-          <li>
-            <strong>Innovation:</strong> We strive to push the boundaries of
-            technology through creative problem-solving.
-          </li>
-          <li>
-            <strong>Respect:</strong> We treat each other with respect and
-            kindness, fostering a supportive environment.
-          </li>
-        </ul>
-      </section>
+    let activated = false;
+    window.addEventListener("scroll", () => {
+      const containerOffsetTop = container.offsetTop;
+      const containerOffsetHeight = container.offsetHeight;
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <p>
-          Our community is involved in a variety of projects spanning different
-          domains, including web development, data science, machine learning,
-          and more. Here are some of our ongoing projects:
-        </p>
-        <ul>
-          <li>
-            <strong>Project Alpha:</strong> An open-source web application
-            framework.
-          </li>
-          <li>
-            <strong>Data Insights:</strong> A collaborative platform for data
-            analysis and visualization.
-          </li>
-          <li>
-            <strong>AI Toolkit:</strong> A suite of tools and libraries for
-            machine learning enthusiasts.
-          </li>
-          <li>
-            <strong>Community Hub:</strong> An online portal for community
-            events, discussions, and resources.
-          </li>
-        </ul>
-      </section>
+      if (
+        window.pageYOffset > containerOffsetTop - window.innerHeight + 200 &&
+        !activated
+      ) {
+        counters.forEach((counter) => {
+          counter.innerText = "0";
+          let count = 0;
 
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>
-          If you have any questions or would like to get involved, please reach
-          out to us using the form below:
-        </p>
-        <form id="contact-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          function updateCount() {
+            const target = parseInt(counter.getAttribute("data-count"));
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-    </main> -->
-
-    <special-footer></special-footer>
-
-    <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          alert("Thank you for your message. We will get back to you soon.");
-          document.getElementById("contact-form").reset();
+            if (count < target) {
+              count++;
+              counter.innerText = count;
+              setTimeout(updateCount, 10);
+            } else {
+              counter.innerText = target;
+            }
+          }
+          updateCount();
         });
-    </script>
-    <script src="footer/footer.js"></script>
-  </body>
+        activated = true;
+      } else if (
+        window.pageYOffset < containerOffsetTop - window.innerHeight + 500 &&
+        activated
+      ) {
+        counters.forEach((counter) => {
+          counter.innerText = "0";
+        });
+        activated = false;
+      }
+    });
+  </script>
+</body>
+
 </html>

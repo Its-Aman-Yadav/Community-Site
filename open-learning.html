@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Learning - Open Source Village</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ourplan.css" />
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("nav");
+            header.classList.toggle("sticky", window.scrollY > 50)
+        })
+    </script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(to bottom, #FFD700, #FFFFFF);  */
+        color: black;
+    }
+
+    
+
+    .header {
+            margin-top: 50px;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 5px;
+            font-size: large;
+        }
+
+    .main-content {
+        max-width: 70%;
+        margin: 120px auto 20px;
+        padding: 20px;
+        background: linear-gradient(to top, #ffd900d1, #FFFFFF); 
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    .main-content h1 {
+        font-size: 2.5em;
+            font-weight: 600;
+            color: #000000;
+    }
+
+    .main-content p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #000000;
+    }
+
+    .main-content h2 {
+        color: #ffa600;
+        margin-top: 30px;
+        border-bottom: 1px solid #FFA500;
+        padding-bottom: 5px;
+        font-weight:500;
+    }
+
+    .main-content h3 {
+        color: #FFA500;
+        margin-top: 20px;
+    }
+    
+    /* .title {
+            font-size: 2em;
+            font-weight: 600;
+            color: #000000;
+    } */
+
+    .hr-line{
+            border: 0;
+            height: 1px;
+            margin: 10px 0px;
+            background: #333;
+            background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        }
+    
+</style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <nav>
+            <a class="logo-link" href="#home">
+                <label class="logo">
+                    <img src="images/fav.png" alt="logo">
+
+                    <span class="logo-text">Open Source Village</span>
+                </label>
+
+
+
+            </a>
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a class="active" href="index.html">Home</a></li>
+                <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
+                <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
+                <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
+                <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+            </ul>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round" id="toggle"></div>
+            </label>
+
+            <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+            <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()"
+                alt="Profile">
+
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('checkbox');
+            toggleButton.addEventListener('change', function () {
+                document.body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+
+    <div class="main-content">
+        <header class="header">
+            <h1 class="title">Open Learning</h1>
+            <div class="hr-line"></div>
+        </header>
+        <section class="open-learning">
+            <p>Our community promotes open learning, allowing members to share their knowledge and skills with others,
+                fostering a culture of continuous growth.</p>
+            <p>We provide a variety of resources including tutorials, articles, and webinars on diverse topics such as
+                programming, design, marketing, and more. Our platform encourages members to both learn and teach,
+                creating a dynamic environment where knowledge flows freely.</p>
+            
+            <h2>Benefits of Open Learning</h2>
+            <p>Access to a wide range of educational materials.</p>
+            <p>Opportunities to learn at your own pace and convenience.</p>
+            <p>Ability to collaborate with peers on projects and assignments.</p>
+            <p>Support from a community of like-minded learners and educators.</p>
+
+            <h2>Our Learning Resources</h2>
+            <p>Explore our comprehensive library of learning resources, including:</p>
+            <p>Interactive coding exercises and challenges.</p>
+            <p>Video tutorials covering advanced topics in technology.</p>
+            <p>Expert-led webinars on industry trends and best practices.</p>
+            <p>Case studies and real-world projects to apply your skills.</p>
+
+            <h2>Community Participation</h2>
+            <p>Engage with our vibrant community through:</p>
+            <p>Discussion forums and chat groups for real-time interaction.</p>
+            <p>Collaborative projects and hackathons to solve real-world problems.</p>
+            <p>Peer-reviewed code reviews and constructive feedback.</p>
+            <p>Online events and workshops hosted by industry leaders.</p>
+
+            <h2>Continuous Improvement</h2>
+            <p>At Open Source Village, we believe in continuous improvement:</p>
+            <p>Regular updates and additions to our learning resources.</p>
+            <p>Feedback mechanisms to enhance user experience and content relevance.</p>
+            <p>Ongoing research and development in emerging technologies.</p>
+            <p>Recognition and rewards for active contributors and mentors.</p>
+        </section>
+    </div>
+
+    <!-- footer section -->
+  <special-footer></special-footer>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+  <script>
+    function sendFeed() {
+      alert('Email sent successfully!');
+    }
+  </script>
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Message sent successsfully. We will get back to you soon.")
+      );
+    }
+    function sendFeed() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Feedback sent successsfully")
+      );
+    }
+  </script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/vegas.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "This chatbot is for the community",
+      "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+    });
+  </script>
+  <!-- swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script>
+
+    /*=============== SWIPER JS ===============*/
+    let swiperCards = new Swiper(".card__content", {
+      loop: true,
+      spaceBetween: 52,
+      grabCursor: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+        },
+        968: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+
+
+  <script src="./footer/footer.js"></script>
+</body>
+
+</html>
