@@ -1185,7 +1185,7 @@
                   <input type="email" name="email" class="input" placeholder="Email" required />
               </div>
               <div class="input-container">
-                  <input type="tel" name="phone" class="input" placeholder="Phone" required />
+                  <input type="tel" name="phone" class="input" placeholder="Phone" required pattern="^\+?[0-9]{10,15}$" />
               </div>
               <div class="input-container textarea">
                   <textarea name="message" class="input" placeholder="Message" required></textarea>
@@ -1212,18 +1212,24 @@
         const message = document.querySelector('textarea[name="message"]').value.trim();
 
     
-        if (name === "" || email === "" || phone === "" || message === "") {
-            errorMessage.style.display = 'block';
-            thankYouMessage.style.display = 'none';
-        } else {
-            errorMessage.style.display = 'none';
-            thankYouMessage.style.display = 'block';
+        const phonePattern = /^\+?[0-9]{10,15}$/;
 
-           
-            setTimeout(function() {
-                thankYouMessage.style.display = 'none';
-                document.getElementById('contactForm').reset();
-            }, 3000);
+if (name === "" || email === "" || phone === "" || message === "") {
+    errorMessage.style.display = 'block';
+    errorMessage.textContent = 'Please fill all the details correctly.';
+    thankYouMessage.style.display = 'none';
+} else if (!phonePattern.test(phone)) {
+    errorMessage.style.display = 'block';
+    errorMessage.textContent = 'Please enter a valid phone number.';
+    thankYouMessage.style.display = 'none';
+} else {
+    errorMessage.style.display = 'none';
+    thankYouMessage.style.display = 'block';
+
+    setTimeout(function() {
+        thankYouMessage.style.display = 'none';
+        document.getElementById('contactForm').reset();
+    }, 3000);
         }
     });
 </script>
