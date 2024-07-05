@@ -111,9 +111,9 @@ class SpecialFooter extends HTMLElement {
         </div>
         <div class="row2">
           <div class="form">
-            <form id="emailForm">
+            <form id="emailForm" class="emailFormFlex">
               <input type="text" id="emailInput" placeholder="Email here...">
-              <button type="submit"><i class="fa fa-paper-plane"></i></button>
+              <button type="submit" class="submit"><i class="fa fa-paper-plane"></i></button>
             </form>
           </div>
         </div>
@@ -125,13 +125,13 @@ class SpecialFooter extends HTMLElement {
         </p>
       </footer>`;
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const emailForm = document.querySelector('#emailForm');
+    document.addEventListener("DOMContentLoaded", function () {
+      const emailForm = document.querySelector("#emailForm");
 
-      emailForm.addEventListener('submit', function (event) {
+      emailForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const emailInput = document.querySelector('#emailInput').value;
+        const emailInput = document.querySelector("#emailInput").value;
 
         if (!validateEmail(emailInput)) {
           alert("Please enter a valid email address.");
