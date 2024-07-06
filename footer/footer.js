@@ -96,6 +96,8 @@ class SpecialFooter extends HTMLElement {
               <div class="links">
                 <a href="terms&conditions.html">Terms and Conditions</a>
                 <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="licensing.html">Licensing</a>
+
               </div>
             </div>
 
