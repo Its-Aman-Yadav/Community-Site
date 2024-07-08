@@ -1257,183 +1257,264 @@
 
   <!-- feedback -->
   <style>
-    @media (max-width: 767px) {
-      .feedback-container {
-        padding: 10px 10px;
-        width: 95%;
-      }
-
-      .section-title h1.feedback-title {
-        font-size: 15px;
-      }
-
-      .section-title p.feedback-description {
-        font-size: 14px;
-      }
-
-      .rating {
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .rating label {
-        font-size: 20px;
-      }
-
-      .submit-btn {
-        width: 100%;
-        padding: 10px;
-      }
+    .feedback-wrapper {
+      margin-top: 0px;
+      border-radius: 10px ;
+      width: 38%;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+      box-sizing: border-box;
     }
+  
+    .feedback-form {
+      background: linear-gradient(to bottom, #fdde6d, #ff7300); 
+      padding: 20px ;
+      border-radius: 10px ;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+      box-sizing: border-box ;
+    }
+
+    .feedback-form h2 {
+      font-size: 30px ;
+     font-weight: 800;
+     
+      text-align: center ;
+      color: rgb(208, 113, 4) ;
+    }
+
+    .feedback-form label {
+      display: block ;
+      margin-bottom: 0px ;
+      font-size: 17px ;
+      color: #333 ;
+      font-weight: 300;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form textarea {
+      width: 100% ;
+      padding: 10px ;
+      margin-top: 2px;
+      margin-bottom: 10px ;
+      font-size: 16px ;
+      border: 2px solid #ccc ;
+      border-radius: 5px ;
+      transition: border-color 0.3s;
+    }
+
+    .feedback-form input[type="text"]:focus,
+    .feedback-form input[type="email"]:focus,
+    .feedback-form textarea:focus {
+      outline: none !important;
+    }
+
+    .feedback-form button[type="submit"] {
+      display: block !important;
+      width: 100% !important;
+      padding: 12px !important;
+      font-size: 18px !important;
+      border: none !important;
+      border-radius: 5px !important;
+      background-color: rgb(0, 85, 138) !important;
+      color: #fff !important;
+      cursor: pointer !important;
+      transition: background-color 0.3s !important;
+    }
+
+    .feedback-form button[type="submit"]:hover {
+      background-color: rgb(3, 37, 59)!important;
+      transform: translateY(2px);
+    }
+
+  
+
+    .feedback-form .feed-para {
+      text-align: center;
+      font-size: 18px;
+      color: rgb(255, 251, 246);
+    }
+
+.rate-us {
+   margin-top: 13px;
+  display: block;
+  text-align: center;
+  margin-bottom: 0px;
+  color: rgb(42, 40, 40) !important;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 40px;
+  margin-bottom: 2px;
+}
+
+.rating-container button {
+  font-size: 42px;
+  border: none;
+  cursor: pointer;
+  color: rgb(231, 231, 231);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.rating-container button.filled {
+  color: rgb(255, 94, 0); 
+  transform: scale(1.2);
+}
+
+.rating-container button:hover {
+  transform: scale(1.3);
+}
+
+
+
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.532);
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  flex-direction: column;
+}
+
+.popup-icon {
+  justify-self: center;
+  display: inline-block;
+}
+.popup-content {
+  background: linear-gradient(to bottom, #ffffff, #ffce92); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  height: 307px;
+}
+.popup-content h2 {
+  color: #d9822b;
+  font-weight: 600;
+  font-size: 19px;
+}
+.popup-content p {
+  font-size: 17px;
+  margin-bottom: 5px;
+  color: rgb(62, 62, 62);
+}
+.popup-button {
+  background-color:  rgb(0, 85, 138);
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.popup-button:hover {
+  background-color:  rgb(3, 37, 59);
+}
   </style>
-  <section id="feedback" class="feedback-container" style="margin-top: 100px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="section-title">
-            <h1 style="color: rgb(255, 81, 0);">Give us your Feedback</h1>
-            <p style="color: white; width: 100%;">We value your opinion. Please share your feedback with us!</p>
-          </div>
-          <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
-            <form id="feedback-form" action="" method="POST">
-              <div class="col-md-6 col-sm-6">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-              </div>
-              <div class="col-md-12 col-sm-12" style="margin-left: 2px; margin-right: 35px;">
-                <textarea name="message" class="form-control" placeholder="Your Feedback" rows="6" style="resize: none;"
-                  required></textarea>
-              </div>
-              <div class="col-md-12 col-sm-12">
-                <p style="color: white;">Rate your experience:</p>
-                <div class="col-12 rating rad">
-                  <input type="radio" id="star5" name="rating" value="5">
-                  <label for="star5"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star4" name="rating" value="4">
-                  <label for="star4"><i class="fas fa-star"></i></label>
+</head>
+<body>
 
-                  <input type="radio" id="star3" name="rating" value="3">
-                  <label for="star3"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star2" name="rating" value="2">
-                  <label for="star2"><i class="fas fa-star"></i></label>
-                  <input type="radio" id="star1" name="rating" value="1">
-                  <label for="star1"><i class="fas fa-star"></i></label>
-
-
-                  <!-- feedback -->
-                  <!DOCTYPE html>
-                  <html lang="en">
-
-                  <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Feedback Form</title>
-                    <link rel="stylesheet" href="styles.css">
-                  </head>
-
-                  <body>
-                    <script>
-                      function handleFeedbackSubmit(event) {
-                        event.preventDefault(); // Prevent the default form submission
-
-                        // Get form values
-                        var name = document.getElementById("name").value;
-                        var email = document.getElementById("email").value;
-                        var message = document.getElementById("message").value;
-                        var ratingChecked = document.querySelector('input[name="rating"]:checked');
-
-                        // Check if all fields are filled
-                        if (name === "" || email === "" || message === "" || !ratingChecked) {
-                          Toastify({
-                            text: "Thanks For Your Feedback :)",
-                            duration: 3000,
-                            close: true,
-                            gravity: "center", // `top` or `bottom`
-                            position: "center", // `left`, `center` or `right`
-                            backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
-                            stopOnFocus: true // Prevents dismissing of toast on hover
-                          }).showToast();
-                        } else {
-                          // Display the Toastify message
-                          Toastify({
-                            text: "Thanks For Your Feedback :)",
-                            duration: 3000,
-                            close: true,
-                            gravity: "center", // `top` or `bottom`
-                            position: "center", // `left`, `center` or `right`
-                            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-                            stopOnFocus: true // Prevents dismissing of toast on hover
-                          }).showToast();
-
-                          // Optionally, you can reset the form
-                          document.getElementById("feedback-form").reset();
-                        }
-                      }
-                    </script>
-                </div>
-              </div>
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" style="text-align: center;">
-                <button type="submit" class="submit-btn" style="margin-bottom: 10px;">SUBMIT FEEDBACK</button>
-                <div id="message1"></div>
-              </div>
-          </div>
-  </section>
-
-  </main>
-  <script>
-    const labels = document.querySelectorAll('.rating label');
-
-    labels.forEach(label => {
-      label.addEventListener('click', () => {
-        labels.forEach(l => l.classList.remove('selected'));
-        label.classList.add('selected');
-      });
-    });          
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Code for label clicks
-      const labels = document.querySelectorAll('.label'); // Assuming labels have class 'label'
-      labels.forEach(label => {
-        label.addEventListener('click', () => {
-          labels.forEach(l => l.classList.remove('selected'));
-          label.classList.add('selected');
-        });
-      });
-
-      // Code for contact form submission
-      document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        document.getElementById("message").innerHTML = "<span style='font-size: 20px; font-weight: bold; color: white;'>Your message sent successfully!</span>";
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementsByName("message")[0].value = "";
-      });
-
-      // Code for feedback form submission
-      document.getElementById("feedback-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        document.getElementById("message1").innerHTML = "<span style='font-size: 20px; display: inline-block; width: auto; font-weight: bold; color: green; white-space: nowrap;'>Your feedback submitted successfully!</span>";
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementsByName("message1")[0].value = "";
-      });
-    });
-  </script>
-
-
-  <script>
-    function sendEmail() {
-      alert("Email sent successfully!");
-    }
-  </script> <label for="star4"><i class="fas fa-star"></i></label>
-
-  </script>            
-
+<div class="feedback-wrapper">
+  <div class="feedback-form">
+    <h2>We'd Love Your Feedback!</h2>
+    <p class="feed-para">Let us know how we're doing and how we can improve.</p>
+    <p class="feed-para"><strong style="color: rgb(114, 48, 1);">Open Source Village</strong></p>
+    <div>
+      <p for="rating" class="rate-us">Rate Your Experience</p>
+      <div class="rating-container">
+        <button type="button" onclick="handleRatingChange(1)">☆</button>
+        <button type="button" onclick="handleRatingChange(2)">☆</button>
+        <button type="button" onclick="handleRatingChange(3)">☆</button>
+        <button type="button" onclick="handleRatingChange(4)">☆</button>
+        <button type="button" onclick="handleRatingChange(5)">☆</button>
+      </div>
+    </div>
+    <form id="feedback-form" onsubmit="handleSubmit(event)">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <label for="feedback">Your Feedback</label>
+      <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
   </div>
+</div>
+
+<div id="popup" class="popup" style="display: none;">
+  <div class="popup-content">
+    <h2>Thank you for your Feedback!🧡</h2>
+    <div class="popup-icon">
+      <img src="/images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120">
+    </div>
+    <p>Your feedback has been received.<br> We appreciate the input you provide.</p>
+    <button class="popup-button" onclick="closePopup()">Back to Home</button>
+  </div>
+</div>
+
+<script>
+  let rating = null;
+
+  function handleRatingChange(rating) {
+  const buttons = document.querySelectorAll('.rating-container button');
+  buttons.forEach((button, index) => {
+    if (index < rating) {
+      button.classList.add('filled');
+      button.textContent = '★'; // Filled star
+    } else {
+      button.classList.remove('filled');
+      button.textContent = '☆'; // Empty star
+    }
+  });
+}
+
+  function updateStars() {
+  const buttons = document.querySelectorAll('.rating-container button');
+  buttons.forEach((button, index) => {
+    if (index < rating) {
+      button.classList.add('filled');
+    } else {
+      button.classList.remove('filled');
+    }
+  });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const feedback = document.getElementById('feedback').value;
+
+    console.log('Feedback submitted:', { name, email, rating, feedback });
+
+    document.getElementById('feedback-form').reset();
+    rating = null;
+    updateStars();
+
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+
   <!-- footer section -->
   <special-footer></special-footer>
 
