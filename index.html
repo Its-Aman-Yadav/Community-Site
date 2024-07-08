@@ -594,12 +594,31 @@
       </p>
       <div class="last-text">
         <div class="text1">
-          <h3>1000+</h3>
+          <h3 class="counter">0+</h3>
           <h5>MEMBERS</h5>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    // JavaScript to animate the counter
+    document.addEventListener("DOMContentLoaded", () => {
+      const counterElement = document.querySelector('.counter');
+      const targetNumber = 1000;
+      const duration = 2000;
+      const stepTime = Math.abs(Math.floor(duration / targetNumber));
+      
+      let currentNumber = 0;
+      const counter = setInterval(() => {
+        currentNumber += 1;
+        counterElement.textContent = currentNumber + '+';
+        if (currentNumber >= targetNumber) {
+          clearInterval(counter);
+        }
+      }, stepTime);
+    });
+  </script>
 
 
   <!-- services section -->
