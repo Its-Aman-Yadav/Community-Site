@@ -1975,6 +1975,8 @@ div.card {
 }
 
 .text1 {
+  display: flex;
+  flex-direction: row;
   margin-right: 60px;
 }
 
