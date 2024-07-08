@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/ourplan.css" />
+    <link rel="stylesheet" href="privacy.css" />
     <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
@@ -23,15 +23,14 @@
         })
     </script>
     <style>
-        /* Base Styles */
         #privacy-policy-container {
             width: 70%;
-            margin: 150px auto
+            margin: 150px auto;
             font-size: 14px;
             border-radius: 10px;
             background:linear-gradient(white, #f5d244);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }j
+        }
 
         .header {
             margin-top: 50px;
@@ -40,6 +39,14 @@
             letter-spacing: 5px;
             font-size: large;
         }
+        #image {
+      margin-left: 10px;
+       /* Reduced height of the profile image */
+       width: 30px;
+      /* Reduced width of the profile image */
+      border-radius: 50%;
+      cursor: pointer;
+    }
 
         .title {
             font-size: 2em;
@@ -47,14 +54,6 @@
             color: #000000;
         }
         .hr-line{
-            border: 0;
-            height: 1px;
-            margin: 10px 20px;
-            background: #333;
-            background-image: linear-gradient(to right, #ccc, #333, #ccc);
-        }
-
-        .hr-line {
             border: 0;
             height: 1px;
             margin: 10px 20px;
@@ -71,12 +70,6 @@
             margin-bottom: 20px;
         }
 
-        .section-title {
-            font-size: 22px;
-            color: #2b2b2b;
-            font-weight: 600;
-            padding-bottom: 0px;
-        }
 
         .section-content {
             font-size: 1em;
@@ -88,7 +81,6 @@
             color: #000000;
             padding: 0;
         }
-
 
 
         .list-num{
@@ -110,32 +102,55 @@
             text-align: left;
             color: #121212;
             font-size: 12px;
-
         }
+            /* Back to Top Button */
+    .scrollToTopBtn {
+      /* background-color: #FFE70F; */
+      background-image: radial-gradient(#f3bf8c, #ee7f10);
+      color: #fff;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-decoration: none;
+      border: none;
+      line-height: 50px;
+      /* Center text vertically */
+      transition: background-color 0.3s ease;
+      position: fixed;
+      bottom: 106px;
+      right: 43px;
+      display: none;
+      /* Hidden by default */
+      z-index: 1000;
+      margin-bottom: 10px;
+    }
 
-        .home {
-            margin: 100px;
-        }
+    .scrollToTopBtn:hover {
+      background-color: #484848;
+    }
 
-        #image {
-            height: 30px;
-            width: 30px;
-            border-radius: 50%;
-            margin-left: 10px;
-            cursor: pointer;
-        }
+    .progress-ring {
+      position: fixed;
+      bottom: 101px;
+      margin-bottom: 10px;
+      right: 38px;
+      transform: rotate(-90deg);
+      z-index: 999;
+      /* Just below the button */
+      margin-bottom: 10px;
+    }
 
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-        }
+    .progress-ring__circle {
+      transition: 0.35s stroke-dasharray;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+    </style>
+</head>
 
-        body.dark-mode #privacy-policy-container {
-            background: linear-gradient(#1e1e1e, #121212);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
+<body>
 
     
   <!-- Chatbot integration section -->
@@ -169,95 +184,81 @@
   </svg>
   </footer>
 
-        body.dark-mode .title,
-        body.dark-mode .section-title {
-            color: #ffffff;
-        }
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
 
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
 
-        body.dark-mode .section-content,
-        body.dark-mode .list-item {
-            color: #d3d3d3;
-        }
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
 
-        body.dark-mode .hr-line {
-            background: #555;
-            background-image: linear-gradient(to right, #444, #555, #444);
-        }
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
 
-        /* Back to Top Button */
-        .scrollToTopBtn {
-            background-image: radial-gradient(#f3bf8c, #ee7f10);
-            color: #fff;
-            text-align: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 18px;
-            text-decoration: none;
-            border: none;
-            line-height: 50px;
-            transition: background-color 0.3s ease;
-            position: fixed;
-            bottom: 106px;
-            right: 43px;
-            display: none;
-            z-index: 1000;
-            margin-bottom: 10px;
-        }
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-        .scrollToTopBtn:hover {
-            background-color: #484848;
-        }
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
 
-        .progress-ring {
-            position: fixed;
-            bottom: 101px;
-            margin-bottom: 10px;
-            right: 38px;
-            transform: rotate(-90deg);
-            z-index: 999;
-        }
-
-        .progress-ring__circle {
-            transition: 0.35s stroke-dasharray;
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
-    </style>
-</head>
-
-<body>
-
-    <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
-    <svg class="progress-ring" width="60" height="60">
-        <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
-    </svg>
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
 
     <!-- Navbar -->
-    <div class="navbar">
-        <nav>
-            <a class="logo-link" href="#home">
-                <label class="logo">
-                    <img src="images/fav.png" alt="logo">
+  <div class="navbar">
+    <nav>
+      <a class="logo-link" href="#home">
+        <div class="logo-title">
+                    <img  class="logo" src="images/fav.png" alt="logo">
+
                     <span class="logo-text">Open Source Village</span>
-                </label>
-            </a>
-            <ul>
-                <li><i class="fa-solid fa-house"></i><a class="active" href="index.html">Home</a></li>
-                <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
-                <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
-                <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
-                <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
-                <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
-            </ul>
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round" id="toggle"></div>
-            </label>
-            <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
-        </nav>
-    </div>
+                   </div>
+
+        <!-- <div>
+          <span class="logo-subtext">Source</span>
+        </div> -->
+
+      </a>
+      <ul>
+        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+      </ul>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round" id="toggle"></div>
+      </label>
+
+      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+
+    </nav>
+  </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -273,16 +274,16 @@
             <h1 class="title" id="privacy-policy-title">Privacy Policy</h1>
               <div class="hr-line"></div>
         </header>
-        <main class="main-content">
-            <section class="section">
+        <main class="main-content" >
+            <section class="section" >
                 <h2 class="section-title">Introduction</h2>
                 <p class="section-content">Welcome to Open Source Village. We value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and protect your data when you use our website and services.</p>
             </section>
-            <section class="section">
+
+            <section class="section" >
                 <h2 class="section-title">Data Collection</h2>
                 <p class="section-content">We collect various types of information in connection with the services we provide, including:</p>
                 <div class="section-list">
-
                     <ol class="list-num">
                     <li><p>Personal Identification Information (Name, email address, phone number, etc.)</p></li>
                     <li><p>Usage Data (IP address, browser type, pages visited, etc.)</p></li>
@@ -315,211 +316,39 @@
                     <li><p>With business partners to offer you certain products, services, or promotions</p></li>
                     <li><p>With your consent, we may disclose your personal information for any other purpose</p></li>
                 </ol>
-
                 </div>
             </section>
-            <section class="section">
+
+            <section class="section" >
                 <h2 class="section-title">Data Protection</h2>
-                <p class="section-content">We implement a variety of security measures to maintain the safety of your personal information. However, no method of transmission over the internet or method of electronic storage is 100% secure. Therefore, we cannot guarantee its absolute security.</p>
+                <p class="section-content">We implement a variety of security measures to maintain the safety of your personal information. However, please note that no method of transmission over the Internet, or method of electronic storage is 100% secure.</p>
             </section>
+
             <section class="section">
-                <h2 class="section-title">Third-Party Services</h2>
-                <p class="section-content">We may employ third-party companies and individuals to facilitate our services, to provide the services on our behalf, to perform service-related services, or to assist us in analyzing how our services are used. These third parties have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                <h2 class="section-title">Your Rights</h2>
+                <p class="section-content">You have the right to access, correct, or delete your personal information. You can do this by contacting us using the contact information provided below.</p>
             </section>
-            <section class="section">
+
+            <section class="section" >
                 <h2 class="section-title">Changes to This Privacy Policy</h2>
-                <p class="section-content">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                <p class="section-content">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
             </section>
+
             <section class="section">
                 <h2 class="section-title">Contact Us</h2>
                 <p class="section-content">If you have any questions about this Privacy Policy, please contact us:</p>
                 <div class="section-list">
-                    <p class="list-item">Email: support@opensourcevillage.com</p>
-                    <p class="list-item">Phone: +1 234 567 890</p>
+                    <p class="list-item">By email: opensourcevillage@gmail.com</p>
                 </div>
             </section>
         </main>
     </div>
- <!-- <special-footer></special-footer> -->
-
-    <!-- footer section -->
     <special-footer></special-footer>
 
-    <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
-    <svg class="progress-ring" width="60" height="60">
-      <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
-    </svg>
-    </footer>
-    <script>
-      function sendFeed() {
-        alert('Email sent successfully!');
-      }
-    </script>
-    </div>
-    <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-      let circle = document.querySelector(".progress-ring__circle");
-      let radius = circle.r.baseVal.value;
-      let circumference = 2 * Math.PI * radius;
-  
-      circle.style.strokeDasharray = `${circumference} ${circumference}`;
-      circle.style.strokeDashoffset = circumference;
-  
-      window.onscroll = function () {
-        scrollFunction();
-        updateProgress();
-      };
-  
-      function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      }
-  
-      function topFunction() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-  
-      function updateProgress() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrollPercent = scrollTop / docHeight;
-        let offset = circumference - (scrollPercent * circumference);
-        circle.style.strokeDashoffset = offset;
-      }
-  
-      scrollToTopBtn.addEventListener("click", function (event) {
-        event.preventDefault();
-        topFunction();
-      });
-    </script>
-    <script>
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-  
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-        });
-      });
-      const sections = document.querySelectorAll('section');
-  
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-  
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    </script>
-    <script>
-      function sendEmail() {
-        Email.send({
-          Host: "smtp.elasticemail.com",
-          Username: "yash.223234108@vcet.edu.in",
-          Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
-          To: 'itsamanyadav18@gmail.com',
-          From: document.getElementById('email').value,
-          Subject: "This is the subject",
-          Body: "Name:" + document.getElementById("name").value
-            + "<br> Email:" + document.getElementById("email").value
-            + "<br> Message:" + document.getElementById("msg").value
-  
-        }).then(
-          message => alert("Message sent successsfully. We will get back to you soon.")
-        );
-      }
-      function sendFeed() {
-        Email.send({
-          Host: "smtp.elasticemail.com",
-          Username: "yash.223234108@vcet.edu.in",
-          Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
-          To: 'itsamanyadav18@gmail.com',
-          From: document.getElementById('email').value,
-          Subject: "This is the subject",
-          Body: "Name:" + document.getElementById("name").value
-            + "<br> Email:" + document.getElementById("email").value
-            + "<br> Message:" + document.getElementById("msg").value
-  
-        }).then(
-          message => alert("Feedback sent successsfully")
-        );
-      }
-    </script>
-  
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-  
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  
-    <script src="js/vegas.min.js"></script>
-  
-    <script src="js/wow.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
-      window.botpressWebChat.init({
-        "composerPlaceholder": "Open Source Village",
-        "botConversationDescription": "This chatbot is for the community",
-        "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-        "messagingUrl": "https://messaging.botpress.cloud",
-        "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-        "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
-        "lazySocket": true,
-        "themeName": "prism",
-        "frontendVersion": "v1",
-        "showPoweredBy": true,
-        "theme": "prism",
-        "themeColor": "#2563eb",
-        "allowedOrigins": []
-      });
-    </script>
-    <!-- swiper JS -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <script>
-  
-      /*=============== SWIPER JS ===============*/
-      let swiperCards = new Swiper(".card__content", {
-        loop: true,
-        spaceBetween: 52,
-        grabCursor: true,
-  
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          dynamicBullets: true,
-        },
-  
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-  
-        breakpoints: {
-          600: {
-            slidesPerView: 2,
-          },
-          968: {
-            slidesPerView: 3,
-          },
-        },
-      });
-    </script>
-  
-  
-    <script src="./footer/footer.js"></script>
-  </body>
-  
-  </html>
+    <script src="footer/footer.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-+pdbIffy5IaIYQ4/3CJf/4Swn2PW/jjc/1pAj9z0iXo=" crossorigin="anonymous"></script>
+</body>
+
+</html>

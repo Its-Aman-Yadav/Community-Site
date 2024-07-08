@@ -21,7 +21,7 @@
 .header {
   margin-top: 100px;
   text-align: center;
-  background-color: #ffd700;
+  /* background-color: #ffd700; */
   font-size: large;
 }
 
@@ -40,9 +40,10 @@
 }
 
 .section-title {
-  font-size: 22px;
-  color: #000000;
-  padding-bottom: 0px;
+  font-size: 22px !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+  padding-bottom: 0px !important;
 }
 
 .section-content {
