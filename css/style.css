@@ -1726,8 +1726,8 @@ div.card {
 }
 
 .navbar .logo img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin-top: -5px;
   border-radius: 50%;
 }
@@ -2462,7 +2462,7 @@ label.selected i {
 .submit {
   margin-bottom: 11px;
   background-color: #0e0f0f;
-  color: rgb(233, 236, 40);
+  color: black;
   padding: 16px 16px 16px 16px;
   border: none;
   border-radius: 25px;
@@ -2473,6 +2473,7 @@ label.selected i {
 }
 
 .submit:hover {
+  color:#f1c11a;
   background-color: #0056b3;
   transform: translateY(-2px);
 }
@@ -2845,6 +2846,12 @@ label.selected i {
   box-shadow: 1px 1px 1px 1px red;
 
   cursor: pointer;
+}
+.logo img {
+  height: 40px;
+  /* Reduced height of the logo */
+  width: 40px;
+  /* Reduced width of the logo */
 }
 
 .send-message-btn {
