@@ -1048,9 +1048,12 @@ a:hover .fab {
     margin-bottom: 25px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 875px) {
   .row {
-    flex-direction: column;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
   }
   .col {
     width: 100%;
@@ -3443,8 +3446,8 @@ body {
     margin: 1rem 0 1.5rem 0;
   }
 
-  .social-media {
-    padding: 1.5rem 0 0 0;
+  .social-media,.info {
+    padding: 1.5rem 0 0 2rem;
   }
 }
 
