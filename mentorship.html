@@ -93,45 +93,160 @@
             background: #333;
             background-image: linear-gradient(to right, #ccc, #333, #ccc);
         }
+
+
+        .benefits{
+          display: grid;
+          grid-auto-flow: row;  
+        }
+        .benefits h2{
+          margin-bottom: 20px;
+        }
+        .benefits .item{
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #fcfafa;
+          margin-top: 10px;
+          display: grid;
+          justify-content:start;
+          gap: 15px;
+          align-items: center;
+          grid-auto-flow: column;
+          /* gap:10px; */
+          padding: 10px 15px;
+          font-size: 20px;
+          font-weight: 600;
+          width: fit-content;
+          border-radius: 10px;
+        }
+
+        .benefits :hover{
+         box-shadow: 0px 0px 2px 2px rgb(229, 141, 1);
+
+        }
+        .benefits p{
+          margin-bottom: 0px;
+        }
+        .benefits .item img{
+          height:60px;
+          width: 60px;
+        }
+        .join .columnn{
+          margin: 10px;
+          display: grid;
+          grid-auto-flow: column;
+          align-items: center;
+        }
+        .columnn img{
+          width: 200px;
+          height:200px;
+        }
+    .join ul{
+      list-style-type: circle !important;
+      display: flex !important;
+      gap: 10px;
+      color:rgb(12, 12, 90);
+      font-weight: 600;
+      flex-direction: column !important;
+      text-align: left;
+    }
+    .topics{
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      gap:20px;
+      /* padding: 20px; */
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+    .topics .item2{
+      display: grid;
+      grid-auto-flow: row;
+      text-align: center;
+      font-weight: 700;
+      width: 100%;
+      max-width: 250px;
+      border-width: 2px;
+      margin-top: 30px;
+      border-color: #FFA500;
+      background-color: #fcfafa;
+      padding: 15px 5px;
+      border-radius: 10px;
+      justify-content: space-between;
+    }
+    .topics .item2 img{
+      width: 70px;
+      height: 70px;
+      z-index: 10;
+      padding: 15px;
+      background-color: #ffaa00;
+      border-radius: 50%;
+      margin-top:-20%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+
+    .topics .item2 p{
+      margin-top: 5px;
+    }
+   .sub-head{
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .success-stories ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      align-items: flex-start;
+    }
+    .success-stories ul li{
+      list-style-type: circle;
+      margin-left: 20px;
+      color:rgb(26, 26, 47);
+    }
     
 </style>
 </head>
 
 
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <nav>
-            <a class="logo-link" href="#home">
-                <label class="logo">
-                    <img src="images/fav.png" alt="logo">
+ <!-- Navbar -->
+ <div class="navbar">
+  <nav>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                  <img  class="logo" src="images/fav.png" alt="logo">
 
-                    <span class="logo-text">Open Source Village</span>
-                </label>
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
 
+      <!-- <div>
+        <span class="logo-subtext">Source</span>
+      </div> -->
 
+    </a>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round" id="toggle"></div>
+    </label>
 
-            </a>
-            <ul>
-                <li><i class="fa-solid fa-house"></i><a class="active" href="index.html">Home</a></li>
-                <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
-                <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
-                <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
-                <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
-                <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
-            </ul>
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round" id="toggle"></div>
-            </label>
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
 
-            <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+    <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
 
-            <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()"
-                alt="Profile">
-
-        </nav>
-    </div>
+  </nav>
+</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -150,32 +265,97 @@
     <section class="mentorship">
         <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal and professional growth.</p>
         <p>We believe in the power of mentorship to guide and inspire individuals on their career and personal development journeys. Our mentorship program pairs mentees with mentors who provide guidance, support, and valuable insights based on their own experiences.</p>
-        <h2>Benefits of Mentorship:</h2>
-        <p>Gain personalized advice and feedback from industry experts.</p>
-        <p>Develop new skills and knowledge through mentorship sessions and workshops.</p>
-        <p>Expand your professional network and opportunities for career advancement.</p>
-        <p>Build confidence and clarity in achieving your goals and aspirations.</p>
+        
+        <div class="benefits">
 
+          <h2>Benefits of Mentorship:</h2>
+          <div class="item">
+              <img src="icons/advice.png"/>
+            <p>Gain personalized advice and feedback from industry experts.</p>
+          </div>
+
+          <div class="item">
+            <img src="icons/skill.png" alt="" class="src">
+            <p>Develop new skills and knowledge through mentorship sessions and workshops.</p>
+          </div>
+
+          <div class="item">
+            <img src="icons/networking.png" alt="" class="src">
+            <p>Expand your professional network and opportunities for career advancement.</p>
+          </div>
+          
+          <div class="item">
+            <img src="icons/self-confidence.png" alt="" class="src">
+            <p>Build confidence and clarity in achieving your goals and aspirations.</p>
+          </div>
+  
+        </div>
+
+        
         <h2>Our Mentorship Program</h2>
-        <p>Join our mentorship program to:</p>
-        <p>Receive one-on-one guidance tailored to your specific career goals.</p>
-        <p>Participate in skill-building workshops and training sessions.</p>
-        <p>Access resources and tools to enhance your professional development.</p>
-        <p>Network with mentors who share your professional interests and aspirations.</p>
 
-        <h2>Mentorship Sessions</h2>
-        <p>Our mentorship sessions cover topics such as:</p>
-        <p>Leadership and management skills.</p>
-        <p>Technical expertise and career specialization.</p>
-        <p>Work-life balance and personal growth strategies.</p>
-        <p>Entrepreneurship and innovation in the digital age.</p>
+        <div class="join">
+          <!-- <p class="sub-head">Join our mentorship program to:</p> -->
+          <div class="columnn">
+            <div>
+            <ul>
+              <li>Receive one-on-one guidance tailored to your specific career goals.</li>
+              <li>Participate in skill-building workshops and training sessions.</li>
+              <li>Access resources and tools to enhance your professional development.</li>
+              <li>Network with mentors who share your professional interests and aspirations.</li>
+            </ul>
+          </div>
+          <div class="img">
+            <img src="icons/collaboration.png" alt="" class="src">
+          </div>
+          </div>
+          
 
+        </div>
+        
+
+        <div class="sess">
+          <h2>Mentorship Sessions</h2>
+          <div class="">
+            <p class="sub-head">Our mentorship sessions cover topics such as:</p>
+          </div>
+          <div class="topics">
+
+            <div class="item2">
+              <img src="icons/leadership.png" alt="" class="src">
+              <p>Leadership and management skills.</p>
+            </div>
+
+            <div class="item2">
+              <img src="icons/technical-support.png" alt="" class="src">
+              <p>Technical expertise and career specialization.</p>
+            </div>
+
+            <div class="item2">
+              <img src="icons/balance.png" alt="" class="src">
+              <p>Work-life balance and personal growth strategies.</p>
+            </div>
+
+            <div class="item2">
+              <img src="icons/lightbulb.png" alt="" class="src">
+              <p>Entrepreneurship and innovation in the digital age.</p>
+            </div>
+          </div>
+
+        </div>
+       
+        
+        <div class="success-stories">
         <h2>Success Stories</h2>
-        <p>Discover success stories from our mentorship program, showcasing:</p>
-        <p>Career transitions and achievements.</p>
-        <p>Professional milestones and breakthroughs.</p>
-        <p>Impactful projects and initiatives supported by mentorship.</p>
-        <p>Testimonials from mentees and mentors about their experiences.</p>
+        <p class="sub-head">Discover success stories from our mentorship program, showcasing:</p>
+        <ul>
+          <li>Career transitions and achievements.</li>
+          <li>Professional milestones and breakthroughs.</li>
+          <li>Impactful projects and initiatives supported by mentorship.</li>
+          <li>Testimonials from mentees and mentors about their experiences.</li>
+        </ul>
+      </div>
+   
     </section>
 </div>
 
