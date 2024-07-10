@@ -17,6 +17,16 @@
   <title>About Us - Open Source Community</title>
   <style>
     /* Back to Top Button */
+    
+    #image {
+      height: 30px;
+      /* Reduced height of the profile image */
+      width: 30px;
+      /* Reduced width of the profile image */
+      border-radius: 50%;
+      cursor: pointer;
+      margin-left: 10px;
+    }
     .scrollToTopBtn {
       /* background-color: #FFE70F; */
       background-image: radial-gradient(#f3bf8c, #ee7f10);
@@ -42,6 +52,22 @@
 
     .scrollToTopBtn:hover {
       background-color: #484848;
+    }
+    .text-box{
+      transition: all 0.5s;
+    }
+    .text-box:hover{
+      background:linear-gradient(white, #ee7f10);
+      box-shadow: 0 0  1px 2px #ee7f10;
+      scale:1.1;
+    }
+    .text-box:hover .left-container-arrow{
+      border-left: 15px solid #ee7f10;
+      /* background-color: #ee7f10; */
+    }
+    .text-box:hover .right-container-arrow{
+      border-right: 15px solid #ee7f10;
+      /* background-color: #ee7f10; */
     }
 
     .progress-ring {
@@ -142,25 +168,40 @@
     });
   </script>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <nav>
-      <label class="logo" style="margin-left: 5px; display: flex; gap: 1rem">
-        <img src="images/fav.png" alt="logo" style="height: 50px; width: 50px" />
-        <span style="margin-left: 0; font-size: medium">Open Source Village</span>
-      </label>
-      <ul class="flex flex-col md:flex-row">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#Timeline">Join US</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="login.html">Login/Register</a></li>
-      </ul>
+ <!-- Navbar -->
+ <div class="navbar">
+  <nav>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                  <img  class="logo" src="images/fav.png" alt="logo">
 
-      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
-    </nav>
-  </div>
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
+
+      <!-- <div>
+        <span class="logo-subtext">Source</span>
+      </div> -->
+
+    </a>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round" id="toggle"></div>
+    </label>
+
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+    <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+
+  </nav>
+</div>
   <!-- main section -->
   <div class="about">
     <div class="content">
