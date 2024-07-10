@@ -105,7 +105,7 @@ class SpecialFooter extends HTMLElement {
               <h3>Contact</h3>
               <div class="contact-details">
                 <div class="links">
-                  <a href="#"><i class="fa fa-message"></i>Contact Us</a>
+                  <a href="contact us.html"><i class="fa fa-message"></i>Contact Us</a>
                 </div>
               </div>
             </div>
