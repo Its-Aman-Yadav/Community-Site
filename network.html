@@ -41,7 +41,19 @@
             width: 100%;
             letter-spacing: 5px;
             font-size: large;
-        }
+        } 
+        
+      #image {
+      height: 30px;
+      /* Reduced height of the profile image */
+      width: 30px;
+      /* Reduced width of the profile image */
+      border-radius: 50%;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    
 
     .main-content {
         max-width: 70%;
@@ -92,43 +104,188 @@
             background: #333;
             background-image: linear-gradient(to right, #ccc, #333, #ccc);
         }
+
+    .benefits .cards{
+      display: grid;
+      grid-auto-flow: column;
+      align-items:center ;
+      text-align: center;
+      padding: 10px;
+      gap:10px;
+    }
+
+    .items{
+      align-items: center;
+      background:linear-gradient(white,#f5d244);
+      width: 90%;
+      height: 200px;
+      border-radius: 10%;
+      padding: 10px;
+      font-weight: 700;
+     
+      box-shadow: 0 0 1px 2px #ff8418;
+      border-style: inset;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .items p{
+      color:#e75805;
+      line-height: 100%;
+    }
+
+    .cards .items img{
+      margin-top: 15px;
+      height:65px;
+      width: 65px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-2{
+      display: grid;
+      grid-auto-flow: column;
+      background-color: #f5d244;
+      border-radius: 5px;
+      padding: 10px;
+      border-width: 1.5px;
+      border-color: #e75805;
+      margin-top: 10px;
+    }
+    .card-2 .item-2{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      margin-top:auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card-2 .line{
+      width: 1.2px;
+      height: 90%;
+      margin-top:auto;
+      margin-bottom: auto;
+      background-color: #e75805;
+    }
+    .card-2 p{
+      margin-bottom: 0px;
+      font-weight: 500;
+    }
+
+    .container-2{
+      margin-top: 15px;
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .item-3 img{
+      height:70%;
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+      padding:  20px;
+    }
+    .dot{
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 80%;
+
+    }
+    .dot li{
+      list-style-type: square;
+      text-align: left;
+      margin-left: 20px;
+      color:#e75805;
+      
+    }
+    .container-3{
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin:0;
+      padding:0;
+      position: relative;
+    &:before{
+      content:"";
+      display: inline-block;
+      width: 3px;
+      background: red;
+      position: absolute;
+      left:3px;
+      top:5px;
+      height: calc(100% - 10px );
+
+    }
+  
+
+  .item-4{
+    position: relative;
+    padding-left: 15px;
+    margin-bottom:15px;
+    text-align: left;
+    &:before{
+      content:"";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: rgb(255, 94, 0);
+      position: absolute;
+      left:0;
+      top:5px;
+      border-radius: 10px;
+      }
+    }
+  }
+   
+   
     
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <div class="navbar">
-        <nav>
-            <a class="logo-link" href="#home">
-                <label class="logo">
-                    <img src="images/fav.png" alt="logo">
+  <div class="navbar">
+    <nav>
+      <a class="logo-link" href="#home">
+        <div class="logo-title">
+                    <img  class="logo" src="images/fav.png" alt="logo">
 
                     <span class="logo-text">Open Source Village</span>
-                </label>
+                   </div>
 
+        <!-- <div>
+          <span class="logo-subtext">Source</span>
+        </div> -->
 
+      </a>
+      <ul>
+        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+      </ul>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round" id="toggle"></div>
+      </label>
 
-            </a>
-            <ul>
-                <li><i class="fa-solid fa-house"></i><a class="active" href="index.html">Home</a></li>
-                <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
-                <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
-                <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
-                <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
-                <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
-            </ul>
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round" id="toggle"></div>
-            </label>
+      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
 
-            <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
 
-            <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()"
-                alt="Profile">
-
-        </nav>
-    </div>
+    </nav>
+  </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -145,34 +302,115 @@
         <div class="hr-line"></div>
     </header>
     <section class="network">
+
+      
         <p>Our community enables networking with smart and diverse individuals, fostering collaboration and opportunities for personal and professional growth.</p>
         <p>We host regular networking events, both online and offline, where members can meet and interact with others who share similar interests and goals. Our forums and chat groups are active with discussions on various topics, providing a platform for members to connect and collaborate.</p>
-        <h2>Benefits of Networking:</h2>
-        <p>Expand your professional and social circle.</p>
-        <p>Find collaborators for your projects and ideas.</p>
-        <p>Get advice and insights from experienced professionals.</p>
-        <p>Discover new opportunities for career and personal growth.</p>
+        
+        <div class="benefits">
+          <h2>Benefits of Networking:</h2>
 
+          <div class="cards">
+            <div class="items">
+              <img src="icons/social-network.png" alt="" class="src">
+              <p>Expand your professional and social circle.</p>
+            </div>
+
+            <div class="items">
+              <img src="icons/collaboration-2.png" alt="" class="src">
+              <p>Find collaborators for your projects and ideas.</p>
+            </div>
+           
+            <div class="items">
+              <img src="icons/advice-2.png" alt="" class="src">
+              <p>Get advice and insights from experienced professionals.</p>
+            </div>
+            
+            <div class="items">
+              <img src="icons/opportunity.png" alt="" class="src">
+              <p>Discover new opportunities for career and personal growth.</p>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="events">
         <h2>Our Networking Events</h2>
+          
+       
         <p>Join us at our upcoming networking events:</p>
+        <div class="card-2">
+
+        <div class="item-2">
         <p>Monthly webinars featuring industry leaders and experts.</p>
+      </div>
+      <div class="line"></div>
+      <div class="item-2">
         <p>Networking mixers and meetups in major cities worldwide.</p>
+      </div>
+      <div class="line"></div>
+      <div class="item-2">
         <p>Virtual roundtable discussions on trending topics in technology.</p>
+      </div>
+      <div class="line"></div>
+      <div class="item-2">
         <p>Specialized workshops for skill development and career advancement.</p>
+      </div>
+        </div>
 
+      </div>
+
+      <div class="collaboration">
         <h2>Community Collaboration</h2>
-        <p>Collaborate with like-minded professionals through:</p>
-        <p>Project teams working on open-source initiatives.</p>
-        <p>Professional interest groups focused on specific industries or technologies.</p>
-        <p>Mentorship programs connecting mentors and mentees for mutual growth.</p>
-        <p>Participation in hackathons and innovation challenges.</p>
+        
+        <p style="margin-top: 10px;">Collaborate with like-minded professionals through:</p>
+        <div class="container-2">
+          <div class="item-3">
+            <ul class="dot">
+              <li>Project teams working on open-source initiatives.</li>
+              <li>Professional interest groups focused on specific industries or technologies.</li>
+              <li>Mentorship programs connecting mentors and mentees for mutual growth.</li>
+              <li>Participation in hackathons and innovation challenges.</li>
+            </ul>
+        
+      
+      </div>
+        <div class="item-3">
+          <img src="icons/partners.png" alt="" class="src">
+        </div>
+      </div>
+      </div>
+        
 
+      <div class="prof">
         <h2>Professional Development</h2>
         <p>Advance your career with resources for:</p>
-        <p>Resume building and interview preparation workshops.</p>
-        <p>Career coaching sessions with experienced professionals.</p>
-        <p>Access to job boards and career opportunities within our network.</p>
-        <p>Skills enhancement through online courses and certifications.</p>
+
+        <ul class="container-3">
+          
+            <li class="item-4">
+              <p>Resume building and interview preparation workshops.</p>
+             
+            </li>
+           
+          
+            <li class="item-4">
+              <p>Career coaching sessions with experienced professionals.</p>
+            </li>
+  
+            <li class="item-4">
+              <p>Access to job boards and career opportunities within our network.</p>
+            </li>
+  
+            <li class="item-4">
+              <p>Skills enhancement through online courses and certifications.</p>
+            </li>
+          </ul>
+
+        </div>
+
+        
+      </div>
     </section>
 </div>
 <!-- footer section -->
