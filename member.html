@@ -99,6 +99,57 @@
         transform: rotate(-90deg);
         transform-origin: 50% 50%;
       }
+
+      @media (max-width: 768px) 
+      {
+        .benefits ul 
+        {
+          display: block;
+        }
+        .benefits li 
+        {
+          margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) 
+        {
+          .h2
+          {
+            margin-left:30px;
+          }
+          .steplist 
+          {
+            display: block;
+            margin-left: 30px;
+          }
+          .step-item 
+          {
+           margin-bottom: 30px;
+          }
+        }
+        @media (max-width: 767px) 
+        {
+          .theme-switch,
+          #checkbox 
+          {
+            opacity: 0;
+            pointer-events: none; 
+          }
+
+          #image 
+          {
+            opacity: 0;
+            pointer-events: none; 
+          }
+          .logo-text {
+            font-size: 20px;
+            display: flex;
+            justify-content: flex-start; 
+            white-space: nowrap;
+            margin-left: -80px;
+          }
+      }
+    } 
     </style>
   </head>
   <body>
@@ -231,40 +282,27 @@
       </section>
 
       <section class="steps" id="steps">
-        <h2>Steps to Join</h2>
-        <!-- <ol>
-          <li></li>
-          <li >Fill out the membership application form below.</li>
-          <li>Submit your form and wait for a confirmation email.</li>
-          <li>
-            Follow the instructions in the email to complete your membership
-            registration.
-          </li>
-          <li>Start participating in our projects and community events.</li>
-        </ol> -->
+        <h2 class="h2">Steps to Join</h2>
         <div class="steplist">
-          <div class="line"></div>
           <div class="step-item">
-            <img src="images/contact-form.png">
-           <p> Fill out the membership application form below.</p>
+            <img src="images/contact-form.png" alt="Fill out form">
+            <p>Fill out the membership application form below.</p>
           </div>
           <div class="step-item">
-            <img src="images/stopwatch.png">
+            <img src="images/stopwatch.png" alt="Submit form">
             <p>Submit your form and wait for a confirmation email.</p>
           </div>
           <div class="step-item">
-            <img src="images/registration.png">
-            <p>Follow the instructions in the email to complete your membership
-            registration.  </p>   
+            <img src="images/registration.png" alt="Complete registration">
+            <p>Follow the instructions in the email to complete your membership registration.</p>
           </div>
           <div class="step-item">
-            <img src="images/team.png">
-           <p> Start participating in our projects and community events.</p>
+            <img src="images/team.png" alt="Participate in projects">
+            <p>Start participating in our projects and community events.</p>
           </div>
-          
-
         </div>
       </section>
+      
 
       <!-- <section class="contact" id="contact">
         <div class=" contactform">
@@ -293,35 +331,31 @@
       </div>
       </section> -->
 
-      <section class="contact1" id="contact" style="background-color: #f3bf8c;">
-        <div style="padding-right: 0px; margin-right: 0px; margin-left: 50px;"> 
+      <div class="contact-header">
         <h2>Contact</h2>
-        <p>
-          If you have any questions or need support, feel free to reach out to
-          us:
-        </p>
+        <p>If you have any questions or need support, feel free to reach out to us:</p>
       </div>
-
-      <div>
-        <form class="contact-form1" id="contact-form">
-          <div style="display: flex; gap:5px; position: relative;">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+      <section class="contact1" id="contact" style="background-color: #f3bf8c;">
+      
+        <div class="form-container">
+          <form class="contact-form1" id="contact-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Your email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
         </div>
-        <div style="display: flex; gap:5px;position: relative;">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          </div>
-          <div style="display: flex; gap:5px; position: relative;">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-       </div>
-        <div style="display: flex; gap:5px; position: relative;"></div>
-          <button type="submit" style="width: 100%; margin-right: 50px;">Submit</button>
-        </div>
-        </form>
-      </div>
       </section>
+      
     </main>
     <special-footer></special-footer>
     <script>
