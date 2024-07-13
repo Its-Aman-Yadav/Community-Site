@@ -33,6 +33,27 @@
         background: linear-gradient(#f5d244, #f5a623);
     }
 
+    .title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #000000;
+    max-width: 100%; /* Ensure it doesn't exceed the container */
+    word-wrap: break-word; /* Wrap long words to the next line */
+    text-align: center; /* Center align the text */
+}
+
+/* Add this media query to adjust font size for smaller screens */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em; /* Adjust font size as needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2em; /* Further adjust for very small screens */
+    }
+}
     
 
     .header {
