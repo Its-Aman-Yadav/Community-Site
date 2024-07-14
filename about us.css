@@ -19,31 +19,32 @@ body {
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #f1c11a;
-  background-image: -webkit-linear-gradient(45deg,
-      rgba(255, 255, 255, .2) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, .2) 50%,
-      rgba(255, 255, 255, .2) 75%,
-      transparent 75%,
-      transparent);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #d1a10a;
 }
-
 
 @keyframes fadeIn {
   0% {
@@ -108,7 +109,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 25px;
   animation: fadeIn 4s;
 }
 .box {
@@ -235,8 +235,8 @@ section {
 }
 .timeline {
   position: relative;
-  max-width: 1200px;
-  margin: 100px auto;
+  max-width: 1000px;
+  margin: 80px auto;
 }
 .tcontainer {
   padding: 10px 50px;
@@ -273,7 +273,7 @@ section {
 }
 
 .text-box {
-  padding: 20px 30px;
+  padding: 20px 10px;
   background: #ffffff;
   position: relative;
   border-radius: 6px;
@@ -284,7 +284,13 @@ section {
   color: #0082e6;
   font-weight: 600;
 }
+.text-box a {
+  color: #0082e6;
+  font-weight: 600;
+  text-decoration: none;
+}
 .text-box p {
+  margin: 0;
   color: #000000;
   font-weight: 400;
 }
@@ -312,21 +318,6 @@ section {
   height: 40px;
   width: 40px;
   left: -20px;
-}
-.tcontainer a {
-  position: absolute;
-  width: 40px;
-  right: -35px;
-  top: 32px;
-  z-index: 10;
-}
-.tcontainer a i {
-  color: #000000;
-  padding-top: 10px;
-}
-
-.right-container a {
-  left: -6px;
 }
 
 .timeline::after {
@@ -379,15 +370,12 @@ section {
 .project {
   height: 1000px;
   width: 100%;
-  background: linear-gradient(#ffca0c, white);
   text-align: center;
 }
 .project h1 {
   margin: 0;
-
   padding: 20px;
   font-size: 40px;
-
   color: #0082e6;
   text-align: center;
   font-weight: 600;
@@ -401,10 +389,8 @@ section {
   gap: 20px;
 }
 .pcard {
-
-  height: 300px;
-  width: 350px;
-
+  height: 280px;
+  width: 320px;
   margin: 0 20px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   background: white;
@@ -426,13 +412,12 @@ section {
 
 .pcard .pimg img {
   height: 200px;
-  width: 100%;  
+  width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 .pcard .ptop-text {
   padding: 5px;
-
 }
 
 .pcard .ptop-text .name {
@@ -462,10 +447,6 @@ section {
   text-align: justify;
   color: #000000;
   font-weight: 500;
-}
-
-.pcard .ptop-text .pbtn {
-  margin-top: 10px;
 }
 
 .pcard .ptop-text .pbtn a {
