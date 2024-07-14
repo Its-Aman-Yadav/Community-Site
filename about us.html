@@ -168,12 +168,12 @@
     });
   </script>
 
- <!-- Navbar -->
- <div class="navbar">
+<!-- Navbar -->
+<div class="navbar">
   <nav>
-    <a class="logo-link" href="index.html">
+    <a class="logo-link" href="#home">
       <div class="logo-title">
-                  <img  class="logo" src="images/fav.png" alt="logo">
+                  <img  class="logo" src="images/logo2.jpeg" alt="logo">
 
                   <span class="logo-text">Open Source Village</span>
                  </div>
@@ -184,17 +184,110 @@
 
     </a>
     <ul>
-      <li><i class="fa-solid fa-house"></i><a href="index.html#home">Home</a></li>
-      <li><i class="fa-solid fa-address-card"></i><a href="index.html#about">About</a></li>
-      <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="index.html#services">Services</a></li>
-      <li><i class="fa-solid fa-pen-to-square"></i><a href="index.html#testimonials">Reviews</a></li>
-      <li><i class="fa-solid fa-address-book"></i><a href="index.html#contact">Contact</a></li>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
       <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
     </ul>
-    <label class="theme-switch" for="checkbox">
-      <input type="checkbox" id="checkbox" />
-      <div class="slider round" id="toggle"></div>
-    </label>
+
+    <div class="toggle-container" style="top: 15px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
+    </div>
+
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        right: -4px;
+        top: 15px;
+      }
+
+      .light-mode .toggle-container {
+        right: 140px;
+        top: 10px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
+
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+    </style>
 
     <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
 

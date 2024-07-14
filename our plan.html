@@ -27,11 +27,11 @@
    
    .contact {
       padding: 80px 0;
-      text-align: center;
+      text-align: left;
       background-color: #f1c11a;
       margin: 0 auto;
       background-color: #fff;
-      padding: 30px;
+      padding: 30px 30px;
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
@@ -155,40 +155,133 @@
 
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <nav>
-      <a class="logo-link" href="#home">
-        <label class="logo">
-          <img src="images/fav.png" alt="logo">
+ <!-- Navbar -->
+ <div class="navbar">
+  <nav>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                  <img  class="logo" src="images/logo2.jpeg" alt="logo">
 
-          <span class="logo-text">Open Source Village</span>
-        </label>
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
 
-        <div>
-          <span class="logo-subtext">Source</span>
-        </div>
+      <!-- <div>
+        <span class="logo-subtext">Source</span>
+      </div> -->
 
-      </a>
-      <ul>
-        <li><i class="fa-solid fa-house"></i><a class="active" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-address-card"></i><a href="#about">About</a></li>
-        <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="#services">Services</a></li>
-        <li><i class="fa-solid fa-pen-to-square"></i><a href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-address-book"></i><a href="#contact">Contact</a></li>
-        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
-      </ul>
+    </a>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+
+    <div class="toggle-container" style="top: 15px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
       <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round" id="toggle"></div>
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
       </label>
+    </div>
 
-      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        right: -4px;
+        top: 15px;
+      }
 
-      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+      .light-mode .toggle-container {
+        right: 140px;
+        top: 10px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
 
-    </nav>
-  </div>
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+    </style>
+
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+    <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
+
+  </nav>
+</div>
   <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
   <svg class="progress-ring" width="60" height="60">
     <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
@@ -305,7 +398,7 @@
     </section>
 
     <section class="contact" id="contact">
-      <div style="padding-right: 0px; margin-right: 0px;">
+      <div style="padding-right: 40px; margin-right: 0px;">
 
         <h2>Contact</h2>
         <p>
