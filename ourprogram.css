@@ -37,26 +37,32 @@
     background-color: #d1a10a;
   }
 
-  header {
-    background: linear-gradient( rgb(255, 128, 1), rgb(255, 206, 10));
-    color: #fff;
-    padding: 20px 0;
-    height:350px;
-    align-items: center;
-    display: flex;
-    text-align: center;
-  }
+ .intro {
+  background: linear-gradient(rgb(255, 128, 1), rgb(255, 206, 10));
+  color: #fff;
+  padding: 20px 0;
+  height: 350px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  header h1 {
-    top:30%;
-    margin-bottom: 15px;
-    font-size: 30px;
-    font-weight: 700;
-    color:white;
-    text-align: center;
+/* Container inside .intro */
+.intro .container {
+  width: 100%; /* Full width of viewport */
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center align container */
+  padding: 0 20px; /* Padding inside the container */
+}
 
-    
-  }
+/* Styling for headings inside .intro */
+.intro h1 {
+  margin: 0;
+  color:white;
+  font-size: 30px;
+  font-weight: 700;
+}
 
   .container {
     width: 80%;

@@ -133,11 +133,13 @@ section{
 }
 
 .steps, .contact{
+  /* width:80% ; */
     padding: 70px;
     padding-top: 20px;
 
 }
 .steps{
+  background-color: none;
   margin-top: 20px;
 }
 
@@ -207,6 +209,39 @@ section{
   width: 90%;
   z-index: -1;
  }
+
+
+ /* Responsive Adjustments */
+@media (max-width: 768px) {
+  .steplist {
+    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    grid-auto-flow: row;
+    gap:35px;
+    border-radius: 10px;
+  }
+
+  .step-item {
+    width: 100%; /* Make step items full width on smaller screens */
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .step-item img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .line {
+    position: absolute;
+    width: 8px; /* Vertical line */
+    height: 90%;
+    top: 5%; /* Center vertically */
+    left: auto;
+    right: 50%;
+    margin: 0 auto;
+  }
+}
+
+
  .contacttext{
   display: grid;
   grid-auto-flow: row;
@@ -235,7 +270,7 @@ section{
   grid-auto-flow: column;
   border-radius: 5px;
  
-  background-color: #ffffff;
+  background: linear-gradient(rgb(247, 210, 62),white);
   padding: 20px;
   /* gap: 10px; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -263,6 +298,7 @@ section{
 
 .contact-form1 input{
   width:100%;
+  border-radius: 5px;
   height: 25px !important;
 }
 
