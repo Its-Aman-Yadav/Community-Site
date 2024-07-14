@@ -194,6 +194,14 @@
               return;
             }
             document.getElementById("registerMessage").style.display = "block";
+           // window.location = "./login.html"
+            ( () => {
+                event.preventDefault();
+                container.classList.remove("right-panel-active");
+                document
+                  .getElementById("loginForm")
+                  .scrollIntoView({ behavior: "smooth" });
+            } )();
             setTimeout(() => {
               document.getElementById("registerMessage").style.display = "none";
             }, 3000);
@@ -213,6 +221,7 @@
               return;
             }
             alert("Logged in successfully");
+            window.location = "./index.html"; //Redirects to home-page after alerting successful login
           }
         }
 
