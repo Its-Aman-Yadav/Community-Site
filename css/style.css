@@ -605,6 +605,32 @@ body.dark-mode .card1 .card-text {
   color: #fff;
 }
 
+body.dark-mode #contact .form .contact-info{
+  background: linear-gradient(to right, #535353, #396a92);
+}
+
+body.dark-mode #contact .form .contact-info .title{
+  color: black;
+}
+body.dark-mode #contact .form .contact-info p{
+  color: white;
+}
+
+body.dark-mode #contact .form .contact-form{
+  background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
+}
+
+body.dark-mode .feedback-form{
+  background: linear-gradient(to right, #535353, #396a92);
+}
+
+body.dark-mode .feedback-form h2{
+  color: black;
+}
+body.dark-mode .feedback-form p{
+  color: white;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 /* @color-primary: #33bb63;
