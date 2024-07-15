@@ -9,6 +9,8 @@
 body {
   display: flex;
   background: url(images/Slide3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -262,10 +264,14 @@ button {
   letter-spacing: 1px;
   text-transform: capitalize;
   transition: 0.3s ease-in-out;
+  transition: 0.4s ;
+  cursor: pointer;
 }
 
 button:hover {
   letter-spacing: 3px;
+  color:#e8701f;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.016), #f1c11a);
 }
 
 button:active {
