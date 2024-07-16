@@ -462,3 +462,156 @@ section {
 .pcard .ptop-text .pbtn a:hover {
   transform: scale(0.9);
 }
+
+/* Dark mode styles for about us page */
+body.dark-mode {
+  background-color: #000;
+  color: #fff;
+}
+
+/* About section */
+body.dark-mode .about {
+  background-color: #222;
+}
+
+body.dark-mode .about-title {
+  color: #fff;
+}
+
+body.dark-mode .about-title::after,
+body.dark-mode .about-title:hover::after {
+  background-color: #fff;
+}
+
+/* Box styles */
+body.dark-mode .box {
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 100.2%
+  );
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .box:hover {
+  box-shadow: 0px 0px 6px 6px #1a1a1a;
+}
+
+body.dark-mode .vertical img{
+  filter: brightness(0) invert(1);
+}
+
+body.dark-mode .box h1 {
+  color: #fff;
+}
+
+body.dark-mode .intro-content p {
+  color: #ddd;
+}
+
+/* Counter section */
+body.dark-mode .counters {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Slide4.jpg);
+}
+
+/* Timeline section */
+body.dark-mode .timeline-for-join {
+  background-color: #222;
+}
+
+body.dark-mode .timeline-for-join h1 {
+  color: #fff;
+}
+
+body.dark-mode .text-box {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .text-box h2,
+body.dark-mode .text-box a {
+  color: #4db8ff;
+}
+
+body.dark-mode .text-box p {
+  color: #ddd;
+}
+
+body.dark-mode .timeline::after {
+  background: #555;
+}
+
+body.dark-mode .tcontent{
+  background-color: #555;
+}
+
+body.dark-mode .left-container-arrow{
+  border-left: 15px solid #333;
+}
+
+body.dark-mode .right-container-arrow{
+  border-right: 15px solid #333;
+}
+
+/* Project section */
+body.dark-mode .project {
+  background-color: #111;
+}
+
+body.dark-mode .project h1 {
+  color: #fff;
+}
+
+body.dark-mode .pcard {
+  background: #333;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .pcard:hover {
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .pcard .ptop-text .name {
+  color: #4db8ff;
+}
+
+body.dark-mode .pcard .pbottom-text {
+  background: #333;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .pcard .pbottom-text .ptext p {
+  color: #ddd;
+}
+
+body.dark-mode .pcard .ptop-text .pbtn a {
+  background-color: #4db8ff;
+  color: #000;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
+  backdrop-filter: blur(6px);
+}
+
+body.dark-mode .navbar .nav-link {
+  color: #fff;
+}
+
+body.dark-mode .navbar .nav-link:hover {
+  color: #4db8ff;
+}
+
+/* Toggle button */
+body.dark-mode .toggle-button {
+  background-color: #333;
+}
+
+body.dark-mode .toggle-button .light-mode-icon {
+  display: none;
+}
+
+body.dark-mode .toggle-button .dark-mode-icon {
+  display: inline;
+}
