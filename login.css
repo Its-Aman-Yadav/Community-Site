@@ -51,143 +51,6 @@ body {
   /* Optional: space between logo and right edge */
 }
 
-.navbar {
-  /* background: rgba(0, 0, 0, 0.7); */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.navbar nav {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 90px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  backdrop-filter: blur(4px);
-  padding: 20px 0px;
-  border: none;
-  transition: all 0.6s;
-}
-.navbar nav ul li {
-  margin-right: 60px;
-}
-
-.navbar nav.sticky {
-  height: 80px;
-  background: linear-gradient(rgb(247, 113, 3), rgba(249, 177, 43, 0.7));
-  color: white !important;
-  /* border-bottom: 1.5px solid rgb(0, 0, 0); */
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  /* box-shadow: 0 0 2px 2px rgb(78, 38, 17, 0.8); */
-  backdrop-filter: blur(3px);
-  padding: 10px 0px;
-}
-.navbar nav ul li i {
-  filter: invert(1);
-}
-.navbar nav.sticky ul li i {
-  filter: invert(0);
-}
-
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 35px;
-  line-height: 80px;
-  padding: 0 20px;
-  font-weight: bold;
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.navbar ul li {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
-/* Assuming the icon class is `.icon` */
-.navbar ul li a:hover .icon {
-  color: white;
-}
-
-.navbar ul li a {
-  color: #fff;
-  font-size: 18px;
-  padding: 8px 16px;
-  text-decoration: none;
-  position: relative;
-  transition: color 0s, background 0s;
-  display: flex;
-}
-
-.navbar ul li a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  transition: width 0.3s;
-  z-index: -1;
-}
-
-.navbar ul li a:hover::before {
-  width: 100%;
-}
-
-.navbar ul li a:hover {
-  color: white;
-  background-color: #e8701f; /* Change this to your desired hover color */
-  transition: color 0s, background-color 0s;
-  border-radius: 20px;
-  background: rgb(239, 188, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(239, 188, 0, 1) 47%,
-    rgba(204, 133, 110, 1) 100%
-  );
-}
-
-.navbar ul li i {
-  margin-right: 8px; /* Add spacing between icon and text */
-  color: rgb(0, 0, 0); /* Set icon color to white */
-}
-
-.navbar .checkbut {
-  display: none;
-}
-
-.homeButton {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-  top: 0;
-}
-.homeButton img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
 h1 {
   font-weight: 700;
   letter-spacing: -1.5px;
@@ -217,7 +80,7 @@ span {
 }
 
 a {
-  color: #333;
+  color: black;
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
@@ -267,13 +130,13 @@ button {
   letter-spacing: 1px;
   text-transform: capitalize;
   transition: 0.3s ease-in-out;
-  transition: 0.4s ;
+  transition: 0.4s;
   cursor: pointer;
 }
 
 button:hover {
   letter-spacing: 3px;
-  color:#e8701f;
+  color: #e8701f;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.016), #f1c11a);
 }
 
@@ -337,7 +200,6 @@ input {
 }
 
 .container {
-  margin-top: 90px;
   background-color: #fff;
   border-radius: 9px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
