@@ -171,7 +171,7 @@
 <!-- Navbar -->
 <div class="navbar">
   <nav>
-    <a class="logo-link" href="#home">
+    <a class="logo-link" href="./index.html#home">
       <div class="logo-title">
                   <img  class="logo" src="images/logo2.jpeg" alt="logo">
 
@@ -184,7 +184,7 @@
 
     </a>
     <ul>
-      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="./index.html" onclick="window.location.href='index.html'; return false;">Home</a></li>
       <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#introduction">About</a></li>
       <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#Timeline">Join Us</a></li>
       <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#projects">Projects</a></li>
@@ -294,6 +294,42 @@
 
   </nav>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const toggleButton = document.getElementById('checkbox');
+
+    const currentMode = localStorage.getItem('dark-mode');
+
+    if (currentMode === 'enabled') {
+
+      document.body.classList.add('dark-mode');
+
+      toggleButton.checked = true;
+
+    }
+
+    toggleButton.addEventListener('change', function () {
+
+      document.body.classList.toggle('dark-mode');
+
+      if (document.body.classList.contains('dark-mode')) {
+
+        localStorage.setItem('dark-mode', 'enabled');
+
+      }
+      else {
+
+        localStorage.setItem('dark-mode', 'disabled');
+
+      }
+    });
+
+  });
+</script>
+
+
   <!-- main section -->
   <div class="about">
     <div class="content">
