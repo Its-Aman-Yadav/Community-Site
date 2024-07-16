@@ -467,6 +467,23 @@
   <!-- Navbar -->
   <div class="navbar">
     <nav>
+      <div id="ham-menu" onclick="togMenu(this)">
+        <div id="bars">
+        <div id="first" class="bar"></div>
+        <div id="sec" class="bar"></div>
+        <div id="third" class="bar"></div>
+        </div>
+        <div id="nav-menu">
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+                <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+                <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+                <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+                <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+              </ul>
+          </div>
+      </div>
       <a class="logo-link" href="#home">
         <div class="logo-title">
                     <img  class="logo" src="images/logo2.jpeg" alt="logo">
@@ -497,6 +514,121 @@
           </div>
         </label>
       </div>
+      <!--Styles for side menu-->
+      <style>
+        #bars{
+            display: none;
+        }
+        .bar{
+            width:27px;
+            height:3px;
+            background-color:white;
+            margin: 7px;
+            border-radius: 20px;
+            transition: all 0.4s;
+        }
+        .cliked #first{
+            transform: translate(0, 10px) rotate(-45deg);
+            
+        }
+        .cliked #sec {opacity: 0;}
+
+        .cliked #third {
+        transform: translate(0, -10px) rotate(45deg);
+        }
+        #nav-menu{
+            display: block;
+            opacity: 0;
+            position: fixed;
+            top:63px;
+            z-index: 1;
+            margin-top: 27px;
+            width:auto;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            backdrop-filter: blur(4px);
+            padding: 20px 0;
+            border: none;
+            transition: all 0.6s;
+            
+        }
+        #nav-menu ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: inherit;
+            width: auto;
+            position: absolute;
+            top:0;
+            right:inherit;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+        }
+        #nav-menu ul li{
+            display: none;
+            
+            margin: 10px 20px 0 30px;
+        }
+        .cliked #nav-menu{
+            opacity: 1;
+        }
+
+
+        @media (max-width: 858px) {
+            #bars{
+            display: block;
+            position: absolute;
+            left:10px;
+            top:50%;
+            transform: translate(0,-55%);
+            }
+            #nav-menu{
+              left:0;
+            }
+            
+            #nav-menu ul li{
+              display:flex;
+            }
+            #nav-menu ul li a:hover{
+              color: white;
+              background-color: #e8701f;
+              transition: color 0s, background-color 0s;
+              border-radius: 20px;
+              background: rgb(239, 188, 0);
+              background: linear-gradient( 90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100% );
+            }
+            
+            #nav-menu.sticky-nav-menu ul{
+              background: linear-gradient( rgba(249, 177, 43, 0.7),rgb(247, 113, 3));
+              color: white !important;
+              border-bottom: 1.5px solid rgb(0, 0, 0);
+              backdrop-filter: blur(3px);
+            }
+            #nav-menu.sticky-nav-menu{
+              top:52px;
+            }
+        }
+      </style>
+
+      <script>
+        function togMenu(obj){
+            var headMenu = document.querySelector('.navbar nav');
+            obj.classList.toggle("cliked");
+            if(obj.classList.contains('cliked')){
+              headMenu.style.borderBottomLeftRadius = '0px';
+            }else{
+              headMenu.style.borderBottomLeftRadius=headMenu.style.borderBottomRightRadius;
+            }
+        }
+        window.addEventListener("scroll", function () {
+            var sideMenu = document.getElementById('nav-menu');
+            sideMenu.classList.toggle("sticky-nav-menu", window.scrollY > 50)
+            })
+      
+      </script>
+      
 
       <style>
         .toggle-container {
