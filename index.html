@@ -25,6 +25,11 @@
   <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -289,7 +294,7 @@
       margin-right: 0px !important;
     }
 
-    slider:before {
+    .slider:before {
       content: "";
       position: absolute;
       width: 26px;
@@ -406,6 +411,51 @@
         pointer-events: none;
       }
     }
+
+    .modal{
+      backdrop-filter: blur(2px);
+    }
+    .modal-body h1 { 
+    
+    font-weight:900; 
+    font-size:2.3em;
+    text-transform:uppercase;
+  }
+  .modal-title{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px;
+  }
+  .flex{
+    width: fit-content;
+  }
+  .flex img{
+    height:60px;
+    width: 60px;
+  }
+  a.pre-order-btn { 
+    color:#000;
+    background-color:gold;
+    border-radius:1em;
+    padding:1em;
+    display: block;
+    margin: 2em auto;
+    width:50%;
+    font-size:1.25em;
+    font-weight:660;
+    
+  }
+
+  a.pre-order-btn:hover { 
+    background-color:#000;
+      text-decoration:none;
+      color:gold;
+    }
+  
+  
+
+
   </style>
 
 </head>
@@ -414,6 +464,39 @@
 
 
 <body>
+
+
+  <!-- login modal  -->
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="flex">
+                <img src="images/logo2.jpeg" alt="" class="logo">
+                  <h4 class="modal-title">Open Source Village</h4>
+            </div>
+        </div>
+        <div class="modal-body text-center">
+          <h1>Start your journey now</h1>
+          <p>If you don't have an account yet, register and start your journey.</p>
+          <a class="pre-order-btn" href="login.html">Login/Register</a>
+        </div>
+        <div class="modal-footer">
+          <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <script>
+  $(window).ready(function(){        
+   $('#myModal').modal('show');
+    }); 
+  </script>
 
   <!-- Chatbot integration section -->
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
