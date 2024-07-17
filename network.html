@@ -411,9 +411,37 @@ body {
         left: 0;
     }
 }
+/* dark mode */
+body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .main-content{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .main-content p{
+color: white;
+}
+body.dark-mode .main-content h1{
+color: white;
+}
+body.dark-mode .cards p{
+  color: black;
+}
+body.dark-mode .card-2{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .items {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: white;
+}
+body.dark-mode .items p{
+  color: white;
+}
 
-
-   
    
     
     </style>
@@ -435,12 +463,14 @@ body {
 
       </a>
       <ul>
-        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
-        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
-        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
-        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
-        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+
+        <li><i style="color: white;" class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
+        <li><i style="color: white;" class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+        <li><i style="color: white;" class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+        <li><i style="color: white;" class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+        <li><i style="color: white;"  class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+        <li><i style="color: white;" class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+
       </ul>
       <label class="theme-switch" for="checkbox">
         <input type="checkbox" id="checkbox" />
