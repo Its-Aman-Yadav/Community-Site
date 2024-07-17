@@ -171,7 +171,7 @@
 <!-- Navbar -->
 <div class="navbar">
   <nav>
-    <a class="logo-link" href="./index.html#home">
+    <a class="logo-link" href="#home">
       <div class="logo-title">
                   <img  class="logo" src="images/logo2.jpeg" alt="logo">
 
@@ -184,10 +184,11 @@
 
     </a>
     <ul>
-      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="./index.html" onclick="window.location.href='index.html'; return false;">Home</a></li>
-      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#introduction">About</a></li>
-      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#Timeline">Join Us</a></li>
-      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#projects">Projects</a></li>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
       <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
     </ul>
 
@@ -286,6 +287,144 @@
         /* background-color: #34495e; */
       }
 
+
+      .benefit-container{
+        margin: 10px auto;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr !important;
+        /* size-adjust: auto; */
+        /* grid-template-columns: min-content; */
+      }
+
+      .benefit-card{
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 80%;
+        padding: 15px;
+        border: 1.5px solid #e66f00;
+        margin: auto 20px;
+        background:#f39c12;
+        border-radius: 10px;
+        transition: all 0.6s linear;
+      }
+      .benefit-card:hover{
+        border-color: #ff3907;
+        scale:1.02;
+      }
+      .benefit-card p{
+        margin-top:auto;
+        padding-bottom: none;
+        margin-bottom:auto;
+        color:white;
+        font-weight: 600;
+        text-shadow: 0px 2px #e66f00;
+      }
+
+      .learning-container{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: 1fr;
+      }
+
+      .learning-card{
+        align-items: center;
+        text-align: center;
+        height: 68%;
+        width: 70%;
+        padding: 10px;
+        border: 1.5px solid #e66f00;
+        margin:  20px auto;
+        background:#ffffff;
+        border-radius: 10px;
+        display: grid;
+        grid-auto-flow: column;
+        /* grid-template-columns: repeat(2,1fr); */
+        /* grid-template-rows: 1fr; */
+        transition: all 0.4s linear;
+      }
+      .learning-card:hover{
+        background: linear-gradient(to right, white, #f5d244);
+      }
+
+      .learning-card img{
+        width: 60px;
+        height: 60px;
+        margin-left:auto;
+        margin-right: auto;
+        
+      }
+
+      .learning-card p{
+        align-items: center;
+        text-align: left;
+        margin-top:auto !important;
+        margin-bottom:auto !important;
+        /* line-height: 1px; */
+        padding-bottom: 0px;
+       
+        color:#e66f00;
+        font-weight: 600;
+        text-shadow: 0px 1px #6e0404;
+      }
+
+      .community-container{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: 1fr;
+        
+      }
+      .community-card:nth-child(1){
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+      }
+      .community-card:nth-child(2){
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+      }
+
+      .community-card:nth-child(3){
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+      }
+      .community-card:nth-child(4){
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+      }
+      .community-card{
+        background-color: #ffffff55;
+        margin: 10px auto;
+        max-width:90%;
+        padding:2%;
+        
+        border:1.5px solid rgb(255, 64, 0);
+        
+        font-weight: 600;
+      }
+      .improve-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: space-between; */
+      }
+      .improve-card p{
+        margin: 10px 20px;
+        font-weight: bold;
+      }
+      .improve-card i{
+        width: 20px;
+        /* margin: auto; */
+        font-size: 22px;
+        color: #e66f00;
+      }
     </style>
 
     <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
