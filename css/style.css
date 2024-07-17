@@ -3023,16 +3023,20 @@ input[type="text"]:focus {
   outline: none;
   border-color: rgba(255, 201, 8, 0.5);
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
+  color:black !important;
 }
 input[type="email"]:focus {
   outline: none;
   border-color: rgba(255, 201, 8, 0.5);
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
+  color:black !important;
 }
 textarea:focus {
   outline: none;
   border-color: rgba(255, 201, 8, 0.5);
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
+  color:black !important;
+
 }
 .feedback-label {
   font-weight: bold;
@@ -3526,6 +3530,11 @@ body {
     padding: 0.45rem 0.8rem;
   }
 }
-
+body.dark-mode #contactForm input{
+  color:white;
+}
+body.dark-mode #contactForm textarea{
+  color:white;
+}
 
 
