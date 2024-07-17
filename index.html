@@ -412,9 +412,9 @@
       }
     }
 
-    .modal {
+  .modal {
   backdrop-filter: blur(2px);
-  padding: 1.5em;
+  padding: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -422,7 +422,7 @@
 }
 
 .modal-content {
-  background: linear-gradient(135deg, gold, orange);
+  background: linear-gradient( gold, rgb(255, 255, 255));
   border-radius: 1em;
   padding: 2em;
   color: #000; /* Ensures text is readable on the gradient background */
@@ -482,7 +482,7 @@ a.pre-order-btn {
 }
 
 a.pre-order-btn:hover {
-  background-color: #4B3E2A; /* Dark brown color on hover */
+  background-color: #e8701f; /* Dark brown color on hover */
   text-decoration: none;
   color: gold;
 }
@@ -492,7 +492,12 @@ a.pre-order-btn:hover {
   text-align: center;
   padding: 1em 0;
 }
-
+.modal-header{
+  background-color: #f3b7127b;
+  border-radius: 20px;
+  margin-top: 20px;
+  /* margin-bottom: 1em; */
+}
 .modal-footer button {
   background-color: gold;
   color: #000;
@@ -505,8 +510,16 @@ a.pre-order-btn:hover {
 }
 
 .modal-footer button:hover {
-  background-color: #4B3E2A; /* Dark brown color on hover */
+  background-color: #ff3700; /* Dark brown color on hover */
   color: gold;
+}
+
+.modal-content .close{
+  margin-right:0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  /* background-color:#e15509; */
 }
 
 /* Media queries for responsiveness */
@@ -572,8 +585,9 @@ a.pre-order-btn:hover {
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
             <div class="flex">
                 <img src="images/logo2.jpeg" alt="" class="logo">
                   <h4 class="modal-title">Open Source Village</h4>
