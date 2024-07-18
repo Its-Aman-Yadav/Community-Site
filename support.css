@@ -13,51 +13,116 @@ main {
   form label {
     display: block;
     margin-top: 10px;
+    color: #0073e6;
   }
-
+  
   form input,
   form textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
   }
-
+  
   form button {
     padding: 10px 20px;
-    background: #ff7d7d;
+    background: #0073e6;
     color: #fff;
     border: none;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
+  
+  form button:hover {
+    background: #005bb5;
+  }
+  
 
   .faq {
-    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px;
+    margin-bottom: 60px;
+  }
+  
+  .question {
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+  }
+  
+  .question h3 {
+    margin: 0;
+  }
+  
+  .question i {
+    transition: transform 0.3s;
+  }
+  
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 10px;
+    background: #fafafa;
+    border-left: 3px solid #007bff;
+  }
+  
+  .answer p {
+    margin: 10px 0;
+  }
+  
+  .fa-chevron-up {
+    transform: rotate(180deg);
+  }
+  
+
+  .general {
+    text-align: center;
+    background: linear-gradient(to top,#ffa60e, #ffffff);
+    padding: 23px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
   }
 
-  .faq h2,
-  .faq p {
-    margin: 5px 0;
+  .general h2 {
+    font-size: 38px;
+    text-align: center;
+    color:rgb(168, 54, 2);
+    margin-top: 16px;
+    font-weight: 700;
   }
 
-  .general{
-    /* margin-top: 80px; */
-    text-align: center;
-    box-shadow: 0 0px 1px 1px rgb(169, 167, 167);
-    background:linear-gradient(#ffca0c, #fce595);
-    padding: 30px;
-    border-radius: 10px;
+  .general p {
+    margin-top: 15px;
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
   }
+ 
 
 
   body {
-    font-family: Arial, sans-serif;
+    
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background: linear-gradient(white, #f5d244);
+  
   }
+  
 
   main {
     padding: 20px;
@@ -68,6 +133,7 @@ main {
     /* border-radius: 10px; */
     /* align-items: center;
     text-align: center; */
+    width: 85%;
   }
 
   p{
@@ -95,7 +161,9 @@ main {
 }
 
  main h2{
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
     font-weight: 600;
 }
 
@@ -106,7 +174,7 @@ main {
   }
 
   section h2 {
-    color: #0073e6;
+    color: #d9362b;    ;
   }
 
   form label {
@@ -411,6 +479,7 @@ main {
         /* Adjust spacing between profile image and nav items */
       }
 
+
       .contact {
         padding: 80px 0;
         text-align: center;
@@ -473,6 +542,8 @@ main {
       .contact-form button:hover {
         background-color: #d1a10a;
       }
+
+
 
       /* Style for the theme switcher */
       .theme-switch {
@@ -557,67 +628,150 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-.contact{
-  display: grid;
-  grid-auto-flow: column;
-  border-radius: 5px;
-  background-color: #F5F5F5;
-  padding: 20px;
-  gap: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 10px;
+  margin-left: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.contact-form-container, .contact-info {
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .contact-form{
   margin-left: 0px;
   margin-right: 50px;
   padding-right: 70px;
   margin-top: 25px;
+
+.contact-form-container {
+  background: linear-gradient(to bottom right, #ff8c00, #ffd700);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  
+
+}
+
+.contact-form-container h2 {
+  margin-top: 0;
+  color: white;
 }
 
 
 .contact-form label{
   font-size: 20px;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  background : none;
+
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
 }
 
 
 .contact-form input{
   height: 30px !important;
-}
 
-.question{
-    display: grid;
-    grid-auto-flow: column;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    font-weight: 600;
-    border-top-left-radius: 20px;
-    align-items: center;
-    box-shadow: 0 0px 1px 1px rgb(255, 195, 117);
-    justify-content: space-between;
-}
-.answer{
-   opacity: 0;
-   box-shadow: 0 1px 0px 1px rgb(255, 195, 117);
-    padding-left: 20px;
-    padding-top:10px;
-    max-height: 0;
-    overflow: hidden;
-    background:linear-gradient(white, #fce595);
-    margin-bottom: 5px;
-    transition: linear 0.5s;
+.contact-form input,
+.contact-form textarea {
+  width: 48%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 
 }
-.faqs i{
-    transition: ease-in-out 0.4s;
-    cursor: pointer;
+
+.contact-form textarea {
+  width: 100%;
+  height: 100px;
 }
 
-.faqs.active .answer{
-
-    opacity: 1;
-    max-height: 300px;
+.contact-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ff6f00;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
 }
+
+.contact-form button:hover {
+  background: #aa4a00;
+}
+
+.contact-info {
+  background: #f2ce01;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+
+.contact-info:before {
+  content: none;
+}
+
+.contact-info h2 {
+  position: relative;
+  bottom: 78px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: black;
+  font-size: 1.3em;
+  position: relative;
+  bottom: 60px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #ff8c00;
+}
+
+
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-top-left-radius: 20px;
+  box-shadow: 0 0 1px 1px rgb(255, 195, 117);
+  margin-bottom: 5px;
+}
+
+.answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s, max-height 0.5s;
+  background: linear-gradient(white, #fce595);
+  padding: 10px 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 0 1px 1px rgb(255, 195, 117);
+}
+
 
 .faqs.active i{
     rotate: 180deg;
@@ -636,5 +790,84 @@ main {
   {
     opacity: 0;
     pointer-events: none; 
+.faq-item {
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 15px;
+  background: linear-gradient(to left, #ffb65e, #ffd700);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+  border-radius: 8px;
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-weight:700;
+  font-size: 17px;
+}
+
+.faq-question i {
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  /* background: #fafafa; */
+  padding: 0 15px;
+  border-radius: 7px;
+}
+
+.faq-answer p {
+  color: white;
+  margin: 1px 0px;
+  padding: 10px;
+  
+}
+
+.faq-question.active {
+  background: linear-gradient(to left, #ffb65e, #ffd700);
+}
+
+.faq-question.active i {
+  transform: rotate(180deg);
+}
+
+.faq-answer.show {
+  max-height: 400px; 
+  color: white;
+  /* background: linear-gradient(to left, #ff8c00, #fff1a4); */
+  background-color: #ffa12f;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .general-section p,
+  .faq-question,
+  .faq-answer,
+  .contact-form .form-group input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+    text-align: center;
+
   }
 }
