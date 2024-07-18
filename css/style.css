@@ -601,6 +601,10 @@ body.dark-mode .navbar nav.sticky {
   background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
   backdrop-filter: blur(6px);
 }
+body.dark-mode .navbar nav.sticky {
+  background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
+  backdrop-filter: blur(6px);
+}
 body.dark-mode .card1 .card-text {
   color: #fff;
 }
@@ -1158,7 +1162,7 @@ footer hr {
 }
 
 body.dark-mode .fa-solid{
-  color: #ffffff ;
+  color: #ffffff !important;
   /* Text color in dark mode */
 }
 
@@ -1743,10 +1747,10 @@ div.card {
   padding: 10px 0px;
 }
 .navbar nav ul li i {
-  filter: invert(1);
+  color: white;
 }
 .navbar nav.sticky ul li i {
-  filter: invert(0);
+  color: black;
 }
 
 .navbar .logo {
