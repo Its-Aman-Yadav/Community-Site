@@ -1157,6 +1157,11 @@ footer hr {
   /* Hover color in dark mode */
 }
 
+body.dark-mode .fa-solid{
+  color: #ffffff ;
+  /* Text color in dark mode */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .footer_wrapper {
