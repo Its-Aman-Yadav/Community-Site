@@ -41,7 +41,7 @@
 
 .section-title {
   font-size: 22px !important;
-  color: #000000 !important;
+  color: #000000 ;
   font-weight: 600 !important;
   padding-bottom: 0px !important;
 }
@@ -62,4 +62,44 @@
   color: #000000;
   list-style: none;
   font-size: 1.1em;
+}
+
+/* Dark Mode */
+
+body.dark-mode {
+  background: #1a1a1a;
+}
+
+body.dark-mode #privacy-policy-container {
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 100.2%
+  );
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+
+body.dark-mode .navbar {
+  background-color: #2c3e50;
+}
+
+body.dark-mode .header h1 {
+  color: #fff;
+}
+
+body.dark-mode .hr-line {
+  background-image: linear-gradient(to right, #333, #ccc, #333);
+}
+
+body.dark-mode .section h2{
+  color: #ddd;
+}
+
+body.dark-mode .section p{
+  color: #c0c0c0;
+}
+
+body.dark-mode .list-num li{
+  color: #c0c0c0;
 }
