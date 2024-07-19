@@ -480,6 +480,71 @@ main {
       }
 
 
+      .contact {
+        padding: 80px 0;
+        text-align: center;
+      }
+      .contact-form
+      {
+        width: 500px;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .contact-form
+        {
+          width: 350px;
+        }
+      }
+      
+      .contact-form .form-group {
+        margin-bottom: 10px;
+      }
+      
+      .contact-form label {
+        display: block;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 4px;
+      }
+      
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+      }
+      
+      .contact-form textarea {
+        height: 120px;
+      }
+      
+      .contact-form input[type="text"]:focus,
+      .contact-form input[type="email"]:focus,
+      .contact-form textarea:focus {
+        border-color: #f1c11a;
+      }
+      
+      .contact-form button {
+        background-color: #f1c11a;
+        color: #fff;
+        border: none;
+        padding: 14px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .contact-form button:hover {
+        background-color: #d1a10a;
+      }
+
+
+
       /* Style for the theme switcher */
       .theme-switch {
         display: flex;
@@ -582,11 +647,19 @@ main {
   justify-content: center;
 }
 
+
+.contact-form{
+  margin-left: 0px;
+  margin-right: 50px;
+  padding-right: 70px;
+  margin-top: 25px;
+
 .contact-form-container {
   background: linear-gradient(to bottom right, #ff8c00, #ffd700);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   
+
 }
 
 .contact-form-container h2 {
@@ -594,16 +667,25 @@ main {
   color: white;
 }
 
+
+.contact-form label{
+  font-size: 20px;
+
 .contact-form {
   display: flex;
   flex-direction: column;
   background : none;
+
 }
 
 .form-group {
   display: flex;
   justify-content: space-between;
 }
+
+
+.contact-form input{
+  height: 30px !important;
 
 .contact-form input,
 .contact-form textarea {
@@ -612,6 +694,7 @@ main {
   padding: 10px;
   border: none;
   border-radius: 5px;
+
 }
 
 .contact-form textarea {
@@ -689,6 +772,24 @@ main {
   box-shadow: 0 0 1px 1px rgb(255, 195, 117);
 }
 
+
+.faqs.active i{
+    rotate: 180deg;
+}
+
+@media (max-width: 767px) 
+{
+  .theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
 .faq-item {
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -767,5 +868,6 @@ main {
   .contact-form button {
     width: 100%;
     text-align: center;
+
   }
 }
