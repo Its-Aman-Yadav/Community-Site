@@ -702,7 +702,7 @@ a.pre-order-btn:hover {
         <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
       </ul>
 
-      <div class="toggle-container" style="top: 15px;">
+      <div class="toggle-container" style="top: 0px;">
         <input type="checkbox" id="checkbox" class="switch-checkbox">
         <label class="theme-switch" for="checkbox">
           <div class="toggle-button">
@@ -833,12 +833,13 @@ a.pre-order-btn:hover {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 30px;
+          margin: 30px 0 0 30px;
+
         }
 
         .light-mode .toggle-container {
-          right: 140px;
-          top: 10px;
+          right: -4px;
+          top: 15px;
         }
         
         /* Hidden Checkbox */
@@ -859,8 +860,6 @@ a.pre-order-btn:hover {
           padding: 0 5px;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           transition: background-color 0.5s ease;
-          right: -15px;
-          top: 6px;
         }
 
         .theme-switch .light-mode-icon,
@@ -1630,10 +1629,10 @@ a.pre-order-btn:hover {
               <i class="fab fa-facebook-f"></i>
             </a>
             <a href="#">
-              <i class="fab fa-twitter"></i>
+              <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a href="#">
-              <i class="fab fa-instagram"></i>
+              <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="https://www.linkedin.com/company/open-source-village/">
               <i class="fab fa-linkedin-in"></i>
@@ -1641,6 +1640,14 @@ a.pre-order-btn:hover {
           </div>
         </div>
       </div>
+      <style>
+        a:hover .fa-brands{
+          color: yellow;
+        }
+        .fa-brands{  
+          font-size: 1rem;
+        }
+      </style>
       <div class="contact-form">
         <span class="circle one"></span>
         <span class="circle two"></span>
