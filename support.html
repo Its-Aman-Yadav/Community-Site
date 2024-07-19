@@ -541,32 +541,7 @@ input[type="text"], input[type="email"], textarea{
     });
   </script>
 
-<script>
-  function sendMessage(event) {
-      event.preventDefault(); // Prevent form from submitting normally
 
-      // Create the popup element
-      const popup = document.createElement('div');
-      popup.innerText = 'Message submitted successfully';
-      popup.style.position = 'fixed';
-      popup.style.bottom = '20px';
-      popup.style.right = '20px';
-      popup.style.backgroundColor = '#4CAF50'; // Green color
-      popup.style.color = 'white';
-      popup.style.padding = '10px 20px';
-      popup.style.borderRadius = '5px';
-      popup.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
-      popup.style.zIndex = '1000';
-      
-      // Add popup to the body
-      document.body.appendChild(popup);
-
-      // Remove the popup after 3 seconds
-      setTimeout(() => {
-          popup.remove();
-      }, 3000);
-  }
-</script>
 
 </body>
 
