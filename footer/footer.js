@@ -6,7 +6,6 @@ class SpecialFooter extends HTMLElement {
         .form input[type="text"] {
           color: black;
         }
-        /* Setting all social media icons to yellow by default */
         .fab.fa-whatsapp,
         .fab.fa-facebook,
         .fab.fa-instagram,
@@ -15,7 +14,6 @@ class SpecialFooter extends HTMLElement {
         .fab.fa-github,
         .fa-solid.fa-envelope 
         {
-          color: yellow;
           transition: color 0.3s, background 0.3s;
         }
 
@@ -60,7 +58,7 @@ class SpecialFooter extends HTMLElement {
         <div class="container">
           <div class="row1">
             <div class="company" id="Company">
-              <h1 style="color: yellow;">Open Source Village</h1>
+              <h1 >Open Source Village</h1>
               <p>Join the Community and become the villager now</p>
               <div class="social">
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
