@@ -606,6 +606,10 @@ body.dark-mode .navbar nav.sticky {
   background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
   backdrop-filter: blur(6px);
 }
+body.dark-mode .navbar nav.sticky {
+  background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
+  backdrop-filter: blur(6px);
+}
 body.dark-mode .card1 .card-text {
   color: #fff;
 }
@@ -1197,6 +1201,11 @@ footer hr {
 .dark-mode-app .social_media i:hover {
   color: #0078d4;
   /* Hover color in dark mode */
+}
+
+body.dark-mode .fa-solid{
+  color: #ffffff !important;
+  /* Text color in dark mode */
 }
 
 /* Responsive Styles */
@@ -1801,10 +1810,10 @@ body.dark-mode .btn-custom::before {
   padding: 10px 0px;
 }
 .navbar nav ul li i {
-  filter: invert(1);
+  color: white;
 }
 .navbar nav.sticky ul li i {
-  filter: invert(0);
+  color: black;
 }
 
 .navbar .logo {
