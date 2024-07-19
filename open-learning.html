@@ -122,7 +122,39 @@
             background: #333;
             background-image: linear-gradient(to right, #ccc, #333, #ccc);
         }
-    
+        body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .main-content{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .main-content p{
+color: white;
+}
+body.dark-mode .main-content h1{
+color: white;
+}
+body.dark-mode .cards p{
+  color: black;
+}
+body.dark-mode .card-2{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .items {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: white;
+}
+body.dark-mode .items p{
+  color: white;
+}
+body.dark-mode .learning-card{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
 </style>
 </head>
 
@@ -249,41 +281,40 @@
         }
 
 
-        .benefit-container{
-          margin: 10px auto;
-          display: grid;
-          grid-auto-flow: column;
-          grid-template-columns: repeat(4, 1fr);
-          grid-auto-rows: 1fr !important;
-          /* size-adjust: auto; */
-          /* grid-template-columns: min-content; */
-        }
-
-        .benefit-card{
-          align-items: center;
-          text-align: center;
-          height: 100%;
-          width: 80%;
-          padding: 15px;
-          border: 1.5px solid #e66f00;
-          margin: auto 20px;
-          background:#f39c12;
-          border-radius: 10px;
-          transition: all 0.6s linear;
-        }
-        .benefit-card:hover{
-          border-color: #ff3907;
-          scale:1.02;
-        }
-        .benefit-card p{
-          margin-top:auto;
-          padding-bottom: none;
-          margin-bottom:auto;
-          color:white;
-          font-weight: 600;
-          text-shadow: 0px 2px #e66f00;
-        }
-
+      ].benefit-container {
+        margin: 10px auto;
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-gap: 20px; 
+        width: 90%; 
+      }
+      
+      /* Benefit Card */
+      .benefit-card {
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        border: 1.5px solid #e66f00;
+        background: #f39c12;
+        border-radius: 10px;
+        transition: all 0.6s linear;
+        width: 100%; 
+        box-sizing: border-box; 
+      }
+      
+      .benefit-card:hover {
+        border-color: #ff3907;
+        transform: scale(1.02);
+      }
+      
+      .benefit-card p {
+        margin: 0;
+        color: white;
+        font-weight: 600;
+        text-shadow: 0px 2px #e66f00;
+      }
+      
+    
         .learning-container{
           display: grid;
           grid-auto-flow: row;
@@ -386,6 +417,60 @@
           font-size: 22px;
           color: #e66f00;
         }
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px; 
+  }
+
+  #title {
+    font-size: 21px; 
+  }
+
+  .hr-line {
+    width: 100%; 
+  }
+
+  .open-learning,
+  .learning,
+  .community,
+  .improvement {
+    padding: 10px;
+  }
+
+  .benefit-card,
+  .learning-card,
+  .community-card,
+  .improve-card {
+    padding: 10px; 
+    margin-bottom: 10px; 
+  }
+
+  .benefit-card p,
+  .learning-card p,
+  .community-card p,
+  .improve-card p {
+    font-size: 14px; 
+  }
+
+  .benefit-container {
+    grid-template-columns: 1fr; 
+  }
+
+  .theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+}
       </style>
 
       <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
@@ -406,7 +491,7 @@
 
     <div class="main-content">
         <header class="header">
-            <h1 class="title">Open Learning</h1>
+            <h1 class="title" id="title">Open Learning</h1>
             <div class="hr-line"></div>
         </header>
         <section class="open-learning">
@@ -420,7 +505,7 @@
             <div class="benefits">
             <h2>Benefits of Open Learning</h2>
             <div class="benefit-container">
-              <div class="benefit-card">
+              <div class="benefit-card" >
                 <p>Access to a wide range of educational materials.</p>    
               </div>
 

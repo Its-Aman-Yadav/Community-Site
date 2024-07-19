@@ -349,6 +349,11 @@ ul li a:hover {
   color: yellow;
 }
 
+
+body.dark-mode a:hover {
+  color: #396a92;
+}
+
 .checkbtn {
   font-size: 30px;
   color: white;
@@ -601,6 +606,10 @@ body.dark-mode .navbar nav.sticky {
   background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
   backdrop-filter: blur(6px);
 }
+body.dark-mode .navbar nav.sticky {
+  background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
+  backdrop-filter: blur(6px);
+}
 body.dark-mode .card1 .card-text {
   color: #fff;
 }
@@ -797,15 +806,6 @@ h2 {
   }
 }
 
-.fab:hover {
-  color: yellow;
-  /* Change this to the desired hover color */
-}
-
-a:hover .fab {
-  color: yellow;
-  /* Change this to the desired hover color */
-}
 
 .footer {
   padding: 2rem 1rem;
@@ -815,9 +815,15 @@ a:hover .fab {
   width: 100%;
 }
 
+
 .social_media:hover {
   color: yellow;
 }
+
+body.dark-mode .social_media:hover {
+  color: #396a92;
+}
+
 .container {
   margin: 0 auto;
   display: flex;
@@ -836,9 +842,15 @@ a:hover .fab {
   padding: 0 2rem;
 }
 .company h1 {
-  color: #fff;
+  color: yellow;
   font-size: 14px;
 }
+
+
+body.dark-mode .company h1 {
+  color: #396a92;
+}
+
 .social {
   display: flex;
   gap: 20px;
@@ -870,6 +882,11 @@ a:hover .fab {
   cursor: pointer;
   font-size: 20px;
 }
+
+body.dark-mode .col1 h3 {
+  color: #396a92;
+}
+
 .col1 h3::after {
   content: "";
   height: 2px;
@@ -879,6 +896,10 @@ a:hover .fab {
   bottom: 0;
   left: 0;
   transition: 0.3s ease;
+}
+
+body.dark-mode .col1 h3::after {
+  background-color: #396a92;
 }
 
 .logo {
@@ -927,6 +948,12 @@ a:hover .fab {
   transition: 0.5s ease;
   opacity: 0;
 }
+
+body.dark-mode .col1 .links a::before {
+  color: #396a92;
+  background-color: #396a92;
+}
+
 .col1 .links a:hover::before {
   opacity: 1;
 }
@@ -934,6 +961,11 @@ a:hover .fab {
   transform: translateX(-8px);
   color: yellow;
 }
+
+body.dark-mode .col1 .links a:hover {
+  color: #396a92;
+}
+
 .col1 .contact-details {
   display: inline-flex;
   justify-content: space-between;
@@ -969,6 +1001,11 @@ a:hover .fab {
   height: 40px;
   border-radius: 6px;
   background-color: rgb(251, 255, 0);
+}
+
+
+body.dark-mode .form button {
+  background-color: #396a92;
 }
 
 /********** Responsive Design ********/
@@ -1112,10 +1149,19 @@ background: black; */
   /* cursor: pointer; */
 }
 
+body.dark-mode .social_media:hover {
+  color: #396a92;
+}
+
 .footer_links li:hover {
   color: yellow;
   /* cursor: pointer; */
 }
+
+body.dark-mode .footer_links li:hover {
+  color: #396a92;
+}
+
 .copyright {
   margin-top: 10px;
   /* margin-left: 90px; */
@@ -1155,6 +1201,11 @@ footer hr {
 .dark-mode-app .social_media i:hover {
   color: #0078d4;
   /* Hover color in dark mode */
+}
+
+body.dark-mode .fa-solid{
+  color: #ffffff !important;
+  /* Text color in dark mode */
 }
 
 /* Responsive Styles */
@@ -1389,6 +1440,10 @@ footer {
   color: yellow;
 }
 
+body.dark-mode .section-title h1 {
+  color: #396a92;
+}
+
 .section-title {
   font-size: 36px;
 }
@@ -1437,6 +1492,13 @@ div.card {
   transform: scale(1.1);
 }
 
+body.dark-mode .btn-custom:hover {
+  background: white;
+  color: #396a92;
+  border-color: #396a92;
+  box-shadow: 0 8px 20px rgba(57, 106, 146, 0.6);
+}
+
 .btn-custom:hover .discord-icon {
   transform: scale(1.2);
   filter: brightness(1.2);
@@ -1480,6 +1542,10 @@ div.card {
   transform: translate(-50%, -50%) scale(0);
 }
 
+body.dark-mode .btn-custom::before {
+  background-color: rgba(57, 106, 146, 0.5);
+}
+
 .btn-custom:hover::before {
   transform: translate(-50%, -50%) scale(1);
 }
@@ -1489,6 +1555,12 @@ div.card {
   text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow,
     0 0 40px yellow;
 }
+
+/* body.dark-mode .btn-custom:hover {
+  color: #396a92;  
+  text-shadow: 0 0 10px #396a92, 0 0 20px #396a92, 0 0 30px #396a92,
+  0 0 40px #396a92;
+} */
 
 /* Fine-Tuning for Responsiveness */
 @media (max-width: 768px) {
@@ -1738,10 +1810,10 @@ div.card {
   padding: 10px 0px;
 }
 .navbar nav ul li i {
-  filter: invert(1);
+  color: white;
 }
 .navbar nav.sticky ul li i {
-  filter: invert(0);
+  color: black;
 }
 
 .navbar .logo {
@@ -3134,8 +3206,13 @@ body {
 /* footer social  */
 .social a {
   text-decoration: none;
-  color: inherit;
+  color: yellow;
   transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+body.dark-mode .social a {
+  color: #396a92;
 }
 
 .social a:hover {

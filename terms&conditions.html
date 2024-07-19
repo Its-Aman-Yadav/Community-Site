@@ -24,27 +24,9 @@
     </script>
     <style>
 
-body.dark-mode {
-    background: linear-gradient(#c7c6c6, #34495e);
-    color: #ffffff;
-}
-
-body.dark-mode #terms-conditions-container {
-    background: linear-gradient(#ffffff, #f5f5f5);
-    color: #ffffff;
-}
-
-
-/* Adjust other elements as necessary for dark mode */
-body.dark-mode .navbar {
-    background-color: #2c3e50;
-}
-
-
-
-    body {
-        background: linear-gradient(#f5d244, #f5a623);
-    }
+        body {
+            background: linear-gradient(#f5d244, #f5a623);
+        }
         
         #terms-conditions-container {
             width: 70%;
@@ -110,137 +92,173 @@ body.dark-mode .navbar {
             margin: 100px;
         }
         #image {
-    height: 30px;
-    /* Reduced height of the profile image */
-    width: 30px;
-    /* Reduced width of the profile image */
-    border-radius: 50%;
-    margin-left: 10px;
-    cursor: pointer;
-  }
+            height: 30px;
+            /* Reduced height of the profile image */
+            width: 30px;
+            /* Reduced width of the profile image */
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
 
-  .usercon{
-    display: block;
-    text-align: left;
- 
-    
-  }
-  .usercon li{
-    list-style-type: square;
-  }
+        .usercon{
+            display: block;
+            text-align: left;
+        }
 
-  .usercon p{
+        .usercon li{
+            list-style-type: square;
+        }
 
-    text-align: left;
-  }
+        .usercon p{
+            text-align: left;
+        }
 
-      /* Back to Top Button */
-      .scrollToTopBtn {
-      /* background-color: #FFE70F; */
-      background-image: radial-gradient(#f3bf8c, #ee7f10);
-      color: #fff;
-      text-align: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      font-size: 18px;
-      text-decoration: none;
-      border: none;
-      line-height: 50px;
-      /* Center text vertically */
-      transition: background-color 0.3s ease;
-      position: fixed;
-      bottom: 106px;
-      right: 43px;
-      display: none;
-      /* Hidden by default */
-      z-index: 1000;
-      margin-bottom: 10px;
-    }
+        /* Back to Top Button */
+        .scrollToTopBtn {
+            /* background-color: #FFE70F; */
+            background-image: radial-gradient(#f3bf8c, #ee7f10);
+            color: #fff;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 18px;
+            text-decoration: none;
+            border: none;
+            line-height: 50px;
+            /* Center text vertically */
+            transition: background-color 0.3s ease;
+            position: fixed;
+            bottom: 106px;
+            right: 43px;
+            display: none;
+            /* Hidden by default */
+            z-index: 1000;
+            margin-bottom: 10px;
+        }
 
-    .scrollToTopBtn:hover {
-      background-color: #484848;
-    }
+        .scrollToTopBtn:hover {
+            background-color: #484848;
+        }
 
-    .progress-ring {
-      position: fixed;
-      bottom: 101px;
-      margin-bottom: 10px;
-      right: 38px;
-      transform: rotate(-90deg);
-      z-index: 999;
-      /* Just below the button */
-      margin-bottom: 10px;
-    }
+        .progress-ring {
+            position: fixed;
+            bottom: 101px;
+            margin-bottom: 10px;
+            right: 38px;
+            transform: rotate(-90deg);
+            z-index: 999;
+            /* Just below the button */
+            margin-bottom: 10px;
+        }
 
-    .progress-ring__circle {
-      transition: 0.35s stroke-dasharray;
-      transform: rotate(-90deg);
-      transform-origin: 50% 50%;
-    }
+        .progress-ring__circle {
+            transition: 0.35s stroke-dasharray;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
 
-    /* Add this to your style.css file or inside a <style> tag in the HTML head */
+        /* Dark Mode */
+        body.dark-mode {
+          background: #1a1a1a;
+        }
 
-/* Media query for small screens */
-@media (max-width: 768px) {
-    #terms-conditions-container {
-        width: 90%;
-        padding: 10px;
-    }
+        body.dark-mode #terms-conditions-container {
+          background: linear-gradient(
+            109.6deg,
+            rgb(36, 45, 57) 11.2%,
+            rgb(16, 37, 60) 100.2%
+          );
+          box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+        }
 
-    .header {
-        margin-top: 20px;
-        text-align: center;
-        width: 100%;
-        letter-spacing: 2px;
-        font-size: medium;
-    }
 
-    .title {
-        font-size: 1.5em;
-        font-weight: 600;
-        color: #000000;
-    }
+        body.dark-mode .navbar {
+          background-color: #2c3e50;
+        }
 
-    .main-content {
-        padding: 15px;
-        margin: 10px auto;
-    }
+        body.dark-mode .header h1 {
+          color: #fff;
+        }
 
-    .section-title {
-        font-size: 18px;
-        color: #2b2b2b;
-        font-weight: 600;
-        padding-bottom: 5px;
-    }
+        body.dark-mode .hr-line {
+          background-image: linear-gradient(to right, #333, #ccc, #333);
+        }
 
-    .section-content {
-        font-size: 0.9em;
-        color: #000000;
-    }
+        body.dark-mode .section h2{
+          color: #ddd;
+        }
 
-    .list-item {
-        font-size: 1em;
-    }
+        body.dark-mode .section p{
+          color: #c0c0c0;
+        }
 
-    .scrollToTopBtn {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        line-height: 40px;
-    }
+        body.dark-mode .usercon li{
+          color: #c0c0c0;
+        }
 
-    .progress-ring {
-        width: 50px;
-        height: 50px;
-        right: 10px;
-    }
 
-    #image {
-        height: 25px;
-        width: 25px;
-    }
-}
+        /* Media query for small screens */
+        @media (max-width: 768px) {
+            #terms-conditions-container {
+              width: 90%;
+              padding: 10px;
+            }
+
+            .header {
+              margin-top: 20px;
+              text-align: center;
+              width: 100%;
+              letter-spacing: 2px;
+              font-size: medium;
+            }
+
+            .title {
+              font-size: 1.5em;
+              font-weight: 600;
+              color: #000000;
+            }
+
+            .main-content {
+              padding: 15px;
+              margin: 10px auto;
+            }
+
+            .section-title {
+                font-size: 18px;
+                color: #2b2b2b;
+                font-weight: 600;
+                padding-bottom: 5px;
+            }
+
+            .section-content {
+                font-size: 0.9em;
+                color: #000000;
+            }
+
+            .list-item {
+                font-size: 1em;
+            }
+
+            .scrollToTopBtn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                line-height: 40px;
+            }
+
+            .progress-ring {
+                width: 50px;
+                height: 50px;
+                right: 10px;
+            }
+
+            #image {
+                height: 25px;
+                width: 25px;
+            }
+        }
 
     </style>
 </head>
