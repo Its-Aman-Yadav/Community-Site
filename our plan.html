@@ -149,6 +149,8 @@
       transform: rotate(-90deg);
       transform-origin: 50% 50%;
     }
+
+   
   </style>
 
 </head>
@@ -327,7 +329,7 @@
       topFunction();
     });
   </script>
-
+<!-- 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const toggleButton = document.getElementById('checkbox');
@@ -335,7 +337,8 @@
         document.body.classList.toggle('dark-mode');
       });
     });
-  </script>
+  </script> -->
+  
 
   <main>
     <section class="introduction" id="introduction">
@@ -465,6 +468,15 @@
       "enableConversationDeletion": true
     });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('checkbox');
+    toggleButton.addEventListener('change', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  });
+</script> 
 
 </body>
 
