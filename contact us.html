@@ -244,6 +244,159 @@ h4 {
 
 
 </style>
+<style>
+.toggle-container {
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 0 30px;
+    right: -4px;
+    position: absolute;
+}
+
+.switch-checkbox {
+    display: none;
+}
+
+.theme-switch {
+    position: relative;
+    width: 45px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+    margin-left: 10px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.switch-checkbox:checked + .theme-switch {
+    background-color: #34495e;
+}
+
+.switch-checkbox:checked + .theme-switch .light-mode-icon {
+    opacity: 0;
+}
+
+.switch-checkbox:checked + .theme-switch .dark-mode-icon {
+    opacity: 1;
+}
+
+.switch-checkbox:checked + .theme-switch .toggle-button {
+    transform: translateX(30px); /* Adjust the value as needed */
+}
+
+.theme-switch .light-mode-icon, .theme-switch .dark-mode-icon {
+    font-size: 19px;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode-icon {
+    opacity: 0;
+}
+
+.night-mode {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+.night-mode .card {
+    background: linear-gradient(#34495e, #4ca1af);
+    box-shadow: 0px 1px 4px 2px #000;
+}
+
+.night-mode .form input,
+.night-mode textarea {
+    border-bottom: 2px solid #ccc;
+    color: white;
+}
+.night-mode input::placeholder{
+    color: white;
+}
+
+.night-mode .form input:focus,
+.night-mode textarea:focus {
+    border-bottom: 2px solid #00bcd4;
+}
+
+.night-mode .form input.filled,
+.night-mode textarea.filled {
+    border-bottom: 2px solid #00bcd4;
+}
+
+.night-mode .usersubmit input {
+    background-color: #00bcd4;
+}
+
+.night-mode .usersubmit input:hover {
+    background-color: #0097a7;
+}
+
+.night-mode .address p,
+.night-mode .address h4 {
+    color: white;
+}
+
+.night-mode i {
+    color: white !important;
+}
+
+.night-mode .back-button {
+    color: #00bcd4;
+}
+
+.night-mode .back-button:hover {
+    color: #0097a7;
+}
+
+.night-mode .toggle-container {
+    color: #00bcd4;
+}
+
+.night-mode .toggle-container:hover {
+    color: #0097a7;
+}
+.theme-switch img {
+    margin-right: 20px !important;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+.right h2{
+    color: black;
+}
+.night-mode .right h2 {
+    color: white;
+}
+.night-mode textarea::placeholder{
+    color: white;
+    }
+    .social{
+        display: flex;
+        gap: 1rem;
+    }
+</style>
 </head>
 <body>
      <!-- Chatbot integration section -->
@@ -270,10 +423,50 @@ h4 {
         "allowedOrigins": []
     });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('checkbox');
+        const lightModeIcon = document.querySelector('.light-mode-icon');
+        const darkModeIcon = document.querySelector('.dark-mode-icon');
+
+        toggleButton.addEventListener('change', function() {
+            document.body.classList.toggle('night-mode');
+            if (toggleButton.checked) {
+                lightModeIcon.style.opacity = '0';
+                darkModeIcon.style.opacity = '1';
+            } else {
+                lightModeIcon.style.opacity = '1';
+                darkModeIcon.style.opacity = '0';
+            }
+        });
+
+        // Initialize icon states based on the checkbox state
+        if (toggleButton.checked) {
+            lightModeIcon.style.opacity = '0';
+            darkModeIcon.style.opacity = '1';
+        } else {
+            lightModeIcon.style.opacity = '1';
+            darkModeIcon.style.opacity = '0';
+        }
+    });
+</script>
+
+
+
 
     <a href="javascript:history.back()" class="back-button">
         <i class="fas fa-arrow-left"></i> Go Back
     </a>
+    <div class="toggle-container" style="top: 0px;">
+        <input type="checkbox" id="checkbox" class="switch-checkbox">
+        <label class="theme-switch" for="checkbox">
+            <div class="toggle-button">
+                <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+                <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+            </div>
+        </label>
+    </div>
+    
 
     <div class="container">
         <div class="card">
