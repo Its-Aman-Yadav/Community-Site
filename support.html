@@ -15,7 +15,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="support.css" />
+ 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <script type="text/javascript">
@@ -72,6 +72,7 @@
     }
       
   </style>
+   <link rel="stylesheet" href="support.css" />
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -84,6 +85,7 @@
       });
     });
   </script>
+
 
 </head>
 
@@ -252,9 +254,124 @@
         transform: translateX(13px);
         /* background-color: #34495e; */
       }
-      
-    </style>
 
+      body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .main-content{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .main-content p{
+color: white;
+}
+body.dark-mode .main-content h1{
+color: white;
+}
+body.dark-mode .cards p{
+  color: black;
+}
+body.dark-mode .card-2{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .items {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: white;
+}
+body.dark-mode .items p{
+  color: white;
+}
+body.dark-mode .general{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode #contact-form{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .contact-form button{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .contact-info{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .contact-form-container{
+  background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode main h2{
+  color:white;
+}
+body.dark-mode p{
+  color: #dedbdb;
+}
+body.dark-mode .form-group label{
+  color: #dedbdb;
+}
+main h2{
+  color:black;
+}
+
+
+    </style>
+<style>
+  .contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  gap: 10px;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+}
+
+.success-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  display: none;
+}
+input[type="text"], input[type="email"], textarea{
+  border-radius: 5px;
+}
+  </style>
     <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
 
     <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
@@ -366,19 +483,19 @@
     
     
     <div class="contact-container">
-      <div class="contact-form-container">
-        <h2>Get in touch</h2>
-        <form class="contact-form">
-          <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Name" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-          </div>
-          <input type="text" id="subject" name="subject" placeholder="Subject" required>
-          <textarea id="message" name="message" placeholder="Message" required></textarea>
-          <button type="submit">Send Message</button>
-
+      <div style="background: #ff8000;" class="contact-form-container">
+        <h2 style="color: black;">Get in touch</h2>
+        <form class="contact-form" onsubmit="sendMessage(event)">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" name="message" placeholder="Message" required></textarea>
+            <button type="submit" id="send-message-button">Send Message</button>
+            <div id="success-message" class="success-message"></div>
         </form>
-      </div>
+    </div>
       <div class="contact-info">
         <h2>Need Support? <br> Contact Us!</h2>
         <p><i class="fas fa-map-marker-alt"></i> Address: 198 West 21th Street, Suite 721 New York NY 10016</p>
@@ -388,11 +505,11 @@
       </div>
     </div>
 
-    
+ 
   </main>
 
   <special-footer></special-footer>
-
+    
   <script>
    function toggleAnswer(element) {
   const faqItem = element.parentElement;
@@ -483,6 +600,8 @@
       });
     });
   </script>
+
+
 
 </body>
 

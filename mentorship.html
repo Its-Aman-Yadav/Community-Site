@@ -207,6 +207,73 @@
       list-style-type: circle;
       margin-left: 20px;
     }
+    .sess 
+    {
+      padding: 20px;
+    }
+    
+    .sess h2 
+    {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .sub-head 
+    {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .topics 
+    {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .item2 
+    {
+      flex: 1 1 45%;
+      max-width: 45%;
+      margin: 10px;
+      text-align: center;
+    }
+    
+    .item2 img 
+    {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 768px) 
+    {
+      .item2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+    
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  
+  #title
+  {
+    font-size: 25px;
+  }
+ .theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+}
     body.dark-mode {
   background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
     color: #fff;
@@ -304,7 +371,7 @@ body.dark-mode .success-stories ul li{
 
 <div class="main-content">
     <header class="header">
-        <h1 class="title">Mentorship</h1>
+        <h1 class="title" id="title">Mentorship</h1>
         <div class="hr-line"></div>
     </header>
     <section class="mentorship">
