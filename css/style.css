@@ -2868,15 +2868,43 @@ label.selected i {
   line-height: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1022px) {
   .wrapper .carousell {
     grid-auto-columns: calc((100% / 2) - 9px);
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 769px) {
   .wrapper .carousell {
     grid-auto-columns: 100%;
+  }
+  #testimonials .wrapper{
+    padding-right: 7.5rem;
+  }
+}
+
+@media screen and (max-width:480px){
+  #testimonials .containeerr{
+    padding: 0 10px;
+  }
+  #testimonials .container{
+    padding:15px;
+    
+  }
+  #testimonials .wrapper{
+    display: block;
+  }
+}
+
+@media screen and (max-width:510px){
+  #testimonials .section-title{
+    font-size: 9vw;
+  }
+}
+
+@media screen and (max-width:420px){
+  #testimonials .carousell .cardd span{
+    font-size: 0.9rem;
   }
 }
 
