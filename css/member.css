@@ -299,10 +299,22 @@ section{
 .contact-form1 input{
   width:100%;
   border-radius: 5px;
-  height: 25px !important;
+  height: 45px !important;
 }
 
 .contact-form1 textarea{
   width: 100%;
 }
+#success-message {
+  display: none;
+  background-color: green;
+  color: white !important;
+  padding: 10px;
  
+}
+.form-group{
+  margin-bottom: 0px;
+}
+#cnt{
+  margin-bottom: 2rem;
+}
