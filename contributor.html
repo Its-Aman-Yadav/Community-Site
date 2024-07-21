@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Learning - Open Source Village</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="contributor.css" />
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(to bottom, #FFD700, #FFFFFF);  */
+        color: black;
+        background: linear-gradient(#f5d244, #f5a623);
+    }
+
+    .title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #000000;
+    max-width: 100%; /* Ensure it doesn't exceed the container */
+    word-wrap: break-word; /* Wrap long words to the next line */
+    text-align: center; /* Center align the text */
+}
+
+/* Add this media query to adjust font size for smaller screens */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em; /* Adjust font size as needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2em; /* Further adjust for very small screens */
+    }
+}
+    #image {
+      height: 30px;
+      /* Reduced height of the profile image */
+      width: 30px;
+      /* Reduced width of the profile image */
+      border-radius: 50%;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+        body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+</style>
+</head>
+
+<body>
+    <!-- Navbar -->
+   
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <a class="logo-link" href="#home">
+        <div class="logo-title">
+                    <img  class="logo" src="images/logo2.jpeg" alt="logo">
+
+                    <span class="logo-text">Open Source Village</span>
+                   </div>
+
+      </a>
+      <ul>
+        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+      </ul>
+
+      <div class="toggle-container" style="top: 15px;">
+        <input type="checkbox" id="checkbox" class="switch-checkbox">
+        <label class="theme-switch" for="checkbox">
+          <div class="toggle-button">
+            <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+            <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+          </div>
+        </label>
+      </div>
+
+      <style>
+        .toggle-container {
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 30px;
+          right: -4px;
+          top: 15px;
+        }
+
+        .light-mode .toggle-container {
+          right: 140px;
+          top: 10px;
+        }
+        
+        /* Hidden Checkbox */
+        .switch-checkbox {
+          display: none;
+        }
+
+        .theme-switch {
+          position: relative;
+          width: 45px;
+          height: 30px;
+          background-color: #ccc;
+          border-radius: 20px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 5px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.5s ease;
+        }
+
+        .theme-switch .light-mode-icon,
+        .theme-switch .dark-mode-icon {
+          font-size: 19px;
+          position: absolute;
+          cursor: pointer;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: opacity 0.5s ease, color 0.5s ease;
+        }
+
+        .theme-switch .light-mode-icon {
+          color: #f39c12;
+        }
+
+        .theme-switch .dark-mode-icon {
+          color: #bdc3c7;
+          opacity: 0;
+        }
+
+        .toggle-button {
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 25px;
+          height: 25px;
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+
+        .switch-checkbox:checked + .theme-switch {
+          background-color: #34495e;
+        }
+
+        .switch-checkbox:checked + .theme-switch .light-mode-icon {
+          opacity: 0;
+        }
+
+        .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+          opacity: 1;
+        }
+
+        .switch-checkbox:checked + .theme-switch .toggle-button {
+          transform: translateX(13px);
+        }
+        .logo img {
+      height: 40px;
+      /* Reduced height of the logo */
+      width: 40px;
+      /* Reduced width of the logo */
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      /* Adjusted font size */
+      color: white;
+      /* Logo text color */
+    }
+
+
+</style>
+</div>
+    </nav>
+    <main class="container">
+      <h1 class="heroes">Celebrating Dedication: Our Contributor Heroes</h1>
+      <div id="contributor">
+        <div id="grid">
+          <!-- Placeholder elements -->
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+          <div class="placeholder" aria-hidden="true"></div>
+        </div>
+      </div>
+    </main>
+    <special-footer></special-footer>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <script>
+    function sendFeed() {
+      alert('Email sent successfully!');
+    }
+  </script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Message sent successsfully. We will get back to you soon.")
+      );
+    }
+    function sendFeed() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Feedback sent successsfully")
+      );
+    }
+  </script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/vegas.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "This chatbot is for the community",
+      "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+    });
+  </script>
+  <!-- swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- Trail effect elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <script src="trail.js"></script>
+
+  <!-- end -->
+
+  <script src="./footer/footer.js"></script>
+</body>
+<script src="contributor.js"></script>
+
+</html>
