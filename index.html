@@ -661,8 +661,8 @@ a.pre-order-btn:hover {
   <!-- Navbar -->
   <div class="navbar">
     <nav>
-      <div id="ham-menu" onclick="togMenu(this)">
-        <div id="bars">
+      <div id="ham-menu">
+        <div id="bars" onclick="togMenu(this)">
         <div id="first" class="bar"></div>
         <div id="sec" class="bar"></div>
         <div id="third" class="bar"></div>
@@ -731,7 +731,7 @@ a.pre-order-btn:hover {
         transform: translate(0, -10px) rotate(45deg);
         }
         #nav-menu{
-            display: block;
+            display: none;
             opacity: 0;
             position: fixed;
             top:63px;
@@ -762,13 +762,8 @@ a.pre-order-btn:hover {
         }
         #nav-menu ul li{
             display: none;
-            
             margin: 10px 20px 0 30px;
         }
-        .cliked #nav-menu{
-            opacity: 1;
-        }
-
 
         @media (max-width: 858px) {
             #bars{
@@ -809,11 +804,16 @@ a.pre-order-btn:hover {
       <script>
         function togMenu(obj){
             var headMenu = document.querySelector('.navbar nav');
+            var sideMenu = document.getElementById('nav-menu');
             obj.classList.toggle("cliked");
             if(obj.classList.contains('cliked')){
               headMenu.style.borderBottomLeftRadius = '0px';
+              sideMenu.style.display='block';
+              sideMenu.style.opacity='1';
             }else{
               headMenu.style.borderBottomLeftRadius=headMenu.style.borderBottomRightRadius;
+              sideMenu.style.opacity='0';
+              sideMenu.style.display='none';
             }
         }
         window.addEventListener("scroll", function () {
@@ -1173,6 +1173,16 @@ a.pre-order-btn:hover {
       </div>
     </div>
   </section>
+
+  <!--Updated styles for resp testimonials-->
+  <style>
+    #testimonials .wrapper{
+      display: grid;
+    }
+    #testimonials .section-title{
+      font-size: calc(2.3rem+2.8vw);
+    }
+  </style> 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
