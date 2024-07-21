@@ -61,14 +61,11 @@
 
   <style>
     .navbar {
-      /* background-color: #333; */
       /* Background color for navbar */
       padding: 5px 20px;
       /* Reduced padding for navbar */
     }
 
-    /* Navbar styles */
-    /* Navbar styles */
     /* Navbar styles */
     .navbar {
       /* background-color: #333; Background color for navbar */
@@ -412,9 +409,9 @@
       }
     }
 
-    .modal {
+  .modal {
   backdrop-filter: blur(2px);
-  padding: 1.5em;
+  padding: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -422,7 +419,7 @@
 }
 
 .modal-content {
-  background: linear-gradient(135deg, gold, orange);
+  background: linear-gradient( gold, rgb(255, 255, 255));
   border-radius: 1em;
   padding: 2em;
   color: #000; /* Ensures text is readable on the gradient background */
@@ -482,7 +479,7 @@ a.pre-order-btn {
 }
 
 a.pre-order-btn:hover {
-  background-color: #4B3E2A; /* Dark brown color on hover */
+  background-color: #e8701f; /* Dark brown color on hover */
   text-decoration: none;
   color: gold;
 }
@@ -492,7 +489,12 @@ a.pre-order-btn:hover {
   text-align: center;
   padding: 1em 0;
 }
-
+.modal-header{
+  background-color: #f3b7127b;
+  border-radius: 20px;
+  margin-top: 20px;
+  /* margin-bottom: 1em; */
+}
 .modal-footer button {
   background-color: gold;
   color: #000;
@@ -505,8 +507,16 @@ a.pre-order-btn:hover {
 }
 
 .modal-footer button:hover {
-  background-color: #4B3E2A; /* Dark brown color on hover */
+  background-color: #ff3700; /* Dark brown color on hover */
   color: gold;
+}
+
+.modal-content .close{
+  margin-right:0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  /* background-color:#e15509; */
 }
 
 /* Media queries for responsiveness */
@@ -572,8 +582,9 @@ a.pre-order-btn:hover {
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
             <div class="flex">
                 <img src="images/logo2.jpeg" alt="" class="logo">
                   <h4 class="modal-title">Open Source Village</h4>
@@ -650,8 +661,8 @@ a.pre-order-btn:hover {
   <!-- Navbar -->
   <div class="navbar">
     <nav>
-      <div id="ham-menu" onclick="togMenu(this)">
-        <div id="bars">
+      <div id="ham-menu">
+        <div id="bars" onclick="togMenu(this)">
         <div id="first" class="bar"></div>
         <div id="sec" class="bar"></div>
         <div id="third" class="bar"></div>
@@ -688,7 +699,7 @@ a.pre-order-btn:hover {
         <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
       </ul>
 
-      <div class="toggle-container" style="top: 15px;">
+      <div class="toggle-container" style="top: 0px;">
         <input type="checkbox" id="checkbox" class="switch-checkbox">
         <label class="theme-switch" for="checkbox">
           <div class="toggle-button">
@@ -720,7 +731,7 @@ a.pre-order-btn:hover {
         transform: translate(0, -10px) rotate(45deg);
         }
         #nav-menu{
-            display: block;
+            display: none;
             opacity: 0;
             position: fixed;
             top:63px;
@@ -751,13 +762,8 @@ a.pre-order-btn:hover {
         }
         #nav-menu ul li{
             display: none;
-            
             margin: 10px 20px 0 30px;
         }
-        .cliked #nav-menu{
-            opacity: 1;
-        }
-
 
         @media (max-width: 858px) {
             #bars{
@@ -798,11 +804,16 @@ a.pre-order-btn:hover {
       <script>
         function togMenu(obj){
             var headMenu = document.querySelector('.navbar nav');
+            var sideMenu = document.getElementById('nav-menu');
             obj.classList.toggle("cliked");
             if(obj.classList.contains('cliked')){
               headMenu.style.borderBottomLeftRadius = '0px';
+              sideMenu.style.display='block';
+              sideMenu.style.opacity='1';
             }else{
               headMenu.style.borderBottomLeftRadius=headMenu.style.borderBottomRightRadius;
+              sideMenu.style.opacity='0';
+              sideMenu.style.display='none';
             }
         }
         window.addEventListener("scroll", function () {
@@ -819,14 +830,12 @@ a.pre-order-btn:hover {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 30px;
-          right: -4px;
-          top: 15px;
+          margin: 30px 0 0 30px;
         }
 
         .light-mode .toggle-container {
-          right: 140px;
-          top: 10px;
+          right: -4px;
+          top: 15px;
         }
         
         /* Hidden Checkbox */
@@ -949,7 +958,7 @@ a.pre-order-btn:hover {
         <br><br><br>
         <h1>Open Source Village</h1>
         <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
+        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are the <strong>Open Source Village</strong></h3>
         <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
         <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
           data-wow-delay="1s" style="color:white;">
@@ -1008,6 +1017,7 @@ a.pre-order-btn:hover {
       </div>
     </div>
   </section>
+  <br>
 
   <script>
     // JavaScript to animate the counter
@@ -1163,6 +1173,16 @@ a.pre-order-btn:hover {
       </div>
     </div>
   </section>
+
+  <!--Updated styles for resp testimonials-->
+  <style>
+    #testimonials .wrapper{
+      display: grid;
+    }
+    #testimonials .section-title{
+      font-size: calc(2.3rem+2.8vw);
+    }
+  </style> 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
@@ -1500,6 +1520,7 @@ a.pre-order-btn:hover {
       background-color: #fff;
       border-color: #333;
       outline: none;
+      color:black !important;
     }
 
     .textarea .input {
@@ -1614,10 +1635,10 @@ a.pre-order-btn:hover {
               <i class="fab fa-facebook-f"></i>
             </a>
             <a href="#">
-              <i class="fab fa-twitter"></i>
+              <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a href="#">
-              <i class="fab fa-instagram"></i>
+              <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="https://www.linkedin.com/company/open-source-village/">
               <i class="fab fa-linkedin-in"></i>
@@ -1625,6 +1646,14 @@ a.pre-order-btn:hover {
           </div>
         </div>
       </div>
+      <style>
+        a:hover .fa-brands{
+          color: yellow;
+        }
+        .fa-brands{  
+          font-size: 1rem;
+        }
+      </style>
       <div class="contact-form">
         <span class="circle one"></span>
         <span class="circle two"></span>
@@ -1734,6 +1763,7 @@ a.pre-order-btn:hover {
     .feedback-form input[type="email"]:focus,
     .feedback-form textarea:focus {
       outline: none !important;
+      color: black !important;
     }
 
     .feedback-form button[type="submit"] {

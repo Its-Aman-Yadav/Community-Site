@@ -84,6 +84,8 @@
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
   }
+
+  
 </style>
 </head>
 
@@ -268,14 +270,7 @@
 
     </nav>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleButton = document.getElementById('checkbox');
-      toggleButton.addEventListener('change', function () {
-        document.body.classList.toggle('dark-mode');
-      });
-    });
-  </script>
+ 
   <div class="intro">
     <div class="container">
       <h1>Welcome to Our Community Startup</h1>
@@ -296,7 +291,7 @@
   </section>
   <section class="join-us">
     <div class="container grids">
-      <img src="fav.png">
+      <img src="images/logo2.jpeg">
       <div class="left-sec">
 
         <h2>Join Us</h2>
@@ -335,6 +330,15 @@
       "enableConversationDeletion": true
     });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('checkbox');
+    toggleButton.addEventListener('change', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  });
+</script>
 
 </body>
 

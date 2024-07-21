@@ -31,16 +31,61 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
+body.dark-mode .introduction{
+  background-color: #1c1b1b;
+  color: white !important;
+}
+
+body.dark-mode p{
+  color:rgb(211, 208, 208) !important;
+}
+
 .goal{
     text-align: center;
     margin: 20px 0px;
     padding: 20px;
     background-color: #fff9e2;
     border-radius: 5px;
-
-
 }
 
+body.dark-mode .goal{
+  background:linear-gradient(grey, #1c1b1b); 
+}
+
+body.dark-mode h2{
+  color:white !important;
+}
+
+body.dark-mode .goals li{
+  background-color: #1c1b1b !important;
+}
+
+body.dark-mode .guidelines{
+  background:linear-gradient(grey, #1c1b1b);
+}
+
+body.dark-mode .guidelines ul li{
+  background-color: #1c1c1c;
+}
+
+body.dark-mode .contributions{
+  background-color: #3c3c3c;
+}
+
+body.dark-mode .contributions li p{
+  background-color: #1c1b1b;
+}
+
+body.dark-mode .contact{
+  background-color: #1c1b1b;
+}
+
+body.dark-mode .contact-form{
+  background-color: #3c3c3c;
+}
+body.dark-mode .contact-form label{
+  color:whitesmoke;
+}
  main h2{
     font-size: 20px;
     font-weight: 600;
