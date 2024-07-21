@@ -581,6 +581,10 @@ input[type="text"], input[type="email"], textarea{
   </script>
 
   <script>
+
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
+    
     document.addEventListener('DOMContentLoaded', function () {
       const toggleButton = document.getElementById('checkbox');
       const currentMode = localStorage.getItem('dark-mode');
