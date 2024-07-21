@@ -404,6 +404,11 @@ img, video {
 </style>
 </head>
 <body>
+
+    <video id="background-video" autoplay muted loop>
+        <source src="back5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
      <!-- Chatbot integration section -->
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
   <script>
@@ -459,10 +464,10 @@ img, video {
 
 
 
-    <a href="javascript:history.back()" class="back-button">
-        <i class="fas fa-arrow-left"></i> Go Back
+    <a href="javascript:history.back()" class="back-button" style="color: #00bcd4;">
+        <i class="fas fa-arrow-left" style="background-color: #00bcd4;"></i> Go Back
     </a>
-    <div class="toggle-container" style="top: 0px;">
+    <!-- <div class="toggle-container" style="top: 0px;">
         <input type="checkbox" id="checkbox" class="switch-checkbox">
         <label class="theme-switch" for="checkbox">
             <div class="toggle-button">
@@ -470,15 +475,15 @@ img, video {
                 <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
             </div>
         </label>
-    </div>
+    </div> -->
     
 
-    <div class="toggle-container" style="top: 15px;">
+    <!-- <div class="toggle-container" style="top: 15px;">
         <div class="toggle-button">
           <img src="./images/sun.svg" class="light-mode-icon" alt="Light mode">
           <img src="./images/moon.svg" class="dark-mode-icon" alt="Dark mode">
         </div>
-      </div>
+      </div> -->
 
     <div class="container">
         <div class="card">
