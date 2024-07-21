@@ -1198,7 +1198,11 @@ footer hr {
   /* Hover color in dark mode */
 }
 
+
 body.dark-mode .fa-solid {
+
+body.dark-mode nav .fa-solid{
+
   color: #ffffff !important;
 }
 
