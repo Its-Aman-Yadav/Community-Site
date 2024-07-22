@@ -1,529 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    
-  <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="contact.css">
+
+    <script
+      src="https://kit.fontawesome.com/90889e6878.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="favicon.ico" />
     <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #f1c11a, #fae69f);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: sans-serif;
-}
-
-.card {
-    background: linear-gradient(white, #fae69f);
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid #bbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    box-shadow: 0px 1px 4px 2px #fe540592;
-}
-
-.left {
-    width: 25vw;
-    padding: 0px;
-    height: 70%;
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.right .contact {
-    display: flex;
-    gap: 1rem;
-    margin-right: 1rem;
-}
-
-.form, .address {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0 0;
-}
-
-.form input, textarea {
-    width: 100%;
-    outline: none;
-    background: none;
-    border: none;
-    border-bottom: 2px solid #000;
-    padding: 10px 0;
-    margin: 5px 0;
-}
-
-.form input:focus, textarea:focus {
-    border-bottom: 2px solid #f25;
-}
-
-.form input.filled, textarea.filled {
-    border-bottom: 2px solid #f25;
-}
-
-.usersubmit input {
-    background-color: #f25;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
-    width: min-content;
-    padding: 10px;
-    margin-bottom: 0;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.usersubmit input:hover {
-    background-color: rgb(199, 5, 21);
-}
-
-.address {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.address p {
-    color: #f25;
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.address h4 {
-    margin-bottom: 0px;
-}
-
-i {
-    color: rgb(117, 9, 34) !important;
-}
-
-i:hover {
-    cursor: pointer;
-    color: #f25 !important;
-}
-
-h4 {
-    margin-bottom: 5px;
-}
-
-.left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-@media screen and (max-width: 700px) {
-    .card {
-        flex-direction: column;
-        width: 90%;
-        height: auto;
-    }
-
-    .left {
-        width: 100%;
-        height: 30vh;
-    }
-
-    .right {
-        width: 100%;
-        padding: 0 1rem;
-    }
-
-    .contact {
-        flex-direction: column;
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fae69f;
+        display: flex;
+        justify-content: center;
         align-items: center;
-    }
-}
+        height: 100vh;
+      }
 
-@media screen and (max-width: 500px) {
-    .card {
-        width: 90%;
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+      }
+
+      .card {
+        background: linear-gradient(white, #fae69f);
         padding: 1rem;
-    }
-
-    .left {
-        width: 100%;
-        height: 25vh;
-    }
-
-    .right {
-        width: 100%;
-        padding: 0 1rem;
-    }
-
-    .form input, textarea {
-        width: 100%;
-    }
-
-    .usersubmit input {
-        width: 100%;
-        padding: 0.5rem;
-    }
-
-    .address {
-        gap: 1rem;
-    }
-
-    .toggle-container{
-        right: 10px;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .container {
-        padding: 0 1rem;
-    }
-
-    .card {
-        width: 100%;
-        padding: 0.5rem;
-    }
-
-    .left {
-        width: 100%;
-        height: 20vh;
-    }
-
-    .contact {
-        flex-direction: column;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        display: flex;
         align-items: center;
-    }
+        justify-content: center;
+        gap: 2rem;
+        box-shadow: 0px 1px 4px 2px #fe540592;
+      }
 
-    .form input, textarea {
-        width: 100%;
-    }
+      .left {
+        width: 25vw;
+        padding: 0px;
+        height: 70%;
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 5px;
+      }
 
-    .usersubmit input {
-        width: 100%;
-    }
-
-    .address {
-        gap: 1rem;
-    }
-}
-
-.back-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: rgb(86, 2, 22);
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.back-button i {
-    font-size: 35px;
-    margin-right: 10px;
-}
-
-.back-button:hover {
-    color: #fa6115;
-}
-
-
-
-
-
-</style>
-<style>
-.toggle-container {
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0 0 30px;
-    right: -4px;
-    position: absolute;
-}
-
-.switch-checkbox {
-    display: none;
-}
-
-.theme-switch {
-    position: relative;
-    width: 45px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.5s ease;
-    margin-left: 10px;
-}
-
-.toggle-button {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 25px;
-    height: 25px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.5s ease, background-color 0.5s ease;
-}
-
-.switch-checkbox:checked + .theme-switch {
-    background-color: #34495e;
-}
-
-.switch-checkbox:checked + .theme-switch .light-mode-icon {
-    opacity: 0;
-}
-
-.switch-checkbox:checked + .theme-switch .dark-mode-icon {
-    opacity: 1;
-}
-
-.switch-checkbox:checked + .theme-switch .toggle-button {
-    transform: translateX(30px); /* Adjust the value as needed */
-}
-
-.theme-switch .light-mode-icon, .theme-switch .dark-mode-icon {
-    font-size: 19px;
-    position: absolute;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: opacity 0.5s ease, color 0.5s ease;
-}
-
-.dark-mode-icon {
-    opacity: 0;
-}
-
-.night-mode {
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
-}
-
-.night-mode .card {
-    background: linear-gradient(#34495e, #4ca1af);
-    box-shadow: 0px 1px 4px 2px #000;
-}
-
-.night-mode .form input,
-.night-mode textarea {
-    border-bottom: 2px solid #ccc;
-    color: white;
-}
-.night-mode input::placeholder{
-    color: white;
-}
-
-.night-mode .form input:focus,
-.night-mode textarea:focus {
-    border-bottom: 2px solid #00bcd4;
-}
-
-.night-mode .form input.filled,
-.night-mode textarea.filled {
-    border-bottom: 2px solid #00bcd4;
-}
-
-.night-mode .usersubmit input {
-    background-color: #00bcd4;
-}
-
-.night-mode .usersubmit input:hover {
-    background-color: #0097a7;
-}
-
-.night-mode .address p,
-.night-mode .address h4 {
-    color: white;
-}
-
-.night-mode i {
-    color: white !important;
-}
-
-.night-mode .back-button {
-    color: #00bcd4;
-}
-
-.night-mode .back-button:hover {
-    color: #0097a7;
-}
-
-.night-mode .toggle-container {
-    color: #00bcd4;
-}
-
-.night-mode .toggle-container:hover {
-    color: #0097a7;
-}
-.theme-switch img {
-    margin-right: 20px !important;
-}
-img, video {
-    max-width: 100%;
-    height: auto;
-}
-.right h2{
-    color: black;
-}
-.night-mode .right h2 {
-    color: white;
-}
-.night-mode textarea::placeholder{
-    color: white;
-    }
-    .social{
+      .right .contact {
         display: flex;
         gap: 1rem;
-    }
-</style>
-</head>
-<body>
-     <!-- Chatbot integration section -->
-  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-  <script>
-    window.botpressWebChat.init({
-        "composerPlaceholder": "Ask me anything!",
-        "botConversationDescription": "Welcome to Open Source Village!",
-        "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-        "messagingUrl": "https://messaging.botpress.cloud",
-        "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-        "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
-        "lazySocket": true,
-        "themeName": "prism",
-        "botName": "Open Source Village",
-        "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
-        "stylesheet": "https://webchat-styler-css.botpress.app/prod/328bf234-c9e7-4f98-9c94-69f1a0877b98/v99808/style.css",
-        "frontendVersion": "v1",
-        "useSessionStorage": true,
-        "enableConversationDeletion": true,
-        "theme": "prism",
-        "themeColor": "#2563eb",
-        "allowedOrigins": []
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggleButton = document.getElementById('checkbox');
-        const lightModeIcon = document.querySelector('.light-mode-icon');
-        const darkModeIcon = document.querySelector('.dark-mode-icon');
+        margin-right: 1rem;
+      }
 
-        toggleButton.addEventListener('change', function() {
-            document.body.classList.toggle('night-mode');
-            if (toggleButton.checked) {
-                lightModeIcon.style.opacity = '0';
-                darkModeIcon.style.opacity = '1';
-            } else {
-                lightModeIcon.style.opacity = '1';
-                darkModeIcon.style.opacity = '0';
-            }
-        });
+      .form,
+      .address {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0 0;
+      }
 
-        // Initialize icon states based on the checkbox state
-        if (toggleButton.checked) {
-            lightModeIcon.style.opacity = '0';
-            darkModeIcon.style.opacity = '1';
-        } else {
-            lightModeIcon.style.opacity = '1';
-            darkModeIcon.style.opacity = '0';
+      .form input,
+      textarea {
+        width: 100%;
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #000;
+        padding: 10px 0;
+        margin: 5px 0;
+      }
+
+      .form input:hover,
+      textarea:hover {
+        border-bottom: 2px solid #f25;
+      }
+
+      .usersubmit input {
+        background-color: #f25;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+        width: min-content;
+        padding: 10px;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .usersubmit input:hover {
+        background-color: rgb(199, 5, 21);
+      }
+
+      .address {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .address p {
+        color: #f25;
+        margin-top: 5px;
+        font-size: 14px;
+      }
+
+      .address h4 {
+        margin-bottom: 0px;
+      }
+
+      i {
+        color: rgb(117, 9, 34);
+      }
+
+      i:hover {
+        cursor: pointer;
+        color: #f25 !important;
+      }
+
+      h4 {
+        margin-bottom: 5px;
+      }
+
+      .left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .card {
+          flex-direction: column;
+          width: 90%;
+          height: auto;
         }
-    });
-</script>
 
+        .left {
+          width: 100%;
+          height: 30vh;
+        }
 
+        .right {
+          width: 100%;
+          padding: 0 1rem;
+        }
 
+        .contact {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .card {
+          width: 90%;
+          padding: 1rem;
+        }
+
+        .left {
+          width: 100%;
+          height: 25vh;
+        }
+
+        .right {
+          width: 100%;
+          padding: 0 1rem;
+        }
+
+        .form input,
+        textarea {
+          width: 100%;
+        }
+
+        .usersubmit input {
+          width: 100%;
+          padding: 0.5rem;
+        }
+
+        .address {
+          gap: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 350px) {
+        .container {
+          padding: 0 1rem;
+        }
+
+        .card {
+          width: 100%;
+          padding: 0.5rem;
+        }
+
+        .left {
+          width: 100%;
+          height: 20vh;
+        }
+
+        .contact {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .form input,
+        textarea {
+          width: 100%;
+        }
+
+        .usersubmit input {
+          width: 100%;
+        }
+
+        .address {
+          gap: 1rem;
+        }
+      }
+
+      .back-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(86, 2, 22);
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .back-button i {
+        font-size: 35px;
+        margin-right: 10px;
+      }
+
+      .back-button:hover {
+        color: #ffffff;
+      }
+      .theme-toggle {
+        position: fixed;
+        top: 26px;
+        right: 30px;
+        color: rgb(86, 2, 22);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+
+        transition: background-color 0.3s, box-shadow 0.3s;
+        z-index: 1000;
+      }
+
+      .theme-toggle i {
+        font-size: 20px;
+        color: rgb(3, 3, 38);
+      }
+
+      .theme-toggle .fa-moon {
+        display: none;
+        color: rgb(255, 255, 255);
+      }
+      body.dark-theme {
+        background-color: #180e0e;
+        color: #000000;
+      }
+      body.dark-theme .back-button {
+        color: #ffffff;
+      }
+      body.dark-theme .theme-toggle .fa-sun {
+        display: none;
+      }
+      body.dark-theme .theme-toggle .fa-moon {
+        display: inline;
+      }
+      body.dark-theme .card {
+        background: linear-gradient(#000000, #252323);
+        box-shadow: 0px 1px 4px 2px #ffffff92;
+      }
+      body.dark-theme .right h2 {
+        color: #ffffff;
+      }
+      body.dark-theme .form input,
+      textarea {
+        color: #fff;
+        border-bottom: 2px solid rgb(255, 255, 255);
+      }
+      body.dark-theme .form input:hover,
+      textarea:hover {
+        border-bottom: 2px solid #f25;
+      }
+      body.dark-theme .address h4 {
+        color: #fff;
+      }
+      body.dark-theme .social i {
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Chatbot integration section -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+        composerPlaceholder: "Ask me anything!",
+        botConversationDescription: "Welcome to Open Source Village!",
+        botId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        webhookId: "a909bd46-1d71-484d-8551-58afe6d64c1e",
+        lazySocket: true,
+        themeName: "prism",
+        botName: "Open Source Village",
+        avatarUrl:
+          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+        stylesheet:
+          "https://webchat-styler-css.botpress.app/prod/328bf234-c9e7-4f98-9c94-69f1a0877b98/v99808/style.css",
+        frontendVersion: "v1",
+        useSessionStorage: true,
+        enableConversationDeletion: true,
+        theme: "prism",
+        themeColor: "#2563eb",
+        allowedOrigins: [],
+      });
+    </script>
+    <!-- dark mode -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.querySelector(".theme-toggle");
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme && savedTheme == "dark") {
+          body.classList.add("dark-theme");
+        }
+
+        themeToggle.addEventListener("click", function () {
+          body.classList.toggle("dark-theme");
+
+          if (body.classList.contains("dark-theme")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
+    </script>
 
     <a href="javascript:history.back()" class="back-button">
-        <i class="fas fa-arrow-left"></i> Go Back
+      <i class="fas fa-arrow-left"></i> Go Back
     </a>
-    <div class="toggle-container" style="top: 0px;">
-        <input type="checkbox" id="checkbox" class="switch-checkbox">
-        <label class="theme-switch" for="checkbox">
-            <div class="toggle-button">
-                <span class="light-mode-icon"><img src="./images/sun.svg"></span>
-                <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
-            </div>
-        </label>
+    <div class="theme-toggle">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
     </div>
-    
-
-    <div class="toggle-container" style="top: 15px;">
-        <div class="toggle-button">
-          <img src="./images/sun.svg" class="light-mode-icon" alt="Light mode">
-          <img src="./images/moon.svg" class="dark-mode-icon" alt="Dark mode">
-        </div>
-      </div>
 
     <div class="container">
-        <div class="card">
-          <div class="left">
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-5795988-4849052.png?f=webp">
-          </div>
-          <div class="right">
-            <h2>Contact Us</h2>
-            <div class="contact">
-              <div class="form-container" >
-                <form class="form" form id="contact-form" action="contact us.html" method="POST" onsubmit="sendEmail(); resetForm(); return false;">
-                  <div class="username">
-                    <input type="text" id="inputField" placeholder="Enter your Name">
-                  </div>
-                  <div class="useremail">
-                    <input type="email" od="inputField" placeholder="Enter your email" required>
-                  </div>
-                  <div class="usermessage">
-                    <textarea placeholder="Enter your message" required id="textAreaField"></textarea>
-                  </div>
-                  <div class="usersubmit">
-                    <input type="submit" value="Contact Us">
-                  </div>
-                </form>
+      <div class="card">
+        <div class="left">
+          <img
+            src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-5795988-4849052.png?f=webp"
+          />
+        </div>
+        <div class="right">
+          <h2>Contact Us</h2>
+          <div class="contact">
+            <div class="form-container">
+              <form
+                class="form"
+                form
+                id="contact-form"
+                action="contact us.html"
+                method="POST"
+                onsubmit="sendEmail(); resetForm(); return false;"
+              >
+                <div class="username">
+                  <input
+                    type="text"
+                    id="inputField"
+                    placeholder="Enter your Name"
+                  />
+                </div>
+                <div class="useremail">
+                  <input
+                    type="email"
+                    od="inputField"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="usermessage">
+                  <textarea
+                    placeholder="Enter your message"
+                    required
+                    id="textAreaField"
+                  ></textarea>
+                </div>
+                <div class="usersubmit">
+                  <input type="submit" value="Contact Us" />
+                </div>
+              </form>
+            </div>
+            <div class="address">
+              <div class="email">
+                <h4>Contact</h4>
+                <p>communitysite@gmail.com</p>
               </div>
-              <div class="address">
-                <div class="email">
-                  <h4>Contact</h4>
-                  <p>communitysite@gmail.com</p>
-                </div>
-                <div class="location">
-                  <h4>Based in</h4>
-                  <p>Los Angeles, California</p>
-                </div>
-                <div class="social">
-                  <span><a href="#"><i class="fab fa-facebook"></i></a></span>
-                  <span><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></span>
-                  <span><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></span>
-                  <span><a href="" target="_blank" class="href"><i class="fab fa-linkedin"></i></a></span>
-                </div>
+              <div class="location">
+                <h4>Based in</h4>
+                <p>Los Angeles, California</p>
+              </div>
+              <div class="social">
+                <span
+                  ><a href="#"><i class="fab fa-facebook"></i></a
+                ></span>
+                <span
+                  ><a href="#" target="_blank"
+                    ><i class="fab fa-instagram"></i></a
+                ></span>
+                <span
+                  ><a href="#" target="_blank"><i class="fab fa-twitter"></i></a
+                ></span>
+                <span
+                  ><a href="" target="_blank" class="href"
+                    ><i class="fab fa-linkedin"></i></a
+                ></span>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     <!-- <div class="formcontainer">
         <div class="section-title">
             <h1>Get in Touch</h1>
@@ -547,53 +462,36 @@ img, video {
         </div>
     </div> -->
     <script>
-        function sendEmail() {
-            alert('Message sent successfully!');
-        }
-    
-        function resetForm() {
-            document.getElementById('form-container').reset();
-        }
+      function sendEmail() {
+        alert("Message sent successfully!");
+      }
+
+      function resetForm() {
+        document.getElementById("form-container").reset();
+      }
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const inputField = document.getElementById('inputField');
-    const textAreaField = document.getElementById('textAreaField');
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputField = document.getElementById("inputField");
+        const textAreaField = document.getElementById("textAreaField");
 
-    inputField.addEventListener('input', function() {
-        if (this.value.length > 0) {
-            this.classList.add('filled');
-        } else {
-            this.classList.remove('filled');
-        }
-    });
-
-    textAreaField.addEventListener('input', function() {
-        if (this.value.length > 0) {
-            this.classList.add('filled');
-        } else {
-            this.classList.remove('filled');
-        }
-    });
-});
-
-    </script>
-    
-    <script>
-        const toggleButton = document.querySelector('.toggle-button');
-        const body = document.body;
-      
-        toggleButton.addEventListener('click', () => {
-          body.classList.toggle('dark-mode');
-          localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        inputField.addEventListener("input", function () {
+          if (this.value.length > 0) {
+            this.classList.add("filled");
+          } else {
+            this.classList.remove("filled");
+          }
         });
-      
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'true') {
-          body.classList.add('dark-mode');
-        }
-      </script>
 
-</body>
+        textAreaField.addEventListener("input", function () {
+          if (this.value.length > 0) {
+            this.classList.add("filled");
+          } else {
+            this.classList.remove("filled");
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

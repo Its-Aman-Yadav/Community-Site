@@ -690,7 +690,12 @@ body.dark-mode .items p{
   }
 </script>
 </div>
-<script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+<script>
+  
+ document.documentElement.style.overflow = 'auto';
+document.body.style.overflow = 'auto';
+    
+ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
   let circle = document.querySelector(".progress-ring__circle");
   let radius = circle.r.baseVal.value;
   let circumference = 2 * Math.PI * radius;

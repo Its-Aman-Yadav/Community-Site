@@ -1,6 +1,8 @@
 const cont = document.getElementById("contributor");
 const owner = "Its-Aman-Yadav";
 const repoName = "Community-Site";
+document.documentElement.style.overflow = 'auto';
+document.body.style.overflow = 'auto';
 
 async function fetchContributors(pageNumber) {
   const apiUrl =
