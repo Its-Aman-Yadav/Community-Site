@@ -108,16 +108,17 @@ class SpecialFooter extends HTMLElement {
                 </div>
               </div>
             </div>
+            <div class="col1" id="cont">
+              <h3>Feedback</h3>
+              <div class="contact-details">
+                <div class="links">
+                  <a href="feedback.html">give us feedback</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row2">
-          <div class="form">
-            <form id="emailForm" class="emailFormFlex">
-              <input type="text" id="emailInput" placeholder="Email here...">
-              <button type="submit" class="submit"><i class="fa fa-paper-plane"></i></button>
-            </form>
-          </div>
-        </div>
+      
         <hr></hr>
         <p class="copyright">
           Copyright ©

@@ -1,13 +1,4 @@
-/*
 
-Comila Template
-
-http://www.templatemo.com/tm-490-comila
-
-*/
-/* 
-    NavBar
-*/
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 
 body {
@@ -226,8 +217,8 @@ html {
 }
 
 .home-thumb h1 {
-  font-size: 60px;
-  font-weight: 900;
+  font-size: 50px;
+  font-weight: 600;
   background: linear-gradient(135deg, #ff793b, #fffb07 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -241,7 +232,7 @@ html {
 
 .home-thumb a.btn {
   text-decoration: none;
-  color: black;
+ 
   padding: 10px 20px;
   margin: 10px;
   border-radius: 30px;
@@ -256,18 +247,7 @@ html {
   border-radius: 5px;
 }
 
-.btn-default {
-  background-color: #0c0b0b;
-  border: none;
-  display: flex;
-  justify-items: center;
-  width: fit-content;
-  border: 2px solid red;
-}
 
-.btn-default:hover {
-  background-color: transparent;
-}
 .testimonial-author img {
   display: block;
   margin: 0 auto;
@@ -275,8 +255,7 @@ html {
 
 .preloader {
   display: none;
-  /* Hide preloader by default */
-  /* Add preloader styles here if needed */
+
 }
 /* Back to Top Button */
 .scrollToTopBtn {
