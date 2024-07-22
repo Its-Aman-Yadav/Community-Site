@@ -328,6 +328,7 @@ ul li a:hover {
   color: yellow;
 }
 
+
 body.dark-mode a:hover {
   color: #396a92;
 }
@@ -592,29 +593,29 @@ body.dark-mode .card1 .card-text {
   color: #fff;
 }
 
-body.dark-mode #contact .form .contact-info {
+body.dark-mode #contact .form .contact-info{
   background: linear-gradient(to right, #535353, #396a92);
 }
 
-body.dark-mode #contact .form .contact-info .title {
+body.dark-mode #contact .form .contact-info .title{
   color: black;
 }
-body.dark-mode #contact .form .contact-info p {
+body.dark-mode #contact .form .contact-info p{
   color: white;
 }
 
-body.dark-mode #contact .form .contact-form {
+body.dark-mode #contact .form .contact-form{
   background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
 }
 
-body.dark-mode .feedback-form {
+body.dark-mode .feedback-form{
   background: linear-gradient(to right, #535353, #396a92);
 }
 
-body.dark-mode .feedback-form h2 {
+body.dark-mode .feedback-form h2{
   color: black;
 }
-body.dark-mode .feedback-form p {
+body.dark-mode .feedback-form p{
   color: white;
 }
 
@@ -784,6 +785,7 @@ h2 {
   }
 }
 
+
 .footer {
   padding: 2rem 1rem;
   background: black;
@@ -791,6 +793,7 @@ h2 {
   min-height: 350px;
   width: 100%;
 }
+
 
 .social_media:hover {
   color: yellow;
@@ -821,6 +824,7 @@ body.dark-mode .social_media:hover {
   color: yellow;
   font-size: 14px;
 }
+
 
 body.dark-mode .company h1 {
   color: #396a92;
@@ -977,6 +981,7 @@ body.dark-mode .col1 .links a:hover {
   border-radius: 6px;
   background-color: rgb(251, 255, 0);
 }
+
 
 body.dark-mode .form button {
   background-color: #396a92;
@@ -1177,12 +1182,9 @@ footer hr {
   /* Hover color in dark mode */
 }
 
-
-body.dark-mode .fa-solid {
-
-body.dark-mode nav .fa-solid{
-
+body.dark-mode .fa-solid{
   color: #ffffff !important;
+  /* Text color in dark mode */
 }
 
 /* Responsive Styles */
@@ -2553,7 +2555,7 @@ label.selected i {
 }
 
 .submit:hover {
-  color: #f1c11a;
+  color:#f1c11a;
   background-color: #0056b3;
   transform: translateY(-2px);
 }
@@ -2845,43 +2847,15 @@ label.selected i {
   line-height: 1;
 }
 
-@media screen and (max-width: 1022px) {
+@media screen and (max-width: 900px) {
   .wrapper .carousell {
     grid-auto-columns: calc((100% / 2) - 9px);
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 600px) {
   .wrapper .carousell {
     grid-auto-columns: 100%;
-  }
-  #testimonials .wrapper{
-    padding-right: 7.5rem;
-  }
-}
-
-@media screen and (max-width:480px){
-  #testimonials .containeerr{
-    padding: 0 10px;
-  }
-  #testimonials .container{
-    padding:15px;
-    
-  }
-  #testimonials .wrapper{
-    display: block;
-  }
-}
-
-@media screen and (max-width:510px){
-  #testimonials .section-title{
-    font-size: 9vw;
-  }
-}
-
-@media screen and (max-width:420px){
-  #testimonials .carousell .cardd span{
-    font-size: 0.9rem;
   }
 }
 
@@ -3100,19 +3074,20 @@ input[type="text"]:focus {
   outline: none;
   border-color: rgba(255, 201, 8, 0.5);
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
-  color: black !important;
+  color:black !important;
 }
 input[type="email"]:focus {
   outline: none;
   border-color: rgba(255, 201, 8, 0.5);
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
-  color: black !important;
+  color:black !important;
 }
 textarea:focus {
   outline: none;
   border-color: rgba(255, 201, 8, 0.5);
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
-  color: black !important;
+  color:black !important;
+
 }
 .feedback-label {
   font-weight: bold;
@@ -3213,6 +3188,7 @@ body {
   color: yellow;
   transition: color 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 body.dark-mode .social a {
   color: #396a92;
@@ -3558,8 +3534,7 @@ body.dark-mode .social a {
     margin: 1rem 0 1.5rem 0;
   }
 
-  .social-media,
-  .info {
+  .social-media,.info {
     padding: 1.5rem 0 0 2rem;
   }
 }
@@ -3611,9 +3586,10 @@ body.dark-mode .social a {
     padding: 0.45rem 0.8rem;
   }
 }
-body.dark-mode #contactForm input {
-  color: white;
+body.dark-mode #contactForm input{
+  color:white;
 }
-body.dark-mode #contactForm textarea {
-  color: white;
+body.dark-mode #contactForm textarea{
+  color:white;
 }
+
