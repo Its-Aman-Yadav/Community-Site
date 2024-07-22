@@ -165,6 +165,7 @@ main {
     text-align: center;
     margin-top: 50px;
     font-weight: 600;
+    color: black;
 }
 
 
@@ -480,6 +481,71 @@ main {
       }
 
 
+      .contact {
+        padding: 80px 0;
+        text-align: center;
+      }
+      .contact-form
+      {
+        width: 500px;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .contact-form
+        {
+          width: 350px;
+        }
+      }
+      
+      .contact-form .form-group {
+        margin-bottom: 10px;
+      }
+      
+      .contact-form label {
+        display: block;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 4px;
+      }
+      
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+      }
+      
+      .contact-form textarea {
+        height: 120px;
+      }
+      
+      .contact-form input[type="text"]:focus,
+      .contact-form input[type="email"]:focus,
+      .contact-form textarea:focus {
+        border-color: #f1c11a;
+      }
+      
+      .contact-form button {
+        background-color: #f1c11a;
+        color: #fff;
+        border: none;
+        padding: 14px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .contact-form button:hover {
+        background-color: #d1a10a;
+      }
+
+
+
       /* Style for the theme switcher */
       .theme-switch {
         display: flex;
@@ -582,11 +648,19 @@ main {
   justify-content: center;
 }
 
+
+.contact-form{
+  margin-left: 0px;
+  margin-right: 50px;
+  padding-right: 70px;
+  margin-top: 25px;
+
 .contact-form-container {
   background: linear-gradient(to bottom right, #ff8c00, #ffd700);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   
+
 }
 
 .contact-form-container h2 {
@@ -594,16 +668,25 @@ main {
   color: white;
 }
 
+
+.contact-form label{
+  font-size: 20px;
+
 .contact-form {
   display: flex;
   flex-direction: column;
   background : none;
+
 }
 
 .form-group {
   display: flex;
   justify-content: space-between;
 }
+
+
+.contact-form input{
+  height: 30px !important;
 
 .contact-form input,
 .contact-form textarea {
@@ -612,6 +695,7 @@ main {
   padding: 10px;
   border: none;
   border-radius: 5px;
+
 }
 
 .contact-form textarea {
@@ -689,6 +773,24 @@ main {
   box-shadow: 0 0 1px 1px rgb(255, 195, 117);
 }
 
+
+.faqs.active i{
+    rotate: 180deg;
+}
+
+@media (max-width: 767px) 
+{
+  .theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
 .faq-item {
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -748,6 +850,97 @@ main {
   background-color: #ffa12f;
 }
 
+/* Dark Mode styles */
+
+body.dark-mode {
+  background: #1a1a1a;
+}
+
+body.dark-mode main {
+  background: #333;
+}
+
+body.dark-mode .general {
+  /* background: linear-gradient(to top, #333, #555); */
+  background: #555;
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .general h2 {
+  color: #ffd700;
+}
+
+body.dark-mode .general p {
+  color: #ddd;
+}
+
+body.dark-mode .faq h2{
+  color: #ffd700;
+}
+
+body.dark-mode .faq-question {
+  background: linear-gradient(to left, #444, #333);
+  color: #fff;
+}
+
+body.dark-mode .faq-answer {
+  background-color: #222;
+}
+
+body.dark-mode .faq-answer p {
+  color: #ddd;
+}
+
+body.dark-mode .faq-question.active {
+  background: linear-gradient(to left, #555, #444);
+}
+
+body.dark-mode .contact-container {
+  background: #333;
+  
+}
+
+body.dark-mode .contact-form-container {
+  background: linear-gradient(to bottom right, #444, #333);
+}
+
+body.dark-mode .contact-form-container h2 {
+  color: #ffd700;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .contact-form button {
+  background: #ffd700;
+  color: #000;
+}
+
+body.dark-mode .contact-form button:hover {
+  background: #ffea00;
+}
+
+body.dark-mode .contact-info {
+  background: #222;
+}
+
+body.dark-mode .contact-info h2,
+body.dark-mode .contact-info p {
+  color: #fff;
+}
+
+body.dark-mode .contact-info i {
+  color: #ffd700;
+}
+
+body.dark-mode .contact-form:before {
+  display: none;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .contact-container {
@@ -767,5 +960,6 @@ main {
   .contact-form button {
     width: 100%;
     text-align: center;
+
   }
 }

@@ -147,6 +147,79 @@
           }
       }
     } 
+    body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .main-content{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .main-content p{
+color: white;
+}
+body.dark-mode .main-content h1{
+color: white;
+}
+body.dark-mode .cards p{
+  color: black;
+}
+body.dark-mode .card-2{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .items {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: white;
+}
+body.dark-mode .items p{
+  color: white;
+}
+body.dark-mode .general{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode #contact-form{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .contact-form button{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .contact-info{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .benefits li{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .step-item{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .contact-form-container{
+  background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode .introduction{
+  background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode .benefits{
+  background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode .contact1{
+  background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode main h2{
+  color:white;
+}
+body.dark-mode p{
+  color: #dedbdb;
+}
+body.dark-mode .form-group label{
+  color: #dedbdb;
+}
+main h2{
+  color:black;
+}
     </style>
   </head>
   <body>
@@ -423,50 +496,60 @@
 
 
       <div class="contact-header">
-
-      <section class="contact1" id="contact" style="">
-        <div style="padding-right: 0px; margin-right: 0px; margin-left: 50px;"> 
-
-        <h2>Contact</h2>
-        <p>If you have any questions or need support, feel free to reach out to us:</p>
-      </div>
-      <section class="contact1" id="contact" style="background-color: #f3bf8c;">
-      
-        <div class="form-container">
-          <form class="contact-form1" id="contact-form">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
+        <section class="contact1" id="contact" style="">
+            <div style="padding-right: 0px; margin-right: 0px; margin-left: 50px;">
+                <div id="cnt"><h2>Contact</h2>
+                <p>If you have any questions or need support, feel free to reach out to us:</p></div>
+                <p id="success-message">We will connect with you soon!</p>
             </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" placeholder="Your email" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" placeholder="Your message" required></textarea>
-            </div>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </section>
+            <section class="contact1" id="contact" style="background-color: #f3bf8c;">
+                <div class="form-container">
+                    <form class="contact-form1" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </div>
       
     </main>
     <special-footer></special-footer>
     <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          alert("Thank you for your message. We will get back to you soon.");
-          document.getElementById("contact-form").reset();
-        });
-    </script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the form from submitting the traditional way
+          
+          // Display the success message
+          var successMessage = document.getElementById('success-message');
+          successMessage.style.display = 'block';
+
+          // Hide the success message after 3 seconds
+          setTimeout(function() {
+              successMessage.style.display = 'none';
+          }, 3000);
+      });
+  </script>
     <script src="footer/footer.js"></script>
     <script src="trail.js"></script>
 
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
   <script>
+
+    document.documentElement.style.overflow = 'auto';
+document.body.style.overflow = 'auto';
+
+    
     window.botpressWebChat.init({
       "composerPlaceholder": "Open Source Village",
       "botConversationDescription": "Ask me anything!",

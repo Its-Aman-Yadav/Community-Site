@@ -48,6 +48,13 @@
   text-align: center;
 }
 
+body.dark-mode .intro{
+  background: #171616 !important;
+}
+
+body.dark-mode p{
+  color:rgb(225, 225, 225) !important;
+}
 /* Container inside .intro */
 .intro .container {
   width: 100%; /* Full width of viewport */
@@ -79,10 +86,23 @@
     margin-right:auto;
     width: 80% !important;
   }
+
+body.dark-mode .mission .borderbox{
+  background: linear-gradient(rgb(68, 67, 67), #1e1e1e);
+  border-color: rgb(74, 124, 179);
+}
+
+body.dark-mode h2{
+  color:white;
+}
   .mission,
   .join-us {
     padding: 20px 0;
     text-align: center;
+  }
+
+  body.dark-mode .join-us{
+    background:linear-gradient(black,grey);
   }
   .mission{
     background: none;
@@ -106,7 +126,9 @@
   .grids img{
     max-height: 200px;
     max-width: 200px;
-    border-radius: 200px;
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
     border-width: 3px;
     box-shadow: 0 2px 2px 2px rgb(153, 148, 142);
     border-color: white;
@@ -143,12 +165,21 @@
     transition: background-color 0.3s ease;
   }
 
+  body.dark-mode .join-us .btn{
+    border-color: rgb(74, 124, 179);
+    background: linear-gradient(90deg, #383838, #111111);
+  }
   .join-us .btn:hover {
     background: none;
     border-width: 3px;
     border-color:rgb(255, 128, 1);
     color: rgb(255, 128, 1);
-    
+  }
+
+  body.dark-mode .join-us .btn:hover{
+    color:rgb(74,124,179);
+    border-color:rgb(74,124,179);
+    background: whitesmoke;
   }
 
  .changes{
