@@ -261,3 +261,5 @@ function validate_password(password) {
 function validate_field(field) {
   return field != null && field.length > 0;
 }
+
+// testimonial js
