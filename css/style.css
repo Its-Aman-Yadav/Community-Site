@@ -1435,6 +1435,11 @@ div.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
+
+body.dark-mode .card-context p {
+  color: white !important;
+}
+
 /* discord Button Styling */
 .btn-custom {
   background: linear-gradient(135deg, #7289da, #5865f2);
