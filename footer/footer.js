@@ -110,7 +110,7 @@ class SpecialFooter extends HTMLElement {
               <h3>Feedback</h3>
               <div class="contact-details">
                 <div class="links">
-                  <a href="feedback.html">Give us feedback</a>
+                  <a href="feedback.html"><i class="fa-solid fa-comments"></i>Give us feedback</a>
                 </div>
               </div>
             </div>
