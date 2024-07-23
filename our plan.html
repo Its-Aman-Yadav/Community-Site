@@ -86,67 +86,100 @@ video#background-video {
 }
    
 .contact {
-            padding: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            max-width: 800px;
-            margin: auto;
-            background-color: #f2f1ef;
-        }
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: auto;
+    background-color: #f4ffac;
+    border-radius: 30px;
+    border: 2px solid orangered;
+}
 
-        .contact-intro {
-            flex: 1;
-            margin-left:20px;
-            margin-top: 100px;
-        }
+.contact h2{
+  font-size: 40px;
+  color: #ee7f10;
+}
 
-        p{
-          margin-bottom: 20px;
-        }
+.contact-intro {
+    flex: 1;
+    margin-left: 20px;
+    margin-top: 50px;
+}
 
-        .contact-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-details {
-            margin-bottom: 50px;
-        }
-        .contact-details p {
-            margin: 5px 0;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        .form-group textarea {
-            resize: vertical;
-            height: 100px;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
+.contact p {
+    margin-bottom: 30px;
+    color: black;
+}
+
+.contact-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details {
+    margin-bottom: 80px;
+    border-radius: 20px;
+}
+
+.contact-details p {
+    margin: 5px;
+    margin-bottom: 20px;
+
+}
+
+.contact-image {
+    margin-top: 20px;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: 250px;
+    width: 300px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .form-group {
+    margin-bottom: 15px;
+} */
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; 
+    background-color: #f9f7c2;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background-color: #024791;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: rgb(209, 176, 241);
+  color: black;
+  border: 2px solid black;
+}
 
     
     /* Back to Top Button */
@@ -478,8 +511,11 @@ video#background-video {
               <p><i class="fa-solid fa-envelope"></i> Email: support@example.com</p>
               <p><i class="fa-solid fa-map-marker"></i> Address: 123 Main Street, City, Country</p>
           </div>
+          <div class="contact-image">
+              <img src="contactUs_img.png" alt="Contact Image">
+          </div>
       </div>
-    
+  
       <div class="contact-container">
           <form class="contact-form" id="contact-form">
               <div class="form-group">
@@ -498,6 +534,7 @@ video#background-video {
           </form>
       </div>
   </section>
+  
     
   </main>
 
