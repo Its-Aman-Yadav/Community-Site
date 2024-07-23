@@ -180,16 +180,68 @@ body.dark-mode .general{
   background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
     color: #fff;
 }
-body.dark-mode #contact-form{
-  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
-    color: #fff;
+/* Dark Mode Styles */
+
+body.dark-mode .contact1 {
+  background-color: #2c2c2c !important; /* Darker background color */
+  color: #f5f5f5; /* Lighter text color for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Enhanced shadow for better depth */
+  border-radius: 8px; /* Rounded corners for a smoother look */
+  padding: 20px; /* Added padding for better spacing */
 }
-body.dark-mode .contact-form button{
-  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+
+body.dark-mode .contact-header h2 {
+  color: #ffffff; /* Bright white heading color */
+  margin-bottom: 10px; /* Space below heading */
 }
-body.dark-mode .contact-info{
-  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+
+body.dark-mode .contact-header p {
+  color: #dcdcdc; /* Softer paragraph text color */
+  margin-bottom: 20px; /* Space below paragraph */
 }
+
+body.dark-mode .form-group label {
+  color: #dcdcdc; /* Softer label text color */
+  font-weight: bold; /* Bolder label text for emphasis */
+  margin-bottom: 5px; /* Space below label */
+  display: block; /* Ensure label is block-level */
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #3c3c3c; /* Slightly lighter background for inputs */
+  color: #ffffff; /* Bright white text color for inputs */
+  border: 1px solid #5e5e5e; /* Subtle border color */
+  border-radius: 4px; /* Rounded corners for inputs */
+  padding: 10px; /* Added padding for better input field spacing */
+}
+
+body.dark-mode .form-group input:hover,
+body.dark-mode .form-group textarea:hover {
+  border-color: #0099ff; /* Brighter accent color for hover state */
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+  border-color: #0099ff; /* Brighter accent color for focus state */
+  box-shadow: 0 0 8px rgba(0, 153, 255, 0.8); /* Enhanced shadow for focus state */
+  outline: none; /* Remove default outline */
+}
+
+body.dark-mode form button {
+  background: #0099ff; /* Brighter accent color for button background */
+  color: #ffffff; /* Bright white text color for button */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners for button */
+  padding: 10px 20px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth transition for hover state */
+}
+
+body.dark-mode form button:hover {
+  background: #007acc; /* Slightly darker accent color for hover state */
+}
+
 body.dark-mode .benefits li{
   background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
 }
