@@ -475,6 +475,19 @@ video#background-video {
   <div class="circle"></div>
   <div class="circle"></div>
   <script src="trail.js"></script>
+  <script>
+    // JavaScript to handle theme switching
+document.getElementById('checkbox').addEventListener('change', function() {
+  if (this.checked) {
+    document.body.classList.add('dark-mode');
+    document.querySelector('.navbar').classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+    document.querySelector('.navbar').classList.remove('dark-mode');
+  }
+});
+
+  </script>
 
   <!-- end -->
 
