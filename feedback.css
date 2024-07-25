@@ -137,7 +137,7 @@ body.dark-mode .feedback-wrapper {
   
   body.dark-mode .rating-container button {
     color: #555555;
-    background-color: #888;
+    /* background-color: #888; */
     border: 1px solid #888;
   }
   
