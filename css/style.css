@@ -283,6 +283,10 @@ html {
   background-color: #484848;
 }
 
+body.dark-mode .scrollToTopBtn {
+  background-image: radial-gradient(#396a92, #535353);
+}
+
 .progress-ring {
   position: fixed;
   bottom: 101px;
@@ -294,10 +298,19 @@ html {
 }
 
 .progress-ring__circle {
+  stroke: #ee7f10;
   transition: 0.35s stroke-dasharray;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
 }
+
+body.dark-mode .progress-ring__circle {
+  stroke: grey;
+}
+
+/* button{
+  background-color: radial-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
+} */
 
 nav {
   background-color: rgba(0, 0, 0, 0.2);
