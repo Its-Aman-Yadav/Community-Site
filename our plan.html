@@ -16,6 +16,9 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
   <script type="text/javascript">
     window.addEventListener("scroll", function () {
       var header = document.querySelector("nav");
@@ -414,7 +417,7 @@ video#background-video {
   
 
   <main>
-    <section class="introduction" id="introduction">
+    <section class="introduction" id="introduction" data-aos="fade-up">
       <!-- <h2>Introduction</h2> -->
       <p>
         Welcome to our open source community! We are dedicated to fostering
@@ -423,9 +426,9 @@ video#background-video {
       </p>
     </section>
 
-    <section class="goal" id="goals">
+    <section class="goal" id="goals" data-aos="fade-left">
       <h2>Goals</h2>
-      <ul class="goals">
+      <ul class="goals" data-aos="fade-up">
         <li class="ribbon">Promote open source collaboration</li>
         <li class="ribbon">Encourage learning and skill development</li>
         <li class="ribbon">Build innovative solutions to real-world problems</li>
@@ -433,13 +436,13 @@ video#background-video {
       </ul>
     </section>
 
-    <section class="guidelines" id="guidelines">
+    <section class="guidelines" id="guidelines" data-aos="fade-right">
       <h2>Community Guidelines</h2>
       <p>
         Our community guidelines are designed to create a welcoming and
         productive environment for all members:
       </p>
-      <ul>
+      <ul data-aos="fade-up">
         <li>Be respectful and considerate</li>
         <li>Encourage diverse perspectives</li>
         <li>Provide constructive feedback</li>
@@ -448,13 +451,13 @@ video#background-video {
       </ul>
     </section>
 
-    <section class="contributions" id="contributions">
+    <section class="contributions" id="contributions" data-aos="fade-up">
       <h2>Project Contributions</h2>
       <p>
         We welcome contributions from everyone. Here’s how you can get
         involved:
       </p>
-      <ul>
+      <ul data-aos="fade-left">
         <li>
           <p>Find a project that interests you</p>
         </li>
@@ -473,8 +476,8 @@ video#background-video {
       </ul>
     </section>
 
-    <section class="contact" id="contact">
-      <div style="padding-right: 40px; margin-right: 0px;">
+    <section class="contact" id="contact" data-aos="fade-up">
+      <div style="padding-right: 40px; margin-right: 0px;" data-aos="fade-right">
 
         <h2>Contact</h2>
         <p>
@@ -485,7 +488,7 @@ video#background-video {
 
       <div>
 
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" data-aos="fade-left">
           <div style="display: flex; gap:5px">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
@@ -549,7 +552,13 @@ video#background-video {
       document.body.classList.toggle('dark-mode');
     });
   });
-</script> 
+</script>
+<script>
+  AOS.init({
+    duration: 1200, // Animation duration
+    easing: 'ease-in-out', // Animation easing 
+  });
+</script>
 
 </body>
 
