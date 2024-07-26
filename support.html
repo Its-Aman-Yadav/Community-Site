@@ -426,121 +426,107 @@ input[type="text"], input[type="email"], textarea{
 
   <main>
     <section class="general" id="general-info">
-      <h2>General Information</h2>
-      <hr style="width: 70%; margin-left: 165px;">
-      <p>
-        Welcome to the support page of our open-source community. Here you
-        will find resources and contact information to help you with any
-        questions or issues you may encounter. Our support team is dedicated
-        to providing you with the assistance you need.
+      <h2>How To Use Open source Village</h2>
+      <hr style="width: 90%; margin-left: 40px; border: 0; height: 1px; background-color: #ffffff;">
+
+      <p style="font-weight: 600;">
+        Welcome to the support page of our open-source community. Here, you will find FAQs that help address any questions or issues you may encounter. You can also drop your queries using our query form. Our support team is dedicated to providing you with the assistance you need.
       </p>
+
+
     </section>
 
-    <section id="faq" class="faq">
       <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq">
+          <img class="faq-img" src="images/faq.png" alt="">
+        </div>
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>How do I join the community?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>You can join our community by visiting the 'Become a Member' page and filling out the membership application form.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>What projects can I contribute to?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We have a variety of projects in different domains such as web development, data science, and machine learning in the world of open source.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>How can I get help with a project?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>If you need help with a project, you can contact our support team using the form below or participate in our community forums.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>What are the benefits of joining the community?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>By joining our community, you gain access to a network of professionals, exclusive resources, and opportunities for collaboration and growth.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>How can I stay updated with community events?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Stay updated with our community events by subscribing to our newsletter, following us on social media, and regularly checking our events page.</p>
+            </div>
+          </div>
+        </div>
+        </div>
       
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-          <h3>How do I join the community?</h3>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>You can join our community by visiting the 'Become a Member' page and filling out the membership application form.</p>
-        </div>
-      </div>
-      
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-          <h3>What projects can I contribute to?</h3>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>We have a variety of projects in different domains such as web development, data science, and machine learning in the world of open source.</p>
-        </div>
-      </div>
-      
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-          <h3>How can I get help with a project?</h3>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>If you need help with a project, you can contact our support team using the form below or participate in our community forums.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-          <h3>How can I stay updated with community events?</h3>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>Stay updated with our community events by subscribing to our newsletter, following us on social media, and regularly checking our events page.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleAnswer(this)">
-          <h3>What are the benefits of joining the community?</h3>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          <p>By joining our community, you gain access to a network of professionals, exclusive resources, and opportunities for collaboration and growth.</p>
-        </div>
 
     </section>
-    <section class="contact">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p style="margin-bottom: 10px;">If you have any questions or need support, feel free to reach out to us:</p>
-  
-        <form class="contact-form" id="contact-form">
+   
+
+      <section id="query-form-section">
+        <h2>Submit Your Query</h2>
+        <form id="query-form" action="#" method="POST">
           <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
           </div>
-  
           <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
           </div>
-  
           <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <label for="query">Query:</label>
+            <textarea id="query" name="query" placeholder="Your Query" required></textarea>
           </div>
-  
-          <button type="submit">Submit</button>
-      </div>
-    </section>
-  
+          <div class="form-group">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+      
+
+ 
+
+ 
   </main>
 
   <special-footer></special-footer>
     
-  <script>
-      function toggleAnswer(element) {
-        var answer = element.nextElementSibling;
-        if (answer.style.display === "none" || answer.style.display === "") {
-          answer.style.display = "block";
-          element.querySelector("i").classList.remove("fa-chevron-down");
-          element.querySelector("i").classList.add("fa-chevron-up");
-        } else {
-          answer.style.display = "none";
-          element.querySelector("i").classList.remove("fa-chevron-up");
-          element.querySelector("i").classList.add("fa-chevron-down");
-        }
-      }
-  </script>
-  <script>
-    document
-      .getElementById("support-form")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-        alert(
-          "Thank you for reaching out. Our support team will get back to you soon."
-        );
-        document.getElementById("support-form").reset();
-      });
-  </script>
+ 
   <script src="footer/footer.js"></script>
   <script src="trail.js"></script>
 
@@ -592,6 +578,75 @@ input[type="text"], input[type="email"], textarea{
       });
     });
   </script>
+<script>
+  function toggleAnswer(element) {
+    const faqItem = element.parentElement;
+    const answer = faqItem.querySelector('.faq-answer');
+    const currentlyActiveItem = document.querySelector('.faq-question.active');
+
+    // Close any currently active item
+    if (currentlyActiveItem && currentlyActiveItem !== element) {
+      currentlyActiveItem.classList.remove('active');
+      currentlyActiveItem.nextElementSibling.style.display = 'none';
+    }
+
+    // Toggle the active class to rotate the icon
+    element.classList.toggle('active');
+
+    // Toggle the display of the answer
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+    } else {
+      answer.style.display = 'block';
+    }
+  }
+</script>
+
+<script>document.getElementById('query-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  let isValid = true;
+
+  // Validate Name
+  const name = document.getElementById('name').value;
+  const nameError = document.getElementById('name-error');
+  if (name.trim() === '') {
+    nameError.textContent = 'Name is required';
+    nameError.style.display = 'block';
+    isValid = false;
+  } else {
+    nameError.style.display = 'none';
+  }
+
+  // Validate Email
+  const email = document.getElementById('email').value;
+  const emailError = document.getElementById('email-error');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email.trim() === '') {
+    emailError.textContent = 'Email is required';
+    emailError.style.display = 'block';
+    isValid = false;
+  } else if (!emailPattern.test(email)) {
+    emailError.textContent = 'Please enter a valid email address';
+    emailError.style.display = 'block';
+    isValid = false;
+  } else {
+    emailError.style.display = 'none';
+  }
+
+  // Validate Query
+  const query = document.getElementById('query').value;
+  const queryError = document.getElementById('query-error');
+  if (query.trim() === '') {
+    queryError.textContent = 'Query is required';
+    queryError.style.display = 'block';
+    isValid = false;
+  } else {
+    queryError.style.display = 'none';
+  }
+
+});
+</script>
 
 
 
