@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
   <script type="text/javascript">
     window.addEventListener("scroll", function () {
@@ -425,7 +427,7 @@ input[type="text"], input[type="email"], textarea{
     </header> -->
 
   <main>
-    <section class="general" id="general-info">
+    <section class="general" id="general-info" data-aos="fade-up">
       <h2>General Information</h2>
       <hr style="width: 70%; margin-left: 165px;">
       <p>
@@ -436,8 +438,8 @@ input[type="text"], input[type="email"], textarea{
       </p>
     </section>
 
-    <section id="faq" class="faq">
-      <h2>Frequently Asked Questions</h2>
+    <section id="faq" class="faq" data-aos="fade-right">
+      <h2 data-aos="fade-up">Frequently Asked Questions</h2>
       
       <div class="faq-item">
         <div class="faq-question" onclick="toggleAnswer(this)">
@@ -487,12 +489,13 @@ input[type="text"], input[type="email"], textarea{
         </div>
 
     </section>
-    <section class="contact">
+    <section class="contact" data-aos="fade-up">
       <div class="container">
-        <h2>Contact Us</h2>
-        <p style="margin-bottom: 10px;">If you have any questions or need support, feel free to reach out to us:</p>
-  
-        <form class="contact-form" id="contact-form">
+        <div data-aos="fade-right">
+          <h2>Contact Us</h2>
+          <p style="margin-bottom: 10px;">If you have any questions or need support, feel free to reach out to us:</p>
+        </div>
+        <form class="contact-form" id="contact-form" data-aos="fade-left">
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -592,7 +595,13 @@ input[type="text"], input[type="email"], textarea{
       });
     });
   </script>
-
+  </script>
+  <script>
+    AOS.init({
+      duration: 1200, // Animation duration
+      easing: 'ease-in-out', // Animation easing 
+    });
+  </script>
 
 
 </body>
