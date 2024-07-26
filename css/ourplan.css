@@ -262,7 +262,7 @@ body.dark-mode .contact-form label{
   }
 
   .logo-text {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     /* Adjusted font size */
     color: white;
     /* Logo text color */
