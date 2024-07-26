@@ -3,156 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+    <title>Feedback</title>
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Aman Yadav" />
+    <meta name="keywords"
+      content=", village community, collaboration, resource sharing, communication, transparency, collective decision-making, local projects, digital tools.">
+    <meta name="description"
+      content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+    <meta name="language" content="English">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://community-site-theta.vercel.app/" />
+    <meta property="og:title" content="Open Source Village">
+    <meta name="og:description"
+      content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+  
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    <!-- stylesheets css -->
 
-body {
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
 
-video#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
+    <link rel="stylesheet" href="feedback.css" class="rel">
+    <!-- Bootstrap CSS -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- remixicon -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin=""> -->
+  
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  
+  
+  <link rel="stylesheet" href="css/animate.min.css">
+  <style>
+    body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background:linear-gradient(#ffcd38,#fffce7,#fffcfc,#fffef6,white,white);
+  color: #000; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Poppins", sans-serif; }
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a, a:hover {
+    text-decoration: none !important; }
+
+.content {
+  padding: 7rem 0; }
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700; }
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700; }
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0; }
+  .form-control:active, .form-control:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000; }
+
+.btn, .form-control {
+  height: 55px; }
+
+form.border-right {
+   }
+  @media (max-width: 991.98px) {
+    form.border-right {
+      padding-right: 0 !important;
+      border-right: none !important; } }
+
+label.error {
+  font-size: 12px;
+  color: red; }
+
+#message {
+  resize: vertical; }
+
+#form-message-warning, #form-message-success {
+  display: none; }
+
+#form-message-warning {
+  color: #B90B0B; }
+
+#form-message-success {
+  color: #55A44E;
+  font-size: 18px;
+  font-weight: bold; }
+
+.submitting {
+  float: left;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  background-size: cover;
-}
+  padding: 10px 0;
+  display: none;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000; }
 
-/* Ensure the content is above the video */
-.license-container {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 110px auto;
-  padding: 20px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.license-container h1, .license-container h2 {
-  color: #333;
-}
-
-.license-container p {
-  color: #666;
-}
-
-/* Media query for smaller devices */
-@media (max-width: 768px) {
-  .license-container {
-      margin: 20px auto;
-      padding: 10px;
+  .rowflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
   }
-
-  .scrollToTopBtn {
-      width: 40px;
-      height: 40px;
-      font-size: 16px;
-      line-height: 40px;
-      bottom: 80px;
-      right: 20px;
-  }
-
-  .progress-ring {
-      bottom: 75px;
-      right: 15px;
-  }
-}
-
-        .feedback-wrapper {
-          margin-top: 0px;
-          border-radius: 10px ;
-          width: 38%;
-          margin: 20px auto;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
-          box-sizing: border-box;
-        }
-      
-        .feedback-form {
-          background: linear-gradient(to bottom, #fdde6d, #ff7300); 
-          padding-top: 20px ;
-          padding-bottom: 20px ;
-          padding-left: 30px;
-          padding-right: 30px;
-          border-radius: 10px ;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
-          box-sizing: border-box ;
-        }
-    
-        .feedback-form h2 {
-          font-size: 30px ;
-         font-weight: 800;
-         
-          text-align: center ;
-          color: rgb(208, 113, 4) ;
-        }
-    
-        .feedback-form label {
-          display: block ;
-          margin-bottom: 0px ;
-          font-size: 17px ;
-          color: #333 ;
-          font-weight: 300;
-        }
-    
-        .feedback-form input[type="text"],
-        .feedback-form input[type="email"],
-        .feedback-form textarea {
-          width: 86% ;
-          padding: 10px ;
-          margin-top: 2px;
-          margin-bottom: 10px ;
-          font-size: 16px ;
-          border: 2px solid #ccc ;
-          border-radius: 5px ;
-          transition: border-color 0.3s;
-        }
-    
-        .feedback-form input[type="text"]:focus,
-        .feedback-form input[type="email"]:focus,
-        .feedback-form textarea:focus {
-          outline: none !important;
-          color: black !important;
-        }
-    
-        .feedback-form button[type="submit"] {
-          display: block !important;
-          width: 40% !important;
-          padding: 12px !important;
-          font-size: 18px !important;
-          border: none !important;
-          color: white;
-          border-radius: 5px !important;
-          background-color: rgb(0, 85, 138) !important;
-          cursor: pointer !important;
-          transition: background-color 0.3s !important;
-        }
-    
-        .feedback-form button[type="submit"]:hover {
-       
-          background-color: rgb(3, 37, 59)!important;
-          transform: translateY(2px);
-        }
-    
-      
-    
-        .feedback-form .feed-para {
-          text-align: center;
-          font-size: 18px;
-          color: rgb(255, 251, 246);
-        }
-    
-    .rate-us {
+  .rate-us {
        margin-top: 13px;
       display: block;
-      text-align: center;
+      padding-left: 10px;
+      /* text-align: center; */
       margin-bottom: 0px;
       color: rgb(42, 40, 40) !important;
       font-size: 17px;
@@ -165,17 +142,18 @@ video#background-video {
       justify-content: center;
       gap: 10px;
       font-size: 40px;
-      margin-bottom: 2px;
+      /* margin-bottom: 2px; */
     }
     
     .rating-container button {
-      font-size: 42px;
+      font-size: 30px;
       border: none;
-      color: rgb(231, 231, 231);
-
+      color: rgb(19, 3, 3);
+      background: none;
       cursor: pointer;
       transition: transform 0.3s ease, color 0.3s ease;
     }
+
     
     .rating-container button.filled {
       color: rgb(255, 94, 0); 
@@ -204,8 +182,13 @@ video#background-video {
         font-size: 30px;
       }
     }
-    
-    
+
+    input::placeholder{
+        padding-left: 10px;
+    }
+    textarea::placeholder{
+        padding-left: 10px;
+    }
     .popup {
       position: fixed;
       top: 0px;
@@ -227,7 +210,7 @@ video#background-video {
       display: inline-block;
     }
     .popup-content {
-      background: linear-gradient(to bottom, #ffffff, #ffce92); 
+      background: linear-gradient(to bottom, #ffffff, #ffbf00); 
       padding:  20px;
      
       border-radius: 10px;
@@ -259,53 +242,115 @@ video#background-video {
     .popup-button:hover {
       background-color:  rgb(3, 37, 59);
     }
-      </style>
-      <link rel="stylesheet" href="feedback.css">
+
+    .text-orange{
+        color:#d55200;
+    }
+    .text-orange-l{
+        color:#d9822b;
+    }
+    
+    .back-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(86, 2, 22);
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .back-button i {
+        font-size: 35px;
+        margin-right: 10px;
+      }
+
+      .back-button:hover {
+        color: #ffffff;
+      }
+  </style>
 </head>
 <body>
 
+    <a href="javascript:history.back()" class="back-button">
+        <i class="fas fa-arrow-left"></i> Go Back
+      </a>
 
-  <video id="background-video" autoplay muted loop>
-    <source src="back5.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-  <div class="toggle-container" style="top: 15px;">
-    <input type="checkbox" id="checkbox" class="switch-checkbox">
-    <label class="theme-switch" for="checkbox">
-      <div class="toggle-button">
-        <span class="light-mode-icon"><img src="./images/sun.svg"></span>
-        <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
-      </div>
-    </label>
-  </div>
-    <div class="feedback-wrapper">
-        <div class="feedback-form">
-          <h2>We'd Love Your Feedback!</h2>
-          <p class="feed-para">Let us know how we're doing and how we can improve.</p>
-          <p class="feed-para"><strong>Open Source Village</strong></p>
-          <div>
-            <p for="rating" class="rate-us">Rate Your Experience</p><br>
-            <div class="rating-container">
-              <button type="button" onclick="handleRatingChange(1)">☆</button>
-              <button type="button" onclick="handleRatingChange(2)">☆</button>
-              <button type="button" onclick="handleRatingChange(3)">☆</button>
-              <button type="button" onclick="handleRatingChange(4)">☆</button>
-              <button type="button" onclick="handleRatingChange(5)">☆</button>
-            </div>
+    <div class="toggle-container" style="top: 15px;">
+        <input type="checkbox" id="checkbox" class="switch-checkbox">
+        <label class="theme-switch" for="checkbox">
+          <div class="toggle-button">
+            <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+            <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
           </div>
-          <form id="feedback-form" onsubmit="handleSubmit(event)">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
-            <label for="email"> Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <label for="feedback">Feedback</label>
-            <textarea id="feedback" rows="5" placeholder="Let us know how we can improve..." required></textarea>
-            <button type="submit">Submit Feedback</button>
-          </form>
-        </div>
+        </label>
       </div>
-      <div id="popup" class="popup" style="display: none;">
+    
+<div class="content">
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-10">
+    <div class="row align-items-center">
+    <div class="col-lg-7 mb-5 mb-lg-0">
+    <h2 class="mb-5 text-orange">We'd Love Your Feedback</h2>
+    <div class="rowflex pr-5">
+        <p for="rating" class="rate-us">Rate Your Experience</p><br>
+        <div class="rating-container" id="rate">
+          <button type="button" onclick="handleRatingChange(1)">☆</button>
+          <button type="button" onclick="handleRatingChange(2)">☆</button>
+          <button type="button" onclick="handleRatingChange(3)">☆</button>
+          <button type="button" onclick="handleRatingChange(4)">☆</button>
+          <button type="button" onclick="handleRatingChange(5)">☆</button>
+        </div>
+
+    </div>
+        
+    <form action="" class="border-right pr-5 mb-5 " method="post" id="feedback-form" name="contactForm" onsubmit="handleSubmit(event)">
+    <div class="row">
+    <div class="col-md-6 form-group">
+    <input type="text" class="form-control" name="fname" id="fname" placeholder="First name">
+    </div>
+    <div class="col-md-6 form-group">
+    <input type="text" class="form-control" name="lname" id="lname" placeholder="Last name">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12 form-group">
+    <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12 form-group">
+    <textarea class="form-control" name="message" id="feedback" cols="30" rows="7" placeholder="Write your message"></textarea>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+    <input type="submit" value="Send Message" class="btn btn-primary rounded-2 py-2 px-4">
+    <span class="submitting"></span>
+    </div>
+    </div>
+  
+    </form>
+    <div id="form-message-warning mt-4"></div>
+    <div id="form-message-success">
+    Your message was sent, thank you!
+    </div>
+    </div>
+    <div class="col-lg-4 ml-auto">
+    <h3 class="mb-4 text-orange-l">Let's talk about everything.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil deleniti itaque similique magni. Magni, laboriosam perferendis maxime!</p>
+    <p><a href="#">Read more</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="popup" class="popup" style="display: none;">
         <div class="popup-content">
           <h2>Thank you for your Feedback!🧡</h2>
           <div class="popup-icon">
@@ -315,7 +360,8 @@ video#background-video {
           <button class="popup-button" onclick="closePopup()">Back to Home</button>
         </div>
       </div>
-      <script>
+
+    <script>
         let rating = null;
       
         function handleRatingChange(rating) {
@@ -345,7 +391,8 @@ video#background-video {
         function handleSubmit(event) {
           event.preventDefault();
       
-          const name = document.getElementById('name').value;
+          const fname = document.getElementById('fname').value;
+          const lname = document.getElementById('lname').value;
           const email = document.getElementById('email').value;
           const feedback = document.getElementById('feedback').value;
       

@@ -275,8 +275,8 @@ ul li {
 }
 
 .text1 h5 {
-  font-size: 1rem;
-  color: #373737;
+  font-size: 2rem;
+  color: #ffffff; /*White color for text*/
 }
 
 /* Animations */
@@ -311,6 +311,8 @@ ul li {
 .testimonial-section {
   background: transparent;
   padding: 40px 0;
+  overflow: scroll; 
+  scroll-behavior: smooth;
 }
 
 .testimonial-container {
@@ -470,7 +472,7 @@ ul li {
 .card1 {
   backdrop-filter: blur(2px);
   max-width: 340px;
-  height: 300px;
+  height: 400px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -479,17 +481,18 @@ ul li {
 
 /* Card body styles */
 .card-body {
-  color: white; /* White text color */
+  color: gray; /* White text color */
 }
 
 /* Star icon styles */
 .bi-star-fill {
-  color: yellow; /* Yellow color for filled stars */
+  color: orange; /* Yellow color for filled stars */
 }
 
 /* Card text styles */
 .card-text {
-  color: white; /* White text color for card text */
+  color: black; /* Black text color */
+  font-size: small; 
 }
 
 /* Image styles */
@@ -628,6 +631,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 100%;
+overflow: scroll; 
+scroll-behavior: smooth;
+position: relative;
+/* width: 100%; Adjust width as needed */
 }
 
 .modal-content {

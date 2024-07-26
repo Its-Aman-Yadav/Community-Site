@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const coords = { x: 0, y: 0 };
     const circles = [];
     const colors = [
-        "#ff21bc", "#ff21bc", "#ff21bc", "#ff21bc", "#ff21bc", "#ff21bc", 
-        "#ff21bc", "#ff21bc", "#3fbcc0c6", "#ff21bc", "#ff21bc", "#ff21bc", 
-        "#3fbcc0c6", "#ff21bc", "#ff21bc", "#ff21bc", "#ff21bc", "#ff21bc", 
-        "#ff21bc", "#ff21bc", "#ff21bc", "#ff21bc", "#ff21bc"
+        "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", 
+        "#ffffff", "#ffffff", "#f0f0f0", "#f0f0f0", "#f0f0f0", "#f0f0f0", 
+        "#f0f0f0", "#f0f0f0", "#f0f0f0", "#f0f0f0", "#f0f0f0", "#f0f0f0", 
+        "#f0f0f0", "#f0f0f0", "#f0f0f0", "#f0f0f0", "#f0f0f0"
     ];
 
     for (let i = 0; i < colors.length; i++) {

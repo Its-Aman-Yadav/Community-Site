@@ -241,3 +241,138 @@ body {
     pointer-events: none; 
   }
 }
+/* General Light Mode Styles */
+body {
+  background-color: #ffffff; /* Light background for light mode */
+  color: #000000; /* Dark text for light mode */
+}
+
+.navbar {
+  background-color: #f8f9fa; /* Light background for navbar */
+  color: #000000; /* Dark text for navbar */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for dark mode */
+  color: #e0e0e0; /* Light text for dark mode */
+}
+
+.navbar.dark-mode {
+  background-color: #1e1e1e; /* Dark background for navbar in dark mode */
+  color: #e0e0e0; /* Light text for navbar in dark mode */
+}
+
+.navbar.dark-mode .logo-text {
+  color: #e0e0e0; /* Light logo text in dark mode */
+}
+
+.navbar.dark-mode .nav-link {
+  color: #e0e0e0; /* Light link color in dark mode */
+}
+
+.navbar.dark-mode .nav-link:hover {
+  color: #f39c12; /* Highlight color on hover in dark mode */
+}
+
+.scrollToTopBtn {
+  background-color: #f39c12; /* Bright button color */
+}
+
+.scrollToTopBtn:hover {
+  background-color: #e67e22; /* Darker button color on hover */
+}
+
+/* Dark Mode Toggle Styles */
+.theme-switch {
+  background-color: #333; /* Dark background for the toggle switch in dark mode */
+}
+
+.switch-checkbox:checked + .theme-switch {
+  background-color: #34495e; /* Darker background when toggled */
+}
+
+.theme-switch .light-mode-icon {
+  color: #f39c12; /* Bright color for light mode icon */
+}
+
+.theme-switch .dark-mode-icon {
+  color: #bdc3c7; /* Light color for dark mode icon */
+}
+
+/* Progress Ring */
+.progress-ring__circle {
+  stroke: #e0e0e0; /* Light color for progress ring stroke in dark mode */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1e1e1e; /* Dark background for footer */
+  color: #e0e0e0; /* Light text color for footer */
+}
+
+footer a {
+  color: #f39c12; /* Bright link color in footer */
+}
+
+footer a:hover {
+  color: #e67e22; /* Darker link color on hover */
+}
+/* Contributor Card Styles */
+.contributor-card {
+  background-color: #ffffff; /* Light background for light mode */
+  color: #000000; /* Dark text for light mode */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contributor-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.contributor-card h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.contributor-card p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+/* Dark Mode Styles for Contributor Card */
+body.dark-mode .contributor-card {
+  background-color: #2c2c2c; /* Dark background for dark mode */
+  color: #e0e0e0; /* Light text for dark mode */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for better contrast */
+}
+
+body.dark-mode .contributor-card img {
+  border: 2px solid #e0e0e0; /* Light border around images in dark mode */
+}
+
+body.dark-mode .contributor-card h3,
+body.dark-mode .contributor-card p {
+  color: #e0e0e0; /* Light text for headings and paragraphs */
+}
+body.dark-mode .text-lg {
+  font-size: 1.125rem; /* Ensure font size remains the same */
+}
+
+body.dark-mode .font-medium {
+  font-weight: 500; /* Ensure font weight remains the same */
+}
+
+body.dark-mode .text-gray-900 {
+  color: #ffffff; /* White color for dark mode */
+}
+
+body.dark-mode .mb-2 {
+  margin-bottom: 0.5rem; /* Ensure margin remains the same */
+}
