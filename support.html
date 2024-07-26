@@ -336,6 +336,40 @@ button:hover {
 input[type="text"], input[type="email"], textarea{
   border-radius: 5px;
 }
+
+.faq-item {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+.theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+}
   </style>
     <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
 

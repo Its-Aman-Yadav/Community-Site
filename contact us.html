@@ -303,6 +303,10 @@
       body.dark-theme .social i {
         color: #ffffff;
       }
+      .social{
+        display: flex;
+    gap: 1.5rem;
+      }
     </style>
   </head>
   <body>
@@ -462,13 +466,32 @@
         </div>
     </div> -->
     <script>
-      function sendEmail() {
-        alert("Message sent successfully!");
-      }
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-      function resetForm() {
-        document.getElementById("form-container").reset();
-      }
+  // Show popup message
+  const popup = document.createElement('div');
+  popup.textContent = "We will connect with you soon";
+  popup.style.position = 'fixed';
+  popup.style.top = '100px';
+  popup.style.right = '10px';
+  popup.style.backgroundColor = 'green';
+  popup.style.color = 'white';
+  popup.style.padding = '10px';
+  popup.style.borderRadius = '5px';
+  popup.style.zIndex = '1000';
+  document.body.appendChild(popup);
+
+  // Remove popup after 3 seconds
+  setTimeout(() => {
+    popup.remove();
+  }, 3000);
+
+  // Call functions for sending email and resetting form
+  sendEmail();
+  resetForm();
+});
+
     </script>
 
     <script>

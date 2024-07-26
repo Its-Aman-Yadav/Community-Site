@@ -177,7 +177,7 @@
                   <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="icons"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
-                <li class="icons"><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="icons"><i class="fa-solid fa-address-book"></i><a href="contact us.html">Contact</a></li>
                 <li class="icons"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
               </ul>
           </div>
@@ -195,12 +195,12 @@
 
       </a>
       <ul>
-        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#text">About</a></li>
-        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
-        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
-        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#text">About</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
       </ul>
 
       <div class="toggle-container" style="top: 0px;">
@@ -992,8 +992,42 @@
   </div>
   </section>
 
-
-
+  <section id="contact" class="section-padding bg-gray contactSection" data-aos="fade-up" data-aos-duration="1500">
+    <div class="Contactsec">
+      <div class="section-header text-center">
+        <h2 class="text_dark wow fadeInDown" data-wow-delay="0.3s">
+          <span class="gradient-text">Contact Us</span>
+        </h2>
+        <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <form class="mt-5" id="contactForm" method="post">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="subj" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="msg" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="text-center">
+              <button class="Cbtn text_dark" id="checkBtn" type="submit">Submit</button>
+            </div>
+            <div id="msgSubmit" class="h3 text-left hidden"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
 
 
   <script>
@@ -1030,7 +1064,6 @@
  
   
 </head>
-<body>
 
 
 
