@@ -71,17 +71,18 @@ video#background-video {
   }
 
   .scrollToTopBtn {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       font-size: 16px;
       line-height: 40px;
       bottom: 80px;
-      right: 20px;
+      right: 40px;
+      margin-bottom: 30px;
   }
 
   .progress-ring {
-      bottom: 75px;
-      right: 15px;
+      bottom: 95px;
+      right: 35px;
   }
 }
 
@@ -295,6 +296,21 @@ body {
     top: 5px;
     border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+  .theme-switch,
+    #checkbox 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  
+    #image 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  }
 
 /* Mobile devices (up to 600px) */
 @media only screen and (max-width: 600px) {

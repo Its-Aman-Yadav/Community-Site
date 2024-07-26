@@ -12,45 +12,37 @@ class SpecialFooter extends HTMLElement {
         .fab.fa-linkedin,
         .fab.fa-x-twitter,
         .fab.fa-github,
-        .fa-solid.fa-envelope 
-        {
+        .fa-solid.fa-envelope {
           transition: color 0.3s, background 0.3s;
         }
 
         /* Hover effects for social media icons */
         /* WhatsApp green */
-        .fab.fa-whatsapp:hover 
-        {
+        .fab.fa-whatsapp:hover {
           color: #25D366; 
         }
         /* Facebook blue */
-        .fab.fa-facebook:hover 
-        {
+        .fab.fa-facebook:hover {
           color: #1877F2; 
         }
         /* Insta darkPink */
-        .fab.fa-instagram:hover 
-        {
+        .fab.fa-instagram:hover {
          color: #dc2743;
         }
-         /* LinkedIn blue */
-        .fab.fa-linkedin:hover 
-        {
+        /* LinkedIn blue */
+        .fab.fa-linkedin:hover {
           color: #0A66C2; 
         }
         /* Twitter light black*/
-        .fab.fa-x-twitter:hover 
-        {
+        .fab.fa-x-twitter:hover {
           color: #333; 
         }
         /* GitHub light black */
-        .fab.fa-github:hover 
-        {
+        .fab.fa-github:hover {
           color: #333; 
         }
         /* Red for email */
-        .fa-solid.fa-envelope:hover 
-        {
+        .fa-solid.fa-envelope:hover {
           color: #D44638; 
         }
       </style>
@@ -58,7 +50,7 @@ class SpecialFooter extends HTMLElement {
         <div class="container">
           <div class="row1">
             <div class="company" id="Company">
-              <h1 >Open Source Village</h1>
+              <h1>Open Source Village</h1>
               <p>Join the Community and become the villager now</p>
               <div class="social">
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
@@ -76,7 +68,6 @@ class SpecialFooter extends HTMLElement {
                 <a href="open-learning.html">Open Learning</a>
                 <a href="mentorship.html">Mentorship</a>
                 <a href="network.html">Network</a>
-                
               </div>
             </div>
             <div class="col1" id="useful-links">
@@ -96,10 +87,8 @@ class SpecialFooter extends HTMLElement {
                 <a href="terms&conditions.html">Terms and Conditions</a>
                 <a href="privacypolicy.html">Privacy Policy</a>
                 <a href="licensing.html">Licensing</a>
-
               </div>
             </div>
-
             <div class="col1" id="cont">
               <h3>Contact</h3>
               <div class="contact-details">
@@ -117,13 +106,14 @@ class SpecialFooter extends HTMLElement {
           </div>
         </div>
       
-        <hr></hr>
+        <hr>
         <p class="copyright">
-          Copyright ©
-          <script>document.write(new Date().getFullYear());</script>
+          Copyright © <span id="currentYear"></span>
           Developed by Open source Contributors. All rights reserved.
         </p>
       </footer>`;
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
 
     document.addEventListener("DOMContentLoaded", function () {
       createPopup();
