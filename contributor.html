@@ -135,135 +135,313 @@ video#background-video {
     <source src="back5.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-
-
-    <!-- Navbar -->
-   
-  <!-- Navbar -->
-  <div class="navbar">
-    <nav>
-      <a class="logo-link" href="#home">
-        <div class="logo-title">
-                    <img  class="logo" src="images/logo2.jpeg" alt="logo">
-
-                    <span class="logo-text">Open Source Village</span>
-                   </div>
-
-      </a>
-      <ul>
-        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
-        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
-        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
-        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
-        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
-      </ul>
-
-      <div class="toggle-container" style="top: 15px;">
-        <input type="checkbox" id="checkbox" class="switch-checkbox">
-        <label class="theme-switch" for="checkbox">
-          <div class="toggle-button">
-            <span class="light-mode-icon"><img src="./images/sun.svg"></span>
-            <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
-          </div>
-        </label>
+<script type="text/javascript">
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 50)
+  })
+</script>
+<!-- Navbar -->
+<div class="navbar">
+  <nav>
+    <div id="ham-menu">
+      <div id="bars" onclick="togMenu(this)">
+      <div id="first" class="bar"></div>
+      <div id="sec" class="bar"></div>
+      <div id="third" class="bar"></div>
       </div>
+      <div id="nav-menu">
+          <ul>
+              <li class="icons">
+                <i class="fa-solid fa-house"></i>
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-address-card"></i>
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="icons"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+              <li class="icons"><i class="fa-solid fa-address-book"></i><a href="contact us.html">Contact</a></li>
+              <li class="icons"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+            </ul>
+        </div>
+    </div>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                 <a href="profile.html" class="href"> <img  class="logo" src="images/logo2.jpeg" alt="logo"></a>
 
-      <style>
-        .toggle-container {
-          transform: translate(-50%, -50%);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 30px;
-          right: -4px;
-          top: 15px;
-        }
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
 
-        .light-mode .toggle-container {
-          right: 140px;
-          top: 10px;
-        }
-        
-        /* Hidden Checkbox */
-        .switch-checkbox {
+      <!-- <div>
+        <span class="logo-subtext">Source</span>
+      </div> -->
+
+    </a>
+    <ul>
+      <li style="background-color: transparent;"><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#text">About</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+
+    <div class="toggle-container" style="top: 0px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
+    </div>
+    <!--Styles for side menu-->
+    <style>
+      #bars{
           display: none;
-        }
-
-        .theme-switch {
-          position: relative;
-          width: 45px;
-          height: 30px;
-          background-color: #ccc;
+      }
+      .bar{
+          width:27px;
+          height:3px;
+          background-color:white;
+          margin: 7px;
           border-radius: 20px;
-          cursor: pointer;
+          transition: all 0.4s;
+      }
+      .cliked #first{
+          transform: translate(0, 10px) rotate(-45deg);
+          
+      }
+      .cliked #sec {opacity: 0;}
+
+      .cliked #third {
+      transform: translate(0, -10px) rotate(45deg);
+      }
+      #nav-menu{
+          display: none;
+          opacity: 0;
+          position: fixed;
+          top:63px;
+          z-index: 1;
+          margin-top: 27px;
+          width:auto;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          backdrop-filter: blur(4px);
+          padding: 20px 0;
+          border: none;
+          transition: all 0.6s;
+          
+      }
+      #nav-menu ul{
           display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0 5px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transition: background-color 0.5s ease;
-        }
-
-        .theme-switch .light-mode-icon,
-        .theme-switch .dark-mode-icon {
-          font-size: 19px;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: inherit;
+          width: auto;
           position: absolute;
-          cursor: pointer;
-          top: 50%;
-          transform: translateY(-50%);
-          transition: opacity 0.5s ease, color 0.5s ease;
-        }
+          top:0;
+          right:inherit;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(4px);
+      }
+      #nav-menu ul li{
+          display: none;
+          margin: 10px 20px 0 30px;
+      }
 
-        .theme-switch .light-mode-icon {
-          color: #f39c12;
-        }
-
-        .theme-switch .dark-mode-icon {
-          color: #bdc3c7;
-          opacity: 0;
-        }
-
-        .toggle-button {
+      @media (max-width: 858px) {
+          #bars{
+          display: block;
           position: absolute;
-          top: 3px;
-          left: 3px;
-          width: 25px;
-          height: 25px;
-          background-color: #fff;
-          border-radius: 50%;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-          transition: transform 0.5s ease, background-color 0.5s ease;
-        }
+          left:10px;
+          top:50%;
+          transform: translate(0,-55%);
+          }
+          #nav-menu{
+            left:0;
+          }
+          
+          #nav-menu ul li{
+            display:flex;
+          }
+          #nav-menu ul li a:hover{
+            color: white;
+            background-color: #e8701f;
+            transition: color 0s, background-color 0s;
+            border-radius: 20px;
+            background: rgb(239, 188, 0);
+            background: linear-gradient( 90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100% );
+          }
+          
+          #nav-menu.sticky-nav-menu ul{
+            background: linear-gradient( rgba(249, 177, 43, 0.7),rgb(247, 113, 3));
+            color: white !important;
+            border-bottom: 1.5px solid rgb(0, 0, 0);
+            backdrop-filter: blur(3px);
+          }
+          #nav-menu.sticky-nav-menu{
+            top:52px;
+          }
+      }
+    </style>
 
-        .switch-checkbox:checked + .theme-switch {
-          background-color: #34495e;
-        }
+    <script>
+      function togMenu(obj){
+          var headMenu = document.querySelector('.navbar nav');
+          var sideMenu = document.getElementById('nav-menu');
+          obj.classList.toggle("cliked");
+          if(obj.classList.contains('cliked')){
+            headMenu.style.borderBottomLeftRadius = '0px';
+            sideMenu.style.display='block';
+            sideMenu.style.opacity='1';
+          }else{
+            headMenu.style.borderBottomLeftRadius=headMenu.style.borderBottomRightRadius;
+            sideMenu.style.opacity='0';
+            sideMenu.style.display='none';
+          }
+      }
+      window.addEventListener("scroll", function () {
+          var sideMenu = document.getElementById('nav-menu');
+          sideMenu.classList.toggle("sticky-nav-menu", window.scrollY > 50)
+          })
+    
+    </script>
+    
 
-        .switch-checkbox:checked + .theme-switch .light-mode-icon {
-          opacity: 0;
-        }
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0 0 30px;
+      }
 
-        .switch-checkbox:checked + .theme-switch .dark-mode-icon {
-          opacity: 1;
-        }
+      .light-mode .toggle-container {
+        right: -4px;
+        top: 15px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
 
-        .switch-checkbox:checked + .theme-switch .toggle-button {
-          transform: translateX(13px);
-        }
-        .logo img {
-      height: 40px;
-      /* Reduced height of the logo */
-      width: 40px;
-      /* Reduced width of the logo */
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+    </style>
+
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+   
+  <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
+  </nav>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const toggleButton = document.getElementById('checkbox');
+
+    const currentMode = localStorage.getItem('dark-mode');
+
+    if (currentMode === 'enabled') {
+
+      document.body.classList.add('dark-mode');
+
+      toggleButton.checked = true;
+
     }
 
-    .logo-text {
-      font-size: 1.2rem;
-      /* Adjusted font size */
-      color: white;
-      /* Logo text color */
-    }
+    toggleButton.addEventListener('change', function () {
+
+      document.body.classList.toggle('dark-mode');
+
+      if (document.body.classList.contains('dark-mode')) {
+
+        localStorage.setItem('dark-mode', 'enabled');
+
+      }
+      else {
+
+        localStorage.setItem('dark-mode', 'disabled');
+
+      }
+    });
+
+  });
+</script>
+
 
 
 </style>
