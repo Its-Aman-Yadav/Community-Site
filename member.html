@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contact-sec.css"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
       rel="stylesheet"
@@ -28,6 +27,140 @@
 
     <style>
       /* Back to Top Button */
+
+      .contact {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: auto;
+    background-color: #f6f89d;
+    border-radius: 30px;
+    border: 2px solid orangered;
+    margin-bottom: 50px;
+}
+
+.contact-intro h2 {
+    color: #f85008;
+    text-align: center;
+    font-size: 100px;
+}
+
+.contact-intro {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-intro p {
+    margin-bottom: 30px;
+    color: black;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-detail {
+    padding: 20px;
+    background-color: #fcfe88;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    flex: 1;
+    text-align: center;
+    border: 1px solid orangered;
+}
+
+.contact-detail:hover{
+  background-color: rgb(255, 210, 76);
+  box-shadow: 0 0 10px rgba(246, 63, 7, 0.9);
+  border: 2px solid orangered;
+}
+
+.contact-detail p {
+    margin: 0;
+}
+
+.contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgb(255, 136, 0,0.8);
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 25px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: #fbf9b4;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 1.5px solid black;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    width: 40%;
+    background-color: #fd2408;
+    color: white;
+    border:1px solid white;
+    cursor: pointer;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-form button:hover {
+    background-color: rgb(251, 244, 112);
+    color: black;
+    border: 2px solid black;
+}
+
+#success-message {
+            display: none;
+            color: green;
+            text-align: center;
+            margin-top: 5px;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+
       .scrollToTopBtn {
         /* background-color: #FFE70F; */
         background-image: radial-gradient(#f3bf8c, #ee7f10);
@@ -518,36 +651,62 @@ main h2{
           </div>
         </div>
       </section>
-      
 
-      <!-- <section class="contact" id="contact">
-        <div class=" contactform">
-          <div class="contacttext">
-        <h2>Contact Us</h2>
-        <p>
-          If you have any questions or need further assistance, please reach out
-          to us using the form below:
-        </p></div>
-        <form class= "contact-form" id="contact-form">
-          <div class="roww">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="roww">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="roww">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
+      <section class="contact" id="contact">
+        <div class="contact-intro">
+            <h2>Contact</h2>
+            <p>If you have any questions or need support, feel free to reach out to us:</p>
+            <div class="contact-details">
+                <div class="contact-detail">
+                    <p><i class="fa-solid fa-phone"></i> Phone:<br> (123) 456-7890</p>
+                </div>
+                <div class="contact-detail">
+                    <p><i class="fa-solid fa-envelope"></i> Email:<br> support@example.com</p>
+                </div>
+                <div class="contact-detail">
+                    <p><i class="fa-solid fa-map-marker"></i> Address: <br> 123 Main Street, India</p>
+                </div>
+            </div>
         </div>
 
-          <button type="submit" class="submit">Submit</button>
-        </form>
-      </div>
-      </section> -->
+        <div class="contact-container">
+            <form class="contact-form" id="contact-form">
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="success-message">Form submitted successfully!</div>
+        </div>
+    </section>
 
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            
+            // Display the success message
+            var successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
 
+            // Hide the success message after 3 seconds
+            setTimeout(function() {
+                successMessage.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+    
+    
       <div class="contact-header" >
         <section class="contact1" id="contact" data-aos="fade-up">
             <div style="padding-right: 0px; margin-right: 0px; margin-left: 50px;" data-aos="fade-right" data-aos-delay="150">
@@ -577,22 +736,9 @@ main h2{
         </section>
     </div>
       
+
     </main>
     <special-footer></special-footer>
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent the form from submitting the traditional way
-          
-          // Display the success message
-          var successMessage = document.getElementById('success-message');
-          successMessage.style.display = 'block';
-
-          // Hide the success message after 3 seconds
-          setTimeout(function() {
-              successMessage.style.display = 'none';
-          }, 3000);
-      });
-  </script>
     <script src="footer/footer.js"></script>
     <script src="trail.js"></script>
 
