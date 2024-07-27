@@ -130,8 +130,45 @@ main h2 {
   }
 
   .home-thumb .btn:hover {
+
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .logo img {
+    height: 40px;
+    /* Reduced height of the logo */
+    width: 40px;
+    /* Reduced width of the logo */
+  }
+
+  .logo-text {
+    /* font-size: 1.2rem; */
+    /* Adjusted font size */
+    color: white;
+    /* Logo text color */
+  }
+  .goals{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+
     box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255),
       0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+
   }
 }
 
