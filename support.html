@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
   <script type="text/javascript">
     window.addEventListener("scroll", function () {
@@ -390,7 +392,8 @@ input[type="text"], input[type="email"], textarea{
     </header> -->
 
   <main>
-    <section class="general" id="general-info">
+
+    <section class="general" id="general-info" data-aos="fade-up">
       <h2>How To Use Open source Village</h2>
       <hr style="width: 90%; margin-left: 40px; border: 0; height: 1px; background-color: #ffffff;">
 
@@ -401,8 +404,8 @@ input[type="text"], input[type="email"], textarea{
 
     </section>
 
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-container">
+      <h2 data-aos="fade-left" >Frequently Asked Questions</h2>
+      <div class="faq-container" data-aos="fade-right">
         <div class="faq">
           <img class="faq-img" src="images/faq.png" alt="">
         </div>
@@ -460,11 +463,10 @@ input[type="text"], input[type="email"], textarea{
       
 
     </section>
-   
 
-      <section id="query-form-section">
+      <section id="query-form-section" data-aos="fade-up">
         <h2>Submit Your Query</h2>
-        <form id="query-form" action="#" method="POST">
+        <form id="query-form" action="#" method="POST" data-aos="fade-left">
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -543,6 +545,12 @@ input[type="text"], input[type="email"], textarea{
       });
     });
   </script>
+  <script>
+    AOS.init({
+      duration: 1200, // Animation duration
+      easing: 'ease-in-out', // Animation easing 
+    });
+  </script>
 <script>
   function toggleAnswer(element) {
     const faqItem = element.parentElement;
@@ -612,7 +620,6 @@ input[type="text"], input[type="email"], textarea{
 
 });
 </script>
-
 
 
 </body>
