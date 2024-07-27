@@ -290,9 +290,8 @@ section{
   font-weight: 100;
   padding:0px  5px;
   cursor:text;
-  top:0;
-  left:0;
-  position:absolute;
+  margin-left: 0;
+  display: flex;
 }
 
 

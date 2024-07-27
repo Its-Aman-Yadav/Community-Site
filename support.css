@@ -1,303 +1,117 @@
+.faq {
+  max-width: 800px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0px;
+  margin-bottom: 60px;
+}
+
+.fa-chevron-up {
+  transform: rotate(180deg);
+}
+
+.general {
+  text-align: center;
+  background: #ffd500ab;
+  padding: 23px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.general h2 {
+  font-size: 38px;
+  text-align: center;
+  color: rgb(168, 54, 2);
+  margin-top: 16px;
+  font-weight: 700;
+}
+
+.general p {
+  margin-top: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(white);
+}
+
 main {
-    padding: 20px;
-    /* max-width: 800px; */
-    margin: 100px auto;
-    /* background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  }
+  padding: 20px;
+  /* max-width: 800px; */
+  margin: 100px auto;
+  /* background: #fff; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* border-radius: 10px; */
+  /* align-items: center;
+    text-align: center; */
+  width: 85%;
+}
 
-  section {
-    margin-bottom: 20px;
-  }
+p {
+  font-size: 16px;
+  line-height: 18px;
+}
 
-  form label {
-    display: block;
-    margin-top: 10px;
-    color: #0073e6;
-  }
-  
-  form input,
-  form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  form button {
-    padding: 10px 20px;
-    background: #0073e6;
-    color: #fff;
-    border: none;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  form button:hover {
-    background: #005bb5;
-  }
-  
+main h2 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 600;
+  color: black;
+}
 
-  .faq {
-    max-width: 800px;
-    margin: auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0px;
-    margin-bottom: 60px;
-  }
-  
-  .question {
-    cursor: pointer;
-    padding: 10px;
-    margin: 10px 0;
-    background: #f0f0f0;
+.navbar {
+  /* Background color for navbar */
+  padding: 5px 20px;
+  /* Reduced padding for navbar */
+
+  /* Navbar styles */
+  /* Navbar styles */
+  /* Navbar styles */
+
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #ddd;
-  }
-  
-  .question h3 {
-    margin: 0;
-  }
-  
-  .question i {
-    transition: transform 0.3s;
-  }
-  
-  .answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding: 0 10px;
-    background: #fafafa;
-    border-left: 3px solid #007bff;
-  }
-  
-  .answer p {
-    margin: 10px 0;
-  }
-  
-  .fa-chevron-up {
-    transform: rotate(180deg);
-  }
-  
-
-  .general {
-    text-align: center;
-    background: linear-gradient(to top,#ffa60e, #ffffff);
-    padding: 23px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    /* height: 10px; */
+    /* Adjust height of the navbar */
   }
 
-  .general h2 {
-    font-size: 38px;
-    text-align: center;
-    color:rgb(168, 54, 2);
-    margin-top: 16px;
-    font-weight: 700;
-  }
-
-  .general p {
-    margin-top: 15px;
-    color:rgb(255, 255, 255);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25px;
-  }
- 
-
-
-  body {
-    
-    line-height: 1.6;
-    margin: 0;
+  .carousell {
+    display: flex;
     padding: 0;
-    background: linear-gradient(white, #f5d244);
-  
-  }
-  
-
-  main {
-    padding: 20px;
-    /* max-width: 800px; */
-    margin: 100px auto;
-    /* background: #fff; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* border-radius: 10px; */
-    /* align-items: center;
-    text-align: center; */
-    width: 85%;
-  }
-
-  p{
-    font-size: 16px;
-    line-height: 18px;
-  }
-
-.introduction{
-    background: #fff;
-    text-align: center;
-    margin: 10px auto;
-    padding:60px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-}
-
-.goal{
-    text-align: center;
-    margin: 20px 0px;
-    padding: 20px;
-    background-color: #fff9e2;
-    border-radius: 5px;
-
-
-}
-
- main h2{
-    font-size: 25px;
-    text-align: center;
-    margin-top: 50px;
-    font-weight: 600;
-    color: black;
-}
-
-
-
-  section {
-    margin-bottom: 20px;
-  }
-
-  section h2 {
-    color: #d9362b;    ;
-  }
-
-  form label {
-    display: block;
-    margin-top: 10px;
-    color: #0073e6;
-  }
-
-  form input,
-  form textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-
-  form button {
-    padding: 10px 20px;
-    background: #0073e6;
-    color: #fff;
-    border: none;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-
-  form button:hover {
-    background: #005bb5;
-  }
-
-  .navbar {
-    /* Background color for navbar */
-    padding: 5px 20px;
-    /* Reduced padding for navbar */
-
-    /* Navbar styles */
-    /* Navbar styles */
-    /* Navbar styles */
-    
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      /* height: 10px; */
-      /* Adjust height of the navbar */
-    }
-
-    .carousell {
-
-      display: flex;
-      padding: 0;
-      transition: transform 0.5s ease;
-    }
-
-    ::-webkit-scrollbar {
-      width: 10px;
-      background-color: #F5F5F5;
-    }
-
-    ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-      background-color: #F5F5F5;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: #f1c11a;
-      background-image: -webkit-linear-gradient(45deg,
-          rgba(255, 255, 255, .2) 25%,
-          transparent 25%,
-          transparent 50%,
-          rgba(255, 255, 255, .2) 50%,
-          rgba(255, 255, 255, .2) 75%,
-          transparent 75%,
-          transparent);
-      border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: #d1a10a;
-    }
-
-    .wrapper {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .home-thumb .btn {
-      background-color: transparent;
-    }
-
-    .home-thumb .btn:hover {
-      box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
-    }
-
-   
+    transition: transform 0.5s ease;
   }
 
   ::-webkit-scrollbar {
     width: 10px;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
   }
 
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: #f1c11a;
-    background-image: -webkit-linear-gradient(45deg,
-        rgba(255, 255, 255, .2) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, .2) 50%,
-        rgba(255, 255, 255, .2) 75%,
-        transparent 75%,
-        transparent);
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+    );
     border-radius: 10px;
   }
 
@@ -316,6 +130,7 @@ main {
   }
 
   .home-thumb .btn:hover {
+
     box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
   }
 
@@ -350,616 +165,293 @@ main {
     gap: 10px;
     align-items: center;
     text-align: center;
+
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255),
+      0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+
   }
-
-  .ribbon{
-    background-color: #ffd138;
-    padding: 10px 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    font-weight: 600;
-    letter-spacing: 3px;
-  }
-  ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  ul li {
-    margin: 0 0px;
-    /* Reduced margin to decrease space between items */
-    font-size: 1rem;
-    /* Adjust font size */
-  }
-
-  ul li a {
-    text-decoration: none;
-    color: white;
-    /* Nav item text color */
-    transition: color 0.3s;
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
-    /* Reduced padding for nav items */
-  }
-
-  ul li a:hover {
-    color: #f1c11a;
-    /* Hover color for nav items */
-  }
-
-  ul li i {
-    margin-right: 10px;
-    /* Adjust space between icon and text */
-  }
-
-  .theme-switch {
-    margin-left: 10px;
-    width: 120px;
-    /* Space between toggle and nav items */
-  }
-
-  #image {
-    height: 30px;
-    /* Reduced height of the profile image */
-    width: 30px;
-    /* Reduced width of the profile image */
-    border-radius: 50%;
-    margin-left: 10px;
-    cursor: pointer;
-  }
-
-  /* Additional styles for the navbar to make it more attractive */
-
-
-    .theme-switch img {
-      margin-right: 20px !important;
-    }
-
-    nav {
-      background-color: #444;
-      /*Navbar background color*/
-      padding: 5px 20px;
-      /* Padding */
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-      display: grid;
-      grid-auto-flow: column;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    ul li {
-      position: relative;
-    }
-
-
-
-      .slider {
-        width: 50px;
-        height: 20px;
-        /* Slider height */
-
-        background-color: #ccc;
-        position: relative;
-        border-radius: 34px;
-        transition: 0.4s;
-        margin-right: 0px !important;
-      }
-
-      slider:before {
-        content: "";
-        position: absolute;
-        width: 26px;
-        /* Adjust width of the toggle knob */
-        height: 26px;
-        /* Adjust height of the toggle knob */
-        border-radius: 50%;
-        background-color: white;
-        transition: 0.4s;
-        left: 4px;
-        bottom: 4px;
-      }
-
-      ul li a {
-        padding: 5px;
-        /* Reduced padding */
-        border-radius: 5px;
-        transition: background 0.3s;
-      }
-
-      ul li a:hover {
-        background: rgba(255, 255, 255, 0.1);
-        /* Background on hover */
-      }
-
-      /* Adjust the profile image positioning */
-      #image {
-        margin-left: 10px;
-        /* Adjust spacing between profile image and nav items */
-      }
-
-
-      .contact {
-        padding: 80px 0;
-        text-align: center;
-      }
-      .contact-form
-      {
-        width: 500px;
-      }
-      
-      @media screen and (max-width: 768px) {
-        .contact-form
-        {
-          width: 350px;
-        }
-      }
-      
-      .contact-form .form-group {
-        margin-bottom: 10px;
-      }
-      
-      .contact-form label {
-        display: block;
-        font-size: 18px;
-        color: #333;
-        margin-bottom: 4px;
-      }
-      
-      .contact-form input[type="text"],
-      .contact-form input[type="email"],
-      .contact-form textarea {
-        width: 100%;
-        padding: 12px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        transition: border-color 0.3s ease;
-      }
-      
-      .contact-form textarea {
-        height: 120px;
-      }
-      
-      .contact-form input[type="text"]:focus,
-      .contact-form input[type="email"]:focus,
-      .contact-form textarea:focus {
-        border-color: #f1c11a;
-      }
-      
-      .contact-form button {
-        background-color: #f1c11a;
-        color: #fff;
-        border: none;
-        padding: 14px 20px;
-        font-size: 18px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-      
-      .contact-form button:hover {
-        background-color: #d1a10a;
-      }
-
-
-
-      /* Style for the theme switcher */
-      .theme-switch {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-      }
-
-
-      .rating input[type="radio"] {
-        display: none;
-        /* Hide radio buttons */
-      }
-
-      .rating label {
-        font-size: 2rem;
-        /* Emoji size */
-        cursor: pointer;
-        transition: transform 0.2s;
-      }
-
-      .rating label:hover {
-        transform: scale(1.2);
-        /* Enlarge on hover */
-      }
-
-      .rating label:active {
-        transform: scale(1.1);
-        /* Reduce size on active */
-      }
-
-.guidelines{
-  align-items: left;
-  background: linear-gradient(#ffd138, rgb(255, 136, 0));
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-
 }
-.guidelines ul{
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f1c11a;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d1a10a;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-thumb .btn {
+  background-color: transparent;
+}
+
+.home-thumb .btn:hover {
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255),
+    0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+}
+
+.logo-link {
   display: flex;
-  margin-top: 10px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 40px;
+  /* Reduced height of the logo */
+  width: 40px;
+  /* Reduced width of the logo */
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  /* Adjusted font size */
+  color: white;
+  /* Logo text color */
+}
+.goals {
+  display: flex;
   flex-direction: column;
-  margin-left: 0px;
-  
-}
-.guidelines ul li{
-  text-align: left;
-  padding: 10px;
- background-color: #fff8c8;
-  margin: 5px 0px;
-  font-weight: 600;
-  
-}
-
-.contributions{
-  background-color: #f5d244;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.contributions ul{
-  display: grid;
-  grid-auto-flow: column;
-  margin: 10px 0px;
-}
-
-.contributions ul li{
-  display: grid;
-  grid-auto-flow: column;
+  gap: 10px;
   align-items: center;
   text-align: center;
-  justify-content: space-between;
 }
 
-.contributions ul li p{
-  padding: 10px;
-  background-color: #F5F5F5;
-  border-radius: 10px;
-  margin: 0px 10px;
-  color:#e15509;
-  font-weight: 700;
+.ribbon {
+  background-color: #ffd138;
+  padding: 10px 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0 0px;
+  /* Reduced margin to decrease space between items */
+  font-size: 1rem;
+  /* Adjust font size */
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  /* Nav item text color */
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  /* Reduced padding for nav items */
+}
+
+ul li a:hover {
+  color: #f1c11a;
+  /* Hover color for nav items */
+}
+
+ul li i {
+  margin-right: 10px;
+  /* Adjust space between icon and text */
+}
+
+.theme-switch {
+  margin-left: 10px;
+  width: 120px;
+  /* Space between toggle and nav items */
+}
+
+#image {
+  height: 30px;
+  /* Reduced height of the profile image */
+  width: 30px;
+  /* Reduced width of the profile image */
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Additional styles for the navbar to make it more attractive */
+
+.theme-switch img {
+  margin-right: 20px !important;
+}
+
+nav {
+  background-color: #444;
+  /*Navbar background color*/
+  padding: 5px 20px;
+  /* Padding */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: grid;
+  grid-auto-flow: column;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.contact-container {
+/* FAQ section styles */
+.faq-container {
   display: flex;
-  flex-direction: row;
-  width: 80%;
-  max-width: 1200px;
-  background: white;
-  border-radius: 10px;
-  margin-left: 150px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form-container, .contact-info {
+  align-items: flex-start;
+  justify-content: space-between;
   padding: 20px;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-
-.contact-form{
-  margin-left: 0px;
-  margin-right: 50px;
-  padding-right: 70px;
-  margin-top: 25px;
-
-.contact-form-container {
-  background: linear-gradient(to bottom right, #ff8c00, #ffd700);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  
-
+.faq {
+  flex: 1;
+  max-width: 40%;
+  padding: 20px;
+  animation: moveUpDown 2s infinite ease-in-out;
 }
-
-.contact-form-container h2 {
-  margin-top: 0;
-  color: white;
-}
-
-
-.contact-form label{
-  font-size: 20px;
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  background : none;
-
-}
-
-.form-group {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.contact-form input{
-  height: 30px !important;
-
-.contact-form input,
-.contact-form textarea {
-  width: 48%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-
-}
-
-.contact-form textarea {
-  width: 100%;
-  height: 100px;
-}
-
-.contact-form button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background: #ff6f00;
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background: #aa4a00;
-}
-
-.contact-info {
-  background: #f2ce01;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  
-}
-
-.contact-info:before {
-  content: none;
-}
-
-.contact-info h2 {
-  position: relative;
-  bottom: 78px;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  color: black;
-  font-size: 1.3em;
-  position: relative;
-  bottom: 60px;
-}
-
-.contact-info i {
-  margin-right: 10px;
-  color: #ff8c00;
-}
-
-
-
-.question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 10px 20px;
-  font-weight: 600;
-  border-top-left-radius: 20px;
-  box-shadow: 0 0 1px 1px rgb(255, 195, 117);
-  margin-bottom: 5px;
-}
-
-.answer {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.5s, max-height 0.5s;
-  background: linear-gradient(white, #fce595);
-  padding: 10px 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0 0 1px 1px rgb(255, 195, 117);
-}
-
-
-.faqs.active i{
-    rotate: 180deg;
-}
-
-@media (max-width: 767px) 
-{
-  .theme-switch,
-  #checkbox 
-  {
-    opacity: 0;
-    pointer-events: none; 
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 
-  #image 
-  {
-    opacity: 0;
-    pointer-events: none; 
+.faq-img {
+  width: 100%;
+  height: auto;
+}
+
+.faq-items {
+  flex: 2;
+  max-width: 55%;
+  margin-left: 20px;
+}
+
 .faq-item {
   margin: 10px 0;
-  border: 1px solid #ddd;
+  padding: 10px;
   border-radius: 5px;
-  overflow: hidden;
 }
 
 .faq-question {
-  cursor: pointer;
-  padding: 15px;
-  background: linear-gradient(to left, #ffb65e, #ffd700);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.3s;
-  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #f1f1f1;
+  border-radius: 5px;
 }
 
-.faq-question h3 {
-  margin: 0;
-  font-weight:700;
-  font-size: 17px;
-}
-
-.faq-question i {
-  transition: transform 0.3s;
+.faq-question:hover {
+  background-color: #e1e1e1;
 }
 
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-  /* background: #fafafa; */
-  padding: 0 15px;
-  border-radius: 7px;
+  display: none;
+  padding: 10px;
+  border-top: 1px solid #ddd;
 }
 
 .faq-answer p {
-  color: white;
-  margin: 1px 0px;
-  padding: 10px;
-  
+  margin: 0;
 }
 
-.faq-question.active {
-  background: linear-gradient(to left, #ffb65e, #ffd700);
+/* Icon rotation */
+.faq-question .fa-chevron-down {
+  transition: transform 0.3s ease;
 }
 
-.faq-question.active i {
+.faq-question.active .fa-chevron-down {
   transform: rotate(180deg);
 }
 
-.faq-answer.show {
-  max-height: 400px; 
-  color: white;
-  /* background: linear-gradient(to left, #ff8c00, #fff1a4); */
-  background-color: #ffa12f;
+/* Query Form Section */
+#query-form-section {
+  width: 60%;
+  margin: 0 auto;
+  padding: 15px;
 }
 
-/* Dark Mode styles */
-
-body.dark-mode {
-  background: #1a1a1a;
+#query-form-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
-body.dark-mode main {
-  background: #333;
+.form-group label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: rgb(168, 54, 2);
 }
 
-body.dark-mode .general {
-  /* background: linear-gradient(to top, #333, #555); */
-  background: #555;
-  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 0.9rem;
 }
 
-body.dark-mode .general h2 {
-  color: #ffd700;
+.form-group textarea {
+  resize: vertical;
+  height: 80px;
 }
 
-body.dark-mode .general p {
-  color: #ddd;
-}
-
-body.dark-mode .faq h2{
-  color: #ffd700;
-}
-
-body.dark-mode .faq-question {
-  background: linear-gradient(to left, #444, #333);
+.form-group button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #dfb10ad2;
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-body.dark-mode .faq-answer {
-  background-color: #222;
+.form-group button:hover {
+  background-color: #f1c11a;
 }
 
-body.dark-mode .faq-answer p {
-  color: #ddd;
-}
-
-body.dark-mode .faq-question.active {
-  background: linear-gradient(to left, #555, #444);
-}
-
-body.dark-mode .contact-container {
-  background: #333;
-  
-}
-
-body.dark-mode .contact-form-container {
-  background: linear-gradient(to bottom right, #444, #333);
-}
-
-body.dark-mode .contact-form-container h2 {
-  color: #ffd700;
-}
-
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea {
-  background: #222;
-  color: #fff;
-  border: 1px solid #555;
-}
-
-body.dark-mode .contact-form button {
-  background: #ffd700;
-  color: #000;
-}
-
-body.dark-mode .contact-form button:hover {
-  background: #ffea00;
-}
-
-body.dark-mode .contact-info {
-  background: #222;
-}
-
-body.dark-mode .contact-info h2,
-body.dark-mode .contact-info p {
-  color: #fff;
-}
-
-body.dark-mode .contact-info i {
-  color: #ffd700;
-}
-
-body.dark-mode .contact-form:before {
+.error-message {
+  color: red;
+  font-size: 0.75rem;
   display: none;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .contact-container {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .general-section p,
-  .faq-question,
-  .faq-answer,
-  .contact-form .form-group input,
-  .contact-form textarea {
-    font-size: 0.9rem;
-  }
-
-  .contact-form button {
-    width: 100%;
-    text-align: center;
-
-  }
 }

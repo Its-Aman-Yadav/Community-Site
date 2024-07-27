@@ -23,6 +23,8 @@
     />
 
     <link rel="stylesheet" href="css/member.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <style>
       /* Back to Top Button */
@@ -475,7 +477,7 @@ main h2{
       </script>
 
     <main>
-      <section class="introduction" id="introduction">
+      <section class="introduction" id="introduction" data-aos="fade-up">
         <h2>Introduction</h2>
         <p>
           Welcome! We are excited that you're interested in becoming a member of
@@ -484,7 +486,7 @@ main h2{
         </p>
       </section>
 
-      <section class="benefits" id="benefits">
+      <section class="benefits" id="benefits" data-aos="fade-up" data-aos-delay="100">
         <h2>Benefits of Membership</h2>
         <ul>
           <li>Access to exclusive projects and resources</li>
@@ -495,22 +497,22 @@ main h2{
         </ul>
       </section>
 
-      <section class="steps" id="steps">
+      <section class="steps" id="steps" data-aos="fade-up" data-aos-delay="100">
         <h2 class="h2">Steps to Join</h2>
         <div class="steplist">
-          <div class="step-item">
+          <div class="step-item" data-aos="zoom-in" data-aos-delay="250">
             <img src="images/contact-form.png" alt="Fill out form">
             <p>Fill out the membership application form below.</p>
           </div>
-          <div class="step-item">
+          <div class="step-item" data-aos="zoom-in" data-aos-delay="400">
             <img src="images/stopwatch.png" alt="Submit form">
             <p>Submit your form and wait for a confirmation email.</p>
           </div>
-          <div class="step-item">
+          <div class="step-item" data-aos="zoom-in" data-aos-delay="550">
             <img src="images/registration.png" alt="Complete registration">
             <p>Follow the instructions in the email to complete your membership registration.</p>
           </div>
-          <div class="step-item">
+          <div class="step-item" data-aos="zoom-in" data-aos-delay="800">
             <img src="images/team.png" alt="Participate in projects">
             <p>Start participating in our projects and community events.</p>
           </div>
@@ -546,14 +548,14 @@ main h2{
       </section> -->
 
 
-      <div class="contact-header">
-        <section class="contact1" id="contact" style="">
-            <div style="padding-right: 0px; margin-right: 0px; margin-left: 50px;">
+      <div class="contact-header" >
+        <section class="contact1" id="contact" data-aos="fade-up">
+            <div style="padding-right: 0px; margin-right: 0px; margin-left: 50px;" data-aos="fade-right" data-aos-delay="150">
                 <div id="cnt"><h2>Contact</h2>
                 <p>If you have any questions or need support, feel free to reach out to us:</p></div>
                 <p id="success-message">We will connect with you soon!</p>
             </div>
-            <section class="contact1" id="contact" style="background-color: #f3bf8c;">
+            <section class="contact1" id="contact" style="background-color: #f3bf8c;" data-aos="fade-left" data-aos-delay="300">
                 <div class="form-container">
                     <form class="contact-form1" id="contact-form">
                         <div class="form-group">
@@ -620,6 +622,12 @@ document.body.style.overflow = 'auto';
       "themeColor": "#2563eb",
       "allowedOrigins": [],
       "enableConversationDeletion": true
+    });
+  </script>
+  <script>
+    AOS.init({
+      duration: 1200, // Animation duration
+      easing: 'ease-in-out', // Animation easing
     });
   </script>
 
