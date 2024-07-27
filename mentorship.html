@@ -130,11 +130,11 @@ video#background-video {
     }
 
     .main-content h2 {
-        color: #ffa600;
+        color: #ff6600;
         margin-top: 30px;
         border-bottom: 1px solid #FFA500;
         padding-bottom: 5px;
-        font-weight:500;
+        font-weight:600;
     }
 
     .main-content h3 {
@@ -182,9 +182,8 @@ video#background-video {
           border-radius: 10px;
         }
 
-        .benefits :hover{
+        .benefits .item:hover{
          box-shadow: 0px 0px 2px 2px rgb(229, 141, 1);
-
         }
         .benefits p{
           margin-bottom: 0px;
@@ -248,6 +247,9 @@ video#background-video {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 10px;
+    }
+    .topics .item2:hover{
+      box-shadow: 0px 1px 2px 1px #f5a623;
     }
 
     .topics .item2 p{
@@ -388,6 +390,7 @@ body.dark-mode .success-stories ul li{
     <source src="back5.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
+    
  <!-- Navbar -->
  <div class="navbar">
   <nav>
@@ -403,35 +406,125 @@ body.dark-mode .success-stories ul li{
       </div> -->
 
     </a>
-     <ul>
-
-      <li><i  class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
-      <li><i  class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
-      <li><i  class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
-      <li><i  class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
-      <li><i  class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
       <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
-
     </ul>
-    <label class="theme-switch" for="checkbox">
-      <input type="checkbox" id="checkbox" />
-      <div class="slider round" id="toggle"></div>
-    </label>
+
+    <div class="toggle-container" style="top: 15px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
+    </div>
+
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        right: -4px;
+        top: 15px;
+      }
+
+      .light-mode .toggle-container {
+        right: 140px;
+        top: 10px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
+
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+    </style>
 
     <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
-    <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
 
+    <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
   </nav>
 </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('checkbox');
-            toggleButton.addEventListener('change', function () {
-                document.body.classList.toggle('dark-mode');
-            });
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('checkbox');
+        toggleButton.addEventListener('change', function() {
+          document.body.classList.toggle('dark-mode');
         });
-    </script>
+      });
+      </script>
 
 <div class="main-content">
     <header class="header">
