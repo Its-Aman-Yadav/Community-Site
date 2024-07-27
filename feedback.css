@@ -137,7 +137,7 @@ body.dark-mode .feedback-wrapper {
   
   body.dark-mode .rating-container button {
     color: #555555;
-    /* background-color: #888; */
+    background-color: #888;
     border: 1px solid #888;
   }
   
@@ -166,3 +166,128 @@ body.dark-mode .feedback-wrapper {
   body.dark-mode .popup-button:hover {
     background-color: #ffc300;
   }
+  /* Dark Mode Styles */
+body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+  color: #f0f0f0;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6,
+body.dark-mode .h1, 
+body.dark-mode .h2, 
+body.dark-mode .h3, 
+body.dark-mode .h4, 
+body.dark-mode .h5, 
+body.dark-mode .h6 {
+  color: #e0e0e0;
+}
+
+body.dark-mode a, 
+body.dark-mode a:hover {
+  color: #1abc9c;
+}
+
+body.dark-mode .content {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+
+body.dark-mode .form-control {
+  border-bottom: 1px solid #4c5c68;
+  color: #f0f0f0;
+  background: none;
+}
+
+body.dark-mode .form-control:active, 
+body.dark-mode .form-control:focus {
+  border-color: #1abc9c;
+  color: #f0f0f0;
+  background: none;
+}
+
+body.dark-mode .btn {
+  background-color: #1abc9c;
+  color: #ffffff;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #16a085;
+}
+
+body.dark-mode .rate-us {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .rating-container button {
+  color: #f0f0f0;
+}
+
+body.dark-mode .rating-container button.filled {
+  color: #f39c12;
+}
+
+body.dark-mode .popup {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .popup-content {
+  background: linear-gradient(to bottom, #34495e, #2c3e50);
+  color: #f0f0f0;
+}
+
+body.dark-mode .popup-content h2 {
+  color: #e74c3c;
+}
+
+body.dark-mode .popup-content p {
+  color: #ecf0f1;
+}
+
+body.dark-mode .popup-button {
+  background-color: #1abc9c;
+  color: #ffffff;
+}
+
+body.dark-mode .popup-button:hover {
+  background-color: #16a085;
+}
+
+body.dark-mode .back-button {
+  color: #1abc9c;
+}
+
+body.dark-mode .back-button:hover {
+  color: #16a085;
+}
+
+body.dark-mode .text-orange {
+  color: #e67e22;
+}
+
+body.dark-mode .text-orange-l {
+  color: #d35400;
+}
+
+body.dark-mode .toggle-button .light-mode-icon {
+  display: none;
+}
+
+body.dark-mode .toggle-button .dark-mode-icon {
+  display: block;
+}
+theme-switch .light-mode-icon {
+  color: #f39c12;
+}
+
+.theme-switch .light-mode-icon, .theme-switch .dark-mode-icon {
+  font-size: 19px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.5s ease, color 0.5s ease;
+}
