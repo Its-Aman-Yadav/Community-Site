@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Licensing</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -10,392 +9,428 @@
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- <link rel="stylesheet" href="privacy.css"/> -->
-    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/90889e6878.js"
+      crossorigin="anonymous"
+    ></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <script type="text/javascript">
-        window.addEventListener("scroll", function () {
-            var header = document.querySelector("nav");
-            header.classList.toggle("sticky", window.scrollY > 50)
-        })
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY > 50);
+      });
     </script>
     <style>
-        /* Style the video to cover the entire page background */
-body {
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
+      /* Style the video to cover the entire page background */
+      body {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
 
-video#background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    background-size: cover;
-}
+      body {
+        background: linear-gradient(white, #f5d244);
+      }
 
-/* Ensure the content is above the video */
-.license-container {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 110px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+      /* Ensure the content is above the video */
+      .license-container {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: 110px auto;
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
 
-.license-container h1, .license-container h2 {
-    color: #333;
-}
+      .license-container h1,
+      .license-container h2 {
+        color: #333;
+      }
 
-.license-container p {
-    color: #666;
-}
+      .license-container p {
+        color: #666;
+      }
 
-/* Media query for smaller devices */
-@media (max-width: 768px) {
-    .license-container {
-        margin: 20px auto;
-        padding: 10px;
-    }
-
-    .scrollToTopBtn {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        line-height: 40px;
-        bottom: 80px;
-        right: 20px;
-    }
-
-    .progress-ring {
-        bottom: 75px;
-        right: 15px;
-    }
-}
-
-        /* Container specific for the license section */
+      /* Media query for smaller devices */
+      @media (max-width: 768px) {
         .license-container {
-            max-width: 800px;
-            margin: 110px auto;
-            padding: 20px;
-            border-radius: 10px;
-            background:linear-gradient(white, #f5d244);
-        }
-        .license-container .copy{
-            color:#ee7f10;
+          margin: 20px auto;
+          padding: 10px;
         }
 
-        .license-container h1 {
-            color: #333;
-            font-size: 2em;
-            /* Increase the size */
-            font-weight: bold;
-            /* Make it bold */
-            text-align: center;
-            /* Center the text */
-        }
-
-        .license-container h2 {
-            color: #333;
-            margin-top: 50px;
-        }
-
-        .license-container p {
-            margin: 10px 0;
-            color: #666;
-        }
-
-        #image {
-            height: 30px;
-            /* Reduced height of the profile image */
-            width: 30px;
-            /* Reduced width of the profile image */
-            border-radius: 50%;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-
-        .usercon {
-            display: block;
-            text-align: left;
-        }
-
-        .usercon li {
-            list-style-type: square;
-        }
-
-        .usercon p {
-            text-align: left;
-        }
-
-        /* Back to Top Button */
         .scrollToTopBtn {
-            background-image: radial-gradient(#f3bf8c, #ee7f10);
-            color: #fff;
-            text-align: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 18px;
-            text-decoration: none;
-            border: none;
-            line-height: 50px;
-            /* Center text vertically */
-            transition: background-color 0.3s ease;
-            position: fixed;
-            bottom: 106px;
-            right: 43px;
-            display: none;
-            /* Hidden by default */
-            z-index: 1000;
-            margin-bottom: 10px;
-        }
-
-        .scrollToTopBtn:hover {
-            background-color: #484848;
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+          line-height: 40px;
+          bottom: 80px;
+          right: 20px;
         }
 
         .progress-ring {
-            position: fixed;
-            bottom: 101px;
-            margin-bottom: 10px;
-            right: 38px;
-            transform: rotate(-90deg);
-            z-index: 999;
-            /* Just below the button */
-            margin-bottom: 10px;
+          bottom: 75px;
+          right: 15px;
         }
-        .license-title{
-            font-size: 22px;
-            color: #000000;
-            padding-bottom: 0px;
-        }
-        .progress-ring__circle {
-            transition: 0.35s stroke-dasharray;
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
+      }
 
-         /* Dark Mode Styles */
-         body.dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
+      /* Container specific for the license section */
+      .license-container {
+        max-width: 800px;
+        margin: 110px auto;
+        padding: 20px;
+        border-radius: 10px;
+        background: linear-gradient(white, #f5d244);
+      }
+      .license-container .copy {
+        color: #ee7f10;
+      }
 
-        body.dark-mode .license-container {
-            background: #1e1e1e;
-            color: #e0e0e0;
-        }
-        body.dark-mode .license-container .copy {
-            color: #ee7f10;
-        }
+      .license-container h1 {
+        color: #333;
+        font-size: 2em;
+        /* Increase the size */
+        font-weight: bold;
+        /* Make it bold */
+        text-align: center;
+        /* Center the text */
+      }
 
-        body.dark-mode .license-container h1,
-        body.dark-mode .license-container h2,
-        body.dark-mode .license-container p {
-            color: #e0e0e0;
-        }
+      .license-container h2 {
+        color: #333;
+        margin-top: 50px;
+      }
 
-        body.dark-mode .navbar nav {
-            background-color: #333;
-        }
+      .license-container p {
+        margin: 10px 0;
+        color: #666;
+      }
 
-        body.dark-mode .scrollToTopBtn {
-            background-image: radial-gradient(#ee7f10, #f3bf8c);
-        }
+      #image {
+        height: 30px;
+        /* Reduced height of the profile image */
+        width: 30px;
+        /* Reduced width of the profile image */
+        border-radius: 50%;
+        margin-left: 10px;
+        cursor: pointer;
+      }
 
-        body.dark-mode .scrollToTopBtn:hover {
-            background-color: #555;
-        }
+      .usercon {
+        display: block;
+        text-align: left;
+      }
 
-        body.dark-mode .progress-ring__circle {
-            stroke: #e0e0e0;
-        }
+      .usercon li {
+        list-style-type: square;
+      }
 
-        body.dark-mode a {
-            color: #bb86fc;
-        }
+      .usercon p {
+        text-align: left;
+      }
 
-        body.dark-mode a:hover {
-            color: #3700b3;
-        }
-        
+      /* Back to Top Button */
+      .scrollToTopBtn {
+        background-image: radial-gradient(#f3bf8c, #ee7f10);
+        color: #fff;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 18px;
+        text-decoration: none;
+        border: none;
+        line-height: 50px;
+        /* Center text vertically */
+        transition: background-color 0.3s ease;
+        position: fixed;
+        bottom: 106px;
+        right: 43px;
+        display: none;
+        /* Hidden by default */
+        z-index: 1000;
+        margin-bottom: 10px;
+      }
+
+      .scrollToTopBtn:hover {
+        background-color: #484848;
+      }
+
+      .progress-ring {
+        position: fixed;
+        bottom: 101px;
+        margin-bottom: 10px;
+        right: 38px;
+        transform: rotate(-90deg);
+        z-index: 999;
+        /* Just below the button */
+        margin-bottom: 10px;
+      }
+      .license-title {
+        font-size: 22px;
+        color: #000000;
+        padding-bottom: 0px;
+      }
+      .progress-ring__circle {
+        transition: 0.35s stroke-dasharray;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+      }
+
+      /* Dark Mode Styles */
+      body.dark-mode {
+        background: linear-gradient(
+          rgb(13, 37, 62) 100.2%,
+          rgb(36, 45, 57) 11.2%
+        );
+      }
+      body.dark-mode .license-container {
+        background: linear-gradient(
+          109.6deg,
+          rgb(36, 45, 57) 11.2%,
+          rgb(16, 37, 60) 100.2%
+        );
+        box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+      }
+      body.dark-mode .license-container .copy {
+        color: #ee7f10;
+      }
+
+      body.dark-mode .license-container h1,
+      body.dark-mode .license-container h2,
+      body.dark-mode .license-container p {
+        color: #e0e0e0;
+      }
+
+      body.dark-mode .navbar nav {
+        background-color: #333;
+      }
+
+      body.dark-mode .scrollToTopBtn {
+        background-image: radial-gradient(#ee7f10, #f3bf8c);
+      }
+
+      body.dark-mode .scrollToTopBtn:hover {
+        background-color: #555;
+      }
+
+      body.dark-mode .progress-ring__circle {
+        stroke: #e0e0e0;
+      }
+
+      body.dark-mode a {
+        color: #bb86fc;
+      }
+
+      body.dark-mode a:hover {
+        color: #3700b3;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <video id="background-video" autoplay muted loop>
-        <source src="back5.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+  <body>
     <!-- Navbar -->
-<div class="navbar">
-    <nav>
-      <a class="logo-link" href="#home">
-        <div class="logo-title">
-                    <img  class="logo" src="images/logo2.jpeg" alt="logo">
-  
-                    <span class="logo-text">Open Source Village</span>
-                   </div>
-  
-        <!-- <div>
+    <div class="navbar">
+      <nav>
+        <a class="logo-link" href="#home">
+          <div class="logo-title">
+            <img class="logo" src="images/logo2.jpeg" alt="logo" />
+
+            <span class="logo-text">Open Source Village</span>
+          </div>
+
+          <!-- <div>
           <span class="logo-subtext">Source</span>
         </div> -->
-  
-      </a>
-      <ul>
-        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html#home">Home</a></li>
-        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
-        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
-        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
-        <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
-      </ul>
-  
-      <div class="toggle-container" style="top: 15px;">
-        <input type="checkbox" id="checkbox" class="switch-checkbox">
-        <label class="theme-switch" for="checkbox">
-          <div class="toggle-button">
-            <span class="light-mode-icon"><img src="./images/sun.svg"></span>
-            <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
-          </div>
-        </label>
-      </div>
-  
-      <style>
-        .toggle-container {
-          transform: translate(-50%, -50%);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 30px;
-          right: -4px;
-          top: 15px;
-        }
-  
-        .light-mode .toggle-container {
-          right: 140px;
-          top: 10px;
-        }
-        
-        /* Hidden Checkbox */
-        .switch-checkbox {
-          display: none;
-        }
-  
-        .theme-switch {
-          position: relative;
-          width: 45px;
-          height: 30px;
-          background-color: #ccc;
-          border-radius: 20px;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0 5px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transition: background-color 0.5s ease;
-        }
-  
-        .theme-switch .light-mode-icon,
-        .theme-switch .dark-mode-icon {
-          font-size: 19px;
-          position: absolute;
-          cursor: pointer;
-          top: 50%;
-          transform: translateY(-50%);
-          transition: opacity 0.5s ease, color 0.5s ease;
-        }
-  
-        .theme-switch .light-mode-icon {
-          color: #f39c12;
-        }
-  
-        .theme-switch .dark-mode-icon {
-          color: #bdc3c7;
-          opacity: 0;
-        }
-  
-        .toggle-button {
-          position: absolute;
-          top: 3px;
-          left: 3px;
-          width: 25px;
-          height: 25px;
-          background-color: #fff;
-          border-radius: 50%;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-          transition: transform 0.5s ease, background-color 0.5s ease;
-        }
-  
-        /* Checkbox Checked State */
-        .switch-checkbox:checked + .theme-switch {
-          background-color: #34495e;
-        }
-  
-        .switch-checkbox:checked + .theme-switch .light-mode-icon {
-          opacity: 0;
-        }
-  
-        .switch-checkbox:checked + .theme-switch .dark-mode-icon {
-          opacity: 1;
-        }
-  
-        .switch-checkbox:checked + .theme-switch .toggle-button {
-          transform: translateX(13px);
-          /* background-color: #34495e; */
-        }
-  
-      </style>
-  
-      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
-  
-      <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
-  
-    </nav>
-  </div>
+        </a>
+        <ul>
+          <li>
+            <i class="fa-solid fa-house"></i
+            ><a class="nav-link" href="index.html#home">Home</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-address-card"></i
+            ><a class="nav-link" href="about us.html">About</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-screwdriver-wrench"></i
+            ><a class="nav-link" href="index.html#services">Services</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-pen-to-square"></i
+            ><a class="nav-link" href="index.html#testimonials">Reviews</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-address-book"></i
+            ><a class="nav-link" href="contact us.html">Contact</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-right-to-bracket"></i
+            ><a href="login.html">Login/Register</a>
+          </li>
+        </ul>
+
+        <div class="toggle-container" style="top: 15px">
+          <input type="checkbox" id="checkbox" class="switch-checkbox" />
+          <label class="theme-switch" for="checkbox">
+            <div class="toggle-button">
+              <span class="light-mode-icon"
+                ><img src="./images/sun.svg"
+              /></span>
+              <span class="dark-mode-icon"
+                ><img src="./images/moon.svg"
+              /></span>
+            </div>
+          </label>
+        </div>
+
+        <style>
+          .toggle-container {
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            right: -4px;
+            top: 15px;
+          }
+
+          .light-mode .toggle-container {
+            right: 140px;
+            top: 10px;
+          }
+
+          /* Hidden Checkbox */
+          .switch-checkbox {
+            display: none;
+          }
+
+          .theme-switch {
+            position: relative;
+            width: 45px;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease;
+          }
+
+          .theme-switch .light-mode-icon,
+          .theme-switch .dark-mode-icon {
+            font-size: 19px;
+            position: absolute;
+            cursor: pointer;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 0.5s ease, color 0.5s ease;
+          }
+
+          .theme-switch .light-mode-icon {
+            color: #f39c12;
+          }
+
+          .theme-switch .dark-mode-icon {
+            color: #bdc3c7;
+            opacity: 0;
+          }
+
+          .toggle-button {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 25px;
+            height: 25px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease, background-color 0.5s ease;
+          }
+
+          /* Checkbox Checked State */
+          .switch-checkbox:checked + .theme-switch {
+            background-color: #34495e;
+          }
+
+          .switch-checkbox:checked + .theme-switch .light-mode-icon {
+            opacity: 0;
+          }
+
+          .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+            opacity: 1;
+          }
+
+          .switch-checkbox:checked + .theme-switch .toggle-button {
+            transform: translateX(13px);
+            /* background-color: #34495e; */
+          }
+        </style>
+
+        <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+        <img
+          id="image"
+          style="margin-right: 55px"
+          src="images/profile1.jpg"
+          onclick="ProfileClicked()"
+          alt="Profile"
+        />
+      </nav>
+    </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('checkbox');
-            toggleButton.addEventListener('change', function () {
-                document.body.classList.toggle('dark-mode');
-            });
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("checkbox");
+        toggleButton.addEventListener("change", function () {
+          document.body.classList.toggle("dark-mode");
         });
+      });
     </script>
 
     <!-- License Container -->
     <div class="license-container">
-        <h1 >Licensing</h1>
-        <h2 class="license-title">MIT License</h2>
-        <p class="copy">Copyright (c) 2024 Aman Yadav</p>
-        <p>Permission is hereby granted, free of charge, to any person obtaining a copy
-            of this software and associated documentation files (the "Software"), to deal
-            in the Software without restriction, including without limitation the rights
-            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-            copies of the Software, and to permit persons to whom the Software is
-            furnished to do so, subject to the following conditions:</p>
-        <p>The above copyright notice and this permission notice shall be included in all
-            copies or substantial portions of the Software.</p>
-        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-            SOFTWARE.</p>
+      <h1>Licensing</h1>
+      <h2 class="license-title">MIT License</h2>
+      <p class="copy">Copyright (c) 2024 Aman Yadav</p>
+      <p>
+        Permission is hereby granted, free of charge, to any person obtaining a
+        copy of this software and associated documentation files (the
+        "Software"), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:
+      </p>
+      <p>
+        The above copyright notice and this permission notice shall be included
+        in all copies or substantial portions of the Software.
+      </p>
+      <p>
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      </p>
     </div>
 
     <!-- footer section -->
@@ -403,122 +438,142 @@ video#background-video {
 
     <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
     <svg class="progress-ring" width="60" height="60">
-        <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30"
-            cy="30" />
+      <circle
+        class="progress-ring__circle"
+        stroke="grey"
+        stroke-width="4"
+        fill="transparent"
+        r="28"
+        cx="30"
+        cy="30"
+      />
     </svg>
 
     <script>
+      document.documentElement.style.overflow = "auto";
+      document.body.style.overflow = "auto";
 
-        document.documentElement.style.overflow = 'auto';
-document.body.style.overflow = 'auto';
-
-        
-        function sendFeed() {
-            alert('Email sent successfully!');
-        }
+      function sendFeed() {
+        alert("Email sent successfully!");
+      }
     </script>
 
     <script>
-        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        let circle = document.querySelector(".progress-ring__circle");
-        let radius = circle.r.baseVal.value;
-        let circumference = 2 * Math.PI * radius;
+      let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      let circle = document.querySelector(".progress-ring__circle");
+      let radius = circle.r.baseVal.value;
+      let circumference = 2 * Math.PI * radius;
 
-        circle.style.strokeDasharray = `${circumference} ${circumference}`;
-        circle.style.strokeDashoffset = circumference;
+      circle.style.strokeDasharray = `${circumference} ${circumference}`;
+      circle.style.strokeDashoffset = circumference;
 
-        window.onscroll = function () {
-            scrollFunction();
-            updateProgress();
-        };
+      window.onscroll = function () {
+        scrollFunction();
+        updateProgress();
+      };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      function updateProgress() {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        let docHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        let scrollPercent = scrollTop / docHeight;
+        let offset = circumference - scrollPercent * circumference;
+        circle.style.strokeDashoffset = offset;
+      }
+
+      scrollToTopBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        topFunction();
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+      const sections = document.querySelectorAll("section");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
             }
+          });
+        },
+        {
+          threshold: 0.1,
         }
+      );
 
-        function topFunction() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        function updateProgress() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrollPercent = scrollTop / docHeight;
-            let offset = circumference - (scrollPercent * circumference);
-            circle.style.strokeDashoffset = offset;
-        }
-
-        scrollToTopBtn.addEventListener("click", function (event) {
-            event.preventDefault();
-            topFunction();
-        });
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
     </script>
 
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        const sections = document.querySelectorAll('section');
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "yash.223234108@vcet.edu.in",
+          Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+          To: "itsamanyadav18@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "This is the subject",
+          Body:
+            "Name:" +
+            document.getElementById("name").value +
+            "<br> Email:" +
+            document.getElementById("email").value +
+            "<br> Message:" +
+            document.getElementById("msg").value,
+        }).then((message) =>
+          alert("Message sent successsfully. We will get back to you soon.")
+        );
+      }
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "yash.223234108@vcet.edu.in",
-                Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
-                To: 'itsamanyadav18@gmail.com',
-                From: document.getElementById('email').value,
-                Subject: "This is the subject",
-                Body: "Name:" + document.getElementById("name").value +
-                    "<br> Email:" + document.getElementById("email").value +
-                    "<br> Message:" + document.getElementById("msg").value
-            }).then(
-                message => alert("Message sent successsfully. We will get back to you soon.")
-            );
-        }
-
-        function sendFeed() {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "yash.223234108@vcet.edu.in",
-                Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
-                To: 'itsamanyadav18@gmail.com',
-                From: document.getElementById('email').value,
-                Subject: "This is the subject",
-                Body: "Name:" + document.getElementById("name").value +
-                    "<br> Email:" + document.getElementById("email").value +
-                    "<br> Message:" + document.getElementById("msg").value
-            }).then(
-                message => alert("Feedback sent successsfully")
-            );
-        }
+      function sendFeed() {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "yash.223234108@vcet.edu.in",
+          Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+          To: "itsamanyadav18@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "This is the subject",
+          Body:
+            "Name:" +
+            document.getElementById("name").value +
+            "<br> Email:" +
+            document.getElementById("email").value +
+            "<br> Message:" +
+            document.getElementById("msg").value,
+        }).then((message) => alert("Feedback sent successsfully"));
+      }
     </script>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -532,57 +587,56 @@ document.body.style.overflow = 'auto';
     <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
-        window.botpressWebChat.init({
-            "composerPlaceholder": "Open Source Village",
-            "botConversationDescription": "This chatbot is for the community",
-            "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-            "messagingUrl": "https://messaging.botpress.cloud",
-            "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
-            "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
-            "lazySocket": true,
-            "themeName": "prism",
-            "frontendVersion": "v1",
-            "showPoweredBy": true,
-            "theme": "prism",
-            "themeColor": "#2563eb",
-            "allowedOrigins": []
-        });
+      window.botpressWebChat.init({
+        composerPlaceholder: "Open Source Village",
+        botConversationDescription: "This chatbot is for the community",
+        botId: "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+        webhookId: "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+        lazySocket: true,
+        themeName: "prism",
+        frontendVersion: "v1",
+        showPoweredBy: true,
+        theme: "prism",
+        themeColor: "#2563eb",
+        allowedOrigins: [],
+      });
     </script>
 
     <!-- swiper JS -->
     <script src="js/swiper-bundle.min.js"></script>
     <script>
-        /*=============== SWIPER JS ===============*/
-        let swiperCards = new Swiper(".card__content", {
-            loop: true,
-            spaceBetween: 52,
-            grabCursor: true,
+      /*=============== SWIPER JS ===============*/
+      let swiperCards = new Swiper(".card__content", {
+        loop: true,
+        spaceBetween: 52,
+        grabCursor: true,
 
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                dynamicBullets: true,
-            },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
 
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
 
-            breakpoints: {
-                600: {
-                    slidesPerView: 2,
-                },
-                968: {
-                    slidesPerView: 3,
-                },
-            },
-        });
+        breakpoints: {
+          600: {
+            slidesPerView: 2,
+          },
+          968: {
+            slidesPerView: 3,
+          },
+        },
+      });
     </script>
 
     <script src="./footer/footer.js"></script>
     <script src="trail.js"></script>
-</body>
-
+  </body>
 </html>
