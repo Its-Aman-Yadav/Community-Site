@@ -2074,6 +2074,9 @@ body.dark-mode .btn-custom::before {
   flex-direction: row;
   margin-right: 60px;
 }
+.text1 h5{
+  color:#131212;
+}
 
 .last-text h3 {
   color: #c8ba00;

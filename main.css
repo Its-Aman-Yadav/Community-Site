@@ -263,12 +263,12 @@ ul li {
 }
 
 .text1 {
-  margin: 20px;
+  /* margin: 20px; */
   animation: fadeInUp 1s 1s forwards;
 }
 
 .text1 h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #e8701f;
   margin-bottom: 10px;
   animation: counterAnim 2s 1.5s forwards;
@@ -276,7 +276,7 @@ ul li {
 
 .text1 h5 {
   font-size: 2rem;
-  color: #ffffff; /*White color for text*/
+  color: #141414; /*White color for text*/
 }
 
 /* Animations */
