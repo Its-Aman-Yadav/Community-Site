@@ -38,11 +38,15 @@ body {
 
 #contact .form-control {
   background-color: rgba(255, 248, 220, 0.578);
-  border: 2px solid #e0e0e0;
+  border: 2px solid #ffc48c;
   border-radius: 18px;
   font-size: 18px;
   margin-bottom: 16px;
   transition: all 0.4s ease-in-out;
+}
+
+body.dark-mode #contact .form-control{
+  border: 2px solid #bbe0ff;
 }
 
 #contact .form-control:hover {
@@ -773,6 +777,7 @@ h2 {
   line-height: 1.5;
   color: black;
   margin: 20px 0;
+  text-align: left;
 }
 
 /* Styles for larger screens */
@@ -2320,20 +2325,26 @@ body.dark-mode .btn-custom::before {
 .form-control {
   background-color: #fcf8e6db;
   color: black;
-  border-color: rgb(134, 134, 134);
+  border-color: rgb(206, 206, 206);
   margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
   border-radius: 5px;
-  width: 100%;
+  width: 92%;
 }
 
 .form-control:focus {
   border-color: #f7b801;
   box-shadow: 0 0 10px #f7b801 !important;
 }
+body.dark-mode .form-control:focus{
+  border-color: #b896ff !important;
+  box-shadow: 0 0 10px rgba(179, 158, 255, 0.5) !important;
+}
 
 .Cbtn {
-  background-color: transparent;
+  background-color: #f7b801;
   border: 1px solid #ffffff;
   border-radius: 35px;
   color: #ffffff;
@@ -2352,17 +2363,23 @@ body.dark-mode .btn-custom::before {
   touch-action: manipulation;
   width: 50%;
 }
-
+body.dark-mode .Cbtn{
+  background-color: #0056b3;
+}
 .Cbtn:disabled {
   pointer-events: none;
 }
 
 .Cbtn:hover {
   color: white;
-  background-color: #f7b801;
+
+  background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
   border-color: #ffd100;
+}
+body.dark-mode .Cbtn:hover{
+  border-color: #b6bcff;
 }
 
 @media (max-width: 751px) {
@@ -2399,10 +2416,21 @@ body.dark-mode .btn-custom::before {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: linear-gradient(rgba(255, 255, 255, 0.821), #f1c21aa9);
+  padding: 20px;
+  backdrop-filter: blur(3px);
+}
+
+body.dark-mode .contactSection {
+  background:linear-gradient(rgba(202, 202, 202, 0.736), #131212);
 }
 
 .Contactsec {
   width: 100%;
+}
+
+.Contactsec h2{
+  font-size:1.5rem !important;
 }
 
 .text-center {
@@ -2618,9 +2646,11 @@ h2::after {
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%;
+  width: 92%;
   padding: 12px;
-  margin: 8px 0 20px 0;
+  margin: 8px auto;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   border-radius: 25px;
   box-sizing: border-box;
@@ -3202,11 +3232,20 @@ input[type="text"]:focus {
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
   color:black !important;
 }
+body.dark-mode input[type="text"]:focus {
+  border-color: #b896ff !important;
+  box-shadow: 0 0 10px rgba(179, 158, 255, 0.5) !important;
+}
 input[type="email"]:focus {
   outline: none;
   border-color: rgba(255, 201, 8, 0.5);
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
   color:black !important;
+}
+
+body.dark-mode input[type="email"]:focus {
+  border-color: #b896ff !important;
+  box-shadow: 0 0 10px rgba(179, 158, 255, 0.5) !important;
 }
 textarea:focus {
   outline: none;
@@ -3214,6 +3253,10 @@ textarea:focus {
   box-shadow: 0 0 10px rgba(255, 201, 8, 0.5);
   color:black !important;
 
+}
+body.dark-mode textarea:focus {
+  border-color: #b896ff !important;
+  box-shadow: 0 0 10px rgba(179, 158, 255, 0.5) !important;
 }
 .feedback-label {
   font-weight: bold;
