@@ -637,6 +637,10 @@ position: relative;
 /* width: 100%; Adjust width as needed */
 }
 
+body.dark-mode .modal-header{
+  background-color: #8663d2;
+}
+
 .modal-content {
 background: linear-gradient( gold, rgb(255, 255, 255));
 border-radius: 1em;
@@ -646,7 +650,10 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 max-width: 600px;
 width: 100%;
 }
-
+body.dark-mode .modal-content{
+  background: linear-gradient( #4b29b3, rgb(0, 0, 0));
+  color:white;
+}
 .modal-body h1 {
 font-weight: 900;
 font-size: 2em;
@@ -654,6 +661,12 @@ text-transform: uppercase;
 color: #4B3E2A; /* Dark brown color */
 text-align: center;
 margin-bottom: 1em;
+}
+body.dark-mode .modal-title{
+  color:#b6e9ff;
+}
+body.dark-mode .modal-body h1{
+  color:white;
 }
 
 .modal-title {
@@ -685,6 +698,7 @@ background-color: #D3D3D3; /* Light grey background for image */
 
 a.pre-order-btn {
 color: #000;
+cursor: pointer;
 background-color: gold;
 border-radius: 1em;
 padding: 1em;
@@ -696,11 +710,19 @@ font-weight: 660;
 text-align: center;
 transition: background-color 0.3s, color 0.3s;
 }
-
+body.dark-mode a.pre-order-btn {
+  background-color: #8262ff;
+}
 a.pre-order-btn:hover {
 background-color: #e8701f; /* Dark brown color on hover */
 text-decoration: none;
 color: gold;
+}
+
+body.dark-mode a.pre-order-btn:hover {
+  background-color: #8651bb; /* Dark brown color on hover */
+text-decoration: none;
+color: rgb(231, 231, 231);
 }
 
 .modal-footer {
