@@ -15,7 +15,8 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background: #fae69f;
+        background: url("./images/Slide4.jpg") no-repeat center center fixed;
+        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,7 +24,7 @@
       }
 
       .container {
-        width: 100vw;
+        width: 80vw;
         height: 100vh;
         display: flex;
         align-items: center;
@@ -32,30 +33,67 @@
       }
 
       .card {
-        background: linear-gradient(white, #fae69f);
-        padding: 1rem;
-        border-radius: 5px;
-        border: 1px solid #bbb;
+        background: rgba(251, 190, 190, 0.4); /* semi-transparent background */
+        padding: 2rem;
+        border-radius: 10px;
+        border: 1px solid #080707;
+        box-shadow: 0px 1px 4px 2px #eb4c0292;
+        width: 70%;
+        max-width: 1200px;
+        margin-top: 100px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-details {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        box-shadow: 0px 1px 4px 2px #fe540592;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+
+      .contact-details div {
+        background: rgba(253, 35, 2, 0.8);
+        border: 1px solid #080707;
+        border-radius: 10px;
+        padding: 10px;
+        width: 30%;
+        text-align: center;
+      }
+
+      .contact-details div:hover {
+        background: rgba(249, 156, 145, 0.8);
+        box-shadow: 0px 1px 4px 4px #0e050192;
+      }
+
+      .main-content {
+        display: flex;
+        justify-content: space-between;
       }
 
       .left {
-        width: 25vw;
-        padding: 0px;
-        height: 70%;
-        overflow: hidden;
-        object-fit: cover;
-        border-radius: 5px;
+        width: 30%;
       }
 
-      .right .contact {
-        display: flex;
-        gap: 1rem;
-        margin-right: 1rem;
+      .left img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-top: 80px;
+      }
+
+      .right {
+        width: 65%;
+        padding-left: 40px;
+      }
+
+      .form-container {
+        width: 100%;
+        font-size: 20px;
       }
 
       .form,
@@ -74,64 +112,82 @@
         border-bottom: 2px solid #000;
         padding: 10px 0;
         margin: 5px 0;
+        color: white;
       }
 
       .form input:hover,
       textarea:hover {
-        border-bottom: 2px solid #f25;
+        border-bottom: 2px solid rgb(248, 243, 245);
       }
 
       .usersubmit input {
-        background-color: #f25;
+        background-color: rgb(245, 53, 53);
         color: white;
         font-weight: bold;
         border-radius: 5px;
         border: none;
-        width: min-content;
+        width: 50%;
         padding: 10px;
         margin-bottom: 0;
         cursor: pointer;
         transition: 0.3s;
+        margin-left: 60px;
       }
 
       .usersubmit input:hover {
-        background-color: rgb(199, 5, 21);
+        background-color: rgb(246, 146, 154);
+        color: black;
+        border: 2px solid black;
       }
 
-      .address {
+      .icons {
         display: flex;
-        flex-direction: column;
-        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 50px;
       }
 
-      .address p {
-        color: #f25;
-        margin-top: 5px;
-        font-size: 14px;
+      .icons .icon i {
+        margin-top: 15px;
+        font-size: 30px;
+        transition: all 0.9s ease;
+        color: white;
       }
 
-      .address h4 {
-        margin-bottom: 0px;
+      .icons .icon:hover i {
+        transform: scale(1.2);
       }
 
-      i {
-        color: rgb(117, 9, 34);
+      .icons .icon:hover .fab.fa-linkedin {
+        color: #0077b5;
       }
 
-      i:hover {
-        cursor: pointer;
-        color: #f25 !important;
+      .icons .icon:hover .fab.fa-github {
+        color: #060606;
       }
 
-      h4 {
-        margin-bottom: 5px;
+      .icons .icon:hover .fab.fa-instagram {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        background-clip: text;
+        border-radius: 20%;
+        transform: scale(1.5);
+        color: transparent;
       }
 
-      .left img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 5px;
+      .icons .icon:hover .fab.fa-twitter {
+        color: #090e11;
+      }
+
+      .icons .icon:hover .fas.fa-envelope {
+        color: #1ac31d;
       }
 
       @media screen and (max-width: 700px) {
@@ -143,17 +199,12 @@
 
         .left {
           width: 100%;
-          height: 30vh;
+          height: auto;
         }
 
         .right {
           width: 100%;
           padding: 0 1rem;
-        }
-
-        .contact {
-          flex-direction: column;
-          align-items: center;
         }
       }
 
@@ -165,7 +216,7 @@
 
         .left {
           width: 100%;
-          height: 25vh;
+          height: auto;
         }
 
         .right {
@@ -181,10 +232,6 @@
         .usersubmit input {
           width: 100%;
           padding: 0.5rem;
-        }
-
-        .address {
-          gap: 1rem;
         }
       }
 
@@ -200,12 +247,7 @@
 
         .left {
           width: 100%;
-          height: 20vh;
-        }
-
-        .contact {
-          flex-direction: column;
-          align-items: center;
+          height: auto;
         }
 
         .form input,
@@ -216,10 +258,6 @@
         .usersubmit input {
           width: 100%;
         }
-
-        .address {
-          gap: 1rem;
-        }
       }
 
       .back-button {
@@ -229,7 +267,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
-        color: rgb(86, 2, 22);
+        color: rgb(250, 244, 245);
         font-size: 16px;
         font-weight: bold;
       }
@@ -240,13 +278,14 @@
       }
 
       .back-button:hover {
-        color: #ffffff;
+        color: #f5c58d;
       }
+
       .theme-toggle {
         position: fixed;
         top: 26px;
         right: 30px;
-        color: rgb(86, 2, 22);
+        color: rgb(86, 23, 2);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -254,58 +293,72 @@
         border-radius: 50%;
         width: 40px;
         height: 40px;
-
         transition: background-color 0.3s, box-shadow 0.3s;
         z-index: 1000;
       }
 
       .theme-toggle i {
         font-size: 20px;
-        color: rgb(3, 3, 38);
+        color: yellow;
       }
 
       .theme-toggle .fa-moon {
         display: none;
         color: rgb(255, 255, 255);
       }
+
       body.dark-theme {
         background-color: #180e0e;
         color: #000000;
       }
+
       body.dark-theme .back-button {
         color: #ffffff;
       }
+
       body.dark-theme .theme-toggle .fa-sun {
         display: none;
       }
+
       body.dark-theme .theme-toggle .fa-moon {
         display: inline;
       }
+
       body.dark-theme .card {
-        background: linear-gradient(#000000, #252323);
-        box-shadow: 0px 1px 4px 2px #ffffff92;
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0px 1px 4px 2px #f5f1f192;
       }
+
       body.dark-theme .right h2 {
         color: #ffffff;
       }
+
+      body.dark-theme .header {
+        color: white;
+      }
+
+      body.dark-theme .contact-details {
+        color: white;
+      }
+
+      /* 
       body.dark-theme .form input,
       textarea {
         color: #fff;
         border-bottom: 2px solid rgb(255, 255, 255);
       }
+
       body.dark-theme .form input:hover,
       textarea:hover {
         border-bottom: 2px solid #f25;
-      }
+      } */
+
       body.dark-theme .address h4 {
         color: #fff;
       }
+
       body.dark-theme .social i {
         color: #ffffff;
-      }
-      .social{
-        display: flex;
-    gap: 1.5rem;
       }
     </style>
   </head>
@@ -325,195 +378,111 @@
         themeName: "prism",
         botName: "Open Source Village",
         avatarUrl:
-          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
-        stylesheet:
-          "https://webchat-styler-css.botpress.app/prod/328bf234-c9e7-4f98-9c94-69f1a0877b98/v99808/style.css",
-        frontendVersion: "v1",
-        useSessionStorage: true,
-        enableConversationDeletion: true,
-        theme: "prism",
-        themeColor: "#2563eb",
-        allowedOrigins: [],
-      });
-    </script>
-    <!-- dark mode -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const themeToggle = document.querySelector(".theme-toggle");
-        const body = document.body;
-
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme && savedTheme == "dark") {
-          body.classList.add("dark-theme");
-        }
-
-        themeToggle.addEventListener("click", function () {
-          body.classList.toggle("dark-theme");
-
-          if (body.classList.contains("dark-theme")) {
-            localStorage.setItem("theme", "dark");
-          } else {
-            localStorage.setItem("theme", "light");
-          }
-        });
+          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1689842743944?e=1695254400&v=beta&t=0J9c08n_S-BNwxd7IMsWNV97jbhRmb5eRjfSBg6afkU",
       });
     </script>
 
-    <a href="javascript:history.back()" class="back-button">
-      <i class="fas fa-arrow-left"></i> Go Back
+    <a class="back-button" href="index.html">
+      <i class="fas fa-arrow-left"></i>
     </a>
-    <div class="theme-toggle">
-      <i class="fas fa-sun"></i>
-      <i class="fas fa-moon"></i>
-    </div>
-
     <div class="container">
       <div class="card">
-        <div class="left">
-          <img
-            src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-5795988-4849052.png?f=webp"
-          />
+        <div class="theme-toggle" id="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
         </div>
-        <div class="right">
-          <h2>Contact Us</h2>
-          <div class="contact">
+        <div class="header">
+          <h1>Contact Us</h1>
+        </div>
+        <div class="contact-details">
+          <div>
+            <h3>Email</h3>
+            <p>contact@yourcompany.com</p>
+          </div>
+          <div>
+            <h3>Phone</h3>
+            <p>(123) 456-7890</p>
+          </div>
+          <div>
+            <h3>Address</h3>
+            <p>1234 Main St,<br />City, Country</p>
+          </div>
+        </div>
+        <div class="main-content">
+          <div class="left">
+            <img
+              src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-5795988-4849052.png?f=webp"
+              alt="Contact Image"
+            />
+            <div class="icons">
+              <div class="icon">
+                <a href="https://www.linkedin.com/" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+              <div class="icon">
+                <a href="https://github.com/" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+              <div class="icon">
+                <a href="https://instagram.com/" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+              <div class="icon">
+                <a href="https://twitter.com/" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+              <div class="icon">
+                <a href="mailto:contact@yourcompany.com"
+                  ><i class="fas fa-envelope"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <h2>Get in Touch</h2>
             <div class="form-container">
-              <form
-                class="form"
-                form
-                id="contact-form"
-                action="contact us.html"
-                method="POST"
-                onsubmit="sendEmail(); resetForm(); return false;"
-              >
-                <div class="username">
-                  <input
-                    type="text"
-                    id="inputField"
-                    placeholder="Enter your Name"
-                  />
-                </div>
-                <div class="useremail">
-                  <input
-                    type="email"
-                    od="inputField"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-                <div class="usermessage">
-                  <textarea
-                    placeholder="Enter your message"
-                    required
-                    id="textAreaField"
-                  ></textarea>
-                </div>
+              <form class="form" action="#" method="post">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                /><br />
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                /><br />
+                <label for="message">Message:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your message"
+                  required
+                ></textarea
+                ><br />
                 <div class="usersubmit">
-                  <input type="submit" value="Contact Us" />
+                  <input type="submit" value="Submit" />
                 </div>
               </form>
-            </div>
-            <div class="address">
-              <div class="email">
-                <h4>Contact</h4>
-                <p>communitysite@gmail.com</p>
-              </div>
-              <div class="location">
-                <h4>Based in</h4>
-                <p>Los Angeles, California</p>
-              </div>
-              <div class="social">
-                <span
-                  ><a href="#"><i class="fab fa-facebook"></i></a
-                ></span>
-                <span
-                  ><a href="#" target="_blank"
-                    ><i class="fab fa-instagram"></i></a
-                ></span>
-                <span
-                  ><a href="#" target="_blank"><i class="fab fa-twitter"></i></a
-                ></span>
-                <span
-                  ><a href="" target="_blank" class="href"
-                    ><i class="fab fa-linkedin"></i></a
-                ></span>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="formcontainer">
-        <div class="section-title">
-            <h1>Get in Touch</h1>
-            <p>If you have any query or for collaboration</p>
-        </div>
-        <div class="contact-form">
-            <form id="contact-form" action="http://127.0.0.1:5500/send-email" method="POST" onsubmit="sendEmail(); resetForm(); return false;">
-                <div>
-                    <input name="name" id="name" type="text" class="input-focus" placeholder="Your Name" required>
-                </div>
-                <div>
-                    <input name="email" type="email" id="email" class="input-focus" placeholder="Your Email" required>
-                </div>
-                <div>
-                    <textarea name="message" class="input-focus" id="msg" placeholder="Message" rows="6" required></textarea>
-                </div>
-                <div>
-                    <input name="submit" type="submit" class="submit" id="contact-submit" value="SEND MESSAGE">
-                </div>
-            </form>
-        </div>
-    </div> -->
     <script>
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  // Show popup message
-  const popup = document.createElement('div');
-  popup.textContent = "We will connect with you soon";
-  popup.style.position = 'fixed';
-  popup.style.top = '100px';
-  popup.style.right = '10px';
-  popup.style.backgroundColor = 'green';
-  popup.style.color = 'white';
-  popup.style.padding = '10px';
-  popup.style.borderRadius = '5px';
-  popup.style.zIndex = '1000';
-  document.body.appendChild(popup);
-
-  // Remove popup after 3 seconds
-  setTimeout(() => {
-    popup.remove();
-  }, 3000);
-
-  // Call functions for sending email and resetting form
-  sendEmail();
-  resetForm();
-});
-
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const inputField = document.getElementById("inputField");
-        const textAreaField = document.getElementById("textAreaField");
-
-        inputField.addEventListener("input", function () {
-          if (this.value.length > 0) {
-            this.classList.add("filled");
-          } else {
-            this.classList.remove("filled");
-          }
-        });
-
-        textAreaField.addEventListener("input", function () {
-          if (this.value.length > 0) {
-            this.classList.add("filled");
-          } else {
-            this.classList.remove("filled");
-          }
-        });
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
       });
     </script>
   </body>
