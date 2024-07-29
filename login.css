@@ -386,3 +386,9 @@ input {
   height: 100%;
   fill: white;
 }
+
+@media only screen and (max-width: 1032px) {
+  .container {
+    width: 80%;
+  }
+}
