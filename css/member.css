@@ -144,7 +144,7 @@ section{
 }
 
 .contact{
-  background: linear-gradient(white, rgb(247, 210, 62));
+ 
 }
  
   .submit{
@@ -316,4 +316,411 @@ section{
 }
 #cnt{
   margin-bottom: 2rem;
+}
+
+
+.contact {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: auto;
+  background: linear-gradient(white, rgb(247, 210, 62));
+  border-radius: 30px;
+  border: 2px solid orangered;
+  margin-bottom: 50px;
+}
+
+body.dark-mode .contact{
+  background: linear-gradient(grey, #1b1616);
+  border: 2px solid #0099ff;
+}
+
+.contact-intro h2 {
+  color: #f85008;
+  text-align: center;
+  font-size: 100px;
+}
+
+body.dark-mode .contact-intro h2{
+  color:#79c2f3;
+}
+
+.contact-intro {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-intro p {
+  margin-bottom: 30px;
+  color: black;
+}
+
+
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-detail {
+  padding: 20px;
+  background-color: #fcfe88;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  flex: 1;
+  text-align: center;
+  border: 1px solid orangered;
+}
+
+body.dark-mode .contact-detail{
+  background-color: #2c2c2c;
+  border:1px solid #79c2f3;
+}
+
+.contact-detail:hover{
+background-color: rgb(255, 210, 76);
+box-shadow: 0 0 10px rgba(246, 63, 7, 0.9);
+border: 2px solid orangered;
+}
+
+body.dark-mode .contact-detail:hover{
+  background-color: #2c7071;
+  box-shadow: 0 0 10px rgba(197, 245, 255, 0.9);
+  border: 2px solid rgb(0, 195, 255);
+}
+
+.contact-detail p {
+  margin: 0;
+}
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgb(255, 136, 0,0.8);
+}
+
+body.dark-mode .contact-form{
+  background-color: #36353d;
+}
+
+.form-group-inline {
+  display: flex;
+  gap: 25px;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background-color: #fbf9b4;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: 1.5px solid black;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.contact-form button {
+  padding: 10px 15px;
+  width: 40%;
+  background-color: #fd2408;
+  color: white;
+  border:1px solid white;
+  cursor: pointer;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-form button:hover {
+  background-color: rgb(251, 244, 112);
+  color: black;
+  border: 2px solid black;
+}
+
+#success-message {
+          display: none;
+          color: green;
+          text-align: center;
+          margin-top: 5px;
+          width: 70%;
+          margin: 0 auto;
+      }
+
+
+    .scrollToTopBtn {
+      /* background-color: #FFE70F; */
+      background-image: radial-gradient(#f3bf8c, #ee7f10);
+      color: #fff;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-decoration: none;
+      border: none;
+      line-height: 50px;
+      /* Center text vertically */
+      transition: background-color 0.3s ease;
+      position: fixed;
+      bottom: 106px;
+      right: 43px;
+      display: none;
+      /* Hidden by default */
+      z-index: 1000;
+      margin-bottom: 10px;
+    }
+    
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #f1c11a;
+      background-image: -webkit-linear-gradient(45deg,
+          rgba(255, 255, 255, .2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, .2) 50%,
+          rgba(255, 255, 255, .2) 75%,
+          transparent 75%,
+          transparent);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #d1a10a;
+    }
+
+    .scrollToTopBtn:hover {
+      background-color: #484848;
+    }
+  
+    .progress-ring {
+      position: fixed;
+      bottom: 101px;
+      margin-bottom: 10px;
+      right: 38px;
+      transform: rotate(-90deg);
+      z-index: 999;
+      /* Just below the button */
+      margin-bottom: 10px;
+    }
+  
+    .progress-ring__circle {
+      transition: 0.35s stroke-dasharray;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+
+    @media (max-width: 768px) 
+    {
+      .benefits ul 
+      {
+        display: block;
+      }
+      .benefits li 
+      {
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) 
+      {
+        .h2
+        {
+          margin-left:30px;
+        }
+        .steplist 
+        {
+          display: block;
+          margin-left: 30px;
+        }
+        .step-item 
+        {
+         margin-bottom: 30px;
+        }
+      }
+      @media (max-width: 767px) 
+      {
+        .theme-switch,
+        #checkbox 
+        {
+          opacity: 0;
+          pointer-events: none; 
+        }
+
+        #image 
+        {
+          opacity: 0;
+          pointer-events: none; 
+        }
+        .logo-text {
+          font-size: 20px;
+          display: flex;
+          justify-content: flex-start; 
+          white-space: nowrap;
+          margin-left: -80px;
+        }
+    }
+  } 
+  body.dark-mode {
+background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+  color: #fff;
+}
+body.dark-mode .main-content{
+background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .main-content p{
+color: white;
+}
+body.dark-mode .main-content h1{
+color: white;
+}
+body.dark-mode .cards p{
+color: black;
+}
+body.dark-mode .card-2{
+background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+  color: #fff;
+}
+body.dark-mode .items {
+background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+  color: white;
+}
+body.dark-mode .items p{
+color: white;
+}
+body.dark-mode .general{
+background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+  color: #fff;
+}
+/* Dark Mode Styles */
+
+body.dark-mode .contact1 {
+background-color: #2c2c2c !important; /* Darker background color */
+color: #f5f5f5; /* Lighter text color for contrast */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Enhanced shadow for better depth */
+border-radius: 8px; /* Rounded corners for a smoother look */
+padding: 20px; /* Added padding for better spacing */
+}
+
+body.dark-mode .contact-header h2 {
+color: #ffffff; /* Bright white heading color */
+margin-bottom: 10px; /* Space below heading */
+}
+
+body.dark-mode .contact-header p {
+color: #dcdcdc; /* Softer paragraph text color */
+margin-bottom: 20px; /* Space below paragraph */
+}
+
+body.dark-mode .form-group label {
+color: #dcdcdc; /* Softer label text color */
+font-weight: bold; /* Bolder label text for emphasis */
+margin-bottom: 5px; /* Space below label */
+display: block; /* Ensure label is block-level */
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+background-color: #cdf3f7; /* Slightly lighter background for inputs */
+color: #ffffff; /* Bright white text color for inputs */
+border: 1px solid #5e5e5e; /* Subtle border color */
+border-radius: 4px; /* Rounded corners for inputs */
+padding: 10px; /* Added padding for better input field spacing */
+}
+
+body.dark-mode .form-group input:hover,
+body.dark-mode .form-group textarea:hover {
+border-color: #0099ff; /* Brighter accent color for hover state */
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+border-color: #0099ff; /* Brighter accent color for focus state */
+box-shadow: 0 0 8px rgba(0, 153, 255, 0.8); /* Enhanced shadow for focus state */
+outline: none; /* Remove default outline */
+}
+
+body.dark-mode form button {
+background: #0099ff; /* Brighter accent color for button background */
+color: #ffffff; /* Bright white text color for button */
+border: none; /* Remove default border */
+border-radius: 4px; /* Rounded corners for button */
+padding: 10px 20px; /* Padding for button */
+cursor: pointer; /* Pointer cursor on hover */
+transition: background 0.3s ease; /* Smooth transition for hover state */
+}
+
+body.dark-mode form button:hover {
+background: #007acc; /* Slightly darker accent color for hover state */
+} 
+
+body.dark-mode .benefits li{
+background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .step-item{
+background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+}
+body.dark-mode .contact-form-container{
+background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode .introduction{
+background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode .benefits{
+background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode .contact1{
+background: rgba(74, 74, 87, 0.979);
+}
+body.dark-mode main h2{
+color:white;
+}
+body.dark-mode p{
+color: #dedbdb;
+}
+body.dark-mode .form-group label{
+color: #dedbdb;
+}
+main h2{
+color:black;
 }
