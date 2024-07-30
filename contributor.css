@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff; 
-  background-color: linear-gradient(#f5d244, #f5a623);
+  background-color: linear-gradient(#f5d244, #f5a623) !important;
 }
 
 .header-hero {
@@ -68,6 +68,8 @@ body {
 
 .text-center {
   text-align: center;
+  text-shadow: rgb(255, 140, 0) 1px 1px 2px;
+  color: white;
 }
 
 .text-3xl {
@@ -95,14 +97,22 @@ body {
 }
 
 .gap-8 {
+
+
   gap: 2rem;
 }
 
+
 .contributors {
-  padding-top: 10px; 
+  /* padding-top: 10px; */
+
 }
 
 .contributor-card {
+
+
+  position: relative;
+  overflow: hidden;
   width: 100%;
   max-width: calc(25% - 16px); 
   display: flex;
@@ -113,27 +123,100 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  text-decoration: none !important;
   color: inherit;
   margin-bottom: 5px; 
+  z-index: 0;
+  backface-visibility: hidden;
+
+}
+
+
+
+.contributor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(143deg, #ffb133 50%, #fee582 50%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translate(-100%, -100%);
+
+  opacity: 0;
+  z-index: -1;
+}
+
+
+/* background-color: linear-gradient(#f5a623, #f5a623); */
+
+.contributor-card:hover::before {
+  
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .contributor-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+  transform: scale(1.02) rotateX(360deg) !important;
+
+  box-shadow: 1px 1px 5px rgba(255, 247, 0, 0.81);
+
 }
+
 
 .contributor-card img {
   width: 96px;
   height: 96px;
+
   border-radius: 50%;
   object-fit: cover;
+
   margin-bottom: 16px;
 }
 
+/* username */
+
+
 .text-lg {
-  font-size: 1.125rem;
+  font-size: 17px !important;
+  color: #0057ed !important;
+  position: relative;
+  
+  z-index: 1;
+  transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+
+
+.contributor-card:hover .text-lg  {
+  text-shadow: 1px 1px 2px rgb(187, 207, 224), 0 0 0.6em rgb(255, 73, 249), 0 0 1em rgb(250, 134, 246);
+  color: white !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+
+
+
+.contributor-card:hover .text-gray-700 {
+  text-shadow: 1px 1px 2px rgb(0, 136, 255), 0 0 0.2em rgb(255, 73, 249), 0 0 0.8em rgb(250, 134, 246);
+  color: rgb(32, 32, 32);
+  font-weight: 500;
+
+}
+
+
+
+
+/* Contributors, github */
+.text-gray-700 {  
+  position: relative;
+  z-index: 1;
+  transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding: 0;
 }
 
 .text-gray-900 {
@@ -146,10 +229,6 @@ body {
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.text-gray-700 {
-  color: #4a5568;
 }
 
 .text-gray-400 {
@@ -337,13 +416,12 @@ footer a:hover {
 }
 
 .contributor-card h3 {
-  font-size: 1.5rem;
-  margin-top: 10px;
+  /* font-size: 1.5rem; */
 }
 
 .contributor-card p {
   font-size: 1rem;
-  margin: 10px 0;
+  color: rgb(99, 99, 99);
 }
 
 /* Dark Mode Styles for Contributor Card */
