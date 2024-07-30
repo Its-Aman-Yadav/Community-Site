@@ -65,18 +65,180 @@
    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 </head>
 
-
-
+  
+<style>
+   /* CSS login modal   */
+  .popup {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .popup-content {
+      background: linear-gradient(138deg, #fffee0, #fffb90);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      width: 90%;
+      max-width: 530px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: slideIn 0.6s ease-in-out;
+      transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  }
+  
+  .popup-content:hover {
+      transform: rotate(-3deg) scale(1.05);
+      background: linear-gradient(138deg, #fffb90, #fffee0);
+    border-radius: 6px;
+    
+  }
+  
+  
+  
+  .popup-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+  }
+  
+  .popup-header img {
+      width: 120px;
+      
+      height: 120px;
+  }
+  
+  .popup-header h2 {
+      margin: 0;
+      font-size: 30px;
+      /* text-shadow: 1px 1px 2px #646464, 0 0 1em #fdbafff7, 0 0 0.2em #fdbafff7; */
+      color: rgb(255, 136, 0);
+      font-weight: 900;
+  }
+  
+  .popup h3 {
+      font-size: 24px;
+      margin-top: 19px;
+      margin-bottom: 10px;
+      color: #444;
+      animation: textPop 0.7s ease-in-out infinite;
+      font-weight: 500;
+  }
+  
+  .popup p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 25px;
+  }
+  
+  .btn {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      font-size: 16px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 25px;
+      cursor: pointer;
+      color: #999;
+      transition: color 0.3s;
+  }
+  
+  .close-btn:hover {
+      color: #666;
+  }
+  
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  
+  @keyframes slideIn {
+      from {
+          transform: translateY(-50%);
+      }
+      to {
+          transform: translateY(0);
+      }
+  }
+  
+  @keyframes textPop {
+      0%, 100% {
+          color: #444;
+      }
+      50% {
+          color: #ff4f23;
+          text-shadow: 0px 1px 3px #ffad98;
+      }
+  }
+  </style>
+  
 
 <body>
 
 
   <!-- login modal  -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="popup-header">
+            <img src="image.gif" alt="Open Source Village Logo" class="logo" > 
+            <h2>Open Source Village </h2>
 
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+        </div>
+        <h3>Start Your Journey Now!💡 </h3>
+        <p>If you don't have an account yet, register and start your journey🌐👥</p>
+        <button class="btn" onclick="window.location.href='login.html'">Login/Register ✉</button>
+    </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Show the popup when the page loads
+    document.getElementById('popup').style.display = 'flex';
+
+    // Automatically close the popup after 20 seconds
+    // setTimeout(closePopup, 20000);
+});
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+</script>
+
+  <!-- <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog"> -->
       <!-- Modal content-->
-      <div class="modal-content">
+      <!-- <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <div class="modal-header">
           
@@ -90,19 +252,19 @@
           <p>If you don't have an account yet, register and start your journey.</p>
           <a class="pre-order-btn" href="login.html">Login/Register</a>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer"> -->
           <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-        </div>
+        <!-- </div>
       </div>
   
     </div>
-  </div>
+  </div> -->
 
-  <script>
+  <!-- <script>
   $(window).ready(function(){        
    $('#myModal').modal('show');
     }); 
-  </script>
+  </script> -->
 
   <!-- Chatbot integration section -->
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
