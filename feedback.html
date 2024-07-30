@@ -1,446 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback</title>
-   
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Aman Yadav" />
-    <meta name="keywords"
-      content=", village community, collaboration, resource sharing, communication, transparency, collective decision-making, local projects, digital tools.">
-    <meta name="description"
-      content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
-    <meta name="language" content="English">
+    <meta
+      name="keywords"
+      content=", village community, collaboration, resource sharing, communication, transparency, collective decision-making, local projects, digital tools."
+    />
+    <meta
+      name="description"
+      content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools."
+    />
+    <meta name="language" content="English" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://community-site-theta.vercel.app/" />
-    <meta property="og:title" content="Open Source Village">
-    <meta name="og:description"
-      content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
-  
-    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <meta
+      property="og:url"
+      content="https://community-site-theta.vercel.app/"
+    />
+    <meta property="og:title" content="Open Source Village" />
+    <meta
+      name="og:description"
+      content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools."
+    />
+
+    <script
+      src="https://kit.fontawesome.com/90889e6878.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
-  <!-- Bootstrap JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <!-- stylesheets css -->
 
-
-    <link rel="stylesheet" href="feedback.css" class="rel">
+    <link rel="stylesheet" href="feedback.css" class="rel" />
     <!-- Bootstrap CSS -->
-     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- remixicon -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin=""> -->
-  
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  
-  
-  <link rel="stylesheet" href="css/animate.min.css">
-  <style>
-    body {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  background:linear-gradient(#ffcd38,#fffce7,#fffcfc,#fffef6,white,white);
-  color: #000; }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Poppins", sans-serif; }
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
-a {
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease; }
-  a, a:hover {
-    text-decoration: none !important; }
-
-.content {
-  padding: 7rem 0; }
-
-h2 {
-  font-size: 3.5rem;
-  font-weight: 700; }
-
-h3 {
-  font-size: 2rem;
-  font-weight: 700; }
-
-.form-control {
-  border: none;
-  border-bottom: 1px solid #d9d9d9;
-  padding-left: 0;
-  padding-right: 0;
-  border-radius: 0; }
-  .form-control:active, .form-control:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-color: #000; }
-
-.btn, .form-control {
-  height: 55px; }
-
-form.border-right {
-   }
-  @media (max-width: 991.98px) {
-    form.border-right {
-      padding-right: 0 !important;
-      border-right: none !important; } }
-
-label.error {
-  font-size: 12px;
-  color: red; }
-
-#message {
-  resize: vertical; }
-
-#form-message-warning, #form-message-success {
-  display: none; }
-
-#form-message-warning {
-  color: #B90B0B; }
-
-#form-message-success {
-  color: #55A44E;
-  font-size: 18px;
-  font-weight: bold; }
-
-.submitting {
-  float: left;
-  width: 100%;
-  padding: 10px 0;
-  display: none;
-  font-weight: bold;
-  font-size: 12px;
-  color: #000; }
-
-  .rowflex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  .rate-us {
-       margin-top: 13px;
-      display: block;
-      padding-left: 10px;
-      /* text-align: center; */
-      margin-bottom: 0px;
-      color: rgb(42, 40, 40) !important;
-      font-size: 17px;
-      font-weight: 500;
-    }
-    
-    .rating-container {
-     
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      font-size: 40px;
-      /* margin-bottom: 2px; */
-    }
-    
-    .rating-container button {
-      font-size: 30px;
-      border: none;
-      color: rgb(19, 3, 3);
-      background: none;
-      cursor: pointer;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    
-    .rating-container button.filled {
-      color: rgb(255, 94, 0); 
-      transform: scale(1.2);
-    }
-    
-    .rating-container button:hover {
-      transform: scale(1.3);
-    }
-    
-    @media (max-width: 600px) {
-      .feedback-form h2 
-      {
-          font-size: 1.4em;
-      }
-      .rating-container button 
-      {
-          font-size: 1.5em;
-      }
-      .feedback-wrapper
-      {
-        width: 90%;
-      }
-      .rating-container
-      {
-        font-size: 30px;
-      }
-    }
-
-    input::placeholder{
-        padding-left: 10px;
-    }
-    textarea::placeholder{
-        padding-left: 10px;
-    }
-    .popup {
-      position: fixed;
-      top: 0px;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      z-index: 1000;
-      background-color: rgba(0, 0, 0, 0.532);
-      display: flex;
-      justify-content: center;
-      align-items: center ;
-      flex-direction: column;
-    }
-    
-    .popup-icon {
-      justify-self: center;
-      display: inline-block;
-    }
-    .popup-content {
-      background: linear-gradient(to bottom, #ffffff, #ffbf00); 
-      padding:  20px;
-     
-      border-radius: 10px;
-      text-align: center;
-      height: 307px;
-    }
-    .popup-content h2 {
-      color: #d9822b;
-      font-weight: 600;
-      font-size: 19px;
-    }
-    .popup-content p {
-      font-size: 17px;
-      margin-bottom: 5px;
-      color: rgb(62, 62, 62);
-    }
-    .popup-button {
-      background-color:  rgb(0, 85, 138);
-      border: none;
-      padding: 10px 20px;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      font-size: 17px;
-      text-decoration: none;
-    }
-    
-    .popup-button:hover {
-      background-color:  rgb(3, 37, 59);
-    }
-
-    .text-orange{
-        color:#d55200;
-    }
-    .text-orange-l{
-        color:#d9822b;
-    }
-    
-    .back-button {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: rgb(86, 2, 22);
-        font-size: 16px;
-        font-weight: bold;
-      }
-
-      .back-button i {
-        font-size: 35px;
-        margin-right: 10px;
-      }
-
-      .back-button:hover {
-        color: #ffffff;
-      }
-  </style>
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/animate.min.css" />
+  </head>
+  <body>
     <a href="javascript:history.back()" class="back-button">
-        <i class="fas fa-arrow-left"></i> Go Back
-      </a>
+      <i class="fas fa-arrow-left"></i> Go Back
+    </a>
 
-    <div class="toggle-container" style="top: 15px;">
-        <input type="checkbox" id="checkbox" class="switch-checkbox">
-        <label class="theme-switch" for="checkbox">
-          <div class="toggle-button">
-            <span class="light-mode-icon"><img src="./images/sun.svg"></span>
-            <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
-          </div>
-        </label>
-      </div>
-    
-<div class="content">
-    <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-md-10">
-    <div class="row align-items-center">
-    <div class="col-lg-7 mb-5 mb-lg-0">
-    <h2 class="mb-5 text-orange">We'd Love Your Feedback</h2>
-    <div class="rowflex pr-5">
-        <p for="rating" class="rate-us">Rate Your Experience</p><br>
-        <div class="rating-container" id="rate">
-          <button type="button" onclick="handleRatingChange(1)">☆</button>
-          <button type="button" onclick="handleRatingChange(2)">☆</button>
-          <button type="button" onclick="handleRatingChange(3)">☆</button>
-          <button type="button" onclick="handleRatingChange(4)">☆</button>
-          <button type="button" onclick="handleRatingChange(5)">☆</button>
+    <div class="toggle-container" style="top: 15px">
+      <input type="checkbox" id="checkbox" class="switch-checkbox" />
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg" /></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg" /></span>
         </div>
+      </label>
+    </div>
 
-    </div>
-        
-    <form action="" class="border-right pr-5 mb-5 " method="post" id="feedback-form" name="contactForm" onsubmit="handleSubmit(event)">
-    <div class="row">
-    <div class="col-md-6 form-group">
-    <input type="text" class="form-control" name="fname" id="fname" placeholder="First name">
-    </div>
-    <div class="col-md-6 form-group">
-    <input type="text" class="form-control" name="lname" id="lname" placeholder="Last name">
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-12 form-group">
-    <input type="text" class="form-control" name="email" id="email" placeholder="Email">
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-12 form-group">
-    <textarea class="form-control" name="message" id="feedback" cols="30" rows="7" placeholder="Write your message"></textarea>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-12">
-    <input type="submit" value="Send Message" class="btn btn-primary rounded-2 py-2 px-4">
-    <span class="submitting"></span>
-    </div>
-    </div>
-  
-    </form>
-    <div id="form-message-warning mt-4"></div>
-    <div id="form-message-success">
-    Your message was sent, thank you!
-    </div>
-    </div>
-    <div class="col-lg-4 ml-auto">
-    <h3 class="mb-4 text-orange-l">Let's talk about everything.</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil deleniti itaque similique magni. Magni, laboriosam perferendis maxime!</p>
-    <p><a href="#">Read more</a></p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    <div id="popup" class="popup" style="display: none;">
-        <div class="popup-content">
-          <h2>Thank you for your Feedback!🧡</h2>
-          <div class="popup-icon">
-            <img src="/images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120">
+    <div class="content">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="row align-items-center">
+              <div class="col-lg-7 mb-5 mb-lg-0">
+                <h2 class="mb-5 text-orange">We'd Love Your Feedback</h2>
+                <div class="rowflex pr-5">
+                  <p for="rating" class="rate-us">Rate Your Experience</p>
+                  <br />
+                  <div class="rating-container" id="rate">
+                    <button type="button" onclick="handleRatingChange(1)">
+                      ☆
+                    </button>
+                    <button type="button" onclick="handleRatingChange(2)">
+                      ☆
+                    </button>
+                    <button type="button" onclick="handleRatingChange(3)">
+                      ☆
+                    </button>
+                    <button type="button" onclick="handleRatingChange(4)">
+                      ☆
+                    </button>
+                    <button type="button" onclick="handleRatingChange(5)">
+                      ☆
+                    </button>
+                  </div>
+                </div>
+
+                <form
+                  action=""
+                  class="border-right pr-5 mb-5"
+                  method="post"
+                  id="feedback-form"
+                  name="contactForm"
+                  onsubmit="handleSubmit(event)"
+                >
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="fname"
+                        id="fname"
+                        placeholder="First name"
+                      />
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="lname"
+                        id="lname"
+                        placeholder="Last name"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        id="feedback"
+                        cols="30"
+                        rows="7"
+                        placeholder="Write your message"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <input
+                        type="submit"
+                        value="Send Message"
+                        class="btn btn-primary rounded-2 py-2 px-4"
+                      />
+                      <span class="submitting"></span>
+                    </div>
+                  </div>
+                </form>
+                <div id="form-message-warning mt-4"></div>
+                <div id="form-message-success">
+                  Your message was sent, thank you!
+                </div>
+              </div>
+              <div class="col-lg-4 ml-auto">
+                <h3 class="mb-4 text-orange-l">Let's talk about everything.</h3>
+                <p>
+                  Your voice matters to us. Share your thoughts and help us
+                  create an exceptional experience!
+                </p>
+              </div>
+            </div>
           </div>
-          <p>Your feedback has been received.<br> We appreciate the input you provide.</p>
-          <button class="popup-button" onclick="closePopup()">Back to Home</button>
         </div>
       </div>
+    </div>
+
+    <div id="popup" class="popup" style="display: none">
+      <div class="popup-content">
+        <h2>Thank you for your Feedback!🧡</h2>
+        <div class="popup-icon">
+          <img
+            src="/images/GIF/Feedback giphy.gif"
+            alt="✅"
+            height="120"
+            width="120"
+          />
+        </div>
+        <p>
+          Your feedback has been received.<br />
+          We appreciate the input you provide.
+        </p>
+        <button class="popup-button" onclick="closePopup()">
+          Back to Home
+        </button>
+      </div>
+    </div>
 
     <script>
-        let rating = null;
-      
-        function handleRatingChange(rating) {
-        const buttons = document.querySelectorAll('.rating-container button');
+      let rating = null;
+
+      function handleRatingChange(rating) {
+        const buttons = document.querySelectorAll(".rating-container button");
         buttons.forEach((button, index) => {
           if (index < rating) {
-            button.classList.add('filled');
-            button.textContent = '★'; // Filled star
+            button.classList.add("filled");
+            button.textContent = "★"; // Filled star
           } else {
-            button.classList.remove('filled');
-            button.textContent = '☆'; // Empty star
+            button.classList.remove("filled");
+            button.textContent = "☆"; // Empty star
           }
         });
       }
-      
-        function updateStars() {
-        const buttons = document.querySelectorAll('.rating-container button');
+
+      function updateStars() {
+        const buttons = document.querySelectorAll(".rating-container button");
         buttons.forEach((button, index) => {
           if (index < rating) {
-            button.classList.add('filled');
+            button.classList.add("filled");
           } else {
-            button.classList.remove('filled');
+            button.classList.remove("filled");
           }
         });
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        const email = document.getElementById("email").value;
+        const feedback = document.getElementById("feedback").value;
+
+        console.log("Feedback submitted:", { name, email, rating, feedback });
+
+        document.getElementById("feedback-form").reset();
+        rating = null;
+        updateStars();
+
+        document.getElementById("popup").style.display = "flex";
+      }
+
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("checkbox");
+
+        const currentMode = localStorage.getItem("dark-mode");
+
+        if (currentMode === "enabled") {
+          document.body.classList.add("dark-mode");
+
+          toggleButton.checked = true;
         }
-      
-        function handleSubmit(event) {
-          event.preventDefault();
-      
-          const fname = document.getElementById('fname').value;
-          const lname = document.getElementById('lname').value;
-          const email = document.getElementById('email').value;
-          const feedback = document.getElementById('feedback').value;
-      
-          console.log('Feedback submitted:', { name, email, rating, feedback });
-      
-          document.getElementById('feedback-form').reset();
-          rating = null;
-          updateStars();
-      
-          document.getElementById('popup').style.display = 'flex';
-        }
-      
-        function closePopup() {
-          document.getElementById('popup').style.display = 'none';
-        }
-      </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-      
-          const toggleButton = document.getElementById('checkbox');
-      
-          const currentMode = localStorage.getItem('dark-mode');
-      
-          if (currentMode === 'enabled') {
-      
-            document.body.classList.add('dark-mode');
-      
-            toggleButton.checked = true;
-      
+
+        toggleButton.addEventListener("change", function () {
+          document.body.classList.toggle("dark-mode");
+
+          if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+          } else {
+            localStorage.setItem("dark-mode", "disabled");
           }
-      
-          toggleButton.addEventListener('change', function () {
-      
-            document.body.classList.toggle('dark-mode');
-      
-            if (document.body.classList.contains('dark-mode')) {
-      
-              localStorage.setItem('dark-mode', 'enabled');
-      
-            }
-            else {
-      
-              localStorage.setItem('dark-mode', 'disabled');
-      
-            }
-          });
-      
         });
-      </script>
-</body>
+      });
+    </script>
+  </body>
 </html>
