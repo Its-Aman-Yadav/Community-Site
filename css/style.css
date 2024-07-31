@@ -9,14 +9,6 @@ body {
   overflow: hidden;
 }
 
-/* .formcontainer2 {
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
-      background: #1b1b1b;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    } */
 .form1 {
   background: linear-gradient(rgb(255, 206, 10), rgb(255, 128, 1));
   padding: 50px;
@@ -311,10 +303,6 @@ body.dark-mode .scrollToTopBtn {
 body.dark-mode .progress-ring__circle {
   stroke: grey;
 }
-
-/* button{
-  background-color: radial-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
-} */
 
 nav {
   background-color: rgba(0, 0, 0, 0.2);
@@ -637,16 +625,6 @@ body.dark-mode .feedback-form p{
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
-
-/* @color-primary: #33bb63;
-@color-gray: #808080;
-@color-lightgray: #BBBBBB;
-@color-white: #FFFFFF;
-@color-bg: #f5f5f5;
-@gutter: 30px;
-@form-width: 300px;
-@label-height: 20px;
-@input-margin: @gutter / 4; */
 
 /* Styles for small screens */
 .containerr {
@@ -1557,12 +1535,6 @@ body.dark-mode .btn-custom::before {
   text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow,
     0 0 40px yellow;
 }
-
-/* body.dark-mode .btn-custom:hover {
-  color: #396a92;  
-  text-shadow: 0 0 10px #396a92, 0 0 20px #396a92, 0 0 30px #396a92,
-  0 0 40px #396a92;
-} */
 
 /* Fine-Tuning for Responsiveness */
 @media (max-width: 768px) {
