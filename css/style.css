@@ -3921,3 +3921,54 @@ body.dark-mode .offering h4{
 body.dark-mode .offering p{
   color:#d9d9d9;
 }
+/* cookie modal  */
+.cookie-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 10px;
+  bottom: 10px;
+  width: auto;
+  /* height: 100%; */
+  overflow: auto;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  justify-content: center;
+  align-items: center;
+}
+
+.cookie-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.cookie-close {
+  color: #aaa;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cookie-close:hover,
+.cookie-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#acceptCookies{
+  margin-top: 10px;
+  background-color: #e3680a;
+  border-radius: 5px;
+  padding: 5px 15px;
+  color:white;
+}
+
+#acceptCookies:hover{
+  background-color: #e22d00;
+}
