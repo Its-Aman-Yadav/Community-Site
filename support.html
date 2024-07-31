@@ -470,27 +470,28 @@ input[type="text"], input[type="email"], textarea{
       
 
     </section>
-
-      <section id="query-form-section" data-aos="fade-up">
-        <h2>Submit Your Query</h2>
-        <form id="query-form" action="#" method="POST" data-aos="fade-left">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-          </div>
-          <div class="form-group">
-            <label for="query">Query:</label>
-            <textarea id="query" name="query" placeholder="Your Query" required></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit">Submit</button>
-          </div>
-        </form>
-      </section>
+    <section id="query-form-section" data-aos="fade-up">
+      <h2>Submit Your Query</h2>
+      <form id="query-form" action="#" method="POST" data-aos="fade-left">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="query">Query:</label>
+          <textarea id="query" name="query" placeholder="Your Query" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div id="success-message" class="hidden">We will connect you soon!</div>
+    </section>
+    
       
 
  
@@ -626,6 +627,22 @@ input[type="text"], input[type="email"], textarea{
   }
 
 });
+</script>
+<script>
+  document.getElementById('query-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Display success message
+  var successMessage = document.getElementById('success-message');
+  successMessage.classList.remove('hidden');
+  successMessage.style.display = 'block';
+
+  // Hide the message after a few seconds
+  setTimeout(function() {
+    successMessage.style.display = 'none';
+  }, 3000);
+});
+
 </script>
 
 
