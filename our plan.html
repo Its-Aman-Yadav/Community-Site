@@ -520,22 +520,24 @@ video#background-video {
       </div>
   
       <div class="contact-container">
-          <form class="contact-form" id="contact-form" data-aos="fade-left">
-              <div class="form-group">
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit">Submit</button>
-          </form>
+        <form class="contact-form" id="contact-form" data-aos="fade-left">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="contact-success-message" class="hidden">We will connect you soon!</div>
       </div>
+      
   </section>
   
     
@@ -543,7 +545,7 @@ video#background-video {
 
   <special-footer></special-footer>
 
-  <script>
+  <!-- <script>
     document
       .getElementById("contact-form")
       .addEventListener("submit", function (event) {
@@ -551,7 +553,7 @@ video#background-video {
         alert("Thank you for your message. We will get back to you soon.");
         document.getElementById("contact-form").reset();
       });
-  </script>
+  </script> -->
   <script src="footer/footer.js"></script>
   <script src="trail.js"></script>
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
@@ -591,6 +593,22 @@ video#background-video {
     duration: 1200, // Animation duration
     easing: 'ease-in-out', // Animation easing 
   });
+</script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Display success message
+  var successMessage = document.getElementById('contact-success-message');
+  successMessage.classList.remove('hidden');
+  successMessage.style.display = 'block';
+
+  // Hide the message after a few seconds
+  setTimeout(function() {
+    successMessage.style.display = 'none';
+  }, 3000);
+});
+
 </script>
 
 </body>
