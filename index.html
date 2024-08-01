@@ -203,7 +203,17 @@
   
 
 <body>
+  <!-- cookie modal  -->
 
+  <div id="cookieModal" class="cookie-modal">
+    <div class="cookie-modal-content">
+        <span class="cookie-close">&times;</span>
+        <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our cookie policy.</p>
+        <button id="acceptCookies">Accept</button>
+    </div>
+</div>
+
+<script src="cookie.js"></script>
 
   <!-- login modal  -->
   <div id="popup" class="popup">
@@ -234,37 +244,6 @@ function closePopup() {
     document.getElementById('popup').style.display = 'none';
 }
 </script>
-
-  <!-- <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog"> -->
-      <!-- Modal content-->
-      <!-- <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <div class="modal-header">
-          
-            <div class="flex">
-                <img src="images/logo2.jpeg" alt="" class="logo">
-                  <h4 class="modal-title">Open Source Village</h4>
-            </div>
-        </div>
-        <div class="modal-body text-center">
-          <h1>Start your journey now</h1>
-          <p>If you don't have an account yet, register and start your journey.</p>
-          <a class="pre-order-btn" href="login.html">Login/Register</a>
-        </div>
-        <div class="modal-footer"> -->
-          <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-        <!-- </div>
-      </div>
-  
-    </div>
-  </div> -->
-
-  <!-- <script>
-  $(window).ready(function(){        
-   $('#myModal').modal('show');
-    }); 
-  </script> -->
 
   <!-- Chatbot integration section -->
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
@@ -575,9 +554,6 @@ function closePopup() {
 
       </style>
 
-      <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
-
-     
     <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
     </nav>
   </div>
@@ -700,6 +676,7 @@ function closePopup() {
   </style>
 
   <script>
+    
     // JavaScript to animate the counter
     document.addEventListener("DOMContentLoaded", () => {
       const counterElement = document.querySelector('.counter');
@@ -887,19 +864,9 @@ function closePopup() {
     </div>
   </section>
   
-  
-  
-  
-  
   <!-- faq section  -->
 
- 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-
-
   <section class="faqq section ">
     <div class="containerr">
       <div class="accordion">
@@ -909,7 +876,6 @@ function closePopup() {
           <button id="accordion-button-1" aria-expanded="false">
             <span class="accordion-title">How can I contribute to the community's goals and projects?<i
                 class="fa-solid fa-chevron-down"></i></span>
-
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
@@ -919,7 +885,6 @@ function closePopup() {
               or organize events that align with our mission.</p>
           </div>
         </div>
-
         <div class="accordion-item">
           <button id="accordion-button-2" aria-expanded="false">
             <span class="accordion-title">What benefits do members receive from participating in the community?<i
@@ -933,7 +898,6 @@ function closePopup() {
               and networking opportunities.</p>
           </div>
         </div>
-
         <div class="accordion-item">
           <button id="accordion-button-3" aria-expanded="false">
             <span class="accordion-title">How can I join the open source village community?<i
@@ -946,7 +910,6 @@ function closePopup() {
               process. Once registered, you'll gain access to our forums, projects, events, and more.</p>
           </div>
         </div>
-
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false">
             <span class="accordion-title">What is open source community?<i class="fa-solid fa-chevron-down"></i></span>
@@ -958,7 +921,6 @@ function closePopup() {
               view, use, modify, and distribute ideas.</p>
           </div>
         </div>
-
         <div class="accordion-item">
           <button id="accordion-button-5" aria-expanded="false">
             <span class="accordion-title">What is the purpose of the open source village community website?<i
@@ -971,7 +933,6 @@ function closePopup() {
               connect, collaborate, and contribute to make a positive impact in the world.</p>
           </div>
         </div>
-
         <div class="accordion-item">
           <button id="accordion-button-6" aria-expanded="false">
             <span class="accordion-title">Are there any eligibility criteria to join the community?<i
@@ -982,8 +943,6 @@ function closePopup() {
             <p>The only criteria is your passion for open source.</p>
           </div>
         </div>
-
-
         <div class="accordion-item">
           <button id="accordion-button-7" aria-expanded="false">
             <span class="accordion-title">How can I find and join specific projects within the community?<i
@@ -996,7 +955,6 @@ function closePopup() {
               participation guidelines provided.</p>
           </div>
         </div>
-
         <div class="accordion-item">
           <button id="accordion-button-9" aria-expanded="false">
             <span class="accordion-title">How can I stay updated with the community's latest news and events?<i
@@ -1008,7 +966,6 @@ function closePopup() {
               events and information.</p>
           </div>
         </div>
-
         <div class="accordion-item">
           <button id="accordion-button-10" aria-expanded="false">
             <span class="accordion-title">Who can I contact if I have more questions or need support?<i
@@ -1023,17 +980,12 @@ function closePopup() {
       </div>
     </div>
   </section>
-
-
-
   <div class="container section" style="margin-top: 10px;">
-
     <div class="row reviews" style="margin-top: 40px;">
       <div class="card1 mb-3" >
         <div class="row g-0" style="height: 100%; cursor: pointer;">
           <div class="col-md-8 pic-col">
-            <img src="images/profile1.jpg" class="img-fluid rounded-start"/>
-             
+            <img src="images/profile1.jpg" class="img-fluid rounded-start"/>            
           </div>
           <div class="col-md-4 flex flex-row" style="width: 100%;">
             <div class="card-body " style="width: 100%; padding: 10px;">
@@ -1069,12 +1021,10 @@ function closePopup() {
               </div>
               <p class="card-text">"Joining this community has been one of the best decisions I've ever made. I've had
                 the opportunity to contribute to meaningful projects that have an impact on society."</p>
-
             </div>
           </div>
         </div>
       </div>
-
       <div class="card1 mb-3" >
         <div class="row g-0" style="height: 100%; cursor: pointer;">
           <div class="col-md-8 pic-col ">
@@ -1115,7 +1065,6 @@ function closePopup() {
               </div>
               <p class="card-text">"Being a part of this community has been an incredible journey. I've found
                 like-minded individuals who share my deep passion for making a difference in the society."</p>
-
             </div>
           </div>
         </div>
@@ -1161,7 +1110,6 @@ function closePopup() {
               </div>
               <p class="card-text">"As someone who values inclusivity, finding a space where everyone's voice is heard
                 and respected has been incredibly refreshing. It's empowering to collaborate here."</p>
-
             </div>
           </div>
         </div>
@@ -1169,89 +1117,88 @@ function closePopup() {
     </div>
   </div>
   </section>
-
   <!-- contact us  -->
-
   <section id="contact" class="section-padding bg-gray contactSection" data-aos="fade-up" data-aos-duration="1500">
     <div class="Contactsec">
-      <div class="section-header text-center">
-        <h2 class="text_dark wow fadeInDown" data-wow-delay="0.3s">
-          <span class="gradient-text">Contact Us</span>
-        </h2>
-        <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <div class="col-md-8 col-lg-6">
-          <form class="mt-5" id="contactForm" method="post">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" class="form-control" id="inputName" placeholder="Name" required>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="subj" placeholder="Subject" required>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" id="msg" rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <div class="text-center">
-              <button class="Cbtn text_dark" id="checkBtn" type="submit">Submit</button>
-            </div>
-            <div id="msgSubmit" class="h3 text-left hidden"></div>
-          </form>
+        <div class="section-header text-center">
+            <h2 class="text_dark wow fadeInDown" data-wow-delay="0.3s">
+                <span class="gradient-text">Contact Us</span>
+            </h2>
+            <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
         </div>
-      </div>
+        <div class="d-flex justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <form class="mt-5" id="contactForm" method="post" onsubmit="showContactPopup(event)">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="subj" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="msg" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button class="Cbtn text_dark" id="checkBtn" type="submit">Submit</button>
+                    </div>
+                    <div id="msgSubmit" class="h3 text-left hidden"></div>
+                </form>
+            </div>
+        </div>
     </div>
   </section>
-  
-  
-
-
   <script>
     document.getElementById('contactForm').addEventListener('submit', function (event) {
       event.preventDefault();
       const thankYouMessage = document.getElementById('thankYouMessage');
       const errorMessage = document.getElementById('errorMessage');
-
-
       const name = document.querySelector('input[name="name"]').value.trim();
       const email = document.querySelector('input[name="email"]').value.trim();
       const phone = document.querySelector('input[name="phone"]').value.trim();
       const message = document.querySelector('textarea[name="message"]').value.trim();
-
-
       if (name === "" || email === "" || phone === "" || message === "") {
         errorMessage.style.display = 'block';
         thankYouMessage.style.display = 'none';
       } else {
         errorMessage.style.display = 'none';
         thankYouMessage.style.display = 'block';
-
-
         setTimeout(function () {
           thankYouMessage.style.display = 'none';
           document.getElementById('contactForm').reset();
         }, 3000);
       }
     });
-  </script>
-
-
-
- 
-  
+  </script>  
 </head>
+    <div id="contactPopup" class="contact-popup" style="display: none;">
+      <div class="contact-popup-content">
+          <h2>Thank you for contacting us!🧡</h2>
+          <div class="contact-popup-icon">
+              <img src="/images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120" />
+          </div>
+          <p>Your message has been received.<br />We will get back to you shortly.</p>
+          <button class="contact-popup-button" onclick="closeContactPopup()">Back to Home</button>
+      </div>
+  </div>
+</section>
 
-
-
-
-
-
-
-
+<script>
+  function showContactPopup(event) {
+      event.preventDefault();
+      document.getElementById('contactPopup').style.display = 'flex';
+  }
+  
+  function closeContactPopup() {
+      document.getElementById('contactPopup').style.display = 'none';
+      window.location.href = '/';
+  }
+  </script>
+  
   <!-- footer section -->
   <special-footer></special-footer>
 
@@ -1400,24 +1347,20 @@ function closePopup() {
   <!-- swiper JS -->
   <script src="js/swiper-bundle.min.js"></script>
   <script>
-
     /*=============== SWIPER JS ===============*/
     let swiperCards = new Swiper(".card__content", {
       loop: true,
       spaceBetween: 52,
       grabCursor: true,
-
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
       },
-
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-
       breakpoints: {
         600: {
           slidesPerView: 2,
@@ -1428,8 +1371,6 @@ function closePopup() {
       },
     });
   </script>
-
-
   <!-- Trail effect elements -->
   <div class="circle"></div>
   <div class="circle"></div>
@@ -1454,11 +1395,8 @@ function closePopup() {
   <div class="circle"></div>
   <div class="circle"></div>
   <script src="trail.js"></script>
-
   <!-- end -->
-
   <script src="./footer/footer.js"></script>
 </body>
 <script src="index.js"></script>
-
 </html>
