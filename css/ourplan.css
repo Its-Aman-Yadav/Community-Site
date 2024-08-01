@@ -543,3 +543,19 @@ body.dark-mode .contact-form label{
 .contact-form1 textarea{
   width: 100%;
 }
+#contact-success-message {
+  position: fixed;
+  top: 40rem;
+  right: 0px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+  margin-right: 100px;
+}
+
+.hidden {
+  display: none;
+}
