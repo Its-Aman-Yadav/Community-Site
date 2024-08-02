@@ -201,6 +201,124 @@
   }
   </style>
   
+<style>
+
+  .testimonial-section {
+      text-align: center;
+      padding: 50px 20px;
+      /* background-color: #fff4ac; */
+      background: linear-gradient(white, rgb(252, 235, 185), #f1c21ab7);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .testimonial-section h2 {
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #333;
+  }
+  
+  .testimonial-container {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  .rating {
+      font-size: 19px;
+      color: gold;
+      margin-top: 10px;
+  }
+  .testimonial-card {
+      flex: 0 0 20%;
+      box-sizing: border-box;
+      padding: 20px;
+      /* background: #fff; */
+      background: linear-gradient(to bottom, rgb(255, 255, 255), #ffead5);
+      margin: 0 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      text-align: left;
+      transform: scale(1.1);
+  }
+  .testimonial-card:hover{
+    transition: transform 0.4s ease-in-out !important;
+  }
+  .testimonial-card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      object-fit: cover;
+      margin-left: 58px;
+  }
+  
+  .testimonial-card p {
+      font-size: 14px;
+      color: #ff7f3f;
+      margin-bottom: 10px;
+  }
+  
+  .testimonial-card h4 {
+      font-size: 18px;
+      font-weight: bolder;
+      font-family: bold;
+      color: #b80000;
+  }
+  
+  @keyframes scroll {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+  
+  .testimonial-container {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+  }
+  
+  .testimonial-container::before, .testimonial-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 100%;
+      z-index: 2;
+  }
+  
+  .testimonial-container::before {
+      left: 0;
+      background: linear-gradient(to right, white, rgba(255,255,255,0));
+  }
+  
+  
+  .testi-head {
+    color: rgb(255, 136, 0) !important;
+    font-size: 37px !important;
+    font-family: bold;
+    font-weight: 600;
+    /* text-shadow: 1px 1px 4px rgb(255, 141, 160) !important; */
+  }
+  
+  .testi-header2 {
+    font-family: bold;
+    font-weight: 600;
+  }
+  .testimonial-container::after {
+      right: 0;
+      background: linear-gradient(to left, white, rgba(255,255,255,0));
+  }
+  
+  .testimonial-container .testimonial-card {
+      animation: scroll 15s linear infinite;
+  }
+  
+  </style>
 
 <body>
   <!-- cookie modal  -->
@@ -750,119 +868,62 @@ function closePopup() {
       </div>
     </div>
   </section>
+
   <!-- Testimonials section -->
-  <section class="testimonial-section" id="testimonials">
-    <div class="testimonial-container">
-      <h2 class="testimonial-title wow fadeInUp" data-wow-delay="0.3s">Testimonials</h2>
-      <div class="testimonial-carousel-container">
-        <div class="testimonial-wrapper">
-          <ul class="testimonial-carousel">
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/testi_1.jpg" alt="Arden Stone" draggable="false">
-                </div>
-                <div class="testimonial-text">
-                  <h3>Arden Stone</h3>
-                  <span>I'm immensely grateful to have found such an inspiring group of people in this community!</span>
-                </div>
-              </div>
-            </li>
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/testi_2.jpeg" alt="John Smith" draggable="false">
-                </div>
-                <div class="testimonial-text">
-                  <h3>John Smith</h3>
-                  <span>I've been involved with many groups in the past, but none have been as warm and welcoming as this one.</span>
-                </div>
-              </div>
-            </li>
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/testi_3.jpeg" alt="Emily Johnson" draggable="false">
-                </div>
-                <div class="testimonial-text">
-                  <h3>Emily Johnson</h3>
-            <span>It has opened up numerous opportunities for collaboration and personal development.</span>
-                </div>
-              </div>
-            </li>
-          
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/img-2.jpg" alt="Joenas Brauers" draggable="false">
-                </div>
-                <div class="testimonial-text">
-                  <h3>Joenas Brauers</h3>
-            <span>It's incredible to have such a supportive community around me.</span>
-                </div>
-              </div>
-            </li>
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/img-3.jpg" alt="Lariach French" draggable="false">
-                </div>
-                <div class="testimonial-text">          
-            <h3>Lariach French</h3>
-            <span>It's amazing to be among such driven people.</span>
-                </div>
-              </div>
-            </li>
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/img-4.jpg" alt="James Khosravi" draggable="false">
-                </div>
-                <div class="testimonial-text">
-                  <h3>James Khosravi</h3>
-                  <span>I've found endless support and inspiration.</span>
-                </div>
-              </div>
-            </li>
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/img-2.jpg" alt="Joenas Brauers" draggable="false">
-                </div>
-                <div class="testimonial-text">
-                  <h3>Joenas Brauers</h3>
-            <span>It's incredible to have such a supportive community around me.</span>
-                </div>
-              </div>
-            </li>
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/img-5.jpg" alt="Kristina Zasiadko" draggable="false">
-                </div>
-                <div class="testimonial-text">
-                  <h3>Kristina Zasiadko</h3>
-                  <span>The connections I've made are invaluable.</span>
-                </div>
-              </div>
-            </li>
-            <li class="testimonial-card">
-              <div class="testimonial-content">
-                <div class="testimonial-img">
-                  <img src="images/img-6.jpg" alt="Donald Horton" draggable="false">
-                </div>
-                <div class="testimonial-text">
-                  <h3>Donald Horton</h3>
-            <span>This community has changed my life.</span>
-                </div>
-              </div>
-            </li>
-          
-          </ul>
-        </div>
-        
+<!-- Testimonials section -->
+<div class="testimonial-section">
+  <h2 class="testi-header2">What our <span class="testi-head">Members</span> say!</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+      <img src="./images/profile3.jpg" alt="Member 1">
+      <span class="rating">
+        ★★★★★
+      </span>
+      <p>Joining Open Source Village has been an incredible experience. The sense of community and collaboration here is unmatched.</p>
+      <h4>Casper Leigh</h4>
     </div>
-  </section>
+    <div class="testimonial-card">
+      <img src="./images/testi_1.jpg" alt="Member 2">
+      <span class="rating">
+        ★★★★★
+      </span>
+      <p>The best part about being here is the people. Everyone is supportive and shares the same vision of making a positive impact.</p>
+      <h4>Cian Reyes</h4>
+    </div>
+    <div class="testimonial-card">
+      <img src="./images/img-5.jpg" alt="Member 3">
+      <span class="rating">
+        ★★★★☆
+      </span>
+      <p>Just wow. I knew I was joining a great community, but Open Source Village exceeded my expectations in every way.</p>
+      <h4>Asa Walter</h4>
+    </div>
+    <div class="testimonial-card">
+      <img src="./images/img-6.jpg" alt="Member 4">
+      <span class="rating">
+        ★★★★★
+      </span>
+      <p>This community has been the best thing that happened to my projects. The collaborative environment is phenomenal.</p>
+      <h4>John Doe</h4>
+    </div>
+    <div class="testimonial-card">
+      <img src="./images/testi_3.jpeg" alt="Member 5">
+      <span class="rating">
+        ★★★★☆
+      </span>
+      <p>Exceptional support and service. Open Source Village truly understands the needs of its members and goes above and beyond.</p>
+      <h4>Emma Stone</h4>
+    </div>
+    <div class="testimonial-card">
+      <img src="./images/img-1.jpg" alt="Member 6">
+      <span class="rating">
+        ★★★★☆
+      </span>
+      <p>Highly professional and dedicated community. They delivered exactly what I needed and more for my open-source contributions.</p>
+      <h4>Christiana </h4>
+    </div>
+  </div>
+</div>
   
   <!-- faq section  -->
 
@@ -1152,6 +1213,23 @@ function closePopup() {
         </div>
     </div>
   </section>
+  
+
+<script>
+  const container = document.querySelector('.testimonial-container');
+const cards = Array.from(document.querySelectorAll('.testimonial-card'));
+
+let cloneCards = () => {
+    cards.forEach(card => {
+        let clone = card.cloneNode(true);
+        container.appendChild(clone);
+    });
+};
+
+cloneCards();
+cloneCards();
+</script>
+
   <script>
     document.getElementById('contactForm').addEventListener('submit', function (event) {
       event.preventDefault();

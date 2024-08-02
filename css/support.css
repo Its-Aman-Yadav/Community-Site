@@ -524,3 +524,19 @@ video#background-video {
   }
 }
 
+
+#success-message {
+  position: fixed;
+  top: 35rem;
+  right: 50px;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
