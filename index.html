@@ -317,6 +317,76 @@
   .testimonial-container .testimonial-card {
       animation: scroll 15s linear infinite;
   }
+
+  /* Style for the cookie modal */
+.cookie-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+}
+
+/* Modal content box */
+.cookie-modal-content {
+    background: linear-gradient(to bottom right, #FFD700, #FFA500); /* Yellow to orange gradient */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 80%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    color: #333; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The close button */
+.cookie-close {
+    color: #fff;
+    align-self: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    margin: -10px -10px 0 0; /* Adjust positioning */
+}
+
+.cookie-close:hover,
+.cookie-close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Style for the text */
+.cookie-modal-content p {
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Style for the accept button */
+#acceptCookies {
+    background-color: #FFA500; /* Orange background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#acceptCookies:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+}
+
+  
   
   </style>
 
