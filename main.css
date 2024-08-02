@@ -306,7 +306,6 @@ ul li {
 
 
 
-
 /* Testimonial Section */
 .testimonial-section {
   background: transparent;
@@ -319,13 +318,15 @@ ul li {
   max-width: 1200px;
   margin: 0 auto;
 }
-.testimonial-container h2{
-    font-size: 30px;
+
+.testimonial-container h2 {
+  font-size: 30px;
   font-weight: 200;
   background: linear-gradient(135deg, #2937b3, #2afb7a 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
+
 .testimonial-title {
   text-align: center;
   font-size: 2em;
@@ -357,11 +358,12 @@ ul li {
   background: transparent;
   text-align: center;
   position: relative;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .testimonial-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-img {
@@ -397,18 +399,38 @@ ul li {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   pointer-events: none;
+  transform: translateY(100%);
 }
 
 .testimonial-card:hover .testimonial-text {
   opacity: 1;
   pointer-events: auto;
+  transform: translateY(0);
 }
 
 .testimonial-card:hover .testimonial-img img {
   transform: scale(1.2);
 }
+
+/* Adding animation for smooth transition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonial-text {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+
 
 /* services section */
 .service-title{
