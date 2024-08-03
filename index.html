@@ -68,6 +68,10 @@
   
 <style>
    /* CSS login modal   */
+   .nav-link.active {
+            font-weight: bold;
+            color: red;
+        }
   .popup {
       display: none;
       justify-content: center;
@@ -1545,6 +1549,20 @@ cloneCards();
   <script src="trail.js"></script>
   <!-- end -->
   <script src="./footer/footer.js"></script>
+  <script>
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove 'active' class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the clicked link
+            this.classList.add('active');
+        });
+    });
+</script>
 </body>
 <script src="index.js"></script>
 </html>
