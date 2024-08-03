@@ -66,6 +66,12 @@
       /* Reduced padding for navbar */
     }
 
+    .nav-link.active {
+    /* Your active state styles, e.g., */
+    font-weight: bold;
+    color: skyblue;
+    }
+
     /* Navbar styles */
     .navbar {
       /* background-color: #333; Background color for navbar */
@@ -670,7 +676,7 @@ a.pre-order-btn:hover {
         <div id="nav-menu">
             <ul>
                 <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
-                <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+                <li><i class="fa-solid fa-address-card"></i><a class="nav-link active" href="#about">About</a></li>
                 <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
                 <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
                 <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
@@ -2190,5 +2196,18 @@ a.pre-order-btn:hover {
   <script src="./footer/footer.js"></script>
 </body>
 <script src="index.js"></script>
+<script>
+const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+          // Remove 'active' class from all links
+          navLinks.forEach(link => link.classList.remove('active'));
+
+          // Add 'active' class to the clicked link
+          this.classList.add('active');
+      });
+  });
+  </script>
 
 </html>
