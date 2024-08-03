@@ -23,7 +23,7 @@
         })
     </script>
     <style>
-
+      
         body {
         background: linear-gradient(#f5d244, #f5a623);
         }
@@ -45,13 +45,13 @@
             font-size: large;
         }
         #image {
-      margin-left: 10px;
-       /* Reduced height of the profile image */
-       width: 30px;
-      /* Reduced width of the profile image */
-      border-radius: 50%;
-      cursor: pointer;
-    }
+          margin-left: 10px;
+          /* Reduced height of the profile image */
+          width: 30px;
+          /* Reduced width of the profile image */
+          border-radius: 50%;
+          cursor: pointer;
+        }
 
         .title {
             font-size: 2em;
@@ -108,50 +108,52 @@
             color: #121212;
             font-size: 12px;
         }
-            /* Back to Top Button */
-    .scrollToTopBtn {
-      /* background-color: #FFE70F; */
-      background-image: radial-gradient(#f3bf8c, #ee7f10);
-      color: #fff;
-      text-align: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      font-size: 18px;
-      text-decoration: none;
-      border: none;
-      line-height: 50px;
-      /* Center text vertically */
-      transition: background-color 0.3s ease;
-      position: fixed;
-      bottom: 106px;
-      right: 43px;
-      display: none;
-      /* Hidden by default */
-      z-index: 1000;
-      margin-bottom: 10px;
-    }
 
-    .scrollToTopBtn:hover {
-      background-color: #484848;
-    }
+        /* Back to Top Button */
+        .scrollToTopBtn {
+            /* background-color: #FFE70F; */
+            background-image: radial-gradient(#f3bf8c, #ee7f10);
+            color: #fff;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 18px;
+            text-decoration: none;
+            border: none;
+            line-height: 50px;
+            /* Center text vertically */
+            transition: background-color 0.3s ease;
+            position: fixed;
+            bottom: 106px;
+            right: 43px;
+            display: none;
+            /* Hidden by default */
+            z-index: 1000;
+            margin-bottom: 10px;
+        }
 
-    .progress-ring {
-      position: fixed;
-      bottom: 101px;
-      margin-bottom: 10px;
-      right: 38px;
-      transform: rotate(-90deg);
-      z-index: 999;
-      /* Just below the button */
-      margin-bottom: 10px;
-    }
+        .scrollToTopBtn:hover {
+            background-color: #484848;
+        }
 
-    .progress-ring__circle {
-      transition: 0.35s stroke-dasharray;
-      transform: rotate(-90deg);
-      transform-origin: 50% 50%;
-    }
+        .progress-ring {
+            position: fixed;
+            bottom: 101px;
+            margin-bottom: 10px;
+            right: 38px;
+            transform: rotate(-90deg);
+            z-index: 999;
+            /* Just below the button */
+            margin-bottom: 10px;
+        }
+
+        .progress-ring__circle {
+            transition: 0.35s stroke-dasharray;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        
     </style>
 </head>
 
@@ -234,7 +236,7 @@
     <nav>
       <a class="logo-link" href="#home">
         <div class="logo-title">
-                    <img  class="logo" src="images/fav.png" alt="logo">
+                    <img  class="logo" src="images/logo2.jpeg" alt="logo">
 
                     <span class="logo-text">Open Source Village</span>
                    </div>
@@ -245,34 +247,123 @@
 
       </a>
       <ul>
-        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
-        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
-        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
-        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
-        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+        <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
+        <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+        <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
         <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
       </ul>
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round" id="toggle"></div>
-      </label>
-
+      <div class="toggle-container" style="top: 15px;">
+        <input type="checkbox" id="checkbox" class="switch-checkbox">
+        <label class="theme-switch" for="checkbox">
+          <div class="toggle-button">
+            <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+            <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+          </div>
+        </label>
+      </div>
+  
+      <style>
+        .toggle-container {
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 30px;
+          right: -4px;
+          top: 15px;
+        }
+  
+        .light-mode .toggle-container {
+          right: 140px;
+          top: 10px;
+        }
+        
+        /* Hidden Checkbox */
+        .switch-checkbox {
+          display: none;
+        }
+  
+        .theme-switch {
+          position: relative;
+          width: 45px;
+          height: 30px;
+          background-color: #ccc;
+          border-radius: 20px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 5px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.5s ease;
+        }
+  
+        .theme-switch .light-mode-icon,
+        .theme-switch .dark-mode-icon {
+          font-size: 19px;
+          position: absolute;
+          cursor: pointer;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: opacity 0.5s ease, color 0.5s ease;
+        }
+  
+        .theme-switch .light-mode-icon {
+          color: #f39c12;
+        }
+  
+        .theme-switch .dark-mode-icon {
+          color: #bdc3c7;
+          opacity: 0;
+        }
+  
+        .toggle-button {
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 25px;
+          height: 25px;
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+  
+        /* Checkbox Checked State */
+        .switch-checkbox:checked + .theme-switch {
+          background-color: #34495e;
+        }
+  
+        .switch-checkbox:checked + .theme-switch .light-mode-icon {
+          opacity: 0;
+        }
+  
+        .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+          opacity: 1;
+        }
+  
+        .switch-checkbox:checked + .theme-switch .toggle-button {
+          transform: translateX(13px);
+          /* background-color: #34495e; */
+        }
+      
+      </style>
       <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
-
+  
       <img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile">
-
+  
     </nav>
   </div>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('checkbox');
-            toggleButton.addEventListener('change', function () {
-                document.body.classList.toggle('dark-mode');
-            });
-        });
-    </script>
+      <script>
+          document.addEventListener('DOMContentLoaded', function () {
+              const toggleButton = document.getElementById('checkbox');
+              toggleButton.addEventListener('change', function () {
+                  document.body.classList.toggle('dark-mode');
+              });
+          });
+      </script>
 
     <div class="container" id="privacy-policy-container">
         <header class="header">
@@ -351,6 +442,7 @@
     <special-footer></special-footer>
 
     <script src="footer/footer.js"></script>
+    <script src="trail.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-+pdbIffy5IaIYQ4/3CJf/4Swn2PW/jjc/1pAj9z0iXo=" crossorigin="anonymous"></script>

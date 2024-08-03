@@ -25,6 +25,11 @@
   <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!-- stylesheets css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -56,14 +61,11 @@
 
   <style>
     .navbar {
-      /* background-color: #333; */
       /* Background color for navbar */
       padding: 5px 20px;
       /* Reduced padding for navbar */
     }
 
-    /* Navbar styles */
-    /* Navbar styles */
     /* Navbar styles */
     .navbar {
       /* background-color: #333; Background color for navbar */
@@ -289,7 +291,7 @@
       margin-right: 0px !important;
     }
 
-    slider:before {
+    .slider:before {
       content: "";
       position: absolute;
       width: 26px;
@@ -406,6 +408,164 @@
         pointer-events: none;
       }
     }
+
+  .modal {
+  backdrop-filter: blur(2px);
+  padding: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-content {
+  background: linear-gradient( gold, rgb(255, 255, 255));
+  border-radius: 1em;
+  padding: 2em;
+  color: #000; /* Ensures text is readable on the gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+}
+
+.modal-body h1 {
+  font-weight: 900;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #4B3E2A; /* Dark brown color */
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  padding-bottom: 10px;
+  color: #4B3E2A; /* Dark brown color */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.flex {
+  width: fit-content;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex img {
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #D3D3D3; /* Light grey background for image */
+}
+
+a.pre-order-btn {
+  color: #000;
+  background-color: gold;
+  border-radius: 1em;
+  padding: 1em;
+  display: block;
+  margin: 2em auto;
+  width: 70%;
+  font-size: 1.25em;
+  font-weight: 660;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a.pre-order-btn:hover {
+  background-color: #e8701f; /* Dark brown color on hover */
+  text-decoration: none;
+  color: gold;
+}
+
+.modal-footer {
+  border-top: none;
+  text-align: center;
+  padding: 1em 0;
+}
+.modal-header{
+  background-color: #f3b7127b;
+  border-radius: 20px;
+  margin-top: 20px;
+  /* margin-bottom: 1em; */
+}
+.modal-footer button {
+  background-color: gold;
+  color: #000;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-footer button:hover {
+  background-color: #ff3700; /* Dark brown color on hover */
+  color: gold;
+}
+
+.modal-content .close{
+  margin-right:0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  /* background-color:#e15509; */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .modal-body h1 {
+    font-size: 1.8em;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  a.pre-order-btn {
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  .modal-footer button {
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-body h1 {
+    font-size: 1.5em;
+  }
+
+  .modal-title {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  a.pre-order-btn {
+    width: 90%;
+    font-size: 1em;
+    padding: 0.8em;
+  }
+
+  .modal-footer button {
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+  }
+}
+
+  
+  
+
+
   </style>
 
 </head>
@@ -414,6 +574,40 @@
 
 
 <body>
+
+
+  <!-- login modal  -->
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-header">
+          
+            <div class="flex">
+                <img src="images/logo2.jpeg" alt="" class="logo">
+                  <h4 class="modal-title">Open Source Village</h4>
+            </div>
+        </div>
+        <div class="modal-body text-center">
+          <h1>Start your journey now</h1>
+          <p>If you don't have an account yet, register and start your journey.</p>
+          <a class="pre-order-btn" href="login.html">Login/Register</a>
+        </div>
+        <div class="modal-footer">
+          <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <script>
+  $(window).ready(function(){        
+   $('#myModal').modal('show');
+    }); 
+  </script>
 
   <!-- Chatbot integration section -->
   <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
@@ -467,6 +661,23 @@
   <!-- Navbar -->
   <div class="navbar">
     <nav>
+      <div id="ham-menu" onclick="togMenu(this)">
+        <div id="bars">
+        <div id="first" class="bar"></div>
+        <div id="sec" class="bar"></div>
+        <div id="third" class="bar"></div>
+        </div>
+        <div id="nav-menu">
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
+                <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="#about">About</a></li>
+                <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
+                <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+                <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="#contact">Contact</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+              </ul>
+          </div>
+      </div>
       <a class="logo-link" href="#home">
         <div class="logo-title">
                     <img  class="logo" src="images/logo2.jpeg" alt="logo">
@@ -488,7 +699,7 @@
         <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
       </ul>
 
-      <div class="toggle-container" style="top: 15px;">
+      <div class="toggle-container" style="top: 0px;">
         <input type="checkbox" id="checkbox" class="switch-checkbox">
         <label class="theme-switch" for="checkbox">
           <div class="toggle-button">
@@ -497,6 +708,121 @@
           </div>
         </label>
       </div>
+      <!--Styles for side menu-->
+      <style>
+        #bars{
+            display: none;
+        }
+        .bar{
+            width:27px;
+            height:3px;
+            background-color:white;
+            margin: 7px;
+            border-radius: 20px;
+            transition: all 0.4s;
+        }
+        .cliked #first{
+            transform: translate(0, 10px) rotate(-45deg);
+            
+        }
+        .cliked #sec {opacity: 0;}
+
+        .cliked #third {
+        transform: translate(0, -10px) rotate(45deg);
+        }
+        #nav-menu{
+            display: block;
+            opacity: 0;
+            position: fixed;
+            top:63px;
+            z-index: 1;
+            margin-top: 27px;
+            width:auto;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            backdrop-filter: blur(4px);
+            padding: 20px 0;
+            border: none;
+            transition: all 0.6s;
+            
+        }
+        #nav-menu ul{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: inherit;
+            width: auto;
+            position: absolute;
+            top:0;
+            right:inherit;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+        }
+        #nav-menu ul li{
+            display: none;
+            
+            margin: 10px 20px 0 30px;
+        }
+        .cliked #nav-menu{
+            opacity: 1;
+        }
+
+
+        @media (max-width: 858px) {
+            #bars{
+            display: block;
+            position: absolute;
+            left:10px;
+            top:50%;
+            transform: translate(0,-55%);
+            }
+            #nav-menu{
+              left:0;
+            }
+            
+            #nav-menu ul li{
+              display:flex;
+            }
+            #nav-menu ul li a:hover{
+              color: white;
+              background-color: #e8701f;
+              transition: color 0s, background-color 0s;
+              border-radius: 20px;
+              background: rgb(239, 188, 0);
+              background: linear-gradient( 90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100% );
+            }
+            
+            #nav-menu.sticky-nav-menu ul{
+              background: linear-gradient( rgba(249, 177, 43, 0.7),rgb(247, 113, 3));
+              color: white !important;
+              border-bottom: 1.5px solid rgb(0, 0, 0);
+              backdrop-filter: blur(3px);
+            }
+            #nav-menu.sticky-nav-menu{
+              top:52px;
+            }
+        }
+      </style>
+
+      <script>
+        function togMenu(obj){
+            var headMenu = document.querySelector('.navbar nav');
+            obj.classList.toggle("cliked");
+            if(obj.classList.contains('cliked')){
+              headMenu.style.borderBottomLeftRadius = '0px';
+            }else{
+              headMenu.style.borderBottomLeftRadius=headMenu.style.borderBottomRightRadius;
+            }
+        }
+        window.addEventListener("scroll", function () {
+            var sideMenu = document.getElementById('nav-menu');
+            sideMenu.classList.toggle("sticky-nav-menu", window.scrollY > 50)
+            })
+      
+      </script>
+      
 
       <style>
         .toggle-container {
@@ -504,7 +830,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-top: 30px;
+          margin: 30px 0 0 30px;
           right: -4px;
           top: 15px;
         }
@@ -634,7 +960,7 @@
         <br><br><br>
         <h1>Open Source Village</h1>
         <h1 class="wow fadeInUp" data-wow-delay="0.4s">Hello, Villager</h1>
-        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are <strong>Open Source Village</strong></h3>
+        <h3 class="wow fadeInUp" data-wow-delay="0.6s">We are the <strong>Open Source Village</strong></h3>
         <h3 class="wow fadeInUp" data-wow-delay="0.8s"><strong>Join </strong>our community now</h3>
         <a href="https://discord.gg/mM9qFh2uZR" class="btn btn-lg btn-default smoothScroll wow fadeInUp"
           data-wow-delay="1s" style="color:white;">
@@ -693,6 +1019,7 @@
       </div>
     </div>
   </section>
+  <br>
 
   <script>
     // JavaScript to animate the counter
@@ -1185,6 +1512,7 @@
       background-color: #fff;
       border-color: #333;
       outline: none;
+      color:black !important;
     }
 
     .textarea .input {
@@ -1299,10 +1627,10 @@
               <i class="fab fa-facebook-f"></i>
             </a>
             <a href="#">
-              <i class="fab fa-twitter"></i>
+              <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a href="#">
-              <i class="fab fa-instagram"></i>
+              <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="https://www.linkedin.com/company/open-source-village/">
               <i class="fab fa-linkedin-in"></i>
@@ -1310,6 +1638,14 @@
           </div>
         </div>
       </div>
+      <style>
+        a:hover .fa-brands{
+          color: yellow;
+        }
+        .fa-brands{  
+          font-size: 1rem;
+        }
+      </style>
       <div class="contact-form">
         <span class="circle one"></span>
         <span class="circle two"></span>
@@ -1419,6 +1755,7 @@
     .feedback-form input[type="email"]:focus,
     .feedback-form textarea:focus {
       outline: none !important;
+      color: black !important;
     }
 
     .feedback-form button[type="submit"] {
