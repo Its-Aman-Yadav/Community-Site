@@ -152,6 +152,18 @@
             transform-origin: 50% 50%;
         }
         
+        .Lastupdate {
+          margin-bottom: 14px;
+          font-size: 20px;
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif;
+          font-weight: 500;
+          margin-top: 0px;
+        }
+        #last-updated-date {
+          font-size: 19px;
+        }
+
+
     </style>
 </head>
 
@@ -367,6 +379,7 @@ document.body.style.overflow = 'auto';
               <div class="hr-line"></div>
         </header>
         <main class="main-content" >
+          <div class="Lastupdate">Last updated: <span id="last-updated-date"></span></div>
             <section class="section" >
                 <h2 class="section-title">Introduction</h2>
                 <p class="section-content">Welcome to Open Source Village. We value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and protect your data when you use our website and services.</p>
@@ -436,7 +449,45 @@ document.body.style.overflow = 'auto';
         </main>
     </div>
     <special-footer></special-footer>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          const loader = document.getElementById("loader");
+          if (loader) {
+            loader.style.display = "none";
+          } else {
+            console.error("Element with ID 'loader' not found.");
+          }
+        }, 500);
+    
+        // Update the date dynamically
+        function updateLastUpdatedDate() {
+          const dateElement = document.getElementById("last-updated-date");
+          const now = new Date();
+          const day = now.getDate();
+          const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ];
+          const month = monthNames[now.getMonth()]; // Get the full month name
+          const year = now.getFullYear();
+          dateElement.textContent = `${month} ${day}, ${year}`;
+        }
+    
+        // Update the date weekly
+        function updateWeekly() {
+          const now = new Date();
+          const dayOfWeek = now.getDay(); // 0 (Sunday) to 6 (Saturday)
+          const timeUntilNextUpdate = (7 - dayOfWeek) * 24 * 60 * 60 * 1000; // Time until next Sunday
+          updateLastUpdatedDate();
+          setTimeout(updateWeekly, timeUntilNextUpdate);
+        }
+    
+        // Initialize weekly updates
+        updateWeekly();
+      });
+    </script>
+    
     <script src="footer/footer.js"></script>
     <script src="trail.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
