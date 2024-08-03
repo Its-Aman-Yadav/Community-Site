@@ -4037,3 +4037,6 @@ body.dark-mode .offering p {
 #acceptCookies:hover{
   background-color: #e22d00;
 }
+body.dark-mode h5{
+  color: white;
+}
