@@ -360,6 +360,40 @@
       body.dark-theme .social i {
         color: #ffffff;
       }
+          /* Add your CSS styling here */
+          .contact-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+        }
+        .contact-popup-content {
+            margin: 20px 0;
+        }
+        .contact-popup-icon {
+            margin: 20px 0;
+        }
+        .contact-popup-button {
+            padding: 10px 20px;
+            background-color: #e66f00;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        #thankYouMessage, #errorMessage {
+            display: none;
+            margin: 10px 0;
+            color: red;
+            font-weight: bold;
+        }
+        #thankYouMessage {
+            color: green;
+        }
     </style>
   </head>
   <body>
@@ -442,43 +476,75 @@
               </div>
             </div>
           </div>
+          <div id="thankYouMessage">Thank you! Your message has been sent.</div>
+          <div id="errorMessage">Please fill out all fields.</div>
+      
           <div class="right">
-            <h2>Get in Touch</h2>
-            <div class="form-container">
-              <form class="form" action="#" method="post">
-                <label for="name">Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                /><br />
-                <label for="email">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your email"
-                  required
-                /><br />
-                <label for="message">Message:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Your message"
-                  required
-                ></textarea
-                ><br />
-                <div class="usersubmit">
-                  <input type="submit" value="Submit" />
-                </div>
-              </form>
-            </div>
+              <h2>Get in Touch</h2>
+              <div class="form-container">
+                  <form id="contactForm" class="form" action="#" method="post">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" placeholder="Your name" required /><br />
+      
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" placeholder="Your email" required /><br />
+      
+                      <label for="phone">Phone:</label>
+                      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required /><br />
+      
+                      <label for="message">Message:</label>
+                      <textarea id="message" name="message" placeholder="Your message" required></textarea><br />
+      
+                      <div class="usersubmit">
+                          <input type="submit" value="Submit" />
+                      </div>
+                  </form>
+              </div>
+          </div>
+      
+          <div id="contactPopup" class="contact-popup" style="display: none;">
+              <div class="contact-popup-content">
+                  <h2>Thank you for contacting us!🧡</h2>
+                  <div class="contact-popup-icon">
+                      <img src="./images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120" />
+                  </div>
+                  <p>Your message has been received.<br />We will get back to you shortly.</p>
+                  <button class="contact-popup-button" onclick="closeContactPopup()">Back to Home</button>
+              </div>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          const thankYouMessage = document.getElementById('thankYouMessage');
+          const errorMessage = document.getElementById('errorMessage');
+          const name = document.querySelector('input[name="name"]').value.trim();
+          const email = document.querySelector('input[name="email"]').value.trim();
+          const phone = document.querySelector('input[name="phone"]').value.trim();
+          const message = document.querySelector('textarea[name="message"]').value.trim();
+
+          if (name === "" || email === "" || phone === "" || message === "") {
+              errorMessage.style.display = 'block';
+              thankYouMessage.style.display = 'none';
+          } else {
+              errorMessage.style.display = 'none';
+              thankYouMessage.style.display = 'block';
+              setTimeout(function () {
+                  thankYouMessage.style.display = 'none';
+                  document.getElementById('contactForm').reset();
+              }, 10);
+              document.getElementById('contactPopup').style.display = 'block';
+          }
+      });
+
+      function closeContactPopup() 
+      {
+        window.location.href = 'index.html';
+        document.getElementById('contactPopup').style.display = 'none';
+      }
+  </script>
     <script>
       const themeToggle = document.getElementById("theme-toggle");
       themeToggle.addEventListener("click", () => {
