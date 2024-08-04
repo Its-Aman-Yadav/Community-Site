@@ -225,7 +225,21 @@ video#background-video {
       transform: rotate(-90deg);
       transform-origin: 50% 50%;
     }
-
+    @media (max-width: 768px) 
+    {
+    .theme-switch,
+    #checkbox 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  
+    #image 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  }
    
   </style>
 

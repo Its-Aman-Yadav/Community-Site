@@ -64,7 +64,21 @@
       .license-container p {
         color: #666;
       }
-
+      @media (max-width: 768px) 
+      {
+      .theme-switch,
+      #checkbox 
+      {
+        opacity: 0;
+        pointer-events: none; 
+      }
+    
+      #image 
+      {
+        opacity: 0;
+        pointer-events: none; 
+      }
+    }
       /* Media query for smaller devices */
       @media (max-width: 768px) {
         .license-container {
