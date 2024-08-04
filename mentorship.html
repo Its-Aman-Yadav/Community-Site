@@ -316,7 +316,21 @@ video#background-video {
         max-width: 100%;
       }
     }
-    
+    @media (max-width: 768px) 
+    {
+    .theme-switch,
+    #checkbox 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  
+    #image 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  }
 /* Adjustments for small screens */
 @media (max-width: 768px) {
   
