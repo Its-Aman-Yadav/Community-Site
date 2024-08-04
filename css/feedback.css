@@ -13,12 +13,12 @@ body {
   font-size: 40px;
   margin-bottom: 30px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   transition: box-shadow 0.3s ease;
 }
 
 .rating-container:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 }
 
 .rating-container button {
@@ -483,8 +483,8 @@ body.dark-mode .rate-us {
 
 body.dark-mode .rating-container button {
   color: #555555;
-  background-color: #888;
-  border: 1px solid #888;
+  /* background-color: #888; */
+  /* border: 1px solid #888; */
 }
 
 body.dark-mode .rating-container button.filled {
