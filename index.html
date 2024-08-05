@@ -235,7 +235,7 @@
       margin-top: 10px;
   }
   .testimonial-card {
-      flex: 0 0 20%;
+      flex: 0 0 250px;
       box-sizing: border-box;
       padding: 20px;
       /* background: #fff; */
@@ -270,13 +270,14 @@
       font-family: bold;
       color: #b80000;
   }
-  
+
   @keyframes scroll {
       0% {
           transform: translateX(0);
       }
       100% {
-          transform: translateX(-100%);
+        --scrollTimes:calc(-1500px - 180px + 100vw);
+          transform: translateX(var(--scrollTimes));
       }
   }
   
@@ -319,7 +320,7 @@
   }
   
   .testimonial-container .testimonial-card {
-      animation: scroll 15s linear infinite;
+      animation: scroll 15s linear 2s infinite;
   }
 
   /* Style for the cookie modal */
