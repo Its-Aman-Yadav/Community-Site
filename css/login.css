@@ -8,9 +8,7 @@
 
 body {
   display: flex;
-  background: url(images/Slide3.jpg) no-repeat center center;
-  background-size: cover;
-  background: url(images/Slide3.jpg);
+  background: url("images/Slide3.jpg") no-repeat center;
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
@@ -379,15 +377,15 @@ input {
   fill: white;
 }
 /* social icon hover  */
-.social-container #fb:hover{
+.social-container #fb:hover {
   color: white;
-  background: #1877F2;
+  background: #1877f2;
 }
-.social-container #goog:hover{
+.social-container #goog:hover {
   color: white;
-  background:  #DB4437;
+  background: #db4437;
 }
-.social-container #lin:hover{
+.social-container #lin:hover {
   color: white;
-  background: #0A66C2;
+  background: #0a66c2;
 }
