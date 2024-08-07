@@ -313,6 +313,10 @@ ul li {
   overflow: scroll; 
   scroll-behavior: smooth;
 }
+body.dark-mode .testimonial-section{
+  
+  background: linear-gradient(rgb(0, 0, 0), rgba(32, 32, 32, 0.847), #181818e4);
+}
 
 .testimonial-container {
   max-width: 1200px;
@@ -326,7 +330,9 @@ ul li {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
-
+body.dark-mode .testimonial-section h2{
+  color: #acaaaa;
+}
 .testimonial-title {
   text-align: center;
   font-size: 2em;
@@ -359,6 +365,9 @@ ul li {
   text-align: center;
   position: relative;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+body.dark-mode .testimonial-card{
+  background: #141414;
 }
 
 .testimonial-card:hover {
