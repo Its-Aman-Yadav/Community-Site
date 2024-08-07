@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login/Signup</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/login.css" /> 
+    <link rel="stylesheet" href="css/login.css" />
     <link rel="icon" href="favicon.ico" />
     <style>
       /* Add styles for the success banners */
       .success-banner {
         display: none;
-        background-color: #4CAF50;
+        background-color: #4caf50;
         color: white;
         padding: 15px;
         text-align: center;
@@ -26,8 +29,12 @@
   </head>
   <body>
     <!-- Success banners -->
-    <div id="loginSuccessBanner" class="success-banner">Logged in successfully</div>
-    <div id="registerSuccessBanner" class="success-banner">Registered successfully</div>
+    <div id="loginSuccessBanner" class="success-banner">
+      Logged in successfully
+    </div>
+    <div id="registerSuccessBanner" class="success-banner">
+      Registered successfully
+    </div>
 
     <!-- Chatbot integration section -->
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
@@ -43,8 +50,10 @@
         lazySocket: true,
         themeName: "prism",
         botName: "Open Source Village",
-        avatarUrl: "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
-        stylesheet: "https://webchat-styler-css.botpress.app/prod/328bf234-c9e7-4f98-9c94-69f1a0877b98/v99808/style.css",
+        avatarUrl:
+          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+        stylesheet:
+          "https://webchat-styler-css.botpress.app/prod/328bf234-c9e7-4f98-9c94-69f1a0877b98/v99808/style.css",
         frontendVersion: "v1",
         useSessionStorage: true,
         enableConversationDeletion: true,
@@ -61,26 +70,38 @@
           <input type="text" placeholder="Name" id="registerName" />
           <input type="email" placeholder="Email" id="registerEmail" />
           <div class="input-container">
-            <input type="password" placeholder="Password" id="registerPassword" />
-            <i class="far fa-eye-slash" id="toggleRegisterPassword" style="cursor: pointer"></i>
+            <input
+              type="password"
+              placeholder="Password"
+              id="registerPassword"
+            />
+            <i
+              class="far fa-eye-slash"
+              id="toggleRegisterPassword"
+              style="cursor: pointer"
+            ></i>
           </div>
           <button type="submit">Register</button>
           <div class="social-container">
-
             <a id="fb" href="https://www.facebook.com" class="social"
               ><i class="lni lni-facebook-fill"></i
             ></a>
             <a id="goog" href="https://www.google.com" class="social"
               ><i class="lni lni-google"></i
             ></a>
-            <a id="lin" href="https://www.linkedin.com/company/open-source-village/" class="social"
-
-            <a href="https://www.linkedin.com/company/open-source-village/" class="social"
-            <a id="lin" href="https://www.linkedin.com" class="social"
-
+            <a
+              id="lin"
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              <a
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              <a
+              id="lin"
+              href="https://www.linkedin.com"
+              class="social"
               ><i class="lni lni-linkedin-original"></i
             ></a>
-
           </div>
         </form>
       </div>
@@ -91,7 +112,11 @@
           <input type="email" placeholder="Email" id="loginEmail" />
           <div class="input-container">
             <input type="password" placeholder="Password" id="loginPassword" />
-            <i class="far fa-eye-slash" id="togglePassword" style="cursor: pointer"></i>
+            <i
+              class="far fa-eye-slash"
+              id="togglePassword"
+              style="cursor: pointer"
+            ></i>
           </div>
           <div class="content">
             <div class="checkbox">
@@ -106,7 +131,6 @@
           <button type="submit">Login</button>
           <span>or use your account</span>
           <div class="social-container">
-
             <a id="fb" href="https://www.facebook.com" class="social"
               ><i class="lni lni-facebook-fill"></i
             ></a>
@@ -114,12 +138,19 @@
               ><i class="lni lni-google"></i
             ></a>
 
-            <a id="lin" href="https://www.linkedin.com/company/open-source-village/" class="social"
-            <a href="https://www.linkedin.com/company/open-source-village/" class="social"
-            <a id="lin" href="https://www.linkedin.com/company/open-source-village/" class="social"
+            <a
+              id="lin"
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              <a
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              <a
+              id="lin"
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
               ><i class="lni lni-linkedin-original"></i
             ></a>
-
           </div>
         </form>
       </div>
@@ -139,15 +170,17 @@
               Start your <br />
               journey now
             </h1>
-            <p>If you don't have an account yet, register and start your journey.</p>
+            <p>
+              If you don't have an account yet, register and start your journey.
+            </p>
             <button class="ghost" id="register">
               Register
               <i class="lni lni-arrow-right register"></i>
             </button>
-            <a style="margin: 0;" href="index.html">
+            <a style="margin: 0" href="index.html">
               <button class="ghost" id="home">
-              <i class="lni lni-arrow-left register"></i>
-              <span style="color: white;">Home</span>
+                <i class="lni lni-arrow-left register"></i>
+                <span style="color: white">Home</span>
               </button>
             </a>
           </div>
@@ -161,31 +194,42 @@
         const registerButton = document.getElementById("register");
         const loginButton = document.getElementById("login");
         const container = document.getElementById("container");
-        const loginSuccessBanner = document.getElementById("loginSuccessBanner");
-        const registerSuccessBanner = document.getElementById("registerSuccessBanner");
+        const loginSuccessBanner =
+          document.getElementById("loginSuccessBanner");
+        const registerSuccessBanner = document.getElementById(
+          "registerSuccessBanner"
+        );
 
         registerButton.addEventListener("click", (event) => {
           event.preventDefault();
           container.classList.add("right-panel-active");
-          document.getElementById("registerForm").scrollIntoView({ behavior: "smooth" });
+          document
+            .getElementById("registerForm")
+            .scrollIntoView({ behavior: "smooth" });
         });
 
         loginButton.addEventListener("click", (event) => {
           event.preventDefault();
           container.classList.remove("right-panel-active");
-          document.getElementById("loginForm").scrollIntoView({ behavior: "smooth" });
+          document
+            .getElementById("loginForm")
+            .scrollIntoView({ behavior: "smooth" });
         });
 
         // Form validation and submission
-        document.getElementById("registerForm").addEventListener("submit", function (event) {
-          event.preventDefault();
-          validateForm("register");
-        });
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            validateForm("register");
+          });
 
-        document.getElementById("loginForm").addEventListener("submit", function (event) {
-          event.preventDefault();
-          validateForm("login");
-        });
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            validateForm("login");
+          });
 
         function validateForm(formType) {
           let email, password, name;
@@ -244,7 +288,10 @@
         const passwordInput = document.getElementById("loginPassword");
 
         togglePassword.addEventListener("click", function () {
-          const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
           passwordInput.setAttribute("type", type);
 
           this.classList.toggle("fa-eye");
@@ -252,11 +299,17 @@
         });
 
         // Password toggle visibility for register
-        const toggleRegisterPassword = document.getElementById("toggleRegisterPassword");
-        const passwordRegisterInput = document.getElementById("registerPassword");
+        const toggleRegisterPassword = document.getElementById(
+          "toggleRegisterPassword"
+        );
+        const passwordRegisterInput =
+          document.getElementById("registerPassword");
 
         toggleRegisterPassword.addEventListener("click", function () {
-          const type = passwordRegisterInput.getAttribute("type") === "password" ? "text" : "password";
+          const type =
+            passwordRegisterInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
           passwordRegisterInput.setAttribute("type", type);
 
           this.classList.toggle("fa-eye");
