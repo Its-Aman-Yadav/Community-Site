@@ -235,7 +235,7 @@
       margin-top: 10px;
   }
   .testimonial-card {
-      flex: 0 0 20%;
+      flex: 0 0 250px;
       box-sizing: border-box;
       padding: 20px;
       /* background: #fff; */
@@ -270,13 +270,14 @@
       font-family: bold;
       color: #b80000;
   }
-  
+
   @keyframes scroll {
       0% {
           transform: translateX(0);
       }
       100% {
-          transform: translateX(-100%);
+        --scrollTimes:calc(-1500px - 180px + 100vw);
+          transform: translateX(var(--scrollTimes));
       }
   }
   
@@ -293,6 +294,12 @@
       width: 60px;
       height: 100%;
       z-index: 2;
+  }
+  body.dark-mode .testimonial-container::before{
+    background: transparent !important;
+  }
+  body.dark-mode .testimonial-container::after{
+    background: transparent !important;
   }
   
   .testimonial-container::before {
@@ -319,7 +326,7 @@
   }
   
   .testimonial-container .testimonial-card {
-      animation: scroll 15s linear infinite;
+      animation: scroll 15s linear 2s infinite;
   }
 
   /* Style for the cookie modal */
@@ -327,21 +334,16 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
     justify-content: center; /* Center align items horizontally */
     align-items: center; /* Center align items vertically */
 }
 
 /* Modal content box */
 .cookie-modal-content {
-    background: linear-gradient(to bottom right, #FFD700, #FFA500); /* Yellow to orange gradient */
+    background: linear-gradient(to bottom right, #ffe656, #ffc400); /* Yellow to orange gradient */
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 10px 20px;
     border-radius: 10px; /* Rounded corners */
     width: 80%; /* Could be more or less, depending on screen size */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
@@ -349,6 +351,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    left: 10px;
+    /* bottom: 10px; */
 }
 
 /* The close button */
@@ -387,7 +391,7 @@
 }
 
 #acceptCookies:hover {
-    background-color: #FF8C00; /* Darker orange on hover */
+    background-color: #ff5e00; /* Darker orange on hover */
 }
 
   
@@ -1252,42 +1256,6 @@ function closePopup() {
     </div>
   </div>
   </section>
-  <!-- contact us  -->
-  <section id="contact" class="section-padding bg-gray contactSection" data-aos="fade-up" data-aos-duration="1500">
-    <div class="Contactsec">
-        <div class="section-header text-center">
-            <h2 class="text_dark wow fadeInDown" data-wow-delay="0.3s">
-                <span class="gradient-text">Contact Us</span>
-            </h2>
-            <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-        </div>
-        <div class="d-flex justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                <form class="mt-5" id="contactForm" method="post" onsubmit="showContactPopup(event)">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" id="inputName" placeholder="Name" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="subj" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id="msg" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button class="Cbtn text_dark" id="checkBtn" type="submit">Submit</button>
-                    </div>
-                    <div id="msgSubmit" class="h3 text-left hidden"></div>
-                </form>
-            </div>
-        </div>
-    </div>
-  </section>
-  
 
 <script>
   const container = document.querySelector('.testimonial-container');
