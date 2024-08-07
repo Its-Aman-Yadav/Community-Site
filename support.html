@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> 
+ 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -87,6 +87,101 @@
       pointer-events: none; 
     }
   }
+
+.contactform{
+  display: grid;
+  grid-auto-flow:row;
+}
+
+ .contact-form{
+  width: 800px;
+  margin-top: 40px !important;
+ }
+
+#success-message {
+  display: none;
+  background-color: green;
+  color: white !important;
+  padding: 10px;
+ 
+}
+
+
+.contact {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: auto;
+  background: linear-gradient(white, rgb(247, 210, 62));
+  border-radius: 30px;
+  border: 2px solid orangered;
+  margin-bottom: 50px;
+}
+
+.contact-intro h2 {
+  color: #f85008;
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact-intro {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-intro p {
+  margin-bottom: 30px;
+  color: black;
+}
+
+
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-detail {
+  padding: 20px;
+  background-color: #fcfe88;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  flex: 1;
+  text-align: center;
+  border: 1px solid orangered;
+}
+
+.contact-detail:hover{
+background-color: rgb(255, 210, 76);
+box-shadow: 0 0 10px rgba(246, 63, 7, 0.9);
+border: 2px solid orangered;
+}
+
+.contact-detail p {
+  margin: 0;
+}
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgb(255, 136, 0,0.8);
+}
+
   </style>
    <link rel="stylesheet" href="css/support.css" />
 
@@ -470,7 +565,7 @@ input[type="text"], input[type="email"], textarea{
       
 
     </section>
-    <section id="query-form-section" data-aos="fade-up">
+    <!-- <section id="query-form-section" data-aos="fade-up">
       <h2>Submit Your Query</h2>
       <form id="query-form" action="#" method="POST" data-aos="fade-left">
         <div class="form-group">
@@ -490,8 +585,46 @@ input[type="text"], input[type="email"], textarea{
         </div>
       </form>
       <div id="success-message" class="hidden">We will connect you soon!</div>
-    </section>
+    </section> -->
     
+    <section class="contact" id="contact">
+      <div class="contact-intro">
+          <h2>Contact</h2>
+          <p>If you have any query, feel free to reach out to us:</p>
+          <div class="contact-details">
+              <div class="contact-detail">
+                  <p><i class="fa-solid fa-phone"></i> Phone:<br> (123) 456-7890</p>
+              </div>
+              <div class="contact-detail">
+                  <p><i class="fa-solid fa-envelope"></i> Email:<br> support@example.com</p>
+              </div>
+              <div class="contact-detail">
+                  <p><i class="fa-solid fa-map-marker"></i> Address: <br> 123 Main Street, India</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="contact-container">
+          <form class="contact-form" id="contact-form">
+              <div class="form-group-inline">
+                  <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required />
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="message">Query:</label>
+                  <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit">Submit</button>
+          </form>
+          <div id="success-message">Form submitted successfully!</div>
+      </div>
+  </section>
       
 
  
