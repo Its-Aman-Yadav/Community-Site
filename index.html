@@ -329,87 +329,212 @@
       animation: scroll 15s linear 2s infinite;
   }
 
-  /* Style for the cookie modal */
-.cookie-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    overflow: auto; /* Enable scroll if needed */
-    justify-content: center; /* Center align items horizontally */
-    align-items: center; /* Center align items vertically */
-}
+/* Style for the cookie modal */
+ .cookie-modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            top: 0; /* Full height */
+            left: 0; /* Full width */
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+            justify-content: center; /* Center align items horizontally */
+            align-items: center; /* Center align items vertically */
+        }
 
-/* Modal content box */
-.cookie-modal-content {
-    background: linear-gradient(to bottom right, #ffe656, #ffc400); /* Yellow to orange gradient */
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 10px 20px;
-    border-radius: 10px; /* Rounded corners */
-    width: 80%; /* Could be more or less, depending on screen size */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
-    color: #333; /* Text color */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 10px;
-    /* bottom: 10px; */
-}
+        /* Modal content box */
+        .cookie-modal-content {
+            background: linear-gradient(to bottom right, #ffe656, #ffc400); /* Yellow to orange gradient */
+            margin: 0 auto; /* Centered */
+            padding: 20px 30px;
+            border-radius: 10px; /* Rounded corners */
+            width: 80%; /* Could be more or less, depending on screen size */
+            max-width: 500px; /* Max width for large screens */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+            color: #333; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
 
-/* The close button */
-.cookie-close {
-    color: #fff;
-    align-self: flex-end;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: transparent; /* Transparent background */
-    border: none; /* No border */
-    margin: -10px -10px 0 0; /* Adjust positioning */
-}
+        /* The close button */
+        .cookie-close {
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: transparent; /* Transparent background */
+            border: none; /* No border */
+        }
 
-.cookie-close:hover,
-.cookie-close:focus {
-    color: #000;
-    text-decoration: none;
-}
+        .cookie-close:hover,
+        .cookie-close:focus {
+            color: #000;
+            text-decoration: none;
+        }
 
-/* Style for the text */
-.cookie-modal-content p {
-    margin: 15px 0;
-    text-align: center;
-}
+        /* Style for the text */
+        .cookie-modal-content p {
+            margin: 20px 0;
+            text-align: center;
+        }
 
-/* Style for the accept button */
-#acceptCookies {
-    background-color: #FFA500; /* Orange background */
-    color: white; /* White text */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
+        /* Style for the accept button */
+        #acceptCookies {
+            background-color: #FFA500; /* Orange background */
+            color: white; /* White text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
 
-#acceptCookies:hover {
-    background-color: #ff5e00; /* Darker orange on hover */
-}
+        #acceptCookies:hover {
+            background-color: #ff5e00; /* Darker orange on hover */
+        }
 
-  
-  
-  </style>
+        /* Optional: Add some global styles for better visuals */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Style for the popup (login modal) */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            top: 0; /* Full height */
+            left: 0; /* Full width */
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+            justify-content: center; /* Center align items horizontally */
+            align-items: center; /* Center align items vertically */
+        }
+
+        .popup-content {
+            background: #fff;
+            margin: 0 auto; /* Centered */
+            padding: 20px 30px;
+            border-radius: 10px; /* Rounded corners */
+            width: 80%; /* Could be more or less, depending on screen size */
+            max-width: 500px; /* Max width for large screens */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+            color: #333; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .close-btn {
+            color: #000;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: transparent; /* Transparent background */
+            border: none; /* No border */
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #ff5e00; /* Orange on hover */
+            text-decoration: none;
+        }
+
+        .popup-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .popup-header .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .popup-header h2 {
+            margin: 0;
+        }
+
+        .popup-content h3 {
+            margin: 10px 0;
+        }
+
+        .popup-content p {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .btn {
+            background-color: #FFA500; /* Orange background */
+            color: white; /* White text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .btn:hover {
+            background-color: #ff5e00; /* Darker orange on hover */
+        }
+    </style>
+    <title>Open Source Village</title>
+</head>
 <body>
-  <!-- cookie modal  -->
-
-  <div id="cookieModal" class="cookie-modal">
-    <div class="cookie-modal-content">
-        <span class="cookie-close">&times;</span>
-        <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our cookie policy.</p>
-        <button id="acceptCookies">Accept</button>
+    <!-- Cookie modal -->
+    <div id="cookieModal" class="cookie-modal">
+        <div class="cookie-modal-content">
+            <span class="cookie-close">&times;</span>
+            <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our cookie policy.</p>
+            <button id="acceptCookies">Accept</button>
+        </div>
     </div>
-</div>
 
-<script src="cookie.js"></script>
+    <!-- Login modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <div class="popup-header">
+                <img src="image.gif" alt="Open Source Village Logo" class="logo">
+                <h2>Open Source Village</h2>
+            </div>
+            <h3>Start Your Journey Now!💡</h3>
+            <p>If you don't have an account yet, register and start your journey🌐👥</p>
+            <button class="btn" onclick="window.location.href='login.html'">Login/Register ✉</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Show the popup when the page loads
+            document.getElementById('popup').style.display = 'flex';
+
+            // Automatically close the popup after 20 seconds
+            // setTimeout(closePopup, 20000);
+        });
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+    <script src="cookie.js"></script>
 
   <!-- login modal  -->
   <div id="popup" class="popup">
