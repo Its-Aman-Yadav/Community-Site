@@ -683,7 +683,7 @@ body.dark-mode .accordion-content {
   background: linear-gradient(to right, #e5e5be, #003973);
 }
 body.dark-mode .card1 {
-  background: linear-gradient(to right, #535353, #396a92);
+  background: linear-gradient(to bottom, #101010, #160633);
 }
 body.dark-mode .navbar nav.sticky {
   background: linear-gradient(rgb(6, 2, 36), rgba(3, 4, 70, 0.7));
@@ -694,7 +694,7 @@ body.dark-mode .navbar nav.sticky {
   backdrop-filter: blur(6px);
 }
 body.dark-mode .card1 .card-text {
-  color: #fff;
+  color: #dbdbdb;
 }
 
 body.dark-mode #contact .form .contact-info {
@@ -2613,7 +2613,7 @@ h3 {
   height: 100%;
 
   border-width: 5px;
-  border-color: #000;
+  border-color:  rgb(255, 204, 1);
 }
 
 .col-md-4 {
@@ -2629,7 +2629,11 @@ h3 {
 
 .img-fluid {
   border-radius: 50%;
-  border: 5px solid rgb(23, 23, 23);
+  border: 5px solid rgb(255, 166, 1);
+}
+
+body.dark-mode .img-fluid{
+  border:  5px solid #0082e6;
 }
 
 .card1:hover {
