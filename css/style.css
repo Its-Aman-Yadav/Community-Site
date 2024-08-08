@@ -3919,6 +3919,23 @@ body.dark-mode .about-section {
 
 .offerings {
   margin-top: 50px;
+  margin-left:10px;
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  float: left;
+ 
+}
+
+.offering i{
+  font-size: 50px !important;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+  color:#ff8000;
+  text-align: right;
+  /* text-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  text-shadow: 0px 2px 2px #321300;
 }
 
 .offerings h3 {
@@ -3928,6 +3945,10 @@ body.dark-mode .about-section {
   text-align: center;
 }
 
+.row-0{
+  display: flex;
+  flex-direction: row;
+}
 body.dark-mode .offerings h3 {
   color: #f0f0f0;
 }
@@ -3940,23 +3961,24 @@ body.dark-mode .offerings h3 {
 }
 
 .offering {
-  flex: 1;
+  /* flex: 1;
+  flex-direction: ; */
   padding: 20px;
+  max-width: 250px;
+  box-shadow: rgba(110, 61, 0, 0.5) 0px 5px 10px 0px inset;
+  /* box-shadow: rgba(183, 102, 2, 0.5) 0px 0px 8px 4px inset; */
   background: rgb(255, 255, 255);
-  background: radial-gradient(circle, white 0%, rgba(255, 201, 2, 1) 100%);
+  background: linear-gradient(  rgba(255, 201, 2, 1) 0%, white 100%);
   margin: 0px 20px;
-  border-radius: 10px;
-  border: 2px solid #ff7300;
+  border-radius:10px;
+  /* border: 2px solid rgba(86, 48, 0, 0.5); */
   transition: all 0.3s linear;
 }
 
 body.dark-mode .offering {
-  background: radial-gradient(
-    circle,
-    rgb(167, 167, 167) 0%,
-    rgba(3, 4, 70, 0.7) 100%
-  );
-  border: 2px solid rgb(204, 204, 204);
+  background:linear-gradient( #17013f 0%, #003973 100%);
+  border: 2px solid rgba(194, 245, 249, 0.5);
+  box-shadow: rgba(194, 245, 249, 0.5) 0px 5px 10px 0px inset;
 }
 
 .offering:hover {
@@ -3968,10 +3990,12 @@ body.dark-mode .offering:hover {
   box-shadow: 1px 2px 2px 3px #c1b7f8aa;
 }
 .offering h4 {
-  color: #ff7300;
+  color: #ff5500;
   font-size: 1.7em;
   font-weight: 700;
   margin-bottom: 10px;
+  text-align: left !important;
+  text-shadow: 1px 1px 1px #7b4523d1;
 }
 
 body.dark-mode .offering h4 {
@@ -3985,10 +4009,19 @@ body.dark-mode .offering h4 {
 .offering p {
   color: #5d5d5d;
   font-size: 1.2em;
+  text-align: left !important;
 }
 
 body.dark-mode .offering p {
   color: #d9d9d9;
+}
+
+body.dark-mode .offerings i{
+  color:rgb(209, 232, 253) !important;
+  text-shadow: 0px 2px 2px #979797c7;
+}
+body.dark-mode .offering h4{
+  text-shadow: 0px 2px 2px #979797c7;
 }
 /* cookie modal  */
 .cookie-modal {
