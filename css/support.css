@@ -35,7 +35,6 @@
   line-height: 25px;
 }
 
-
 main {
   padding: 20px;
   /* max-width: 800px; */
@@ -124,8 +123,8 @@ main h2 {
   }
 
   .home-thumb .btn:hover {
-
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255), 0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255),
+      0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
   }
 
   .logo-link {
@@ -153,7 +152,7 @@ main h2 {
     color: white;
     /* Logo text color */
   }
-  .goals{
+  .goals {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -162,7 +161,6 @@ main h2 {
 
     box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 0 0 2px rgb(255, 255, 255),
       0 0 3px rgb(255, 255, 255), 0 0 200px rgb(255, 255, 255);
-
   }
 }
 
@@ -368,22 +366,25 @@ nav {
   cursor: pointer;
   padding: 10px;
   font-weight: bold;
-  background-color: #fa9907;
+  background-color: #fd8320;
   border-radius: 5px;
 }
 
 .faq-question:hover {
-  background-color: #e1e1e1;
+  background-color: #edf898;
+  border: 2px solid black;
 }
 
 .faq-answer {
   display: none;
   padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #ddd;
+  border-top: 1px solid #f8f680;
+  background-color: #fdfcac;
+  color: black;
 }
 
 .faq-answer p {
+  color: black;
   margin: 0;
 }
 
@@ -451,16 +452,12 @@ nav {
   display: none;
 }
 
-
-
 body {
   position: relative;
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-
-
 
 video#background-video {
   position: fixed;
@@ -472,8 +469,6 @@ video#background-video {
   z-index: -1;
   background-size: cover;
 }
-
-
 
 /* Ensure the content is above the video */
 .license-container {
@@ -487,43 +482,36 @@ video#background-video {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-.license-container h1, .license-container h2 {
+.license-container h1,
+.license-container h2 {
   color: #333;
 }
-
-
 
 .license-container p {
   color: #666;
 }
 
-
-
 /* Media query for smaller devices */
 @media (max-width: 768px) {
   .license-container {
-      margin: 20px auto;
-      padding: 10px;
+    margin: 20px auto;
+    padding: 10px;
   }
 
   .scrollToTopBtn {
-      width: 40px;
-      height: 40px;
-      font-size: 16px;
-      line-height: 40px;
-      bottom: 80px;
-      right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    bottom: 80px;
+    right: 20px;
   }
 
   .progress-ring {
-      bottom: 75px;
-      right: 15px;
+    bottom: 75px;
+    right: 15px;
   }
 }
-
 
 #success-message {
   position: fixed;
