@@ -156,42 +156,41 @@ video#background-video {
             background-image: linear-gradient(to right, #ccc, #333, #ccc);
         }
 
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increased gap for better spacing */
+}
 
-        .benefits{
-          display: grid;
-          grid-auto-flow: row;  
-        }
-        .benefits h2{
-          margin-bottom: 20px;
-        }
-        .benefits .item{
-          margin-left: auto;
-          margin-right: auto;
-          background-color: #fcfafa;
-          margin-top: 10px;
-          display: grid;
-          justify-content:start;
-          gap: 15px;
-          align-items: center;
-          grid-auto-flow: column;
-          /* gap:10px; */
-          padding: 10px 15px;
-          font-size: 20px;
-          font-weight: 600;
-          width: fit-content;
-          border-radius: 10px;
-        }
+.benefits .item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #fcfafa;
+  padding: 15px 20px;
+  font-size: 18px; /* Slightly decreased font size */
+  font-weight: 600;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px; /* Set a max-width for better alignment */
+}
 
-        .benefits .item:hover{
-         box-shadow: 0px 0px 2px 2px rgb(229, 141, 1);
-        }
-        .benefits p{
-          margin-bottom: 0px;
-        }
-        .benefits .item img{
-          height:60px;
-          width: 60px;
-        }
+.benefits .item:hover {
+  box-shadow: 0px 0px 2px 2px rgb(229, 141, 1); /* Hover effect with box shadow */
+}
+
+.benefits .item img {
+  height: 60px;
+  width: 60px;
+}
+
+.benefits p {
+  margin: 0; /* Removed margin-bottom to avoid extra space */
+}
+
+
+
         .join .columnn{
           margin: 10px;
           display: grid;
