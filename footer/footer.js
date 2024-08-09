@@ -72,41 +72,41 @@ class SpecialFooter extends HTMLElement {
             <div class="col1" id="Serv">
               <h3>Services</h3>
               <div class="links">
-                <a href="open-learning.html"><i class="fa fa-book"></i> Open Learning</a>
-                <a href="mentorship.html"><i class="fa fa-users"></i> Mentorship</a>
-                <a href="network.html"><i class="fa fa-network-wired"></i> Network</a>
+                <a href="open-learning.html" target=”_blank”><i class="fa fa-book"></i> Open Learning</a>
+                <a href="mentorship.html" target=”_blank”><i class="fa fa-users"></i> Mentorship</a>
+                <a href="network.html" target=”_blank”><i class="fa fa-network-wired"></i> Network</a>
               </div>
             </div>
             <div class="col1" id="useful-links">
               <h3>Links</h3>
               <div class="links">
-                <a href="about us.html"><i class="fa fa-info-circle"></i> About</a>
-                <a href="our plan.html"><i class="fa fa-lightbulb"></i> Our Plan</a>
-                <a href="our program.html"><i class="fa fa-chalkboard-teacher"></i> Our Program</a>
-                <a href="member.html"><i class="fa fa-user-plus"></i> Become a Member</a>
-                <a href="support.html"><i class="fa fa-hands-helping"></i> Support</a>
-                <a href="contributor.html"><i class="fa fa-code-branch"></i> Contributors</a>
+                <a href="about us.html" target=”_blank”><i class="fa fa-info-circle"></i> About</a>
+                <a href="our plan.html" target=”_blank”><i class="fa fa-lightbulb"></i> Our Plan</a>
+                <a href="our program.html" target=”_blank”><i class="fa fa-chalkboard-teacher"></i> Our Program</a>
+                <a href="member.html" target=”_blank”><i class="fa fa-user-plus"></i> Become a Member</a>
+                <a href="support.html" target=”_blank”><i class="fa fa-hands-helping"></i> Support</a>
+                <a href="contributor.html" target=”_blank”><i class="fa fa-code-branch"></i> Contributors</a>
               </div>
             </div>
             <div class="col1" id="legal">
               <h3>Legal</h3>
               <div class="links">
-                <a href="terms&conditions.html"><i class="fa fa-file-alt"></i> Terms and Conditions</a>
-                <a href="privacypolicy.html"><i class="fa fa-user-secret"></i> Privacy Policy</a>
-                <a href="licensing.html"><i class="fa fa-balance-scale"></i> Licensing</a>
+                <a href="terms&conditions.html" target=”_blank”><i class="fa fa-file-alt"></i> Terms and Conditions</a>
+                <a href="privacypolicy.html" target=”_blank”><i class="fa fa-user-secret"></i> Privacy Policy</a>
+                <a href="licensing.html" target=”_blank”><i class="fa fa-balance-scale"></i> Licensing</a>
               </div>
             </div>
             <div class="col1" id="cont">
               <h3>Contact</h3>
               <div class="contact-details">
                 <div class="links">
-                  <a href="contact us.html"><i class="fa fa-envelope"></i> Contact Us</a>
+                  <a href="contact us.html" target=”_blank”><i class="fa fa-envelope"></i> Contact Us</a>
                 </div>
               </div>
               <h3>Feedback</h3>
               <div class="contact-details">
                 <div class="links">
-                  <a href="feedback.html"><i class="fa-solid fa-comments"></i> Give us Your feedback</a>
+                  <a href="feedback.html" target=”_blank”><i class="fa-solid fa-comments"></i> Give us Your feedback</a>
                 </div>
               </div>
             </div>
