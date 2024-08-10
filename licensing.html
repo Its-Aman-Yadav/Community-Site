@@ -101,38 +101,6 @@
         }
       }
 
-      /* Container specific for the license section */
-      .license-container {
-        max-width: 800px;
-        margin: 110px auto;
-        padding: 20px;
-        border-radius: 10px;
-        background: linear-gradient(white, #f5d244);
-      }
-      .license-container .copy {
-        color: #ee7f10;
-      }
-
-      .license-container h1 {
-        color: #333;
-        font-size: 2em;
-        /* Increase the size */
-        font-weight: bold;
-        /* Make it bold */
-        text-align: center;
-        /* Center the text */
-      }
-
-      .license-container h2 {
-        color: #333;
-        margin-top: 50px;
-      }
-
-      .license-container p {
-        margin: 10px 0;
-        color: #666;
-      }
-
       #image {
         height: 30px;
         /* Reduced height of the profile image */
@@ -411,6 +379,72 @@
             transform: translateX(13px);
             /* background-color: #34495e; */
           }
+
+          .license-container {
+  width: 70%;
+  margin: 100px auto;
+  padding: 25px;
+  border-radius: 10px;
+  background: linear-gradient(white, #f5d244);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.license-heading {
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.license-title {
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.license-copyright {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.license-text {
+  font-size: 1em;
+  line-height: 1.8;
+  color: #2b2b2b;
+  margin-bottom: 20px;
+}
+
+.lastupdate {
+  font-size: 1.1em;
+  text-align: right;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Dark Mode */
+body.dark-mode .license-container {
+  background: linear-gradient(rgb(36, 45, 57), rgb(16, 37, 60));
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .license-heading,
+body.dark-mode .license-title,
+body.dark-mode .license-copyright,
+body.dark-mode .lastupdate {
+  color: #ddd;
+}
+
+body.dark-mode .license-text {
+  color: #c0c0c0;
+}
+
         </style>
 
         <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
@@ -435,35 +469,37 @@
     </script>
 
     <!-- License Container -->
-<div class="license-container">
-  <h1>Licensing</h1>
-  <h2 class="license-title">MIT License</h2>
-  <p class="copy">Copyright (c) <span id="current-year"></span> Aman Yadav</p>
-  <p>
-    Permission is hereby granted, free of charge, to any person obtaining a
-    copy of this software and associated documentation files (the
-    "Software"), to deal in the Software without restriction, including
-    without limitation the rights to use, copy, modify, merge, publish,
-    distribute, sublicense, and/or sell copies of the Software, and to
-    permit persons to whom the Software is furnished to do so, subject to
-    the following conditions:
-  </p>
-  <p>
-    The above copyright notice and this permission notice shall be included
-    in all copies or substantial portions of the Software.
-  </p>
-  <p>
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-  </p>
-  <p class="lastupdate">Last updated: <span id="last-updated-date"></span></p>
-</div>
-
+    <div class="license-container">
+      <h1 class="license-heading">Licensing</h1>
+      <h2 class="license-title">MIT License</h2>
+      <p class="license-copyright">Copyright (c) <span id="current-year"></span> Aman Yadav</p>
+      <div class="license-text">
+        <p>
+          Permission is hereby granted, free of charge, to any person obtaining a
+          copy of this software and associated documentation files (the
+          "Software"), to deal in the Software without restriction, including
+          without limitation the rights to use, copy, modify, merge, publish,
+          distribute, sublicense, and/or sell copies of the Software, and to
+          permit persons to whom the Software is furnished to do so, subject to
+          the following conditions:
+        </p>
+        <p>
+          The above copyright notice and this permission notice shall be included
+          in all copies or substantial portions of the Software.
+        </p>
+        <p>
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+          OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+          MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+          IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+          CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+          TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+          SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        </p>
+      </div>
+      <p class="lastupdate">Last updated: <span id="last-updated-date"></span></p>
+    </div>
+    
 
     <!-- footer section -->
     <special-footer></special-footer>
