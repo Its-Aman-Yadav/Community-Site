@@ -586,6 +586,127 @@
         font-size: 22px;
         color: #e66f00;
       }
+      /* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Project Section */
+.project {
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.project h1 {
+  color: #FFA500;
+  font-size: 36px;
+  margin-bottom: 50px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Project Container */
+.pcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Project Card */
+.pcard {
+  background-color: #ffe70f;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pcard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.pimg img {
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid #ffa500;
+}
+
+/* Top Text */
+.ptop-text {
+  padding: 20px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.ptop-text .name {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pbtn a {
+  text-decoration: none;
+  background-color: #ffa500;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pbtn a:hover {
+  background-color: #e89b00;
+}
+
+/* Bottom Text */
+.pbottom-text {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.pbottom-text .ptext {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Keyframe Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pcard {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project h1 {
+    font-size: 28px;
+  }
+}
+
     </style>
 
     <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
