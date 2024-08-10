@@ -13,6 +13,17 @@
     <link rel="stylesheet" href="css/login.css" />
     <link rel="icon" href="favicon.ico" />
     <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("./images/Slide4.jpg") no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
       /* Add styles for the success banners */
       .success-banner {
         display: none;
@@ -25,6 +36,92 @@
         width: 100%;
         z-index: 1000;
       }
+      /* Light Mode (default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  background-color: #f5f5f5;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+input, button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #dddddd;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+.social-container .social {
+  color: #000000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.container.dark-mode {
+  background-color: #1e1e1e;
+}
+
+.form-container.dark-mode {
+  background-color: #2c2c2c;
+  border: 1px solid #333333;
+}
+
+input.dark-mode, button.dark-mode {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+button.dark-mode:hover {
+  background-color: #3a3a3a;
+}
+
+.social-container .social.dark-mode {
+  color: #ffffff;
+}
+    /* Toggle Button Styling */
+#darkModeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000000; /* Default color for light mode */
+  transition: color 0.3s;
+}
+
+/* Sun Icon for Light Mode */
+#darkModeToggle.sun::before {
+  content: "\2600"; /* Unicode for Sun */
+}
+
+/* Moon Icon for Dark Mode */
+#darkModeToggle.moon::before {
+  content: "\1F319"; /* Unicode for Moon */
+}
+
+/* Toggle Button Color for Dark Mode */
+body.dark-mode #darkModeToggle {
+  color: #ffffff; /* Color for dark mode */
+}
+
     </style>
   </head>
   <body>
@@ -187,6 +284,7 @@
         </div>
       </div>
     </div>
+    <button id="darkModeToggle"></button>
 
     <script src="log/script.js"></script>
     <script>
@@ -316,6 +414,49 @@
           this.classList.toggle("fa-eye-slash");
         });
       });
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const container = document.getElementById('container');
+    
+    // Load saved preference from localStorage
+    if (localStorage.getItem('dark-mode') === 'true') {
+      container.classList.add('dark-mode');
+      document.body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      container.classList.toggle('dark-mode');
+      document.body.classList.toggle('dark-mode');
+      
+      // Save preference to localStorage
+      localStorage.setItem('dark-mode', container.classList.contains('dark-mode'));
+    });
+  });
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const container = document.getElementById('container');
+    
+    // Check saved preference
+    if (localStorage.getItem('dark-mode') === 'true') {
+      document.body.classList.add('dark-mode');
+      darkModeToggle.classList.add('moon');
+    } else {
+      darkModeToggle.classList.add('sun');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      darkModeToggle.classList.toggle('sun');
+      darkModeToggle.classList.toggle('moon');
+      
+      // Save preference
+      localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+    });
+  });
+
+
     </script>
 
     <!-- Firebase App (the core Firebase SDK) -->

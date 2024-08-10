@@ -180,6 +180,187 @@ video#background-video {
   border: 2px solid black;
 }
 
+/* General Styling for Contact Section */
+.contact {
+  background: linear-gradient(to right, #ffcc00, #ff6600); /* Yellow to orange gradient */
+  color: #ffffff; /* White text color */
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Contact Intro Styling */
+.contact-intro h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.contact-intro p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.contact-details p {
+  margin: 10px 0;
+}
+
+/* Contact Image Styling */
+.contact-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form Styling */
+.contact-form {
+  background-color: #ffffff;
+  color: #ff6600; /* Orange text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+button {
+  background-color: #ff6600; /* Orange button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e65c00; /* Darker orange */
+}
+
+/* Success Message Styling */
+#contact-success-message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff6600; /* Orange background for success message */
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 30px 15px;
+  }
+
+  .contact-intro h2 {
+    font-size: 24px;
+  }
+
+  .contact-intro p {
+    font-size: 14px;
+  }
+
+  .contact-details p {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input, 
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #contact-success-message {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 20px 10px;
+  }
+
+  .contact-intro h2 {
+    font-size: 20px;
+  }
+
+  .contact-intro p {
+    font-size: 12px;
+  }
+
+  .contact-details p {
+    font-size: 12px;
+  }
+
+  .contact-form {
+    padding: 10px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input, 
+  .form-group textarea {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  #contact-success-message {
+    font-size: 12px;
+  }
+}
+
     
     /* Back to Top Button */
     .scrollToTopBtn {
@@ -282,6 +463,44 @@ video#background-video {
     </div>
 
     <style>
+      /* General Styling for Introduction Section */
+.introduction {
+  background: linear-gradient(to right, #ffcc00, #ff6600); /* Yellow to orange gradient */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .introduction {
+    padding: 15px;
+    font-size: 14px; /* Adjust text size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .introduction {
+    padding: 10px;
+    font-size: 12px; /* Further adjust text size for very small screens */
+  }
+}
+
+/* Optional: Adding AOS Animations */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+}
+
       .toggle-container {
         transform: translate(-50%, -50%);
         display: flex;
