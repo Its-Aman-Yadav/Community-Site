@@ -282,6 +282,44 @@ video#background-video {
     </div>
 
     <style>
+      /* General Styling for Introduction Section */
+.introduction {
+  background: linear-gradient(to right, #ffcc00, #ff6600); /* Yellow to orange gradient */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .introduction {
+    padding: 15px;
+    font-size: 14px; /* Adjust text size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .introduction {
+    padding: 10px;
+    font-size: 12px; /* Further adjust text size for very small screens */
+  }
+}
+
+/* Optional: Adding AOS Animations */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+}
+
       .toggle-container {
         transform: translate(-50%, -50%);
         display: flex;
