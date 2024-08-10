@@ -12,6 +12,7 @@ class SpecialFooter extends HTMLElement {
         .fab.fa-linkedin,
         .fab.fa-x-twitter,
         .fab.fa-github,
+        .fab.fa-discord,
         .fa-solid.fa-envelope {
           transition: color 0.3s, background 0.3s;
         }
@@ -41,6 +42,10 @@ class SpecialFooter extends HTMLElement {
         .fab.fa-github:hover {
           color: #333; 
         }
+        /* Discord light blue */
+        .fab.fa-discord:hover {
+          color: #6395ee; 
+        }
         /* Red for email */
         .fa-solid.fa-envelope:hover {
           color: #D44638; 
@@ -65,8 +70,9 @@ class SpecialFooter extends HTMLElement {
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/open-source-village/"><i class="fab fa-linkedin"></i></a>
                 <a href="#"><i class="fab fa-x-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/Its-Aman-Yadav/Community-Site"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://discord.com/invite/mM9qFh2uZR"><i class="fab fa-discord"></i></a>
               </div>
             </div>
             <div class="col1" id="Serv">
