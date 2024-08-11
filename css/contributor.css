@@ -2,7 +2,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff; 
-  background-color: linear-gradient(#f5d244, #f5a623) !important;
+  background: linear-gradient(135deg, #ffff5e, #ee8610) !important;
+  
 }
 
 .header-hero {

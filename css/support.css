@@ -456,6 +456,7 @@ body {
   position: relative;
   overflow: hidden;
   margin: 0;
+  background: linear-gradient(135deg, #ffff5e, #ee8610) !important;
   padding: 0;
 }
 
