@@ -31,20 +31,11 @@
     body {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #ffff5e, #ee8610) !important;
   margin: 0;
   padding: 0;
 }
 
-video#background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  background-size: cover;
-}
 
 /* Ensure the content is above the video */
 .license-container {
@@ -427,12 +418,7 @@ button:hover {
 </head>
 
 <body>
-  
-  <video id="background-video" autoplay muted loop>
-    <source src="back5.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-  
+
  <!-- Navbar -->
  <div class="navbar">
   <nav>
@@ -463,11 +449,17 @@ button:hover {
     </div>
 
     <style>
+      /* General Styling for Goals Section */
+.goal {
+  background: linear-gradient(to right, #ffcc00, #ff6600); /* Yellow to orange gradient */
+  color: #ffffff; /* White text color */
+  padding: 30px 20px;
       /* General Styling for Introduction Section */
 .introduction {
   background: linear-gradient(to right, #ffcc00, #ff6600); /* Yellow to orange gradient */
   color: #ffffff; /* White text color */
   padding: 20px;
+
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -476,6 +468,61 @@ button:hover {
   transition: background 0.3s, color 0.3s;
 }
 
+/* Header Styling */
+.goal h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* List Styling */
+.goals {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ribbon Styling */
+.ribbon {
+  background-color: #ffffff;
+  color: #ff6600; /* Orange text */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+/* Increasing Box Size */
+.ribbon:nth-child(1) {
+  font-size: 14px;
+}
+
+.ribbon:nth-child(2) {
+  font-size: 16px;
+}
+
+.ribbon:nth-child(3) {
+  font-size: 18px;
+}
+
+.ribbon:nth-child(4) {
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .goal {
+    padding: 20px;
+  }
+
+  .goal h2 {
+    font-size: 20px;
+  }
+
+  .ribbon {
+    font-size: 14px;
+    padding: 12px;
 /* Responsive Design */
 @media (max-width: 768px) {
   .introduction {
@@ -485,6 +532,18 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+  .goal {
+    padding: 15px;
+  }
+
+  .goal h2 {
+    font-size: 18px;
+  }
+
+  .ribbon {
+    font-size: 12px;
+    padding: 10px;
+
   .introduction {
     padding: 10px;
     font-size: 12px; /* Further adjust text size for very small screens */
@@ -492,6 +551,14 @@ button:hover {
 }
 
 /* Optional: Adding AOS Animations */
+[data-aos="fade-left"] {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+}
 [data-aos="fade-up"] {
   opacity: 0;
   transition: opacity 0.5s;
