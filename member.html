@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Member - Open Source Community</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/member.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <style>
+      /* Back to Top Button */
+
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header= document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY >50)
+      })
+    </script> 
+
+<button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+<svg class="progress-ring" width="60" height="60">
+  <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+</svg>
+</footer>
+
+</div>
+<script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  let circle = document.querySelector(".progress-ring__circle");
+  let radius = circle.r.baseVal.value;
+  let circumference = 2 * Math.PI * radius;
+
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
+
+  window.onscroll = function () {
+    scrollFunction();
+    updateProgress();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updateProgress() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPercent = scrollTop / docHeight;
+    let offset = circumference - (scrollPercent * circumference);
+    circle.style.strokeDashoffset = offset;
+  }
+
+  scrollToTopBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    topFunction();
+  });
+</script>
+    
+ <!-- Navbar -->
+ <div class="navbar">
+  <nav>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                  <img  class="logo" src="images/logo2.jpeg" alt="logo">
+
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
+    </a>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+
+    <div class="toggle-container" style="top: 15px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
+    </div>
+
+    <style>
+      /* General Styling for Contact Section */
+.contact {
+  background: linear-gradient(to right, #ffcc00, #ff6600); /* Yellow to orange gradient */
+  color: #ffffff; /* White text color */
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Contact Intro Styling */
+.contact-intro h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.contact-intro p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-detail {
+  background-color: #ffffff;
+  color: #ff6600; /* Orange text */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  max-width: 200px;
+  text-align: left;
+}
+
+.contact-detail p {
+  margin: 0;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  background-color: #ffffff;
+  color: #ff6600; /* Orange text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group-inline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+button {
+  background-color: #ff6600; /* Orange button */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e65c00; /* Darker orange */
+}
+
+/* Success Message Styling */
+#success-message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #ff6600; /* Orange background for success message */
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 30px 15px;
+  }
+
+  .contact-intro h2 {
+    font-size: 24px;
+  }
+
+  .contact-intro p {
+    font-size: 14px;
+  }
+
+  .contact-detail {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input, 
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #success-message {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 20px 10px;
+  }
+
+  .contact-intro h2 {
+    font-size: 20px;
+  }
+
+  .contact-intro p {
+    font-size: 12px;
+  }
+
+  .contact-detail {
+    font-size: 12px;
+  }
+
+  .contact-form {
+    padding: 10px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input, 
+  .form-group textarea {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  #success-message {
+    font-size: 12px;
+  }
+}
+
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        right: -4px;
+        top: 15px;
+      }
+
+      .light-mode .toggle-container {
+        right: 140px;
+        top: 10px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
+
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+      @media (max-width: 768px) 
+      {
+      .theme-switch,
+      #checkbox 
+      {
+        opacity: 0;
+        pointer-events: none; 
+      }
+    
+      #image 
+      {
+        opacity: 0;
+        pointer-events: none; 
+      }
+    }
+
+    </style>
+
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+    <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
+  </nav>
+</div>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('checkbox');
+        toggleButton.addEventListener('change', function() {
+          document.body.classList.toggle('dark-mode');
+        });
+      });
+      </script>
+
+    <main>
+      <section class="introduction" id="introduction" data-aos="fade-up">
+        <h2>Introduction</h2>
+        <p>
+          Welcome! We are excited that you're interested in becoming a member of
+          our open-source community. Joining our community means becoming part
+          of a collaborative, innovative, and supportive environment.
+        </p>
+      </section>
+
+      <section class="benefits" id="benefits" data-aos="fade-up" data-aos-delay="100">
+        <h2>Benefits of Membership</h2>
+        <ul>
+          <li>Access to exclusive projects and resources</li>
+          <li>Opportunities for professional development and networking</li>
+          <li>Participation in community events and workshops</li>
+          <li>Mentorship and guidance from experienced contributors</li>
+          <li>Contributing to meaningful and impactful projects</li>
+        </ul>
+      </section>
+
+      <section class="steps" id="steps" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="h2">Steps to Join</h2>
+        <div class="steplist">
+          <div class="line" data-aos="fade-right"
+          data-aos-delay="800"></div>
+          <div class="step-item" data-aos="zoom-in" data-aos-delay="250">
+            <img src="images/contact-form.png" alt="Fill out form">
+            <p>Fill out the membership application form below.</p>
+          </div>
+          <div class="step-item" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/stopwatch.png" alt="Submit form">
+            <p>Submit your form and wait for a confirmation email.</p>
+          </div>
+          <div class="step-item" data-aos="zoom-in" data-aos-delay="550">
+            <img src="images/registration.png" alt="Complete registration">
+            <p>Follow the instructions in the email to complete your membership registration.</p>
+          </div>
+          <div class="step-item" data-aos="zoom-in" data-aos-delay="800">
+            <img src="images/team.png" alt="Participate in projects">
+            <p>Start participating in our projects and community events.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-intro">
+            <h2>Contact</h2>
+            <p>If you have any questions or need support, feel free to reach out to us:</p>
+            <div class="contact-details">
+                <div class="contact-detail">
+                    <p><i class="fa-solid fa-phone"></i> Phone:<br> (123) 456-7890</p>
+                </div>
+                <div class="contact-detail">
+                    <p><i class="fa-solid fa-envelope"></i> Email:<br> support@example.com</p>
+                </div>
+                <div class="contact-detail">
+                    <p><i class="fa-solid fa-map-marker"></i> Address: <br> 123 Main Street, India</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-container">
+            <form class="contact-form" id="contact-form">
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="success-message">Form submitted successfully!</div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            
+            // Display the success message
+            var successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+
+            // Hide the success message after 3 seconds
+            setTimeout(function() {
+                successMessage.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+    
+    </main>
+    <special-footer></special-footer>
+    <script src="footer/footer.js"></script>
+    <script src="trail.js"></script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+
+    document.documentElement.style.overflow = 'auto';
+document.body.style.overflow = 'auto';
+
+    
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "Ask me anything!",
+      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Open Source Village",
+      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": [],
+      "enableConversationDeletion": true
+    });
+  </script>
+  <script>
+    AOS.init({
+      duration: 1200, // Animation duration
+      easing: 'ease-in-out', // Animation easing
+    });
+  </script>
+
+  </body>
+</html>

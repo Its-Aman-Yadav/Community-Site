@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - Open Source Community</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 50)
+    })
+  </script>
+
+  <style>
+    /* Back to Top Button */
+    .scrollToTopBtn {
+      /* background-color: #FFE70F; */
+      background-image: radial-gradient(#f3bf8c, #ee7f10);
+      color: #fff;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-decoration: none;
+      border: none;
+      line-height: 50px;
+      /* Center text vertically */
+      transition: background-color 0.3s ease;
+      position: fixed;
+      bottom: 106px;
+      right: 43px;
+      display: none;
+      /* Hidden by default */
+      z-index: 1000;
+      margin-bottom: 10px;
+    }
+
+    .scrollToTopBtn:hover {
+      background-color: #484848;
+    }
+
+    .progress-ring {
+      position: fixed;
+      bottom: 101px;
+      margin-bottom: 10px;
+      right: 38px;
+      transform: rotate(-90deg);
+      z-index: 999;
+      /* Just below the button */
+      margin-bottom: 10px;
+    }
+
+    .progress-ring__circle {
+      transition: 0.35s stroke-dasharray;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+    @media (max-width: 768px) 
+    {
+    .theme-switch,
+    #checkbox 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  
+    #image 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  }
+
+.contactform{
+  display: grid;
+  grid-auto-flow:row;
+}
+
+ .contact-form{
+  width: 800px;
+  margin-top: 40px !important;
+ }
+
+#success-message {
+  display: none;
+  background-color: green;
+  color: white !important;
+  padding: 10px;
+ 
+}
+
+.contact {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: auto;
+  background: linear-gradient(white, rgb(247, 210, 62));
+  border-radius: 30px;
+  border: 2px solid orangered;
+  margin-bottom: 50px;
+}
+
+.contact-intro h2 {
+  color: #f85008;
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact-intro {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-intro p {
+  margin-bottom: 30px;
+  color: black;
+}
+
+
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-detail {
+  padding: 20px;
+  background-color: #fcfe88;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  flex: 1;
+  text-align: center;
+  border: 1px solid orangered;
+}
+
+.contact-detail:hover{
+background-color: rgb(255, 210, 76);
+box-shadow: 0 0 10px rgba(246, 63, 7, 0.9);
+border: 2px solid orangered;
+}
+
+.contact-detail p {
+  margin: 0;
+}
+
+.contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgb(255, 136, 0,0.8);
+}
+
+  </style>
+   <link rel="stylesheet" href="css/support.css" />
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const faqq = document.querySelectorAll(".faqs");
+      faqq.forEach((faqs) => {
+        faqs.addEventListener("click", () => {
+          faqs.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+
+
+</head>
+
+<body>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+ <!-- Navbar -->
+ <div class="navbar">
+  <nav>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                  <img  class="logo" src="images/logo2.jpeg" alt="logo">
+
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
+    </a>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+
+    <div class="toggle-container" style="top: 15px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
+    </div>
+
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        right: -4px;
+        top: 15px;
+      }
+
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
+
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+      body.dark-mode {
+  background: linear-gradient(rgb(50, 50, 70), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+
+
+body.dark-mode .general{
+  background: linear-gradient( rgba(128, 122, 122, 0.979),rgb(32, 32, 53));
+    color: #fff;
+}
+
+body.dark-mode .faq-question {
+  color: #000000;
+}
+
+body.dark-mode  h2{
+  color:white;
+}
+body.dark-mode p{
+  color: #dedbdb;
+}
+body.dark-mode .form-group label{
+  color: #dedbdb;
+}
+main h2{
+  color:black;
+}
+body.dark-mode .faq-answer p {
+  color: black !important;
+}
+
+
+    </style>
+<style>
+  .contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  gap: 10px;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+}
+
+.success-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  display: none;
+}
+input[type="text"], input[type="email"], textarea{
+  border-radius: 5px;
+}
+
+.faq-item {
+  border: 2.5px solid #060303;
+  background-color: rgb(251, 251, 101,0.6);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+.theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+}
+  </style>
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+    <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
+
+  </nav>
+</div>
+  <main>
+
+    <section class="general" id="general-info" data-aos="fade-up">
+      <h2>How To Use Open source Village</h2>
+      <hr style="width: 90%; margin-left: 40px; border: 0; height: 1px; background-color: #ffffff;">
+
+      <p style="font-weight: 600;">
+        Welcome to the support page of our open-source community. Here, you will find FAQs that help address any questions or issues you may encounter. You can also drop your queries using our query form. Our support team is dedicated to providing you with the assistance you need.
+      </p>
+
+
+    </section>
+      <h2 data-aos="fade-left" >Frequently Asked Questions</h2>
+      <div class="faq-container" data-aos="fade-right">
+        <div class="faq">
+          <img class="faq-img" src="images/faq.png" alt="">
+        </div>
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>How do I join the community?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>You can join our community by visiting the 'Become a Member' page and filling out the membership application form.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>What projects can I contribute to?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>We have a variety of projects in different domains such as web development, data science, and machine learning in the world of open source.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>How can I get help with a project?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>If you need help with a project, you can contact our support team using the form below or participate in our community forums.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>What are the benefits of joining the community?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>By joining our community, you gain access to a network of professionals, exclusive resources, and opportunities for collaboration and growth.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+              <h3>How can I stay updated with community events?</h3>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Stay updated with our community events by subscribing to our newsletter, following us on social media, and regularly checking our events page.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+      <div class="contact-intro">
+          <h2>Contact</h2>
+          <p>If you have any query, feel free to reach out to us:</p>
+          <div class="contact-details">
+              <div class="contact-detail">
+                  <p><i class="fa-solid fa-phone"></i> Phone:<br> (123) 456-7890</p>
+              </div>
+              <div class="contact-detail">
+                  <p><i class="fa-solid fa-envelope"></i> Email:<br> support@example.com</p>
+              </div>
+              <div class="contact-detail">
+                  <p><i class="fa-solid fa-map-marker"></i> Address: <br> 123 Main Street, India</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="contact-container">
+          <form class="contact-form" id="contact-form">
+              <div class="form-group-inline">
+                  <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required />
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="message">Query:</label>
+                  <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit">Submit</button>
+          </form>
+          <div id="success-message">Form submitted successfully!</div>
+      </div>
+  </section>
+      
+
+ 
+
+ 
+  </main>
+
+  <special-footer></special-footer>
+    
+ 
+  <script src="footer/footer.js"></script>
+  <script src="trail.js"></script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "Ask me anything!",
+      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Open Source Village",
+      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": [],
+      "enableConversationDeletion": true
+    });
+  </script>
+
+  <script>
+
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('checkbox');
+      const currentMode = localStorage.getItem('dark-mode');
+      if (currentMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleButton.checked = true;
+      }
+
+      toggleButton.addEventListener('change', function () {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('dark-mode', 'enabled');
+        }
+        else {
+          localStorage.setItem('dark-mode', 'disabled');
+        }
+      });
+    });
+  </script>
+  <script>
+    AOS.init({
+      duration: 1200, // Animation duration
+      easing: 'ease-in-out', // Animation easing 
+    });
+  </script>
+<script>
+  function toggleAnswer(element) {
+    const faqItem = element.parentElement;
+    const answer = faqItem.querySelector('.faq-answer');
+    const currentlyActiveItem = document.querySelector('.faq-question.active');
+
+    // Close any currently active item
+    if (currentlyActiveItem && currentlyActiveItem !== element) {
+      currentlyActiveItem.classList.remove('active');
+      currentlyActiveItem.nextElementSibling.style.display = 'none';
+    }
+
+    // Toggle the active class to rotate the icon
+    element.classList.toggle('active');
+
+    // Toggle the display of the answer
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+    } else {
+      answer.style.display = 'block';
+    }
+  }
+</script>
+
+<script>document.getElementById('query-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  let isValid = true;
+
+  // Validate Name
+  const name = document.getElementById('name').value;
+  const nameError = document.getElementById('name-error');
+  if (name.trim() === '') {
+    nameError.textContent = 'Name is required';
+    nameError.style.display = 'block';
+    isValid = false;
+  } else {
+    nameError.style.display = 'none';
+  }
+
+  // Validate Email
+  const email = document.getElementById('email').value;
+  const emailError = document.getElementById('email-error');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email.trim() === '') {
+    emailError.textContent = 'Email is required';
+    emailError.style.display = 'block';
+    isValid = false;
+  } else if (!emailPattern.test(email)) {
+    emailError.textContent = 'Please enter a valid email address';
+    emailError.style.display = 'block';
+    isValid = false;
+  } else {
+    emailError.style.display = 'none';
+  }
+
+  // Validate Query
+  const query = document.getElementById('query').value;
+  const queryError = document.getElementById('query-error');
+  if (query.trim() === '') {
+    queryError.textContent = 'Query is required';
+    queryError.style.display = 'block';
+    isValid = false;
+  } else {
+    queryError.style.display = 'none';
+  }
+
+});
+</script>
+
+<script>
+  document.getElementById('query-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Display success message
+  var successMessage = document.getElementById('success-message');
+  successMessage.classList.remove('hidden');
+  successMessage.style.display = 'block';
+
+  // Hide the message after a few seconds
+  setTimeout(function() {
+    successMessage.style.display = 'none';
+  }, 3000);
+});
+
+</script>
+
+</body>
+</html>

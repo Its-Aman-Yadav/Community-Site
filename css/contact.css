@@ -1,0 +1,164 @@
+
+  
+  /* Toggle button styles */
+  .toggle-container {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    right: 40px;
+    top: 10px;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .toggle-button:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  body.dark-mode .toggle-button {
+    background-color: #2196F3;
+  }
+  
+  body.dark-mode .toggle-button:before {
+    transform: translateX(26px);
+  }
+  
+  .light-mode-icon, .dark-mode-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .light-mode-icon {
+    left: 5px;
+  }
+  
+  .dark-mode-icon {
+    right: 5px;
+  }
+  
+  body:not(.dark-mode) .dark-mode-icon,
+  body.dark-mode .light-mode-icon {
+    display: none;
+  }
+
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background: #1a1a1a;
+  }
+  
+  body.dark-mode .card {
+    background: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+
+  body.dark-mode .back-button,
+  body.dark-mode .back-button i{
+    color: #f1c11a !important;
+  }
+
+  body.dark-mode .usersubmit input{
+    background-color: #f1c11a;
+    color: black;
+  }
+
+  body.dark-mode .form input::placeholder{
+    color: #ccc;
+  }
+
+  body.dark-mode .form textarea::placeholder{
+    color: #ccc;
+  }
+
+  body.dark-mode .address p,
+  body.dark-mode .social i{
+    color: #f1c11a !important;
+  }
+
+  body.dark-mode .social i:hover{
+    color: #eedd9f !important;
+  }
+
+  body {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  video#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-size: cover;
+  }
+  
+  /* Ensure the content is above the video */
+  .license-container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 110px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .license-container h1, .license-container h2 {
+    color: #333;
+  }
+  
+  .license-container p {
+    color: #666;
+  }
+  
+  /* Media query for smaller devices */
+  @media (max-width: 768px) {
+    .license-container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+  
+    .scrollToTopBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        bottom: 80px;
+        right: 20px;
+    }
+  
+    .progress-ring {
+        bottom: 75px;
+        right: 15px;
+    }
+  }
+  

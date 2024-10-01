@@ -1,0 +1,154 @@
+#privacy-policy-container {
+  width: 55%;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  border-radius: 50%;
+  height: 40px;
+  width: 80px;
+}
+.logo-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.header {
+  margin-top: 100px;
+  text-align: center;
+  /* background-color: #ffd700; */
+  font-size: large;
+}
+
+.title {
+  font-size: 2em;
+  color: #000000;
+}
+
+.main-content {
+  padding: 20px;
+  margin: 15px auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 22px !important;
+  color: #000000;
+  font-weight: 600 !important;
+  padding-bottom: 0px !important;
+}
+
+.section-content {
+  font-size: 1em;
+  color: #000000;
+}
+
+.section-list {
+  list-style: none;
+  color: #000000;
+  padding: 0;
+}
+
+.list-item {
+  margin-bottom: 10px;
+  color: #000000;
+  list-style: none;
+  font-size: 1.1em;
+}
+
+/* Dark Mode */
+
+body.dark-mode {
+  background: linear-gradient(rgb(13, 37, 62) 100.2%, rgb(36, 45, 57) 11.2%);
+}
+
+body.dark-mode #privacy-policy-container {
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 100.2%
+  );
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .navbar {
+  background-color: #2c3e50;
+}
+
+body.dark-mode .header h1 {
+  color: #fff;
+}
+
+body.dark-mode .hr-line {
+  background-image: linear-gradient(to right, #333, #ccc, #333);
+}
+
+body.dark-mode .section h2 {
+  color: #ddd;
+}
+
+body.dark-mode .section p {
+  color: #c0c0c0;
+}
+
+body.dark-mode .list-num li {
+  color: #c0c0c0;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the content is above the video */
+.license-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 110px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.license-container h1,
+.license-container h2 {
+  color: #333;
+}
+
+.license-container p {
+  color: #666;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .license-container {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .scrollToTopBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .progress-ring {
+    bottom: 75px;
+    right: 15px;
+  }
+}

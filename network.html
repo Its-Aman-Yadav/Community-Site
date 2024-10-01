@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Network - Open Source Village</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ourplan.css" />
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("nav");
+            header.classList.toggle("sticky", window.scrollY > 50)
+        })
+    </script>
+
+    <style>
+
+body {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Ensure the content is above the video */
+.license-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 110px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.license-container h1, .license-container h2 {
+  color: #333;
+}
+
+.license-container p {
+  color: #666;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .license-container {
+      margin: 20px auto;
+      padding: 10px;
+  }
+
+  .scrollToTopBtn {
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+      line-height: 40px;
+      bottom: 80px;
+      right: 40px;
+      margin-bottom: 30px;
+  }
+
+  .progress-ring {
+      bottom: 95px;
+      right: 35px;
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background: linear-gradient(#f5d244, #f5a623);
+}
+
+.header {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 5px;
+    font-size: large;
+} 
+
+#image {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.main-content {
+    max-width: 70%;
+    margin: 120px auto 20px; 
+    padding: 20px;
+    background: linear-gradient(to top, #ffd900d1, #FFFFFF);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #000000;
+}
+
+.main-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.main-content h2 {
+    color: #ffa600;
+    margin-top: 30px;
+    border-bottom: 1px solid #FFA500;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+.main-content h3 {
+    color: #FFA500;
+    margin-top: 20px;
+}
+
+.hr-line {
+    border: 0;
+    height: 1px;
+    margin: 10px 0px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.benefits .cards {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.items {
+    align-items: center;
+    background: linear-gradient(white, #f5d244);
+    width: 90%;
+    height: 200px;
+    border-radius: 10%;
+    padding: 10px;
+    font-weight: 700;
+    box-shadow: 0 0 1px 2px #ff8418;
+    border-style: inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.items p {
+    color: #e75805;
+    line-height: 100%;
+}
+
+.cards .items img {
+    margin-top: 15px;
+    height: 65px;
+    width: 65px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-2 {
+    display: grid;
+    grid-auto-flow: column;
+    background-color: #f5d244;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 1.5px;
+    border-color: #e75805;
+    margin-top: 10px;
+}
+
+.card-2 .item-2 {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-2 .line {
+    width: 1.2px;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #e75805;
+}
+
+.card-2 p {
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+.container-2 {
+    margin-top: 15px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-3 img {
+    height: 70%;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.dot {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.dot li {
+    list-style-type: square;
+    text-align: left;
+    margin-left: 20px;
+    color: #e75805;
+}
+
+.container-3 {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.container-3:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    background: red;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    height: calc(100% - 10px);
+}
+
+.item-4 {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.item-4:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgb(255, 94, 0);
+    position: absolute;
+    left: 0;
+    top: 5px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .theme-switch,
+    #checkbox 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  
+    #image 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  }
+
+/* Mobile devices (up to 600px) */
+@media only screen and (max-width: 600px) {
+    .main-content {
+        max-width: 90%;
+        margin: 80px auto 10px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .main-content h1 {
+        font-size: 1.8em;
+    }
+
+    .main-content p {
+        font-size: 12px;
+    }
+
+    .benefits .cards {
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+    .items {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .card-2 {
+        grid-auto-flow: row;
+    }
+
+    .container-2 {
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+    .item-3 img {
+        height: auto;
+        width: 100%;
+    }
+
+    .dot {
+        max-width: 100%;
+    }
+
+    .container-3:before {
+        left: 0;
+    }
+
+    .item-4 {
+        padding-left: 10px;
+    }
+
+    .item-4:before {
+        left: -5px;
+    }
+}
+
+/* Tablets (601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .main-content {
+        max-width: 80%;
+        margin: 100px auto 15px;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .main-content h1 {
+        font-size: 2.2em;
+    }
+
+    .main-content p {
+        font-size: 14px;
+    }
+
+    .benefits .cards {
+        grid-auto-flow: row;
+        gap: 15px;
+    }
+
+    .items {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .card-2 {
+        grid-auto-flow: row;
+    }
+
+    .container-2 {
+        grid-auto-flow: row;
+        gap: 15px;
+    }
+
+    .item-3 img {
+        height: auto;
+        width: 100%;
+    }
+
+    .dot {
+        max-width: 100%;
+    }
+
+    .container-3:before {
+        left: 0;
+    }
+
+    .item-4 {
+        padding-left: 10px;
+    }
+
+    .item-4:before {
+        left: -5px;
+    }
+}
+
+/* Laptops (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .main-content {
+        max-width: 75%;
+        margin: 110px auto 20px;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .main-content h1 {
+        font-size: 2.4em;
+    }
+
+    .main-content p {
+        font-size: 16px;
+    }
+
+    .benefits .cards {
+        grid-auto-flow: column;
+        gap: 10px;
+    }
+
+    .items {
+        width: 90%;
+        height: 200px;
+        border-radius: 10%;
+    }
+
+    .card-2 {
+        grid-auto-flow: column;
+    }
+
+    .container-2 {
+        grid-auto-flow: column;
+        gap: 10px;
+    }
+
+    .item-3 img {
+        height: 70%;
+        width: 70%;
+    }
+
+    .dot {
+        max-width: 80%;
+    }
+
+    .container-3:before {
+        left: 3px;
+    }
+
+    .item-4 {
+        padding-left: 15px;
+    }
+
+    .item-4:before {
+        left: 0;
+    }
+}
+@media (max-width: 768px) 
+{
+.theme-switch,
+#checkbox 
+{
+  opacity: 0;
+  pointer-events: none; 
+}
+
+#image 
+{
+  opacity: 0;
+  pointer-events: none; 
+}
+}
+/* dark mode */
+body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .main-content{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .main-content p{
+color: white;
+}
+body.dark-mode .main-content h1{
+color: white;
+}
+body.dark-mode .cards p{
+  color: black;
+}
+body.dark-mode .card-2{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .items {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: white;
+}
+body.dark-mode .items p{
+  color: white;
+}
+
+   
+    
+    </style>
+</head>
+<body>
+
+  
+    <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <a class="logo-link" href="#home">
+        <div class="logo-title">
+                    <img  class="logo" src="images/logo2.jpeg" alt="logo">
+
+                    <span class="logo-text">Open Source Village</span>
+                   </div>
+      </a>
+      <ul>
+
+        <li><i  class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
+        <li><i  class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+        <li><i  class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+        <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+        <li><i   class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+        <li><i  class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+
+      </ul>
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round" id="toggle"></div>
+      </label>
+      <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
+
+    </nav>
+  </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('checkbox');
+            toggleButton.addEventListener('change', function () {
+                document.body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+
+<div class="main-content">
+    <header class="header">
+        <h1 class="title">Network</h1>
+        <div class="hr-line"></div>
+    </header>
+    <section class="network">
+
+      
+        <p>Our community enables networking with smart and diverse individuals, fostering collaboration and opportunities for personal and professional growth.</p>
+        <p>We host regular networking events, both online and offline, where members can meet and interact with others who share similar interests and goals. Our forums and chat groups are active with discussions on various topics, providing a platform for members to connect and collaborate.</p>
+        
+        <div class="benefits">
+          <h2>Benefits of Networking:</h2>
+
+          <div class="cards">
+            <div class="items">
+              <img src="icons/social-network.png" alt="" class="src">
+              <p>Expand your professional and social circle.</p>
+            </div>
+
+            <div class="items">
+              <img src="icons/collaboration-2.png" alt="" class="src">
+              <p>Find collaborators for your projects and ideas.</p>
+            </div>
+           
+            <div class="items">
+              <img src="icons/advice-2.png" alt="" class="src">
+              <p>Get advice and insights from experienced professionals.</p>
+            </div>
+            
+            <div class="items">
+              <img src="icons/opportunity.png" alt="" class="src">
+              <p>Discover new opportunities for career and personal growth.</p>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="events">
+        <h2>Our Networking Events</h2>
+          
+       
+        <p>Join us at our upcoming networking events:</p>
+        <div class="card-2">
+
+        <div class="item-2">
+        <p>Monthly webinars featuring industry leaders and experts.</p>
+      </div>
+      <div class="line"></div>
+      <div class="item-2">
+        <p>Networking mixers and meetups in major cities worldwide.</p>
+      </div>
+      <div class="line"></div>
+      <div class="item-2">
+        <p>Virtual roundtable discussions on trending topics in technology.</p>
+      </div>
+      <div class="line"></div>
+      <div class="item-2">
+        <p>Specialized workshops for skill development and career advancement.</p>
+      </div>
+        </div>
+
+      </div>
+
+      <div class="collaboration">
+        <h2>Community Collaboration</h2>
+        
+        <p style="margin-top: 10px;">Collaborate with like-minded professionals through:</p>
+        <div class="container-2">
+          <div class="item-3">
+            <ul class="dot">
+              <li>Project teams working on open-source initiatives.</li>
+              <li>Professional interest groups focused on specific industries or technologies.</li>
+              <li>Mentorship programs connecting mentors and mentees for mutual growth.</li>
+              <li>Participation in hackathons and innovation challenges.</li>
+            </ul>
+        
+      
+      </div>
+        <div class="item-3">
+          <img src="icons/partners.png" alt="" class="src">
+        </div>
+      </div>
+      </div>
+        
+
+      <div class="prof">
+        <h2>Professional Development</h2>
+        <p>Advance your career with resources for:</p>
+
+        <ul class="container-3">
+          
+            <li class="item-4">
+              <p>Resume building and interview preparation workshops.</p>
+             
+            </li>
+           
+          
+            <li class="item-4">
+              <p>Career coaching sessions with experienced professionals.</p>
+            </li>
+  
+            <li class="item-4">
+              <p>Access to job boards and career opportunities within our network.</p>
+            </li>
+  
+            <li class="item-4">
+              <p>Skills enhancement through online courses and certifications.</p>
+            </li>
+          </ul>
+
+        </div>
+
+        
+      </div>
+    </section>
+</div>
+<!-- footer section -->
+<special-footer></special-footer>
+
+<button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+<svg class="progress-ring" width="60" height="60">
+  <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+</svg>
+</footer>
+<script>
+  function sendFeed() {
+    alert('Email sent successfully!');
+  }
+</script>
+</div>
+<script>
+  
+ document.documentElement.style.overflow = 'auto';
+document.body.style.overflow = 'auto';
+    
+ let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  let circle = document.querySelector(".progress-ring__circle");
+  let radius = circle.r.baseVal.value;
+  let circumference = 2 * Math.PI * radius;
+
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
+
+  window.onscroll = function () {
+    scrollFunction();
+    updateProgress();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updateProgress() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPercent = scrollTop / docHeight;
+    let offset = circumference - (scrollPercent * circumference);
+    circle.style.strokeDashoffset = offset;
+  }
+
+  scrollToTopBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    topFunction();
+  });
+</script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+<script>
+  function sendEmail() {
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "yash.223234108@vcet.edu.in",
+      Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+      To: 'itsamanyadav18@gmail.com',
+      From: document.getElementById('email').value,
+      Subject: "This is the subject",
+      Body: "Name:" + document.getElementById("name").value
+        + "<br> Email:" + document.getElementById("email").value
+        + "<br> Message:" + document.getElementById("msg").value
+
+    }).then(
+      message => alert("Message sent successsfully. We will get back to you soon.")
+    );
+  }
+  function sendFeed() {
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "yash.223234108@vcet.edu.in",
+      Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+      To: 'itsamanyadav18@gmail.com',
+      From: document.getElementById('email').value,
+      Subject: "This is the subject",
+      Body: "Name:" + document.getElementById("name").value
+        + "<br> Email:" + document.getElementById("email").value
+        + "<br> Message:" + document.getElementById("msg").value
+
+    }).then(
+      message => alert("Feedback sent successsfully")
+    );
+  }
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/vegas.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+    "composerPlaceholder": "Open Source Village",
+    "botConversationDescription": "This chatbot is for the community",
+    "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+    "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+    "messagingUrl": "https://messaging.botpress.cloud",
+    "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+    "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+    "lazySocket": true,
+    "themeName": "prism",
+    "frontendVersion": "v1",
+    "showPoweredBy": true,
+    "theme": "prism",
+    "themeColor": "#2563eb",
+    "allowedOrigins": []
+  });
+</script>
+<!-- swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+<script>
+
+  /*=============== SWIPER JS ===============*/
+  let swiperCards = new Swiper(".card__content", {
+    loop: true,
+    spaceBetween: 52,
+    grabCursor: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+      },
+      968: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+
+  <!-- Trail effect elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <script src="trail.js"></script>
+
+  <!-- end -->
+
+<script src="./footer/footer.js"></script>
+</body>
+
+</html>

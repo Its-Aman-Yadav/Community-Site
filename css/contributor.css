@@ -1,0 +1,457 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff; 
+  background: linear-gradient(135deg, #ffff5e, #ee8610) !important;
+  
+}
+
+.header-hero {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.header-hero .container {
+  position: relative;
+}
+
+.header-hero .header-hero-content {
+  position: relative;
+  color: #fff;
+}
+
+.header-hero .header-hero-image {
+  margin-top: 50px;
+}
+
+.header-sub-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.main-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.content {
+  position: relative;
+  padding-top: 0; 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.text-center {
+  text-align: center;
+  text-shadow: rgb(255, 140, 0) 1px 1px 2px;
+  color: white;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.mb-8 {
+  margin-bottom: 0.8rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-8 {
+
+
+  gap: 2rem;
+}
+
+
+.contributors {
+  /* padding-top: 10px; */
+
+}
+
+.contributor-card {
+
+
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: calc(25% - 16px); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  text-decoration: none !important;
+  color: inherit;
+  margin-bottom: 5px; 
+  z-index: 0;
+  backface-visibility: hidden;
+
+}
+
+
+
+.contributor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(143deg, #ffb133 50%, #fee582 50%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translate(-100%, -100%);
+
+  opacity: 0;
+  z-index: -1;
+}
+
+
+/* background-color: linear-gradient(#f5a623, #f5a623); */
+
+.contributor-card:hover::before {
+  
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.contributor-card:hover {
+
+  transform: scale(1.02) rotateX(360deg) !important;
+
+  box-shadow: 1px 1px 5px rgba(255, 247, 0, 0.81);
+
+}
+
+
+.contributor-card img {
+  width: 96px;
+  height: 96px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  margin-bottom: 16px;
+}
+
+/* username */
+
+
+.text-lg {
+  font-size: 17px !important;
+  color: #0057ed !important;
+  position: relative;
+  
+  z-index: 1;
+  transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+
+
+.contributor-card:hover .text-lg  {
+  text-shadow: 1px 1px 2px rgb(187, 207, 224), 0 0 0.6em rgb(255, 73, 249), 0 0 1em rgb(250, 134, 246);
+  color: white !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+
+
+
+.contributor-card:hover .text-gray-700 {
+  text-shadow: 1px 1px 2px rgb(0, 136, 255), 0 0 0.2em rgb(255, 73, 249), 0 0 0.8em rgb(250, 134, 246);
+  color: rgb(32, 32, 32);
+  font-weight: 500;
+
+}
+
+
+
+
+/* Contributors, github */
+.text-gray-700 {  
+  position: relative;
+  z-index: 1;
+  transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding: 0;
+}
+
+.text-gray-900 {
+  color: #1a202c;
+}
+
+.text-gray-100 {
+  color: #f7fafc;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.text-gray-400 {
+  color: #cbd5e0;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.bg_cover {
+  background-size: cover;
+  background-position: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f1c11a;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d1a10a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .contributor-card {
+    max-width: calc(33.333% - 16px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .contributor-card {
+    max-width: calc(50% - 16px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .contributor-card {
+    max-width: 100%; 
+  }
+}
+
+.contributor-card {
+  color: #333;
+}
+
+.contributor-card .text-lg {
+  color: #000;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+}
+/* General Light Mode Styles */
+body {
+  background-color: #ffffff; /* Light background for light mode */
+  color: #000000; /* Dark text for light mode */
+}
+
+.navbar {
+  background-color: #f8f9fa; /* Light background for navbar */
+  color: #000000; /* Dark text for navbar */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for dark mode */
+  color: #e0e0e0; /* Light text for dark mode */
+}
+
+.navbar.dark-mode {
+  background-color: #1e1e1e; /* Dark background for navbar in dark mode */
+  color: #e0e0e0; /* Light text for navbar in dark mode */
+}
+
+.navbar.dark-mode .logo-text {
+  color: #e0e0e0; /* Light logo text in dark mode */
+}
+
+.navbar.dark-mode .nav-link {
+  color: #e0e0e0; /* Light link color in dark mode */
+}
+
+.navbar.dark-mode .nav-link:hover {
+  color: #f39c12; /* Highlight color on hover in dark mode */
+}
+
+.scrollToTopBtn {
+  background-color: #f39c12; /* Bright button color */
+}
+
+.scrollToTopBtn:hover {
+  background-color: #e67e22; /* Darker button color on hover */
+}
+
+/* Dark Mode Toggle Styles */
+.theme-switch {
+  background-color: #333; /* Dark background for the toggle switch in dark mode */
+}
+
+.switch-checkbox:checked + .theme-switch {
+  background-color: #34495e; /* Darker background when toggled */
+}
+
+.theme-switch .light-mode-icon {
+  color: #f39c12; /* Bright color for light mode icon */
+}
+
+.theme-switch .dark-mode-icon {
+  color: #bdc3c7; /* Light color for dark mode icon */
+}
+
+/* Progress Ring */
+.progress-ring__circle {
+  stroke: #e0e0e0; /* Light color for progress ring stroke in dark mode */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1e1e1e; /* Dark background for footer */
+  color: #e0e0e0; /* Light text color for footer */
+}
+
+footer a {
+  color: #f39c12; /* Bright link color in footer */
+}
+
+footer a:hover {
+  color: #e67e22; /* Darker link color on hover */
+}
+/* Contributor Card Styles */
+.contributor-card {
+  background-color: #ffffff; /* Light background for light mode */
+  color: #000000; /* Dark text for light mode */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contributor-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.contributor-card h3 {
+  /* font-size: 1.5rem; */
+}
+
+.contributor-card p {
+  font-size: 1rem;
+  color: rgb(99, 99, 99);
+}
+
+/* Dark Mode Styles for Contributor Card */
+body.dark-mode .contributor-card {
+  background-color: #2c2c2c; /* Dark background for dark mode */
+  color: #e0e0e0; /* Light text for dark mode */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for better contrast */
+}
+
+body.dark-mode .contributor-card img {
+  border: 2px solid #e0e0e0; /* Light border around images in dark mode */
+}
+
+body.dark-mode .contributor-card h3,
+body.dark-mode .contributor-card p {
+  color: #e0e0e0; /* Light text for headings and paragraphs */
+}
+body.dark-mode .text-lg {
+  font-size: 1.125rem; /* Ensure font size remains the same */
+}
+
+body.dark-mode .font-medium {
+  font-weight: 500; /* Ensure font weight remains the same */
+}
+
+body.dark-mode .text-gray-900 {
+  color: #ffffff; /* White color for dark mode */
+}
+
+body.dark-mode .mb-2 {
+  margin-bottom: 0.5rem; /* Ensure margin remains the same */
+}

@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about us.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/fb940be696.js" crossorigin="anonymous"></script>
+  <title>About Us - Open Source Community</title>
+  <style>
+    /* Back to Top Button */
+    
+    #image {
+      height: 30px;
+      /* Reduced height of the profile image */
+      width: 30px;
+      /* Reduced width of the profile image */
+      border-radius: 50%;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .scrollToTopBtn {
+      /* background-color: #FFE70F; */
+      background-image: radial-gradient(#f3bf8c, #ee7f10);
+      color: #fff;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-decoration: none;
+      border: none;
+      line-height: 50px;
+      /* Center text vertically */
+      transition: background-color 0.3s ease;
+      position: fixed;
+      bottom: 106px;
+      right: 43px;
+      display: none;
+      /* Hidden by default */
+      z-index: 1000;
+      margin-bottom: 10px;
+    }
+
+    .scrollToTopBtn:hover {
+      background-color: #484848;
+    }
+    .text-box{
+      transition: all 0.5s;
+    }
+    .text-box:hover{
+      background:linear-gradient(white, #ee7f10);
+      box-shadow: 0 0  1px 2px #ee7f10;
+      scale:1.1;
+    }
+    .text-box:hover .left-container-arrow{
+      border-left: 15px solid #ee7f10;
+      /* background-color: #ee7f10; */
+    }
+    .text-box:hover .right-container-arrow{
+      border-right: 15px solid #ee7f10;
+      /* background-color: #ee7f10; */
+    }
+
+    .progress-ring {
+      position: fixed;
+      bottom: 101px;
+      margin-bottom: 10px;
+      right: 38px;
+      transform: rotate(-90deg);
+      z-index: 999;
+      /* Just below the button */
+      margin-bottom: 10px;
+    }
+
+    .progress-ring__circle {
+      transition: 0.35s stroke-dasharray;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+
+  @media (max-width: 768px) 
+  {
+  .theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+}
+  /* Style for the cookie modal */
+  .cookie-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+}
+
+/* Modal content box */
+.cookie-modal-content {
+    background: linear-gradient(to bottom right, #ffe656, #ffc400); /* Yellow to orange gradient */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 80%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    color: #333; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 10px;
+    /* bottom: 10px; */
+}
+
+/* The close button */
+.cookie-close {
+    color: #fff;
+    align-self: flex-end;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    margin: -10px -10px 0 0; /* Adjust positioning */
+}
+
+.cookie-close:hover,
+.cookie-close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Style for the text */
+.cookie-modal-content p {
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Style for the accept button */
+#acceptCookies {
+    background-color: #FFA500; /* Orange background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#acceptCookies:hover {
+    background-color: #ff5e00; /* Darker orange on hover */
+}
+
+   
+  </style>
+</head>
+
+<body class="aboutusbody">
+
+  <!-- Chatbot integration section -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "Ask me anything!",
+      "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+      "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Open Source Village",
+      "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": [],
+      "enableConversationDeletion": true
+    });
+  </script>
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 50);
+    });
+  </script>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+
+  <!-- cookie modal  -->
+
+  <div id="cookieModal" class="cookie-modal">
+    <div class="cookie-modal-content">
+        <span class="cookie-close">&times;</span>
+        <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our cookie policy.</p>
+        <button id="acceptCookies">Accept</button>
+    </div>
+</div>
+
+<script src="cookie.js"></script>
+
+
+<script>
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const cookieConsent = document.getElementById('cookie-consent');
+  const acceptButton = document.querySelector('.accept-cookies');
+  const rejectButton = document.querySelector('.reject-cookies');
+  const learnMoreLink = document.getElementById('learn-more-link');
+  const learnMoreContent = document.getElementById('learn-more-content');
+
+  // Hide preloader after page load
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
+    }
+    cookieConsent.style.display = 'block';
+  });
+
+  // Check if localStorage is available
+  function localStorageAvailable() {
+    try {
+      const test = '__localStorage_test__';
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  if (localStorageAvailable()) {
+    // Check if the user has already made a choice
+    if (localStorage.getItem('cookieConsent')) {
+      cookieConsent.style.display = 'none';
+    }
+
+    // Function to handle cookie consent choice
+    function handleConsent(choice) {
+      localStorage.setItem('cookieConsent', choice);
+      cookieConsent.style.display = 'none';
+    }
+
+    // Add event listeners to buttons
+    acceptButton.addEventListener('click', function() {
+      handleConsent('accepted');
+    });
+
+    rejectButton.addEventListener('click', function() {
+      handleConsent('rejected');
+    });
+  } else {
+    // Hide consent if localStorage is not available
+    cookieConsent.style.display = 'none';
+  }
+
+  // Add event listener to "Learn More" link
+  learnMoreLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    learnMoreContent.style.display = 'block';
+    learnMoreLink.style.display = 'none';
+  });
+});
+</script>
+
+<!-- Navbar -->
+<div class="navbar">
+  <nav>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                  <img  class="logo" src="images/logo2.jpeg" alt="logo">
+
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
+
+      <!-- <div>
+        <span class="logo-subtext">Source</span>
+      </div> -->
+
+    </a>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a href="contact us.html">Contact</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+
+    <div class="toggle-container" style="top: 15px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
+    </div>
+
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        right: -4px;
+        top: 15px;
+      }
+
+      .light-mode .toggle-container {
+        right: 140px;
+        top: 10px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
+
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+
+      .benefit-container{
+        margin: 10px auto;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr !important;
+        /* size-adjust: auto; */
+        /* grid-template-columns: min-content; */
+      }
+
+      .benefit-card{
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 80%;
+        padding: 15px;
+        border: 1.5px solid #e66f00;
+        margin: auto 20px;
+        background:#f39c12;
+        border-radius: 10px;
+        transition: all 0.6s linear;
+      }
+      .benefit-card:hover{
+        border-color: #ff3907;
+        scale:1.02;
+      }
+      .benefit-card p{
+        margin-top:auto;
+        padding-bottom: none;
+        margin-bottom:auto;
+        color:white;
+        font-weight: 600;
+        text-shadow: 0px 2px #e66f00;
+      }
+
+      .learning-container{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: 1fr;
+      }
+
+      .learning-card{
+        align-items: center;
+        text-align: center;
+        height: 68%;
+        width: 70%;
+        padding: 10px;
+        border: 1.5px solid #e66f00;
+        margin:  20px auto;
+        background:#ffffff;
+        border-radius: 10px;
+        display: grid;
+        grid-auto-flow: column;
+        /* grid-template-columns: repeat(2,1fr); */
+        /* grid-template-rows: 1fr; */
+        transition: all 0.4s linear;
+      }
+      .learning-card:hover{
+        background: linear-gradient(to right, white, #f5d244);
+      }
+
+      .learning-card img{
+        width: 60px;
+        height: 60px;
+        margin-left:auto;
+        margin-right: auto;
+        
+      }
+
+      .learning-card p{
+        align-items: center;
+        text-align: left;
+        margin-top:auto !important;
+        margin-bottom:auto !important;
+        /* line-height: 1px; */
+        padding-bottom: 0px;
+       
+        color:#e66f00;
+        font-weight: 600;
+        text-shadow: 0px 1px #6e0404;
+      }
+
+      .community-container{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: 1fr;
+        
+      }
+      .community-card:nth-child(1){
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+      }
+      .community-card:nth-child(2){
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+      }
+
+      .community-card:nth-child(3){
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+      }
+      .community-card:nth-child(4){
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+      }
+      .community-card{
+        background-color: #ffffff55;
+        margin: 10px auto;
+        max-width:90%;
+        padding:2%;
+        
+        border:1.5px solid rgb(255, 64, 0);
+        
+        font-weight: 600;
+      }
+      .improve-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: space-between; */
+      }
+      .improve-card p{
+        margin: 10px 20px;
+        font-weight: bold;
+      }
+      .improve-card i{
+        width: 20px;
+        /* margin: auto; */
+        font-size: 22px;
+        color: #e66f00;
+      }
+      /* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Project Section */
+.project {
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.project h1 {
+  color: #FFA500;
+  font-size: 36px;
+  margin-bottom: 50px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Project Container */
+.pcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Project Card */
+.pcard {
+  background-color: #ffe70f;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pcard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.pimg img {
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid #ffa500;
+}
+
+/* Top Text */
+.ptop-text {
+  padding: 20px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.ptop-text .name {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pbtn a {
+  text-decoration: none;
+  background-color: #ffa500;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pbtn a:hover {
+  background-color: #e89b00;
+}
+
+/* Bottom Text */
+.pbottom-text {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.pbottom-text .ptext {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Keyframe Animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pcard {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project h1 {
+    font-size: 28px;
+  }
+}
+
+    </style>
+
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+    <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
+
+  </nav>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const toggleButton = document.getElementById('checkbox');
+
+    const currentMode = localStorage.getItem('dark-mode');
+
+    if (currentMode === 'enabled') {
+
+      document.body.classList.add('dark-mode');
+
+      toggleButton.checked = true;
+
+    }
+
+    toggleButton.addEventListener('change', function () {
+
+      document.body.classList.toggle('dark-mode');
+
+      if (document.body.classList.contains('dark-mode')) {
+
+        localStorage.setItem('dark-mode', 'enabled');
+
+      }
+      else {
+
+        localStorage.setItem('dark-mode', 'disabled');
+
+      }
+    });
+
+  });
+</script>
+
+
+  <!-- main section -->
+  <div class="about">
+    <div class="content">
+      <h1 class="about-title">About Us</h1>
+      <div class="img">
+        <img style="width: 600px" src="images/about-img (2).png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="intro-container" id="introduction">
+    <div class="vertical">
+      <h1 class="about-title">WHO ARE WE?</h1>
+      <img src="images/who.png.png" alt="" />
+    </div>
+    <div class="vertical">
+      <div class="box">
+        <h1>INTRODUCTION</h1>
+        <div class="intro-content">
+          <p>
+            Welcome to our open-source community! <br />
+            We are a diverse group of individuals passionate about
+            collaboration, innovation, and sharing knowledge through
+            open-source projects.Our community thrives on the contributions
+            and enthusiasm of its members.
+          </p>
+        </div>
+      </div>
+      <div class="box" id="mission">
+        <h1>MISSION</h1>
+        <div class="intro-content">
+          <p>
+            Our mission is to promote open-source software development, foster
+            a collaborative environment, and provide opportunities for
+            learning and growth. We aim to create software that benefits the
+            wider community and drives technological progress.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="counters">
+      <div>
+        <div class="counter">
+          <h1><span data-count="1000">0</span></h1>
+          <h3>Visitors</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="200">0</span></h1>
+          <h3>Members</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="100">0</span>+</h1>
+          <h3>Followers</h3>
+        </div>
+        <div class="counter">
+          <h1><span data-count="70">0</span>+</h1>
+          <h3>Countries</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="timeline-for-join" id="Timeline">
+    <h1>How To Join US?</h1>
+    <div class="timeline">
+      <div class="tcontainer left-container">
+        <div class="tcontent"></div>
+        <div class="text-box" >
+         
+          <a href="https://discord.gg/mM9qFh2uZR"><h2>Join Discord</h2></a>
+          <p>
+            Join our Discord server to connect with other developers, share
+            ideas, and collaborate on
+          </p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+      <div class="tcontainer right-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Register</h2>
+          <p>Register on our website and create a profile.</p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+      <div class="tcontainer left-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Contribute</h2>
+          <p>Contribute to our projects and make a difference.</p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+      <div class="tcontainer right-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Participate</h2>
+          <p>Participate in our events and meet like-minded individuals.</p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+      <div class="tcontainer left-container">
+        <div class="tcontent"></div>
+        <div class="text-box">
+          <h2>Learn</h2>
+          <p>
+            Learn new skills and stay up-to-date with the latest technologies.
+          </p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="project" id="projects">
+    <h1>OUR PROJECTS</h1>
+    <div class="pcontainer">
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-1.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Project Alpha</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              An open-source web application framework that simplifies
+              development with modular architecture and built-in features.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-2.jpeg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Data Insights</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              A collaborative platform for data analysis and visualization. It
+              provides powerful tools for data manipulation and statistical
+              analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-3.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">AI Toolkit</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              A suite of tools and libraries for machine learning enthusiasts.
+              It offers resources for developing and deploying machine
+              learning models.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-4.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Community Hub</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              An online portal for community events, discussions, and
+              resources. It aims to connect members and facilitate
+              collaboration within the community.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-5.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Code Learn</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              An interactive platform for learning programming languages
+              through hands-on exercises and real-time feedback. It offers
+              courses, challenges, and a supportive community to enhance
+              coding skills.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="images/project-img-6.jpg" alt="" />
+        </div>
+        <div class="ptop-text">
+          <div class="name">Open Health</div>
+          <div class="pbtn">
+            <a href="">Details</a>
+          </div>
+        </div>
+        <div class="pbottom-text">
+          <div class="ptext">
+            <p>
+              An open-source platform for healthcare data management and
+              analysis. It aims to improve healthcare outcomes by providing
+              tools for data integration, visualization, and research
+              collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <special-footer></special-footer>
+  <script src="index.js"></script>
+  <script src="footer/footer.js"></script>
+
+  <!--  counter js -->
+
+  <script>
+
+
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
+
+    
+    const counters = document.querySelectorAll(".counters span");
+    const container = document.querySelector(".counters");
+
+    let activated = false;
+    window.addEventListener("scroll", () => {
+      const containerOffsetTop = container.offsetTop;
+      const containerOffsetHeight = container.offsetHeight;
+
+      if (
+        window.pageYOffset > containerOffsetTop - window.innerHeight + 200 &&
+        !activated
+      ) {
+        counters.forEach((counter) => {
+          counter.innerText = "0";
+          let count = 0;
+
+          function updateCount() {
+            const target = parseInt(counter.getAttribute("data-count"));
+
+            if (count < target) {
+              count++;
+              counter.innerText = count;
+              setTimeout(updateCount, 10);
+            } else {
+              counter.innerText = target;
+            }
+          }
+          updateCount();
+        });
+        activated = true;
+      } else if (
+        window.pageYOffset < containerOffsetTop - window.innerHeight + 500 &&
+        activated
+      ) {
+        counters.forEach((counter) => {
+          counter.innerText = "0";
+        });
+        activated = false;
+      }
+    });
+  </script>
+
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+    "composerPlaceholder": "Open Source Village",
+    "botConversationDescription": "Ask me anything!",
+    "botId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+    "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+    "messagingUrl": "https://messaging.botpress.cloud",
+    "clientId": "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+    "webhookId": "a909bd46-1d71-484d-8551-58afe6d64c1e",
+    "lazySocket": true,
+    "themeName": "prism",
+    "botName": "Open Source Village",
+    "avatarUrl": "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+    "stylesheet": "https://webchat-styler-css.botpress.app/prod/90be4629-b1cb-4093-8ec9-cff772de8ed8/v54653/style.css",
+    "frontendVersion": "v1",
+    "showPoweredBy": true,
+    "theme": "prism",
+    "themeColor": "#2563eb",
+    "allowedOrigins": [],
+    "enableConversationDeletion": true
+  });
+</script>
+
+</body>
+
+</html>

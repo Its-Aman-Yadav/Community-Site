@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="Aman Yadav">
+    <meta name="keywords" content="village community, collaboration, resource sharing, communication, transparency, collective decision-making, local projects, digital tools.">
+    <meta name="description" content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+    <meta name="language" content="English">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://community-site-theta.vercel.app/">
+    <meta property="og:title" content="Open Source Village">
+    <meta name="og:description" content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/feedback.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body>
+    <a href="javascript:history.back()" class="back-button">
+        <i class="fas fa-arrow-left"></i> Go Back
+    </a>
+
+    <div class="toggle-container" style="top: 15px">
+        <input type="checkbox" id="checkbox" class="switch-checkbox">
+        <label class="theme-switch" for="checkbox">
+            <div class="toggle-button">
+                <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+                <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+            </div>
+        </label>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 mb-5 mb-lg-0">
+                            <h2 class="mb-5 text-orange">We'd Love Your Feedback</h2>
+                            <div class="rowflex pr-3">
+                                <p for="rating" class="rate-us">Rate Your Experience</p>
+                                <div class="rating-container" id="rate">
+                                  <button type="button" onclick="handleRatingChange(1)">😡</button>
+                                  <button type="button" onclick="handleRatingChange(2)">😢</button>
+                                  <button type="button" onclick="handleRatingChange(3)">😐</button>
+                                  <button type="button" onclick="handleRatingChange(4)">😊</button>
+                                  <button type="button" onclick="handleRatingChange(5)">😍</button>
+                                </div>
+                                
+                            </div>
+
+                            <form action="" class="border-right pr-5 mb-5" method="post" id="feedback-form" name="contactForm" onsubmit="handleSubmit(event)">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control" name="fname" id="fname" placeholder="First name">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Last name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <textarea class="form-control" name="message" id="feedback" cols="30" rows="7" placeholder="Write your message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Send Message" class="btn btn-primary rounded-2 py-2 px-4">
+                                        <span class="submitting"></span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="form-message-warning mt-4"></div>
+                            <div id="form-message-success">Your message was sent, thank you!</div>
+                        </div>
+                        <div class="col-lg-4 ml-auto">
+                            <h3 class="mb-4 text-orange-l">Let's talk about everything.</h3>
+                            <p>Your voice matters to us. Share your thoughts and help us create an exceptional experience!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup" style="display: none">
+        <div class="popup-content">
+            <h2>Thank you for your Feedback!🧡</h2>
+            <div class="popup-icon">
+                <img src="/images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120">
+            </div>
+            <p>Your feedback has been received.<br>We appreciate the input you provide.</p>
+            <button class="popup-button" onclick="closePopup()">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+          let rating = null;
+
+function handleRatingChange(newRating) {
+  rating = newRating;
+  const buttons = document.querySelectorAll(".rating-container button");
+  buttons.forEach((button, index) => {
+    if (index < rating) {
+      button.classList.add("filled");
+    } else {
+      button.classList.remove("filled");
+    }
+  });
+}
+
+function updateEmojis() {
+  const buttons = document.querySelectorAll(".rating-container button");
+  buttons.forEach((button, index) => {
+    if (index < rating) {
+      button.classList.add("filled");
+    } else {
+      button.classList.remove("filled");
+    }
+  });
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const fname = document.getElementById("fname").value;
+  const lname = document.getElementById("lname").value;
+  const email = document.getElementById("email").value;
+  const feedback = document.getElementById("feedback").value;
+
+  console.log("Feedback submitted:", { fname, lname, email, rating, feedback });
+
+  document.getElementById("feedback-form").reset();
+  rating = null;
+  updateEmojis();
+
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+
+       
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const toggleButton = document.getElementById('checkbox');
+
+      const currentMode = localStorage.getItem('dark-mode');
+
+      if (currentMode === 'enabled') {
+
+        document.body.classList.add('dark-mode');
+
+        toggleButton.checked = true;
+
+      }
+
+      toggleButton.addEventListener('change', function () {
+
+        document.body.classList.toggle('dark-mode');
+
+        if (document.body.classList.contains('dark-mode')) {
+
+          localStorage.setItem('dark-mode', 'enabled');
+
+        }
+        else {
+
+          localStorage.setItem('dark-mode', 'disabled');
+
+        }
+      });
+
+    });
+  </script>
+
+</body>
+</html>

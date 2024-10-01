@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <script
+      src="https://kit.fontawesome.com/90889e6878.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="favicon.ico" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("./images/Slide4.jpg") no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 80vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+      }
+
+      .card {
+        background: rgba(251, 190, 190, 0.4); /* semi-transparent background */
+        padding: 2rem;
+        border-radius: 10px;
+        border: 1px solid #080707;
+        box-shadow: 0px 1px 4px 2px #eb4c0292;
+        width: 70%;
+        max-width: 1200px;
+        margin-top: 100px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+
+      .contact-details div {
+        background: rgba(253, 35, 2, 0.8);
+        border: 1px solid #080707;
+        border-radius: 10px;
+        padding: 10px;
+        width: 30%;
+        text-align: center;
+      }
+
+      .contact-details div:hover {
+        background: rgba(249, 156, 145, 0.8);
+        box-shadow: 0px 1px 4px 4px #0e050192;
+      }
+
+      .main-content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .left {
+        width: 30%;
+      }
+
+      .left img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-top: 80px;
+      }
+
+      .right {
+        width: 65%;
+        padding-left: 40px;
+      }
+
+      .form-container {
+        width: 100%;
+        font-size: 20px;
+      }
+
+      .form,
+      .address {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0 0;
+      }
+
+      .form input,
+      textarea {
+        width: 100%;
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #000;
+        padding: 10px 0;
+        margin: 5px 0;
+        color: white;
+      }
+
+      .form input:hover,
+      textarea:hover {
+        border-bottom: 2px solid rgb(248, 243, 245);
+      }
+
+      .usersubmit input {
+        background-color: rgb(245, 53, 53);
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-left: 60px;
+      }
+
+      .usersubmit input:hover {
+        background-color: rgb(246, 146, 154);
+        color: black;
+        border: 2px solid black;
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 50px;
+      }
+
+      .icons .icon i {
+        margin-top: 15px;
+        font-size: 30px;
+        transition: all 0.9s ease;
+        color: white;
+      }
+
+      .icons .icon:hover i {
+        transform: scale(1.2);
+      }
+
+      .icons .icon:hover .fab.fa-linkedin {
+        color: #0077b5;
+      }
+
+      .icons .icon:hover .fab.fa-github {
+        color: #060606;
+      }
+
+      .icons .icon:hover .fab.fa-instagram {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        background-clip: text;
+        border-radius: 20%;
+        transform: scale(1.5);
+        color: transparent;
+      }
+
+      .icons .icon:hover .fab.fa-twitter {
+        color: #090e11;
+      }
+
+      .icons .icon:hover .fas.fa-envelope {
+        color: #1ac31d;
+      }
+
+      @media screen and (max-width: 700px) {
+        .card {
+          flex-direction: column;
+          width: 90%;
+          height: auto;
+        }
+
+        .left {
+          width: 100%;
+          height: auto;
+        }
+
+        .right {
+          width: 100%;
+          padding: 0 1rem;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .card {
+          width: 90%;
+          padding: 1rem;
+        }
+
+        .left {
+          width: 100%;
+          height: auto;
+        }
+
+        .right {
+          width: 100%;
+          padding: 0 1rem;
+        }
+
+        .form input,
+        textarea {
+          width: 100%;
+        }
+
+        .usersubmit input {
+          width: 100%;
+          padding: 0.5rem;
+        }
+      }
+
+      @media screen and (max-width: 350px) {
+        .container {
+          padding: 0 1rem;
+        }
+
+        .card {
+          width: 100%;
+          padding: 0.5rem;
+        }
+
+        .left {
+          width: 100%;
+          height: auto;
+        }
+
+        .form input,
+        textarea {
+          width: 100%;
+        }
+
+        .usersubmit input {
+          width: 100%;
+        }
+      }
+
+      .back-button {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(250, 244, 245);
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .back-button i {
+        font-size: 35px;
+        margin-right: 10px;
+      }
+
+      .back-button:hover {
+        color: #f5c58d;
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 26px;
+        right: 30px;
+        color: rgb(86, 23, 2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        z-index: 1000;
+      }
+
+      .theme-toggle i {
+        font-size: 20px;
+        color: yellow;
+      }
+
+      .theme-toggle .fa-moon {
+        display: none;
+        color: rgb(255, 255, 255);
+      }
+
+      body.dark-theme {
+        background-color: #180e0e;
+        color: #000000;
+      }
+
+      body.dark-theme .back-button {
+        color: #ffffff;
+      }
+
+      body.dark-theme .theme-toggle .fa-sun {
+        display: none;
+      }
+
+      body.dark-theme .theme-toggle .fa-moon {
+        display: inline;
+      }
+
+      body.dark-theme .card {
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0px 1px 4px 2px #f5f1f192;
+      }
+
+      body.dark-theme .right h2 {
+        color: #ffffff;
+      }
+
+      body.dark-theme .header {
+        color: white;
+      }
+
+      body.dark-theme .contact-details {
+        color: white;
+      }
+
+      /* 
+      body.dark-theme .form input,
+      textarea {
+        color: #fff;
+        border-bottom: 2px solid rgb(255, 255, 255);
+      }
+
+      body.dark-theme .form input:hover,
+      textarea:hover {
+        border-bottom: 2px solid #f25;
+      } */
+
+      body.dark-theme .address h4 {
+        color: #fff;
+      }
+
+      body.dark-theme .social i {
+        color: #ffffff;
+      }
+          /* Add your CSS styling here */
+          .contact-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+        }
+        .contact-popup-content {
+            margin: 20px 0;
+        }
+        .contact-popup-icon {
+            margin: 20px 0;
+        }
+        .contact-popup-button {
+            padding: 10px 20px;
+            background-color: #e66f00;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        #thankYouMessage, #errorMessage {
+            display: none;
+            margin: 10px 0;
+            color: red;
+            font-weight: bold;
+        }
+        #thankYouMessage {
+            color: green;
+        }
+        .theme-toggle {
+    position: fixed;
+    top: 26px;
+    right: 80px; /* Adjusted right position to give space between buttons */
+    color: rgb(86, 23, 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Chatbot integration section -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+        composerPlaceholder: "Ask me anything!",
+        botConversationDescription: "Welcome to Open Source Village!",
+        botId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        webhookId: "a909bd46-1d71-484d-8551-58afe6d64c1e",
+        lazySocket: true,
+        themeName: "prism",
+        botName: "Open Source Village",
+        avatarUrl:
+          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1689842743944?e=1695254400&v=beta&t=0J9c08n_S-BNwxd7IMsWNV97jbhRmb5eRjfSBg6afkU",
+      });
+    </script>
+
+<a class="back-button" href="index.html">
+  <i class="fas fa-arrow-left"></i>
+</a>
+<div class="container">
+  <div class="card">
+    <div class="theme-toggle" id="theme-toggle">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+    </div>
+    <div class="header">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="contact-details">
+      <div>
+        <h3>Email</h3>
+        <p>contact@yourcompany.com</p>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <p>(123) 456-7890</p>
+      </div>
+      <div>
+        <h3>Address</h3>
+        <p>1234 Main St,<br />City, Country</p>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="left">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-5795988-4849052.png?f=webp" alt="Contact Image" />
+        <div class="icons">
+          <div class="icon">
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="icon">
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="icon">
+            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="icon">
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="icon">
+            <a href="mailto:contact@yourcompany.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="thankYouMessage">Thank you! Your message has been sent.</div>
+      <div id="errorMessage">Please fill out all fields.</div>
+      <div class="right">
+        <h2>Get in Touch</h2>
+        <div class="form-container">
+          <form id="contactForm" class="form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required /><br />
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required /><br />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea><br />
+
+            <div class="usersubmit">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="contactPopup" class="contact-popup" style="display: none;">
+        <div class="contact-popup-content">
+          <h2>Thank you for contacting us!🧡</h2>
+          <div class="contact-popup-icon">
+            <img src="./images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120" />
+          </div>
+          <p>Your message has been received.<br />We will get back to you shortly.</p>
+          <button class="contact-popup-button" onclick="closeContactPopup()">Back to Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .card {
+    background: linear-gradient(135deg, #FFE70F, #FFA500);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .theme-toggle {
+    float: right;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .theme-toggle i {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .header h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease;
+  }
+
+  .contact-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #333;
+    animation: slideIn 1s ease;
+  }
+
+  .contact-details h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contact-details p {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .left {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+  }
+
+  .left img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .left img:hover {
+    transform: scale(1.05);
+  }
+
+  .icons {
+    margin-top: 20px;
+  }
+
+  .icon {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .icon a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+
+  .icon a:hover {
+    color: #FFA500;
+  }
+
+  .right {
+    flex: 1;
+    min-width: 300px;
+    animation: slideIn 1.5s ease;
+  }
+
+  .right h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form label {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .form input,
+  .form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .form input:focus,
+  .form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+
+  .usersubmit input[type="submit"] {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .usersubmit input[type="submit"]:hover {
+    background-color: #FFD700;
+  }
+
+  .contact-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.2s ease;
+  }
+
+  .contact-popup-button {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-popup-button:hover {
+    background-color: #FFD700;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-details {
+      flex-direction: column;
+    }
+
+    .main-content {
+      flex-direction: column;
+    }
+
+    .left,
+    .right {
+      flex: 1 100%;
+      margin-bottom: 20px;
+    }
+
+    .contact-popup-button {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header h1 {
+      font-size: 28px;
+    }
+
+    .right h2 {
+      font-size: 24px;
+    }
+
+    .form label {
+      font-size: 14px;
+    }
+
+    .form input,
+    .form textarea {
+      font-size: 14px;
+    }
+
+    .usersubmit input[type="submit"] {
+      font-size: 16px;
+    }
+  }
+</style>
+
+
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          const thankYouMessage = document.getElementById('thankYouMessage');
+          const errorMessage = document.getElementById('errorMessage');
+          const name = document.querySelector('input[name="name"]').value.trim();
+          const email = document.querySelector('input[name="email"]').value.trim();
+          const phone = document.querySelector('input[name="phone"]').value.trim();
+          const message = document.querySelector('textarea[name="message"]').value.trim();
+
+          if (name === "" || email === "" || phone === "" || message === "") {
+              errorMessage.style.display = 'block';
+              thankYouMessage.style.display = 'none';
+          } else {
+              errorMessage.style.display = 'none';
+              thankYouMessage.style.display = 'block';
+              setTimeout(function () {
+                  thankYouMessage.style.display = 'none';
+                  document.getElementById('contactForm').reset();
+              }, 10);
+              document.getElementById('contactPopup').style.display = 'block';
+          }
+      });
+
+      function closeContactPopup() 
+      {
+        window.location.href = 'index.html';
+        document.getElementById('contactPopup').style.display = 'none';
+      }
+  </script>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+      });
+    </script>
+  </body>
+</html>

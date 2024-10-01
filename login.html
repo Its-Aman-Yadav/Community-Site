@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Signup</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="icon" href="favicon.ico" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url("./images/Slide4.jpg") no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      /* Add styles for the success banners */
+      .success-banner {
+        display: none;
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      /* Light Mode (default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  background-color: #f5f5f5;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+input, button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #dddddd;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+.social-container .social {
+  color: #000000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.container.dark-mode {
+  background-color: #1e1e1e;
+}
+
+.form-container.dark-mode {
+  background-color: #2c2c2c;
+  border: 1px solid #333333;
+}
+
+input.dark-mode, button.dark-mode {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+button.dark-mode:hover {
+  background-color: #3a3a3a;
+}
+
+.social-container .social.dark-mode {
+  color: #ffffff;
+}
+    /* Toggle Button Styling */
+#darkModeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000000; /* Default color for light mode */
+  transition: color 0.3s;
+}
+
+/* Sun Icon for Light Mode */
+#darkModeToggle.sun::before {
+  content: "\2600"; /* Unicode for Sun */
+}
+
+/* Moon Icon for Dark Mode */
+#darkModeToggle.moon::before {
+  content: "\1F319"; /* Unicode for Moon */
+}
+
+/* Toggle Button Color for Dark Mode */
+body.dark-mode #darkModeToggle {
+  color: #ffffff; /* Color for dark mode */
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Success banners -->
+    <div id="loginSuccessBanner" class="success-banner">
+      Logged in successfully
+    </div>
+    <div id="registerSuccessBanner" class="success-banner">
+      Registered successfully
+    </div>
+
+    <!-- Chatbot integration section -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+        composerPlaceholder: "Ask me anything!",
+        botConversationDescription: "Welcome to Open Source Village!",
+        botId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+        messagingUrl: "https://messaging.botpress.cloud",
+        clientId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
+        webhookId: "a909bd46-1d71-484d-8551-58afe6d64c1e",
+        lazySocket: true,
+        themeName: "prism",
+        botName: "Open Source Village",
+        avatarUrl:
+          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1683703353326?e=1724889600&v=beta&t=to32718A4rdNZM_XmtjHN8xG4LKE9UYLhVnuoyB3nt8",
+        stylesheet:
+          "https://webchat-styler-css.botpress.app/prod/328bf234-c9e7-4f98-9c94-69f1a0877b98/v99808/style.css",
+        frontendVersion: "v1",
+        useSessionStorage: true,
+        enableConversationDeletion: true,
+        theme: "prism",
+        themeColor: "#2563eb",
+        allowedOrigins: [],
+      });
+    </script>
+
+    <div class="container" id="container">
+      <div class="form-container register-container">
+        <form id="registerForm">
+          <h1>Open Source Village</h1>
+          <input type="text" placeholder="Name" id="registerName" />
+          <input type="email" placeholder="Email" id="registerEmail" />
+          <div class="input-container">
+            <input
+              type="password"
+              placeholder="Password"
+              id="registerPassword"
+            />
+            <i
+              class="far fa-eye-slash"
+              id="toggleRegisterPassword"
+              style="cursor: pointer"
+            ></i>
+          </div>
+          <button type="submit">Register</button>
+          <div class="social-container">
+            <a id="fb" href="https://www.facebook.com" class="social"
+              ><i class="lni lni-facebook-fill"></i
+            ></a>
+            <a id="goog" href="https://www.google.com" class="social"
+              ><i class="lni lni-google"></i
+            ></a>
+            <a
+              id="lin"
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              <a
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              <a
+              id="lin"
+              href="https://www.linkedin.com"
+              class="social"
+              ><i class="lni lni-linkedin-original"></i
+            ></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-container login-container">
+        <form id="loginForm">
+          <h1>Open Source Village</h1>
+          <input type="email" placeholder="Email" id="loginEmail" />
+          <div class="input-container">
+            <input type="password" placeholder="Password" id="loginPassword" />
+            <i
+              class="far fa-eye-slash"
+              id="togglePassword"
+              style="cursor: pointer"
+            ></i>
+          </div>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              <label>Remember me</label>
+            </div>
+            <div class="pass-link">
+              <a href="./Forgot_Password.html">Forgot password?</a>
+              <!-- Redirects to Forgot_Password.html when hypertext is clicked-->
+            </div>
+          </div>
+          <button type="submit">Login</button>
+          <span>or use your account</span>
+          <div class="social-container">
+            <a id="fb" href="https://www.facebook.com" class="social"
+              ><i class="lni lni-facebook-fill"></i
+            ></a>
+            <a id="goog" href="https://www.google.com" class="social"
+              ><i class="lni lni-google"></i
+            ></a>
+
+            <a
+              id="lin"
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              <a
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              <a
+              id="lin"
+              href="https://www.linkedin.com/company/open-source-village/"
+              class="social"
+              ><i class="lni lni-linkedin-original"></i
+            ></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title"><br /></h1>
+            <p>If you have an account already, login here.</p>
+            <button class="ghost" id="login">
+              Login
+              <i class="lni lni-arrow-left login"></i>
+            </button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">
+              Start your <br />
+              journey now
+            </h1>
+            <p>
+              If you don't have an account yet, register and start your journey.
+            </p>
+            <button class="ghost" id="register">
+              Register
+              <i class="lni lni-arrow-right register"></i>
+            </button>
+            <a style="margin: 0" href="index.html">
+              <button class="ghost" id="home">
+                <i class="lni lni-arrow-left register"></i>
+                <span style="color: white">Home</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="darkModeToggle"></button>
+
+    <script src="log/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const registerButton = document.getElementById("register");
+        const loginButton = document.getElementById("login");
+        const container = document.getElementById("container");
+        const loginSuccessBanner =
+          document.getElementById("loginSuccessBanner");
+        const registerSuccessBanner = document.getElementById(
+          "registerSuccessBanner"
+        );
+
+        registerButton.addEventListener("click", (event) => {
+          event.preventDefault();
+          container.classList.add("right-panel-active");
+          document
+            .getElementById("registerForm")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+        loginButton.addEventListener("click", (event) => {
+          event.preventDefault();
+          container.classList.remove("right-panel-active");
+          document
+            .getElementById("loginForm")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+        // Form validation and submission
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            validateForm("register");
+          });
+
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            validateForm("login");
+          });
+
+        function validateForm(formType) {
+          let email, password, name;
+          const spcharRegex = /[<>"/]/;
+          if (formType === "register") {
+            name = document.getElementById("registerName").value;
+            email = document.getElementById("registerEmail").value;
+            password = document.getElementById("registerPassword").value;
+            if (name === "" || email === "" || password === "") {
+              alert("Please fill in all fields");
+              return;
+            }
+            if (!validateEmail(email)) {
+              alert("Please enter a valid email address");
+              return;
+            }
+            if (spcharRegex.test(name) || spcharRegex.test(password)) {
+              alert('Name Or Password Cannot Contain <,>,", or /');
+              return;
+            }
+            // Show register success banner
+            registerSuccessBanner.style.display = "block";
+            setTimeout(() => {
+              registerSuccessBanner.style.display = "none";
+            }, 3000);
+          } else {
+            email = document.getElementById("loginEmail").value;
+            password = document.getElementById("loginPassword").value;
+            if (email === "" || password === "") {
+              alert("Please fill in all fields");
+              return;
+            }
+            if (!validateEmail(email)) {
+              alert("Please enter a valid email address");
+              return;
+            }
+            if (spcharRegex.test(password)) {
+              alert('Password cannot contain <,>,", or /');
+              return;
+            }
+            // Show login success banner
+            loginSuccessBanner.style.display = "block";
+            setTimeout(() => {
+              loginSuccessBanner.style.display = "none";
+            }, 3000);
+          }
+        }
+
+        function validateEmail(email) {
+          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return re.test(email);
+        }
+
+        // Password toggle visibility for login
+        const togglePassword = document.getElementById("togglePassword");
+        const passwordInput = document.getElementById("loginPassword");
+
+        togglePassword.addEventListener("click", function () {
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+
+          this.classList.toggle("fa-eye");
+          this.classList.toggle("fa-eye-slash");
+        });
+
+        // Password toggle visibility for register
+        const toggleRegisterPassword = document.getElementById(
+          "toggleRegisterPassword"
+        );
+        const passwordRegisterInput =
+          document.getElementById("registerPassword");
+
+        toggleRegisterPassword.addEventListener("click", function () {
+          const type =
+            passwordRegisterInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordRegisterInput.setAttribute("type", type);
+
+          this.classList.toggle("fa-eye");
+          this.classList.toggle("fa-eye-slash");
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const container = document.getElementById('container');
+    
+    // Load saved preference from localStorage
+    if (localStorage.getItem('dark-mode') === 'true') {
+      container.classList.add('dark-mode');
+      document.body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      container.classList.toggle('dark-mode');
+      document.body.classList.toggle('dark-mode');
+      
+      // Save preference to localStorage
+      localStorage.setItem('dark-mode', container.classList.contains('dark-mode'));
+    });
+  });
+
+      document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const container = document.getElementById('container');
+    
+    // Check saved preference
+    if (localStorage.getItem('dark-mode') === 'true') {
+      document.body.classList.add('dark-mode');
+      darkModeToggle.classList.add('moon');
+    } else {
+      darkModeToggle.classList.add('sun');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      darkModeToggle.classList.toggle('sun');
+      darkModeToggle.classList.toggle('moon');
+      
+      // Save preference
+      localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+    });
+  });
+
+
+    </script>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <!-- Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <!-- Our script must be loaded after firebase references -->
+    <script src="index.js"></script>
+  </body>
+</html>

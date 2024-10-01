@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Learning - Open Source Village</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contributor.css" />
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+
+    
+    body {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+video#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  background-size: cover;
+}
+
+/* Ensure the content is above the video */
+.license-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 110px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.license-container h1, .license-container h2 {
+  color: #333;
+}
+
+.license-container p {
+  color: #666;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .license-container {
+      margin: 20px auto;
+      padding: 10px;
+  }
+
+  .scrollToTopBtn {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 40px;
+      bottom: 80px;
+      right: 20px;
+  }
+
+  .progress-ring {
+      bottom: 75px;
+      right: 15px;
+  }
+}
+
+    
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(to bottom, #FFD700, #FFFFFF);  */
+        color: black;
+        background: linear-gradient(#f5d244, #f5a623);
+    }
+
+    .title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #000000;
+    max-width: 100%; /* Ensure it doesn't exceed the container */
+    word-wrap: break-word; /* Wrap long words to the next line */
+    text-align: center; /* Center align the text */
+}
+
+/* Add this media query to adjust font size for smaller screens */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em; /* Adjust font size as needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2em; /* Further adjust for very small screens */
+    }
+}
+    #image {
+      height: 30px;
+      /* Reduced height of the profile image */
+      width: 30px;
+      /* Reduced width of the profile image */
+      border-radius: 50%;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+        body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+  
+<script type="text/javascript">
+  window.addEventListener("scroll", function () {
+    var header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 50)
+  })
+</script>
+<!-- Navbar -->
+<div class="navbar">
+  <nav>
+    <div id="ham-menu">
+      <div id="bars" onclick="togMenu(this)">
+      <div id="first" class="bar"></div>
+      <div id="sec" class="bar"></div>
+      <div id="third" class="bar"></div>
+      </div>
+      <div id="nav-menu">
+          <ul>
+              <li class="icons">
+                <i class="fa-solid fa-house"></i>
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-address-card"></i>
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="icons">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="icons"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
+              <li class="icons"><i class="fa-solid fa-address-book"></i><a href="contact us.html">Contact</a></li>
+              <li class="icons"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+            </ul>
+        </div>
+    </div>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                 <a href="profile.html" class="href"> <img  class="logo" src="images/logo2.jpeg" alt="logo"></a>
+
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
+
+      <!-- <div>
+        <span class="logo-subtext">Source</span>
+      </div> -->
+
+    </a>
+    <ul>
+      <li style="background-color: transparent;"><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html">Home</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#service">Services</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+      <li style="background-color: transparent;"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+
+    <div class="toggle-container" style="top: 0px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
+    </div>
+    <!--Styles for side menu-->
+    <style>
+      #bars{
+          display: none;
+      }
+      .bar{
+          width:27px;
+          height:3px;
+          background-color:white;
+          margin: 7px;
+          border-radius: 20px;
+          transition: all 0.4s;
+      }
+      .cliked #first{
+          transform: translate(0, 10px) rotate(-45deg);
+          
+      }
+      .cliked #sec {opacity: 0;}
+
+      .cliked #third {
+      transform: translate(0, -10px) rotate(45deg);
+      }
+      #nav-menu{
+          display: none;
+          opacity: 0;
+          position: fixed;
+          top:63px;
+          z-index: 1;
+          margin-top: 27px;
+          width:auto;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          backdrop-filter: blur(4px);
+          padding: 20px 0;
+          border: none;
+          transition: all 0.6s;
+          
+      }
+      #nav-menu ul{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: inherit;
+          width: auto;
+          position: absolute;
+          top:0;
+          right:inherit;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(4px);
+      }
+      #nav-menu ul li{
+          display: none;
+          margin: 10px 20px 0 30px;
+      }
+
+      @media (max-width: 858px) {
+          #bars{
+          display: block;
+          position: absolute;
+          left:10px;
+          top:50%;
+          transform: translate(0,-55%);
+          }
+          #nav-menu{
+            left:0;
+          }
+          
+          #nav-menu ul li{
+            display:flex;
+          }
+          #nav-menu ul li a:hover{
+            color: white;
+            background-color: #e8701f;
+            transition: color 0s, background-color 0s;
+            border-radius: 20px;
+            background: rgb(239, 188, 0);
+            background: linear-gradient( 90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100% );
+          }
+          
+          #nav-menu.sticky-nav-menu ul{
+            background: linear-gradient( rgba(249, 177, 43, 0.7),rgb(247, 113, 3));
+            color: white !important;
+            border-bottom: 1.5px solid rgb(0, 0, 0);
+            backdrop-filter: blur(3px);
+          }
+          #nav-menu.sticky-nav-menu{
+            top:52px;
+          }
+      }
+    </style>
+
+    <script>
+      function togMenu(obj){
+          var headMenu = document.querySelector('.navbar nav');
+          var sideMenu = document.getElementById('nav-menu');
+          obj.classList.toggle("cliked");
+          if(obj.classList.contains('cliked')){
+            headMenu.style.borderBottomLeftRadius = '0px';
+            sideMenu.style.display='block';
+            sideMenu.style.opacity='1';
+          }else{
+            headMenu.style.borderBottomLeftRadius=headMenu.style.borderBottomRightRadius;
+            sideMenu.style.opacity='0';
+            sideMenu.style.display='none';
+          }
+      }
+      window.addEventListener("scroll", function () {
+          var sideMenu = document.getElementById('nav-menu');
+          sideMenu.classList.toggle("sticky-nav-menu", window.scrollY > 50)
+          })
+    
+    </script>
+    
+
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0 0 30px;
+      }
+
+      .light-mode .toggle-container {
+        right: -4px;
+        top: 15px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
+
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+    </style>
+
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+   
+  <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
+  </nav>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const toggleButton = document.getElementById('checkbox');
+
+    const currentMode = localStorage.getItem('dark-mode');
+
+    if (currentMode === 'enabled') {
+
+      document.body.classList.add('dark-mode');
+
+      toggleButton.checked = true;
+
+    }
+
+    toggleButton.addEventListener('change', function () {
+
+      document.body.classList.toggle('dark-mode');
+
+      if (document.body.classList.contains('dark-mode')) {
+
+        localStorage.setItem('dark-mode', 'enabled');
+
+      }
+      else {
+
+        localStorage.setItem('dark-mode', 'disabled');
+
+      }
+    });
+
+  });
+</script>
+
+
+
+</style>
+</div>
+    </nav>
+    <main class="container">
+      <div class="content min-h-screen text-black dark:text-gray-200">
+        <div class="container mx-auto py-8">
+          <h1 class="text-center text-3xl font-semibold mb-8" style="margin-top: 80px;">🤝Contributors</h1>
+          <div id="contributors" class="contributors flex flex-wrap justify-center gap-8"></div>
+        </div>
+      </div>
+    </main>
+    <special-footer></special-footer>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <script>
+    function sendFeed() {
+      alert('Email sent successfully!');
+    }
+  </script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Message sent successsfully. We will get back to you soon.")
+      );
+    }
+    function sendFeed() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Feedback sent successsfully")
+      );
+    }
+  </script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/vegas.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "This chatbot is for the community",
+      "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contributorsContainer = document.getElementById('contributors');
+      
+        async function fetchContributors() {
+          try {
+            const response = await fetch('https://api.github.com/repos/Its-Aman-Yadav/Community-Site/contributors');
+            const contributors = await response.json();
+      
+            contributors.forEach(contributor => {
+              const contributorCard = document.createElement('a');
+              contributorCard.href = contributor.html_url;
+              contributorCard.target = '_blank';
+              contributorCard.className = 'contributor-card';
+              contributorCard.innerHTML = `
+                <img src="${contributor.avatar_url}" alt="${contributor.login}">
+                <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">${contributor.login}</h2>
+                <p class="text-gray-700 dark:text-gray-400">Contributions: ${contributor.contributions}</p>
+                <p class="text-gray-700 dark:text-gray-400 flex-center"><i class="fab fa-github mr-1"></i> GitHub Profile</p>
+              `;
+              contributorsContainer.appendChild(contributorCard);
+            });
+          } catch (error) {
+            console.error('Error fetching contributors:', error);
+          }
+        }
+      
+        fetchContributors();
+      });
+      
+  </script>
+  <!-- swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- Trail effect elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <script src="trail.js"></script>
+  <script>
+    // JavaScript to handle theme switching
+document.getElementById('checkbox').addEventListener('change', function() {
+  if (this.checked) {
+    document.body.classList.add('dark-mode');
+    document.querySelector('.navbar').classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+    document.querySelector('.navbar').classList.remove('dark-mode');
+  }
+});
+
+  </script>
+
+  <!-- end -->
+
+  <script src="./footer/footer.js"></script>
+</body>
+<script src="contributor.js"></script>
+
+</html>
