@@ -44,7 +44,7 @@ body {
 
 .navbar-top ul li a {
     color: #333;
-    padding: 14px 16px;
+    padding: 10px 16px;
     text-align: center;
     text-decoration: none;
 }
@@ -57,6 +57,12 @@ body {
     left: -25px;
     padding: 2px;
     position: relative;
+}
+
+.navbar-top ul li i{
+  font-size: 20px;
+  padding: 0px;
+  color: #040318;
 }
 
 /* End */
