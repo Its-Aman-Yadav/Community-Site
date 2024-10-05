@@ -14,7 +14,13 @@ nav {
 
 }
 
-
+.home-thumb{
+  border: 3px solid black;
+  border-radius: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 ::-webkit-scrollbar {
   width: 10px;
