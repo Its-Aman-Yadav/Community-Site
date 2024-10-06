@@ -677,6 +677,13 @@ body.dark-mode .accordion .accordion-content p {
   margin: 20px 0;
 }
 
+body.dark-mode .accordion span {
+  color: white;
+}
+body.dark-mode .accordion{
+  background-color: rgba( 0,0,0,0.8);
+}
+
 body.dark-mode .accordion-content {
   background: #003973;
   background: -webkit-linear-gradient(to right, #e5e5be, #003973);
@@ -779,6 +786,7 @@ h2 {
   padding: 0px 15px;
   flex-direction: row;
   justify-content: space-between;
+  color: black;
 }
 
 /* Accordion Button */
@@ -4077,3 +4085,4 @@ body.dark-mode .offering h4{
 body.dark-mode h5{
   color: white;
 }
+
