@@ -389,3 +389,69 @@ input {
   color: white;
   background: #0a66c2;
 }
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%; /* Full width */
+    min-height: 350px; /* Minimized height for small screens */
+  }
+
+  h1.title {
+    font-size: 24px; /* Adjust title size */
+  }
+
+  p {
+    font-size: 11px; /* Adjust paragraph size */
+  }
+
+  input {
+    padding: 8px; /* Smaller input padding */
+  }
+
+  button {
+    padding: 6px 40px; /* Smaller buttons for very small screens */
+    font-size: 12px;
+  }
+
+  .social-container a {
+    height: 25px; /* Further reduce social icon size */
+    width: 25px;
+  }
+
+  .logo {
+    height: 40px; /* Smaller logo */
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%; /* Full width on very small screens */
+    min-height: 350px; /* Further reduced height */
+  }
+
+  .form-container {
+    padding: 0 15px; /* Reduce padding for very small screens */
+  }
+
+  h1.title {
+    font-size: 24px; /* Smaller title size */
+  }
+
+  p {
+    font-size: 11px; /* Adjust paragraph font size */
+  }
+
+  input {
+    padding: 6px; /* Further reduce input padding */
+    font-size: 11px; /* Smaller font size for inputs */
+  }
+
+  button {
+    padding: 6px 40px; /* Smaller button size */
+    font-size: 12px; /* Smaller button font size */
+  }
+
+  .social-container a {
+    height: 25px; /* Smaller social icons */
+    width: 25px;
+  }
+}
