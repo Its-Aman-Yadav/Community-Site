@@ -492,7 +492,8 @@
             <input type="email" id="email" name="email" placeholder="Your email" required /><br />
 
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required /><br />
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" pattern="\d{10}" required title="Please enter a 10-digit phone number" /><br />
+            
 
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Your message" required></textarea><br />
@@ -767,43 +768,65 @@
 
 
 
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function (event) {
-          event.preventDefault();
-          const thankYouMessage = document.getElementById('thankYouMessage');
-          const errorMessage = document.getElementById('errorMessage');
-          const name = document.querySelector('input[name="name"]').value.trim();
-          const email = document.querySelector('input[name="email"]').value.trim();
-          const phone = document.querySelector('input[name="phone"]').value.trim();
-          const message = document.querySelector('textarea[name="message"]').value.trim();
-
-          if (name === "" || email === "" || phone === "" || message === "") {
-              errorMessage.style.display = 'block';
-              thankYouMessage.style.display = 'none';
-          } else {
-              errorMessage.style.display = 'none';
-              thankYouMessage.style.display = 'block';
-              setTimeout(function () {
-                  thankYouMessage.style.display = 'none';
-                  document.getElementById('contactForm').reset();
-              }, 10);
-              document.getElementById('contactPopup').style.display = 'block';
-          }
-      });
-
-      function closeContactPopup() 
-      {
-        window.location.href = 'index.html';
-        document.getElementById('contactPopup').style.display = 'none';
-      }
-  </script>
-    <script>
-      const themeToggle = document.getElementById("theme-toggle");
-      themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-theme");
-      });
-    </script>
+<script>
+  // Handle form submission
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
     
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    const name = document.querySelector('input[name="name"]').value.trim();
+    const email = document.querySelector('input[name="email"]').value.trim();
+    const phone = document.querySelector('input[name="phone"]').value.trim();
+    const message = document.querySelector('textarea[name="message"]').value.trim();
+
+    // Basic validation: Check if any field is empty
+    if (name === "" || email === "" || phone === "" || message === "") {
+      errorMessage.style.display = 'block';
+      thankYouMessage.style.display = 'none';
+    } else {
+      errorMessage.style.display = 'none';
+      thankYouMessage.style.display = 'block';
+      
+      setTimeout(function () {
+        thankYouMessage.style.display = 'none';
+        document.getElementById('contactForm').reset();
+      }, 2000); // Show the message for 2 seconds
+
+      document.getElementById('contactPopup').style.display = 'block';
+    }
+  });
+
+  // Handle phone input validation for exactly 10 digits
+  const phoneInput = document.getElementById('phone');
+  
+  phoneInput.addEventListener('input', function () {
+    const phoneValue = phoneInput.value;
+
+    // Regular expression to ensure only digits are entered
+    const isValidPhone = /^\d{10}$/.test(phoneValue);
+
+    if (!isValidPhone) {
+      phoneInput.setCustomValidity("Please enter exactly 10 digits.");
+    } else {
+      phoneInput.setCustomValidity(""); // Clear the error message when valid
+    }
+  });
+
+  // Function to close the popup
+  function closeContactPopup() {
+    document.getElementById('contactPopup').style.display = 'none';
+    window.location.href = 'index.html';
+  }
+</script>
+
+<script>
+  // Theme toggle logic
+  const themeToggle = document.getElementById("theme-toggle");
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+  });
+</script>
 <style>
   * {
   margin: 0;
