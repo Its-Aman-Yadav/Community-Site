@@ -26,10 +26,10 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!-- stylesheets css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -60,254 +60,267 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css">
 
-   <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 </head>
 
-  
-<style>
-   /* CSS login modal   */
-   .nav-link.active {
-            font-weight: bold;
-            color: red;
-        }
-  .popup {
-      display: none;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 10%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 1000;
-      animation: fadeIn 0.5s ease-in-out;
-  }
-  
-  .popup-content {
-      background: linear-gradient(138deg, #fffee0, #fffb90);
-      padding: 40px;
-      border-radius: 15px;
-      text-align: center;
-      width: 90%;
-      max-width: 530px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      position: relative;
-      animation: slideIn 0.6s ease-in-out;
-      transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-  }
-  
-  .popup-content:hover {
-      transform: rotate(-3deg) scale(1.05);
-      background: linear-gradient(138deg, #fffb90, #fffee0);
-    border-radius: 6px;
-    
-  }
-  
-  
-  
-  .popup-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 15px;
-  }
-  
-  .popup-header img {
-      width: 120px;
-      
-      height: 120px;
-  }
-  
-  .popup-header h2 {
-      margin: 0;
-      font-size: 30px;
-      /* text-shadow: 1px 1px 2px #646464, 0 0 1em #fdbafff7, 0 0 0.2em #fdbafff7; */
-      color: rgb(255, 136, 0);
-      font-weight: 900;
-  }
-  
-  .popup h3 {
-      font-size: 24px;
-      margin-top: 19px;
-      margin-bottom: 10px;
-      color: #444;
-      animation: textPop 0.7s ease-in-out infinite;
-      font-weight: 500;
-  }
-  
-  .popup p {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 25px;
-  }
-  
-  .btn {
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
-      color: #fff;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: transform 0.3s;
-      font-size: 16px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 25px;
-      cursor: pointer;
-      color: #999;
-      transition: color 0.3s;
-  }
-  
-  .close-btn:hover {
-      color: #666;
-  }
-  
-  @keyframes fadeIn {
-      from {
-          opacity: 0;
-      }
-      to {
-          opacity: 1;
-      }
-  }
-  
-  @keyframes slideIn {
-      from {
-          transform: translateY(-50%);
-      }
-      to {
-          transform: translateY(0);
-      }
-  }
-  
-  @keyframes textPop {
-      0%, 100% {
-          color: #444;
-      }
-      50% {
-          color: #ff4f23;
-          text-shadow: 0px 1px 3px #ffad98;
-      }
-  }
-  </style>
-  
-<style>
 
+<style>
+  /* CSS login modal   */
+  .nav-link.active {
+    font-weight: bold;
+    color: red;
+  }
+
+  .popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .popup-content {
+    background: linear-gradient(138deg, #fffee0, #fffb90);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 530px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideIn 0.6s ease-in-out;
+    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  }
+
+  .popup-content:hover {
+    transform: rotate(-3deg) scale(1.05);
+    background: linear-gradient(138deg, #fffb90, #fffee0);
+    border-radius: 6px;
+
+  }
+
+
+
+  .popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .popup-header img {
+    width: 120px;
+
+    height: 120px;
+  }
+
+  .popup-header h2 {
+    margin: 0;
+    font-size: 30px;
+    /* text-shadow: 1px 1px 2px #646464, 0 0 1em #fdbafff7, 0 0 0.2em #fdbafff7; */
+    color: rgb(255, 136, 0);
+    font-weight: 900;
+  }
+
+  .popup h3 {
+    font-size: 24px;
+    margin-top: 19px;
+    margin-bottom: 10px;
+    color: #444;
+    animation: textPop 0.7s ease-in-out infinite;
+    font-weight: 500;
+  }
+
+  .popup p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s;
+  }
+
+  .close-btn:hover {
+    color: #666;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes textPop {
+
+    0%,
+    100% {
+      color: #444;
+    }
+
+    50% {
+      color: #ff4f23;
+      text-shadow: 0px 1px 3px #ffad98;
+    }
+  }
+</style>
+
+<style>
   .testimonial-section {
-      text-align: center;
-      padding: 50px 20px;
-      /* background-color: #fff4ac; */
-      background: linear-gradient(white, rgb(252, 235, 185), #f1c21ab7);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 50px 20px;
+    /* background-color: #fff4ac; */
+    background: linear-gradient(white, rgb(252, 235, 185), #f1c21ab7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   .testimonial-section h2 {
-      margin-bottom: 40px;
-      font-size: 32px;
-      color: #333;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
   }
-  
+
   .testimonial-container {
-      display: flex;
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
+
   .rating {
-      font-size: 19px;
-      color: gold;
-      margin-top: 10px;
+    font-size: 19px;
+    color: gold;
+    margin-top: 10px;
   }
+
   .testimonial-card {
-      flex: 0 0 250px;
-      box-sizing: border-box;
-      padding: 20px;
-      /* background: #fff; */
-      background: linear-gradient(to bottom, rgb(255, 255, 255), #ffead5);
-      margin: 0 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      text-align: left;
-      transform: scale(1.1);
+    flex: 0 0 250px;
+    box-sizing: border-box;
+    padding: 20px;
+    /* background: #fff; */
+    background: linear-gradient(to bottom, rgb(255, 255, 255), #ffead5);
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+    transform: scale(1.1);
   }
-  .testimonial-card:hover{
+
+  .testimonial-card:hover {
     transition: transform 0.4s ease-in-out !important;
   }
+
   .testimonial-card img {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      object-fit: cover;
-      margin-left: 58px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    margin-left: 58px;
   }
-  
+
   .testimonial-card p {
-      font-size: 14px;
-      color: #ff7f3f;
-      margin-bottom: 10px;
+    font-size: 14px;
+    color: #ff7f3f;
+    margin-bottom: 10px;
   }
-  
+
   .testimonial-card h4 {
-      font-size: 18px;
-      font-weight: bolder;
-      font-family: bold;
-      color: #b80000;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: bold;
+    color: #b80000;
   }
 
   @keyframes scroll {
-      0% {
-          transform: translateX(0);
-      }
-      100% {
-        --scrollTimes:calc(-1500px - 180px + 100vw);
-          transform: translateX(var(--scrollTimes));
-      }
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      --scrollTimes: calc(-1500px - 180px + 100vw);
+      transform: translateX(var(--scrollTimes));
+    }
   }
-  
+
   .testimonial-container {
-      display: flex;
-      overflow: hidden;
-      position: relative;
+    display: flex;
+    overflow: hidden;
+    position: relative;
   }
-  
-  .testimonial-container::before, .testimonial-container::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      width: 60px;
-      height: 100%;
-      z-index: 2;
+
+  .testimonial-container::before,
+  .testimonial-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 2;
   }
-  body.dark-mode .testimonial-container::before{
+
+  body.dark-mode .testimonial-container::before {
     background: transparent !important;
   }
-  body.dark-mode .testimonial-container::after{
+
+  body.dark-mode .testimonial-container::after {
     background: transparent !important;
   }
-  
+
   .testimonial-container::before {
-      left: 0;
-      background: linear-gradient(to right, white, rgba(255,255,255,0));
+    left: 0;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
   }
-  
-  
+
+
   .testi-head {
     color: rgb(255, 136, 0) !important;
     font-size: 37px !important;
@@ -315,303 +328,353 @@
     font-weight: 600;
     /* text-shadow: 1px 1px 4px rgb(255, 141, 160) !important; */
   }
-  
+
   .testi-header2 {
     font-family: bold;
     font-weight: 600;
   }
+
   .testimonial-container::after {
-      right: 0;
-      background: linear-gradient(to left, white, rgba(255,255,255,0));
+    right: 0;
+    background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
   }
-  
+
   .testimonial-container .testimonial-card {
-      animation: scroll 15s linear 2s infinite;
+    animation: scroll 15s linear 2s infinite;
   }
 
-/* Style for the cookie modal */
- .cookie-modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Sit on top */
-            top: 0; /* Full height */
-            left: 0; /* Full width */
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-            justify-content: center; /* Center align items horizontally */
-            align-items: center; /* Center align items vertically */
-        }
+  /* Style for the cookie modal */
+  .cookie-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    top: 0;
+    /* Full height */
+    left: 0;
+    /* Full width */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    justify-content: center;
+    /* Center align items horizontally */
+    align-items: center;
+    /* Center align items vertically */
+  }
 
-        /* Modal content box */
-        .cookie-modal-content {
-            background: linear-gradient(to bottom right, #ffe656, #ffc400); /* Yellow to orange gradient */
-            margin: 0 auto; /* Centered */
-            padding: 20px 30px;
-            border-radius: 10px; /* Rounded corners */
-            width: 80%; /* Could be more or less, depending on screen size */
-            max-width: 500px; /* Max width for large screens */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
-            color: #333; /* Text color */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
+  /* Modal content box */
+  .cookie-modal-content {
+    background: linear-gradient(to bottom right, #ffe656, #ffc400);
+    /* Yellow to orange gradient */
+    margin: 0 auto;
+    /* Centered */
+    padding: 20px 30px;
+    border-radius: 10px;
+    /* Rounded corners */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    /* Max width for large screens */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Add a shadow effect */
+    color: #333;
+    /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
 
-        /* The close button */
-        .cookie-close {
-            color: #fff;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            background-color: transparent; /* Transparent background */
-            border: none; /* No border */
-        }
+  /* The close button */
+  .cookie-close {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    /* Transparent background */
+    border: none;
+    /* No border */
+  }
 
-        .cookie-close:hover,
-        .cookie-close:focus {
-            color: #000;
-            text-decoration: none;
-        }
+  .cookie-close:hover,
+  .cookie-close:focus {
+    color: #000;
+    text-decoration: none;
+  }
 
-        /* Style for the text */
-        .cookie-modal-content p {
-            margin: 20px 0;
-            text-align: center;
-        }
+  /* Style for the text */
+  .cookie-modal-content p {
+    margin: 20px 0;
+    text-align: center;
+  }
 
-        /* Style for the accept button */
-        #acceptCookies {
-            background-color: #FFA500; /* Orange background */
-            color: white; /* White text */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
-        }
+  /* Style for the accept button */
+  #acceptCookies {
+    background-color: #FFA500;
+    /* Orange background */
+    color: white;
+    /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+  }
 
-        #acceptCookies:hover {
-            background-color: #ff5e00; /* Darker orange on hover */
-        }
+  #acceptCookies:hover {
+    background-color: #ff5e00;
+    /* Darker orange on hover */
+  }
 
-        /* Optional: Add some global styles for better visuals */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  /* Optional: Add some global styles for better visuals */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-        /* Style for the popup (login modal) */
-        .popup {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Sit on top */
-            top: 0; /* Full height */
-            left: 0; /* Full width */
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-            justify-content: center; /* Center align items horizontally */
-            align-items: center; /* Center align items vertically */
-        }
+  /* Style for the popup (login modal) */
+  .popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    top: 0;
+    /* Full height */
+    left: 0;
+    /* Full width */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    justify-content: center;
+    /* Center align items horizontally */
+    align-items: center;
+    /* Center align items vertically */
+  }
 
-        .popup-content {
-            background: #fff;
-            margin: 0 auto; /* Centered */
-            padding: 20px 30px;
-            border-radius: 10px; /* Rounded corners */
-            width: 80%; /* Could be more or less, depending on screen size */
-            max-width: 500px; /* Max width for large screens */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
-            color: #333; /* Text color */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
+  .popup-content {
+    background: #fff;
+    margin: 0 auto;
+    /* Centered */
+    padding: 20px 30px;
+    border-radius: 10px;
+    /* Rounded corners */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    /* Max width for large screens */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Add a shadow effect */
+    color: #333;
+    /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
 
-        .close-btn {
-            color: #000;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            background-color: transparent; /* Transparent background */
-            border: none; /* No border */
-        }
+  .close-btn {
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    /* Transparent background */
+    border: none;
+    /* No border */
+  }
 
-        .close-btn:hover,
-        .close-btn:focus {
-            color: #ff5e00; /* Orange on hover */
-            text-decoration: none;
-        }
+  .close-btn:hover,
+  .close-btn:focus {
+    color: #ff5e00;
+    /* Orange on hover */
+    text-decoration: none;
+  }
 
-        .popup-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+  .popup-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
-        .popup-header .logo {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
+  .popup-header .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
 
-        .popup-header h2 {
-            margin: 0;
-        }
+  .popup-header h2 {
+    margin: 0;
+  }
 
-        .popup-content h3 {
-            margin: 10px 0;
-        }
+  .popup-content h3 {
+    margin: 10px 0;
+  }
 
-        .popup-content p {
-            text-align: center;
-            margin: 10px 0;
-        }
-.icons {
-  list-style: none;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
+  .popup-content p {
+    text-align: center;
+    margin: 10px 0;
+  }
 
-.icons a {
-  text-decoration: none;
-  color: #333; /* Initial color */
-  transition: color 0.3s ease; /* Smooth transition for color */
-}
+  .icons {
+    list-style: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+  }
 
-.icons a:hover {
-  color: #3498db; /* Color on hover */
-}
+  .icons a {
+    text-decoration: none;
+    color: #333;
+    /* Initial color */
+    transition: color 0.3s ease;
+    /* Smooth transition for color */
+  }
 
-.icons i {
-  margin-right: 10px;
-}
+  .icons a:hover {
+    color: #3498db;
+    /* Color on hover */
+  }
 
-.icons:hover {
-  background-color: #f0f0f0; /* Background color on hover */
-}
+  .icons i {
+    margin-right: 10px;
+  }
 
-        .btn {
-            background-color: #FFA500; /* Orange background */
-            color: white; /* White text */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
-        }
+  .icons:hover {
+    background-color: #f0f0f0;
+    /* Background color on hover */
+  }
 
-        .btn:hover {
-            background-color: #ff5e00; /* Darker orange on hover */
-        }
-    </style>
-    <title>OPEN SOURCE VILLAGE</title>
+  .btn {
+    background-color: #FFA500;
+    /* Orange background */
+    color: white;
+    /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+  }
+
+  .btn:hover {
+    background-color: #ff5e00;
+    /* Darker orange on hover */
+  }
+</style>
+<title>OPEN SOURCE VILLAGE</title>
 </head>
+
 <body>
-    <!-- Cookie modal -->
-    <div id="cookieModal" class="cookie-modal">
-        <div class="cookie-modal-content">
-            <span class="cookie-close">&times;</span>
-            <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our cookie policy.</p>
-            <button id="acceptCookies">Accept</button>
-        </div>
+  <!-- Cookie modal -->
+  <div id="cookieModal" class="cookie-modal">
+    <div class="cookie-modal-content">
+      <span class="cookie-close">&times;</span>
+      <p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept
+        our cookie policy.</p>
+      <button id="acceptCookies">Accept</button>
     </div>
+  </div>
 
-    <!-- Login modal -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <div class="popup-header">
-                <img src="image.gif" alt="Open Source Village Logo" class="logo">
-                <h2>Open Source Village</h2>
-            </div>
-            <h3>Start Your Journey Now!💡</h3>
-            <p>If you don't have an account yet, register and start your journey🌐👥</p>
-            <button class="btn" onclick="window.location.href='login.html'">Login/Register ✉</button>
-        </div>
+  <!-- Login modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <div class="popup-header">
+        <img src="image.gif" alt="Open Source Village Logo" class="logo">
+        <h2>Open Source Village</h2>
+      </div>
+      <h3>Start Your Journey Now!💡</h3>
+      <p>If you don't have an account yet, register and start your journey🌐👥</p>
+      <button class="btn" onclick="window.location.href='login.html'">Login/Register ✉</button>
     </div>
+  </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Show the popup when the page loads
-            document.getElementById('popup').style.display = 'flex';
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Show the popup when the page loads
+      document.getElementById('popup').style.display = 'flex';
 
-            // Automatically close the popup after 20 seconds
-            // setTimeout(closePopup, 20000);
-        });
+      // Automatically close the popup after 20 seconds
+      // setTimeout(closePopup, 20000);
+    });
 
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
 
-    <script src="cookie.js"></script>
+  <script src="cookie.js"></script>
 
   <!-- login modal  -->
   <div id="popup" class="popup">
     <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <div class="popup-header">
-            <img src="image.gif" alt="Open Source Village Logo" class="logo" > 
-            <h2>Open Source Village </h2>
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <div class="popup-header">
+        <img src="image.gif" alt="Open Source Village Logo" class="logo">
+        <h2>Open Source Village </h2>
 
-        </div>
-        <h3>Start Your Journey Now!💡 </h3>
-        <p>If you don't have an account yet, register and start your journey🌐👥</p>
-        <button class="btn" onclick="window.location.href='login.html'">Login/Register ✉</button>
+      </div>
+      <h3>Start Your Journey Now!💡 </h3>
+      <p>If you don't have an account yet, register and start your journey🌐👥</p>
+      <button class="btn" onclick="window.location.href='login.html'">Login/Register ✉</button>
     </div>
-</div>
+  </div>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Show the popup when the page loads
-    document.getElementById('popup').style.display = 'flex';
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Show the popup when the page loads
+      document.getElementById('popup').style.display = 'flex';
 
-    // Automatically close the popup after 20 seconds
-    // setTimeout(closePopup, 20000);
-});
+      // Automatically close the popup after 20 seconds
+      // setTimeout(closePopup, 20000);
+    });
 
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
-</script>
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
 
-<body class="show-chatbot">
+  <body class="show-chatbot">
 
-  <div class="chatbot">
-<header>
-  <h2>Chatbot</h2>
-</header>
-<ul class="chatbox">
-  <li class=" chat incoming">
-      <span class="material-symbols-outlined">smart_toy</span>
-      <p>Hi there 👋 <br> How can I help you today?</p>
-  </li>
+    <div class="chatbot">
+      <header>
+        <h2>Chatbot</h2>
+      </header>
+      <ul class="chatbox">
+        <li class=" chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there 👋 <br> How can I help you today?</p>
+        </li>
 
-  
-</ul>
-<div class="chat-input">
-  <textarea placeholder="Enter a  message..." required></textarea>
-  <span id="send-btn" class="material-symbols-outlined">Send</span>
-</div>
 
-</div>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a  message..." required></textarea>
+        <span id="send-btn" class="material-symbols-outlined">Send</span>
+      </div>
 
-<script src="script.js" defer></script>
-</body>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
 
   <!-- preloader section -->
   <section class="preloader">
@@ -642,36 +705,37 @@ function closePopup() {
     <nav>
       <div id="ham-menu">
         <div id="bars" onclick="togMenu(this)">
-        <div id="first" class="bar"></div>
-        <div id="sec" class="bar"></div>
-        <div id="third" class="bar"></div>
+          <div id="first" class="bar"></div>
+          <div id="sec" class="bar"></div>
+          <div id="third" class="bar"></div>
         </div>
         <div id="nav-menu">
-            <ul>
-                <li class="icons">
-                  <i class="fa-solid fa-house"></i>
-                  <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="icons">
-                  <i class="fa-solid fa-address-card"></i>
-                  <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="icons">
-                  <i class="fa-solid fa-screwdriver-wrench"></i>
-                  <a class="nav-link" href="#services">Services</a>
-                </li>
-                <li class="icons"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="#testimonials">Reviews</a></li>
-                <li class="icons"><i class="fa-solid fa-address-book"></i><a href="contact us.html"></a>Contact</a></li>
-                <li class="icons"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
-              </ul>
-          </div>
+          <ul>
+            <li class="icons">
+              <i class="fa-solid fa-house"></i>
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="icons">
+              <i class="fa-solid fa-address-card"></i>
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="icons">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="icons"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link"
+                href="#testimonials">Reviews</a></li>
+            <li class="icons"><i class="fa-solid fa-address-book"></i><a href="contact us.html"></a>Contact</a></li>
+            <li class="icons"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+          </ul>
+        </div>
       </div>
       <a class="logo-link" href="#home">
         <div class="logo-title">
-                   <a href="profile.html" class="href" X> <img  class="logo" src="images/logo2.jpeg" alt="logo"></a>
+          <a href="profile.html" class="href" X> <img class="logo" src="images/logo2.jpeg" alt="logo"></a>
 
-                    <span class="logo-text">Open Source Village</span>
-                   </div>
+          <span class="logo-text">Open Source Village</span>
+        </div>
 
         <!-- <div>
           <span class="logo-subtext">Source</span>
@@ -679,12 +743,18 @@ function closePopup() {
 
       </a>
       <ul>
-        <li style="background-color: transparent;"><i class="fa-solid fa-house"></i><a class="nav-link" href="#home">Home</a></li>
-        <li style="background-color: transparent;"><i class="fa-solid fa-address-card"></i><a class="nav-link" href=".about-section">About</a></li>
-        <li style="background-color: transparent;"><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="#services">Services</a></li>
-        <li style="background-color: transparent;"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href=".testimonial-section">Reviews</a></li>
-        <li style="background-color: transparent;"><i class="fa-solid fa-address-book"></i><a href="contact us.html" target=”_blank”>Contact</a></li>
-        <li style="background-color: transparent;"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html" target=”_blank”>Login/Register</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-house"></i><a class="nav-link"
+            href="#home">Home</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-address-card"></i><a class="nav-link"
+            href=".about-section">About</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link"
+            href="#services">Services</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link"
+            href=".testimonial-section">Reviews</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-address-book"></i><a
+            href="contact us.html">Contact</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html"
+            target=”_blank”>Login/Register</a></li>
       </ul>
 
       <div class="toggle-container" style="top: 0px;">
@@ -698,119 +768,130 @@ function closePopup() {
       </div>
       <!--Styles for side menu-->
       <style>
-        #bars{
-            display: none;
+        #bars {
+          display: none;
         }
-        .bar{
-            width:27px;
-            height:3px;
-            background-color:white;
-            margin: 7px;
-            border-radius: 20px;
-            transition: all 0.4s;
+
+        .bar {
+          width: 27px;
+          height: 3px;
+          background-color: white;
+          margin: 7px;
+          border-radius: 20px;
+          transition: all 0.4s;
         }
-        .cliked #first{
-            transform: translate(0, 10px) rotate(-45deg);
-            
+
+        .cliked #first {
+          transform: translate(0, 10px) rotate(-45deg);
+
         }
-        .cliked #sec {opacity: 0;}
+
+        .cliked #sec {
+          opacity: 0;
+        }
 
         .cliked #third {
-        transform: translate(0, -10px) rotate(45deg);
+          transform: translate(0, -10px) rotate(45deg);
         }
-        #nav-menu{
-            display: none;
-            opacity: 0;
-            position: fixed;
-            top:63px;
-            z-index: 1;
-            margin-top: 27px;
-            width:auto;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            backdrop-filter: blur(4px);
-            padding: 20px 0;
-            border: none;
-            transition: all 0.6s;
-            
+
+        #nav-menu {
+          display: none;
+          opacity: 0;
+          position: fixed;
+          top: 63px;
+          z-index: 1;
+          margin-top: 27px;
+          width: auto;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          backdrop-filter: blur(4px);
+          padding: 20px 0;
+          border: none;
+          transition: all 0.6s;
+
         }
-        #nav-menu ul{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: inherit;
-            width: auto;
-            position: absolute;
-            top:0;
-            right:inherit;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(4px);
+
+        #nav-menu ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: inherit;
+          width: auto;
+          position: absolute;
+          top: 0;
+          right: inherit;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(4px);
         }
-        #nav-menu ul li{
-            display: none;
-            margin: 10px 20px 0 30px;
+
+        #nav-menu ul li {
+          display: none;
+          margin: 10px 20px 0 30px;
         }
 
         @media (max-width: 858px) {
-            #bars{
+          #bars {
             display: block;
             position: absolute;
-            left:10px;
-            top:50%;
-            transform: translate(0,-55%);
-            }
-            #nav-menu{
-              left:0;
-            }
-            
-            #nav-menu ul li{
-              display:flex;
-            }
-            #nav-menu ul li a:hover{
-              color: white;
-              background-color: #e8701f;
-              transition: color 0s, background-color 0s;
-              border-radius: 20px;
-              background: rgb(239, 188, 0);
-              background: linear-gradient( 90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100% );
-            }
-            
-            #nav-menu.sticky-nav-menu ul{
-              background: linear-gradient( rgba(249, 177, 43, 0.7),rgb(247, 113, 3));
-              color: white !important;
-              border-bottom: 1.5px solid rgb(0, 0, 0);
-              backdrop-filter: blur(3px);
-            }
-            #nav-menu.sticky-nav-menu{
-              top:52px;
-            }
+            left: 10px;
+            top: 50%;
+            transform: translate(0, -55%);
+          }
+
+          #nav-menu {
+            left: 0;
+          }
+
+          #nav-menu ul li {
+            display: flex;
+          }
+
+          #nav-menu ul li a:hover {
+            color: white;
+            background-color: #e8701f;
+            transition: color 0s, background-color 0s;
+            border-radius: 20px;
+            background: rgb(239, 188, 0);
+            background: linear-gradient(90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100%);
+          }
+
+          #nav-menu.sticky-nav-menu ul {
+            background: linear-gradient(rgba(249, 177, 43, 0.7), rgb(247, 113, 3));
+            color: white !important;
+            border-bottom: 1.5px solid rgb(0, 0, 0);
+            backdrop-filter: blur(3px);
+          }
+
+          #nav-menu.sticky-nav-menu {
+            top: 52px;
+          }
         }
       </style>
 
       <script>
-        function togMenu(obj){
-            var headMenu = document.querySelector('.navbar nav');
-            var sideMenu = document.getElementById('nav-menu');
-            obj.classList.toggle("cliked");
-            if(obj.classList.contains('cliked')){
-              headMenu.style.borderBottomLeftRadius = '0px';
-              sideMenu.style.display='block';
-              sideMenu.style.opacity='1';
-            }else{
-              headMenu.style.borderBottomLeftRadius=headMenu.style.borderBottomRightRadius;
-              sideMenu.style.opacity='0';
-              sideMenu.style.display='none';
-            }
+        function togMenu(obj) {
+          var headMenu = document.querySelector('.navbar nav');
+          var sideMenu = document.getElementById('nav-menu');
+          obj.classList.toggle("cliked");
+          if (obj.classList.contains('cliked')) {
+            headMenu.style.borderBottomLeftRadius = '0px';
+            sideMenu.style.display = 'block';
+            sideMenu.style.opacity = '1';
+          } else {
+            headMenu.style.borderBottomLeftRadius = headMenu.style.borderBottomRightRadius;
+            sideMenu.style.opacity = '0';
+            sideMenu.style.display = 'none';
+          }
         }
         window.addEventListener("scroll", function () {
-            var sideMenu = document.getElementById('nav-menu');
-            sideMenu.classList.toggle("sticky-nav-menu", window.scrollY > 50)
-            })
-      
+          var sideMenu = document.getElementById('nav-menu');
+          sideMenu.classList.toggle("sticky-nav-menu", window.scrollY > 50)
+        })
+
       </script>
-      
+
 
       <style>
         .toggle-container {
@@ -825,7 +906,7 @@ function closePopup() {
           right: -4px;
           top: 15px;
         }
-        
+
         /* Hidden Checkbox */
         .switch-checkbox {
           display: none;
@@ -878,26 +959,26 @@ function closePopup() {
         }
 
         /* Checkbox Checked State */
-        .switch-checkbox:checked + .theme-switch {
+        .switch-checkbox:checked+.theme-switch {
           background-color: #34495e;
         }
 
-        .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        .switch-checkbox:checked+.theme-switch .light-mode-icon {
           opacity: 0;
         }
 
-        .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        .switch-checkbox:checked+.theme-switch .dark-mode-icon {
           opacity: 1;
         }
 
-        .switch-checkbox:checked + .theme-switch .toggle-button {
+        .switch-checkbox:checked+.theme-switch .toggle-button {
           transform: translateX(13px);
           /* background-color: #34495e; */
         }
-
       </style>
 
-    <a href="profile.html" ><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
+      <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg"
+          onclick="ProfileClicked()" alt="Profile"></a>
     </nav>
   </div>
 
@@ -978,68 +1059,72 @@ function closePopup() {
   <!-- about section -->
   <section class="about-section">
     <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About <br> <b style="color: #e8701f;">Open Source Village</b></h2>
-                <p>Welcome to our community startup! We are a group of like-minded individuals who believe in the power of coming together to achieve shared goals. Our mission is to create a safe and inclusive space where members can connect, collaborate, and make a positive impact in the world. Join us and be a part of something bigger than yourself!</p>
-                <div class="text1">
-                  <h3 class="counter">0+</h3>
-                  <h5>MEMBERS</h5>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="/images/AboutSection.jpg" alt="Open Source Village">
-            </div>
-        </div>
-       
-
-        <h2 style="margin-top: 24px; font-size: 1.75rem; font-weight: 600; text-align: center; color: rgb(247, 164, 10);">What we offer</h2>
-        <div class="offerings text-center">
-         
-      
-          <div class="offerings-content grid grid-cols-1 sm:grid-cols-3 gap-8">
-          
-            <div class="offering bg-white p-4 shadow-md rounded-lg flex flex-col justify-between h-full">
-              <div class="row-0 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                <div>
-                  <h4 class="text-lg font-semibold">Connect</h4>
-                  <p>Join a network of passionate individuals.</p>
-                </div>
-                <div class="text-3xl">
-                  <i class="fa-solid fa-people-group"></i>
-                </div>
-              </div>
-            </div>
-          
-            <div class="offering bg-white p-4 shadow-md rounded-lg flex flex-col justify-between h-full">
-              <div class="row-0 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                <div>
-                  <h4 class="text-lg font-semibold">Collaborate</h4>
-                  <p>Work together on exciting projects.</p>
-                </div>
-                <div class="text-3xl">
-                  <i class="fa-solid fa-handshake"></i>
-                </div>
-              </div>
-            </div>
-          
-            <div class="offering bg-white p-4 shadow-md rounded-lg flex flex-col justify-between h-full">
-              <div class="row-0 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                <div>
-                  <h4 class="text-lg font-semibold">Impact</h4>
-                  <p>Make a difference in the open source world.</p>
-                </div>
-                <div class="text-3xl">
-                  <i class="fa-solid fa-chart-line"></i>
-                </div>
-              </div>
-            </div>
-          
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About <br> <b style="color: #e8701f;">Open Source Village</b></h2>
+          <p>Welcome to our community startup! We are a group of like-minded individuals who believe in the power of
+            coming together to achieve shared goals. Our mission is to create a safe and inclusive space where members
+            can connect, collaborate, and make a positive impact in the world. Join us and be a part of something bigger
+            than yourself!</p>
+          <div class="text1">
+            <h3 class="counter">0+</h3>
+            <h5>MEMBERS</h5>
           </div>
         </div>
-        
+        <div class="about-image">
+          <img src="/images/AboutSection.jpg" alt="Open Source Village">
+        </div>
+      </div>
+
+
+      <h2 style="margin-top: 24px; font-size: 1.75rem; font-weight: 600; text-align: center; color: rgb(247, 164, 10);">
+        What we offer</h2>
+      <div class="offerings text-center">
+
+
+        <div class="offerings-content grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+          <div class="offering bg-white p-4 shadow-md rounded-lg flex flex-col justify-between h-full">
+            <div class="row-0 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+              <div>
+                <h4 class="text-lg font-semibold">Connect</h4>
+                <p>Join a network of passionate individuals.</p>
+              </div>
+              <div class="text-3xl">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="offering bg-white p-4 shadow-md rounded-lg flex flex-col justify-between h-full">
+            <div class="row-0 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+              <div>
+                <h4 class="text-lg font-semibold">Collaborate</h4>
+                <p>Work together on exciting projects.</p>
+              </div>
+              <div class="text-3xl">
+                <i class="fa-solid fa-handshake"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="offering bg-white p-4 shadow-md rounded-lg flex flex-col justify-between h-full">
+            <div class="row-0 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+              <div>
+                <h4 class="text-lg font-semibold">Impact</h4>
+                <p>Make a difference in the open source world.</p>
+              </div>
+              <div class="text-3xl">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-</section>
+  </section>
   <style>
 
 
@@ -1049,14 +1134,14 @@ function closePopup() {
   </style>
 
   <script>
-    
+
     // JavaScript to animate the counter
     document.addEventListener("DOMContentLoaded", () => {
       const counterElement = document.querySelector('.counter');
       const targetNumber = 1000;
       const duration = 2000;
       const stepTime = Math.abs(Math.floor(duration / targetNumber));
-      
+
       let currentNumber = 0;
       const counter = setInterval(() => {
         currentNumber += 1;
@@ -1078,8 +1163,7 @@ function closePopup() {
       <div class="service-container">
         <div class="row d-grid gap-3">
           <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card "
-              style="width: 18rem;  border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
+            <div class="card " style="width: 18rem;  border-radius: 8px; padding: 20px;" data-wow-delay="0.4s">
               <div class="wow fadeIn" data-wow-delay="0.2s">
                 <div class="card-heading">
                   <h3 class="heading-hover">Open learning</h3>
@@ -1092,8 +1176,7 @@ function closePopup() {
             </div>
           </div>
           <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card" data-wow-delay="0.8s"
-              style="width: 18rem;  border-radius: 8px; padding: 20px;">
+            <div class="card" data-wow-delay="0.8s" style="width: 18rem;  border-radius: 8px; padding: 20px;">
               <div class="wow fadeIn" data-wow-delay="0.2s">
                 <div class="card-heading">
                   <h3 class="heading-hover">Network</h3>
@@ -1106,8 +1189,7 @@ function closePopup() {
             </div>
           </div>
           <div class="col-md-4 col-sm-6 shadow-lg p-3 mb-5 bg-body-tertiary rounded s-cards">
-            <div class="card " data-wow-delay="1.2s"
-              style="width: 18rem;  border-radius: 8px; padding: 20px;">
+            <div class="card " data-wow-delay="1.2s" style="width: 18rem;  border-radius: 8px; padding: 20px;">
               <div class="wow fadeIn" data-wow-delay="0.2s">
                 <div class="card-heading">
                   <h3 class="heading-hover">Mentorship</h3>
@@ -1125,61 +1207,67 @@ function closePopup() {
   </section>
 
   <!-- Testimonials section -->
-<!-- Testimonials section -->
-<div class="testimonial-section">
-  <h2 class="testi-header2">What our <span class="testi-head">Members</span> say!</h2>
-  <div class="testimonial-container">
-    <div class="testimonial-card">
-      <img src="./images/profile3.jpg" alt="Member 1">
-      <span class="rating">
-        ★★★★★
-      </span>
-      <p>Joining Open Source Village has been an incredible experience. The sense of community and collaboration here is unmatched.</p>
-      <h4>Casper Leigh</h4>
-    </div>
-    <div class="testimonial-card">
-      <img src="./images/testi_1.jpg" alt="Member 2">
-      <span class="rating">
-        ★★★★★
-      </span>
-      <p>The best part about being here is the people. Everyone is supportive and shares the same vision of making a positive impact.</p>
-      <h4>Cian Reyes</h4>
-    </div>
-    <div class="testimonial-card">
-      <img src="./images/img-5.jpg" alt="Member 3">
-      <span class="rating">
-        ★★★★☆
-      </span>
-      <p>Just wow. I knew I was joining a great community, but Open Source Village exceeded my expectations in every way.</p>
-      <h4>Asa Walter</h4>
-    </div>
-    <div class="testimonial-card">
-      <img src="./images/img-6.jpg" alt="Member 4">
-      <span class="rating">
-        ★★★★★
-      </span>
-      <p>This community has been the best thing that happened to my projects. The collaborative environment is phenomenal.</p>
-      <h4>John Doe</h4>
-    </div>
-    <div class="testimonial-card">
-      <img src="./images/testi_3.jpeg" alt="Member 5">
-      <span class="rating">
-        ★★★★☆
-      </span>
-      <p>Exceptional support and service. Open Source Village truly understands the needs of its members and goes above and beyond.</p>
-      <h4>Emma Stone</h4>
-    </div>
-    <div class="testimonial-card">
-      <img src="./images/img-1.jpg" alt="Member 6">
-      <span class="rating">
-        ★★★★☆
-      </span>
-      <p>Highly professional and dedicated community. They delivered exactly what I needed and more for my open-source contributions.</p>
-      <h4>Christiana </h4>
+  <!-- Testimonials section -->
+  <div class="testimonial-section">
+    <h2 class="testi-header2">What our <span class="testi-head">Members</span> say!</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <img src="./images/profile3.jpg" alt="Member 1">
+        <span class="rating">
+          ★★★★★
+        </span>
+        <p>Joining Open Source Village has been an incredible experience. The sense of community and collaboration here
+          is unmatched.</p>
+        <h4>Casper Leigh</h4>
+      </div>
+      <div class="testimonial-card">
+        <img src="./images/testi_1.jpg" alt="Member 2">
+        <span class="rating">
+          ★★★★★
+        </span>
+        <p>The best part about being here is the people. Everyone is supportive and shares the same vision of making a
+          positive impact.</p>
+        <h4>Cian Reyes</h4>
+      </div>
+      <div class="testimonial-card">
+        <img src="./images/img-5.jpg" alt="Member 3">
+        <span class="rating">
+          ★★★★☆
+        </span>
+        <p>Just wow. I knew I was joining a great community, but Open Source Village exceeded my expectations in every
+          way.</p>
+        <h4>Asa Walter</h4>
+      </div>
+      <div class="testimonial-card">
+        <img src="./images/img-6.jpg" alt="Member 4">
+        <span class="rating">
+          ★★★★★
+        </span>
+        <p>This community has been the best thing that happened to my projects. The collaborative environment is
+          phenomenal.</p>
+        <h4>John Doe</h4>
+      </div>
+      <div class="testimonial-card">
+        <img src="./images/testi_3.jpeg" alt="Member 5">
+        <span class="rating">
+          ★★★★☆
+        </span>
+        <p>Exceptional support and service. Open Source Village truly understands the needs of its members and goes
+          above and beyond.</p>
+        <h4>Emma Stone</h4>
+      </div>
+      <div class="testimonial-card">
+        <img src="./images/img-1.jpg" alt="Member 6">
+        <span class="rating">
+          ★★★★☆
+        </span>
+        <p>Highly professional and dedicated community. They delivered exactly what I needed and more for my open-source
+          contributions.</p>
+        <h4>Christiana </h4>
+      </div>
     </div>
   </div>
-</div>
-  
+
   <!-- faq section  -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -1297,20 +1385,20 @@ function closePopup() {
     </div>
   </section>
 
-<script>
-  const container = document.querySelector('.testimonial-container');
-const cards = Array.from(document.querySelectorAll('.testimonial-card'));
+  <script>
+    const container = document.querySelector('.testimonial-container');
+    const cards = Array.from(document.querySelectorAll('.testimonial-card'));
 
-let cloneCards = () => {
-    cards.forEach(card => {
+    let cloneCards = () => {
+      cards.forEach(card => {
         let clone = card.cloneNode(true);
         container.appendChild(clone);
-    });
-};
+      });
+    };
 
-cloneCards();
-cloneCards();
-</script>
+    cloneCards();
+    cloneCards();
+  </script>
 
   <script>
     document.getElementById('contactForm').addEventListener('submit', function (event) {
@@ -1333,32 +1421,32 @@ cloneCards();
         }, 3000);
       }
     });
-  </script>  
-</head>
-    <div id="contactPopup" class="contact-popup" style="display: none;">
-      <div class="contact-popup-content">
-          <h2>Thank you for contacting us!🧡</h2>
-          <div class="contact-popup-icon">
-              <img src="/images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120" />
-          </div>
-          <p>Your message has been received.<br />We will get back to you shortly.</p>
-          <button class="contact-popup-button" onclick="closeContactPopup()">Back to Home</button>
+  </script>
+  </head>
+  <div id="contactPopup" class="contact-popup" style="display: none;">
+    <div class="contact-popup-content">
+      <h2>Thank you for contacting us!🧡</h2>
+      <div class="contact-popup-icon">
+        <img src="/images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120" />
       </div>
+      <p>Your message has been received.<br />We will get back to you shortly.</p>
+      <button class="contact-popup-button" onclick="closeContactPopup()">Back to Home</button>
+    </div>
   </div>
-</section>
+  </section>
 
-<script>
-  function showContactPopup(event) {
+  <script>
+    function showContactPopup(event) {
       event.preventDefault();
       document.getElementById('contactPopup').style.display = 'flex';
-  }
-  
-  function closeContactPopup() {
+    }
+
+    function closeContactPopup() {
       document.getElementById('contactPopup').style.display = 'none';
       window.location.href = '/';
-  }
+    }
   </script>
-  
+
   <!-- footer section -->
   <special-footer></special-footer>
 
@@ -1562,15 +1650,16 @@ cloneCards();
     const navLinks = document.querySelectorAll('.nav-link');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Remove 'active' class from all links
-            navLinks.forEach(link => link.classList.remove('active'));
+      link.addEventListener('click', function () {
+        // Remove 'active' class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
 
-            // Add 'active' class to the clicked link
-            this.classList.add('active');
-        });
+        // Add 'active' class to the clicked link
+        this.classList.add('active');
+      });
     });
-</script>
+  </script>
 </body>
 <script src="index.js"></script>
+
 </html>

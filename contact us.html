@@ -1,405 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Contact Us</title>
 
-    <script
-      src="https://kit.fontawesome.com/90889e6878.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="icon" href="favicon.ico" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: url("./images/Slide4.jpg") no-repeat center center fixed;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
+<head>
 
-      .container {
-        width: 80vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: sans-serif;
-      }
+  <meta charset="utf-8">
 
-      .card {
-        background: rgba(251, 190, 190, 0.4); /* semi-transparent background */
-        padding: 2rem;
-        border-radius: 10px;
-        border: 1px solid #080707;
-        box-shadow: 0px 1px 4px 2px #eb4c0292;
-        width: 70%;
-        max-width: 1200px;
-        margin-top: 100px;
-      }
+  <title>Contact Us</title>
+  <!-- Meta tags-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Aman Yadav" />
+  <meta name="keywords"
+    content=", village community, collaboration, resource sharing, communication, transparency, collective decision-making, local projects, digital tools.">
+  <meta name="description"
+    content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
+  <meta name="language" content="English">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://community-site-theta.vercel.app/" />
+  <meta property="og:title" content="Contact Us">
+  <meta name="og:description"
+    content="Welcome to this open-source village community site! Designed to facilitate collaboration, resource sharing, and communication among residents, it promotes transparency, collective decision-making, and the development of local projects through accessible and open-source digital tools.">
 
-      .header {
-        text-align: center;
-        margin-bottom: 20px;
-      }
+  <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      .contact-details {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        gap: 10px;
-      }
+  <!-- Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-      .contact-details div {
-        background: rgba(253, 35, 2, 0.8);
-        border: 1px solid #080707;
-        border-radius: 10px;
-        padding: 10px;
-        width: 30%;
-        text-align: center;
-      }
+  <!-- stylesheets css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-      .contact-details div:hover {
-        background: rgba(249, 156, 145, 0.8);
-        box-shadow: 0px 1px 4px 4px #0e050192;
-      }
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet">
 
-      .main-content {
-        display: flex;
-        justify-content: space-between;
-      }
+  <link rel="stylesheet" href="css/et-line-font.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 
-      .left {
-        width: 30%;
-      }
+  <link rel="stylesheet" href="css/vegas.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      .left img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 5px;
-        margin-top: 80px;
-      }
+  <!-- remixicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" crossorigin="">
 
-      .right {
-        width: 65%;
-        padding-left: 40px;
-      }
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="main.css">
 
-      .form-container {
-        width: 90%;
-        font-size: 20px;
-      }
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+</head>
 
-      .form,
-      .address {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem 0 0;
-      }
 
-      .form input,
-      textarea {
-        width: 100%;
-        outline: none;
-        background: none;
-        border: none;
-        border-bottom: 2px solid #000;
-        padding: 10px 0;
-        margin: 5px 0;
-        color: white;
-      }
+<style>
+  /* CSS login modal   */
+  .nav-link.active {
+    font-weight: bold;
+    color: red;
+  }
 
-      .form input:hover,
-      textarea:hover {
-        border-bottom: 2px solid rgb(248, 243, 245);
-      }
+  .popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+  }
 
-      .usersubmit input {
-        background-color: rgb(245, 53, 53);
-        color: white;
-        font-weight: bold;
-        border-radius: 5px;
-        border: none;
-        width: 50%;
-        padding: 10px;
-        margin-bottom: 0;
-        cursor: pointer;
-        transition: 0.3s;
-        margin-left: 60px;
-      }
+  .popup-content {
+    background: linear-gradient(138deg, #fffee0, #fffb90);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 530px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideIn 0.6s ease-in-out;
+    transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  }
 
-      .usersubmit input:hover {
-        background-color: rgb(246, 146, 154);
-        color: black;
-        border: 2px solid black;
-      }
+  .popup-content:hover {
+    transform: rotate(-3deg) scale(1.05);
+    background: linear-gradient(138deg, #fffb90, #fffee0);
+    border-radius: 6px;
 
-      .icons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-        margin-top: 50px;
-      }
+  }
 
-      .icons .icon i {
-        margin-top: 15px;
-        font-size: 30px;
-        transition: all 0.9s ease;
-        color: white;
-      }
 
-      .icons .icon:hover i {
-        transform: scale(1.2);
-      }
 
-      .icons .icon:hover .fab.fa-linkedin {
-        color: #0077b5;
-      }
+  .popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
 
-      .icons .icon:hover .fab.fa-github {
-        color: #060606;
-      }
+  .popup-header img {
+    width: 120px;
 
-      .icons .icon:hover .fab.fa-instagram {
-        background: radial-gradient(
-          circle at 30% 107%,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
-        background-clip: text;
-        border-radius: 20%;
-        transform: scale(1.5);
-        color: transparent;
-      }
+    height: 120px;
+  }
 
-      .icons .icon:hover .fab.fa-twitter {
-        color: #090e11;
-      }
+  .popup-header h2 {
+    margin: 0;
+    font-size: 30px;
+    /* text-shadow: 1px 1px 2px #646464, 0 0 1em #fdbafff7, 0 0 0.2em #fdbafff7; */
+    color: rgb(255, 136, 0);
+    font-weight: 900;
+  }
 
-      .icons .icon:hover .fas.fa-envelope {
-        color: #1ac31d;
-      }
+  .popup h3 {
+    font-size: 24px;
+    margin-top: 19px;
+    margin-bottom: 10px;
+    color: #444;
+    animation: textPop 0.7s ease-in-out infinite;
+    font-weight: 500;
+  }
 
-      @media screen and (max-width: 700px) {
-        .card {
-          flex-direction: column;
-          width: 90%;
-          height: auto;
-        }
+  .popup p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+  }
 
-        .left {
-          width: 100%;
-          height: auto;
-        }
+  .btn {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
 
-        .right {
-          width: 100%;
-          padding: 0 1rem;
-        }
-      }
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
 
-      @media screen and (max-width: 500px) {
-        .card {
-          width: 90%;
-          padding: 1rem;
-        }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s;
+  }
 
-        .left {
-          width: 100%;
-          height: auto;
-        }
+  .close-btn:hover {
+    color: #666;
+  }
 
-        .right {
-          width: 100%;
-          padding: 0 1rem;
-        }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
 
-        .form input,
-        textarea {
-          width: 100%;
-        }
+    to {
+      opacity: 1;
+    }
+  }
 
-        .usersubmit input {
-          width: 100%;
-          padding: 0.5rem;
-        }
-      }
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50%);
+    }
 
-      @media screen and (max-width: 350px) {
-        .container {
-          padding: 0 1rem;
-        }
+    to {
+      transform: translateY(0);
+    }
+  }
 
-        .card {
-          width: 100%;
-          padding: 0.5rem;
-        }
+  @keyframes textPop {
 
-        .left {
-          width: 100%;
-          height: auto;
-        }
+    0%,
+    100% {
+      color: #444;
+    }
 
-        .form input,
-        textarea {
-          width: 100%;
-        }
+    50% {
+      color: #ff4f23;
+      text-shadow: 0px 1px 3px #ffad98;
+    }
+  }
+</style>
+<style>
+  
 
-        .usersubmit input {
-          width: 100%;
-        }
-      }
+  .form-container {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
 
-      .back-button {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: rgb(250, 244, 245);
-        font-size: 16px;
-        font-weight: bold;
-      }
+  .form-card {
+    background: rgba(251, 190, 190, 0.4); /* semi-transparent background */
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #080707;
+    box-shadow: 0px 1px 4px 2px #eb4c0292;
+    width: 70%;
+    max-width: 1200px;
+    margin-top: 100px;
+  }
 
-      .back-button i {
-        font-size: 35px;
-        margin-right: 10px;
-      }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-      .back-button:hover {
-        color: #f5c58d;
-      }
 
-      .theme-toggle {
-        position: fixed;
-        top: 26px;
-        right: 30px;
-        color: rgb(86, 23, 2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        transition: background-color 0.3s, box-shadow 0.3s;
-        z-index: 1000;
-      }
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+  }
 
-      .theme-toggle i {
-        font-size: 20px;
-        color: yellow;
-      }
+  .left {
+    width: 30%;
+  }
 
-      .theme-toggle .fa-moon {
-        display: none;
-        color: rgb(255, 255, 255);
-      }
+  .left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 80px;
+  }
 
-      body.dark-theme {
-        background-color: #180e0e;
-        color: #000000;
-      }
+  .right {
+    width: 65%;
+    padding-left: 40px;
+  }
 
-      body.dark-theme .back-button {
-        color: #ffffff;
-      }
+  .form-container {
+    width: 90%;
+    font-size: 20px;
+  }
 
-      body.dark-theme .theme-toggle .fa-sun {
-        display: none;
-      }
+  .form,
+  .address {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0;
+  }
 
-      body.dark-theme .theme-toggle .fa-moon {
-        display: inline;
-      }
+  .form input,
+  textarea {
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+    margin: 5px 0;
+    color: white;
+  }
 
-      body.dark-theme .card {
-        background: rgba(0, 0, 0, 0.8);
-        box-shadow: 0px 1px 4px 2px #f5f1f192;
-      }
+  .form input:hover,
+  textarea:hover {
+    border-bottom: 2px solid rgb(248, 243, 245);
+  }
 
-      body.dark-theme .right h2 {
-        color: #ffffff;
-      }
+  .usersubmit input {
+    background-color: rgb(245, 53, 53);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 60px;
+  }
 
-      body.dark-theme .header {
-        color: white;
-      }
+  .usersubmit input:hover {
+    background-color: rgb(246, 146, 154);
+    color: black;
+    border: 2px solid black;
+  }
 
-      body.dark-theme .contact-details {
-        color: white;
-      }
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+  }
 
-      /* 
-      body.dark-theme .form input,
-      textarea {
-        color: #fff;
-        border-bottom: 2px solid rgb(255, 255, 255);
-      }
+  .icons .icon i {
+    margin-top: 15px;
+    font-size: 30px;
+    transition: all 0.9s ease;
+    color: white;
+  }
 
-      body.dark-theme .form input:hover,
-      textarea:hover {
-        border-bottom: 2px solid #f25;
-      } */
+  .icons .icon:hover i {
+    transform: scale(1.2);
+  }
 
-      body.dark-theme .address h4 {
-        color: #fff;
-      }
+  .icons .icon:hover .fab.fa-linkedin {
+    color: #0077b5;
+  }
 
-      body.dark-theme .social i {
-        color: #ffffff;
-      }
-          /* Add your CSS styling here */
-          .contact-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            text-align: center;
-        }
-        .contact-popup-content {
-            margin: 20px 0;
-        }
-        .contact-popup-icon {
-            margin: 20px 0;
-        }
-        .contact-popup-button {
-            padding: 10px 20px;
-            background-color: #e66f00;
-            border: none;
-            color: white;
-            cursor: pointer;
-        }
-        #thankYouMessage, #errorMessage {
-            display: none;
-            margin: 10px 0;
-            color: red;
-            font-weight: bold;
-        }
-        #thankYouMessage {
-            color: green;
-        }
-        .theme-toggle {
+  .icons .icon:hover .fab.fa-github {
+    color: #060606;
+  }
+
+  .icons .icon:hover .fab.fa-instagram {
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    background-clip: text;
+    border-radius: 20%;
+    transform: scale(1.5);
+    color: transparent;
+  }
+
+  .icons .icon:hover .fab.fa-twitter {
+    color: #090e11;
+  }
+
+  .icons .icon:hover .fas.fa-envelope {
+    color: #1ac31d;
+  }
+
+  @media screen and (max-width: 700px) {
+    .form-card {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+    }
+
+    .left {
+      width: 100%;
+      height: auto;
+    }
+
+    .right {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .form-card {
+      width: 90%;
+      padding: 1rem;
+    }
+
+    .left {
+      width: 100%;
+      height: auto;
+    }
+
+    .right {
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .form input,
+    textarea {
+      width: 100%;
+    }
+
+    .usersubmit input {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .form-card {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    .left {
+      width: 100%;
+      height: auto;
+    }
+
+    .form input,
+    textarea {
+      width: 100%;
+    }
+
+    .usersubmit input {
+      width: 100%;
+    }
+  }
+
+  .back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(250, 244, 245);
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .back-button i {
+    font-size: 35px;
+    margin-right: 10px;
+  }
+
+  .back-button:hover {
+    color: #f5c58d;
+  }
+
+  .theme-toggle {
     position: fixed;
     top: 26px;
-    right: 80px; /* Adjusted right position to give space between buttons */
-    color: rgb(86, 23, 2);
+    right: 30px;
+    color: rgb(239, 235, 233);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -409,42 +465,505 @@
     height: 40px;
     transition: background-color 0.3s, box-shadow 0.3s;
     z-index: 1000;
-}
-    </style>
-  </head>
-  <body>
-    <!-- Chatbot integration section -->
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
-      window.botpressWebChat.init({
-        composerPlaceholder: "Ask me anything!",
-        botConversationDescription: "Welcome to Open Source Village!",
-        botId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-        hostUrl: "https://cdn.botpress.cloud/webchat/v1",
-        messagingUrl: "https://messaging.botpress.cloud",
-        clientId: "88f3d139-4a56-4ac6-a192-d147bc4373d7",
-        webhookId: "a909bd46-1d71-484d-8551-58afe6d64c1e",
-        lazySocket: true,
-        themeName: "prism",
-        botName: "Open Source Village",
-        avatarUrl:
-          "https://media.licdn.com/dms/image/D4D0BAQE8E3S0-vt8TQ/company-logo_200_200/0/1689842743944?e=1695254400&v=beta&t=0J9c08n_S-BNwxd7IMsWNV97jbhRmb5eRjfSBg6afkU",
-      });
-    </script>
+  }
 
-<a class="back-button" href="index.html">
-  <i class="fas fa-arrow-left"></i>
-</a>
-<div class="container">
-  <div class="card">
-    <div class="theme-toggle" id="theme-toggle">
-      <i class="fas fa-sun"></i>
-      <i class="fas fa-moon"></i>
+  .theme-toggle i {
+    font-size: 20px;
+    color: yellow;
+  }
+
+  .theme-toggle .fa-moon {
+    display: none;
+    color: rgb(255, 255, 255);
+  }
+
+  body.dark-theme {
+    background-color: #180e0e;
+    color: #000000;
+  }
+
+  body.dark-theme .back-button {
+    color: #ffffff;
+  }
+
+  body.dark-theme .theme-toggle .fa-sun {
+    display: none;
+  }
+
+  body.dark-theme .theme-toggle .fa-moon {
+    display: inline;
+  }
+
+  body.dark-theme .form-card {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 1px 4px 2px #f5f1f192;
+  }
+
+  body.dark-theme .right h2 {
+    color: #ffffff;
+  }
+
+  body.dark-theme .header {
+    color: white;
+  }
+
+  /* body.dark-theme .contact-details {
+    color: white;
+  } */
+
+  /* 
+  body.dark-theme .form input,
+  textarea {
+    color: #fff;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+
+  body.dark-theme .form input:hover,
+  textarea:hover {
+    border-bottom: 2px solid #f25;
+  } */
+
+  body.dark-theme .address h4 {
+    color: #fff;
+  }
+
+  body.dark-theme .social i {
+    color: #ffffff;
+  }
+      /* Add your CSS styling here */
+      .contact-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        text-align: center;
+    }
+    .contact-popup-content {
+        margin: 20px 0;
+    }
+    .contact-popup-icon {
+        margin: 20px 0;
+    }
+    .contact-popup-button {
+        padding: 10px 20px;
+        background-color: #e66f00;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    #thankYouMessage, #errorMessage {
+        display: none;
+        margin: 10px 0;
+        color: red;
+        font-weight: bold;
+    }
+    #thankYouMessage {
+        color: green;
+    }
+    .theme-toggle {
+position: fixed;
+top: 26px;
+right: 80px; /* Adjusted right position to give space between buttons */
+color: rgb(86, 23, 2);
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+transition: background-color 0.3s, box-shadow 0.3s;
+z-index: 1000;
+}
+</style>
+<title>CONTACT US</title>
+</head>
+
+<body>
+  <!-- <body class="show-chatbot">
+
+     <div class="chatbot">
+      <header>
+        <h2>Chatbot</h2>
+      </header>
+      <ul class="chatbox">
+        <li class=" chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there 👋 <br> How can I help you today?</p>
+        </li>
+
+
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a  message..." required></textarea>
+        <span id="send-btn" class="material-symbols-outlined">Send</span>
+      </div>
+
     </div>
+
+    <script src="script.js" defer></script>
+  </body> -->
+
+  <!-- preloader section -->
+  <section class="preloader">
+    <div class="sk-circle">
+      <div class="sk-circle1 sk-child"></div>
+      <div class="sk-circle2 sk-child"></div>
+      <div class="sk-circle3 sk-child"></div>
+      <div class="sk-circle4 sk-child"></div>
+      <div class="sk-circle5 sk-child"></div>
+      <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+      <div class="sk-circle8 sk-child"></div>
+      <div class="sk-circle9 sk-child"></div>
+      <div class="sk-circle10 sk-child"></div>
+      <div class="sk-circle11 sk-child"></div>
+      <div class="sk-circle12 sk-child"></div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 50)
+    })
+  </script>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <div id="ham-menu">
+        <div id="bars" onclick="togMenu(this)">
+          <div id="first" class="bar"></div>
+          <div id="sec" class="bar"></div>
+          <div id="third" class="bar"></div>
+        </div>
+        <div id="nav-menu">
+          <ul>
+            <li class="icons">
+              <i class="fa-solid fa-house"></i>
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="icons">
+              <i class="fa-solid fa-address-card"></i>
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="icons">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="icons"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link"
+                href="#testimonials">Reviews</a></li>
+            <li class="icons"><i class="fa-solid fa-address-book"></i><a href="contact us.html"></a>Contact</a></li>
+            <li class="icons"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+          </ul>
+        </div>
+      </div>
+      <a class="logo-link" href="#home">
+        <div class="logo-title">
+          <a href="profile.html" class="href" X> <img class="logo" src="images/logo2.jpeg" alt="logo"></a>
+
+          <span class="logo-text">Open Source Village</span>
+        </div>
+
+        <!-- <div>
+          <span class="logo-subtext">Source</span>
+        </div> -->
+
+      </a>
+      <ul>
+        <li style="background-color: transparent;"><i class="fa-solid fa-house"></i><a class="nav-link"
+            href="#home">Home</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-address-card"></i><a class="nav-link"
+            href=".about-section">About</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link"
+            href="#services">Services</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-pen-to-square"></i><a class="nav-link"
+            href=".testimonial-section">Reviews</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-address-book"></i><a
+            href="contact us.html">Contact</a></li>
+        <li style="background-color: transparent;"><i class="fa-solid fa-right-to-bracket"></i><a href="login.html"
+            target=”_blank”>Login/Register</a></li>
+      </ul>
+
+      <div class="toggle-container" style="top: 0px;">
+        <input type="checkbox" id="checkbox" class="switch-checkbox">
+        <label class="theme-switch" for="checkbox">
+          <div class="toggle-button">
+            <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+            <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+          </div>
+        </label>
+      </div>
+      <!--Styles for side menu-->
+      <style>
+        #bars {
+          display: none;
+        }
+
+        .bar {
+          width: 27px;
+          height: 3px;
+          background-color: white;
+          margin: 7px;
+          border-radius: 20px;
+          transition: all 0.4s;
+        }
+
+        .cliked #first {
+          transform: translate(0, 10px) rotate(-45deg);
+
+        }
+
+        .cliked #sec {
+          opacity: 0;
+        }
+
+        .cliked #third {
+          transform: translate(0, -10px) rotate(45deg);
+        }
+
+        #nav-menu {
+          display: none;
+          opacity: 0;
+          position: fixed;
+          top: 63px;
+          z-index: 1;
+          margin-top: 27px;
+          width: auto;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          backdrop-filter: blur(4px);
+          padding: 20px 0;
+          border: none;
+          transition: all 0.6s;
+
+        }
+
+        #nav-menu ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: inherit;
+          width: auto;
+          position: absolute;
+          top: 0;
+          right: inherit;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(4px);
+        }
+
+        #nav-menu ul li {
+          display: none;
+          margin: 10px 20px 0 30px;
+        }
+
+        @media (max-width: 858px) {
+          #bars {
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translate(0, -55%);
+          }
+
+          #nav-menu {
+            left: 0;
+          }
+
+          #nav-menu ul li {
+            display: flex;
+          }
+
+          #nav-menu ul li a:hover {
+            color: white;
+            background-color: #e8701f;
+            transition: color 0s, background-color 0s;
+            border-radius: 20px;
+            background: rgb(239, 188, 0);
+            background: linear-gradient(90deg, rgba(239, 188, 0, 1) 47%, rgba(204, 133, 110, 1) 100%);
+          }
+
+          #nav-menu.sticky-nav-menu ul {
+            background: linear-gradient(rgba(249, 177, 43, 0.7), rgb(247, 113, 3));
+            color: white !important;
+            border-bottom: 1.5px solid rgb(0, 0, 0);
+            backdrop-filter: blur(3px);
+          }
+
+          #nav-menu.sticky-nav-menu {
+            top: 52px;
+          }
+        }
+      </style>
+
+      <script>
+        function togMenu(obj) {
+          var headMenu = document.querySelector('.navbar nav');
+          var sideMenu = document.getElementById('nav-menu');
+          obj.classList.toggle("cliked");
+          if (obj.classList.contains('cliked')) {
+            headMenu.style.borderBottomLeftRadius = '0px';
+            sideMenu.style.display = 'block';
+            sideMenu.style.opacity = '1';
+          } else {
+            headMenu.style.borderBottomLeftRadius = headMenu.style.borderBottomRightRadius;
+            sideMenu.style.opacity = '0';
+            sideMenu.style.display = 'none';
+          }
+        }
+        window.addEventListener("scroll", function () {
+          var sideMenu = document.getElementById('nav-menu');
+          sideMenu.classList.toggle("sticky-nav-menu", window.scrollY > 50)
+        })
+
+      </script>
+
+
+      <style>
+        .toggle-container {
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 30px 0 0 30px;
+        }
+
+        .light-mode .toggle-container {
+          right: -4px;
+          top: 15px;
+        }
+
+        /* Hidden Checkbox */
+        .switch-checkbox {
+          display: none;
+        }
+
+        .theme-switch {
+          position: relative;
+          width: 45px;
+          height: 30px;
+          background-color: #ccc;
+          border-radius: 20px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 5px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.5s ease;
+        }
+
+        .theme-switch .light-mode-icon,
+        .theme-switch .dark-mode-icon {
+          font-size: 19px;
+          position: absolute;
+          cursor: pointer;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: opacity 0.5s ease, color 0.5s ease;
+        }
+
+        .theme-switch .light-mode-icon {
+          color: #f39c12;
+        }
+
+        .theme-switch .dark-mode-icon {
+          color: #bdc3c7;
+          opacity: 0;
+        }
+
+        .toggle-button {
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          width: 25px;
+          height: 25px;
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+
+        /* Checkbox Checked State */
+        .switch-checkbox:checked+.theme-switch {
+          background-color: #34495e;
+        }
+
+        .switch-checkbox:checked+.theme-switch .light-mode-icon {
+          opacity: 0;
+        }
+
+        .switch-checkbox:checked+.theme-switch .dark-mode-icon {
+          opacity: 1;
+        }
+
+        .switch-checkbox:checked+.theme-switch .toggle-button {
+          transform: translateX(13px);
+          /* background-color: #34495e; */
+        }
+      </style>
+
+      <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg"
+          onclick="ProfileClicked()" alt="Profile"></a>
+    </nav>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const toggleButton = document.getElementById('checkbox');
+
+      const currentMode = localStorage.getItem('dark-mode');
+
+      if (currentMode === 'enabled') {
+
+        document.body.classList.add('dark-mode');
+
+        toggleButton.checked = true;
+
+      }
+
+      toggleButton.addEventListener('change', function () {
+
+        document.body.classList.toggle('dark-mode');
+
+        if (document.body.classList.contains('dark-mode')) {
+
+          localStorage.setItem('dark-mode', 'enabled');
+
+        }
+        else {
+
+          localStorage.setItem('dark-mode', 'disabled');
+
+        }
+      });
+
+    });
+  </script>
+  <script>
+    // Theme toggle logic
+    const themeToggle = document.getElementById("checkbox");
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-theme");
+    });
+  </script>
+ 
+ <!-- form section -->
+
+ <div class="container">
+  <div class="form-card">
+    
     <div class="header">
       <h1>Contact Us</h1>
     </div>
-    <div class="contact-details">
+    <!-- <div class="contact-details">
       <div>
         <h3>Email</h3>
         <p>contact@yourcompany.com</p>
@@ -457,7 +976,7 @@
         <h3>Address</h3>
         <p>1234 Main St,<br />City, Country</p>
       </div>
-    </div>
+    </div> -->
     <div class="main-content">
       <div class="left">
         <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-5795988-4849052.png?f=webp" alt="Contact Image" />
@@ -521,12 +1040,12 @@
 
 <style>
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: 100px auto;
     padding: 20px;
   }
 
-  .card {
+  .form-card {
     background: linear-gradient(135deg, #FFE70F, #FFA500);
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -553,24 +1072,24 @@
     animation: fadeIn 1.2s ease;
   }
 
-  .contact-details {
+  /* .contact-details {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     color: #333;
     animation: slideIn 1s ease;
-  }
+  } */
 
-  .contact-details h3 {
+  /* .contact-details h3 {
     color: #fff;
     font-size: 20px;
     margin-bottom: 10px;
-  }
+  } */
 
-  .contact-details p {
+  /* .contact-details p {
     color: #fff;
     font-size: 16px;
-  }
+  } */
 
   .main-content {
     display: flex;
@@ -622,20 +1141,27 @@
 
   .right h2 {
     color: #fff;
-    font-size: 28px;
+    font-size: 23px;
     margin-bottom: 20px;
     margin-left: 110px;
   }
 
   .form-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
     border-radius: 10px;
+    border: 2px solid black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
+  .form{
+    height: 100%;
+    width: auto;
+    padding: 5px;
+  }
+
   .form label {
-    color: #fff;
+    color: #000;
     font-size: 16px;
     margin-bottom: 5px;
     display: block;
@@ -645,8 +1171,8 @@
   .form textarea {
     width: 95%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: none;
+    margin-bottom: 5px;
+    border: 1px solid black;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.2);
     color: black;
@@ -748,523 +1274,287 @@
     }
 
     .right h2 {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     .form label {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .form input,
     .form textarea {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .usersubmit input[type="submit"] {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 </style>
-
-
-
-<script>
-  // Handle form submission
-  document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    
-    const thankYouMessage = document.getElementById('thankYouMessage');
-    const errorMessage = document.getElementById('errorMessage');
-    const name = document.querySelector('input[name="name"]').value.trim();
-    const email = document.querySelector('input[name="email"]').value.trim();
-    const phone = document.querySelector('input[name="phone"]').value.trim();
-    const message = document.querySelector('textarea[name="message"]').value.trim();
-
-    // Basic validation: Check if any field is empty
-    if (name === "" || email === "" || phone === "" || message === "") {
-      errorMessage.style.display = 'block';
-      thankYouMessage.style.display = 'none';
-    } else {
-      errorMessage.style.display = 'none';
-      thankYouMessage.style.display = 'block';
-      
-      setTimeout(function () {
-        thankYouMessage.style.display = 'none';
-        document.getElementById('contactForm').reset();
-      }, 2000); // Show the message for 2 seconds
-
-      document.getElementById('contactPopup').style.display = 'block';
-    }
-  });
-
-  // Handle phone input validation for exactly 10 digits
-  const phoneInput = document.getElementById('phone');
   
-  phoneInput.addEventListener('input', function () {
-    const phoneValue = phoneInput.value;
 
-    // Regular expression to ensure only digits are entered
-    const isValidPhone = /^\d{10}$/.test(phoneValue);
+ 
 
-    if (!isValidPhone) {
-      phoneInput.setCustomValidity("Please enter exactly 10 digits.");
-    } else {
-      phoneInput.setCustomValidity(""); // Clear the error message when valid
-    }
-  });
-
-  // Function to close the popup
-  function closeContactPopup() {
-    document.getElementById('contactPopup').style.display = 'none';
-    window.location.href = 'index.html';
-  }
-</script>
-
-<script>
-  // Theme toggle logic
-  const themeToggle = document.getElementById("theme-toggle");
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
-  });
-</script>
-<style>
-  * {
-  margin: 0;
-  padding: 0;
-}
-a {
-  color: #fff;
-  text-decoration: none;
-}
-.pg-footer {
-position: fixed;
-  width: 100%;
-  position: absolute;
-  top: 110%;
-  font-family: "Roboto", sans-serif;
-}
-
-.footer {
-  background-color: #FFAA33;
-  color: #fff;
-}
-.footer-wave-svg {
-  background-color: transparent;
-  display: block;
-  height: 30px;
-  position: relative;
-  top: -1px;
-  width: 100%;
-}
-.footer-wave-path {
-  fill: #fffff2;
-}
-
-.footer-content {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1230px;
-  padding: 40px 15px 450px;
-  position: relative;
-}
-
-.footer-content-column {
-  box-sizing: border-box;
-  float: left;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
-  color: #fff;
-}
-
-.footer-content-column ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-logo-link {
-  display: inline-block;
-}
-.footer-menu {
-  margin-top: 30px;
-}
-
-.footer-menu-name {
-  color: #fffff2;
-  font-size: 15px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  line-height: 18px;
-  margin-bottom: 0;
-  margin-top: 0;
-  text-transform: uppercase;
-}
-.footer-menu-list {
-  list-style: none;
-  margin-bottom: 0;
-  margin-top: 10px;
-  padding-left: 0;
-}
-.footer-menu-list li {
-  margin-top: 5px;
-}
-
-.footer-call-to-action-description {
-  color: #fffff2;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-.footer-call-to-action-button:hover {
-  background-color: #fffff2;
-  color: #00bef0;
-}
-.button:last-of-type {
-  margin-right: 0;
-}
-.footer-call-to-action-button {
-  background-color: orangered;
-  border-radius: 21px;
-  color: #fffff2;
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  line-height: 18px;
-  padding: 12px 30px;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color 0.2s;
-  cursor: pointer;
-  position: relative;
-}
-.footer-call-to-action {
-  margin-top: 30px;
-}
-.footer-call-to-action-title {
-  color: #fffff2;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  line-height: 18px;
-  margin-bottom: 0;
-  margin-top: 0;
-  text-transform: uppercase;
-}
-.footer-call-to-action-link-wrapper {
-  margin-bottom: 0;
-  margin-top: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-.footer-call-to-action-link-wrapper a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-social-links {
-  bottom: 0;
-  height: 54px;
-  position: absolute;
-  right: 0;
-  width: 236px;
-}
-
-.footer-social-amoeba-svg {
-  height: 54px;
-  left: 0;
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 236px;
-}
-
-.footer-social-amoeba-path {
-  fill: orangered;
-}
-
-.footer-social-link.linkedin {
-  height: 26px;
-  left: 3px;
-  top: 11px;
-  width: 26px;
-}
-
-.footer-social-link {
-  display: block;
-  padding: 10px;
-  position: absolute;
-}
-
-.hidden-link-text {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-  clip-path: inset(0px 0px 99.9% 99.9%);
-  overflow: hidden;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  border: 0;
-  top: 50%;
-}
-
-.footer-social-icon-svg {
-  display: block;
-}
-
-.footer-social-icon-path {
-  fill: #fffff2;
-  transition: fill 0.2s;
-}
-
-.footer-social-link.twitter {
-  height: 28px;
-  left: 62px;
-  top: 3px;
-  width: 28px;
-}
-
-.footer-social-link.youtube {
-  height: 24px;
-  left: 123px;
-  top: 12px;
-  width: 24px;
-}
-
-.footer-social-link.github {
-  height: 34px;
-  left: 172px;
-  top: 7px;
-  width: 34px;
-}
-
-.footer-copyright {
-  box-shadow: 1px 1px 1px 1px gray;
-  background-color: orangered;
-  color: #fff;
-  padding: 15px 30px;
-  text-align: center;
-}
-
-.footer-copyright-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-}
-
-.footer-copyright-text {
-  color: #fff;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.footer-copyright-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Media Query For different screens */
-@media (min-width: 320px) and (max-width: 479px) {
-  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-  .footer-content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1230px;
-    padding: 40px 15px 1050px;
-    position: relative;
-  }
-  .pg-footer{
-    top: 1200px;
-  }
-}
-@media (min-width: 480px) and (max-width: 599px) {
-  /* smartphones, Android phones, landscape iPhone */
-  .footer-content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1230px;
-    padding: 40px 15px 1050px;
-    position: relative;
-  }
-}
-@media (min-width: 600px) and (max-width: 800px) {
-  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-  .footer-content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1230px;
-    padding: 40px 15px 1050px;
-    position: relative;
-  }
-}
-@media (min-width: 801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-}
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
-}
-
-@media (min-width: 760px) {
-  .footer-content {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1230px;
-    padding: 40px 15px 450px;
-    position: relative;
-  }
-
-  .footer-wave-svg {
-    height: 50px;
-  }
-
-  .footer-content-column {
-    width: 24.99%;
-  }
-}
-@media (min-width: 568px) {
-  /* .footer-content-column {
-      width: 49.99%;
-  } */
-}
-
-</style>
-
-
-    <div class="pg-footer">
-      <footer class="footer">
-        <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
-          <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
-        </svg>
-        <div class="footer-content">
-          <div class="footer-content-column">
-            <div class="footer-logo">
-              <a class="footer-logo-link" href="#">
-                <span class="hidden-link-text">LOGO</span>
-                <img src="https://community-site-theta.vercel.app/images/logo2.jpeg" alt="logo" style="border-radius: 50%; width: 100px; height: 100px;">
-              </a>
-            </div>
-            <div class="footer-menu">
-              <h2 class="footer-menu-name"> Get Started</h2>
-              <ul id="menu-get-started" class="footer-menu-list">
-                <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                  <a href="#">Start</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                  <a href="#">Documentation</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                  <a href="#">Installation</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-content-column">
-            <div class="footer-menu">
-              <h2 class="footer-menu-name"> Company</h2>
-              <ul id="menu-company" class="footer-menu-list">
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Contact</a>
-                </li>
-                <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
-                  <a href="#">News</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Careers</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-menu">
-              <h2 class="footer-menu-name"> Legal</h2>
-              <ul id="menu-legal" class="footer-menu-list">
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
-                  <a href="#">Privacy Notice</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Terms of Use</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-content-column">
-            <div class="footer-menu">
-              <h2 class="footer-menu-name"> Quick Links</h2>
-              <ul id="menu-quick-links" class="footer-menu-list">
-                <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                </li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Security</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Blog</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type_archive menu-item-object-customer">
-                  <a href="#">Customers</a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                  <a href="#">Reviews</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-content-column">
-            <div class="footer-call-to-action">
-              <h2 class="footer-call-to-action-title"> Let's Chat</h2>
-              <p class="footer-call-to-action-description"> Have a support question?</p>
-              <a class="footer-call-to-action-button button" href="#" target="_self"> Get in Touch </a>
-            </div>
-            <div class="footer-call-to-action">
-              <h2 class="footer-call-to-action-title"> You Call Us</h2>
-              <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:(123) 456-7890" target="_self">(123) 456-7890 </a></p>
-            </div>
-          </div>
-          <div class="footer-social-links"> <svg class="footer-social-amoeba-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 54">
-              <path class="footer-social-amoeba-path" d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z"></path>
-            </svg>
-            <a class="footer-social-link linkedin" href="#" target="_blank">
-              <span class="hidden-link-text">Linkedin</span>
-              <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                <path class="footer-social-icon-path" d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
-              </svg>
-            </a>
-            <a class="footer-social-link twitter" href="#" target="_blank">
-              <span class="hidden-link-text">Twitter</span>
-              <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
-                <path class="footer-social-icon-path" d="M 25.855469 5.574219 C 24.914063 5.992188 23.902344 6.273438 22.839844 6.402344 C 23.921875 5.75 24.757813 4.722656 25.148438 3.496094 C 24.132813 4.097656 23.007813 4.535156 21.8125 4.769531 C 20.855469 3.75 19.492188 3.113281 17.980469 3.113281 C 15.082031 3.113281 12.730469 5.464844 12.730469 8.363281 C 12.730469 8.773438 12.777344 9.175781 12.867188 9.558594 C 8.503906 9.339844 4.636719 7.246094 2.046875 4.070313 C 1.59375 4.847656 1.335938 5.75 1.335938 6.714844 C 1.335938 8.535156 2.261719 10.140625 3.671875 11.082031 C 2.808594 11.054688 2 10.820313 1.292969 10.425781 C 1.292969 10.449219 1.292969 10.46875 1.292969 10.492188 C 1.292969 13.035156 3.101563 15.15625 5.503906 15.640625 C 5.0625 15.761719 4.601563 15.824219 4.121094 15.824219 C 3.78125 15.824219 3.453125 15.792969 3.132813 15.730469 C 3.800781 17.8125 5.738281 19.335938 8.035156 19.375 C 6.242188 20.785156 3.976563 21.621094 1.515625 21.621094 C 1.089844 21.621094 0.675781 21.597656 0.265625 21.550781 C 2.585938 23.039063 5.347656 23.90625 8.3125 23.90625 C 17.96875 23.90625 23.25 15.90625 23.25 8.972656 C 23.25 8.742188 23.246094 8.515625 23.234375 8.289063 C 24.261719 7.554688 25.152344 6.628906 25.855469 5.574219 "></path>
-              </svg>
-            </a>
-            <a class="footer-social-link youtube" href="#" target="_blank">
-              <span class="hidden-link-text">Youtube</span>
-              <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                <path class="footer-social-icon-path" d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z"></path>
-              </svg>
-            </a>
-            <a class="footer-social-link github" href="#" target="_blank">
-              <span class="hidden-link-text">Github</span>
-              <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                <path class="footer-social-icon-path" d="M 16 4 C 9.371094 4 4 9.371094 4 16 C 4 21.300781 7.4375 25.800781 12.207031 27.386719 C 12.808594 27.496094 13.027344 27.128906 13.027344 26.808594 C 13.027344 26.523438 13.015625 25.769531 13.011719 24.769531 C 9.671875 25.492188 8.96875 23.160156 8.96875 23.160156 C 8.421875 21.773438 7.636719 21.402344 7.636719 21.402344 C 6.546875 20.660156 7.71875 20.675781 7.71875 20.675781 C 8.921875 20.761719 9.554688 21.910156 9.554688 21.910156 C 10.625 23.746094 12.363281 23.214844 13.046875 22.910156 C 13.15625 22.132813 13.46875 21.605469 13.808594 21.304688 C 11.144531 21.003906 8.34375 19.972656 8.34375 15.375 C 8.34375 14.0625 8.8125 12.992188 9.578125 12.152344 C 9.457031 11.851563 9.042969 10.628906 9.695313 8.976563 C 9.695313 8.976563 10.703125 8.65625 12.996094 10.207031 C 13.953125 9.941406 14.980469 9.808594 16 9.804688 C 17.019531 9.808594 18.046875 9.941406 19.003906 10.207031 C 21.296875 8.65625 22.300781 8.976563 22.300781 8.976563 C 22.957031 10.628906 22.546875 11.851563 22.421875 12.152344 C 23.191406 12.992188 23.652344 14.0625 23.652344 15.375 C 23.652344 19.984375 20.847656 20.996094 18.175781 21.296875 C 18.605469 21.664063 18.988281 22.398438 18.988281 23.515625 C 18.988281 25.121094 18.976563 26.414063 18.976563 26.808594 C 18.976563 27.128906 19.191406 27.503906 19.800781 27.386719 C 24.566406 25.796875 28 21.300781 28 16 C 28 9.371094 22.628906 4 16 4 Z "></path>
-              </svg>
-            </a>
-            
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="footer-copyright-wrapper">
-            <p class="footer-copyright-text">
-              <a class="footer-copyright-link" href="#" target="_self"> ©2024. | Designed By: open source village. | All rights reserved. </a>
-            </p>
-          </div>
-        </div>
-      </footer>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const thankYouMessage = document.getElementById('thankYouMessage');
+      const errorMessage = document.getElementById('errorMessage');
+      const name = document.querySelector('input[name="name"]').value.trim();
+      const email = document.querySelector('input[name="email"]').value.trim();
+      const phone = document.querySelector('input[name="phone"]').value.trim();
+      const message = document.querySelector('textarea[name="message"]').value.trim();
+      if (name === "" || email === "" || phone === "" || message === "") {
+        errorMessage.style.display = 'block';
+        thankYouMessage.style.display = 'none';
+      } else {
+        errorMessage.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+        setTimeout(function () {
+          thankYouMessage.style.display = 'none';
+          document.getElementById('contactForm').reset();
+        }, 3000);
+      }
+    });
+  </script>
+  </head>
+  <div id="contactPopup" class="contact-popup" style="display: none;">
+    <div class="contact-popup-content">
+      <h2>Thank you for contacting us!🧡</h2>
+      <div class="contact-popup-icon">
+        <img src="/images/GIF/Feedback giphy.gif" alt="✅" height="120" width="120" />
+      </div>
+      <p>Your message has been received.<br />We will get back to you shortly.</p>
+      <button class="contact-popup-button" onclick="closeContactPopup()">Back to Home</button>
     </div>
-  </body>
+  </div>
+  </section>
+
+  <script>
+    function showContactPopup(event) {
+      event.preventDefault();
+      document.getElementById('contactPopup').style.display = 'flex';
+    }
+
+    function closeContactPopup() {
+      document.getElementById('contactPopup').style.display = 'none';
+      window.location.href = '/';
+    }
+  </script>
+
+  <!-- footer section -->
+  <special-footer></special-footer>
+
+  <button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+  </svg>
+  </footer>
+
+  </div>
+  <script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    let circle = document.querySelector(".progress-ring__circle");
+    let radius = circle.r.baseVal.value;
+    let circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    window.onscroll = function () {
+      scrollFunction();
+      updateProgress();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrollPercent = scrollTop / docHeight;
+      let offset = circumference - (scrollPercent * circumference);
+      circle.style.strokeDashoffset = offset;
+    }
+
+    scrollToTopBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      topFunction();
+    });
+  </script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+  <script>
+    function sendFeed() {
+      alert('Email sent successfully!');
+    }
+  </script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Message sent successsfully. We will get back to you soon.")
+      );
+    }
+    function sendFeed() {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "yash.223234108@vcet.edu.in",
+        Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+        To: 'itsamanyadav18@gmail.com',
+        From: document.getElementById('email').value,
+        Subject: "This is the subject",
+        Body: "Name:" + document.getElementById("name").value
+          + "<br> Email:" + document.getElementById("email").value
+          + "<br> Message:" + document.getElementById("msg").value
+
+      }).then(
+        message => alert("Feedback sent successsfully")
+      );
+    }
+  </script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/vegas.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+    window.botpressWebChat.init({
+      "composerPlaceholder": "Open Source Village",
+      "botConversationDescription": "This chatbot is for the community",
+      "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+      "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+    });
+  </script>
+  <!-- swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script>
+    /*=============== SWIPER JS ===============*/
+    let swiperCards = new Swiper(".card__content", {
+      loop: true,
+      spaceBetween: 52,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+        },
+        968: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+  <!-- Trail effect elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <script src="trail.js"></script>
+  <!-- end -->
+  <script src="./footer/footer.js"></script>
+  <script>
+    // Get all nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        // Remove 'active' class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add 'active' class to the clicked link
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+<script src="index.js"></script>
+
 </html>

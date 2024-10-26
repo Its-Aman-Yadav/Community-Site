@@ -57,8 +57,9 @@ class SpecialFooter extends HTMLElement {
         .links a i {
           margin-right: 8px;
         }
+          
       </style>
-      <footer>
+      <footer >
         <div class="container">
           <div class="row1">
             <div class="company" id="Company">
