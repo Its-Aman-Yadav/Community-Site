@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentorship - Open Source Village</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ourplan.css" />
+    <script src="https://kit.fontawesome.com/90889e6878.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gorditas&family=Playpen+Sans:wght@100;500&family=Poppins&family=Prompt&family=Roboto&family=Satisfy&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("nav");
+            header.classList.toggle("sticky", window.scrollY > 50)
+        })
+    </script>
+
+
+<style>
+
+    body {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffff5e, #ee8610) !important;
+
+}
+
+/* Ensure the content is above the video */
+.license-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 110px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.license-container h1, .license-container h2 {
+  color: #333;
+}
+
+.license-container p {
+  color: #666;
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .license-container {
+      margin: 20px auto;
+      padding: 10px;
+  }
+
+  .scrollToTopBtn {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 40px;
+      bottom: 80px;
+      right: 20px;
+  }
+
+  .progress-ring {
+      bottom: 75px;
+      right: 15px;
+  }
+}
+    
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(to bottom, #FFD700, #FFFFFF);  */
+        color: black;
+        background: linear-gradient(#f5d244, #f5a623);
+    }
+
+    
+
+    .header {
+            margin-top: 50px;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 5px;
+            font-size: large;
+        }
+
+    .main-content {
+        max-width: 70%;
+        margin: 120px auto 20px; /* Increased margin-top */
+        padding: 20px;
+        background: linear-gradient(to top, #ffd900d1, #FFFFFF); /* Default gradient */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    .main-content h1 {
+        font-size: 2.5em;
+            font-weight: 600;
+            color: #000000;
+    }
+
+    .main-content p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #000000;
+    }
+
+    .main-content h2 {
+        color: #ff6600;
+        margin-top: 30px;
+        border-bottom: 1px solid #FFA500;
+        padding-bottom: 5px;
+        font-weight:600;
+    }
+
+    .main-content h3 {
+        color: #FFA500;
+        margin-top: 20px;
+    }
+    
+    /* .title {
+            font-size: 2em;
+            font-weight: 600;
+            color: #000000;
+    } */
+
+    .hr-line{
+            border: 0;
+            height: 1px;
+            margin: 10px 0px;
+            background: #333;
+            background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        }
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increased gap for better spacing */
+}
+
+.benefits .item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #fcfafa;
+  padding: 15px 20px;
+  font-size: 18px; /* Slightly decreased font size */
+  font-weight: 600;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px; /* Set a max-width for better alignment */
+}
+
+.benefits .item:hover {
+  box-shadow: 0px 0px 2px 2px rgb(229, 141, 1); /* Hover effect with box shadow */
+}
+
+.benefits .item img {
+  height: 60px;
+  width: 60px;
+}
+
+.benefits p {
+  margin: 0; /* Removed margin-bottom to avoid extra space */
+}
+
+
+
+        .join .columnn{
+          margin: 10px;
+          display: grid;
+          grid-auto-flow: column;
+          align-items: center;
+        }
+        .columnn img{
+          width: 200px;
+          height:200px;
+        }
+    .join ul{
+      list-style-type: circle !important;
+      display: flex !important;
+      gap: 10px;
+      color:rgb(12, 12, 90);
+      font-weight: 600;
+      flex-direction: column !important;
+      text-align: left;
+    }
+    .topics{
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      gap:20px;
+      /* padding: 20px; */
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+    .topics .item2{
+      display: grid;
+      grid-auto-flow: row;
+      text-align: center;
+      font-weight: 700;
+      width: 100%;
+      max-width: 250px;
+      border-width: 2px;
+      margin-top: 30px;
+      border-color: #FFA500;
+      background-color: #fcfafa;
+      padding: 15px 5px;
+      border-radius: 10px;
+      justify-content: space-between;
+    }
+    .topics .item2 img{
+      width: 70px;
+      height: 70px;
+      z-index: 10;
+      padding: 15px;
+      background-color: #ffaa00;
+      border-radius: 50%;
+      margin-top:-20%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+    .topics .item2:hover{
+      box-shadow: 0px 1px 2px 1px #f5a623;
+    }
+
+    .topics .item2 p{
+      margin-top: 5px;
+    }
+   .sub-head{
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .success-stories ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      align-items: flex-start;
+    }
+    .success-stories ul li{
+      list-style-type: circle;
+      margin-left: 20px;
+    }
+    .sess 
+    {
+      padding: 20px;
+    }
+    
+    .sess h2 
+    {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .sub-head 
+    {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .topics 
+    {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .item2 
+    {
+      flex: 1 1 45%;
+      max-width: 45%;
+      margin: 10px;
+      text-align: center;
+    }
+    
+    .item2 img 
+    {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 768px) 
+    {
+      .item2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 768px) 
+    {
+    .theme-switch,
+    #checkbox 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  
+    #image 
+    {
+      opacity: 0;
+      pointer-events: none; 
+    }
+  }
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  
+  #title
+  {
+    font-size: 25px;
+  }
+ .theme-switch,
+  #checkbox 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+
+  #image 
+  {
+    opacity: 0;
+    pointer-events: none; 
+  }
+}
+    body.dark-mode {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .main-content{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .main-content p{
+color: white;
+}
+body.dark-mode .main-content h1{
+color: white;
+}
+body.dark-mode .cards p{
+  color: black;
+}
+body.dark-mode .card-2{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .items {
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: white;
+}
+body.dark-mode .items p{
+  color: white;
+}
+body.dark-mode .join ul li{
+  color: white !important;
+}
+body.dark-mode .item{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .item2{
+  background: linear-gradient(rgb(39, 39, 41), rgba(74, 74, 87, 0.979));
+    color: #fff;
+}
+body.dark-mode .success-stories ul li{
+  color: white !important;;
+}
+    
+</style>
+</head>
+
+
+<body>
+ 
+    
+ <!-- Navbar -->
+ <div class="navbar">
+  <nav>
+    <a class="logo-link" href="#home">
+      <div class="logo-title">
+                  <img  class="logo" src="images/logo2.jpeg" alt="logo">
+
+                  <span class="logo-text">Open Source Village</span>
+                 </div>
+
+      <!-- <div>
+        <span class="logo-subtext">Source</span>
+      </div> -->
+
+    </a>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a class="nav-link" href="index.html#home">Home</a></li>
+      <li><i class="fa-solid fa-address-card"></i><a class="nav-link" href="about us.html">About</a></li>
+      <li><i class="fa-solid fa-screwdriver-wrench"></i><a class="nav-link" href="index.html#services">Services</a></li>
+      <li><i class="fa-solid fa-pen-to-square"></i><a class="nav-link" href="index.html#testimonials">Reviews</a></li>
+      <li><i class="fa-solid fa-address-book"></i><a class="nav-link" href="contact us.html">Contact</a></li>
+      <li><i class="fa-solid fa-right-to-bracket"></i><a href="login.html">Login/Register</a></li>
+    </ul>
+
+    <div class="toggle-container" style="top: 15px;">
+      <input type="checkbox" id="checkbox" class="switch-checkbox">
+      <label class="theme-switch" for="checkbox">
+        <div class="toggle-button">
+          <span class="light-mode-icon"><img src="./images/sun.svg"></span>
+          <span class="dark-mode-icon"><img src="./images/moon.svg"></span>
+        </div>
+      </label>
+    </div>
+
+    <style>
+      .toggle-container {
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        right: -4px;
+        top: 15px;
+      }
+
+      .light-mode .toggle-container {
+        right: 140px;
+        top: 10px;
+      }
+      
+      /* Hidden Checkbox */
+      .switch-checkbox {
+        display: none;
+      }
+
+      .theme-switch {
+        position: relative;
+        width: 45px;
+        height: 30px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon,
+      .theme-switch .dark-mode-icon {
+        font-size: 19px;
+        position: absolute;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s ease, color 0.5s ease;
+      }
+
+      .theme-switch .light-mode-icon {
+        color: #f39c12;
+      }
+
+      .theme-switch .dark-mode-icon {
+        color: #bdc3c7;
+        opacity: 0;
+      }
+
+      .toggle-button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease, background-color 0.5s ease;
+      }
+
+      /* Checkbox Checked State */
+      .switch-checkbox:checked + .theme-switch {
+        background-color: #34495e;
+      }
+
+      .switch-checkbox:checked + .theme-switch .light-mode-icon {
+        opacity: 0;
+      }
+
+      .switch-checkbox:checked + .theme-switch .dark-mode-icon {
+        opacity: 1;
+      }
+
+      .switch-checkbox:checked + .theme-switch .toggle-button {
+        transform: translateX(13px);
+        /* background-color: #34495e; */
+      }
+
+    </style>
+
+    <!-- <img id="image" src="path/to/profile/image.jpg" onclick="ProfileClicked()" alt="Profile"> -->
+
+    <a href="profile.html"><img id="image" style="margin-right: 55px;" src="images/profile1.jpg" onclick="ProfileClicked()" alt="Profile"></a>
+  </nav>
+</div>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('checkbox');
+        toggleButton.addEventListener('change', function() {
+          document.body.classList.toggle('dark-mode');
+        });
+      });
+      </script>
+
+<div class="main-content">
+    <header class="header">
+        <h1 class="title" id="title">Mentorship</h1>
+        <div class="hr-line"></div>
+    </header>
+    <section class="mentorship">
+        <p>Our community offers mentorship, connecting members with experienced mentors to accelerate personal and professional growth.</p>
+        <p>We believe in the power of mentorship to guide and inspire individuals on their career and personal development journeys. Our mentorship program pairs mentees with mentors who provide guidance, support, and valuable insights based on their own experiences.</p>
+        
+        <div class="benefits">
+
+          <h2>Benefits of Mentorship:</h2>
+          <div class="item">
+              <img src="icons/advice.png"/>
+            <p>Gain personalized advice and feedback from industry experts.</p>
+          </div>
+
+          <div class="item">
+            <img src="icons/skill.png" alt="" class="src">
+            <p>Develop new skills and knowledge through mentorship sessions and workshops.</p>
+          </div>
+
+          <div class="item">
+            <img src="icons/networking.png" alt="" class="src">
+            <p>Expand your professional network and opportunities for career advancement.</p>
+          </div>
+          
+          <div class="item">
+            <img src="icons/self-confidence.png" alt="" class="src">
+            <p>Build confidence and clarity in achieving your goals and aspirations.</p>
+          </div>
+  
+        </div>
+
+        
+        <h2>Our Mentorship Program</h2>
+
+        <div class="join">
+          <!-- <p class="sub-head">Join our mentorship program to:</p> -->
+          <div class="columnn">
+            <div>
+            <ul>
+              <li>Receive one-on-one guidance tailored to your specific career goals.</li>
+              <li>Participate in skill-building workshops and training sessions.</li>
+              <li>Access resources and tools to enhance your professional development.</li>
+              <li>Network with mentors who share your professional interests and aspirations.</li>
+            </ul>
+          </div>
+          <div class="img">
+            <img src="icons/collaboration.png" alt="" class="src">
+          </div>
+          </div>
+          
+
+        </div>
+        
+
+        <div class="sess">
+          <h2>Mentorship Sessions</h2>
+          <div class="">
+            <p class="sub-head">Our mentorship sessions cover topics such as:</p>
+          </div>
+          <div class="topics">
+
+            <div class="item2">
+              <img src="icons/leadership.png" alt="" class="src">
+              <p>Leadership and management skills.</p>
+            </div>
+
+            <div class="item2">
+              <img src="icons/technical-support.png" alt="" class="src">
+              <p>Technical expertise and career specialization.</p>
+            </div>
+
+            <div class="item2">
+              <img src="icons/balance.png" alt="" class="src">
+              <p>Work-life balance and personal growth strategies.</p>
+            </div>
+
+            <div class="item2">
+              <img src="icons/lightbulb.png" alt="" class="src">
+              <p>Entrepreneurship and innovation in the digital age.</p>
+            </div>
+          </div>
+
+        </div>
+       
+        
+        <div class="success-stories">
+        <h2>Success Stories</h2>
+        <p class="sub-head">Discover success stories from our mentorship program, showcasing:</p>
+        <ul>
+          <li>Career transitions and achievements.</li>
+          <li>Professional milestones and breakthroughs.</li>
+          <li>Impactful projects and initiatives supported by mentorship.</li>
+          <li>Testimonials from mentees and mentors about their experiences.</li>
+        </ul>
+      </div>
+   
+    </section>
+</div>
+
+<!-- footer section -->
+<special-footer></special-footer>
+
+<button id="scrollToTopBtn" class="scrollToTopBtn">▲</button>
+<svg class="progress-ring" width="60" height="60">
+  <circle class="progress-ring__circle" stroke="grey" stroke-width="4" fill="transparent" r="28" cx="30" cy="30" />
+</svg>
+</footer>
+<script>
+  function sendFeed() {
+    alert('Email sent successfully!');
+  }
+</script>
+</div>
+<script>let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  let circle = document.querySelector(".progress-ring__circle");
+  let radius = circle.r.baseVal.value;
+  let circumference = 2 * Math.PI * radius;
+
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
+
+  window.onscroll = function () {
+    scrollFunction();
+    updateProgress();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function updateProgress() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPercent = scrollTop / docHeight;
+    let offset = circumference - (scrollPercent * circumference);
+    circle.style.strokeDashoffset = offset;
+  }
+
+  scrollToTopBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    topFunction();
+  });
+</script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+<script>
+  function sendEmail() {
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "yash.223234108@vcet.edu.in",
+      Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+      To: 'itsamanyadav18@gmail.com',
+      From: document.getElementById('email').value,
+      Subject: "This is the subject",
+      Body: "Name:" + document.getElementById("name").value
+        + "<br> Email:" + document.getElementById("email").value
+        + "<br> Message:" + document.getElementById("msg").value
+
+    }).then(
+      message => alert("Message sent successsfully. We will get back to you soon.")
+    );
+  }
+  function sendFeed() {
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "yash.223234108@vcet.edu.in",
+      Password: "A8F5164C44BD2E729DA1FB0F9D338DB5EFBE",
+      To: 'itsamanyadav18@gmail.com',
+      From: document.getElementById('email').value,
+      Subject: "This is the subject",
+      Body: "Name:" + document.getElementById("name").value
+        + "<br> Email:" + document.getElementById("email").value
+        + "<br> Message:" + document.getElementById("msg").value
+
+    }).then(
+      message => alert("Feedback sent successsfully")
+    );
+  }
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/vegas.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/5e160793-5606-4412-ba4c-337e416f14fe/webchat/config.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+    "composerPlaceholder": "Open Source Village",
+    "botConversationDescription": "This chatbot is for the community",
+    "botId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+    "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+    "messagingUrl": "https://messaging.botpress.cloud",
+    "clientId": "0b693cf9-7fd0-4ed3-83a2-89f68137dd81",
+    "webhookId": "156ea257-2b52-4e1c-92b1-ffeb42198f56",
+    "lazySocket": true,
+    "themeName": "prism",
+    "frontendVersion": "v1",
+    "showPoweredBy": true,
+    "theme": "prism",
+    "themeColor": "#2563eb",
+    "allowedOrigins": []
+  });
+</script>
+<!-- swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+<script>
+  document.documentElement.style.overflow = 'auto';
+  document.body.style.overflow = 'auto';
+
+  /*=============== SWIPER JS ===============*/
+  let swiperCards = new Swiper(".card__content", {
+    loop: true,
+    spaceBetween: 52,
+    grabCursor: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+      },
+      968: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
+
+  <!-- Trail effect elements -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <script src="trail.js"></script>
+
+  <!-- end -->
+
+<script src="./footer/footer.js"></script>
+</body>
+
+</html>
